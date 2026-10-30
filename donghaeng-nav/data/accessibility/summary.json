@@ -1,0 +1,28 @@
+{
+  "school_point": [
+    37.5950991,
+    127.038992
+  ],
+  "osm_counts": {
+    "bench": 67,
+    "stairs": 154,
+    "escalator": 1
+  },
+  "within_1km_straight_line": {
+    "bench": 47,
+    "stairs": 44
+  },
+  "official_escalator_records": 1882,
+  "nearby_station_records": 49,
+  "nearby_stations": {
+    "청량리(1)": 6,
+    "길음": 3,
+    "성신여대입구(4)": 4,
+    "안암": 6,
+    "고려대": 12,
+    "월곡": 12,
+    "상월곡": 6
+  },
+  "osm_snapshot": "2026-10-28T05:19:18Z",
+  "note": "OSM counts are mapped objects/segments, not exhaustive facility counts. All field verification and current operating status remain unknown."
+}
