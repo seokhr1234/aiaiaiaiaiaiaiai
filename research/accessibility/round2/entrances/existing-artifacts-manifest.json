@@ -1,0 +1,20 @@
+[
+  {
+    "path": "donghaeng-nav/data/accessibility/raw/seoul-escalators-20260211.xlsx",
+    "origin": "previous_user_uploaded_bbb_zip_existing_file_not_new_download",
+    "source_url": "https://data.seoul.go.kr/dataList/OA-22486/F/1/datasetView.do",
+    "source_as_of": "2026-02-11",
+    "bytes": 645267,
+    "sha256": "7951bf506cf8f51f91bce093b317586a3db0c99604da41c0986c8abd177ac6bd",
+    "license": "KOGL-Type-1"
+  },
+  {
+    "path": "donghaeng-nav/data/accessibility/nearby-station-escalators.csv",
+    "origin": "previous_user_uploaded_bbb_zip_existing_file_not_new_download",
+    "source_url": "https://data.seoul.go.kr/dataList/OA-22486/F/1/datasetView.do",
+    "source_as_of": "2026-02-11",
+    "bytes": 8162,
+    "sha256": "27ee9cd6b3cf43c74419d5860dbcab93da155288b48a22df9bcbf01b7d97c3ad",
+    "license": "KOGL-Type-1"
+  }
+]

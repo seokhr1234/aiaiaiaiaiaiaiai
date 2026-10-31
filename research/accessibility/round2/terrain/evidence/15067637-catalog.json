@@ -1,0 +1,245 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "국토교통부 국토지리정보원_항공사진_수치표고성과내역",
+  "alternateName": "국토교통부 국토지리정보원_항공사진_수치표고성과내역_20231107",
+  "description": "수치표고모델 도엽별 성과정보(도엽의 기본정보, 좌표정보, 좌표계, 표고정보 등) ▷ 식별정보 : 도엽번호5000, 도엽명5000, 구축구분코드, 자료명칭, 자료형식 ▷ 속성정보 : 원시좌하단좌표(X,Y), 원시우상단좌표(X,Y), 원시지리좌표계,원시자료, 원시자료획득방법, 격자간격,보간방법, 지리좌표계, 원점구분, 표고기준, 최고표고, 최저표고, 정확도 등 * 수치표고모델(Digital Elevation Model, DEM) : 지표면의 높이(표고)를 일정한 간격으로 수치화한 데이터로, 지도, 공간분석, 시뮬레이션 등 다양한 분야에서 활용",
+  "url": "https://www.data.go.kr/data/15067637/fileData.do",
+  "identifier": "15067637",
+  "inLanguage": "ko",
+  "keywords": "지리원,수치표고모형,DEM성과,수치표고",
+  "license": {
+    "name": "이용허락범위 제한 없음",
+    "url": "https://www.data.go.kr/ugs/selectPortalPolicyView.do",
+    "@type": "CreativeWork"
+  },
+  "isAccessibleForFree": true,
+  "dateCreated": "2020-09-25",
+  "dateModified": "2025-07-10",
+  "datePublished": "2020-09-25",
+  "creator": {
+    "name": "국토교통부 국토지리정보원",
+    "contactPoint": {
+      "contactType": "국토조사과",
+      "telephone": "+82-31-210-2783",
+      "@type": "ContactPoint"
+    },
+    "@type": "Organization"
+  },
+  "encodingFormat": "CSV",
+  "includedInDataCatalog": {
+    "name": "공공데이터포털",
+    "url": "https://www.data.go.kr",
+    "@id": "https://www.data.go.kr/#datacatalog",
+    "@type": "DataCatalog"
+  },
+  "variableMeasured": [
+    {
+      "name": "원시좌하단의평면Y좌표",
+      "description": "원시좌하단의평면Y좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시우상단의평면X좌표",
+      "description": "원시우상단의평면X좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시우상단의평면Y좌표",
+      "description": "원시우상단의평면Y좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시지리좌표계",
+      "description": "원시지리좌표계",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "구축구분코드",
+      "description": "구축구분코드",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "도엽번호5000",
+      "description": "도엽번호5000",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "자료명칭",
+      "description": "자료명칭",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "도엽명5000",
+      "description": "도엽명5000",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시자료",
+      "description": "원시자료",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시자료획득방법",
+      "description": "원시자료획득방법",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "자료형식",
+      "description": "자료형식",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시자료제작년도",
+      "description": "원시자료제작년도",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "격자간격",
+      "description": "격자간격",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "단위",
+      "description": "단위",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "보간방법",
+      "description": "보간방법",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "좌하단의평면X좌표",
+      "description": "좌하단의평면X좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "좌하단의평면Y좌표",
+      "description": "좌하단의평면Y좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "우상단의평면X좌표",
+      "description": "우상단의평면X좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "우상단의평면Y좌표",
+      "description": "우상단의평면Y좌표",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "지리좌표계",
+      "description": "지리좌표계",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "좌표계",
+      "description": "좌표계",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원점구분",
+      "description": "원점구분",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "표고기준",
+      "description": "표고기준",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "높이값종류",
+      "description": "높이값종류",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "최고표고",
+      "description": "최고표고",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "최저표고",
+      "description": "최저표고",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "자료기록형식",
+      "description": "자료기록형식",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "정확도",
+      "description": "정확도",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "제작자",
+      "description": "제작자",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "발행자",
+      "description": "발행자",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "참고사항",
+      "description": "참고사항",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "예비",
+      "description": "예비",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "DTD보유여부",
+      "description": "DTD보유여부",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "음영기복도보유유무",
+      "description": "음영기복도보유유무",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "관측기록부유무",
+      "description": "관측기록부유무",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "촬영기록부유무",
+      "description": "촬영기록부유무",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "GPSINS처리결과보고서여부",
+      "description": "GPSINS처리결과보고",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "GPS기준국점의조서유무",
+      "description": "GPS기준국점의조서유무",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "원시좌하단의평면X좌표",
+      "description": "원시좌하단의평면X좌표",
+      "@type": "PropertyValue"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "name": "분류체계",
+      "value": "지역개발 - 지역및도시",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "업데이트 주기",
+      "value": "수시 (1회성 데이터)",
+      "@type": "PropertyValue"
+    }
+  ]
+}

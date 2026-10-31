@@ -1,0 +1,1722 @@
+{
+  "type": "FeatureCollection",
+  "name": "Donghaeng snapshot evidence; not a current access survey",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0386804,
+              37.5961993
+            ],
+            [
+              127.0377659,
+              37.594503
+            ],
+            [
+              127.038074,
+              37.5944118
+            ],
+            [
+              127.0379228,
+              37.5941056
+            ],
+            [
+              127.0382536,
+              37.5940102
+            ],
+            [
+              127.0383419,
+              37.5940143
+            ],
+            [
+              127.0388646,
+              37.5941291
+            ],
+            [
+              127.0394591,
+              37.5939288
+            ],
+            [
+              127.0397625,
+              37.5945794
+            ],
+            [
+              127.0398682,
+              37.5949296
+            ],
+            [
+              127.0399255,
+              37.5952685
+            ],
+            [
+              127.0398873,
+              37.5954663
+            ],
+            [
+              127.0398227,
+              37.5956617
+            ],
+            [
+              127.0396303,
+              37.5959945
+            ],
+            [
+              127.039576,
+              37.5960701
+            ],
+            [
+              127.0395128,
+              37.5960876
+            ],
+            [
+              127.0394203,
+              37.5962295
+            ],
+            [
+              127.0392999,
+              37.5960084
+            ],
+            [
+              127.0386804,
+              37.5961993
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "school_boundary",
+        "osm_id": 379553745,
+        "osm_type": "way",
+        "tags": {
+          "addr:city": "서울특별시",
+          "addr:district": "성북구",
+          "addr:housenumber": "36",
+          "addr:postcode": "02796",
+          "addr:street": "월곡로",
+          "amenity": "school",
+          "isced:level": "2",
+          "name": "서울대학교사범대학부설중학교",
+          "wikidata": "Q12601198",
+          "wikipedia": "ko:서울대학교 사범대학 부설중학교"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0386111,
+            37.5962061
+          ],
+          [
+            127.0386595,
+            37.5962939
+          ],
+          [
+            127.03874,
+            37.59644
+          ],
+          [
+            127.0389782,
+            37.5969164
+          ],
+          [
+            127.03909,
+            37.59714
+          ],
+          [
+            127.0392262,
+            37.5974226
+          ],
+          [
+            127.0393953,
+            37.5977734
+          ],
+          [
+            127.03949,
+            37.59797
+          ],
+          [
+            127.0395152,
+            37.5980284
+          ],
+          [
+            127.0396985,
+            37.5979447
+          ],
+          [
+            127.0398908,
+            37.5978341
+          ],
+          [
+            127.0399819,
+            37.5977492
+          ],
+          [
+            127.0400788,
+            37.5976422
+          ],
+          [
+            127.0401831,
+            37.5975537
+          ],
+          [
+            127.0403931,
+            37.5974746
+          ],
+          [
+            127.0405761,
+            37.5974361
+          ],
+          [
+            127.0405666,
+            37.5971459
+          ],
+          [
+            127.0410888,
+            37.5971229
+          ],
+          [
+            127.0412067,
+            37.5971178
+          ],
+          [
+            127.0412089,
+            37.5971491
+          ],
+          [
+            127.0412235,
+            37.5976814
+          ],
+          [
+            127.0412266,
+            37.5977872
+          ],
+          [
+            127.0420622,
+            37.597792
+          ],
+          [
+            127.0420592,
+            37.5973491
+          ],
+          [
+            127.0420112,
+            37.5973503
+          ],
+          [
+            127.0418445,
+            37.5973514
+          ],
+          [
+            127.0417881,
+            37.5973611
+          ],
+          [
+            127.0417342,
+            37.5973836
+          ],
+          [
+            127.0416712,
+            37.5973997
+          ],
+          [
+            127.041599,
+            37.597407
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "calculated_route",
+        "name": "shortest",
+        "length_m": 673.9722780662357,
+        "unknown_incline_m": 673.9722780662357
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0386111,
+            37.5962061
+          ],
+          [
+            127.0386595,
+            37.5962939
+          ],
+          [
+            127.03874,
+            37.59644
+          ],
+          [
+            127.0389782,
+            37.5969164
+          ],
+          [
+            127.03909,
+            37.59714
+          ],
+          [
+            127.0392262,
+            37.5974226
+          ],
+          [
+            127.0393593,
+            37.5973141
+          ],
+          [
+            127.0395103,
+            37.5971692
+          ],
+          [
+            127.0395825,
+            37.5971
+          ],
+          [
+            127.0396288,
+            37.597027
+          ],
+          [
+            127.0397146,
+            37.5968917
+          ],
+          [
+            127.039929,
+            37.5966427
+          ],
+          [
+            127.039973,
+            37.5965942
+          ],
+          [
+            127.0400935,
+            37.5964612
+          ],
+          [
+            127.0402462,
+            37.596289
+          ],
+          [
+            127.040327,
+            37.5962355
+          ],
+          [
+            127.040391,
+            37.5961908
+          ],
+          [
+            127.0402715,
+            37.5956667
+          ],
+          [
+            127.040903,
+            37.5955609
+          ],
+          [
+            127.0412478,
+            37.5954906
+          ],
+          [
+            127.0414349,
+            37.5957577
+          ],
+          [
+            127.0413786,
+            37.5956378
+          ],
+          [
+            127.0412823,
+            37.5954374
+          ],
+          [
+            127.0413786,
+            37.5956378
+          ],
+          [
+            127.0414349,
+            37.5957577
+          ],
+          [
+            127.0420897,
+            37.5970843
+          ],
+          [
+            127.0423361,
+            37.5975203
+          ],
+          [
+            127.0424743,
+            37.5977898
+          ],
+          [
+            127.0420622,
+            37.597792
+          ],
+          [
+            127.0420592,
+            37.5973491
+          ],
+          [
+            127.0420112,
+            37.5973503
+          ],
+          [
+            127.0418445,
+            37.5973514
+          ],
+          [
+            127.0417881,
+            37.5973611
+          ],
+          [
+            127.0417342,
+            37.5973836
+          ],
+          [
+            127.0416712,
+            37.5973997
+          ],
+          [
+            127.041599,
+            37.597407
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "calculated_route",
+        "name": "bench",
+        "length_m": 957.788954305704,
+        "unknown_incline_m": 957.7889543057041
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0412576,
+          37.5954369
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "bench",
+        "osm_type": "node",
+        "osm_id": 12464206320,
+        "tags": {
+          "amenity": "bench",
+          "backrest": "no"
+        },
+        "snap_gap_m": 2.176880121209666,
+        "access_connection_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412576,
+            37.5954369
+          ],
+          [
+            127.0412823,
+            37.5954374
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "unverified_snap",
+        "gap_m": 2.176880121209666,
+        "physical_connection_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0363109,
+            37.5930455
+          ],
+          [
+            127.0365381,
+            37.5930682
+          ],
+          [
+            127.0367497,
+            37.5930908
+          ],
+          [
+            127.0368826,
+            37.593105
+          ],
+          [
+            127.036919,
+            37.5931145
+          ],
+          [
+            127.0369521,
+            37.5931306
+          ],
+          [
+            127.0369806,
+            37.5931521
+          ],
+          [
+            127.0370161,
+            37.5931934
+          ],
+          [
+            127.0370245,
+            37.5932044
+          ],
+          [
+            127.0370504,
+            37.5932388
+          ],
+          [
+            127.0371716,
+            37.5934597
+          ],
+          [
+            127.0374751,
+            37.5940387
+          ],
+          [
+            127.0386111,
+            37.5962061
+          ],
+          [
+            127.0386595,
+            37.5962939
+          ],
+          [
+            127.03874,
+            37.59644
+          ],
+          [
+            127.0389782,
+            37.5969164
+          ],
+          [
+            127.03909,
+            37.59714
+          ],
+          [
+            127.0392262,
+            37.5974226
+          ],
+          [
+            127.0393953,
+            37.5977734
+          ],
+          [
+            127.03949,
+            37.59797
+          ],
+          [
+            127.0395152,
+            37.5980284
+          ],
+          [
+            127.0396174,
+            37.598265
+          ],
+          [
+            127.03968,
+            37.59841
+          ],
+          [
+            127.03976,
+            37.59865
+          ],
+          [
+            127.0397904,
+            37.5990901
+          ],
+          [
+            127.0398868,
+            37.5994245
+          ],
+          [
+            127.0399288,
+            37.5995048
+          ],
+          [
+            127.0400038,
+            37.5996243
+          ],
+          [
+            127.0401175,
+            37.5998132
+          ],
+          [
+            127.0404002,
+            37.6002405
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 37402230,
+        "tags": {
+          "highway": "secondary",
+          "name": "월곡로",
+          "name:en": "Wolgok-ro",
+          "name:ko": "월곡로",
+          "name:ko-Latn": "Wolgok-ro",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          436872024,
+          7579130653,
+          14196290236,
+          14196290230,
+          436866552,
+          14196290023,
+          14196290022,
+          14196290024,
+          14196290025,
+          14196290020,
+          14196290021,
+          14196290059,
+          3828636433,
+          14196290192,
+          436866555,
+          3828636493,
+          436866556,
+          3828636543,
+          3828636586,
+          436866557,
+          3828636626,
+          3828636664,
+          436866558,
+          436866559,
+          436866560,
+          11227670235,
+          436866561,
+          7018900676,
+          436866562,
+          1936511795
+        ],
+        "url": "https://www.openstreetmap.org/way/37402230",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/37402230/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0395152,
+            37.5980284
+          ],
+          [
+            127.0396985,
+            37.5979447
+          ],
+          [
+            127.0398908,
+            37.5978341
+          ],
+          [
+            127.0399819,
+            37.5977492
+          ],
+          [
+            127.0400788,
+            37.5976422
+          ],
+          [
+            127.0401831,
+            37.5975537
+          ],
+          [
+            127.0403931,
+            37.5974746
+          ],
+          [
+            127.0405761,
+            37.5974361
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 379553740,
+        "tags": {
+          "highway": "residential",
+          "name": "월곡로8길",
+          "name:en": "Wolgok-ro 8-gil",
+          "name:ko": "월곡로8길"
+        },
+        "node_ids": [
+          3828636626,
+          3828636610,
+          3828636594,
+          3828636581,
+          3828636568,
+          3828636558,
+          3828636549,
+          3828636545
+        ],
+        "url": "https://www.openstreetmap.org/way/379553740",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/379553740/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0404002,
+            37.6002405
+          ],
+          [
+            127.040507,
+            37.5998692
+          ],
+          [
+            127.0405536,
+            37.5996188
+          ],
+          [
+            127.0406021,
+            37.5993317
+          ],
+          [
+            127.0406158,
+            37.5990935
+          ],
+          [
+            127.0406205,
+            37.5986594
+          ],
+          [
+            127.0406118,
+            37.5982339
+          ],
+          [
+            127.0405851,
+            37.5977129
+          ],
+          [
+            127.0405761,
+            37.5974361
+          ],
+          [
+            127.0405666,
+            37.5971459
+          ],
+          [
+            127.040391,
+            37.5961908
+          ],
+          [
+            127.0402715,
+            37.5956667
+          ],
+          [
+            127.0401692,
+            37.5952179
+          ],
+          [
+            127.0400534,
+            37.5949098
+          ],
+          [
+            127.0398047,
+            37.5942481
+          ],
+          [
+            127.0391433,
+            37.5926506
+          ],
+          [
+            127.0389487,
+            37.5921867
+          ],
+          [
+            127.0386818,
+            37.591551
+          ],
+          [
+            127.0386001,
+            37.5913563
+          ],
+          [
+            127.0385619,
+            37.5912652
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 183272540,
+        "tags": {
+          "bicycle": "designated",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lanes": "1",
+          "name": "월곡로10길",
+          "name:en": "Wolgok-ro 10-gil",
+          "name:ko": "월곡로10길",
+          "name:ko-Latn": "Wolgok-ro sip-gil",
+          "oneway": "yes",
+          "review": "no",
+          "source": "Bing",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          1936511795,
+          6272903444,
+          1936511791,
+          5191760823,
+          1936511788,
+          5191760824,
+          1936511780,
+          1936511768,
+          3828636545,
+          1936511759,
+          1936511750,
+          3830945708,
+          1936511728,
+          3828636332,
+          1936511714,
+          1936511700,
+          3828635910,
+          3828635888,
+          14196290575,
+          1936511676
+        ],
+        "url": "https://www.openstreetmap.org/way/183272540",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/183272540/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0405666,
+            37.5971459
+          ],
+          [
+            127.0410888,
+            37.5971229
+          ],
+          [
+            127.0412067,
+            37.5971178
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 183272560,
+        "tags": {
+          "cycleway": "track",
+          "highway": "residential",
+          "lanes": "2",
+          "layer": "1",
+          "oneway": "no",
+          "review": "no",
+          "source": "Bing"
+        },
+        "node_ids": [
+          1936511759,
+          8295436974,
+          436866834
+        ],
+        "url": "https://www.openstreetmap.org/way/183272560",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/183272560/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412067,
+            37.5971178
+          ],
+          [
+            127.0412089,
+            37.5971491
+          ],
+          [
+            127.0412235,
+            37.5976814
+          ],
+          [
+            127.0412266,
+            37.5977872
+          ],
+          [
+            127.0412383,
+            37.5981835
+          ],
+          [
+            127.0412387,
+            37.5981957
+          ],
+          [
+            127.0412233,
+            37.5988358
+          ],
+          [
+            127.0412164,
+            37.5991201
+          ],
+          [
+            127.0411748,
+            37.5995655
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 183272403,
+        "tags": {
+          "cycleway:right": "opposite",
+          "highway": "residential",
+          "maxspeed": "30",
+          "name": "회기로5길",
+          "name:en": "Hoegi-ro 5-gil",
+          "name:ko": "회기로5길",
+          "name:ko-Latn": "Hoegi-ro 5-gil",
+          "oneway": "yes"
+        },
+        "node_ids": [
+          436866834,
+          2965682874,
+          436866835,
+          7018577834,
+          7018577837,
+          436866836,
+          7018577902,
+          436866837,
+          2965677400
+        ],
+        "url": "https://www.openstreetmap.org/way/183272403",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/183272403/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412266,
+            37.5977872
+          ],
+          [
+            127.0420622,
+            37.597792
+          ],
+          [
+            127.0424743,
+            37.5977898
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 750640231,
+        "tags": {
+          "highway": "residential",
+          "name": "회기로5길"
+        },
+        "node_ids": [
+          7018577834,
+          7018577833,
+          7018577835
+        ],
+        "url": "https://www.openstreetmap.org/way/750640231",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/750640231/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420622,
+            37.597792
+          ],
+          [
+            127.0420592,
+            37.5973491
+          ],
+          [
+            127.0420112,
+            37.5973503
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 750640241,
+        "tags": {
+          "highway": "service"
+        },
+        "node_ids": [
+          7018577833,
+          7018577876,
+          7018577877
+        ],
+        "url": "https://www.openstreetmap.org/way/750640241",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/750640241/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420112,
+            37.5973503
+          ],
+          [
+            127.0418445,
+            37.5973514
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 750640242,
+        "tags": {
+          "highway": "residential",
+          "layer": "-1",
+          "tunnel": "yes"
+        },
+        "node_ids": [
+          7018577877,
+          7018577878
+        ],
+        "url": "https://www.openstreetmap.org/way/750640242",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/750640242/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0418445,
+            37.5973514
+          ],
+          [
+            127.0417881,
+            37.5973611
+          ],
+          [
+            127.0417342,
+            37.5973836
+          ],
+          [
+            127.0416712,
+            37.5973997
+          ],
+          [
+            127.041599,
+            37.597407
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 750640243,
+        "tags": {
+          "highway": "residential"
+        },
+        "node_ids": [
+          7018577878,
+          7018577879,
+          7018577880,
+          7018577881,
+          7018577882,
+          7018577883
+        ],
+        "url": "https://www.openstreetmap.org/way/750640243",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/750640243/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0392262,
+            37.5974226
+          ],
+          [
+            127.0393593,
+            37.5973141
+          ],
+          [
+            127.0395103,
+            37.5971692
+          ],
+          [
+            127.0395825,
+            37.5971
+          ],
+          [
+            127.0396288,
+            37.597027
+          ],
+          [
+            127.0397146,
+            37.5968917
+          ],
+          [
+            127.039929,
+            37.5966427
+          ],
+          [
+            127.039973,
+            37.5965942
+          ],
+          [
+            127.0399334,
+            37.5964624
+          ],
+          [
+            127.0398806,
+            37.5962611
+          ],
+          [
+            127.0398424,
+            37.5960482
+          ],
+          [
+            127.0396821,
+            37.5959894
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 379553706,
+        "tags": {
+          "highway": "residential",
+          "name": "월곡로6길",
+          "name:en": "Wolgok-ro 6-gil",
+          "name:ko": "월곡로6길"
+        },
+        "node_ids": [
+          3828636543,
+          3828636536,
+          3828636516,
+          3828636511,
+          3828636505,
+          3828636490,
+          3828636472,
+          3828636470,
+          3828636462,
+          3828636439,
+          3828636413,
+          3828636405
+        ],
+        "url": "https://www.openstreetmap.org/way/379553706",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/379553706/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.040391,
+            37.5961908
+          ],
+          [
+            127.040327,
+            37.5962355
+          ],
+          [
+            127.0402462,
+            37.596289
+          ],
+          [
+            127.0400935,
+            37.5964612
+          ],
+          [
+            127.039973,
+            37.5965942
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 379553685,
+        "tags": {
+          "highway": "residential",
+          "name": "월곡로10길",
+          "name:en": "Wolgok-ro 10-gil",
+          "name:ko": "월곡로10길"
+        },
+        "node_ids": [
+          1936511750,
+          3828636438,
+          3828636440,
+          3828636461,
+          3828636470
+        ],
+        "url": "https://www.openstreetmap.org/way/379553685",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/379553685/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0402715,
+            37.5956667
+          ],
+          [
+            127.040903,
+            37.5955609
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 379766295,
+        "tags": {
+          "bridge": "yes",
+          "bridge:name": "구월교",
+          "foot": "designated",
+          "highway": "residential",
+          "layer": "0",
+          "motor_vehicle": "no",
+          "oneway": "no",
+          "surface": "wood"
+        },
+        "node_ids": [
+          3830945708,
+          3830945706
+        ],
+        "url": "https://www.openstreetmap.org/way/379766295",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/379766295/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.040903,
+            37.5955609
+          ],
+          [
+            127.0412478,
+            37.5954906
+          ],
+          [
+            127.0414349,
+            37.5957577
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 752903358,
+        "tags": {
+          "highway": "service"
+        },
+        "node_ids": [
+          3830945706,
+          7035154679,
+          7035154680
+        ],
+        "url": "https://www.openstreetmap.org/way/752903358",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/752903358/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420897,
+            37.5970843
+          ],
+          [
+            127.0414349,
+            37.5957577
+          ],
+          [
+            127.0413786,
+            37.5956378
+          ],
+          [
+            127.0412823,
+            37.5954374
+          ],
+          [
+            127.0408948,
+            37.5946308
+          ],
+          [
+            127.0407456,
+            37.5943205
+          ],
+          [
+            127.0401549,
+            37.5929886
+          ],
+          [
+            127.0400351,
+            37.5927393
+          ],
+          [
+            127.0398383,
+            37.5927401
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 183272603,
+        "tags": {
+          "highway": "service",
+          "review": "no",
+          "source": "Bing"
+        },
+        "node_ids": [
+          1936511756,
+          7035154680,
+          1936511745,
+          7035154678,
+          3830945676,
+          3830945673,
+          1936511702,
+          5576443079,
+          5576443078
+        ],
+        "url": "https://www.openstreetmap.org/way/183272603",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/183272603/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412067,
+            37.5971178
+          ],
+          [
+            127.0415252,
+            37.597268
+          ],
+          [
+            127.0416859,
+            37.5972507
+          ],
+          [
+            127.0419783,
+            37.5971185
+          ],
+          [
+            127.0420897,
+            37.5970843
+          ],
+          [
+            127.0423361,
+            37.5975203
+          ],
+          [
+            127.0424743,
+            37.5977898
+          ],
+          [
+            127.0427077,
+            37.598256
+          ],
+          [
+            127.0428273,
+            37.5985271
+          ],
+          [
+            127.0429396,
+            37.5988175
+          ],
+          [
+            127.0430285,
+            37.5990526
+          ],
+          [
+            127.0430667,
+            37.5993806
+          ],
+          [
+            127.0430936,
+            37.5997253
+          ],
+          [
+            127.0431407,
+            37.6004122
+          ],
+          [
+            127.0432209,
+            37.601037
+          ],
+          [
+            127.043285,
+            37.6014131
+          ],
+          [
+            127.0433304,
+            37.6016655
+          ],
+          [
+            127.0435315,
+            37.6021916
+          ],
+          [
+            127.0437788,
+            37.6027408
+          ],
+          [
+            127.0437873,
+            37.6027597
+          ],
+          [
+            127.0444914,
+            37.6035698
+          ],
+          [
+            127.0445587,
+            37.6036472
+          ],
+          [
+            127.0454908,
+            37.6043186
+          ],
+          [
+            127.0453621,
+            37.6045425
+          ],
+          [
+            127.0453033,
+            37.6046448
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "route_source_way",
+        "osm_type": "way",
+        "osm_id": 535722779,
+        "tags": {
+          "highway": "residential",
+          "name": "화랑로14길",
+          "name:en": "Hwarang-ro 14-gil",
+          "name:ko": "화랑로14길",
+          "review": "no",
+          "source": "Bing"
+        },
+        "node_ids": [
+          436866834,
+          1936511761,
+          3830894182,
+          1936511758,
+          1936511756,
+          1936511766,
+          7018577835,
+          3830894185,
+          10694823978,
+          10694823977,
+          1936511784,
+          10694823976,
+          10694823975,
+          1936511796,
+          3830894209,
+          10005592750,
+          3830894231,
+          1936511861,
+          3830894250,
+          1936511923,
+          3830897062,
+          1936511952,
+          1936511961,
+          5476138921,
+          1936511966
+        ],
+        "url": "https://www.openstreetmap.org/way/535722779",
+        "history_url": "https://api.openstreetmap.org/api/0.6/way/535722779/history.json",
+        "metadata_present": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0384638,
+          37.5960634
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "demo_start_bus_stop",
+        "osm_id": 14196290450,
+        "osm_type": "node",
+        "tags": {
+          "bus": "yes",
+          "direction": "서울사대부설고등학교 방면",
+          "highway": "bus_stop",
+          "name": "서울사대부설중학교",
+          "name:en": "Seoul National University Middle School",
+          "name:ko": "서울사대부설중학교",
+          "name:ko-Latn": "Seoul Sadae Buseol Junghakgyo",
+          "network": "서울특별시 시내버스",
+          "network:ko": "서울특별시 시내버스",
+          "network:wikidata": "Q3724007",
+          "public_transport": "platform",
+          "ref": "08411"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0412971,
+          37.5973378
+        ]
+      },
+      "properties": {
+        "evidence_type": "snapshot_registered",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "demo_destination_bus_stop",
+        "osm_id": 357869790,
+        "osm_type": "node",
+        "tags": {
+          "bus": "yes",
+          "highway": "bus_stop",
+          "name": "종월2교",
+          "name:en": "Jongwolgyo Br. 2",
+          "name:ko": "종월2교",
+          "name:ko-Latn": "Jongwolgyo Br. 2",
+          "network": "서울특별시 시내버스",
+          "network:ko": "서울특별시 시내버스",
+          "network:wikidata": "Q3724007",
+          "public_transport": "platform",
+          "route_ref": "1226"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0384638,
+            37.5960634
+          ],
+          [
+            127.0386111,
+            37.5962061
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "unverified_endpoint_snap",
+        "route": "shortest",
+        "endpoint": "start",
+        "snap_node": 3828636433,
+        "physical_connection_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412971,
+            37.5973378
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "unverified_endpoint_snap",
+        "route": "shortest",
+        "endpoint": "end",
+        "snap_node": 7018577883,
+        "physical_connection_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0384638,
+            37.5960634
+          ],
+          [
+            127.0386111,
+            37.5962061
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "unverified_endpoint_snap",
+        "route": "bench",
+        "endpoint": "start",
+        "snap_node": 3828636433,
+        "physical_connection_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412971,
+            37.5973378
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "evidence_type": "calculated_from_snapshot",
+        "snapshot": "2026-10-28T05:19:18Z",
+        "kind": "unverified_endpoint_snap",
+        "route": "bench",
+        "endpoint": "end",
+        "snap_node": 7018577883,
+        "physical_connection_verified": false
+      }
+    }
+  ]
+}

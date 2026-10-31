@@ -1,0 +1,46 @@
+{
+  "restore": {
+    "restored_on": "2026-10-31",
+    "archive": "/workspace/research-originals/donghaeng-2026-10-31/donghaeng-resumed-2026-10-31.zip",
+    "archive_bytes": 101459385,
+    "archive_sha256": "8a4038fc1a5bac69c47edce1d5d92dc3d2196f105fd11c24f50975dde0d32456",
+    "expected_hash_matches_previous_thread": true,
+    "parts": [
+      {
+        "name": "donghaeng-resumed-2026-10-31.zip.001",
+        "bytes": 30000000,
+        "sha256": "10f1f22e1f33e0ae5913e88255648bf9eec78320d4974e83b608e648286590b8"
+      },
+      {
+        "name": "donghaeng-resumed-2026-10-31.zip.002",
+        "bytes": 30000000,
+        "sha256": "db12099ad6bcf19f8f7b37db386c819adf51d4a135ad653958cc03f9a208daa3"
+      },
+      {
+        "name": "donghaeng-resumed-2026-10-31.zip.003",
+        "bytes": 30000000,
+        "sha256": "10808922ac1fb91f13bd1e6cf42468959bca7be579b4a205077e09e5035bf645"
+      },
+      {
+        "name": "donghaeng-resumed-2026-10-31.zip.004",
+        "bytes": 11459385,
+        "sha256": "b6dc7c1eda42bb700b7198f6f9d88a650ace107a395772454e850b5fe555fc55"
+      }
+    ],
+    "uploaded_restore_script_executed": false,
+    "method": "Static AST manifest inspection plus independent streaming concatenate/hash"
+  },
+  "initial_validation": {
+    "checked_on": "2026-10-31",
+    "archive_sha256": "8a4038fc1a5bac69c47edce1d5d92dc3d2196f105fd11c24f50975dde0d32456",
+    "archive_bytes": 101459385,
+    "zip_crc": "passed",
+    "extracted_files": 179,
+    "full_manifest_verified_files": 178,
+    "http_response_bodies_verified": 43,
+    "restored_root": "/workspace/research-originals/donghaeng-2026-10-31/restored",
+    "uploaded_scripts_executed": false
+  },
+  "data_verification": "full-original-validation.json",
+  "large_raw_files_in_git_repository": false
+}

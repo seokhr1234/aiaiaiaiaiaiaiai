@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-10-31",
+  "observations_current": true,
+  "spec_revision": "2",
+  "observed_spec_revision": "2",
+  "network_mode": "restricted",
+  "network_state": "enforced",
+  "allowed_hosts": [],
+  "presets": [
+    "package_managers"
+  ]
+}

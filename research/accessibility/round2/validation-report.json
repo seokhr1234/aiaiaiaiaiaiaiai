@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-10-31",
+  "status": "passed",
+  "checks": {
+    "json": 27,
+    "geojson": 3,
+    "python": 10,
+    "node": 3,
+    "local_links": 8,
+    "verified_hashes": 24
+  },
+  "limitations": [
+    "No live remote acquisition success or field accessibility verification is implied.",
+    "Offline map JavaScript syntax checked; browser rendering not tested.",
+    "Counts exclude this validation file if created after scan."
+  ]
+}

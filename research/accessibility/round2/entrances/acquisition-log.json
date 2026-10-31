@@ -1,0 +1,99 @@
+[
+  {
+    "date": "2026-10-31",
+    "channel": "shell_urllib_inherited_proxy",
+    "url": "https://data.seoul.go.kr/dataList/OA-22485/L/1/datasetView.do",
+    "result": "Tunnel connection failed: 403 Forbidden",
+    "category": "runtime_network_policy_block",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "http://openapi.seoul.go.kr:8088/sample/json/TbSubwayLineDetail/1/5/",
+    "result": "Unable to resolve open call due to invalid ref_id argument",
+    "category": "web_tool_port_or_url_resolution_error",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "http://openapi.seoul.go.kr:8088/sample/json/tbTraficElvtr/1/5/",
+    "result": "Unable to resolve open call due to invalid ref_id argument",
+    "category": "web_tool_port_or_url_resolution_error",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "https://www.data.go.kr/data/15044261/fileData.do",
+    "result": "Unsupported content-type: text/markdown",
+    "category": "web_tool_content_type_error",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "https://www.data.go.kr/data/15044261/fileData.do?recommendDataYn=Y",
+    "result": "One successful HTML title extraction: 서울교통공사_엘리베이터 설치현황_20260901; subsequent opens unsupported text/markdown",
+    "category": "title_only_not_raw_acquisition",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "https://www.seoulmetro.co.kr/",
+    "result": "Timeout fetching",
+    "category": "origin_or_web_fetch_timeout",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "https://www.sblib.seoul.kr/odlib",
+    "result": "not accessible via this tool",
+    "category": "web_access_error",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "https://www.snu.ms.kr/",
+    "result": "not accessible via this tool",
+    "category": "web_access_error",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_open",
+    "url": "https://data.seoul.go.kr/dataList/OA-21213/S/1/datasetView.do",
+    "result": "서비스 지연이 발생하고 있습니다. 다시 시도하여 주십시오.(103)",
+    "category": "source_page_error",
+    "artifact_saved": false
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_indexed_official_documentation",
+    "source_ids": [
+      "E3",
+      "E4",
+      "E9",
+      "E10",
+      "E11",
+      "E12",
+      "E13",
+      "E14"
+    ],
+    "result": "Services and factual schemas transcribed into api-schemas.json",
+    "category": "schema_acquisition_not_rows",
+    "artifact_saved": true
+  },
+  {
+    "date": "2026-10-31",
+    "channel": "web_indexed_official_archive",
+    "url": "https://archive.sb.go.kr/isbcc/home/u/item/view/17615.do",
+    "result": "photo record metadata; no original JPG downloaded",
+    "category": "historical_photo_metadata_not_current_operation",
+    "artifact_saved": false
+  }
+]

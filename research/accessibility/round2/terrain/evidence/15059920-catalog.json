@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "국토교통부 국토지리정보원_DEM",
+  "alternateName": "국토교통부 국토지리정보원_DEM_20240924",
+  "description": "수치표고모델로, 공간정보(지도 및 항공사진, 위성영상 등)를 입체화하여 행정ㆍ환경ㆍ농산림ㆍ국방ㆍ방재 등 다양한 분야와 융ㆍ복합할 수 있는 자료 국토정보플랫폼 다운로드를 위해서는 대용량 파일전송 S/W가 필요합니다. - 다운로드 시 자동으로 대용량 파일 전송 프로그램을 다운로드 받습니다. 대용량 파일전송 S/W는 국토정보플랫폼 공지사항 \"대용량 파일전송 S/W 제공\"을 통해 다운로드 가능합니다. 공간정보데이터 파일 다운로드시 공간정보를 이용할 수 있는 공간정보 소프트웨어 프로그램(ex: 지리OneView ) 또는 캐드 등을 이용하셔야 합니다.\n지리OneView S/W는 국토정보플랫폼 공지사항 \"지리OneView(공간정보 활용도구) 제공\"을 통해 다운로드 가능합니다.",
+  "url": "https://www.data.go.kr/data/15059920/fileData.do",
+  "identifier": "15059920",
+  "inLanguage": "ko",
+  "keywords": "수치표고모델,위성영상,공간정보,공개 DEM,입체화",
+  "license": {
+    "name": "이용허락범위 제한 없음",
+    "url": "https://www.data.go.kr/ugs/selectPortalPolicyView.do",
+    "@type": "CreativeWork"
+  },
+  "isAccessibleForFree": true,
+  "dateCreated": "2024-09-24",
+  "dateModified": "2025-06-17",
+  "datePublished": "2024-09-24",
+  "creator": {
+    "name": "국토교통부 국토지리정보원",
+    "contactPoint": {
+      "contactType": "국토조사과",
+      "telephone": "+82-31-210-2713",
+      "@type": "ContactPoint"
+    },
+    "@type": "Organization"
+  },
+  "encodingFormat": "IMG",
+  "includedInDataCatalog": {
+    "name": "공공데이터포털",
+    "url": "https://www.data.go.kr",
+    "@id": "https://www.data.go.kr/#datacatalog",
+    "@type": "DataCatalog"
+  },
+  "additionalProperty": [
+    {
+      "name": "분류체계",
+      "value": "지역개발 - 지역및도시",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "업데이트 주기",
+      "value": "수시 (자동 갱신)",
+      "@type": "PropertyValue"
+    }
+  ]
+}

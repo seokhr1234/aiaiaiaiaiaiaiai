@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "서울특별시_경사도",
+  "alternateName": "서울특별시_경사도_20231226",
+  "description": "요청한 경사도 shp은 없고, 경사도를 추출할 수 있는 표고점, 등고선 shp파일 제공입니다. (국토지리원에서 고시하는 수치 지형도 입니다.) <용어설명> - 경사도(傾斜度, slope)는 수평면에 대한 기울기를 수치로 나타낸 것. - 토목·도로: 도로 설계 시 차량이 안전하게 오르내릴 수 있는 한계 경사도를 고려, 일반 국도·고속도로: 약 5~7% 이하, 산악도로는 더 급경사 허용. - 건축·도시계획 : 토지 이용 시 “경사도 제한”을 두어 개발 가능 여부를 결정 제공부서는 서울특별시 도시공간본부 도시계획상임기획과(02-2133-8339)입니다.\n※ 바로가기 클릭 시 서울특별시 열린데이터광장 개방 데이터로 이동합니다.",
+  "url": "https://www.data.go.kr/data/15100676/fileData.do",
+  "identifier": "15100676",
+  "inLanguage": "ko",
+  "keywords": "경사,국토관리,공공행정,등고선,표고점",
+  "license": {
+    "name": "공공저작물 : 출처표시 (제 1유형)",
+    "url": "https://www.kogl.or.kr/info/licenseType1.do",
+    "@type": "CreativeWork"
+  },
+  "isAccessibleForFree": true,
+  "dateCreated": "2025-03-18",
+  "dateModified": "2025-09-25",
+  "datePublished": "2025-03-18",
+  "creator": {
+    "name": "서울특별시",
+    "contactPoint": {
+      "contactType": "도시계획상임기획과",
+      "telephone": "+82-2-2133-3614",
+      "@type": "ContactPoint"
+    },
+    "@type": "Organization"
+  },
+  "encodingFormat": "SHP",
+  "includedInDataCatalog": {
+    "name": "공공데이터포털",
+    "url": "https://www.data.go.kr",
+    "@id": "https://www.data.go.kr/#datacatalog",
+    "@type": "DataCatalog"
+  },
+  "additionalProperty": [
+    {
+      "name": "분류체계",
+      "value": "지역개발 - 지역및도시",
+      "@type": "PropertyValue"
+    },
+    {
+      "name": "업데이트 주기",
+      "value": "수시 (1회성 데이터)",
+      "@type": "PropertyValue"
+    }
+  ]
+}

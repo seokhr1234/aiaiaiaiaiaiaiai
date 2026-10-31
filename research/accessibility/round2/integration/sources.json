@@ -1,0 +1,62 @@
+[
+  {
+    "id": "I1",
+    "title": "서울시 도로굴착 공사 현황",
+    "url": "https://data.seoul.go.kr/dataList/OA-22901/S/1/datasetView.do",
+    "license": "KOGL-1",
+    "acquisition_status": "metadata_only",
+    "notes": "승인된 착공계 대상; 학교 주변 행과 정확한 위치 미확보",
+    "checked_on": "2026-10-31",
+    "raw_bytes": null,
+    "raw_sha256": null,
+    "school_specific_values_obtained": false
+  },
+  {
+    "id": "I2",
+    "title": "도로굴착 공사 카탈로그",
+    "url": "https://www.data.go.kr/data/15052469/fileData.do",
+    "license": "KOGL-1",
+    "acquisition_status": "metadata_only",
+    "notes": "연결된 카탈로그 제목 20260630과 원천 갱신 시점 구분",
+    "checked_on": "2026-10-31",
+    "raw_bytes": null,
+    "raw_sha256": null,
+    "school_specific_values_obtained": false
+  },
+  {
+    "id": "I3",
+    "title": "서울시 실시간 돌발 정보",
+    "url": "https://data.seoul.go.kr/dataList/OA-13315/A/1/datasetView.do",
+    "license": "KOGL-1",
+    "acquisition_status": "schema_verified",
+    "notes": "AccInfo 11개 출력 필드; 실제 사건 응답 미확보; GRS80 TM EPSG 미확정",
+    "checked_on": "2026-10-31",
+    "raw_bytes": null,
+    "raw_sha256": null,
+    "school_specific_values_obtained": false
+  },
+  {
+    "id": "I4",
+    "title": "TOPIS Open API 이용안내",
+    "url": "https://topis.seoul.go.kr/refRoom/openRefRoom_4.do",
+    "license": "dataset-specific terms need verification",
+    "acquisition_status": "official_page_opened",
+    "notes": "키 신청/승인 절차; 비영리 안내와 데이터별 조건 대조 필요",
+    "checked_on": "2026-10-31",
+    "raw_bytes": null,
+    "raw_sha256": null,
+    "school_specific_values_obtained": false
+  },
+  {
+    "id": "I5",
+    "title": "도로굴착복구 대민서비스",
+    "url": "https://roaddig.seoul.go.kr/intro/main.do",
+    "license": "not established",
+    "acquisition_status": "official_page_opened",
+    "notes": "2026-06-10 성북구 사업계획 공지 확인; 실제 구간 폐쇄 근거 아님",
+    "checked_on": "2026-10-31",
+    "raw_bytes": null,
+    "raw_sha256": null,
+    "school_specific_values_obtained": false
+  }
+]

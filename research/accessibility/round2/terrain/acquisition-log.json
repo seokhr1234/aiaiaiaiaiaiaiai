@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do",
+    "tool": "shell urllib through inherited proxy",
+    "result": "blocked_by_environment",
+    "detail": "URLError Tunnel connection failed: 403 Forbidden; original downloaded bytes 0; requests package initially unavailable, retried with stdlib urllib",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?infId=OA-22241&seq=2&infSeq=1&useCache=false",
+    "tool": "web.open",
+    "result": "tool_inaccessible",
+    "detail": "GET attempt only; third-party source prescribes POST. No archive bytes obtained.",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://www.data.go.kr/data/15067637/fileData.do",
+    "tool": "web.open",
+    "result": "tool_content_type_error",
+    "detail": "Unsupported content-type text/markdown; official JSON catalog parsed instead.",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://www.vworld.kr/dtmk/dtmk_ntads_s002.do?dsId=30206",
+    "tool": "web.open",
+    "result": "tool_fetch_error",
+    "detail": "502 Bad Gateway, not diagnosed as site outage.",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://map.ngii.go.kr/mn/mainPage.do",
+    "tool": "web.open",
+    "result": "tool_fetch_error",
+    "detail": "400 Bad Request",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://copernicus-dem-30m.s3.amazonaws.com/tileList.txt",
+    "tool": "web.open",
+    "result": "tool_inaccessible",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://copernicus-dem-30m-stac.s3.amazonaws.com/collection.json",
+    "tool": "web.open",
+    "result": "tool_inaccessible",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://www.data.go.kr/catalog/15148179/fileData.json",
+    "tool": "web.open",
+    "result": "tool_inaccessible",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://www.data.go.kr/catalog/15148148/fileData.json",
+    "tool": "web.open",
+    "result": "tool_inaccessible",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "url": "https://github.com/minwoo19930301/seoul-real-estate-map/blob/63f8d033033bfee22e03ff78706f69ad69138c3b/scripts/download_source.py",
+    "tool": "git clone --filter=blob:none and git show",
+    "result": "code_read_success",
+    "detail": "Public source code only; not rehosted source terrain data. Third-party assertions not independently verified.",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  },
+  {
+    "tool": "local_snapshot_extract",
+    "result": "success",
+    "detail": "211 terrain-tagged OSM features selected from already bundled 2026-10-28 snapshot; this is not newly acquired survey data.",
+    "recorded_at": "2026-10-31T05:12:42.890293+00:00"
+  }
+]

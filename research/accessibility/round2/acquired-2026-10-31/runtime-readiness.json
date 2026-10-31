@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-10-31T12:24:48.376Z",
+  "environment_id": "ccarenv_b64_Y2NhcmVudl83OTYzZjgyZTIzY2M4MTkxOGU0YWY5M2VmNzVjNjllMw",
+  "observations_current": true,
+  "observed_phase": "running",
+  "network_policy": {
+    "mode": "restricted",
+    "state": "enforced",
+    "allowed_hosts": [
+      "api.openstreetmap.org",
+      "data.seoul.go.kr",
+      "datafile.seoul.go.kr",
+      "map.ngii.go.kr",
+      "openapi.seoul.go.kr",
+      "overpass-api.de",
+      "safecity.seoul.go.kr",
+      "www.data.go.kr",
+      "www.seoulmetro.co.kr"
+    ]
+  },
+  "configured_secret_binding_count": 0,
+  "configured_runtime_variable_count": 0,
+  "network_diagnostics": null
+}

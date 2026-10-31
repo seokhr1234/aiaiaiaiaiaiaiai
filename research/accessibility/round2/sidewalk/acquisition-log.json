@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2026-10-31",
+    "url": "https://data.seoul.go.kr/dataList/OA-22240/F/1/datasetView.do",
+    "method": "shell HTTPS HEAD, inherited proxy",
+    "outcome": "proxy CONNECT403, content-length16",
+    "kind": "environment_policy_block"
+  },
+  {
+    "date": "2026-10-31",
+    "url": "http://openapi.seoul.go.kr:8088/sample/json/TbTraficWlkNet/1/5/",
+    "method": "shell urllib public documented sample",
+    "outcome": "HTTP403 Forbidden; no rows saved",
+    "kind": "environment_policy_block"
+  },
+  {
+    "date": "2026-10-31",
+    "url": "https://data.seoul.go.kr/dataList/OA-21208/A/1/datasetView.do",
+    "method": "web official indexed document",
+    "outcome": "23-field schema recovered; no raw response",
+    "kind": "schema_only"
+  },
+  {
+    "date": "2026-10-31",
+    "url": "https://data.seoul.go.kr/dataList/OA-15554/A/1/datasetView.do",
+    "method": "web direct official URL",
+    "outcome": "service delay103; indexed metadata separately available",
+    "kind": "service_delay"
+  },
+  {
+    "date": "2026-10-31",
+    "url": "https://www.g2b.go.kr/",
+    "method": "web direct official URL",
+    "outcome": "scheduled shutdown2026-10-30 19:00~11-01 24:00",
+    "kind": "service_outage"
+  }
+]

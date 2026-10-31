@@ -1,0 +1,312 @@
+[
+  {
+    "osm_type": "way",
+    "osm_id": 37402230,
+    "tags": {
+      "highway": "secondary",
+      "name": "월곡로",
+      "name:en": "Wolgok-ro",
+      "name:ko": "월곡로",
+      "name:ko-Latn": "Wolgok-ro",
+      "surface": "asphalt"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/37402230"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 379553740,
+    "tags": {
+      "highway": "residential",
+      "name": "월곡로8길",
+      "name:en": "Wolgok-ro 8-gil",
+      "name:ko": "월곡로8길"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/379553740"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 183272540,
+    "tags": {
+      "bicycle": "designated",
+      "cycleway:right": "shared_lane",
+      "highway": "residential",
+      "lanes": "1",
+      "name": "월곡로10길",
+      "name:en": "Wolgok-ro 10-gil",
+      "name:ko": "월곡로10길",
+      "name:ko-Latn": "Wolgok-ro sip-gil",
+      "oneway": "yes",
+      "review": "no",
+      "source": "Bing",
+      "surface": "asphalt"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": "Bing",
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/183272540"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 183272560,
+    "tags": {
+      "cycleway": "track",
+      "highway": "residential",
+      "lanes": "2",
+      "layer": "1",
+      "oneway": "no",
+      "review": "no",
+      "source": "Bing"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": "Bing",
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/183272560"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 183272403,
+    "tags": {
+      "cycleway:right": "opposite",
+      "highway": "residential",
+      "maxspeed": "30",
+      "name": "회기로5길",
+      "name:en": "Hoegi-ro 5-gil",
+      "name:ko": "회기로5길",
+      "name:ko-Latn": "Hoegi-ro 5-gil",
+      "oneway": "yes"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/183272403"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 750640231,
+    "tags": {
+      "highway": "residential",
+      "name": "회기로5길"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/750640231"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 750640241,
+    "tags": {
+      "highway": "service"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/750640241"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 750640242,
+    "tags": {
+      "highway": "residential",
+      "layer": "-1",
+      "tunnel": "yes"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/750640242"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 750640243,
+    "tags": {
+      "highway": "residential"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/750640243"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 379553706,
+    "tags": {
+      "highway": "residential",
+      "name": "월곡로6길",
+      "name:en": "Wolgok-ro 6-gil",
+      "name:ko": "월곡로6길"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/379553706"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 379553685,
+    "tags": {
+      "highway": "residential",
+      "name": "월곡로10길",
+      "name:en": "Wolgok-ro 10-gil",
+      "name:ko": "월곡로10길"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/379553685"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 379766295,
+    "tags": {
+      "bridge": "yes",
+      "bridge:name": "구월교",
+      "foot": "designated",
+      "highway": "residential",
+      "layer": "0",
+      "motor_vehicle": "no",
+      "oneway": "no",
+      "surface": "wood"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/379766295"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 752903358,
+    "tags": {
+      "highway": "service"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": null,
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/752903358"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 183272603,
+    "tags": {
+      "highway": "service",
+      "review": "no",
+      "source": "Bing"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": "Bing",
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/183272603"
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 535722779,
+    "tags": {
+      "highway": "residential",
+      "name": "화랑로14길",
+      "name:en": "Hwarang-ro 14-gil",
+      "name:ko": "화랑로14길",
+      "review": "no",
+      "source": "Bing"
+    },
+    "snapshot": "2026-10-28T05:19:18Z",
+    "object_edit_timestamp": null,
+    "object_version": null,
+    "changeset_id": null,
+    "field_survey_date": null,
+    "check_date": null,
+    "source_tag": "Bing",
+    "history_fetch_status": "blocked_not_acquired",
+    "evidence_level": "registered_snapshot",
+    "source_url": "https://www.openstreetmap.org/way/535722779"
+  }
+]

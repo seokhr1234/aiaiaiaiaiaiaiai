@@ -1,0 +1,40 @@
+{
+  "source_thread_id": "01a191e1-9c09-71b7-a01e-87d0ffbf109a",
+  "source_thread_title": "학교 주변 API 수집 재개",
+  "source_host_id": "durable",
+  "imported_on": "2026-10-31",
+  "representation": "Read from another chat's completed messages and command outputs; remote raw files have not been copied or independently revalidated in this environment.",
+  "reported_validation": {
+    "validated_at_utc": "2026-10-31T12:24:34.669890+00:00",
+    "status": "passed",
+    "checks": {
+      "backup_files_unchanged": 54,
+      "http_response_bodies_hash_verified": 43,
+      "json_documents_parsed": 37,
+      "geojson_files_validated": 5,
+      "geometries_parsed_and_coordinate_bounds_checked": 2375,
+      "source_archives_crc_verified": 3,
+      "csv_structurally_complete_records": 40282,
+      "analysis_internal_consistency": true,
+      "python_sources_parse": true
+    },
+    "remaining_data_quality_issues": [
+      "First CSV HTTP200 response ends mid-row; preserved and superseded by complete recheck. Root cause unconfirmed.",
+      "Complete CSV has one row with blank coordinates; excluded from spatial selection.",
+      "SmrtScnFcltsInfo returned ERROR-500 twice; these are preserved error payloads, not acquired facility data.",
+      "No field survey or live facility-operation verification performed."
+    ]
+  },
+  "reported_archive": {
+    "path": "/workspace/donghaeng-resumed-2026-10-31.zip",
+    "bytes": 101459385,
+    "sha256": "8a4038fc1a5bac69c47edce1d5d92dc3d2196f105fd11c24f50975dde0d32456",
+    "files": 179,
+    "source_archive_crc": "passed"
+  },
+  "source_command_ids": [
+    "exec-81460989-c440-421f-9bd1-4b8501f34d69",
+    "exec-469a1253-ab5c-4244-85e3-5c410a863e39",
+    "exec-977ac873-6778-43c1-b07e-f0818add89c0"
+  ]
+}

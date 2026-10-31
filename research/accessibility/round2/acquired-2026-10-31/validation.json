@@ -1,0 +1,21 @@
+{
+  "validated_at_utc": "2026-10-31T12:24:34.669890+00:00",
+  "status": "passed",
+  "checks": {
+    "backup_files_unchanged": 54,
+    "http_response_bodies_hash_verified": 43,
+    "json_documents_parsed": 37,
+    "geojson_files_validated": 5,
+    "geometries_parsed_and_coordinate_bounds_checked": 2375,
+    "source_archives_crc_verified": 3,
+    "csv_structurally_complete_records": 40282,
+    "analysis_internal_consistency": true,
+    "python_sources_parse": true
+  },
+  "remaining_data_quality_issues": [
+    "First CSV HTTP200 response ends mid-row; preserved and superseded by complete recheck. Root cause unconfirmed.",
+    "Complete CSV has one row with blank coordinates; excluded from spatial selection.",
+    "SmrtScnFcltsInfo returned ERROR-500 twice; these are preserved error payloads, not acquired facility data.",
+    "No field survey or live facility-operation verification performed."
+  ]
+}

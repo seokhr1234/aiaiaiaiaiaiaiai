@@ -1,0 +1,21 @@
+{
+  "attempts": 45,
+  "http_status_counts": {
+    "None": 2,
+    "200": 43
+  },
+  "classification_counts": {
+    "local_execution_network_permission_error": 2,
+    "http_success": 41,
+    "api_server_error": 2
+  },
+  "first_request_kst": "2026-10-31T21:15:35.648195+09:00",
+  "last_request_kst": "2026-10-31T21:20:40.861268+09:00",
+  "body_hashes_verified": 43,
+  "notes": [
+    "Original append-only http-audit.jsonl preserved; normalized classification distinguishes local exec permission from destination denial and API ERROR-500 from HTTP 200.",
+    "No configured secret bindings or runtime API variables; only documented public sample literal used.",
+    "All requests used inherited proxy and TLS trust. HTTP 8088 is the provider-documented public sample URL.",
+    "Sidewalk page HTML supplied the exact file form, endpoint and sequence numbers for additional downloads."
+  ]
+}

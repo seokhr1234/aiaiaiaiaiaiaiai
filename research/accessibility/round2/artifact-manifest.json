@@ -1,0 +1,485 @@
+{
+  "scope": "Local round2 artifacts; hashes do not imply remote raw-file acquisition or field verification.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 3299,
+      "sha256": "e70e9c344b0819599b95bfbdc57e9dd085ff2a75d3c4239e79e3260d94f264bf"
+    },
+    {
+      "path": "acquired-2026-10-31/README.md",
+      "bytes": 2192,
+      "sha256": "e27026f1ab9ae865b6ec680b32b1a749ac682f42bfccca2575d6b9d624255aca"
+    },
+    {
+      "path": "acquired-2026-10-31/SHA256SUMS.txt",
+      "bytes": 2736,
+      "sha256": "f75a81bfadfbc0b33ae08cba6fe1ae3cfae84f1cfd54cf95fe11c20df4d9e1c9"
+    },
+    {
+      "path": "acquired-2026-10-31/acquisition-summary.json",
+      "bytes": 886,
+      "sha256": "8dfb466e4ffad30b42f451ded56b564bfff051e8a11caf506696802fdeb7bcb9"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/crossings-identifier-join.json",
+      "bytes": 443444,
+      "sha256": "d01f2598fd74fa97749912c14eeac236e8acfb040c23a537958345db5cfb3f66"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/crossings-school-2km.csv",
+      "bytes": 262084,
+      "sha256": "983151f4ef739347baa9c9f9972a7c6bbdaf4e97bd854bebbc9d05407d4f2eec"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/crossings-school-2km.geojson",
+      "bytes": 1149918,
+      "sha256": "f0261bf65cb5ba52fc726a1a112cd9e52f5477cf5b93f3efadcc58a99be8ff7d"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/crossings-school-2km.json",
+      "bytes": 821312,
+      "sha256": "3c558de9a93c221f9e5817b949a1d4d99810ba84a44650f98c4b30a1b2665039"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/current-route-segments.csv",
+      "bytes": 4156,
+      "sha256": "3d5d7c9ffa9aeb082e5ca0b388e5f4edf0e8085a7fcde3f3e563bbe083f875bb"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/current-route-segments.geojson",
+      "bytes": 32151,
+      "sha256": "e0faa9c52a96fd106ff97de1ec90517035b56ea3a8cbd83ad777b178223a8371"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/osm-access-features.csv",
+      "bytes": 18245,
+      "sha256": "2973bf6df3a1cbe29358cc6acea97c0fd487d2b7966af88cac3086b90ffbb20e"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/osm-access-features.geojson",
+      "bytes": 87177,
+      "sha256": "e19e5d760fd8d2d137c12e1bb6b9ff9700c75c6e3fb03c1815b8d6d695f195a5"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/osm-access-features.json",
+      "bytes": 43816,
+      "sha256": "034b2ccd35ef34058f1d814741bc9593f9a19a70ec73c70d2a53c789f367be50"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/sidewalk-road-name-candidates.csv",
+      "bytes": 1070,
+      "sha256": "f41302955d1ee2bfdbb3953da871f987b9d3c65a40738ca8651b394685cbb140"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/sidewalk-road-name-candidates.json",
+      "bytes": 2671,
+      "sha256": "69eb25a5746da342eee68de29c223f1e2d7027edcc7683d0a705840a3dc9b4a6"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/summary.json",
+      "bytes": 34986,
+      "sha256": "fd3680aa68ba4f6f4f81018d217118237917f525560e961ed28adbff511226ad"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/terrain/N3L_F001-school-2km.csv",
+      "bytes": 25142,
+      "sha256": "3380a5a859fc04c40406d1dc7b8e9f18a2cedeafb691b37eb1aa03fe8e82eaed"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/terrain/N3L_F001-school-2km.geojson",
+      "bytes": 2963923,
+      "sha256": "eb3325a1adc6573a55b2941a042018abd83e2b12858ffe360dc7910ee667abc7"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/terrain/N3P_F002-school-2km.csv",
+      "bytes": 127304,
+      "sha256": "e9c65a70687394d15cfeebda61ef5a2f1f763df1d6597b0ca914b5af6e9e354e"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/terrain/N3P_F002-school-2km.geojson",
+      "bytes": 298033,
+      "sha256": "1c2980fefc3624599cdd1ad20e5539ab50183816445bdf01fd0b146217687611"
+    },
+    {
+      "path": "acquired-2026-10-31/analysis/terrain/archive-inspection.json",
+      "bytes": 4109,
+      "sha256": "73af59f0a2ac8986576d07a55787bc4ee97409291a58925b6b956d6b8c089a5c"
+    },
+    {
+      "path": "acquired-2026-10-31/artifact-manifest.json",
+      "bytes": 4700,
+      "sha256": "6cc619040ae15ad4c9c41c73c404997b990d0ab47423632a0f0030aabbed75f9"
+    },
+    {
+      "path": "acquired-2026-10-31/bundle-validation.json",
+      "bytes": 509,
+      "sha256": "c09f91683940e603127196f8766fb6d305bdf3c6e069b0062e7a82e9f5fdbf99"
+    },
+    {
+      "path": "acquired-2026-10-31/request-log.csv",
+      "bytes": 19637,
+      "sha256": "978d6ed8a91d8a8e1e66a9954e1dc4f64fc01e6edf4571114b31f0500bcea497"
+    },
+    {
+      "path": "acquired-2026-10-31/request-log.json",
+      "bytes": 64539,
+      "sha256": "b368ff5794c0eb0ad3219fd69a8eefeef8abc39ea98cdb791c574944873c2198"
+    },
+    {
+      "path": "acquired-2026-10-31/runtime-readiness.json",
+      "bytes": 673,
+      "sha256": "cac56534a6cdd42d4eea9339ab8eed4d4c9eeafadbaab0531ef9091382ce9ae1"
+    },
+    {
+      "path": "acquired-2026-10-31/sources/full-run-artifact-manifest.json",
+      "bytes": 48471,
+      "sha256": "a2e46b6b41b5624d32f89cec1c6b2487bccc5995387f9bf7691e4f7f5574dc75"
+    },
+    {
+      "path": "acquired-2026-10-31/sources/source-request-index.csv",
+      "bytes": 17544,
+      "sha256": "5e744269c77b23382b24db1005ec8c8edcb249e9ada2db25666f161a0ba00cc8"
+    },
+    {
+      "path": "acquired-2026-10-31/validation.json",
+      "bytes": 909,
+      "sha256": "0df3d0915ea9fed24294b9c521201a49f4a18dccfa061c2405f26e3613396e7e"
+    },
+    {
+      "path": "acquired-2026-10-31/보고서.md",
+      "bytes": 13431,
+      "sha256": "57b6699e40511b38d287b849faf1403b28840a78e9237cf9f4e2fcfc3bcab662"
+    },
+    {
+      "path": "api-retry-2026-10-31/20261031T120713Z/attempts.json",
+      "bytes": 551,
+      "sha256": "58961a7d4210f9ee0731dc9791ca9417bd094c63f1a88dbdd31c18d71e06b11d"
+    },
+    {
+      "path": "api-retry-2026-10-31/README.md",
+      "bytes": 1034,
+      "sha256": "a7a813f08f937854134435b36c12dee9274ef8c4dc44c6efda86fed6c8e4996a"
+    },
+    {
+      "path": "api-retry-2026-10-31/attempts.json",
+      "bytes": 1235,
+      "sha256": "a211d954732028ba4c33d5aa6d80c9c9b8ac507c3b267cd4450e10eb4e95f98d"
+    },
+    {
+      "path": "api-retry-2026-10-31/runtime-policy.json",
+      "bytes": 251,
+      "sha256": "df2ea16e4c186717584f3b8917813a1e81e00ccb5afc8121afda565abaf71c87"
+    },
+    {
+      "path": "compact-validation.json",
+      "bytes": 2385,
+      "sha256": "5259b89e7d6d5b7ac9c31ca2d899e15b6bcca3e8c2f328f4520b14239d539839"
+    },
+    {
+      "path": "crosscheck/acquisition-log.json",
+      "bytes": 7747,
+      "sha256": "f66ea483bd1bc4c842844fc33ec6046de980443f6c54a1dfe42e9d876bd748c6"
+    },
+    {
+      "path": "crosscheck/analyze-local.cjs",
+      "bytes": 6168,
+      "sha256": "aeea0740a607f3de52a69fccae222f56ecff9b387e1128be96eb2ac1bcf6ddb4"
+    },
+    {
+      "path": "crosscheck/analyze-topology.py",
+      "bytes": 6185,
+      "sha256": "3829b70609f47483d61314705d472fc28a569db36179698826e7dcc9b2e764e9"
+    },
+    {
+      "path": "crosscheck/build-registry.py",
+      "bytes": 8051,
+      "sha256": "54dcf429cc533c0c9eec708ba1da2fdd23c0ca12a79c1e24276f95906b30941d"
+    },
+    {
+      "path": "crosscheck/collect-public.py",
+      "bytes": 4296,
+      "sha256": "87acb0170d3e6385dadd1676ea4bc4d748f126bf6b353d2530fe5ea951162991"
+    },
+    {
+      "path": "crosscheck/collection-run.json",
+      "bytes": 8292,
+      "sha256": "82a164ba11444548c30a1611f5546f614f70ccc8da50964c3b74d6967ad673bb"
+    },
+    {
+      "path": "crosscheck/independent-features.overpassql",
+      "bytes": 340,
+      "sha256": "da2ded82c594874050a107dc9b6091ada27c5e67977187522fc89b83a8b81448"
+    },
+    {
+      "path": "crosscheck/local-evidence.geojson",
+      "bytes": 37885,
+      "sha256": "4f211b9422ccaff6058167be93a3f9f161b47ef0ce21fbf45b92f05bb6f817e7"
+    },
+    {
+      "path": "crosscheck/local-evidence.json",
+      "bytes": 370081,
+      "sha256": "afa65c292f360d2f6f77016b98ecc3ee5cad7061fcd5a9f6f298943ed0a40e74"
+    },
+    {
+      "path": "crosscheck/manifest.json",
+      "bytes": 2541,
+      "sha256": "b13b53cf0ba61a86e9bfd104896dbe4fde6788394cbac0cdfb785837b8b59098"
+    },
+    {
+      "path": "crosscheck/object-ledger.json",
+      "bytes": 8766,
+      "sha256": "3839a2ca1b6935fcfb89ff50d23b2f6b3878adb59eb160ecdf99b58d3204fb87"
+    },
+    {
+      "path": "crosscheck/photo-candidates.json",
+      "bytes": 1897,
+      "sha256": "6687f01504474f603374aec242aec7533fcf8f680ff789aec1e9cef0d4a43c81"
+    },
+    {
+      "path": "crosscheck/report.md",
+      "bytes": 16229,
+      "sha256": "9f83b0e2113e0b1ba8d869caf95f384bbf71d79f4a8dcd609a2c08deb3f1a556"
+    },
+    {
+      "path": "crosscheck/route-parent-relations.overpassql",
+      "bytes": 212,
+      "sha256": "2deba07b50b403abdc2db2fd4b571b8b0c97a2c1eeba349cdbe7701b5c073998"
+    },
+    {
+      "path": "crosscheck/sources.json",
+      "bytes": 27473,
+      "sha256": "01a231757df3d1f6acba0ec3444e5aa8ec81b9916fc2893dd5a13e2920b03b09"
+    },
+    {
+      "path": "crosscheck/topology.geojson",
+      "bytes": 9613,
+      "sha256": "9aaa6c693b4b13363ef8572ec606df6c36792dd99bd5acc3070db8244e9e2dba"
+    },
+    {
+      "path": "crosscheck/topology.json",
+      "bytes": 13230,
+      "sha256": "996fd97528b3f515d570718763e602397bb86353d4ea344a6aca7e248458f0b4"
+    },
+    {
+      "path": "entrances/acquire-public-samples.py",
+      "bytes": 2471,
+      "sha256": "4a98c02cb855f623403c0eb96b2525d92327f2c351b2c918a605fb9a36a8ca4d"
+    },
+    {
+      "path": "entrances/acquisition-log.json",
+      "bytes": 3166,
+      "sha256": "06b21f241946e1a233024b22c0edadbee4a732b247e0e5c326ca7404f11f9943"
+    },
+    {
+      "path": "entrances/api-schemas.json",
+      "bytes": 3199,
+      "sha256": "c330af3d452706d31447b7a0b91699c08e190b4a46d730d02a3bbf059c9cc253"
+    },
+    {
+      "path": "entrances/existing-artifacts-manifest.json",
+      "bytes": 836,
+      "sha256": "707a8d596c1b56a887b7f0f2a87d6f1da73312e73c25be22337b6dca2e529a9d"
+    },
+    {
+      "path": "entrances/nearby-existing-installations.json",
+      "bytes": 17839,
+      "sha256": "19c3a2359f308e991a9a8c00e25b491923bb5ab83cf51f3768324c0f16aeb7ed"
+    },
+    {
+      "path": "entrances/report.md",
+      "bytes": 13654,
+      "sha256": "51e13dff4c8f31d3c08a9b872113f1ef16bda168643169e613375178474d4831"
+    },
+    {
+      "path": "entrances/sources.json",
+      "bytes": 9415,
+      "sha256": "83961ee3499cc2401fd16a3e4e78a2a01b1002354d81085793f21f831b3bb5a6"
+    },
+    {
+      "path": "full-original-restoration.json",
+      "bytes": 1775,
+      "sha256": "a1e5f2b32245d9f9d5ab015818f64cb75c1fdae815b468d6b2b2770ba6ed340d"
+    },
+    {
+      "path": "full-original-validation.json",
+      "bytes": 2262,
+      "sha256": "3b9ed27cd2b0016ee81c3999d44d94266a4b05b7b4acc7d7560b52d87fa1b621"
+    },
+    {
+      "path": "full-originals.md",
+      "bytes": 3552,
+      "sha256": "74754783517beb319bb454ab32005e4ad5fb6b4288ca874fa8359f05a566d58a"
+    },
+    {
+      "path": "import-manifest.json",
+      "bytes": 716,
+      "sha256": "e0ff1b2f0384306524ea72b3dc1984d39d9d45afd1b92fdc6c17093d6144fb36"
+    },
+    {
+      "path": "integration/build-review-map.py",
+      "bytes": 7620,
+      "sha256": "b163ca28b0f5eabc4b1b04ca44410d305a2cf37bf8ac8a96dae7de7e5d1cfeb6"
+    },
+    {
+      "path": "integration/build-source-index.py",
+      "bytes": 3050,
+      "sha256": "6f178b311f0cba6af8a78350c0ef862d66abf7a32be3a514e6b0cb9cbad510ab"
+    },
+    {
+      "path": "integration/review-map.html",
+      "bytes": 890407,
+      "sha256": "428054b70c9757c0805cfcf8a545bbe23482cdaed3ced20e73597f8612a610d0"
+    },
+    {
+      "path": "integration/sources.json",
+      "bytes": 2205,
+      "sha256": "6eb9f2f77031b55da3cd809dd19b109a0fc5a668b0280e20ed7c69b5175dd9f2"
+    },
+    {
+      "path": "integration/temporary-access.md",
+      "bytes": 4365,
+      "sha256": "0d0af52fa4956cf14c70aaa51a98550116b634b13cbafb2eba8ea0726404576d"
+    },
+    {
+      "path": "integration/validate-compact-bundle.py",
+      "bytes": 7764,
+      "sha256": "0e3e98ac870d0bdd649581a8d81f9ea9502da27e968aaff9594ca4c9ecc3b41e"
+    },
+    {
+      "path": "integration/verify-full-originals.py",
+      "bytes": 9423,
+      "sha256": "26027b3c7fd5caf1f133d4c14e8ca9daa88f046c3b7815441a3a5997d14f1eae"
+    },
+    {
+      "path": "pre-acquisition-summary.md",
+      "bytes": 9284,
+      "sha256": "145bed63de66362d875b7a635f32e820b0899f0a151867e0df9e184c25fe16e2"
+    },
+    {
+      "path": "resumed-thread/README.md",
+      "bytes": 4843,
+      "sha256": "3abe260cf5467becd6beba0a6b98da5cd2f74642dad6ea5cd51369d9739314eb"
+    },
+    {
+      "path": "resumed-thread/provenance.json",
+      "bytes": 1762,
+      "sha256": "c88d6d095b8fdb0595e9ebd8ae81bb73c534bbe40c73e0e2557bf9bc20203c7e"
+    },
+    {
+      "path": "resumed-thread/reported-analysis.txt",
+      "bytes": 2531,
+      "sha256": "55f45d9c3c0af3af8838b701e70a5bc778d6a24a0417578f0bd3e3820746e795"
+    },
+    {
+      "path": "route-crossing-candidates.csv",
+      "bytes": 1878,
+      "sha256": "77aa805195c50da0e3ec714ed55daf1db8d961d588e1772971113d479a54b015"
+    },
+    {
+      "path": "sidewalk/acquire.py",
+      "bytes": 3812,
+      "sha256": "e735ccf27ec3b0201015db5612aa0d95c796a4a691e6a952197e5f2410839a6d"
+    },
+    {
+      "path": "sidewalk/acquisition-log.json",
+      "bytes": 1221,
+      "sha256": "9066ad823daa364888bf817094fc02f5dd57170543f7859c2dd27220f9c74791"
+    },
+    {
+      "path": "sidewalk/documented-schema.json",
+      "bytes": 1085,
+      "sha256": "9771d7b697133be66b947508b46a2bfef0e5c180e8d62d7fae00491053a7657e"
+    },
+    {
+      "path": "sidewalk/report.md",
+      "bytes": 8292,
+      "sha256": "8b3e51c4ad2b86fc3989f7533e5cd72c55a246924a66caba0e6ce0df6e8b0560"
+    },
+    {
+      "path": "sidewalk/sources.json",
+      "bytes": 7661,
+      "sha256": "823be3d30175c7f7ce51d52d91972e3bcbd239d006fe9534b99fc57df961b2c4"
+    },
+    {
+      "path": "source-index.json",
+      "bytes": 179104,
+      "sha256": "35e7ab3edfc37c19c87bb045a368ea9aa3c33b40bc112d0893ab5a4796a6fa2c"
+    },
+    {
+      "path": "terrain/acquisition-log.json",
+      "bytes": 2950,
+      "sha256": "0f97488c8471a1840a3c4da467a5869040f7c78a11fccc57600fcfb7a596fa22"
+    },
+    {
+      "path": "terrain/artifact-manifest.json",
+      "bytes": 3647,
+      "sha256": "46f89f5e5ead92750165eb525611c8d052b489c228681e1cd2f3470812354dc1"
+    },
+    {
+      "path": "terrain/download_oa22241.py",
+      "bytes": 2343,
+      "sha256": "744a9f547927366e59299a30c258c5598739c3f0aa988a35d398007054ecf8a9"
+    },
+    {
+      "path": "terrain/evidence/15059920-catalog.json",
+      "bytes": 2301,
+      "sha256": "c7ded6c908777ab0a1173c3480a36aa67eea6b199ddfa2d3ff928d1191a9b42b"
+    },
+    {
+      "path": "terrain/evidence/15067637-catalog.json",
+      "bytes": 6959,
+      "sha256": "817697587594ccf5f6475979aa4cfd195d28e2a3c03897fca9cbab4117e79a85"
+    },
+    {
+      "path": "terrain/evidence/15100676-catalog.json",
+      "bytes": 2167,
+      "sha256": "1906069c0b484b1993918b8be3db063319af7d45230f72040779808bb24414fa"
+    },
+    {
+      "path": "terrain/evidence/catalog-web-tool-output.json",
+      "bytes": 11343,
+      "sha256": "a33918e73de6eac508715a471b25a3653f75b35d285e434b2ba49a2b80f766db"
+    },
+    {
+      "path": "terrain/extract_osm_terrain.py",
+      "bytes": 2566,
+      "sha256": "0fd97293749fad84e338ae9b68835865f44a08053671ce8d98218fc410d8c78f"
+    },
+    {
+      "path": "terrain/inspect_contours.py",
+      "bytes": 3514,
+      "sha256": "41e26067083f795b4dd1b1fd08cd61db1c8b42dcd8426203615ecf576b1b51a2"
+    },
+    {
+      "path": "terrain/osm-terrain-caveats-school-2km.geojson",
+      "bytes": 122458,
+      "sha256": "5122d2c2965aee132092f83e9cfdad4d63ead753f5fdfe2474272f1a1208880a"
+    },
+    {
+      "path": "terrain/osm-terrain-summary.json",
+      "bytes": 836,
+      "sha256": "f948396c28998049d6665a80ff9ece0a300b86be90c3d618397a842b82dc6f2a"
+    },
+    {
+      "path": "terrain/report.md",
+      "bytes": 11190,
+      "sha256": "5957103be3081c9ee283c31cfb6cd14d078c1bd46a63ef169acfcd05b7170ac1"
+    },
+    {
+      "path": "terrain/sources.json",
+      "bytes": 8719,
+      "sha256": "67e2e7977fe3587708d395d8eea5c3c28b6602005f2048f485a7ec078cf7e357"
+    },
+    {
+      "path": "validation-report.json",
+      "bytes": 444,
+      "sha256": "bef02ae305fbf38dc3f11b70392de4c6c8d8501ef6d0d96430ce6b52dcbff187"
+    },
+    {
+      "path": "보고서.md",
+      "bytes": 21917,
+      "sha256": "4cf6a21b55349b12967f28ad07bcaac5082c85da5864ca121c6b004befa4c746"
+    }
+  ]
+}

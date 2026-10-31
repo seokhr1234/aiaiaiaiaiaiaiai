@@ -1,0 +1,141 @@
+{
+  "created_at_utc": "2026-10-31T12:39:02.158928+00:00",
+  "scope": "Files included in compact bundle; manifest itself and SHA256SUMS.txt excluded to avoid recursive hashes",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2192,
+      "sha256": "e27026f1ab9ae865b6ec680b32b1a749ac682f42bfccca2575d6b9d624255aca"
+    },
+    {
+      "path": "acquisition-summary.json",
+      "bytes": 886,
+      "sha256": "8dfb466e4ffad30b42f451ded56b564bfff051e8a11caf506696802fdeb7bcb9"
+    },
+    {
+      "path": "analysis/crossings-identifier-join.json",
+      "bytes": 443444,
+      "sha256": "d01f2598fd74fa97749912c14eeac236e8acfb040c23a537958345db5cfb3f66"
+    },
+    {
+      "path": "analysis/crossings-school-2km.csv",
+      "bytes": 262084,
+      "sha256": "983151f4ef739347baa9c9f9972a7c6bbdaf4e97bd854bebbc9d05407d4f2eec"
+    },
+    {
+      "path": "analysis/crossings-school-2km.geojson",
+      "bytes": 1149918,
+      "sha256": "f0261bf65cb5ba52fc726a1a112cd9e52f5477cf5b93f3efadcc58a99be8ff7d"
+    },
+    {
+      "path": "analysis/crossings-school-2km.json",
+      "bytes": 821312,
+      "sha256": "3c558de9a93c221f9e5817b949a1d4d99810ba84a44650f98c4b30a1b2665039"
+    },
+    {
+      "path": "analysis/current-route-segments.csv",
+      "bytes": 4156,
+      "sha256": "3d5d7c9ffa9aeb082e5ca0b388e5f4edf0e8085a7fcde3f3e563bbe083f875bb"
+    },
+    {
+      "path": "analysis/current-route-segments.geojson",
+      "bytes": 32151,
+      "sha256": "e0faa9c52a96fd106ff97de1ec90517035b56ea3a8cbd83ad777b178223a8371"
+    },
+    {
+      "path": "analysis/osm-access-features.csv",
+      "bytes": 18245,
+      "sha256": "2973bf6df3a1cbe29358cc6acea97c0fd487d2b7966af88cac3086b90ffbb20e"
+    },
+    {
+      "path": "analysis/osm-access-features.geojson",
+      "bytes": 87177,
+      "sha256": "e19e5d760fd8d2d137c12e1bb6b9ff9700c75c6e3fb03c1815b8d6d695f195a5"
+    },
+    {
+      "path": "analysis/osm-access-features.json",
+      "bytes": 43816,
+      "sha256": "034b2ccd35ef34058f1d814741bc9593f9a19a70ec73c70d2a53c789f367be50"
+    },
+    {
+      "path": "analysis/sidewalk-road-name-candidates.csv",
+      "bytes": 1070,
+      "sha256": "f41302955d1ee2bfdbb3953da871f987b9d3c65a40738ca8651b394685cbb140"
+    },
+    {
+      "path": "analysis/sidewalk-road-name-candidates.json",
+      "bytes": 2671,
+      "sha256": "69eb25a5746da342eee68de29c223f1e2d7027edcc7683d0a705840a3dc9b4a6"
+    },
+    {
+      "path": "analysis/summary.json",
+      "bytes": 34986,
+      "sha256": "fd3680aa68ba4f6f4f81018d217118237917f525560e961ed28adbff511226ad"
+    },
+    {
+      "path": "analysis/terrain/N3L_F001-school-2km.csv",
+      "bytes": 25142,
+      "sha256": "3380a5a859fc04c40406d1dc7b8e9f18a2cedeafb691b37eb1aa03fe8e82eaed"
+    },
+    {
+      "path": "analysis/terrain/N3L_F001-school-2km.geojson",
+      "bytes": 2963923,
+      "sha256": "eb3325a1adc6573a55b2941a042018abd83e2b12858ffe360dc7910ee667abc7"
+    },
+    {
+      "path": "analysis/terrain/N3P_F002-school-2km.csv",
+      "bytes": 127304,
+      "sha256": "e9c65a70687394d15cfeebda61ef5a2f1f763df1d6597b0ca914b5af6e9e354e"
+    },
+    {
+      "path": "analysis/terrain/N3P_F002-school-2km.geojson",
+      "bytes": 298033,
+      "sha256": "1c2980fefc3624599cdd1ad20e5539ab50183816445bdf01fd0b146217687611"
+    },
+    {
+      "path": "analysis/terrain/archive-inspection.json",
+      "bytes": 4109,
+      "sha256": "73af59f0a2ac8986576d07a55787bc4ee97409291a58925b6b956d6b8c089a5c"
+    },
+    {
+      "path": "bundle-validation.json",
+      "bytes": 509,
+      "sha256": "c09f91683940e603127196f8766fb6d305bdf3c6e069b0062e7a82e9f5fdbf99"
+    },
+    {
+      "path": "request-log.csv",
+      "bytes": 19637,
+      "sha256": "978d6ed8a91d8a8e1e66a9954e1dc4f64fc01e6edf4571114b31f0500bcea497"
+    },
+    {
+      "path": "request-log.json",
+      "bytes": 64539,
+      "sha256": "b368ff5794c0eb0ad3219fd69a8eefeef8abc39ea98cdb791c574944873c2198"
+    },
+    {
+      "path": "runtime-readiness.json",
+      "bytes": 673,
+      "sha256": "cac56534a6cdd42d4eea9339ab8eed4d4c9eeafadbaab0531ef9091382ce9ae1"
+    },
+    {
+      "path": "sources/full-run-artifact-manifest.json",
+      "bytes": 48471,
+      "sha256": "a2e46b6b41b5624d32f89cec1c6b2487bccc5995387f9bf7691e4f7f5574dc75"
+    },
+    {
+      "path": "sources/source-request-index.csv",
+      "bytes": 17544,
+      "sha256": "5e744269c77b23382b24db1005ec8c8edcb249e9ada2db25666f161a0ba00cc8"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 909,
+      "sha256": "0df3d0915ea9fed24294b9c521201a49f4a18dccfa061c2405f26e3613396e7e"
+    },
+    {
+      "path": "보고서.md",
+      "bytes": 13431,
+      "sha256": "57b6699e40511b38d287b849faf1403b28840a78e9237cf9f4e2fcfc3bcab662"
+    }
+  ]
+}

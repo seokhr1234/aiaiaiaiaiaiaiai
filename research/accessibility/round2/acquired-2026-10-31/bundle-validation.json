@@ -1,0 +1,14 @@
+{
+  "validated_at_utc": "2026-10-31T12:39:02.158325+00:00",
+  "csv_geojson_feature_counts_match": true,
+  "csv_record_counts": {
+    "analysis/crossings-school-2km.csv": 1260,
+    "analysis/current-route-segments.csv": 66,
+    "analysis/osm-access-features.csv": 171,
+    "analysis/terrain/N3L_F001-school-2km.csv": 151,
+    "analysis/terrain/N3P_F002-school-2km.csv": 727,
+    "analysis/sidewalk-road-name-candidates.csv": 6
+  },
+  "raw_sources_included": false,
+  "installed_dependencies_included": false
+}

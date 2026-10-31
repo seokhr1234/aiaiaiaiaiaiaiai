@@ -1,0 +1,91 @@
+{
+  "checked_on": "2026-10-31",
+  "status": "passed",
+  "scope": "Actual compact files independently read and recalculated in this workspace.",
+  "checks": {
+    "sha256sum_files_verified": 28,
+    "manifest_files_verified": 27,
+    "geojson_csv_feature_counts": {
+      "analysis/crossings-school-2km.geojson": 1260,
+      "analysis/current-route-segments.geojson": 66,
+      "analysis/osm-access-features.geojson": 171,
+      "analysis/terrain/N3L_F001-school-2km.geojson": 151,
+      "analysis/terrain/N3P_F002-school-2km.geojson": 727
+    },
+    "geometry_types": {
+      "Point": 2138,
+      "LineString": 211,
+      "MultiLineString": 26
+    },
+    "request_count": 45,
+    "http_status_counts": {
+      "None": 2,
+      "200": 43
+    },
+    "request_classifications": {
+      "local_execution_network_permission_error": 2,
+      "http_success": 41,
+      "api_server_error": 2
+    },
+    "route_lengths_m_recalculated": {
+      "shortest": 673.933062451592,
+      "bench": 957.3127232009838
+    },
+    "route_segment_counts": {
+      "shortest": 30,
+      "bench": 36
+    },
+    "crossings_recalculated": {
+      "count": 1260,
+      "districts": {
+        "강북구": 19,
+        "동대문구": 453,
+        "성북구": 788
+      },
+      "pedestrian_signals": {
+        "Y": 367,
+        "N": 893
+      },
+      "audible_signals": {
+        "Y": 315,
+        "N": 945
+      },
+      "raised_crossings": {
+        "-": 116,
+        "N": 1012,
+        "Y": 132
+      },
+      "maximum_school_distance_m": 1999.377218379262,
+      "within_20m_of_route": 15,
+      "matched_ids": 608
+    },
+    "terrain_attributes": [
+      {
+        "layer": "N3L_F001",
+        "count": 151,
+        "HEIGHT_min": 15.0,
+        "HEIGHT_max": 140.0,
+        "vertical_unit": "not independently established"
+      },
+      {
+        "layer": "N3P_F002",
+        "count": 727,
+        "HEIGHT_min": 13.54,
+        "HEIGHT_max": 136.69,
+        "vertical_unit": "not independently established"
+      }
+    ],
+    "sidewalk_rows": 6,
+    "school_named_sidewalk_widths_m": {
+      "4318": 3.2,
+      "4319": 3,
+      "4322": 3.2,
+      "4323": 3.2
+    }
+  },
+  "not_reverified_here": [
+    "Raw HTTP body hashes and GIS/XLSX/full CSV archives: not included.",
+    "Original source CRS selection/transform and full-source completeness.",
+    "Live facility operation and field measurements."
+  ]
+}

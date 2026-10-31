@@ -1,0 +1,242 @@
+{
+  "created_at": "2026-10-31T05:13:25.649916+00:00",
+  "actual_checks": [
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://api.openstreetmap.org/api/0.6/way/37402230/history.json",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://www.openstreetmap.org/way/37402230/history",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://api.openstreetmap.org/api/0.6/node/12464206320/history.json",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://www.openstreetmap.org/way/750640243/history",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://api.openstreetmap.org/api/0.6/way/750640242.json",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://www.openstreetmap.org/api/0.6/way/750640242",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://www.openstreetmap.org/way/379766295",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://www.openstreetmap.org/node/12464206320",
+      "status": "inaccessible",
+      "bytes": null,
+      "sha256": null,
+      "reason": "Browser tool reported not accessible; no HTTP code available."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "executor-default",
+      "url": "https://api.openstreetmap.org/api/0.6/ways.json?ways=37402230,183272540,750640231,750640241,750640242,750640243",
+      "status": "failed_permission",
+      "error": "URLError [Errno 1] Operation not permitted",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "executor-with-network-permission-inherited-proxy",
+      "url": "https://api.openstreetmap.org/api/0.6/ways.json?ways=37402230,183272540,750640231,750640241,750640242,750640243",
+      "status": "failed_proxy_policy",
+      "error": "Tunnel connection failed: 403 Forbidden",
+      "bytes": null,
+      "sha256": null,
+      "action": "Stopped network requests; did not bypass proxy or try alternate data mirror."
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:layer",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:level",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:bridge",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:tunnel",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:access",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:entrance",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:barrier",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:kerb",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:incline",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:check_date",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/API_v0.6",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://kartaview.org/doc/photos",
+      "status": "search_extracted_open_js_shell",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://kartaview.org/doc/faq",
+      "status": "search_extracted_open_js_shell",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://help.mapillary.com/hc/en-us/articles/360010234680-Accessing-imagery-and-data-through-the-Mapillary-API",
+      "status": "browser_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://commons.wikimedia.org/wiki/File:Seongbuk_Jongam-dong_Community_Service_Center.jpg",
+      "status": "browser_metadata_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://commons.wikimedia.org/wiki/File:Seongbuk_Wolgok_2-dong_Community_Service_Center.jpg",
+      "status": "browser_metadata_opened",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "requested_on": "2026-10-31",
+      "transport": "web_tool",
+      "url": "https://commons.wikimedia.org/wiki/File:Seoul-metro-641-Wolgok-station-entrance-5-20181125-145306.jpg",
+      "status": "browser_metadata_opened",
+      "bytes": null,
+      "sha256": null
+    }
+  ],
+  "planned_requests_file": "collection-run.json",
+  "network_limit": "Current OSM data/history, changesets and independent Overpass features not acquired. Planned requests are dry run only."
+}

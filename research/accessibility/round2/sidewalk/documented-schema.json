@@ -1,0 +1,44 @@
+{
+  "source": "https://data.seoul.go.kr/dataList/OA-21208/A/1/datasetView.do",
+  "evidence": "official API documentation, not response rows",
+  "crs": "WGS84 per description",
+  "fields": [
+    "NODE_TYPE",
+    "NODE_WKT",
+    "NODE_ID",
+    "NODE_TYPE_CD",
+    "LNKG_WKT",
+    "LNKG_ID",
+    "LNKG_TYPE_CD",
+    "BGNG_LNKG_ID",
+    "END_LNKG_ID",
+    "LNKG_LEN",
+    "SGG_CD",
+    "SGG_NM",
+    "EMD_CD",
+    "EMD_NM",
+    "EXPN_CAR_RD",
+    "SBWY_NTW",
+    "BRG",
+    "TNL",
+    "OVRP",
+    "CRSWK",
+    "PARK",
+    "BLDG",
+    "WORK_DTTM"
+  ],
+  "length_unit": "not explicit in inspected documentation",
+  "sample_url": "http://openapi.seoul.go.kr:8088/sample/json/TbTraficWlkNet/1/5/",
+  "sample_key": "sample documented; allowed indexes1~5 only",
+  "optional_filters": [
+    "SGG_NM",
+    "WORK_DTTM"
+  ],
+  "missing_from_documentation": [
+    "minimum_clear_width",
+    "kerb_height",
+    "sidewalk_width",
+    "cross_slope"
+  ],
+  "warning": "BGNG_LNKG_ID and END_LNKG_ID labeled start/end node IDs by official docs; preserve field names and validate semantics with raw rows"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "donghaeng-nav/dist/map-data.json",
+  "source_sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+  "source_timestamp": "2026-10-28T05:19:18Z",
+  "generated_at": "2026-10-31T05:11:32.484941+00:00",
+  "selection": "feature has at least one vertex within 2000m, approximate local distance; not precise clipping",
+  "feature_count": 211,
+  "tag_counts": {
+    "bridge": 90,
+    "layer": 181,
+    "tunnel": 43,
+    "incline": 19,
+    "cutting": 1
+  },
+  "incline_values": {
+    "up": 10,
+    "down": 7,
+    "0%": 1,
+    "yes": 1
+  },
+  "note": "Incline direction labels are not measured numeric slopes; layer tags are not vertical heights. All features may include non-walkable roads.",
+  "output_bytes": 122458,
+  "output_sha256": "5122d2c2965aee132092f83e9cfdad4d63ead753f5fdfe2474272f1a1208880a"
+}

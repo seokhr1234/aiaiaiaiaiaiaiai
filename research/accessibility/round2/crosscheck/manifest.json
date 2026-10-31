@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-10-31T05:17:49.817560+00:00",
+  "files": [
+    {
+      "path": "acquisition-log.json",
+      "bytes": 7747,
+      "sha256": "f66ea483bd1bc4c842844fc33ec6046de980443f6c54a1dfe42e9d876bd748c6"
+    },
+    {
+      "path": "analyze-local.cjs",
+      "bytes": 6168,
+      "sha256": "aeea0740a607f3de52a69fccae222f56ecff9b387e1128be96eb2ac1bcf6ddb4"
+    },
+    {
+      "path": "analyze-topology.py",
+      "bytes": 6185,
+      "sha256": "3829b70609f47483d61314705d472fc28a569db36179698826e7dcc9b2e764e9"
+    },
+    {
+      "path": "build-registry.py",
+      "bytes": 8051,
+      "sha256": "54dcf429cc533c0c9eec708ba1da2fdd23c0ca12a79c1e24276f95906b30941d"
+    },
+    {
+      "path": "collect-public.py",
+      "bytes": 4296,
+      "sha256": "87acb0170d3e6385dadd1676ea4bc4d748f126bf6b353d2530fe5ea951162991"
+    },
+    {
+      "path": "collection-run.json",
+      "bytes": 8292,
+      "sha256": "82a164ba11444548c30a1611f5546f614f70ccc8da50964c3b74d6967ad673bb"
+    },
+    {
+      "path": "independent-features.overpassql",
+      "bytes": 340,
+      "sha256": "da2ded82c594874050a107dc9b6091ada27c5e67977187522fc89b83a8b81448"
+    },
+    {
+      "path": "local-evidence.geojson",
+      "bytes": 37885,
+      "sha256": "4f211b9422ccaff6058167be93a3f9f161b47ef0ce21fbf45b92f05bb6f817e7"
+    },
+    {
+      "path": "local-evidence.json",
+      "bytes": 370081,
+      "sha256": "afa65c292f360d2f6f77016b98ecc3ee5cad7061fcd5a9f6f298943ed0a40e74"
+    },
+    {
+      "path": "object-ledger.json",
+      "bytes": 8766,
+      "sha256": "3839a2ca1b6935fcfb89ff50d23b2f6b3878adb59eb160ecdf99b58d3204fb87"
+    },
+    {
+      "path": "photo-candidates.json",
+      "bytes": 1897,
+      "sha256": "6687f01504474f603374aec242aec7533fcf8f680ff789aec1e9cef0d4a43c81"
+    },
+    {
+      "path": "report.md",
+      "bytes": 16229,
+      "sha256": "9f83b0e2113e0b1ba8d869caf95f384bbf71d79f4a8dcd609a2c08deb3f1a556"
+    },
+    {
+      "path": "route-parent-relations.overpassql",
+      "bytes": 212,
+      "sha256": "2deba07b50b403abdc2db2fd4b571b8b0c97a2c1eeba349cdbe7701b5c073998"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 27473,
+      "sha256": "01a231757df3d1f6acba0ec3444e5aa8ec81b9916fc2893dd5a13e2920b03b09"
+    },
+    {
+      "path": "topology.geojson",
+      "bytes": 9613,
+      "sha256": "9aaa6c693b4b13363ef8572ec606df6c36792dd99bd5acc3070db8244e9e2dba"
+    },
+    {
+      "path": "topology.json",
+      "bytes": 13230,
+      "sha256": "996fd97528b3f515d570718763e602397bb86353d4ea344a6aca7e248458f0b4"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "school_latlon": [
+    37.5950991,
+    127.038992
+  ],
+  "sources": [
+    {
+      "id": "T2-01",
+      "title": "서울시 경사도 OA-22241",
+      "url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_catalog_opened",
+      "source_date": "2023 source; 2025-03-20 attachment update",
+      "license": "KOGL-1",
+      "note": "File list confirms contours/spots, not a ready-made slope layer. ZIP not yet acquired.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-02",
+      "title": "서울시 경사도 공공데이터 메타데이터",
+      "url": "https://www.data.go.kr/catalog/15100676/fileData.json",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "normalized_json_acquired",
+      "source_date": "catalog modified 2025-09-25",
+      "license": "KOGL-1",
+      "note": "evidence/15100676-catalog.json is parsed web-rendered JSON, not HTTP bytes.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-03",
+      "title": "서울안전누리 길단위 경사",
+      "url": "https://safecity.seoul.go.kr/distFclt/cfMapDs/cfMapDs.page?menuId=MENU_SSNS_000016",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_page_opened",
+      "source_date": "contour source 2024.03",
+      "license": "not established for extracted layer",
+      "note": "No public vector API or field schema verified. Source is terrain-derived segment slope (%).",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-04",
+      "title": "NGII DEM",
+      "url": "https://www.data.go.kr/catalog/15059920/fileData.json",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "normalized_json_acquired",
+      "source_date": "catalog modified 2025-06-17",
+      "license": "catalog unrestricted",
+      "note": "IMG; local tile resolution and actual source date not verified.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-05",
+      "title": "NGII DEM 성과내역",
+      "url": "https://www.data.go.kr/catalog/15067637/fileData.json",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "normalized_json_acquired",
+      "source_date": "catalog modified 2025-07-10",
+      "license": "catalog unrestricted",
+      "note": "CSV schema includes grid spacing, vertical datum and source year. No school row acquired.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-06",
+      "title": "S-MAP 분석 가이드",
+      "url": "https://smap.seoul.go.kr/guide/guide.html",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_guide_opened",
+      "source_date": null,
+      "license": "not established for data extraction",
+      "note": "Terrain slope and point elevation tools documented. No school measured result obtained.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-07",
+      "title": "NEINS 지형 분석",
+      "url": "https://webgis.neins.go.kr/map.do",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_page_opened",
+      "source_date": "2022 NGII 5m DEM per page",
+      "license": null,
+      "note": "New lead: point and area terrain analysis; some restricted areas. Degree slope bins differ from Safecity percent bins.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-08",
+      "title": "NEINS 다운로드",
+      "url": "https://webgis.neins.go.kr/info/doyup/doyupList.do",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_page_opened",
+      "source_date": null,
+      "license": null,
+      "note": "Downloads environmental assessment TIFFs; not proof of downloadable 5m DEM. Separate products.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-09",
+      "title": "VWorld 90m DEM catalog candidate",
+      "url": "https://www.vworld.kr/dtmk/dtmk_ntads_s002.do?dsId=30206",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "web_tool_error",
+      "source_date": null,
+      "license": null,
+      "note": "Web fetch returned 502; this is not proof service is generally down or no data exist.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-10",
+      "title": "Copernicus official DEM collection",
+      "url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_spec_opened",
+      "source_date": "TanDEM-X acquisition 2011-2015 with gapfill caveats",
+      "license": "Copernicus DEM license",
+      "note": "DSM includes buildings/vegetation. GLO-30 global alternative; not walking-surface terrain truth.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-11",
+      "title": "AWS public Copernicus registry",
+      "url": "https://registry.opendata.aws/copernicus-dem/",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_host_registry_opened",
+      "source_date": "2021 release stated",
+      "license": "Copernicus DEM license",
+      "note": "Public no-account S3 access documented; target tile bytes not acquired.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-12",
+      "title": "Copernicus public bucket readme",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "hosting_docs_opened",
+      "source_date": null,
+      "license": "Copernicus DEM license",
+      "note": "COG path convention verified: resolution 10 means 1 arc second, not 10m. N37/E127 target tile derivable; existence not yet verified.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-13",
+      "title": "USGS SRTM specification",
+      "url": "https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_spec_opened",
+      "source_date": "2000-02-11 to 2000-02-22 mission",
+      "license": null,
+      "note": "WGS84 horizontal, EGM96 vertical, meters; 30m global data alternative. Very old surface acquisition for present access.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-14",
+      "title": "OpenTopography developers",
+      "url": "https://opentopography.org/developers",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "official_api_docs_opened",
+      "source_date": null,
+      "license": "per-dataset licenses and API terms",
+      "note": "API key required; no account created and no key requested. Supports COP30/SRTM, subject to terms.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-15",
+      "title": "NGII map history catalog candidate",
+      "url": "https://www.data.go.kr/data/15148179/fileData.do",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "search_result_only",
+      "source_date": "2025-08-28 title",
+      "license": null,
+      "note": "Search result suggests survey/production year and map sheet IDs; JSON endpoint inaccessible in web tool, no source records acquired.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "T2-16",
+      "title": "NGII portal",
+      "url": "https://map.ngii.go.kr/mn/mainPage.do",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "web_tool_error",
+      "source_date": null,
+      "license": null,
+      "note": "Web tool 400. No tile selection or login performed.",
+      "school_specific_values_obtained": false
+    },
+    {
+      "id": "LEAD-01",
+      "title": "Third-party public acquisition script",
+      "url": "https://github.com/minwoo19930301/seoul-real-estate-map/blob/63f8d033033bfee22e03ff78706f69ad69138c3b/scripts/download_source.py",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "evidence_status": "third_party_code_inspected",
+      "source_date": "commit 63f8d033033bfee22e03ff78706f69ad69138c3b",
+      "license": null,
+      "note": "Download endpoint candidate only; no authority for CRS/HEIGHT until independent archive inspection.",
+      "school_specific_values_obtained": false
+    }
+  ]
+}

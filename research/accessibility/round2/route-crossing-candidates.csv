@@ -1,0 +1,16 @@
+﻿management_id,source_row_1based,address,longitude,latitude,distance_to_route_m,pedestrian_signal,audible_signal,match_status,field_verified
+06-0000024261,26485,성북구 종암동 129-1 도,127.0408983,37.5955641,0.26,N,N,proximity_candidate_only,False
+06-0000028299,26681,성북구 하월곡동 226-8 도,127.0423691,37.59778469,0.63,N,N,proximity_candidate_only,False
+06-0000028300,26689,성북구 하월곡동 226-8 도,127.0421572,37.59778553,0.66,N,N,proximity_candidate_only,False
+06-0000028303,26678,성북구 하월곡동 226-1 대,127.0420468,37.59772727,1.32,N,N,proximity_candidate_only,False
+06-0000028301,26679,성북구 하월곡동 226-8 도,127.0418899,37.59777716,1.54,N,N,proximity_candidate_only,False
+06-0000034090,26550,성북구 종암동 3-1395 천,127.0405854,37.59717793,1.57,Y,Y,proximity_candidate_only,False
+06-0000028304,26686,성북구 하월곡동 226-8 도,127.0412837,37.59777027,1.92,N,N,proximity_candidate_only,False
+06-0000028305,26687,성북구 하월곡동 226-8 도,127.0412367,37.59719495,2.34,Y,N,proximity_candidate_only,False
+06-0000028370,26559,성북구 종암동 3-70도,127.0391885,37.59741391,2.76,N,N,proximity_candidate_only,False
+06-0000014861,26553,성북구 종암동 3-70도,127.0391895,37.59725005,3.83,Y,Y,proximity_candidate_only,False
+06-0000028302,26677,성북구 하월곡동 226 대,127.0420452,37.59784435,5.82,N,N,proximity_candidate_only,False
+06-0000023127,26547,성북구 종암동 3-1168 도,127.0402727,37.59560309,6.89,N,N,proximity_candidate_only,False
+06-0000028296,26807,성북구 하월곡동 산5-10 도,127.0424861,37.59785405,7.21,N,N,proximity_candidate_only,False
+06-0000033352,26526,성북구 종암동 134-5 도,127.0393115,37.59783725,9.45,N,N,proximity_candidate_only,False
+06-0000026467,26690,성북구 하월곡동 226-8 도,127.0419503,37.59705758,10.37,N,N,proximity_candidate_only,False

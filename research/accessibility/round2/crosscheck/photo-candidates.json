@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Seongbuk Jongam-dong Community Service Center.jpg",
+    "date": "2013-08-15T12:53:10",
+    "timezone": "not_explicit_in_page_summary",
+    "author": "안우석",
+    "license": "CC0 1.0",
+    "coordinates": [
+      127.035167,
+      37.599167
+    ],
+    "heading_deg": 196.4595959596,
+    "file_bytes_exact": null,
+    "page_reported_file_size": "4.39 MB",
+    "url": "https://commons.wikimedia.org/wiki/File:Seongbuk_Jongam-dong_Community_Service_Center.jpg",
+    "checked_on": "2026-10-31",
+    "image_downloaded": false,
+    "image_visually_interpreted": false,
+    "accessibility_measurements_created": false
+  },
+  {
+    "name": "Seongbuk Wolgok 2-dong Community Service Center.jpg",
+    "date": "2013-08-15T13:34:59",
+    "timezone": "not_explicit_in_page_summary",
+    "author": "안우석",
+    "license": "CC0 1.0",
+    "coordinates": [
+      127.048,
+      37.606
+    ],
+    "heading_deg": 215.8009478673,
+    "file_bytes_exact": null,
+    "page_reported_file_size": "4.19 MB",
+    "url": "https://commons.wikimedia.org/wiki/File:Seongbuk_Wolgok_2-dong_Community_Service_Center.jpg",
+    "checked_on": "2026-10-31",
+    "image_downloaded": false,
+    "image_visually_interpreted": false,
+    "accessibility_measurements_created": false
+  },
+  {
+    "name": "Seoul-metro-641-Wolgok-station-entrance-5-20181125-145306.jpg",
+    "date": "2018-11-25T14:53:06+09:00",
+    "timezone": "KST explicit",
+    "author": "LERK",
+    "license": "CC BY-SA 4.0 (or CC BY-SA 2.1 Japan)",
+    "coordinates": null,
+    "heading_deg": null,
+    "file_bytes_exact": null,
+    "page_reported_file_size": "2.46 MB",
+    "url": "https://commons.wikimedia.org/wiki/File:Seoul-metro-641-Wolgok-station-entrance-5-20181125-145306.jpg",
+    "checked_on": "2026-10-31",
+    "image_downloaded": false,
+    "image_visually_interpreted": false,
+    "accessibility_measurements_created": false
+  }
+]

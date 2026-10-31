@@ -1,0 +1,41 @@
+[
+  {
+    "name": "seoul-walk-sample",
+    "url": "http://openapi.seoul.go.kr:8088/sample/json/TbTraficWlkNet/1/5/",
+    "method": "GET",
+    "requested_at_utc": "2026-10-31T05:19:57.499964+00:00",
+    "uses_inherited_proxy": true,
+    "status": "failed",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 403: Forbidden",
+    "http_status": 403,
+    "bytes": null,
+    "sha256": null
+  },
+  {
+    "name": "osm-current-way",
+    "url": "https://api.openstreetmap.org/api/0.6/way/750640242.json",
+    "method": "GET",
+    "requested_at_utc": "2026-10-31T05:19:57.516239+00:00",
+    "uses_inherited_proxy": true,
+    "status": "failed",
+    "error_type": "URLError",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "http_status": null,
+    "bytes": null,
+    "sha256": null
+  },
+  {
+    "name": "seoul-dataset-page",
+    "url": "https://data.seoul.go.kr/dataList/OA-21208/A/1/datasetView.do",
+    "method": "GET",
+    "requested_at_utc": "2026-10-31T05:19:57.520200+00:00",
+    "uses_inherited_proxy": true,
+    "status": "failed",
+    "error_type": "URLError",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "http_status": null,
+    "bytes": null,
+    "sha256": null
+  }
+]

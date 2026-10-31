@@ -1,0 +1,1523 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0386111,
+            37.5962061
+          ],
+          [
+            127.0386595,
+            37.5962939
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0386595,
+            37.5962939
+          ],
+          [
+            127.03874,
+            37.59644
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.03874,
+            37.59644
+          ],
+          [
+            127.0389782,
+            37.5969164
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0389782,
+            37.5969164
+          ],
+          [
+            127.03909,
+            37.59714
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.03909,
+            37.59714
+          ],
+          [
+            127.0392262,
+            37.5974226
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0392262,
+            37.5974226
+          ],
+          [
+            127.0393953,
+            37.5977734
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0393953,
+            37.5977734
+          ],
+          [
+            127.03949,
+            37.59797
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.03949,
+            37.59797
+          ],
+          [
+            127.0395152,
+            37.5980284
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0395152,
+            37.5980284
+          ],
+          [
+            127.0396985,
+            37.5979447
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0396985,
+            37.5979447
+          ],
+          [
+            127.0398908,
+            37.5978341
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0398908,
+            37.5978341
+          ],
+          [
+            127.0399819,
+            37.5977492
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0399819,
+            37.5977492
+          ],
+          [
+            127.0400788,
+            37.5976422
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0400788,
+            37.5976422
+          ],
+          [
+            127.0401831,
+            37.5975537
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0401831,
+            37.5975537
+          ],
+          [
+            127.0403931,
+            37.5974746
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0403931,
+            37.5974746
+          ],
+          [
+            127.0405761,
+            37.5974361
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 379553740,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0405761,
+            37.5974361
+          ],
+          [
+            127.0405666,
+            37.5971459
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 183272540,
+        "current_way_version": 10,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0405666,
+            37.5971459
+          ],
+          [
+            127.0410888,
+            37.5971229
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 183272560,
+        "current_way_version": 6,
+        "current_edit_timestamp": "2021-01-06T04:37:28Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0410888,
+            37.5971229
+          ],
+          [
+            127.0412067,
+            37.5971178
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 183272560,
+        "current_way_version": 6,
+        "current_edit_timestamp": "2021-01-06T04:37:28Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412067,
+            37.5971178
+          ],
+          [
+            127.0412089,
+            37.5971491
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 183272403,
+        "current_way_version": 12,
+        "current_edit_timestamp": "2025-11-25T11:41:53Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412089,
+            37.5971491
+          ],
+          [
+            127.0412235,
+            37.5976814
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 183272403,
+        "current_way_version": 12,
+        "current_edit_timestamp": "2025-11-25T11:41:53Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412235,
+            37.5976814
+          ],
+          [
+            127.0412266,
+            37.5977872
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 183272403,
+        "current_way_version": 12,
+        "current_edit_timestamp": "2025-11-25T11:41:53Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412266,
+            37.5977872
+          ],
+          [
+            127.0420622,
+            37.597792
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640231,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420622,
+            37.597792
+          ],
+          [
+            127.0420592,
+            37.5973491
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640241,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420592,
+            37.5973491
+          ],
+          [
+            127.0420112,
+            37.5973503
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640241,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420112,
+            37.5973503
+          ],
+          [
+            127.0418445,
+            37.5973514
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640242,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0418445,
+            37.5973514
+          ],
+          [
+            127.0417881,
+            37.5973611
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0417881,
+            37.5973611
+          ],
+          [
+            127.0417342,
+            37.5973836
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0417342,
+            37.5973836
+          ],
+          [
+            127.0416712,
+            37.5973997
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0416712,
+            37.5973997
+          ],
+          [
+            127.041599,
+            37.597407
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.041599,
+            37.597407
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "route": "shortest",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0386111,
+            37.5962061
+          ],
+          [
+            127.0386595,
+            37.5962939
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0386595,
+            37.5962939
+          ],
+          [
+            127.03874,
+            37.59644
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.03874,
+            37.59644
+          ],
+          [
+            127.0389782,
+            37.5969164
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0389782,
+            37.5969164
+          ],
+          [
+            127.03909,
+            37.59714
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.03909,
+            37.59714
+          ],
+          [
+            127.0392262,
+            37.5974226
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 37402230,
+        "current_way_version": 15,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0392262,
+            37.5974226
+          ],
+          [
+            127.0393593,
+            37.5973141
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0393593,
+            37.5973141
+          ],
+          [
+            127.0395103,
+            37.5971692
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0395103,
+            37.5971692
+          ],
+          [
+            127.0395825,
+            37.5971
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0395825,
+            37.5971
+          ],
+          [
+            127.0396288,
+            37.597027
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0396288,
+            37.597027
+          ],
+          [
+            127.0397146,
+            37.5968917
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0397146,
+            37.5968917
+          ],
+          [
+            127.039929,
+            37.5966427
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.039929,
+            37.5966427
+          ],
+          [
+            127.039973,
+            37.5965942
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553706,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.039973,
+            37.5965942
+          ],
+          [
+            127.0400935,
+            37.5964612
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553685,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0400935,
+            37.5964612
+          ],
+          [
+            127.0402462,
+            37.596289
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553685,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0402462,
+            37.596289
+          ],
+          [
+            127.040327,
+            37.5962355
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553685,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.040327,
+            37.5962355
+          ],
+          [
+            127.040391,
+            37.5961908
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379553685,
+        "current_way_version": 3,
+        "current_edit_timestamp": "2019-07-10T04:02:23Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.040391,
+            37.5961908
+          ],
+          [
+            127.0402715,
+            37.5956667
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 183272540,
+        "current_way_version": 10,
+        "current_edit_timestamp": "2026-09-19T08:30:32Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0402715,
+            37.5956667
+          ],
+          [
+            127.040903,
+            37.5955609
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 379766295,
+        "current_way_version": 5,
+        "current_edit_timestamp": "2024-09-13T15:25:21Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.040903,
+            37.5955609
+          ],
+          [
+            127.0412478,
+            37.5954906
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 752903358,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-12-05T06:46:52Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412478,
+            37.5954906
+          ],
+          [
+            127.0414349,
+            37.5957577
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 752903358,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-12-05T06:46:52Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0414349,
+            37.5957577
+          ],
+          [
+            127.0413786,
+            37.5956378
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 183272603,
+        "current_way_version": 5,
+        "current_edit_timestamp": "2024-12-31T03:33:13Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0413786,
+            37.5956378
+          ],
+          [
+            127.0412823,
+            37.5954374
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 183272603,
+        "current_way_version": 5,
+        "current_edit_timestamp": "2024-12-31T03:33:13Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0412823,
+            37.5954374
+          ],
+          [
+            127.0413786,
+            37.5956378
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 183272603,
+        "current_way_version": 5,
+        "current_edit_timestamp": "2024-12-31T03:33:13Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0413786,
+            37.5956378
+          ],
+          [
+            127.0414349,
+            37.5957577
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 183272603,
+        "current_way_version": 5,
+        "current_edit_timestamp": "2024-12-31T03:33:13Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0414349,
+            37.5957577
+          ],
+          [
+            127.0420897,
+            37.5970843
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 183272603,
+        "current_way_version": 5,
+        "current_edit_timestamp": "2024-12-31T03:33:13Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420897,
+            37.5970843
+          ],
+          [
+            127.0423361,
+            37.5975203
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 535722779,
+        "current_way_version": 7,
+        "current_edit_timestamp": "2023-02-26T13:34:30Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0423361,
+            37.5975203
+          ],
+          [
+            127.0424743,
+            37.5977898
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 535722779,
+        "current_way_version": 7,
+        "current_edit_timestamp": "2023-02-26T13:34:30Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0424743,
+            37.5977898
+          ],
+          [
+            127.0420622,
+            37.597792
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640231,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420622,
+            37.597792
+          ],
+          [
+            127.0420592,
+            37.5973491
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640241,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420592,
+            37.5973491
+          ],
+          [
+            127.0420112,
+            37.5973503
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640241,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0420112,
+            37.5973503
+          ],
+          [
+            127.0418445,
+            37.5973514
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640242,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0418445,
+            37.5973514
+          ],
+          [
+            127.0417881,
+            37.5973611
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0417881,
+            37.5973611
+          ],
+          [
+            127.0417342,
+            37.5973836
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0417342,
+            37.5973836
+          ],
+          [
+            127.0416712,
+            37.5973997
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0416712,
+            37.5973997
+          ],
+          [
+            127.041599,
+            37.597407
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.041599,
+            37.597407
+          ],
+          [
+            127.041471,
+            37.5974063
+          ]
+        ]
+      },
+      "properties": {
+        "route": "bench",
+        "way_id": 750640243,
+        "current_way_version": 1,
+        "current_edit_timestamp": "2019-11-29T05:24:19Z",
+        "field_verified": false
+      }
+    }
+  ]
+}

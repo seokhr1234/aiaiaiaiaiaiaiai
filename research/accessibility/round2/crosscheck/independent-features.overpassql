@@ -1,0 +1,1 @@
+[out:json][timeout:40];(nwr[barrier](37.592,127.035,37.600,127.044);nwr[kerb](37.592,127.035,37.600,127.044);nwr[entrance](37.592,127.035,37.600,127.044);nwr[crossing](37.592,127.035,37.600,127.044);node[highway=crossing](37.592,127.035,37.600,127.044);node[highway=elevator](37.592,127.035,37.600,127.044););out meta center;>;out meta qt;

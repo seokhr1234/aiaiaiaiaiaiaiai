@@ -1,0 +1,70 @@
+{
+  "checked_on": "2026-10-31",
+  "status": "passed",
+  "raw_root": "/workspace/research-originals/donghaeng-2026-10-31/restored",
+  "original_manifest_files_verified": 178,
+  "http_bodies_hash_verified": 43,
+  "compact_analysis_files_byte_identical": [
+    "analysis/sidewalk-road-name-candidates.json",
+    "analysis/crossings-school-2km.geojson",
+    "analysis/crossings-school-2km.json",
+    "analysis/crossings-identifier-join.json",
+    "analysis/current-route-segments.geojson",
+    "analysis/summary.json",
+    "analysis/osm-access-features.json",
+    "analysis/osm-access-features.geojson",
+    "analysis/terrain/archive-inspection.json",
+    "analysis/terrain/N3P_F002-school-2km.geojson",
+    "analysis/terrain/N3L_F001-school-2km.geojson"
+  ],
+  "nested_archive_crc_verified": 3,
+  "crossings_source": {
+    "complete_rows": 40282,
+    "blank_coordinate_lines": [
+      39696
+    ],
+    "selected_2km_rows": 1260,
+    "source_fields_match_compact": true
+  },
+  "sidewalk_source": {
+    "detail_rows": 5677,
+    "candidate_rows": 6,
+    "compact_candidate_rows_match": true
+  },
+  "crossing_workbook": {
+    "rows": 21776,
+    "joined_rows": 608,
+    "compact_join_matches_source": true
+  },
+  "osm_originals": {
+    "ways_compared": 15,
+    "unchanged_tags_and_node_order": true,
+    "history_current_versions_match": true,
+    "compact_segments_are_current_adjacent_pairs": true
+  },
+  "terrain_originals": [
+    {
+      "layer": "N3L_F001",
+      "source_records": 8570,
+      "source_epsg": 5174,
+      "selected_records_reproduced": 151,
+      "largest_geometry_difference_m": 5.647043155336242e-09,
+      "source_fields_match": true,
+      "vertical_unit": "not independently established"
+    },
+    {
+      "layer": "N3P_F002",
+      "source_records": 45870,
+      "source_epsg": 5174,
+      "selected_records_reproduced": 727,
+      "largest_geometry_difference_m": 2.32903391864879e-09,
+      "source_fields_match": true,
+      "vertical_unit": "not independently established"
+    }
+  ],
+  "limitations": [
+    "No live API requests repeated in this environment.",
+    "File identity and source/derived consistency do not establish field accessibility.",
+    "Vertical height unit/datum and pedestrian-surface slope remain unverified."
+  ]
+}

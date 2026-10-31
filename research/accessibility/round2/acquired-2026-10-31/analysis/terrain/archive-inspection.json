@@ -1,0 +1,146 @@
+{
+  "input": "/workspace/research-downloads/terrain/oa22241/oa22241-seq2.zip",
+  "bytes": 45852601,
+  "sha256": "4fbe3c7e061b5974e7403ec116855304ed8ae321eebcc0d12c31ca8fb7be30bf",
+  "inspected_at": "2026-10-31T12:17:10.277051+00:00",
+  "radius_m": 2000,
+  "school_lonlat": [
+    127.038992,
+    37.5950991
+  ],
+  "distance_crs": "EPSG:32652",
+  "slope_generated": false,
+  "layers": [
+    {
+      "name": "등고선 5000/N3L_F001",
+      "shape_type": 3,
+      "records": 8570,
+      "fields": [
+        [
+          "UFID",
+          "C",
+          34,
+          0
+        ],
+        [
+          "DIVI",
+          "C",
+          6,
+          0
+        ],
+        [
+          "CONT",
+          "N",
+          19,
+          8
+        ],
+        [
+          "SCLS",
+          "C",
+          8,
+          0
+        ],
+        [
+          "FMTA",
+          "C",
+          9,
+          0
+        ],
+        [
+          "HEIGHT",
+          "N",
+          19,
+          8
+        ],
+        [
+          "SHAPE_LEN",
+          "F",
+          19,
+          11
+        ]
+      ],
+      "crs_wkt": "PROJCS[\"Korean_1985_Modified_Korea_Central_Belt\",GEOGCS[\"GCS_Korean_Datum_1985\",DATUM[\"D_Korean_Datum_1985\",SPHEROID[\"Bessel_1841\",6377397.155,299.1528128]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",200000.0],PARAMETER[\"False_Northing\",500000.0],PARAMETER[\"Central_Meridian\",127.0028902777778],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",38.0],UNIT[\"Meter\",1.0]]",
+      "epsg": 5174,
+      "encoding": "cp949",
+      "selected": 151,
+      "height_min": 5.0,
+      "height_max": 770.0,
+      "height_units": "not independently established; inspect source metadata",
+      "vertical_datum": null,
+      "output": {
+        "path": "/workspace/research-resumed/analysis/terrain/N3L_F001-school-2km.geojson",
+        "bytes": 2963923,
+        "sha256": "eb3325a1adc6573a55b2941a042018abd83e2b12858ffe360dc7910ee667abc7"
+      }
+    },
+    {
+      "name": "표고 5000/N3P_F002",
+      "shape_type": 1,
+      "records": 45870,
+      "fields": [
+        [
+          "UFID",
+          "C",
+          34,
+          0
+        ],
+        [
+          "NUME",
+          "N",
+          19,
+          8
+        ],
+        [
+          "SCLS",
+          "C",
+          8,
+          0
+        ],
+        [
+          "FMTA",
+          "C",
+          9,
+          0
+        ],
+        [
+          "HEIGHT",
+          "N",
+          19,
+          8
+        ]
+      ],
+      "crs_wkt": "PROJCS[\"Korean_1985_Modified_Korea_Central_Belt\",GEOGCS[\"GCS_Korean_Datum_1985\",DATUM[\"D_Korean_Datum_1985\",SPHEROID[\"Bessel_1841\",6377397.155,299.1528128]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",200000.0],PARAMETER[\"False_Northing\",500000.0],PARAMETER[\"Central_Meridian\",127.0028902777778],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",38.0],UNIT[\"Meter\",1.0]]",
+      "epsg": 5174,
+      "encoding": "cp949",
+      "selected": 727,
+      "height_min": -0.54,
+      "height_max": 740.2,
+      "height_units": "not independently established; inspect source metadata",
+      "vertical_datum": null,
+      "output": {
+        "path": "/workspace/research-resumed/analysis/terrain/N3P_F002-school-2km.geojson",
+        "bytes": 298033,
+        "sha256": "1c2980fefc3624599cdd1ad20e5539ab50183816445bdf01fd0b146217687611"
+      }
+    }
+  ],
+  "archive_members": [
+    "등고선 5000/",
+    "등고선 5000/N3L_F001.dbf",
+    "등고선 5000/N3L_F001.prj",
+    "등고선 5000/N3L_F001.sbn",
+    "등고선 5000/N3L_F001.sbx",
+    "등고선 5000/N3L_F001.shp",
+    "등고선 5000/N3L_F001.shp.xml",
+    "등고선 5000/N3L_F001.shx",
+    "표고 5000/",
+    "표고 5000/N3P_F002.dbf",
+    "표고 5000/N3P_F002.prj",
+    "표고 5000/N3P_F002.sbn",
+    "표고 5000/N3P_F002.sbx",
+    "표고 5000/N3P_F002.shp",
+    "표고 5000/N3P_F002.shp.xml",
+    "표고 5000/N3P_F002.shx",
+    "등고선,표고.txt"
+  ]
+}

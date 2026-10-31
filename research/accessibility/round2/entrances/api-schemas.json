@@ -1,0 +1,171 @@
+{
+  "TbSubwayLineDetail": {
+    "source": "E3",
+    "outputs": [
+      "LINE",
+      "SBWY_STNS_NM",
+      "CLSG_PLC",
+      "BGNG_YMD",
+      "END_YMD",
+      "CLSG_RSN",
+      "RPLC_PATH"
+    ]
+  },
+  "tbTraficElvtr": {
+    "source": "E11",
+    "crs": "WGS84",
+    "source_as_of": "2020",
+    "outputs": [
+      "NODE_TYPE",
+      "NODE_WKT",
+      "NODE_ID",
+      "NODE_TYPE_CD",
+      "SGG_CD",
+      "SGG_NM",
+      "EMD_CD",
+      "EMD_NM",
+      "SBWY_STN_CD",
+      "SBWY_STN_NM"
+    ]
+  },
+  "tbTraficEntrcLft": {
+    "source": "E12",
+    "crs": "WGS84",
+    "source_as_of": "2020",
+    "outputs": [
+      "NODE_TYPE",
+      "NODE_WKT",
+      "NODE_ID",
+      "NODE_TYPE_CD",
+      "SGG_CD",
+      "SGG_NM",
+      "EMD_CD",
+      "EMD_NM",
+      "SBWY_STN_CD",
+      "SBWY_STN_NM"
+    ]
+  },
+  "getFcElvtr": {
+    "source": "E4",
+    "optional_filters": [
+      "lineNm",
+      "stnCd",
+      "stnNm",
+      "vcntEntrcNo",
+      "oprtngSitu",
+      "selectFields"
+    ],
+    "outputs": [
+      "lineNm",
+      "stnCd",
+      "stnNm",
+      "vcntEntrcNo",
+      "oprtngSitu",
+      "fcltNo",
+      "fcltNm",
+      "stnNo",
+      "crtrYmd",
+      "elvtrSn",
+      "mngNo",
+      "dtlPstn",
+      "bgngFlrGrndUdgdSe",
+      "bgngFlr",
+      "endFlrGrndUdgdSe",
+      "endFlr",
+      "pscpNope",
+      "pscpWht"
+    ]
+  },
+  "getWksnElvtr": {
+    "source": "E9",
+    "optional_filters": [
+      "selectFields",
+      "lineNm",
+      "stnCd",
+      "stnNm",
+      "vcntEntrcNo",
+      "oprtngSitu"
+    ],
+    "outputs": [
+      "lineNm",
+      "stnCd",
+      "stnNm",
+      "vcntEntrcNo",
+      "oprtngSitu",
+      "fcltNo",
+      "fcltNm",
+      "stnNo",
+      "elvtrSn",
+      "crtrYmd",
+      "mngNo",
+      "dtlPstn",
+      "bgngFlrGrndUdgdSe",
+      "bgngFlr",
+      "endFlrGrndUdgdSe",
+      "endFlr",
+      "pscpNope",
+      "pscpWht"
+    ]
+  },
+  "getWksnEsctr": {
+    "source": "E10",
+    "outputs": [
+      "lineNm",
+      "stnCd",
+      "stnNm",
+      "vcntEntrcNo",
+      "oprtngSitu",
+      "fcltNo",
+      "fcltNm",
+      "stnNo",
+      "crtrYmd",
+      "upbdnbSe",
+      "elvtrSn",
+      "mngNo",
+      "bgngFlrGrndUdgdSe",
+      "bgngFlr",
+      "bgngFlrDtlPstn",
+      "endFlrGrndUdgdSe",
+      "endFlr",
+      "endFlrDtlPstn",
+      "elvtrWdthBt"
+    ]
+  },
+  "SmrtScnFcltsInfo": {
+    "source": "E13",
+    "optional_filters": [
+      "SBWY_ROUT_LN",
+      "SBWY_STNS_NM",
+      "EQPMNT"
+    ],
+    "outputs": [
+      "SBWY_ROUT_LN",
+      "SBWY_STNS_NM",
+      "EQPMNT",
+      "NO",
+      "PLF_PBADMS",
+      "INSTL_HGT",
+      "OPR_LEN",
+      "ELVTR_NO",
+      "OPR_SEC",
+      "OPR_DRCT"
+    ]
+  },
+  "shared": {
+    "notes": "Manually transcribed factual field identifiers from official indexed documentation; not an API response or measured dataset.",
+    "status_codes": {
+      "M": "사용가능",
+      "D": "삭제",
+      "S": "보수중",
+      "T": "중지",
+      "I": "점검중",
+      "B": "공사중"
+    },
+    "status_code_sources": [
+      "E4",
+      "E9",
+      "E10"
+    ],
+    "spatial_fields_warning": "No latitude/longitude fields in getFcElvtr or getWksnElvtr documented outputs. Coordinates need another spatial source and verified joins."
+  }
+}

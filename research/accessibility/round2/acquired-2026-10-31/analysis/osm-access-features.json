@@ -1,0 +1,2044 @@
+[
+  {
+    "osm_type": "node",
+    "osm_id": 292077276,
+    "version": 5,
+    "edited_at": "2019-09-04T05:42:05Z",
+    "tags": {
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 521.46,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 2965677400,
+    "version": 5,
+    "edited_at": "2026-02-17T19:18:37Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 197.42,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 3828636506,
+    "version": 3,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 324.29,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 5217286184,
+    "version": 4,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 297.55,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 5217286185,
+    "version": 2,
+    "edited_at": "2026-02-17T19:18:37Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 288.65,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579127484,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 372.62,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130588,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 340.05,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130595,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 296.49,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130601,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 298.69,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130604,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 294.5,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130607,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 265.31,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130612,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 285.59,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130616,
+    "version": 4,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 252.32,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130619,
+    "version": 3,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 256.61,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130622,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 274.41,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130630,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 315.2,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130637,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 379.61,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130647,
+    "version": 3,
+    "edited_at": "2024-05-02T11:52:38Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 384.48,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130653,
+    "version": 3,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 393.45,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130658,
+    "version": 3,
+    "edited_at": "2025-12-18T11:41:07Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 467.83,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130664,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 465.8,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 8570378910,
+    "version": 3,
+    "edited_at": "2024-04-28T06:08:23Z",
+    "tags": {
+      "crossing:markings": "no",
+      "highway": "crossing",
+      "tactile_paving": "no"
+    },
+    "distance_to_route_m": 362.87,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 13386290607,
+    "version": 1,
+    "edited_at": "2025-12-18T11:41:07Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 556.39,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 13386290608,
+    "version": 1,
+    "edited_at": "2025-12-18T11:41:07Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 543.8,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 13931554102,
+    "version": 2,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "barrier": "gate"
+    },
+    "distance_to_route_m": 334.9,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290019,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 375.96,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290087,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 289.48,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290177,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 70.94,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290228,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 14.58,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290237,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 398.55,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290289,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 323.81,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290297,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 313.69,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290303,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 300.2,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290310,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 288.03,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290319,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 273.45,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290324,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 251.53,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290330,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 239.47,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290331,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 256.86,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290340,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 226.26,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290345,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 211.0,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290350,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 197.3,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290357,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 180.59,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290362,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 166.2,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290367,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 155.14,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290373,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 143.68,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290381,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 126.87,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290388,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 104.8,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290406,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 87.79,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290411,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 84.93,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290418,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 76.53,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290425,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 63.45,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290433,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 73.37,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290444,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 46.84,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290449,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 50.5,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290464,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 32.94,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290475,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 14.81,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290484,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 31.58,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290490,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 42.01,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290497,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 56.64,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290504,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 44.15,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290521,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 67.95,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290534,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 80.87,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290569,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 403.21,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465833,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 251.8,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465835,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 246.9,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465914,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 256.22,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465925,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 246.38,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465933,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 215.47,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465940,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 204.86,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465950,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 268.49,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465958,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 201.32,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465967,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 194.4,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465972,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 186.75,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465995,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 177.31,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466005,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 173.24,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466032,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 138.28,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466037,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 129.66,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466048,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 166.06,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466055,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 161.26,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466061,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 157.51,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466068,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 151.13,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466075,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 147.0,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466084,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 146.76,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466091,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 144.65,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466100,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 144.18,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466105,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 136.87,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466111,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 119.89,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466120,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 116.55,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466131,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 111.26,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466136,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 112.21,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466141,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 119.43,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466150,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 136.79,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466161,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 129.25,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466168,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 117.18,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466175,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 108.41,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466180,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 114.87,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466185,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 112.97,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466194,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 107.29,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466203,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 106.35,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466210,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 99.11,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466219,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 90.2,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466229,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 85.5,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466234,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 79.54,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466239,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 77.16,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466246,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 85.09,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466258,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 226.86,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466263,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 227.74,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466273,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 254.0,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466279,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 257.39,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466296,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 193.95,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466306,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 175.96,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466311,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 160.06,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466317,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 137.55,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466322,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 147.88,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466329,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 166.58,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466336,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 186.43,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466343,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 187.52,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466352,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 186.0,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466359,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 175.6,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466366,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 156.5,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466371,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 220.11,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466377,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 224.75,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466384,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 225.14,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466389,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 190.64,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466394,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 192.58,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466399,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 195.62,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466405,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 198.09,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466413,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 201.3,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200466438,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "entrance": "yes"
+    },
+    "distance_to_route_m": 276.06,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 292666320,
+    "version": 11,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "cycleway": "track",
+      "footway": "crossing",
+      "highway": "footway",
+      "lit": "yes",
+      "name": "정릉천자전거길",
+      "oneway": "no"
+    },
+    "distance_to_route_m": 196.74,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622897,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 368.75,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622900,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 336.31,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622904,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 322.03,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622905,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 293.53,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622907,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 272.15,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622909,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 297.23,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622911,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 293.33,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622913,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 263.73,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622915,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 285.35,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622917,
+    "version": 3,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 251.69,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622919,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 255.05,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622921,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 269.67,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622923,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 280.41,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622924,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 313.27,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622926,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 375.88,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622928,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 374.46,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622929,
+    "version": 3,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 383.54,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622931,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 459.09,
+    "field_verified": false
+  },
+  {
+    "osm_type": "way",
+    "osm_id": 810622933,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "distance_to_route_m": 456.48,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 5217286184,
+    "version": 4,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 297.55,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130630,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 315.2,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130637,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 379.61,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130647,
+    "version": 3,
+    "edited_at": "2024-05-02T11:52:38Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 384.48,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130653,
+    "version": 3,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 393.45,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130658,
+    "version": 3,
+    "edited_at": "2025-12-18T11:41:07Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 467.83,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130664,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 465.8,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14196290237,
+    "version": 1,
+    "edited_at": "2026-09-19T08:30:32Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 398.55,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 2965677400,
+    "version": 5,
+    "edited_at": "2026-02-17T19:18:37Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 197.42,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 3828636506,
+    "version": 3,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 324.29,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 5217286185,
+    "version": 2,
+    "edited_at": "2026-02-17T19:18:37Z",
+    "tags": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 288.65,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579127484,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 372.62,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130588,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 340.05,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130595,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 296.49,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130601,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 298.69,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130604,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 294.5,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130607,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 265.31,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130612,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 285.59,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130616,
+    "version": 4,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 252.32,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130619,
+    "version": 3,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 256.61,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 7579130622,
+    "version": 2,
+    "edited_at": "2023-07-03T13:49:26Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 274.41,
+    "field_verified": false
+  },
+  {
+    "osm_type": "node",
+    "osm_id": 14200465833,
+    "version": 1,
+    "edited_at": "2026-09-20T05:25:00Z",
+    "tags": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "distance_to_route_m": 251.8,
+    "field_verified": false
+  }
+]

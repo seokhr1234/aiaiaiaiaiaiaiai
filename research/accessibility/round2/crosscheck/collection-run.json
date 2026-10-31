@@ -1,0 +1,212 @@
+[
+  {
+    "name": "ways-current",
+    "url": "https://api.openstreetmap.org/api/0.6/ways.json?ways=37402230,379553740,183272540,183272560,183272403,750640231,750640241,750640242,750640243,379553706,379553685,379766295,752903358,183272603,535722779",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.935934+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/ways-current.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "bench-current",
+    "url": "https://api.openstreetmap.org/api/0.6/node/12464206320.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.935976+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/bench-current.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-37402230-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/37402230/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.935994+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-37402230-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-379553740-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/379553740/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936008+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-379553740-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-183272540-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/183272540/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936020+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-183272540-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-183272560-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/183272560/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936033+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-183272560-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-183272403-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/183272403/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936044+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-183272403-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-750640231-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/750640231/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936055+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-750640231-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-750640241-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/750640241/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936066+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-750640241-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-750640242-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/750640242/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936077+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-750640242-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-750640243-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/750640243/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936088+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-750640243-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-379553706-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/379553706/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936159+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-379553706-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-379553685-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/379553685/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936179+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-379553685-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-379766295-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/379766295/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936191+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-379766295-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-752903358-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/752903358/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936202+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-752903358-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-183272603-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/183272603/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936212+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-183272603-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "way-535722779-history",
+    "url": "https://api.openstreetmap.org/api/0.6/way/535722779/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936223+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/way-535722779-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "bench-history",
+    "url": "https://api.openstreetmap.org/api/0.6/node/12464206320/history.json",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936234+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/bench-history.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "independent-access-features",
+    "url": "https://overpass-api.de/api/interpreter",
+    "method": "POST",
+    "requested_at": "2026-10-31T05:15:47.936248+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/independent-access-features.json",
+    "query_sha256": "451c5ee01a12b3be518789b46c14382ede920cfab13e00a4f40ae62bf377c491",
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "route-parent-relations",
+    "url": "https://overpass-api.de/api/interpreter",
+    "method": "POST",
+    "requested_at": "2026-10-31T05:15:47.936295+00:00",
+    "license": "ODbL 1.0",
+    "cache_path": "/workspace/research-downloads/crosscheck/route-parent-relations.json",
+    "query_sha256": "ee9ce8d208db06fe19d19c06a9978c4d59ae9cd71d57024458faebf49130419d",
+    "status": "not_requested_dry_run"
+  },
+  {
+    "name": "kartaview-near-school",
+    "url": "https://api.openstreetcam.org/2.0/photo/?lat=37.5950991&lng=127.038992&radius=500&zoomLevel=18&join=sequence&itemsPerPage=20&page=1",
+    "method": "GET",
+    "requested_at": "2026-10-31T05:15:47.936309+00:00",
+    "license": "provider terms: inspect before reuse",
+    "cache_path": "/workspace/research-downloads/crosscheck/kartaview-near-school.json",
+    "query_sha256": null,
+    "status": "not_requested_dry_run"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "terrain_original_archive_obtained": false,
+  "school_slope_measurements_obtained": false,
+  "artifacts": [
+    {
+      "path": "evidence/15059920-catalog.json",
+      "bytes": 2301,
+      "sha256": "c7ded6c908777ab0a1173c3480a36aa67eea6b199ddfa2d3ff928d1191a9b42b",
+      "representation": "web tool rendered or parsed normalized response, not original HTTP bytes",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "coordinate_reference_system": null,
+      "unit": null,
+      "source_date": "see sources.json",
+      "license": "see sources.json",
+      "source_url": "https://www.data.go.kr/catalog/15059920/fileData.json"
+    },
+    {
+      "path": "evidence/15067637-catalog.json",
+      "bytes": 6959,
+      "sha256": "817697587594ccf5f6475979aa4cfd195d28e2a3c03897fca9cbab4117e79a85",
+      "representation": "web tool rendered or parsed normalized response, not original HTTP bytes",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "coordinate_reference_system": null,
+      "unit": null,
+      "source_date": "see sources.json",
+      "license": "see sources.json",
+      "source_url": "https://www.data.go.kr/catalog/15067637/fileData.json"
+    },
+    {
+      "path": "evidence/15100676-catalog.json",
+      "bytes": 2167,
+      "sha256": "1906069c0b484b1993918b8be3db063319af7d45230f72040779808bb24414fa",
+      "representation": "web tool rendered or parsed normalized response, not original HTTP bytes",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "coordinate_reference_system": null,
+      "unit": null,
+      "source_date": "see sources.json",
+      "license": "see sources.json",
+      "source_url": "https://www.data.go.kr/catalog/15100676/fileData.json"
+    },
+    {
+      "path": "evidence/catalog-web-tool-output.json",
+      "bytes": 11343,
+      "sha256": "a33918e73de6eac508715a471b25a3653f75b35d285e434b2ba49a2b80f766db",
+      "representation": "web tool rendered or parsed normalized response, not original HTTP bytes",
+      "retrieved_at": "2026-10-31T05:12:42.890293+00:00",
+      "coordinate_reference_system": null,
+      "unit": null,
+      "source_date": "see sources.json",
+      "license": "see sources.json",
+      "source_url": null
+    },
+    {
+      "path": "osm-terrain-caveats-school-2km.geojson",
+      "bytes": 122458,
+      "sha256": "5122d2c2965aee132092f83e9cfdad4d63ead753f5fdfe2474272f1a1208880a",
+      "representation": "local extraction of pre-existing bundled OSM source, not fresh acquisition",
+      "generated_at": "2026-10-31T05:13:52.877992+00:00",
+      "source_path": "donghaeng-nav/dist/map-data.json",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "source_date": "2026-10-28T05:19:18Z",
+      "license": "OpenStreetMap ODbL 1.0; retain source and attribution",
+      "coordinate_reference_system": "EPSG:4326",
+      "unit": "coordinates in degrees; incline source tags retained without conversion"
+    },
+    {
+      "path": "osm-terrain-summary.json",
+      "bytes": 836,
+      "sha256": "f948396c28998049d6665a80ff9ece0a300b86be90c3d618397a842b82dc6f2a",
+      "representation": "local extraction of pre-existing bundled OSM source, not fresh acquisition",
+      "generated_at": "2026-10-31T05:13:52.877992+00:00",
+      "source_path": "donghaeng-nav/dist/map-data.json",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "source_date": "2026-10-28T05:19:18Z",
+      "license": "OpenStreetMap ODbL 1.0; retain source and attribution",
+      "coordinate_reference_system": "EPSG:4326",
+      "unit": "coordinates in degrees; incline source tags retained without conversion"
+    }
+  ]
+}

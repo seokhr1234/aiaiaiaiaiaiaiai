@@ -1,0 +1,16 @@
+{
+  "imported_on": "2026-10-31",
+  "filename": "donghaeng-analysis-compact-2026-10-31.zip",
+  "archive_bytes": 1371515,
+  "archive_sha256": "4b6e87bef591708686d49d60d2c64bd3b4db81fac2516aa798da24fd830cd2ae",
+  "destination": "acquired-2026-10-31",
+  "archive_entries": 29,
+  "zip_crc": "passed",
+  "sha256sum_files_verified": 28,
+  "compact_manifest_files_verified": 27,
+  "original_http_bodies_included": false,
+  "source_gis_archives_included": false,
+  "independent_validation": "compact-validation.json",
+  "upstream_validation": "acquired-2026-10-31/validation.json",
+  "note": "Uploaded derived files are now present locally. Upstream raw-file verification is recorded separately from checks repeated here."
+}

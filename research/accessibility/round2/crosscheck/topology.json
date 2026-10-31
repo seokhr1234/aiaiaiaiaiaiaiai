@@ -1,0 +1,464 @@
+{
+  "input": {
+    "path": "donghaeng-nav/dist/map-data.json",
+    "sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+    "bytes": 2678726,
+    "snapshot": "2026-10-28T05:19:18Z",
+    "license": "ODbL 1.0",
+    "url": "https://www.openstreetmap.org/copyright"
+  },
+  "routes": [
+    {
+      "route": "shortest",
+      "length_by_class_m": {
+        "total": 673.9722780662357,
+        "road_centerline": 673.9722780662357,
+        "tunnel": 14.687076673919064
+      },
+      "layer_transitions": [
+        {
+          "node_id": 1936511759,
+          "ll": [
+            37.5971459,
+            127.0405666
+          ],
+          "from_way": 183272540,
+          "from_layer": "0",
+          "to_way": 183272560,
+          "to_layer": "1",
+          "along_route_m": 367.27490242769113,
+          "note": "Shared endpoint layer transition may be normal portal/bridge end; not automatically an error."
+        },
+        {
+          "node_id": 436866834,
+          "ll": [
+            37.5971178,
+            127.0412067
+          ],
+          "from_way": 183272560,
+          "from_layer": "1",
+          "to_way": 183272403,
+          "to_layer": "0",
+          "along_route_m": 423.7555184475434,
+          "note": "Shared endpoint layer transition may be normal portal/bridge end; not automatically an error."
+        },
+        {
+          "node_id": 7018577877,
+          "ll": [
+            37.5973503,
+            127.0420112
+          ],
+          "from_way": 750640241,
+          "from_layer": "0",
+          "to_way": 750640242,
+          "to_layer": "-1",
+          "along_route_m": 625.3113052800281,
+          "note": "Shared endpoint layer transition may be normal portal/bridge end; not automatically an error."
+        },
+        {
+          "node_id": 7018577878,
+          "ll": [
+            37.5973514,
+            127.0418445
+          ],
+          "from_way": 750640242,
+          "from_layer": "-1",
+          "to_way": 750640243,
+          "to_layer": "0",
+          "along_route_m": 639.9983819539472,
+          "note": "Shared endpoint layer transition may be normal portal/bridge end; not automatically an error."
+        }
+      ],
+      "topological_cut_edges": [
+        {
+          "from": 7018577833,
+          "to": 7018577876,
+          "way_id": 750640241,
+          "length_m": 49.248974726588735
+        },
+        {
+          "from": 7018577876,
+          "to": 7018577877,
+          "way_id": 750640241,
+          "length_m": 4.230990280146036
+        },
+        {
+          "from": 7018577877,
+          "to": 7018577878,
+          "way_id": 750640242,
+          "length_m": 14.687076673919064
+        },
+        {
+          "from": 7018577878,
+          "to": 7018577879,
+          "way_id": 750640243,
+          "length_m": 5.084656009159583
+        },
+        {
+          "from": 7018577879,
+          "to": 7018577880,
+          "way_id": 750640243,
+          "length_m": 5.3674433500630725
+        },
+        {
+          "from": 7018577880,
+          "to": 7018577881,
+          "way_id": 750640243,
+          "length_m": 5.831980898210062
+        },
+        {
+          "from": 7018577881,
+          "to": 7018577882,
+          "way_id": 750640243,
+          "length_m": 6.412527377288996
+        },
+        {
+          "from": 7018577882,
+          "to": 7018577883,
+          "way_id": 750640243,
+          "length_m": 11.277288477566634
+        }
+      ],
+      "snap_gaps_m": [
+        20.498698118914575,
+        17.10983246540435
+      ]
+    },
+    {
+      "route": "bench",
+      "length_by_class_m": {
+        "total": 957.7889543057041,
+        "road_centerline": 957.7889543057041,
+        "bridge": 56.867755484734495,
+        "tunnel": 14.687076673919064
+      },
+      "layer_transitions": [
+        {
+          "node_id": 7018577877,
+          "ll": [
+            37.5973503,
+            127.0420112
+          ],
+          "from_way": 750640241,
+          "from_layer": "0",
+          "to_way": 750640242,
+          "to_layer": "-1",
+          "along_route_m": 909.1279815194965,
+          "note": "Shared endpoint layer transition may be normal portal/bridge end; not automatically an error."
+        },
+        {
+          "node_id": 7018577878,
+          "ll": [
+            37.5973514,
+            127.0418445
+          ],
+          "from_way": 750640242,
+          "from_layer": "-1",
+          "to_way": 750640243,
+          "to_layer": "0",
+          "along_route_m": 923.8150581934156,
+          "note": "Shared endpoint layer transition may be normal portal/bridge end; not automatically an error."
+        }
+      ],
+      "topological_cut_edges": [
+        {
+          "from": 7018577833,
+          "to": 7018577876,
+          "way_id": 750640241,
+          "length_m": 49.248974726588735
+        },
+        {
+          "from": 7018577876,
+          "to": 7018577877,
+          "way_id": 750640241,
+          "length_m": 4.230990280146036
+        },
+        {
+          "from": 7018577877,
+          "to": 7018577878,
+          "way_id": 750640242,
+          "length_m": 14.687076673919064
+        },
+        {
+          "from": 7018577878,
+          "to": 7018577879,
+          "way_id": 750640243,
+          "length_m": 5.084656009159583
+        },
+        {
+          "from": 7018577879,
+          "to": 7018577880,
+          "way_id": 750640243,
+          "length_m": 5.3674433500630725
+        },
+        {
+          "from": 7018577880,
+          "to": 7018577881,
+          "way_id": 750640243,
+          "length_m": 5.831980898210062
+        },
+        {
+          "from": 7018577881,
+          "to": 7018577882,
+          "way_id": 750640243,
+          "length_m": 6.412527377288996
+        },
+        {
+          "from": 7018577882,
+          "to": 7018577883,
+          "way_id": 750640243,
+          "length_m": 11.277288477566634
+        }
+      ],
+      "snap_gaps_m": [
+        20.498698118914575,
+        17.10983246540435
+      ]
+    }
+  ],
+  "accepted_ways_with_midpoints_inside_school": [],
+  "unconnected_geometric_crossings": [
+    {
+      "route_way": 183272560,
+      "other_way": 183272585,
+      "coordinates": [
+        127.04062860987608,
+        37.59714316881052
+      ],
+      "route_layer": "1",
+      "other_layer": "2",
+      "other_tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "destination": "마장;내부순환로",
+        "destination:ref": "30",
+        "highway": "trunk_link",
+        "lane_markings": "yes",
+        "lanes": "1",
+        "layer": "2",
+        "oneway": "yes",
+        "review": "no",
+        "source": "Bing"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 183272560,
+      "other_way": 204782614,
+      "coordinates": [
+        127.04092814883734,
+        37.59712997578848
+      ],
+      "route_layer": "1",
+      "other_layer": "2",
+      "other_tags": {
+        "bridge": "yes",
+        "highway": "trunk_link",
+        "lanes": "1",
+        "layer": "2",
+        "oneway": "yes",
+        "review": "no",
+        "source": "Bing"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 183272560,
+      "other_way": 399174158,
+      "coordinates": [
+        127.04071611544137,
+        37.597139314677996
+      ],
+      "route_layer": "1",
+      "other_layer": "2",
+      "other_tags": {
+        "bicycle": "no",
+        "bridge": "viaduct",
+        "destination": "강변북로;마장",
+        "destination:ref": "30",
+        "expressway": "yes",
+        "highway": "trunk",
+        "layer": "2",
+        "maxspeed": "70",
+        "maxweight": "10",
+        "motorroad": "yes",
+        "name": "내부순환로",
+        "name:en": "Naebusunhwan-ro",
+        "name:ja": "内部循環路",
+        "name:ko": "내부순환로",
+        "name:ko-Latn": "Naebusunhwanno",
+        "oneway": "yes",
+        "ref": "30",
+        "surface": "asphalt"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 183272560,
+      "other_way": 1108259147,
+      "coordinates": [
+        127.04082987153089,
+        37.59713430435617
+      ],
+      "route_layer": "1",
+      "other_layer": "2",
+      "other_tags": {
+        "bicycle": "no",
+        "bridge": "viaduct",
+        "expressway": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "layer": "2",
+        "maxheight": "4.5",
+        "maxspeed": "70",
+        "maxweight": "10",
+        "motorroad": "yes",
+        "name": "내부순환로",
+        "name:en": "Naebusunhwan-ro",
+        "name:ja": "内部循環路",
+        "name:ko": "내부순환로",
+        "name:ko-Latn": "Naebusunhwanno",
+        "oneway": "yes",
+        "ref": "30",
+        "surface": "asphalt"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 183272560,
+      "other_way": 1500271202,
+      "coordinates": [
+        127.04106469561478,
+        37.59712396166385
+      ],
+      "route_layer": "1",
+      "other_layer": "0",
+      "other_tags": {
+        "foot": "yes",
+        "highway": "cycleway",
+        "lit": "yes",
+        "name": "정릉천 자전거길",
+        "name:en": "Jeongneungcheon Bicycle Path",
+        "name:ko": "정릉천 자전거길",
+        "oneway": "no",
+        "surface": "asphalt",
+        "width": "3"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 379766295,
+      "other_way": 203491741,
+      "coordinates": [
+        127.04040452210934,
+        37.59564441379388
+      ],
+      "route_layer": "0",
+      "other_layer": "2",
+      "other_tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "expressway": "yes",
+        "highway": "trunk",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "70",
+        "maxweight": "10",
+        "motorroad": "yes",
+        "name": "내부순환로",
+        "name:en": "Naebusunhwan-ro",
+        "name:ja": "内部循環路",
+        "name:ko": "내부순환로",
+        "name:ko-Latn": "Naebusunhwanno",
+        "oneway": "yes",
+        "ref": "30",
+        "surface": "asphalt"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 379766295,
+      "other_way": 204782614,
+      "coordinates": [
+        127.04054412621917,
+        37.59562102485513
+      ],
+      "route_layer": "0",
+      "other_layer": "2",
+      "other_tags": {
+        "bridge": "yes",
+        "highway": "trunk_link",
+        "lanes": "1",
+        "layer": "2",
+        "oneway": "yes",
+        "review": "no",
+        "source": "Bing"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 379766295,
+      "other_way": 1108259147,
+      "coordinates": [
+        127.04052231960874,
+        37.5956246782825
+      ],
+      "route_layer": "0",
+      "other_layer": "2",
+      "other_tags": {
+        "bicycle": "no",
+        "bridge": "viaduct",
+        "expressway": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "layer": "2",
+        "maxheight": "4.5",
+        "maxspeed": "70",
+        "maxweight": "10",
+        "motorroad": "yes",
+        "name": "내부순환로",
+        "name:en": "Naebusunhwan-ro",
+        "name:ja": "内部循環路",
+        "name:ko": "내부순환로",
+        "name:ko-Latn": "Naebusunhwanno",
+        "oneway": "yes",
+        "ref": "30",
+        "surface": "asphalt"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    },
+    {
+      "route_way": 379766295,
+      "other_way": 1500271202,
+      "coordinates": [
+        127.04076487171889,
+        37.59558404168194
+      ],
+      "route_layer": "0",
+      "other_layer": "0",
+      "other_tags": {
+        "foot": "yes",
+        "highway": "cycleway",
+        "lit": "yes",
+        "name": "정릉천 자전거길",
+        "name:en": "Jeongneungcheon Bicycle Path",
+        "name:ko": "정릉천 자전거길",
+        "oneway": "no",
+        "surface": "asphalt",
+        "width": "3"
+      },
+      "note": "Geometric crossing without shared endpoint. No connection asserted. Difference in layer often explains intentional separation."
+    }
+  ],
+  "raw_record_counts": {
+    "node": 20965,
+    "way": 4762
+  },
+  "unique_object_counts": {
+    "node": 20954,
+    "way": 4762
+  },
+  "duplicate_records": 11,
+  "note": "Planar approximate distances; midpoint polygon test is screening rather than exact clipping. No measured widths/elevation or current metadata."
+}
