@@ -1,0 +1,20 @@
+{
+  "record_id": "고유 근거 ID",
+  "target_type": "osm_way / osm_node / facility / dataset",
+  "target_id": "정확히 연결된 원본 식별자. 연결 전에는 null",
+  "geometry": "WGS84 GeoJSON. 확인 전에는 null. 시설 대표점을 출입구로 대체하지 않음",
+  "attribute": "incline_percent / clear_width_m / kerb_height_m / sidewalk / access / opening_hours / connection",
+  "value": "확인된 원본 값. 미확인 null",
+  "unit": "percent / m / enum 등. 숫자의 원본 단위를 반드시 확인",
+  "evidence_type": "official_measurement / official_inventory / mapped / imagery_observation / terrain_estimate / unknown",
+  "source_url": "원본 자료 또는 공식 안내 URL",
+  "source_record_id": "원본 행/시설/구간 ID",
+  "source_date": "자료 기준일. 알 수 없으면 null",
+  "retrieved_date": "실제 조회 날짜",
+  "acquisition_status": "metadata_only / preview_inspected / downloaded / authentication_required / unavailable",
+  "match_status": "unmatched / candidate / confirmed",
+  "match_basis": "공유 노드·실제 진입점·선형·층 연결을 확인한 근거",
+  "limitations": "오차·범위·미확인 요소",
+  "conflicts": "다른 자료와 충돌한 기록 ID",
+  "license": "재사용 조건, 확인 전 null"
+}

@@ -1,0 +1,2697 @@
+{
+  "audited_on": "2026-10-30",
+  "input": "donghaeng-nav/dist/map-data.json",
+  "snapshot": {
+    "timestamp_osm_base": "2026-10-28T05:19:18Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "scope": "Entire saved snapshot; not clipped to a 2km circle. Counts are OSM objects, not distinct physical facilities.",
+  "element_counts": {
+    "nodes": 20965,
+    "ways": 4762,
+    "relations": 0
+  },
+  "object_metadata": {
+    "timestamp": 0,
+    "version": 0,
+    "changeset": 0
+  },
+  "graph": {
+    "accepted_ways": 4463,
+    "used_nodes": 19023,
+    "largest_component_nodes": 18677,
+    "ways_touching_largest_component": 4404,
+    "directed_edges": 43116,
+    "undirected_segment_length_m": 418868,
+    "unknown_incline_segment_length_m": 418797,
+    "benches": 67,
+    "length_note": "Sum of edge lengths divided by two, including repeated segments if distinct OSM ways overlap; not a deduplicated physical road inventory."
+  },
+  "all_ways": {
+    "incline": {
+      "count": 19,
+      "values": {
+        "up": 10,
+        "down": 7,
+        "0%": 1,
+        "yes": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379555973,
+          "value": "up",
+          "url": "https://www.openstreetmap.org/way/379555973"
+        },
+        {
+          "type": "way",
+          "id": 379555990,
+          "value": "down",
+          "url": "https://www.openstreetmap.org/way/379555990"
+        },
+        {
+          "type": "way",
+          "id": 393240562,
+          "value": "down",
+          "url": "https://www.openstreetmap.org/way/393240562"
+        },
+        {
+          "type": "way",
+          "id": 394282837,
+          "value": "up",
+          "url": "https://www.openstreetmap.org/way/394282837"
+        },
+        {
+          "type": "way",
+          "id": 394374374,
+          "value": "down",
+          "url": "https://www.openstreetmap.org/way/394374374"
+        }
+      ]
+    },
+    "width": {
+      "count": 33,
+      "values": {
+        "1": 3,
+        "2": 21,
+        "3": 7,
+        "9.5": 1,
+        "2.5": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 293012607,
+          "value": "2",
+          "url": "https://www.openstreetmap.org/way/293012607"
+        },
+        {
+          "type": "way",
+          "id": 379724060,
+          "value": "9.5",
+          "url": "https://www.openstreetmap.org/way/379724060"
+        },
+        {
+          "type": "way",
+          "id": 379724376,
+          "value": "2.5",
+          "url": "https://www.openstreetmap.org/way/379724376"
+        },
+        {
+          "type": "way",
+          "id": 435327110,
+          "value": "2",
+          "url": "https://www.openstreetmap.org/way/435327110"
+        },
+        {
+          "type": "way",
+          "id": 468730708,
+          "value": "3",
+          "url": "https://www.openstreetmap.org/way/468730708"
+        }
+      ]
+    },
+    "est_width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "width:effective": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk": {
+      "count": 39,
+      "values": {
+        "both": 12,
+        "no": 23,
+        "left": 2,
+        "right": 2
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 27078924,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/27078924"
+        },
+        {
+          "type": "way",
+          "id": 183521080,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/183521080"
+        },
+        {
+          "type": "way",
+          "id": 183521081,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/183521081"
+        },
+        {
+          "type": "way",
+          "id": 218975373,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/218975373"
+        },
+        {
+          "type": "way",
+          "id": 378331046,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/378331046"
+        }
+      ]
+    },
+    "sidewalk:both": {
+      "count": 11,
+      "values": {
+        "separate": 11
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521111,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183521111"
+        },
+        {
+          "type": "way",
+          "id": 183521150,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183521150"
+        },
+        {
+          "type": "way",
+          "id": 183895345,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183895345"
+        },
+        {
+          "type": "way",
+          "id": 183895346,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183895346"
+        },
+        {
+          "type": "way",
+          "id": 183895347,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183895347"
+        }
+      ]
+    },
+    "sidewalk:left": {
+      "count": 41,
+      "values": {
+        "no": 41
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379555978,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/379555978"
+        },
+        {
+          "type": "way",
+          "id": 405399877,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/405399877"
+        },
+        {
+          "type": "way",
+          "id": 405399878,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/405399878"
+        },
+        {
+          "type": "way",
+          "id": 469922789,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/469922789"
+        },
+        {
+          "type": "way",
+          "id": 756840019,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/756840019"
+        }
+      ]
+    },
+    "sidewalk:right": {
+      "count": 41,
+      "values": {
+        "yes": 1,
+        "separate": 40
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379555978,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/379555978"
+        },
+        {
+          "type": "way",
+          "id": 405399877,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/405399877"
+        },
+        {
+          "type": "way",
+          "id": 405399878,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/405399878"
+        },
+        {
+          "type": "way",
+          "id": 469922789,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/469922789"
+        },
+        {
+          "type": "way",
+          "id": 756840019,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/756840019"
+        }
+      ]
+    },
+    "sidewalk:both:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:left:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:right:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "kerb": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "kerb:height": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "barrier": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "access": {
+      "count": 35,
+      "values": {
+        "no": 15,
+        "yes": 17,
+        "permit": 1,
+        "private": 2
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 336052097,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/336052097"
+        },
+        {
+          "type": "way",
+          "id": 351819311,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/351819311"
+        },
+        {
+          "type": "way",
+          "id": 351823752,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/351823752"
+        },
+        {
+          "type": "way",
+          "id": 379724377,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/379724377"
+        },
+        {
+          "type": "way",
+          "id": 379724405,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/379724405"
+        }
+      ]
+    },
+    "foot": {
+      "count": 185,
+      "values": {
+        "yes": 39,
+        "no": 144,
+        "designated": 2
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 26269734,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/26269734"
+        },
+        {
+          "type": "way",
+          "id": 37396912,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/37396912"
+        },
+        {
+          "type": "way",
+          "id": 172670186,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/172670186"
+        },
+        {
+          "type": "way",
+          "id": 183061374,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183061374"
+        },
+        {
+          "type": "way",
+          "id": 183062369,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183062369"
+        }
+      ]
+    },
+    "wheelchair": {
+      "count": 1,
+      "values": {
+        "yes": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 1272157465,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/1272157465"
+        }
+      ]
+    },
+    "entrance": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "opening_hours": {
+      "count": 2,
+      "values": {
+        "Mo-Fr 07:00-22:00;Sa-Su 08:00-22:00": 1,
+        "Mo-Fr 09:00-21:00": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 330236148,
+          "value": "Mo-Fr 07:00-22:00;Sa-Su 08:00-22:00",
+          "url": "https://www.openstreetmap.org/way/330236148"
+        },
+        {
+          "type": "way",
+          "id": 1272157465,
+          "value": "Mo-Fr 09:00-21:00",
+          "url": "https://www.openstreetmap.org/way/1272157465"
+        }
+      ]
+    },
+    "crossing": {
+      "count": 388,
+      "values": {
+        "marked": 319,
+        "uncontrolled": 25,
+        "traffic_signals": 5,
+        "unmarked": 39
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 292666320,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/292666320"
+        },
+        {
+          "type": "way",
+          "id": 448204959,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/448204959"
+        },
+        {
+          "type": "way",
+          "id": 478410763,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/478410763"
+        },
+        {
+          "type": "way",
+          "id": 478410775,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/478410775"
+        },
+        {
+          "type": "way",
+          "id": 521912019,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/521912019"
+        }
+      ]
+    },
+    "surface": {
+      "count": 695,
+      "values": {
+        "asphalt": 525,
+        "paved": 32,
+        "wood": 10,
+        "paving_stones": 86,
+        "concrete": 8,
+        "unpaved": 3,
+        "dirt": 31
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 26259445,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26259445"
+        },
+        {
+          "type": "way",
+          "id": 26329557,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26329557"
+        },
+        {
+          "type": "way",
+          "id": 26600611,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26600611"
+        },
+        {
+          "type": "way",
+          "id": 26628719,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26628719"
+        },
+        {
+          "type": "way",
+          "id": 27078924,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/27078924"
+        }
+      ]
+    },
+    "smoothness": {
+      "count": 6,
+      "values": {
+        "good": 4,
+        "bad": 1,
+        "excellent": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521066,
+          "value": "good",
+          "url": "https://www.openstreetmap.org/way/183521066"
+        },
+        {
+          "type": "way",
+          "id": 541467845,
+          "value": "bad",
+          "url": "https://www.openstreetmap.org/way/541467845"
+        },
+        {
+          "type": "way",
+          "id": 1069458451,
+          "value": "excellent",
+          "url": "https://www.openstreetmap.org/way/1069458451"
+        },
+        {
+          "type": "way",
+          "id": 1339878026,
+          "value": "good",
+          "url": "https://www.openstreetmap.org/way/1339878026"
+        },
+        {
+          "type": "way",
+          "id": 1339878034,
+          "value": "good",
+          "url": "https://www.openstreetmap.org/way/1339878034"
+        }
+      ]
+    },
+    "check_date": {
+      "count": 1,
+      "values": {
+        "2026-05-22": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 1272157465,
+          "value": "2026-05-22",
+          "url": "https://www.openstreetmap.org/way/1272157465"
+        }
+      ]
+    },
+    "survey:date": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "source": {
+      "count": 117,
+      "values": {
+        "Bing": 38,
+        "survey": 35,
+        "survey, bing": 2,
+        "bing, local knowledge": 20,
+        "mapbox, local knowledge": 3,
+        "bing, survey": 3,
+        "bing": 3,
+        "local knowledge": 1,
+        "Bing, survey": 8,
+        "Bing, suvey": 1,
+        "survey, Bing": 1,
+        "maxar": 2
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183272409,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272409"
+        },
+        {
+          "type": "way",
+          "id": 183272437,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272437"
+        },
+        {
+          "type": "way",
+          "id": 183272440,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272440"
+        },
+        {
+          "type": "way",
+          "id": 183272540,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272540"
+        },
+        {
+          "type": "way",
+          "id": 183272560,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272560"
+        }
+      ]
+    },
+    "source:width": {
+      "count": 1,
+      "values": {
+        "ARCore": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379724376,
+          "value": "ARCore",
+          "url": "https://www.openstreetmap.org/way/379724376"
+        }
+      ]
+    },
+    "bridge": {
+      "count": 93,
+      "values": {
+        "viaduct": 10,
+        "yes": 83
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183272300,
+          "value": "viaduct",
+          "url": "https://www.openstreetmap.org/way/183272300"
+        },
+        {
+          "type": "way",
+          "id": 183272304,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183272304"
+        },
+        {
+          "type": "way",
+          "id": 183272573,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183272573"
+        },
+        {
+          "type": "way",
+          "id": 183272577,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183272577"
+        },
+        {
+          "type": "way",
+          "id": 183272585,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183272585"
+        }
+      ]
+    },
+    "tunnel": {
+      "count": 44,
+      "values": {
+        "yes": 39,
+        "building_passage": 5
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521070,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183521070"
+        },
+        {
+          "type": "way",
+          "id": 416506123,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/416506123"
+        },
+        {
+          "type": "way",
+          "id": 550974490,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/550974490"
+        },
+        {
+          "type": "way",
+          "id": 550974493,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/550974493"
+        },
+        {
+          "type": "way",
+          "id": 659571967,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/659571967"
+        }
+      ]
+    },
+    "layer": {
+      "count": 171,
+      "values": {
+        "0": 2,
+        "1": 71,
+        "2": 23,
+        "3": 3,
+        "-1": 72
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183272300,
+          "value": "2",
+          "url": "https://www.openstreetmap.org/way/183272300"
+        },
+        {
+          "type": "way",
+          "id": 183272304,
+          "value": "3",
+          "url": "https://www.openstreetmap.org/way/183272304"
+        },
+        {
+          "type": "way",
+          "id": 183272560,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183272560"
+        },
+        {
+          "type": "way",
+          "id": 183272573,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183272573"
+        },
+        {
+          "type": "way",
+          "id": 183272577,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183272577"
+        }
+      ]
+    },
+    "oneway:foot": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "conveying": {
+      "count": 1,
+      "values": {
+        "yes": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 550974490,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/550974490"
+        }
+      ]
+    },
+    "ramp:wheelchair": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    }
+  },
+  "all_nodes": {
+    "incline": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "est_width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "width:effective": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:both": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:left": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:right": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:both:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:left:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:right:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "kerb": {
+      "count": 21,
+      "values": {
+        "lowered": 5,
+        "flush": 16
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 5321149141,
+          "value": "lowered",
+          "url": "https://www.openstreetmap.org/node/5321149141"
+        },
+        {
+          "type": "node",
+          "id": 12392878604,
+          "value": "flush",
+          "url": "https://www.openstreetmap.org/node/12392878604"
+        },
+        {
+          "type": "node",
+          "id": 12390432127,
+          "value": "flush",
+          "url": "https://www.openstreetmap.org/node/12390432127"
+        },
+        {
+          "type": "node",
+          "id": 12390432226,
+          "value": "flush",
+          "url": "https://www.openstreetmap.org/node/12390432226"
+        },
+        {
+          "type": "node",
+          "id": 12390432399,
+          "value": "lowered",
+          "url": "https://www.openstreetmap.org/node/12390432399"
+        }
+      ]
+    },
+    "kerb:height": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "barrier": {
+      "count": 48,
+      "values": {
+        "gate": 19,
+        "lift_gate": 8,
+        "bollard": 1,
+        "kerb": 20
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 2902796118,
+          "value": "gate",
+          "url": "https://www.openstreetmap.org/node/2902796118"
+        },
+        {
+          "type": "node",
+          "id": 4452367291,
+          "value": "gate",
+          "url": "https://www.openstreetmap.org/node/4452367291"
+        },
+        {
+          "type": "node",
+          "id": 3973889159,
+          "value": "lift_gate",
+          "url": "https://www.openstreetmap.org/node/3973889159"
+        },
+        {
+          "type": "node",
+          "id": 4658913588,
+          "value": "lift_gate",
+          "url": "https://www.openstreetmap.org/node/4658913588"
+        },
+        {
+          "type": "node",
+          "id": 3964387736,
+          "value": "bollard",
+          "url": "https://www.openstreetmap.org/node/3964387736"
+        }
+      ]
+    },
+    "access": {
+      "count": 4,
+      "values": {
+        "permissive": 2,
+        "yes": 1,
+        "no": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 8146493950,
+          "value": "permissive",
+          "url": "https://www.openstreetmap.org/node/8146493950"
+        },
+        {
+          "type": "node",
+          "id": 7525155367,
+          "value": "permissive",
+          "url": "https://www.openstreetmap.org/node/7525155367"
+        },
+        {
+          "type": "node",
+          "id": 3967062701,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3967062701"
+        },
+        {
+          "type": "node",
+          "id": 11800688721,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/node/11800688721"
+        }
+      ]
+    },
+    "foot": {
+      "count": 4,
+      "values": {
+        "yes": 4
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 1157443415,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/1157443415"
+        },
+        {
+          "type": "node",
+          "id": 436776275,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/436776275"
+        },
+        {
+          "type": "node",
+          "id": 1157443436,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/1157443436"
+        },
+        {
+          "type": "node",
+          "id": 13152002323,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/13152002323"
+        }
+      ]
+    },
+    "wheelchair": {
+      "count": 7,
+      "values": {
+        "yes": 5,
+        "no": 2
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 357825620,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/357825620"
+        },
+        {
+          "type": "node",
+          "id": 357871750,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/357871750"
+        },
+        {
+          "type": "node",
+          "id": 7017315403,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/7017315403"
+        },
+        {
+          "type": "node",
+          "id": 11568682599,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/node/11568682599"
+        },
+        {
+          "type": "node",
+          "id": 8146493950,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/8146493950"
+        }
+      ]
+    },
+    "entrance": {
+      "count": 62,
+      "values": {
+        "main": 6,
+        "yes": 55,
+        "staircase": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 4452367057,
+          "value": "main",
+          "url": "https://www.openstreetmap.org/node/4452367057"
+        },
+        {
+          "type": "node",
+          "id": 3959366168,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3959366168"
+        },
+        {
+          "type": "node",
+          "id": 4332535343,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/4332535343"
+        },
+        {
+          "type": "node",
+          "id": 3391903993,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3391903993"
+        },
+        {
+          "type": "node",
+          "id": 3391956597,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3391956597"
+        }
+      ]
+    },
+    "opening_hours": {
+      "count": 3,
+      "values": {
+        "화 13:00~21:00": 1,
+        "Mo-Fr 15:00-24:00; Sa-Su 12:00-24:00": 1,
+        "12:00-00:00": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 7017315403,
+          "value": "화 13:00~21:00",
+          "url": "https://www.openstreetmap.org/node/7017315403"
+        },
+        {
+          "type": "node",
+          "id": 11568682599,
+          "value": "Mo-Fr 15:00-24:00; Sa-Su 12:00-24:00",
+          "url": "https://www.openstreetmap.org/node/11568682599"
+        },
+        {
+          "type": "node",
+          "id": 13821330888,
+          "value": "12:00-00:00",
+          "url": "https://www.openstreetmap.org/node/13821330888"
+        }
+      ]
+    },
+    "crossing": {
+      "count": 537,
+      "values": {
+        "marked": 415,
+        "uncontrolled": 49,
+        "traffic_signals": 25,
+        "zebra;marked": 1,
+        "unmarked": 44,
+        "informal": 3
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 3984132014,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/3984132014"
+        },
+        {
+          "type": "node",
+          "id": 5321180888,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/5321180888"
+        },
+        {
+          "type": "node",
+          "id": 7625662402,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/7625662402"
+        },
+        {
+          "type": "node",
+          "id": 5215360441,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/5215360441"
+        },
+        {
+          "type": "node",
+          "id": 10864426785,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/10864426785"
+        }
+      ]
+    },
+    "surface": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "smoothness": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "check_date": {
+      "count": 3,
+      "values": {
+        "2024-01-30": 1,
+        "2024-02-01": 1,
+        "2024-12-30": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 11568682599,
+          "value": "2024-01-30",
+          "url": "https://www.openstreetmap.org/node/11568682599"
+        },
+        {
+          "type": "node",
+          "id": 11575268806,
+          "value": "2024-02-01",
+          "url": "https://www.openstreetmap.org/node/11575268806"
+        },
+        {
+          "type": "node",
+          "id": 2334996077,
+          "value": "2024-12-30",
+          "url": "https://www.openstreetmap.org/node/2334996077"
+        }
+      ]
+    },
+    "survey:date": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "source": {
+      "count": 7,
+      "values": {
+        "survey": 3,
+        "Bing": 3,
+        "khu.ac.kr": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 3973884654,
+          "value": "survey",
+          "url": "https://www.openstreetmap.org/node/3973884654"
+        },
+        {
+          "type": "node",
+          "id": 3391903993,
+          "value": "survey",
+          "url": "https://www.openstreetmap.org/node/3391903993"
+        },
+        {
+          "type": "node",
+          "id": 3391956597,
+          "value": "survey",
+          "url": "https://www.openstreetmap.org/node/3391956597"
+        },
+        {
+          "type": "node",
+          "id": 3274325374,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/node/3274325374"
+        },
+        {
+          "type": "node",
+          "id": 12449558300,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/node/12449558300"
+        }
+      ]
+    },
+    "source:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "bridge": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "tunnel": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "layer": {
+      "count": 14,
+      "values": {
+        "-1": 14
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 3957786168,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/3957786168"
+        },
+        {
+          "type": "node",
+          "id": 4452367057,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/4452367057"
+        },
+        {
+          "type": "node",
+          "id": 13390826163,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/13390826163"
+        },
+        {
+          "type": "node",
+          "id": 13408865466,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/13408865466"
+        },
+        {
+          "type": "node",
+          "id": 13814705816,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/13814705816"
+        }
+      ]
+    },
+    "oneway:foot": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "conveying": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "ramp:wheelchair": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    }
+  },
+  "engine_accepted_ways": {
+    "incline": {
+      "count": 19,
+      "values": {
+        "up": 10,
+        "down": 7,
+        "0%": 1,
+        "yes": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379555973,
+          "value": "up",
+          "url": "https://www.openstreetmap.org/way/379555973"
+        },
+        {
+          "type": "way",
+          "id": 379555990,
+          "value": "down",
+          "url": "https://www.openstreetmap.org/way/379555990"
+        },
+        {
+          "type": "way",
+          "id": 393240562,
+          "value": "down",
+          "url": "https://www.openstreetmap.org/way/393240562"
+        },
+        {
+          "type": "way",
+          "id": 394282837,
+          "value": "up",
+          "url": "https://www.openstreetmap.org/way/394282837"
+        },
+        {
+          "type": "way",
+          "id": 394374374,
+          "value": "down",
+          "url": "https://www.openstreetmap.org/way/394374374"
+        }
+      ]
+    },
+    "width": {
+      "count": 28,
+      "values": {
+        "1": 3,
+        "2": 18,
+        "3": 5,
+        "9.5": 1,
+        "2.5": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379724060,
+          "value": "9.5",
+          "url": "https://www.openstreetmap.org/way/379724060"
+        },
+        {
+          "type": "way",
+          "id": 379724376,
+          "value": "2.5",
+          "url": "https://www.openstreetmap.org/way/379724376"
+        },
+        {
+          "type": "way",
+          "id": 435327110,
+          "value": "2",
+          "url": "https://www.openstreetmap.org/way/435327110"
+        },
+        {
+          "type": "way",
+          "id": 468730708,
+          "value": "3",
+          "url": "https://www.openstreetmap.org/way/468730708"
+        },
+        {
+          "type": "way",
+          "id": 496284460,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/496284460"
+        }
+      ]
+    },
+    "est_width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "width:effective": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk": {
+      "count": 19,
+      "values": {
+        "both": 11,
+        "no": 8
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 27078924,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/27078924"
+        },
+        {
+          "type": "way",
+          "id": 183521080,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/183521080"
+        },
+        {
+          "type": "way",
+          "id": 183521081,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/183521081"
+        },
+        {
+          "type": "way",
+          "id": 218975373,
+          "value": "both",
+          "url": "https://www.openstreetmap.org/way/218975373"
+        },
+        {
+          "type": "way",
+          "id": 378331046,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/378331046"
+        }
+      ]
+    },
+    "sidewalk:both": {
+      "count": 9,
+      "values": {
+        "separate": 9
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521150,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183521150"
+        },
+        {
+          "type": "way",
+          "id": 183895345,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183895345"
+        },
+        {
+          "type": "way",
+          "id": 183895346,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183895346"
+        },
+        {
+          "type": "way",
+          "id": 183895347,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/183895347"
+        },
+        {
+          "type": "way",
+          "id": 469922223,
+          "value": "separate",
+          "url": "https://www.openstreetmap.org/way/469922223"
+        }
+      ]
+    },
+    "sidewalk:left": {
+      "count": 1,
+      "values": {
+        "no": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379555978,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/379555978"
+        }
+      ]
+    },
+    "sidewalk:right": {
+      "count": 1,
+      "values": {
+        "yes": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379555978,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/379555978"
+        }
+      ]
+    },
+    "sidewalk:both:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:left:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:right:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "kerb": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "kerb:height": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "barrier": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "access": {
+      "count": 21,
+      "values": {
+        "yes": 17,
+        "no": 3,
+        "permit": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 351819311,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/351819311"
+        },
+        {
+          "type": "way",
+          "id": 351823752,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/351823752"
+        },
+        {
+          "type": "way",
+          "id": 394374378,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/394374378"
+        },
+        {
+          "type": "way",
+          "id": 435327110,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/435327110"
+        },
+        {
+          "type": "way",
+          "id": 468730708,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/way/468730708"
+        }
+      ]
+    },
+    "foot": {
+      "count": 41,
+      "values": {
+        "yes": 39,
+        "designated": 2
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 26269734,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/26269734"
+        },
+        {
+          "type": "way",
+          "id": 37396912,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/37396912"
+        },
+        {
+          "type": "way",
+          "id": 172670186,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/172670186"
+        },
+        {
+          "type": "way",
+          "id": 183061374,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183061374"
+        },
+        {
+          "type": "way",
+          "id": 183062369,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183062369"
+        }
+      ]
+    },
+    "wheelchair": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "entrance": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "opening_hours": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "crossing": {
+      "count": 388,
+      "values": {
+        "marked": 319,
+        "uncontrolled": 25,
+        "traffic_signals": 5,
+        "unmarked": 39
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 292666320,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/292666320"
+        },
+        {
+          "type": "way",
+          "id": 448204959,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/448204959"
+        },
+        {
+          "type": "way",
+          "id": 478410763,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/478410763"
+        },
+        {
+          "type": "way",
+          "id": 478410775,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/478410775"
+        },
+        {
+          "type": "way",
+          "id": 521912019,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/way/521912019"
+        }
+      ]
+    },
+    "surface": {
+      "count": 572,
+      "values": {
+        "asphalt": 408,
+        "paved": 32,
+        "paving_stones": 81,
+        "wood": 9,
+        "concrete": 8,
+        "unpaved": 3,
+        "dirt": 31
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 26259445,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26259445"
+        },
+        {
+          "type": "way",
+          "id": 26329557,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26329557"
+        },
+        {
+          "type": "way",
+          "id": 26600611,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26600611"
+        },
+        {
+          "type": "way",
+          "id": 26628719,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/26628719"
+        },
+        {
+          "type": "way",
+          "id": 27078924,
+          "value": "asphalt",
+          "url": "https://www.openstreetmap.org/way/27078924"
+        }
+      ]
+    },
+    "smoothness": {
+      "count": 3,
+      "values": {
+        "good": 2,
+        "bad": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521066,
+          "value": "good",
+          "url": "https://www.openstreetmap.org/way/183521066"
+        },
+        {
+          "type": "way",
+          "id": 541467845,
+          "value": "bad",
+          "url": "https://www.openstreetmap.org/way/541467845"
+        },
+        {
+          "type": "way",
+          "id": 1339878038,
+          "value": "good",
+          "url": "https://www.openstreetmap.org/way/1339878038"
+        }
+      ]
+    },
+    "check_date": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "survey:date": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "source": {
+      "count": 106,
+      "values": {
+        "Bing": 27,
+        "survey": 35,
+        "survey, bing": 2,
+        "bing, local knowledge": 20,
+        "mapbox, local knowledge": 3,
+        "bing, survey": 3,
+        "bing": 3,
+        "local knowledge": 1,
+        "Bing, survey": 8,
+        "Bing, suvey": 1,
+        "survey, Bing": 1,
+        "maxar": 2
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183272409,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272409"
+        },
+        {
+          "type": "way",
+          "id": 183272437,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272437"
+        },
+        {
+          "type": "way",
+          "id": 183272440,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272440"
+        },
+        {
+          "type": "way",
+          "id": 183272540,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272540"
+        },
+        {
+          "type": "way",
+          "id": 183272560,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/way/183272560"
+        }
+      ]
+    },
+    "source:width": {
+      "count": 1,
+      "values": {
+        "ARCore": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 379724376,
+          "value": "ARCore",
+          "url": "https://www.openstreetmap.org/way/379724376"
+        }
+      ]
+    },
+    "bridge": {
+      "count": 59,
+      "values": {
+        "yes": 59
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521080,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183521080"
+        },
+        {
+          "type": "way",
+          "id": 183521102,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183521102"
+        },
+        {
+          "type": "way",
+          "id": 183895345,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183895345"
+        },
+        {
+          "type": "way",
+          "id": 183895349,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183895349"
+        },
+        {
+          "type": "way",
+          "id": 183895350,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183895350"
+        }
+      ]
+    },
+    "tunnel": {
+      "count": 43,
+      "values": {
+        "yes": 38,
+        "building_passage": 5
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183521070,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/183521070"
+        },
+        {
+          "type": "way",
+          "id": 416506123,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/416506123"
+        },
+        {
+          "type": "way",
+          "id": 550974490,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/550974490"
+        },
+        {
+          "type": "way",
+          "id": 550974493,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/550974493"
+        },
+        {
+          "type": "way",
+          "id": 659571967,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/659571967"
+        }
+      ]
+    },
+    "layer": {
+      "count": 133,
+      "values": {
+        "0": 1,
+        "1": 61,
+        "-1": 71
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 183272560,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183272560"
+        },
+        {
+          "type": "way",
+          "id": 183521070,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/way/183521070"
+        },
+        {
+          "type": "way",
+          "id": 183521080,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183521080"
+        },
+        {
+          "type": "way",
+          "id": 183521102,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183521102"
+        },
+        {
+          "type": "way",
+          "id": 183895345,
+          "value": "1",
+          "url": "https://www.openstreetmap.org/way/183895345"
+        }
+      ]
+    },
+    "oneway:foot": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "conveying": {
+      "count": 1,
+      "values": {
+        "yes": 1
+      },
+      "examples": [
+        {
+          "type": "way",
+          "id": 550974490,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/way/550974490"
+        }
+      ]
+    },
+    "ramp:wheelchair": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    }
+  },
+  "nodes_referenced_by_accepted_ways": {
+    "incline": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "est_width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "width:effective": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:both": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:left": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:right": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:both:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:left:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "sidewalk:right:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "kerb": {
+      "count": 21,
+      "values": {
+        "lowered": 5,
+        "flush": 16
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 5321149141,
+          "value": "lowered",
+          "url": "https://www.openstreetmap.org/node/5321149141"
+        },
+        {
+          "type": "node",
+          "id": 12392878604,
+          "value": "flush",
+          "url": "https://www.openstreetmap.org/node/12392878604"
+        },
+        {
+          "type": "node",
+          "id": 12390432127,
+          "value": "flush",
+          "url": "https://www.openstreetmap.org/node/12390432127"
+        },
+        {
+          "type": "node",
+          "id": 12390432226,
+          "value": "flush",
+          "url": "https://www.openstreetmap.org/node/12390432226"
+        },
+        {
+          "type": "node",
+          "id": 12390432399,
+          "value": "lowered",
+          "url": "https://www.openstreetmap.org/node/12390432399"
+        }
+      ]
+    },
+    "kerb:height": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "barrier": {
+      "count": 44,
+      "values": {
+        "gate": 18,
+        "lift_gate": 5,
+        "bollard": 1,
+        "kerb": 20
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 4452367291,
+          "value": "gate",
+          "url": "https://www.openstreetmap.org/node/4452367291"
+        },
+        {
+          "type": "node",
+          "id": 3973889159,
+          "value": "lift_gate",
+          "url": "https://www.openstreetmap.org/node/3973889159"
+        },
+        {
+          "type": "node",
+          "id": 4658913588,
+          "value": "lift_gate",
+          "url": "https://www.openstreetmap.org/node/4658913588"
+        },
+        {
+          "type": "node",
+          "id": 3964387736,
+          "value": "bollard",
+          "url": "https://www.openstreetmap.org/node/3964387736"
+        },
+        {
+          "type": "node",
+          "id": 4459447487,
+          "value": "gate",
+          "url": "https://www.openstreetmap.org/node/4459447487"
+        }
+      ]
+    },
+    "access": {
+      "count": 3,
+      "values": {
+        "permissive": 2,
+        "no": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 8146493950,
+          "value": "permissive",
+          "url": "https://www.openstreetmap.org/node/8146493950"
+        },
+        {
+          "type": "node",
+          "id": 7525155367,
+          "value": "permissive",
+          "url": "https://www.openstreetmap.org/node/7525155367"
+        },
+        {
+          "type": "node",
+          "id": 11800688721,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/node/11800688721"
+        }
+      ]
+    },
+    "foot": {
+      "count": 4,
+      "values": {
+        "yes": 4
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 1157443415,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/1157443415"
+        },
+        {
+          "type": "node",
+          "id": 436776275,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/436776275"
+        },
+        {
+          "type": "node",
+          "id": 1157443436,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/1157443436"
+        },
+        {
+          "type": "node",
+          "id": 13152002323,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/13152002323"
+        }
+      ]
+    },
+    "wheelchair": {
+      "count": 3,
+      "values": {
+        "yes": 2,
+        "no": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 8146493950,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/8146493950"
+        },
+        {
+          "type": "node",
+          "id": 7525155367,
+          "value": "no",
+          "url": "https://www.openstreetmap.org/node/7525155367"
+        },
+        {
+          "type": "node",
+          "id": 12580944078,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/12580944078"
+        }
+      ]
+    },
+    "entrance": {
+      "count": 60,
+      "values": {
+        "main": 6,
+        "yes": 53,
+        "staircase": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 4452367057,
+          "value": "main",
+          "url": "https://www.openstreetmap.org/node/4452367057"
+        },
+        {
+          "type": "node",
+          "id": 3959366168,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3959366168"
+        },
+        {
+          "type": "node",
+          "id": 4332535343,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/4332535343"
+        },
+        {
+          "type": "node",
+          "id": 3391903993,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3391903993"
+        },
+        {
+          "type": "node",
+          "id": 3391956597,
+          "value": "yes",
+          "url": "https://www.openstreetmap.org/node/3391956597"
+        }
+      ]
+    },
+    "opening_hours": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "crossing": {
+      "count": 535,
+      "values": {
+        "marked": 413,
+        "uncontrolled": 49,
+        "traffic_signals": 25,
+        "zebra;marked": 1,
+        "unmarked": 44,
+        "informal": 3
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 3984132014,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/3984132014"
+        },
+        {
+          "type": "node",
+          "id": 5321180888,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/5321180888"
+        },
+        {
+          "type": "node",
+          "id": 7625662402,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/7625662402"
+        },
+        {
+          "type": "node",
+          "id": 5215360441,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/5215360441"
+        },
+        {
+          "type": "node",
+          "id": 10864426785,
+          "value": "marked",
+          "url": "https://www.openstreetmap.org/node/10864426785"
+        }
+      ]
+    },
+    "surface": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "smoothness": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "check_date": {
+      "count": 1,
+      "values": {
+        "2024-12-30": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 2334996077,
+          "value": "2024-12-30",
+          "url": "https://www.openstreetmap.org/node/2334996077"
+        }
+      ]
+    },
+    "survey:date": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "source": {
+      "count": 7,
+      "values": {
+        "survey": 3,
+        "Bing": 3,
+        "khu.ac.kr": 1
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 3973884654,
+          "value": "survey",
+          "url": "https://www.openstreetmap.org/node/3973884654"
+        },
+        {
+          "type": "node",
+          "id": 3391903993,
+          "value": "survey",
+          "url": "https://www.openstreetmap.org/node/3391903993"
+        },
+        {
+          "type": "node",
+          "id": 3391956597,
+          "value": "survey",
+          "url": "https://www.openstreetmap.org/node/3391956597"
+        },
+        {
+          "type": "node",
+          "id": 3274325374,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/node/3274325374"
+        },
+        {
+          "type": "node",
+          "id": 12449558300,
+          "value": "Bing",
+          "url": "https://www.openstreetmap.org/node/12449558300"
+        }
+      ]
+    },
+    "source:width": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "bridge": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "tunnel": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "layer": {
+      "count": 14,
+      "values": {
+        "-1": 14
+      },
+      "examples": [
+        {
+          "type": "node",
+          "id": 3957786168,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/3957786168"
+        },
+        {
+          "type": "node",
+          "id": 4452367057,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/4452367057"
+        },
+        {
+          "type": "node",
+          "id": 13390826163,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/13390826163"
+        },
+        {
+          "type": "node",
+          "id": 13408865466,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/13408865466"
+        },
+        {
+          "type": "node",
+          "id": 13814705816,
+          "value": "-1",
+          "url": "https://www.openstreetmap.org/node/13814705816"
+        }
+      ]
+    },
+    "oneway:foot": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "conveying": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    },
+    "ramp:wheelchair": {
+      "count": 0,
+      "values": {},
+      "examples": []
+    }
+  },
+  "limitations": [
+    "Snapshot query does not prove all entrances/barriers/kerbs/relations in the area were requested. Zero counts can be extraction omissions as well as unmapped attributes.",
+    "No new OSM observation or live element history was fetched.",
+    "Counts and lengths do not establish actual wheelchair access.",
+    "Element edit metadata is absent; snapshot timestamp is not field survey date."
+  ],
+  "demo_routes": [
+    {
+      "name": "shortest",
+      "start": [
+        37.5960634,
+        127.0384638
+      ],
+      "end": [
+        37.5973378,
+        127.0412971
+      ],
+      "meters": 674,
+      "unknown_incline_m": 674,
+      "way_ids": [
+        37402230,
+        379553740,
+        183272540,
+        183272560,
+        183272403,
+        750640231,
+        750640241,
+        750640242,
+        750640243
+      ],
+      "way_evidence": [
+        {
+          "id": 37402230,
+          "tags": {
+            "highway": "secondary",
+            "name": "월곡로",
+            "name:en": "Wolgok-ro",
+            "name:ko": "월곡로",
+            "name:ko-Latn": "Wolgok-ro",
+            "surface": "asphalt"
+          },
+          "url": "https://www.openstreetmap.org/way/37402230"
+        },
+        {
+          "id": 379553740,
+          "tags": {
+            "highway": "residential",
+            "name": "월곡로8길",
+            "name:en": "Wolgok-ro 8-gil",
+            "name:ko": "월곡로8길"
+          },
+          "url": "https://www.openstreetmap.org/way/379553740"
+        },
+        {
+          "id": 183272540,
+          "tags": {
+            "bicycle": "designated",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lanes": "1",
+            "name": "월곡로10길",
+            "name:en": "Wolgok-ro 10-gil",
+            "name:ko": "월곡로10길",
+            "name:ko-Latn": "Wolgok-ro sip-gil",
+            "oneway": "yes",
+            "review": "no",
+            "source": "Bing",
+            "surface": "asphalt"
+          },
+          "url": "https://www.openstreetmap.org/way/183272540"
+        },
+        {
+          "id": 183272560,
+          "tags": {
+            "cycleway": "track",
+            "highway": "residential",
+            "lanes": "2",
+            "layer": "1",
+            "oneway": "no",
+            "review": "no",
+            "source": "Bing"
+          },
+          "url": "https://www.openstreetmap.org/way/183272560"
+        },
+        {
+          "id": 183272403,
+          "tags": {
+            "cycleway:right": "opposite",
+            "highway": "residential",
+            "maxspeed": "30",
+            "name": "회기로5길",
+            "name:en": "Hoegi-ro 5-gil",
+            "name:ko": "회기로5길",
+            "name:ko-Latn": "Hoegi-ro 5-gil",
+            "oneway": "yes"
+          },
+          "url": "https://www.openstreetmap.org/way/183272403"
+        },
+        {
+          "id": 750640231,
+          "tags": {
+            "highway": "residential",
+            "name": "회기로5길"
+          },
+          "url": "https://www.openstreetmap.org/way/750640231"
+        },
+        {
+          "id": 750640241,
+          "tags": {
+            "highway": "service"
+          },
+          "url": "https://www.openstreetmap.org/way/750640241"
+        },
+        {
+          "id": 750640242,
+          "tags": {
+            "highway": "residential",
+            "layer": "-1",
+            "tunnel": "yes"
+          },
+          "url": "https://www.openstreetmap.org/way/750640242"
+        },
+        {
+          "id": 750640243,
+          "tags": {
+            "highway": "residential"
+          },
+          "url": "https://www.openstreetmap.org/way/750640243"
+        }
+      ],
+      "nodes_with_tags": 0,
+      "rest_stop": null
+    },
+    {
+      "name": "bench",
+      "start": [
+        37.5960634,
+        127.0384638
+      ],
+      "end": [
+        37.5973378,
+        127.0412971
+      ],
+      "meters": 958,
+      "unknown_incline_m": 958,
+      "way_ids": [
+        37402230,
+        379553706,
+        379553685,
+        183272540,
+        379766295,
+        752903358,
+        183272603,
+        535722779,
+        750640231,
+        750640241,
+        750640242,
+        750640243
+      ],
+      "way_evidence": [
+        {
+          "id": 37402230,
+          "tags": {
+            "highway": "secondary",
+            "name": "월곡로",
+            "name:en": "Wolgok-ro",
+            "name:ko": "월곡로",
+            "name:ko-Latn": "Wolgok-ro",
+            "surface": "asphalt"
+          },
+          "url": "https://www.openstreetmap.org/way/37402230"
+        },
+        {
+          "id": 379553706,
+          "tags": {
+            "highway": "residential",
+            "name": "월곡로6길",
+            "name:en": "Wolgok-ro 6-gil",
+            "name:ko": "월곡로6길"
+          },
+          "url": "https://www.openstreetmap.org/way/379553706"
+        },
+        {
+          "id": 379553685,
+          "tags": {
+            "highway": "residential",
+            "name": "월곡로10길",
+            "name:en": "Wolgok-ro 10-gil",
+            "name:ko": "월곡로10길"
+          },
+          "url": "https://www.openstreetmap.org/way/379553685"
+        },
+        {
+          "id": 183272540,
+          "tags": {
+            "bicycle": "designated",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lanes": "1",
+            "name": "월곡로10길",
+            "name:en": "Wolgok-ro 10-gil",
+            "name:ko": "월곡로10길",
+            "name:ko-Latn": "Wolgok-ro sip-gil",
+            "oneway": "yes",
+            "review": "no",
+            "source": "Bing",
+            "surface": "asphalt"
+          },
+          "url": "https://www.openstreetmap.org/way/183272540"
+        },
+        {
+          "id": 379766295,
+          "tags": {
+            "bridge": "yes",
+            "bridge:name": "구월교",
+            "foot": "designated",
+            "highway": "residential",
+            "layer": "0",
+            "motor_vehicle": "no",
+            "oneway": "no",
+            "surface": "wood"
+          },
+          "url": "https://www.openstreetmap.org/way/379766295"
+        },
+        {
+          "id": 752903358,
+          "tags": {
+            "highway": "service"
+          },
+          "url": "https://www.openstreetmap.org/way/752903358"
+        },
+        {
+          "id": 183272603,
+          "tags": {
+            "highway": "service",
+            "review": "no",
+            "source": "Bing"
+          },
+          "url": "https://www.openstreetmap.org/way/183272603"
+        },
+        {
+          "id": 535722779,
+          "tags": {
+            "highway": "residential",
+            "name": "화랑로14길",
+            "name:en": "Hwarang-ro 14-gil",
+            "name:ko": "화랑로14길",
+            "review": "no",
+            "source": "Bing"
+          },
+          "url": "https://www.openstreetmap.org/way/535722779"
+        },
+        {
+          "id": 750640231,
+          "tags": {
+            "highway": "residential",
+            "name": "회기로5길"
+          },
+          "url": "https://www.openstreetmap.org/way/750640231"
+        },
+        {
+          "id": 750640241,
+          "tags": {
+            "highway": "service"
+          },
+          "url": "https://www.openstreetmap.org/way/750640241"
+        },
+        {
+          "id": 750640242,
+          "tags": {
+            "highway": "residential",
+            "layer": "-1",
+            "tunnel": "yes"
+          },
+          "url": "https://www.openstreetmap.org/way/750640242"
+        },
+        {
+          "id": 750640243,
+          "tags": {
+            "highway": "residential"
+          },
+          "url": "https://www.openstreetmap.org/way/750640243"
+        }
+      ],
+      "nodes_with_tags": 0,
+      "rest_stop": {
+        "ll": [
+          37.5954369,
+          127.0412576
+        ],
+        "id": 12464206320,
+        "name": "OSM 등록 벤치",
+        "score": 467.21150474757724,
+        "snap": [
+          37.5954374,
+          127.0412823
+        ],
+        "gap": 2.176880121209666,
+        "firstDistance": 537.415180788785
+      }
+    }
+  ]
+}
