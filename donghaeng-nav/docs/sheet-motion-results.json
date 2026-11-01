@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "checks": [
+    "held finger moves panel 1:1 before release",
+    "slow release chooses nearest snap with visible animation",
+    "collapsed, middle and expanded snap points",
+    "upward flick uses recent velocity",
+    "touch cancellation restores a stable height",
+    "content top boundary pulls the panel down",
+    "inner content scroll is not stolen by the sheet",
+    "text field retains input behavior",
+    "mouse drag, keyboard arrows, Home and End",
+    "reduced-motion snaps immediately",
+    "viewport resize safely cancels in-progress drag",
+    "desktop layout remains available"
+  ],
+  "measurements": {
+    "followFinger": [
+      430,
+      470,
+      530
+    ],
+    "snap": [
+      530,
+      449.546875,
+      430
+    ]
+  },
+  "browserErrors": []
+}

@@ -89,26 +89,79 @@ $('#present-mode').onclick=()=>{if(!graph){toast('지도 준비가 끝나면 발
 
 // Mobile app shell shares the existing route engine, forms and storage.
 let mobileMode='input',sheetSize='default',sheetDrag=null,sheetGestureUntil=0;
+let sheetFrame=0,sheetGeometry=null,sheetRenderedHeight=null,sheetContentTouch=null;
 function isMobileUI(){return matchMedia('(max-width:700px)').matches}
-function syncMobileViewport(){
- if(!isMobileUI()){document.documentElement.style.removeProperty('--app-height');document.body.classList.remove('keyboard-open');return}
- const viewport=window.visualViewport,height=viewport?.height||innerHeight;
+function measureSheetGeometry(){
+ const height=window.visualViewport?.height||innerHeight;
  document.documentElement.style.setProperty('--app-height',Math.round(height)+'px');
- document.documentElement.style.setProperty('--app-top',Math.round(viewport?.offsetTop||0)+'px');
+ document.documentElement.style.setProperty('--app-top',Math.round(window.visualViewport?.offsetTop||0)+'px');
  const editing=/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName||'');
  document.body.classList.toggle('keyboard-open',editing&&innerHeight-height>100);
  const header=$('.header').getBoundingClientRect().height,nav=$('.mobile-tabs').getBoundingClientRect().height,available=height-header-nav;
- const desired=sheetSize==='collapsed'?64:sheetSize==='expanded'?available-54:Math.min(mobileMode==='order'?255:mobileMode==='results'?400:480,available*(mobileMode==='order'?.36:mobileMode==='results'?.52:.59));
- const sheet=Math.max(64,Math.min(available-44,Math.round(desired)));
- document.documentElement.style.setProperty('--sheet-height',sheet+'px');
- document.documentElement.style.setProperty('--mobile-nav-height',nav+'px');
- document.documentElement.style.setProperty('--map-bottom-space',(sheet+nav)+'px');
+ const max=Math.max(64,Math.floor(available-44)),clamp=n=>Math.max(64,Math.min(max,Math.round(n)));
+ return {height,nav,mode:mobileMode,points:{collapsed:64,default:clamp(Math.min(mobileMode==='order'?255:mobileMode==='results'?400:480,available*(mobileMode==='order'?.36:mobileMode==='results'?.52:.59))),expanded:clamp(available-54)}};
 }
-function setSheetSize(size){
- sheetSize=size;document.body.dataset.sheetSize=size;
+function stopSheetFrame(){cancelAnimationFrame(sheetFrame);sheetFrame=0}
+function paintSheetHeight(height){
+ sheetRenderedHeight=height;
+ document.documentElement.style.setProperty('--sheet-height',height.toFixed(2)+'px');
+ document.documentElement.style.setProperty('--mobile-nav-height',sheetGeometry.nav+'px');
+ document.documentElement.style.setProperty('--map-bottom-space',(height+sheetGeometry.nav).toFixed(2)+'px');
+}
+function settleSheetVisibility(){document.body.classList.toggle('sheet-is-collapsed',sheetSize==='collapsed');document.body.classList.remove('sheet-dragging')}
+function abortSheetDrag(){const drag=sheetDrag;sheetDrag=null;if(drag?.capture?.hasPointerCapture(drag.id))drag.capture.releasePointerCapture(drag.id);sheetContentTouch=null;document.body.classList.remove('sheet-dragging')}
+function syncMobileViewport(){
+ if(!isMobileUI()){stopSheetFrame();abortSheetDrag();sheetGeometry=null;sheetRenderedHeight=null;document.documentElement.style.removeProperty('--app-height');document.body.classList.remove('keyboard-open','sheet-is-collapsed');return}
+ const geometry=measureSheetGeometry(),changed=!sheetGeometry||geometry.height!==sheetGeometry.height||geometry.nav!==sheetGeometry.nav||geometry.mode!==sheetGeometry.mode;
+ sheetGeometry=geometry;
+ if(changed){stopSheetFrame();abortSheetDrag();paintSheetHeight(geometry.points[sheetSize]);settleSheetVisibility()}
+ else if(!sheetDrag&&!sheetFrame){paintSheetHeight(geometry.points[sheetSize]);settleSheetVisibility()}
+}
+function animateSheetHeight(target,animate=true){
+ stopSheetFrame();
+ const start=sheetRenderedHeight??target;
+ if(!animate||matchMedia('(prefers-reduced-motion:reduce)').matches||Math.abs(target-start)<.5){paintSheetHeight(target);settleSheetVisibility();return}
+ // Keep contents visible throughout the collapse; only hide them once it lands.
+ document.body.classList.remove('sheet-is-collapsed');
+ const began=performance.now(),duration=Math.min(360,Math.max(200,Math.abs(target-start)*.65));
+ function tick(now){const t=Math.min(1,(now-began)/duration),ease=1-Math.pow(1-t,3);paintSheetHeight(start+(target-start)*ease);if(t<1)sheetFrame=requestAnimationFrame(tick);else{sheetFrame=0;paintSheetHeight(target);settleSheetVisibility()}}
+ sheetFrame=requestAnimationFrame(tick);
+}
+function setSheetSize(size,{animate=true}={}){
+ abortSheetDrag();sheetSize=size;document.body.dataset.sheetSize=size;
  $('#sheet-toggle').setAttribute('aria-expanded',size!=='collapsed');
  $('#sheet-toggle-label').textContent=size==='collapsed'?'입력·결과 펼치기 ⌃':'지도 넓게 보기 ⌄';
- syncMobileViewport();
+ if(!isMobileUI())return;
+ sheetGeometry=measureSheetGeometry();animateSheetHeight(sheetGeometry.points[size],animate);
+}
+function beginSheetDrag(id,y,time,capture=null){
+ if(!isMobileUI())return;
+ stopSheetFrame();sheetGeometry=measureSheetGeometry();
+ const height=$('.sidebar').getBoundingClientRect().height;
+ sheetDrag={id,startY:y,y,height,startSize:sheetSize,moved:false,samples:[{y,time}],capture};
+ paintSheetHeight(height);
+}
+function moveSheetDrag(y,time){
+ const drag=sheetDrag;if(!drag)return;
+ drag.y=y;drag.moved ||= Math.abs(y-drag.startY)>5;
+ drag.samples.push({y,time});drag.samples=drag.samples.filter(p=>time-p.time<100);
+ if(!drag.moved)return;
+ document.body.classList.add('sheet-dragging');document.body.classList.remove('sheet-is-collapsed');
+ // One render per frame. No layout reads in the pointermove hot path.
+ stopSheetFrame();sheetFrame=requestAnimationFrame(()=>{sheetFrame=0;if(sheetDrag)paintSheetHeight(Math.max(64,Math.min(sheetGeometry.points.expanded,drag.height+drag.startY-drag.y))) });
+}
+function finishSheetDrag(time,cancelled=false){
+ const drag=sheetDrag;if(!drag)return;
+ stopSheetFrame();const moved=drag.moved;
+ if(moved)paintSheetHeight(Math.max(64,Math.min(sheetGeometry.points.expanded,drag.height+drag.startY-drag.y)));
+ const current=sheetRenderedHeight,first=drag.samples[0],recent=time-drag.samples.at(-1).time<90;
+ const elapsed=time-first.time,velocity=recent&&elapsed>0?(drag.y-first.y)/elapsed:0;
+ const points=Object.entries(sheetGeometry.points),projected=current-Math.max(-2,Math.min(2,velocity))*150;
+ let target=drag.startSize;
+ if(moved&&!cancelled){target=points.reduce((best,p)=>Math.abs(p[1]-projected)<Math.abs(best[1]-projected)?p:best,points[0])[0]}
+ abortSheetDrag();
+ if(moved)sheetGestureUntil=Date.now()+300;
+ if(moved||cancelled)setSheetSize(target);else settleSheetVisibility();
 }
 function setMobileMode(mode){
  mobileMode=mode;document.body.dataset.mobileMode=mode;
@@ -141,10 +194,34 @@ function configureMobileLayout(){
 }
 $('#sheet-toggle').onclick=()=>{if(Date.now()>=sheetGestureUntil)setSheetSize(sheetSize==='collapsed'?'default':'collapsed')};
 const handle=$('#sheet-toggle');
-handle.addEventListener('pointerdown',ev=>{if(ev.pointerType!=='touch'&&ev.button!==0)return;sheetDrag={id:ev.pointerId,y:ev.clientY,delta:0};handle.setPointerCapture(ev.pointerId)});
-handle.addEventListener('pointermove',ev=>{if(sheetDrag?.id===ev.pointerId)sheetDrag.delta=ev.clientY-sheetDrag.y});
-handle.addEventListener('pointerup',ev=>{if(sheetDrag?.id!==ev.pointerId)return;const d=sheetDrag.delta;sheetDrag=null;if(Math.abs(d)>32){setSheetSize(d>0?'collapsed':'expanded');sheetGestureUntil=Date.now()+250}});
-handle.addEventListener('pointercancel',()=>sheetDrag=null);
+handle.addEventListener('pointerdown',ev=>{if(!isMobileUI()||!ev.isPrimary||(ev.pointerType!=='touch'&&ev.button!==0))return;beginSheetDrag(ev.pointerId,ev.clientY,ev.timeStamp,handle);handle.setPointerCapture(ev.pointerId)});
+handle.addEventListener('pointermove',ev=>{if(sheetDrag?.id===ev.pointerId)moveSheetDrag(ev.clientY,ev.timeStamp)});
+handle.addEventListener('pointerup',ev=>{if(sheetDrag?.id===ev.pointerId){moveSheetDrag(ev.clientY,ev.timeStamp);finishSheetDrag(ev.timeStamp)}});
+for(const event of ['pointercancel','lostpointercapture'])handle.addEventListener(event,ev=>{if(sheetDrag?.id===ev.pointerId)finishSheetDrag(ev.timeStamp,true)});
+// The scroll body only yields to the sheet at its top boundary. Controls retain
+// their native taps, text selection, keyboard input and inner scrolling.
+const sheetScroll=$('.sheet-scroll');
+sheetScroll.addEventListener('touchstart',ev=>{
+ if(!isMobileUI()||ev.touches.length!==1||ev.target.closest('button,a,input,textarea,select,summary,[contenteditable]')){sheetContentTouch=null;return}
+ const t=ev.touches[0];sheetContentTouch={id:t.identifier,x:t.clientX,y:t.clientY,time:ev.timeStamp,atTop:sheetScroll.scrollTop<=0,locked:false};
+},{passive:true});
+sheetScroll.addEventListener('touchmove',ev=>{
+ const touch=sheetContentTouch;if(!touch)return;
+ if(ev.touches.length!==1){if(touch.locked)finishSheetDrag(ev.timeStamp,true);sheetContentTouch=null;return}
+ const t=ev.touches[0];if(t.identifier!==touch.id)return;
+ const dy=t.clientY-touch.y,dx=t.clientX-touch.x;
+ if(!touch.locked){
+  if(!touch.atTop||Math.abs(dx)>Math.abs(dy)||Math.abs(dy)<8)return;
+  if(dy<0&&sheetSize==='expanded')return;
+  if(sheetScroll.scrollTop>0||!ev.cancelable)return;
+  touch.locked=true;beginSheetDrag('content',touch.y,touch.time);
+ }
+ if(ev.cancelable)ev.preventDefault();sheetScroll.scrollTop=0;moveSheetDrag(t.clientY,ev.timeStamp);
+},{passive:false});
+sheetScroll.addEventListener('touchend',ev=>{if(sheetContentTouch?.locked){if(ev.cancelable)ev.preventDefault();finishSheetDrag(ev.timeStamp)}sheetContentTouch=null},{passive:false});
+sheetScroll.addEventListener('touchcancel',ev=>{if(sheetContentTouch?.locked)finishSheetDrag(ev.timeStamp,true);sheetContentTouch=null},{passive:true});
+handle.addEventListener('keydown',ev=>{if(!isMobileUI()||!['ArrowUp','ArrowDown','Home','End'].includes(ev.key))return;ev.preventDefault();const sizes=['collapsed','default','expanded'],index=sizes.indexOf(sheetSize);setSheetSize(ev.key==='Home'?'collapsed':ev.key==='End'?'expanded':sizes[Math.max(0,Math.min(2,index+(ev.key==='ArrowUp'?1:-1)))])});
+matchMedia('(prefers-reduced-motion:reduce)').addEventListener('change',ev=>{if(ev.matches&&isMobileUI()){stopSheetFrame();abortSheetDrag();setSheetSize(sheetSize,{animate:false})}});
 $('#mobile-back').onclick=()=>{if(mobileMode==='order'){setMobileMode('results');if(routes[selected])fitMobileAware(L.latLngBounds(routes[selected].coords))}else setMobileMode('input')};
 $('#mobile-edit').onclick=()=>setMobileMode('input');
 $('#mobile-save').onclick=()=>$('#save-route').click();

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-01-mobile-app-shell",
+  "version": "2026-11-01-sheet-motion",
   "facility_records": 17485,
   "counts": {
     "bench": 2288,
@@ -38,8 +38,8 @@
     "review_policy": "2026-10-31-v1",
     "new_sources_promoted": 0
   },
-  "html_sha256": "1c3358d91e22380f51ac647262bf90dbd45cf0e6a1f0e5ae3f25a75ddac2130b",
-  "html_bytes": 12667213,
+  "html_sha256": "d2cb5a977847a1cf7a658afa1869c5606ada8be6e746df8a9cb9476ad20dafd4",
+  "html_bytes": 12673774,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure",

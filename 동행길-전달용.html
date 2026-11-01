@@ -749,7 +749,7 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
  .sheet-header{flex:0 0 64px;min-height:64px;background:#fffefc}.sheet-header button{display:grid;grid-template-columns:1fr auto;align-items:center;gap:5px 10px;width:100%;min-height:64px;background:transparent;border:0;padding:8px 18px 10px;text-align:left;touch-action:none}
  .sheet-grip{grid-column:1/-1;justify-self:center;width:38px;height:4px;border-radius:5px;background:#bbc4bd}.sheet-header #sheet-title{font-size:19px;font-weight:700;letter-spacing:-.5px}.sheet-header #sheet-toggle-label{font-size:11px;color:#60756a;font-weight:500}
  .sheet-scroll{overflow:auto;overscroll-behavior:contain;scroll-behavior:auto;padding:0 18px 20px;flex:1;scroll-padding:12px}
- [data-sheet-size=collapsed] .sheet-scroll{display:none}
+ .sheet-is-collapsed .sheet-scroll{display:none}
  .sidebar .intro,.sidebar .data-proof,.sidebar .sidebar-footer,.sidebar .data-note{display:none!important}
  #search{display:block}.origin-settings{padding:0 12px;background:#f5f8f2;border-radius:12px;border:1px solid #e0e7dc}.origin-settings summary{min-height:48px;gap:10px}.origin-settings summary b{font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.origin-settings .section-label{font-size:12px;color:#176d52;white-space:nowrap}.origin-change{font-size:12px;white-space:nowrap}
  .location-actions{margin:0 0 8px;flex-wrap:wrap}.location-actions button{font-size:12px;min-height:44px;flex:1}.location-box p{font-size:12px;line-height:1.6;margin-bottom:12px}.trip-separator,.quick-destinations{display:none}
@@ -798,6 +798,9 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
 }
 
 @media(max-width:700px){#mobile-route-action .route-go{display:block;background:#176d52;color:white;border:0;text-align:center;font-weight:600;padding:12px;border-radius:12px}.route-card .route-limits{display:none}.sheet-header #sheet-title{overflow:hidden;text-overflow:ellipsis}}
+
+/* Sheet motion is driven in rAF so map attribution follows the same geometry. */
+@media(max-width:700px){.sheet-header button{cursor:grab}.sheet-dragging .sheet-header button{cursor:grabbing}.sheet-dragging .sidebar{user-select:none;-webkit-user-select:none}.sheet-dragging .sheet-scroll{pointer-events:none}.sidebar{isolation:isolate}.sheet-grip{transition:background-color 150ms ease,width 150ms ease}.sheet-dragging .sheet-grip{background:#176d52;width:48px}}
 </style></head><body>
 <header class="header"><button id="mobile-back" class="mobile-only icon-button" type="button" aria-label="이전 화면">‹</button><a class="brand" href="#"><span class="brand-icon">↗</span>동행길<span class="brand-sub">모두를 위한 이동</span></a><nav><button class="nav active" data-view="route">길 찾기</button><button class="nav" data-view="saved">저장한 경로</button><button class="nav" id="about">이용 안내</button><button class="nav presentation-toggle" id="present-mode" type="button">발표 모드 ↗</button></nav><button id="mobile-more" class="mobile-only icon-button" type="button" aria-label="이용 안내와 시연 메뉴" aria-haspopup="dialog">⋯</button><span class="demo"><i></i> 월곡역 현장 시연</span></header>
 <main><aside class="sidebar" aria-label="이동 계획"><div class="sheet-header mobile-only"><button id="sheet-toggle" type="button" aria-expanded="true" aria-controls="sheet-content"><span class="sheet-grip" aria-hidden="true"></span><span id="sheet-title">어디로 갈까요?</span><span id="sheet-toggle-label">지도 넓게 보기 ⌄</span></button></div><div class="sheet-scroll" id="sheet-content"><div class="intro"><span class="eyebrow">WOLGOK · YOUR PACE, YOUR WAY</span><h1>당신의 속도로,<br><em>도착까지 함께.</em></h1><p>상태를 한 문장으로. 경사와 쉴 곳까지 알아서.</p><div class="local-proof"><span>◎ 월곡역 중심</span><span>오프라인 실행</span><button id="demo-open" type="button">30초 비교 시연 →</button></div></div><div id="planner">
@@ -1077,26 +1080,79 @@ $('#present-mode').onclick=()=>{if(!graph){toast('지도 준비가 끝나면 발
 
 // Mobile app shell shares the existing route engine, forms and storage.
 let mobileMode='input',sheetSize='default',sheetDrag=null,sheetGestureUntil=0;
+let sheetFrame=0,sheetGeometry=null,sheetRenderedHeight=null,sheetContentTouch=null;
 function isMobileUI(){return matchMedia('(max-width:700px)').matches}
-function syncMobileViewport(){
- if(!isMobileUI()){document.documentElement.style.removeProperty('--app-height');document.body.classList.remove('keyboard-open');return}
- const viewport=window.visualViewport,height=viewport?.height||innerHeight;
+function measureSheetGeometry(){
+ const height=window.visualViewport?.height||innerHeight;
  document.documentElement.style.setProperty('--app-height',Math.round(height)+'px');
- document.documentElement.style.setProperty('--app-top',Math.round(viewport?.offsetTop||0)+'px');
+ document.documentElement.style.setProperty('--app-top',Math.round(window.visualViewport?.offsetTop||0)+'px');
  const editing=/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName||'');
  document.body.classList.toggle('keyboard-open',editing&&innerHeight-height>100);
  const header=$('.header').getBoundingClientRect().height,nav=$('.mobile-tabs').getBoundingClientRect().height,available=height-header-nav;
- const desired=sheetSize==='collapsed'?64:sheetSize==='expanded'?available-54:Math.min(mobileMode==='order'?255:mobileMode==='results'?400:480,available*(mobileMode==='order'?.36:mobileMode==='results'?.52:.59));
- const sheet=Math.max(64,Math.min(available-44,Math.round(desired)));
- document.documentElement.style.setProperty('--sheet-height',sheet+'px');
- document.documentElement.style.setProperty('--mobile-nav-height',nav+'px');
- document.documentElement.style.setProperty('--map-bottom-space',(sheet+nav)+'px');
+ const max=Math.max(64,Math.floor(available-44)),clamp=n=>Math.max(64,Math.min(max,Math.round(n)));
+ return {height,nav,mode:mobileMode,points:{collapsed:64,default:clamp(Math.min(mobileMode==='order'?255:mobileMode==='results'?400:480,available*(mobileMode==='order'?.36:mobileMode==='results'?.52:.59))),expanded:clamp(available-54)}};
 }
-function setSheetSize(size){
- sheetSize=size;document.body.dataset.sheetSize=size;
+function stopSheetFrame(){cancelAnimationFrame(sheetFrame);sheetFrame=0}
+function paintSheetHeight(height){
+ sheetRenderedHeight=height;
+ document.documentElement.style.setProperty('--sheet-height',height.toFixed(2)+'px');
+ document.documentElement.style.setProperty('--mobile-nav-height',sheetGeometry.nav+'px');
+ document.documentElement.style.setProperty('--map-bottom-space',(height+sheetGeometry.nav).toFixed(2)+'px');
+}
+function settleSheetVisibility(){document.body.classList.toggle('sheet-is-collapsed',sheetSize==='collapsed');document.body.classList.remove('sheet-dragging')}
+function abortSheetDrag(){const drag=sheetDrag;sheetDrag=null;if(drag?.capture?.hasPointerCapture(drag.id))drag.capture.releasePointerCapture(drag.id);sheetContentTouch=null;document.body.classList.remove('sheet-dragging')}
+function syncMobileViewport(){
+ if(!isMobileUI()){stopSheetFrame();abortSheetDrag();sheetGeometry=null;sheetRenderedHeight=null;document.documentElement.style.removeProperty('--app-height');document.body.classList.remove('keyboard-open','sheet-is-collapsed');return}
+ const geometry=measureSheetGeometry(),changed=!sheetGeometry||geometry.height!==sheetGeometry.height||geometry.nav!==sheetGeometry.nav||geometry.mode!==sheetGeometry.mode;
+ sheetGeometry=geometry;
+ if(changed){stopSheetFrame();abortSheetDrag();paintSheetHeight(geometry.points[sheetSize]);settleSheetVisibility()}
+ else if(!sheetDrag&&!sheetFrame){paintSheetHeight(geometry.points[sheetSize]);settleSheetVisibility()}
+}
+function animateSheetHeight(target,animate=true){
+ stopSheetFrame();
+ const start=sheetRenderedHeight??target;
+ if(!animate||matchMedia('(prefers-reduced-motion:reduce)').matches||Math.abs(target-start)<.5){paintSheetHeight(target);settleSheetVisibility();return}
+ // Keep contents visible throughout the collapse; only hide them once it lands.
+ document.body.classList.remove('sheet-is-collapsed');
+ const began=performance.now(),duration=Math.min(360,Math.max(200,Math.abs(target-start)*.65));
+ function tick(now){const t=Math.min(1,(now-began)/duration),ease=1-Math.pow(1-t,3);paintSheetHeight(start+(target-start)*ease);if(t<1)sheetFrame=requestAnimationFrame(tick);else{sheetFrame=0;paintSheetHeight(target);settleSheetVisibility()}}
+ sheetFrame=requestAnimationFrame(tick);
+}
+function setSheetSize(size,{animate=true}={}){
+ abortSheetDrag();sheetSize=size;document.body.dataset.sheetSize=size;
  $('#sheet-toggle').setAttribute('aria-expanded',size!=='collapsed');
  $('#sheet-toggle-label').textContent=size==='collapsed'?'입력·결과 펼치기 ⌃':'지도 넓게 보기 ⌄';
- syncMobileViewport();
+ if(!isMobileUI())return;
+ sheetGeometry=measureSheetGeometry();animateSheetHeight(sheetGeometry.points[size],animate);
+}
+function beginSheetDrag(id,y,time,capture=null){
+ if(!isMobileUI())return;
+ stopSheetFrame();sheetGeometry=measureSheetGeometry();
+ const height=$('.sidebar').getBoundingClientRect().height;
+ sheetDrag={id,startY:y,y,height,startSize:sheetSize,moved:false,samples:[{y,time}],capture};
+ paintSheetHeight(height);
+}
+function moveSheetDrag(y,time){
+ const drag=sheetDrag;if(!drag)return;
+ drag.y=y;drag.moved ||= Math.abs(y-drag.startY)>5;
+ drag.samples.push({y,time});drag.samples=drag.samples.filter(p=>time-p.time<100);
+ if(!drag.moved)return;
+ document.body.classList.add('sheet-dragging');document.body.classList.remove('sheet-is-collapsed');
+ // One render per frame. No layout reads in the pointermove hot path.
+ stopSheetFrame();sheetFrame=requestAnimationFrame(()=>{sheetFrame=0;if(sheetDrag)paintSheetHeight(Math.max(64,Math.min(sheetGeometry.points.expanded,drag.height+drag.startY-drag.y))) });
+}
+function finishSheetDrag(time,cancelled=false){
+ const drag=sheetDrag;if(!drag)return;
+ stopSheetFrame();const moved=drag.moved;
+ if(moved)paintSheetHeight(Math.max(64,Math.min(sheetGeometry.points.expanded,drag.height+drag.startY-drag.y)));
+ const current=sheetRenderedHeight,first=drag.samples[0],recent=time-drag.samples.at(-1).time<90;
+ const elapsed=time-first.time,velocity=recent&&elapsed>0?(drag.y-first.y)/elapsed:0;
+ const points=Object.entries(sheetGeometry.points),projected=current-Math.max(-2,Math.min(2,velocity))*150;
+ let target=drag.startSize;
+ if(moved&&!cancelled){target=points.reduce((best,p)=>Math.abs(p[1]-projected)<Math.abs(best[1]-projected)?p:best,points[0])[0]}
+ abortSheetDrag();
+ if(moved)sheetGestureUntil=Date.now()+300;
+ if(moved||cancelled)setSheetSize(target);else settleSheetVisibility();
 }
 function setMobileMode(mode){
  mobileMode=mode;document.body.dataset.mobileMode=mode;
@@ -1129,10 +1185,34 @@ function configureMobileLayout(){
 }
 $('#sheet-toggle').onclick=()=>{if(Date.now()>=sheetGestureUntil)setSheetSize(sheetSize==='collapsed'?'default':'collapsed')};
 const handle=$('#sheet-toggle');
-handle.addEventListener('pointerdown',ev=>{if(ev.pointerType!=='touch'&&ev.button!==0)return;sheetDrag={id:ev.pointerId,y:ev.clientY,delta:0};handle.setPointerCapture(ev.pointerId)});
-handle.addEventListener('pointermove',ev=>{if(sheetDrag?.id===ev.pointerId)sheetDrag.delta=ev.clientY-sheetDrag.y});
-handle.addEventListener('pointerup',ev=>{if(sheetDrag?.id!==ev.pointerId)return;const d=sheetDrag.delta;sheetDrag=null;if(Math.abs(d)>32){setSheetSize(d>0?'collapsed':'expanded');sheetGestureUntil=Date.now()+250}});
-handle.addEventListener('pointercancel',()=>sheetDrag=null);
+handle.addEventListener('pointerdown',ev=>{if(!isMobileUI()||!ev.isPrimary||(ev.pointerType!=='touch'&&ev.button!==0))return;beginSheetDrag(ev.pointerId,ev.clientY,ev.timeStamp,handle);handle.setPointerCapture(ev.pointerId)});
+handle.addEventListener('pointermove',ev=>{if(sheetDrag?.id===ev.pointerId)moveSheetDrag(ev.clientY,ev.timeStamp)});
+handle.addEventListener('pointerup',ev=>{if(sheetDrag?.id===ev.pointerId){moveSheetDrag(ev.clientY,ev.timeStamp);finishSheetDrag(ev.timeStamp)}});
+for(const event of ['pointercancel','lostpointercapture'])handle.addEventListener(event,ev=>{if(sheetDrag?.id===ev.pointerId)finishSheetDrag(ev.timeStamp,true)});
+// The scroll body only yields to the sheet at its top boundary. Controls retain
+// their native taps, text selection, keyboard input and inner scrolling.
+const sheetScroll=$('.sheet-scroll');
+sheetScroll.addEventListener('touchstart',ev=>{
+ if(!isMobileUI()||ev.touches.length!==1||ev.target.closest('button,a,input,textarea,select,summary,[contenteditable]')){sheetContentTouch=null;return}
+ const t=ev.touches[0];sheetContentTouch={id:t.identifier,x:t.clientX,y:t.clientY,time:ev.timeStamp,atTop:sheetScroll.scrollTop<=0,locked:false};
+},{passive:true});
+sheetScroll.addEventListener('touchmove',ev=>{
+ const touch=sheetContentTouch;if(!touch)return;
+ if(ev.touches.length!==1){if(touch.locked)finishSheetDrag(ev.timeStamp,true);sheetContentTouch=null;return}
+ const t=ev.touches[0];if(t.identifier!==touch.id)return;
+ const dy=t.clientY-touch.y,dx=t.clientX-touch.x;
+ if(!touch.locked){
+  if(!touch.atTop||Math.abs(dx)>Math.abs(dy)||Math.abs(dy)<8)return;
+  if(dy<0&&sheetSize==='expanded')return;
+  if(sheetScroll.scrollTop>0||!ev.cancelable)return;
+  touch.locked=true;beginSheetDrag('content',touch.y,touch.time);
+ }
+ if(ev.cancelable)ev.preventDefault();sheetScroll.scrollTop=0;moveSheetDrag(t.clientY,ev.timeStamp);
+},{passive:false});
+sheetScroll.addEventListener('touchend',ev=>{if(sheetContentTouch?.locked){if(ev.cancelable)ev.preventDefault();finishSheetDrag(ev.timeStamp)}sheetContentTouch=null},{passive:false});
+sheetScroll.addEventListener('touchcancel',ev=>{if(sheetContentTouch?.locked)finishSheetDrag(ev.timeStamp,true);sheetContentTouch=null},{passive:true});
+handle.addEventListener('keydown',ev=>{if(!isMobileUI()||!['ArrowUp','ArrowDown','Home','End'].includes(ev.key))return;ev.preventDefault();const sizes=['collapsed','default','expanded'],index=sizes.indexOf(sheetSize);setSheetSize(ev.key==='Home'?'collapsed':ev.key==='End'?'expanded':sizes[Math.max(0,Math.min(2,index+(ev.key==='ArrowUp'?1:-1)))])});
+matchMedia('(prefers-reduced-motion:reduce)').addEventListener('change',ev=>{if(ev.matches&&isMobileUI()){stopSheetFrame();abortSheetDrag();setSheetSize(sheetSize,{animate:false})}});
 $('#mobile-back').onclick=()=>{if(mobileMode==='order'){setMobileMode('results');if(routes[selected])fitMobileAware(L.latLngBounds(routes[selected].coords))}else setMobileMode('input')};
 $('#mobile-edit').onclick=()=>setMobileMode('input');
 $('#mobile-save').onclick=()=>$('#save-route').click();

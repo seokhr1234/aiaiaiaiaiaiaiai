@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "1c3358d91e22380f51ac647262bf90dbd45cf0e6a1f0e5ae3f25a75ddac2130b",
+  "html_sha256": "d2cb5a977847a1cf7a658afa1869c5606ada8be6e746df8a9cb9476ad20dafd4",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -18,7 +18,8 @@
     "osm_tiles_ui": true,
     "html_contains_credentials": false,
     "compact_map_actions_ui": true,
-    "mobile_app_shell_ui": true
+    "mobile_app_shell_ui": true,
+    "mobile_sheet_motion": true
   },
   "updated": "2026-11-01",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",

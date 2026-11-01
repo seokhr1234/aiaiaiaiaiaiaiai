@@ -21,12 +21,13 @@ async function main(){
   await p.waitForFunction(()=>!document.querySelector('#find-route').disabled,null,{timeout:60000});
   async function screenshot(name){await p.screenshot({path:path.join(out,name+'.png')})}
   async function noOverflow(){assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert(await p.locator('.mobile-tabs').isVisible())}
+  async function sheetSettled(){await p.waitForFunction(()=>!sheetFrame&&!sheetDrag)}
   async function route(){await p.locator('#find-route').click();await p.waitForFunction(()=>document.body.dataset.mobileMode==='results'&&routes.length&&!document.querySelector('#find-route').disabled)}
   assert.equal(await p.locator('body').getAttribute('data-mobile-mode'),'input');
   await noOverflow();assert(await p.locator('#find-route').evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}));
   const station=await p.evaluate(()=>{const p=map.latLngToContainerPoint(origin);const sheet=document.querySelector('.sidebar').getBoundingClientRect(),r=map.getContainer().getBoundingClientRect();return p.y+r.top<sheet.top});assert(station,'initial origin must be above sheet');
   await screenshot('implemented-input');checks.push('input with visible CTA and origin above sheet');
-  await p.locator('#sheet-toggle').click();assert.equal(await p.locator('body').getAttribute('data-sheet-size'),'collapsed');
+  await p.locator('#sheet-toggle').click();await sheetSettled();assert.equal(await p.locator('body').getAttribute('data-sheet-size'),'collapsed');
   const mb=await p.locator('#live-map').boundingBox();const before=await p.evaluate(()=>map.getCenter().lng);
   const cdp=await context.newCDPSession(p);
   await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:mb.x+mb.width*.48,y:mb.y+mb.height*.42}]});
@@ -34,12 +35,12 @@ async function main(){
   await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForTimeout(400);
   assert.notEqual(await p.evaluate(()=>map.getCenter().lng),before,'touch dragging must move the map');
   assert.equal(await p.locator('body').getAttribute('data-sheet-size'),'collapsed');
-  await p.locator('#sheet-toggle').click();
+  await p.locator('#sheet-toggle').click();await sheetSettled();
   const handle=await p.locator('#sheet-toggle').boundingBox();
   await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:handle.x+100,y:handle.y+25}]});
-  await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:handle.x+100,y:handle.y-50}]});
+  for(let d=40;d<=240;d+=40)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:handle.x+100,y:handle.y+25-d}]});
   await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
-  assert.equal(await p.locator('body').getAttribute('data-sheet-size'),'expanded');checks.push('touch map pan and separate sheet-handle swipe');
+  await sheetSettled();assert.equal(await p.locator('body').getAttribute('data-sheet-size'),'expanded');checks.push('touch map pan and separate sheet-handle swipe');
   await p.locator('#destination-query').fill('꿈그림');await p.locator('#places button').first().click();
   await p.locator('#condition').fill('무릎이 아파서 중간에 벤치에 앉아 쉬고 싶어요.');
   assert.equal(await p.locator('body').getAttribute('data-sheet-size'),'expanded');

@@ -88,7 +88,7 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
  .sheet-header{flex:0 0 64px;min-height:64px;background:#fffefc}.sheet-header button{display:grid;grid-template-columns:1fr auto;align-items:center;gap:5px 10px;width:100%;min-height:64px;background:transparent;border:0;padding:8px 18px 10px;text-align:left;touch-action:none}
  .sheet-grip{grid-column:1/-1;justify-self:center;width:38px;height:4px;border-radius:5px;background:#bbc4bd}.sheet-header #sheet-title{font-size:19px;font-weight:700;letter-spacing:-.5px}.sheet-header #sheet-toggle-label{font-size:11px;color:#60756a;font-weight:500}
  .sheet-scroll{overflow:auto;overscroll-behavior:contain;scroll-behavior:auto;padding:0 18px 20px;flex:1;scroll-padding:12px}
- [data-sheet-size=collapsed] .sheet-scroll{display:none}
+ .sheet-is-collapsed .sheet-scroll{display:none}
  .sidebar .intro,.sidebar .data-proof,.sidebar .sidebar-footer,.sidebar .data-note{display:none!important}
  #search{display:block}.origin-settings{padding:0 12px;background:#f5f8f2;border-radius:12px;border:1px solid #e0e7dc}.origin-settings summary{min-height:48px;gap:10px}.origin-settings summary b{font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.origin-settings .section-label{font-size:12px;color:#176d52;white-space:nowrap}.origin-change{font-size:12px;white-space:nowrap}
  .location-actions{margin:0 0 8px;flex-wrap:wrap}.location-actions button{font-size:12px;min-height:44px;flex:1}.location-box p{font-size:12px;line-height:1.6;margin-bottom:12px}.trip-separator,.quick-destinations{display:none}
@@ -137,3 +137,6 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
 }
 
 @media(max-width:700px){#mobile-route-action .route-go{display:block;background:#176d52;color:white;border:0;text-align:center;font-weight:600;padding:12px;border-radius:12px}.route-card .route-limits{display:none}.sheet-header #sheet-title{overflow:hidden;text-overflow:ellipsis}}
+
+/* Sheet motion is driven in rAF so map attribution follows the same geometry. */
+@media(max-width:700px){.sheet-header button{cursor:grab}.sheet-dragging .sheet-header button{cursor:grabbing}.sheet-dragging .sidebar{user-select:none;-webkit-user-select:none}.sheet-dragging .sheet-scroll{pointer-events:none}.sidebar{isolation:isolate}.sheet-grip{transition:background-color 150ms ease,width 150ms ease}.sheet-dragging .sheet-grip{background:#176d52;width:48px}}
