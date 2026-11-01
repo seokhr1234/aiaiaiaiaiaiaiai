@@ -8,10 +8,10 @@
   "consoleErrors": [],
   "externalRequests": 0,
   "checks": [
-    "compact collapsed map callout on desktop and mobile",
+    "compact desktop callout and mobile bottom sheet",
     "mouse and keyboard disclosure",
     "rest evidence opens facility popup",
-    "report dialog reachable on desktop and mobile",
+    "report dialog reachable on desktop and mobile tabs",
     "offline local HTML",
     "three real routes",
     "step navigation",

@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "realGeminiCall": false,
+  "checks": [
+    "input with visible CTA and origin above sheet",
+    "touch map pan and separate sheet-handle swipe",
+    "search, one automatic AI call, results and on-demand evidence",
+    "manual order, save and reopen from mobile tab",
+    "report storage, facility controls, visibility independent of route",
+    "empty search and map-based origin selection",
+    "provider failure keeps routing with honest local status",
+    "320px, large phone and landscape layouts",
+    "keyboard viewport branch (simulated geometry, not a real OS keyboard)",
+    "desktop resize restores planner",
+    "bundled HTML offline mobile flow"
+  ],
+  "browserErrors": []
+}

@@ -86,10 +86,10 @@ async function main() {
     await page.waitForFunction(() => document.querySelector('.map-source-control span').dataset.mode === 'online');
     checks.push('offline/online recovery');
     await page.setViewportSize({width:390,height:844});
-    await page.locator('#present-mode').click(); await settled(page);
+    await page.locator('#sheet-toggle').click(); await settled(page);
     assert(await page.evaluate(() => {const r=map.getContainer().getBoundingClientRect(),s=map.getSize();return Math.abs(r.width-s.x)<1&&Math.abs(r.height-s.y)<1}));
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-    checks.push('390px mobile and presentation resize');
+    checks.push('390px mobile sheet and map resize');
     await page.goto(base+'/app/'); await ready(page);
     assert.equal(await page.locator('.seoul-base-canvas, .leaflet-embeddedBase-pane').count(),0);
     await page.waitForFunction(() => document.querySelector('.map-source-control span').dataset.mode === 'online');

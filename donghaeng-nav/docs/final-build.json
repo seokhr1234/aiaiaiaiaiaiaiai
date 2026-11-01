@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-31-leaflet-osm-tiles",
+  "version": "2026-11-01-mobile-app-shell",
   "facility_records": 17485,
   "counts": {
     "bench": 2288,
@@ -38,8 +38,8 @@
     "review_policy": "2026-10-31-v1",
     "new_sources_promoted": 0
   },
-  "html_sha256": "3513665d64e4e328421dfe4beb61abd5bd498dc0e1f5f6078dbda8d0b179766f",
-  "html_bytes": 12642583,
+  "html_sha256": "1c3358d91e22380f51ac647262bf90dbd45cf0e6a1f0e5ae3f25a75ddac2130b",
+  "html_bytes": 12667213,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure",
