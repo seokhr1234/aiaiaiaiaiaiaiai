@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "ea3ab248b8db0b6c80db31416bc46a9663ae46861df28ff9c30dd4f3b167b180",
+  "html_sha256": "4a2686b89e5f3dcfa5ad5efe423499954ceffe74b1ff0552360374db07cb74f9",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -22,9 +22,24 @@
     "mobile_sheet_motion": true,
     "navigation_technical_trial": true,
     "real_phone_navigation": false,
-    "navigation_auto_reroute_default": false
+    "navigation_auto_reroute_default": false,
+    "navigation_progress_accuracy_m": 35,
+    "navigation_offroute_accuracy_m": 25,
+    "navigation_reroute_accuracy_m": 25,
+    "navigation_arrival_accuracy_m": 15
   },
   "updated": "2026-11-01",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",
-  "folder_bytes_at_update": 518293146
+  "folder_bytes_at_update": 518293146,
+  "user_reported_phone_observation": {
+    "device": "Galaxy S21",
+    "browser": "Chrome",
+    "reported_accuracy_m": [
+      24,
+      25
+    ],
+    "source": "user report",
+    "adjusted_policy_retested_on_device": false,
+    "complete_field_navigation_verified": false
+  }
 }

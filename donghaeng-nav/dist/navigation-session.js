@@ -18,7 +18,7 @@ function create(plan,{geolocation=globalThis.navigator?.geolocation,now=()=>Date
   emit();return true;
  }
  async function requestReroute(){
-  const s=core.snapshot();if(!active||inFlight||!reroute||!s.fix||s.fix.accuracy>Policy.goodAccuracy||now()-s.fix.timestamp>Policy.maxSampleAge||now()-lastReroute<Policy.rerouteCooldown)return false;
+  const s=core.snapshot();if(!active||inFlight||!reroute||!s.fix||s.fix.accuracy>Policy.rerouteAccuracy||now()-s.fix.timestamp>Policy.maxSampleAge||now()-lastReroute<Policy.rerouteCooldown)return false;
   inFlight=true;phase='rerouting';const generation=epoch,version=core.plan.version,profile=core.plan.profile;emit();
   try{const result=await reroute(s.fix,profile,{restOutcome,unavailableRestIds:[...unavailableRestIds],plan:core.plan});if(!active||generation!==epoch||version!==core.plan.version)return false;
    if(!result||result.assistancePreview)throw Error('unsafe replacement');core=Core.create(result);lastReroute=now();phase='waiting';emit();return true;

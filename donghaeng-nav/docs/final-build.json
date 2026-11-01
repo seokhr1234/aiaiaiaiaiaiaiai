@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-01-navigation-trial",
+  "version": "2026-11-01-navigation-accuracy-35m",
   "facility_records": 17485,
   "counts": {
     "bench": 2288,
@@ -38,8 +38,8 @@
     "review_policy": "2026-10-31-v1",
     "new_sources_promoted": 0
   },
-  "html_sha256": "ea3ab248b8db0b6c80db31416bc46a9663ae46861df28ff9c30dd4f3b167b180",
-  "html_bytes": 12703734,
+  "html_sha256": "4a2686b89e5f3dcfa5ad5efe423499954ceffe74b1ff0552360374db07cb74f9",
+  "html_bytes": 12703817,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure",

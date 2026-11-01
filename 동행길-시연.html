@@ -992,7 +992,7 @@ function validate(value){if(!value||typeof value!=='object'||Array.isArray(value
 function merge(local,remote){const safe=validate(remote);return {...local,...safe,restKind:remote.restKind===undefined?(local.restKind||'any'):safe.restKind,maxSlope:remote.maxSlope===undefined?(local.maxSlope??null):safe.maxSlope,speed:safe.wheelchair?55:local.speed,source:'Gemini'}}
 return {FLAGS,validate,merge};
 });
-</script><script>(function(root){'use strict';const policy=Object.freeze({version:'2026-11-01-navigation-trial',goodAccuracy:25,maxAccuracy:50,staleMs:8000,lostMs:30000,maxSampleAge:8000,maxSpeed:5,offrouteMeters:25,offrouteMs:5000,offrouteSamples:3,rerouteCooldown:15000,arrivalRadius:15,arrivalAccuracy:15,arrivalRemaining:20,arrivalDwellMs:5000,restRadius:20,snapLimit:20,autoReroute:false});if(typeof module!=='undefined')module.exports=policy;else root.NavigationPolicy=policy})(typeof globalThis==='undefined'?this:globalThis);
+</script><script>(function(root){'use strict';const policy=Object.freeze({version:'2026-11-01-navigation-accuracy-35m',goodAccuracy:35,maxAccuracy:50,offrouteAccuracy:25,rerouteAccuracy:25,staleMs:8000,lostMs:30000,maxSampleAge:8000,maxSpeed:5,offrouteMeters:25,offrouteMs:5000,offrouteSamples:3,rerouteCooldown:15000,arrivalRadius:15,arrivalAccuracy:15,arrivalRemaining:20,arrivalDwellMs:5000,restRadius:20,snapLimit:20,autoReroute:false});if(typeof module!=='undefined')module.exports=policy;else root.NavigationPolicy=policy})(typeof globalThis==='undefined'?this:globalThis);
 </script><script>(function(root){'use strict';
 const R=6371000,rad=Math.PI/180;
 function distance(a,b){return Math.hypot((b[1]-a[1])*Math.cos((a[0]+b[0])*rad/2),b[0]-a[0])*rad*R}
@@ -1040,12 +1040,12 @@ function create(plan,options={}){
   }).sort((a,b)=>a.score-b.score),best=candidates[0];
   const limit=Math.max(policy.offrouteMeters,1.5*fix.accuracy);
   const atRestConnection=plan.rest&&!restDone&&Math.abs(best.progress-plan.rest.at)<50&&Plan.distance(fix.ll,plan.rest.ll)<=policy.restRadius&&best.distance<=Math.max(limit,(plan.rest.gap||0)+fix.accuracy);
-  if(best.distance>limit&&!atRestConnection){arrivalSince=null;if(fix.accuracy<=policy.goodAccuracy){offSince??=now;offCount++}else{offSince=null;offCount=0}return publish(offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'offroute':'offroute-suspect',offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'경로 이탈이 확인됐어요. 현재 위치에서 같은 조건으로 다시 찾을 수 있습니다.':'경로에서 벗어났는지 위치를 확인하고 있어요.',{crossTrack:best.distance,arrival:false})}
+  if(best.distance>limit&&!atRestConnection){arrivalSince=null;if(fix.accuracy<=policy.offrouteAccuracy){offSince??=now;offCount++}else{offSince=null;offCount=0}return publish(offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'offroute':'offroute-suspect',offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'경로 이탈이 확인됐어요. 현재 위치에서 같은 조건으로 다시 찾을 수 있습니다.':'경로에서 벗어났는지 위치를 확인하고 있어요.',{crossTrack:best.distance,arrival:false})}
   offSince=null;offCount=0;
   const alternative=candidates.find(c=>c.segment.index!==best.segment.index&&(Math.abs(c.progress-best.progress)>Math.max(30,fix.accuracy*2)||c.segment.layer!==best.segment.layer));
   const ambiguous=alternative&&alternative.distance<=fix.accuracy&&Math.abs(alternative.score-best.score)<Math.max(4,fix.accuracy*.35);
   if(ambiguous){arrivalSince=null;return publish('ambiguous','겹치는 길·층위의 위치를 확정하기 어려워요. 연결을 확인해 주세요.',{arrival:false})}
-  if(fix.accuracy>policy.goodAccuracy)return publish('unstable','GPS 정확도가 낮아 구간 전환을 보류합니다.',{crossTrack:best.distance,arrival:false});
+  if(fix.accuracy>policy.goodAccuracy)return publish('unstable',`위치 오차가 ${policy.goodAccuracy}m를 초과해 자동 진행을 보류합니다.`,{crossTrack:best.distance,arrival:false});
   if(lastMatch&&best.progress<lastMatch.progress-8){if(pendingBackward&&Math.abs(pendingBackward.progress-best.progress)<20)pendingBackward.count++;else pendingBackward={progress:best.progress,count:1};if(pendingBackward.count<3)return publish('uncertain','되돌아가는 이동인지 확인하고 있어요.',{arrival:false})}else pendingBackward=null;
   const stationary=previousFix&&Plan.distance(previousFix.ll,fix.ll)<Math.max(2,Math.min(8,fix.accuracy*.5));
   let progress=best.progress;if(lastMatch&&stationary&&Math.abs(progress-lastMatch.progress)<10)progress=lastMatch.progress;
@@ -1084,7 +1084,7 @@ function create(plan,{geolocation=globalThis.navigator?.geolocation,now=()=>Date
   emit();return true;
  }
  async function requestReroute(){
-  const s=core.snapshot();if(!active||inFlight||!reroute||!s.fix||s.fix.accuracy>Policy.goodAccuracy||now()-s.fix.timestamp>Policy.maxSampleAge||now()-lastReroute<Policy.rerouteCooldown)return false;
+  const s=core.snapshot();if(!active||inFlight||!reroute||!s.fix||s.fix.accuracy>Policy.rerouteAccuracy||now()-s.fix.timestamp>Policy.maxSampleAge||now()-lastReroute<Policy.rerouteCooldown)return false;
   inFlight=true;phase='rerouting';const generation=epoch,version=core.plan.version,profile=core.plan.profile;emit();
   try{const result=await reroute(s.fix,profile,{restOutcome,unavailableRestIds:[...unavailableRestIds],plan:core.plan});if(!active||generation!==epoch||version!==core.plan.version)return false;
    if(!result||result.assistancePreview)throw Error('unsafe replacement');core=Core.create(result);lastReroute=now();phase='waiting';emit();return true;

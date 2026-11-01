@@ -21,12 +21,12 @@ function create(plan,options={}){
   }).sort((a,b)=>a.score-b.score),best=candidates[0];
   const limit=Math.max(policy.offrouteMeters,1.5*fix.accuracy);
   const atRestConnection=plan.rest&&!restDone&&Math.abs(best.progress-plan.rest.at)<50&&Plan.distance(fix.ll,plan.rest.ll)<=policy.restRadius&&best.distance<=Math.max(limit,(plan.rest.gap||0)+fix.accuracy);
-  if(best.distance>limit&&!atRestConnection){arrivalSince=null;if(fix.accuracy<=policy.goodAccuracy){offSince??=now;offCount++}else{offSince=null;offCount=0}return publish(offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'offroute':'offroute-suspect',offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'경로 이탈이 확인됐어요. 현재 위치에서 같은 조건으로 다시 찾을 수 있습니다.':'경로에서 벗어났는지 위치를 확인하고 있어요.',{crossTrack:best.distance,arrival:false})}
+  if(best.distance>limit&&!atRestConnection){arrivalSince=null;if(fix.accuracy<=policy.offrouteAccuracy){offSince??=now;offCount++}else{offSince=null;offCount=0}return publish(offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'offroute':'offroute-suspect',offSince!==null&&now-offSince>=policy.offrouteMs&&offCount>=policy.offrouteSamples?'경로 이탈이 확인됐어요. 현재 위치에서 같은 조건으로 다시 찾을 수 있습니다.':'경로에서 벗어났는지 위치를 확인하고 있어요.',{crossTrack:best.distance,arrival:false})}
   offSince=null;offCount=0;
   const alternative=candidates.find(c=>c.segment.index!==best.segment.index&&(Math.abs(c.progress-best.progress)>Math.max(30,fix.accuracy*2)||c.segment.layer!==best.segment.layer));
   const ambiguous=alternative&&alternative.distance<=fix.accuracy&&Math.abs(alternative.score-best.score)<Math.max(4,fix.accuracy*.35);
   if(ambiguous){arrivalSince=null;return publish('ambiguous','겹치는 길·층위의 위치를 확정하기 어려워요. 연결을 확인해 주세요.',{arrival:false})}
-  if(fix.accuracy>policy.goodAccuracy)return publish('unstable','GPS 정확도가 낮아 구간 전환을 보류합니다.',{crossTrack:best.distance,arrival:false});
+  if(fix.accuracy>policy.goodAccuracy)return publish('unstable',`위치 오차가 ${policy.goodAccuracy}m를 초과해 자동 진행을 보류합니다.`,{crossTrack:best.distance,arrival:false});
   if(lastMatch&&best.progress<lastMatch.progress-8){if(pendingBackward&&Math.abs(pendingBackward.progress-best.progress)<20)pendingBackward.count++;else pendingBackward={progress:best.progress,count:1};if(pendingBackward.count<3)return publish('uncertain','되돌아가는 이동인지 확인하고 있어요.',{arrival:false})}else pendingBackward=null;
   const stationary=previousFix&&Plan.distance(previousFix.ll,fix.ll)<Math.max(2,Math.min(8,fix.accuracy*.5));
   let progress=best.progress;if(lastMatch&&stationary&&Math.abs(progress-lastMatch.progress)<10)progress=lastMatch.progress;
