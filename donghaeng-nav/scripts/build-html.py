@@ -22,6 +22,8 @@ html=html.replace('<script src="engine.js"></script>',inline_json('bundled-terra
 html=html.replace('<script src="facilities.js"></script>',inline_json('bundled-facilities-seoul',base/'data/accessibility/seoul/seoul-facilities.geojson')+'<script>'+(base/'facilities.js').read_text().replace('</script','<\\/script')+'</script>')
 
 html=html.replace('<script src="condition-ai.js"></script>','<script>'+(base/'condition-ai.js').read_text().replace('</script','<\\/script')+'</script>')
+for name in ['navigation-policy','navigation-plan','navigation-core','navigation-session','navigation-routing','navigation-ui']:
+ html=html.replace('<script src="'+name+'.js"></script>','<script>'+(base/(name+'.js')).read_text().replace('</script','<\\/script')+'</script>')
 app=(base/'app.js').read_text()
 old="const response=await fetch('map-data.json');if(!response.ok)throw Error('도로 데이터 로딩 실패');const roadText=await response.text();graph=E.createGraph(JSON.parse(roadText));graph.meta.graphSha256=await hashRoadText(roadText);"
 assert old in app
@@ -45,6 +47,6 @@ Path(tempfile.gettempdir(),'donghaeng-standalone-app.js').write_text(app,encodin
 source=base.parent/'data/accessibility/seoul/seoul-facilities.geojson'
 features=json.loads(source.read_text())['features']
 from collections import Counter
-manifest={'version':'2026-11-01-sheet-motion','facility_records':len(features),'counts':dict(Counter(f['properties']['kind'] for f in features)),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'terrain':json.loads((base/'terrain-data.json').read_text())['meta'],'html_sha256':hashlib.sha256(html.encode()).hexdigest(),'html_bytes':len(html.encode()),'external_requests_required':False,'online_basemap':'OpenStreetMap raster tiles via Leaflet; HTTP(S) only','offline_basemap':'Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure','optional_condition_api':'Gemini via local server; condition text only','external_deployment':False}
+manifest={'version':'2026-11-01-navigation-trial','facility_records':len(features),'counts':dict(Counter(f['properties']['kind'] for f in features)),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'terrain':json.loads((base/'terrain-data.json').read_text())['meta'],'html_sha256':hashlib.sha256(html.encode()).hexdigest(),'html_bytes':len(html.encode()),'external_requests_required':False,'online_basemap':'OpenStreetMap raster tiles via Leaflet; HTTP(S) only','offline_basemap':'Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure','optional_condition_api':'Gemini via local server; condition text only','external_deployment':False}
 (base.parent/'docs/final-build.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(manifest,ensure_ascii=False))

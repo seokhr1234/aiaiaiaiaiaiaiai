@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "checks": [
+    "long segment projection and partial remaining distance",
+    "stationary jitter does not complete route",
+    "one GPS jump and out-of-order samples do not advance progress",
+    "poor accuracy, stale fix, missing GPS and explicit signal timer",
+    "sustained offroute requires duration and several quality fixes",
+    "bad GPS breaks offroute evidence",
+    "parallel return paths do not snap confidently to the wrong branch",
+    "overlapping levels remain ambiguous without history",
+    "confirmed backtracking can reduce progress",
+    "arrival requires dwell, quality and proximity, not the opposite road",
+    "rest completion needs explicit start and resume",
+    "planned unverified rest connector does not falsely trigger offroute",
+    "stop cancels watch and discards in-flight reroute and stale callbacks",
+    "risk alternatives block live navigation but allow clearly separate replay",
+    "background resume waits for a fresh location",
+    "reroute starts inside a long edge without mutating graph or user constraints",
+    "reroute rejects a large unverified connector",
+    "reroute preserves profile and rejects dangerous replacement",
+    "explicit test-only automatic reroute is single-flight and applies a new plan",
+    "automatic rerouting remains gated until real-device review"
+  ],
+  "realGps": false,
+  "fieldVerified": false
+}

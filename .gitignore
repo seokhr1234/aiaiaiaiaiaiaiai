@@ -5,3 +5,8 @@ node_modules/
 .venv*/
 __pycache__/
 .DS_Store
+
+.local-https/
+*.key
+*.pem
+navigation-private-logs/

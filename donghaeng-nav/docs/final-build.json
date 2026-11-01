@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-01-sheet-motion",
+  "version": "2026-11-01-navigation-trial",
   "facility_records": 17485,
   "counts": {
     "bench": 2288,
@@ -38,8 +38,8 @@
     "review_policy": "2026-10-31-v1",
     "new_sources_promoted": 0
   },
-  "html_sha256": "d2cb5a977847a1cf7a658afa1869c5606ada8be6e746df8a9cb9476ad20dafd4",
-  "html_bytes": 12673774,
+  "html_sha256": "ea3ab248b8db0b6c80db31416bc46a9663ae46861df28ff9c30dd4f3b167b180",
+  "html_bytes": 12703734,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure",

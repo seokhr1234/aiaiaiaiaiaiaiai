@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "checks": [
+    "separate replay mode, step, pause, resume and cleanup",
+    "browser geolocation adapter with simulated permission and fix, visible trial label",
+    "navigation progress and live panel motion coexist",
+    "pausing in-flight reroute cannot mutate displayed route",
+    "risk alternative blocks GPS start and remains replayable",
+    "small phone and desktop navigation panel",
+    "bundled HTML contains all navigation modules and offline replay works"
+  ],
+  "browserErrors": [],
+  "realPhone": false,
+  "physicalGps": false,
+  "realGemini": false
+}
