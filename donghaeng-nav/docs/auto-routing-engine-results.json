@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "terrainDerivedEdges": 17697,
+  "eligibleRestPlaces": 230,
+  "eligibleShelters": 48,
+  "base": {
+    "meters": 351,
+    "estimatedMaxSlope": 6.08
+  },
+  "bench": {
+    "meters": 404,
+    "stop": "월곡역 · 엘리베이터와 세 갈래 횡단보도 사이 삼각형 쉼터"
+  },
+  "shelterPlanningFixture": {
+    "time": "2026-10-30T01:00:00Z",
+    "meters": 434,
+    "stop": "새마을금고월곡(본점)",
+    "estimatedMaxSlope": 4.65
+  },
+  "notice": "Fixture time tests registered hours, not actual facility operation. Terrain grade is an estimate, not a sidewalk survey."
+}

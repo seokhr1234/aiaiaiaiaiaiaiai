@@ -1,0 +1,19 @@
+{
+  "source": "Gemini",
+  "wheelchair": true,
+  "avoidSteps": true,
+  "avoidSlope": true,
+  "rest": true,
+  "destination": "서울사대부설중학교",
+  "length": 912,
+  "stepEdges": 0,
+  "reason": "AI가 오늘의 상태를 경로에 반영했어요\n\n휠체어 우회 후보 · 통행 안전 미확인. 5%는 참고 자료의 추천 회피 기준이며 안전 인증 기준이 아닙니다.\n\n등록 계단 제외 · Tilezen 참고 추정·노면 부담 반영 · 등록·참고 추정 5% 초과 추천 회피 · 벤치·의자 우선 탐색\n\n의자 휴식 · 일신 · 어린이공원 의자·벤치 보유 시설\n\nOSM 수치표기 0m · Tilezen 참고 지형 추정 575m · 경사 미확인 260m\n자료 차이 118m · 구조물·계단 등 58m는 지형 추정 제외\nTilezen 도로 창 평균 추정 최대 약 4.5% · 보도 실측 아님\n서울 표고점·등고선과 Copernicus는 비교용 · 노면 경사·휠체어 통행 가능 미확인\n자료 차이·출처 보기 ↗",
+  "status": "Gemini 해석 · 입력 상태 문장만 전송 · 이동 조건을 경로에 반영했어요.",
+  "manualControls": 0,
+  "sentKeys": [
+    [
+      "condition"
+    ]
+  ],
+  "realProviderCall": true
+}

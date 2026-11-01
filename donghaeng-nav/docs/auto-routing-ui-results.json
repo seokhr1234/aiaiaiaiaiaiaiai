@@ -1,0 +1,25 @@
+{
+  "pass": true,
+  "realGeminiCall": false,
+  "provider": "Gemini provider stub only during this automated test",
+  "checks": [
+    "one click AI interpretation and actual graph routing",
+    "terrain elevations embedded offline",
+    "5 percent slope limit displayed",
+    "bench and shelter preferences",
+    "registered hours or fallback explanation",
+    "no location sent to AI",
+    "interpretation caching",
+    "facility visibility independent of routing",
+    "stale request cancellation",
+    "API failure falls back and still routes",
+    "no manual routing conditions",
+    "wheelchair automatically avoids steps and slope burden",
+    "failed AI is retried on next submit",
+    "saved text reinterpreted",
+    "mobile no horizontal overflow",
+    "presentation mode",
+    "offline file honestly labels local fallback"
+  ],
+  "browserErrors": []
+}

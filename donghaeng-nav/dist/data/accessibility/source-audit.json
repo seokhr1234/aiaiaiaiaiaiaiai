@@ -1,0 +1,8 @@
+{
+  "official_escalators": {
+    "rows": 1882,
+    "rows_with_coordinates": 0,
+    "map_features_created": 0,
+    "reason": "No coordinate inference; official CSV is not a spatial source."
+  }
+}

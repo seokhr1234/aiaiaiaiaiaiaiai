@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "provider": "Gemini",
+  "realProviderCall": false,
+  "reason": "No API key supplied; provider mocked only during tests",
+  "checks": [
+    "no automatic state upload",
+    "server request schema",
+    "validated AI result applied",
+    "wheelchair excludes stairs",
+    "actual Wolgok route after AI",
+    "stale responses ignored",
+    "provider error falls back to local rules",
+    "mobile 390px no overflow"
+  ],
+  "browserErrors": [],
+  "externalRequests": 0
+}

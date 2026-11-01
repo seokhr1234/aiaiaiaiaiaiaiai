@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "realProvider": false,
+  "checks": [
+    "Luna boundary origin and actual school destination",
+    "one-click AI state interpretation and routing",
+    "explicit assistance alternative when strict slope exclusion is impossible",
+    "all route edges have slope evidence rows",
+    "red risk segments on actual route",
+    "zero DEM gaps on route",
+    "facilities visibility independent",
+    "390px no overflow",
+    "no script errors"
+  ],
+  "result": {
+    "meters": 3008,
+    "assistancePreview": true,
+    "screening": {
+      "estimated": 2728.536492936297,
+      "range": 178.9766880471281,
+      "structure": 0,
+      "missing": 0
+    },
+    "segments": 121
+  },
+  "errors": []
+}

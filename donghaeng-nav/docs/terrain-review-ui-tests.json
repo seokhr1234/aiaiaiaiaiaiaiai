@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "offline": true,
+  "externalRequests": 0,
+  "browserErrors": [],
+  "reviewState": "current",
+  "graphHash": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+  "sources": {
+    "osm": 0,
+    "tilezen": 301.88162919651614,
+    "seoul_spots": 0,
+    "seoul_contours": 0,
+    "copernicus": 0
+  },
+  "passability": "unverified",
+  "guaranteed": false,
+  "route": 411,
+  "checks": [
+    "actual final HTML",
+    "source-bound graph digest",
+    "OSM and terrain hints distinguished",
+    "new DSM/Seoul values not promoted",
+    "no wheelchair feasibility guarantee",
+    "source limits and attributions visible",
+    "facility toggle does not alter routing",
+    "mobile no overflow"
+  ]
+}

@@ -1,0 +1,7343 @@
+{
+  "type": "FeatureCollection",
+  "name": "school-area-accessibility",
+  "attribution": "© OpenStreetMap contributors",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0523944,
+          37.5962832
+        ]
+      },
+      "properties": {
+        "id": "osm:node/5196193488",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5962832,
+        "longitude": 127.0523944,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1188.1,
+        "source_url": "https://www.openstreetmap.org/node/5196193488",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0524586,
+          37.5962023
+        ]
+      },
+      "properties": {
+        "id": "osm:node/5196193489",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5962023,
+        "longitude": 127.0524586,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1192.8,
+        "source_url": "https://www.openstreetmap.org/node/5196193489",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0515443,
+          37.5961266
+        ]
+      },
+      "properties": {
+        "id": "osm:node/5196252705",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5961266,
+        "longitude": 127.0515443,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1111.8,
+        "source_url": "https://www.openstreetmap.org/node/5196252705",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0514941,
+          37.5954401
+        ]
+      },
+      "properties": {
+        "id": "osm:node/5196252706",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5954401,
+        "longitude": 127.0514941,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1102.1,
+        "source_url": "https://www.openstreetmap.org/node/5196252706",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0320892,
+          37.5891347
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028918",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5891347,
+        "longitude": 127.0320892,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 899.9,
+        "source_url": "https://www.openstreetmap.org/node/7847028918",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.032671,
+          37.5897855
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028919",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5897855,
+        "longitude": 127.032671,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 812.0,
+        "source_url": "https://www.openstreetmap.org/node/7847028919",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0327424,
+          37.5897271
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028920",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5897271,
+        "longitude": 127.0327424,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 812.4,
+        "source_url": "https://www.openstreetmap.org/node/7847028920",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0328774,
+          37.5894134
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028921",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5894134,
+        "longitude": 127.0328774,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 830.6,
+        "source_url": "https://www.openstreetmap.org/node/7847028921",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0326507,
+          37.5892306
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028923",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5892306,
+        "longitude": 127.0326507,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 859.1,
+        "source_url": "https://www.openstreetmap.org/node/7847028923",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0326011,
+          37.5891864
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028924",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5891864,
+        "longitude": 127.0326011,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 865.6,
+        "source_url": "https://www.openstreetmap.org/node/7847028924",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0325504,
+          37.5891309
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028925",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5891309,
+        "longitude": 127.0325504,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 873.2,
+        "source_url": "https://www.openstreetmap.org/node/7847028925",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0327832,
+          37.5893501
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028926",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5893501,
+        "longitude": 127.0327832,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 841.4,
+        "source_url": "https://www.openstreetmap.org/node/7847028926",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0343156,
+          37.5899525
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028936",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5899525,
+        "longitude": 127.0343156,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 705.2,
+        "source_url": "https://www.openstreetmap.org/node/7847028936",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0345211,
+          37.5898138
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028937",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5898138,
+        "longitude": 127.0345211,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 707.5,
+        "source_url": "https://www.openstreetmap.org/node/7847028937",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0349113,
+          37.5895421
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028938",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5895421,
+        "longitude": 127.0349113,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 714.9,
+        "source_url": "https://www.openstreetmap.org/node/7847028938",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0347771,
+          37.5896261
+        ]
+      },
+      "properties": {
+        "id": "osm:node/7847028939",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5896261,
+        "longitude": 127.0347771,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 712.9,
+        "source_url": "https://www.openstreetmap.org/node/7847028939",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0271907,
+          37.5850335
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8023649814",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5850335,
+        "longitude": 127.0271907,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1527.7,
+        "source_url": "https://www.openstreetmap.org/node/8023649814",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0272121,
+          37.5849615
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8023649815",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5849615,
+        "longitude": 127.0272121,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1532.3,
+        "source_url": "https://www.openstreetmap.org/node/8023649815",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0272744,
+          37.5848951
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8023649816",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5848951,
+        "longitude": 127.0272744,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1534.1,
+        "source_url": "https://www.openstreetmap.org/node/8023649816",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0273671,
+          37.5848528
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8023649817",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5848528,
+        "longitude": 127.0273671,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1532.1,
+        "source_url": "https://www.openstreetmap.org/node/8023649817",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0274883,
+          37.5848754
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8023649818",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5848754,
+        "longitude": 127.0274883,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1523.1,
+        "source_url": "https://www.openstreetmap.org/node/8023649818",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0275453,
+          37.5849177
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8023649819",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5849177,
+        "longitude": 127.0275453,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1516.2,
+        "source_url": "https://www.openstreetmap.org/node/8023649819",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0333007,
+          37.5897469
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8049018046",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5897469,
+        "longitude": 127.0333007,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 778.2,
+        "source_url": "https://www.openstreetmap.org/node/8049018046",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0334352,
+          37.5898451
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8049018047",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5898451,
+        "longitude": 127.0334352,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 762.2,
+        "source_url": "https://www.openstreetmap.org/node/8049018047",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0321459,
+          37.5899959
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8445067064",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5899959,
+        "longitude": 127.0321459,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 828.2,
+        "source_url": "https://www.openstreetmap.org/node/8445067064",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0321158,
+          37.5899594
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8445067065",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5899594,
+        "longitude": 127.0321158,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 832.9,
+        "source_url": "https://www.openstreetmap.org/node/8445067065",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0321972,
+          37.5899776
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8445067066",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5899776,
+        "longitude": 127.0321972,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 826.3,
+        "source_url": "https://www.openstreetmap.org/node/8445067066",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0321936,
+          37.5899398
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8445067067",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5899398,
+        "longitude": 127.0321936,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 829.4,
+        "source_url": "https://www.openstreetmap.org/node/8445067067",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0442629,
+          37.5914862
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353168",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5914862,
+        "longitude": 127.0442629,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 614.1,
+        "source_url": "https://www.openstreetmap.org/node/8496353168",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0442605,
+          37.5914352
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353169",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5914352,
+        "longitude": 127.0442605,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 617.6,
+        "source_url": "https://www.openstreetmap.org/node/8496353169",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0443106,
+          37.5913952
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353170",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5913952,
+        "longitude": 127.0443106,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 623.9,
+        "source_url": "https://www.openstreetmap.org/node/8496353170",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0443876,
+          37.5913861
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353171",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5913861,
+        "longitude": 127.0443876,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 629.6,
+        "source_url": "https://www.openstreetmap.org/node/8496353171",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0444338,
+          37.5914154
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353172",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5914154,
+        "longitude": 127.0444338,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 630.6,
+        "source_url": "https://www.openstreetmap.org/node/8496353172",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0444508,
+          37.5914508
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353173",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5914508,
+        "longitude": 127.0444508,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 629.2,
+        "source_url": "https://www.openstreetmap.org/node/8496353173",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0444454,
+          37.5914862
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353174",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5914862,
+        "longitude": 127.0444454,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 626.3,
+        "source_url": "https://www.openstreetmap.org/node/8496353174",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.044405,
+          37.5915127
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353175",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5915127,
+        "longitude": 127.044405,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 621.7,
+        "source_url": "https://www.openstreetmap.org/node/8496353175",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.044306,
+          37.5915228
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8496353176",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5915228,
+        "longitude": 127.044306,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 614.3,
+        "source_url": "https://www.openstreetmap.org/node/8496353176",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0311969,
+          37.5907209
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8570380580",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5907209,
+        "longitude": 127.0311969,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 841.8,
+        "source_url": "https://www.openstreetmap.org/node/8570380580",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0311714,
+          37.5907773
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8570380581",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5907773,
+        "longitude": 127.0311714,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 840.1,
+        "source_url": "https://www.openstreetmap.org/node/8570380581",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.027922,
+          37.5915718
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8570812216",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5915718,
+        "longitude": 127.027922,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1051.2,
+        "source_url": "https://www.openstreetmap.org/node/8570812216",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.027829,
+          37.5916455
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8570812217",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5916455,
+        "longitude": 127.027829,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1055.8,
+        "source_url": "https://www.openstreetmap.org/node/8570812217",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0277617,
+          37.5917674
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8570812218",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5917674,
+        "longitude": 127.0277617,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1056.5,
+        "source_url": "https://www.openstreetmap.org/node/8570812218",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.031332,
+          37.5892238
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8737638015",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5892238,
+        "longitude": 127.031332,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 939.3,
+        "source_url": "https://www.openstreetmap.org/node/8737638015",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0313763,
+          37.5891565
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8737638016",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5891565,
+        "longitude": 127.0313763,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 941.7,
+        "source_url": "https://www.openstreetmap.org/node/8737638016",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0315585,
+          37.5893065
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8737640517",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5893065,
+        "longitude": 127.0315585,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 918.6,
+        "source_url": "https://www.openstreetmap.org/node/8737640517",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0315054,
+          37.5893668
+        ]
+      },
+      "properties": {
+        "id": "osm:node/8737640520",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5893668,
+        "longitude": 127.0315054,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 917.3,
+        "source_url": "https://www.openstreetmap.org/node/8737640520",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0252486,
+          37.5921524
+        ]
+      },
+      "properties": {
+        "id": "osm:node/9159058791",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5921524,
+        "longitude": 127.0252486,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1254.4,
+        "source_url": "https://www.openstreetmap.org/node/9159058791",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0253294,
+          37.5921523
+        ]
+      },
+      "properties": {
+        "id": "osm:node/9159058792",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5921523,
+        "longitude": 127.0253294,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1247.6,
+        "source_url": "https://www.openstreetmap.org/node/9159058792",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.025416,
+          37.5921577
+        ]
+      },
+      "properties": {
+        "id": "osm:node/9159058793",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5921577,
+        "longitude": 127.025416,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1240.0,
+        "source_url": "https://www.openstreetmap.org/node/9159058793",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0254837,
+          37.5921304
+        ]
+      },
+      "properties": {
+        "id": "osm:node/9159058794",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5921304,
+        "longitude": 127.0254837,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1235.1,
+        "source_url": "https://www.openstreetmap.org/node/9159058794",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0253568,
+          37.5922072
+        ]
+      },
+      "properties": {
+        "id": "osm:node/9159058795",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5922072,
+        "longitude": 127.0253568,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1243.6,
+        "source_url": "https://www.openstreetmap.org/node/9159058795",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0430198,
+          37.5889089
+        ]
+      },
+      "properties": {
+        "id": "osm:node/11247749170",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5889089,
+        "longitude": 127.0430198,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 774.4,
+        "source_url": "https://www.openstreetmap.org/node/11247749170",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0434526,
+          37.5887673
+        ]
+      },
+      "properties": {
+        "id": "osm:node/11247749177",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5887673,
+        "longitude": 127.0434526,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 806.3,
+        "source_url": "https://www.openstreetmap.org/node/11247749177",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.043403,
+          37.5887349
+        ]
+      },
+      "properties": {
+        "id": "osm:node/11247749178",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5887349,
+        "longitude": 127.043403,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 807.4,
+        "source_url": "https://www.openstreetmap.org/node/11247749178",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0433467,
+          37.588707
+        ]
+      },
+      "properties": {
+        "id": "osm:node/11247749179",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.588707,
+        "longitude": 127.0433467,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 807.7,
+        "source_url": "https://www.openstreetmap.org/node/11247749179",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0432749,
+          37.5886751
+        ]
+      },
+      "properties": {
+        "id": "osm:node/11247749180",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5886751,
+        "longitude": 127.0432749,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 807.9,
+        "source_url": "https://www.openstreetmap.org/node/11247749180",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0448063,
+          37.6038838
+        ]
+      },
+      "properties": {
+        "id": "osm:node/12464205306",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.6038838,
+        "longitude": 127.0448063,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1103.0,
+        "source_url": "https://www.openstreetmap.org/node/12464205306",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0412576,
+          37.5954369
+        ]
+      },
+      "properties": {
+        "id": "osm:node/12464206320",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5954369,
+        "longitude": 127.0412576,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 203.1,
+        "source_url": "https://www.openstreetmap.org/node/12464206320",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0448318,
+          37.6038956
+        ]
+      },
+      "properties": {
+        "id": "osm:node/12464227960",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.6038956,
+        "longitude": 127.0448318,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 1105.2,
+        "source_url": "https://www.openstreetmap.org/node/12464227960",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench",
+          "backrest": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0342513,
+          37.59047
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698946988",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.59047,
+        "longitude": 127.0342513,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 662.9,
+        "source_url": "https://www.openstreetmap.org/node/13698946988",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0342741,
+          37.5904884
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698946989",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5904884,
+        "longitude": 127.0342741,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 660.0,
+        "source_url": "https://www.openstreetmap.org/node/13698946989",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0343186,
+          37.5905295
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698946990",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5905295,
+        "longitude": 127.0343186,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 654.0,
+        "source_url": "https://www.openstreetmap.org/node/13698946990",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0343467,
+          37.5905525
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698946991",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5905525,
+        "longitude": 127.0343467,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 650.5,
+        "source_url": "https://www.openstreetmap.org/node/13698946991",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0343697,
+          37.5905746
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698946992",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5905746,
+        "longitude": 127.0343697,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 647.3,
+        "source_url": "https://www.openstreetmap.org/node/13698946992",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0343053,
+          37.5905176
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698958420",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5905176,
+        "longitude": 127.0343053,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 655.8,
+        "source_url": "https://www.openstreetmap.org/node/13698958420",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0344318,
+          37.5906381
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698958431",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.5906381,
+        "longitude": 127.0344318,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 638.3,
+        "source_url": "https://www.openstreetmap.org/node/13698958431",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0344713,
+          37.59068
+        ]
+      },
+      "properties": {
+        "id": "osm:node/13698958432",
+        "kind": "bench",
+        "name": "",
+        "latitude": 37.59068,
+        "longitude": 127.0344713,
+        "coordinate_role": "facility_point",
+        "distance_from_school_m": 632.5,
+        "source_url": "https://www.openstreetmap.org/node/13698958432",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "amenity": "bench"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0544435,
+            37.5969086
+          ],
+          [
+            127.0544867,
+            37.5970848
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/328787862",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5969967,
+        "longitude": 127.0544651,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1379.5,
+        "source_url": "https://www.openstreetmap.org/way/328787862",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0547976,
+            37.5968964
+          ],
+          [
+            127.0547574,
+            37.5969479
+          ],
+          [
+            127.0547667,
+            37.5969554
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/328787866",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59693323333333,
+        "longitude": 127.0547739,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1405.3,
+        "source_url": "https://www.openstreetmap.org/way/328787866",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0553163,
+            37.5958517
+          ],
+          [
+            127.0551784,
+            37.5958172
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/328796690",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59583445,
+        "longitude": 127.05524735,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1434.5,
+        "source_url": "https://www.openstreetmap.org/way/328796690",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "covered": "yes",
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0552455,
+            37.5963247
+          ],
+          [
+            127.0551758,
+            37.5963396
+          ],
+          [
+            127.0551811,
+            37.5965016
+          ],
+          [
+            127.0551429,
+            37.5965005
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/328810577",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5964166,
+        "longitude": 127.05518632500001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1434.3,
+        "source_url": "https://www.openstreetmap.org/way/328810577",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0551429,
+            37.5965005
+          ],
+          [
+            127.0551449,
+            37.5965505
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/328810580",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5965255,
+        "longitude": 127.0551439,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1431.9,
+        "source_url": "https://www.openstreetmap.org/way/328810580",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0547879,
+            37.5968285
+          ],
+          [
+            127.0545723,
+            37.5966046
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/329968406",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59671655,
+        "longitude": 127.0546801,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1393.8,
+        "source_url": "https://www.openstreetmap.org/way/329968406",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0539368,
+            37.5968098
+          ],
+          [
+            127.0542156,
+            37.5966514
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/329968408",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5967306,
+        "longitude": 127.0540762,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1341.3,
+        "source_url": "https://www.openstreetmap.org/way/329968408",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0543141,
+            37.5961881
+          ],
+          [
+            127.0544597,
+            37.596322
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/329968417",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.596255049999996,
+        "longitude": 127.0543869,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1362.4,
+        "source_url": "https://www.openstreetmap.org/way/329968417",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0542133,
+            37.593847
+          ],
+          [
+            127.0543719,
+            37.5938588
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/329991261",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5938529,
+        "longitude": 127.0542926,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1355.2,
+        "source_url": "https://www.openstreetmap.org/way/329991261",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0539366,
+            37.5940187
+          ],
+          [
+            127.0539621,
+            37.594049
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/329991263",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59403385,
+        "longitude": 127.05394935000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1323.1,
+        "source_url": "https://www.openstreetmap.org/way/329991263",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.053818,
+            37.5939985
+          ],
+          [
+            127.0536359,
+            37.593998
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/329991271",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59399825,
+        "longitude": 127.05372695,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1304.0,
+        "source_url": "https://www.openstreetmap.org/way/329991271",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0522491,
+            37.5963488
+          ],
+          [
+            127.0522701,
+            37.5963653
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330223626",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59635705,
+        "longitude": 127.0522596,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1177.3,
+        "source_url": "https://www.openstreetmap.org/way/330223626",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0523258,
+            37.5963912
+          ],
+          [
+            127.0523912,
+            37.5964151
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330223628",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59640315,
+        "longitude": 127.0523585,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1186.5,
+        "source_url": "https://www.openstreetmap.org/way/330223628",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0553682,
+            37.5975372
+          ],
+          [
+            127.0555212,
+            37.597543
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330229758",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5975401,
+        "longitude": 127.05544470000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1474.7,
+        "source_url": "https://www.openstreetmap.org/way/330229758",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0523792,
+            37.5971918
+          ],
+          [
+            127.052502,
+            37.5972418
+          ],
+          [
+            127.0528532,
+            37.5973451
+          ],
+          [
+            127.0529444,
+            37.5972675
+          ],
+          [
+            127.053201,
+            37.5972404
+          ],
+          [
+            127.0532948,
+            37.5972104
+          ],
+          [
+            127.0533211,
+            37.5972544
+          ],
+          [
+            127.0532921,
+            37.5972712
+          ],
+          [
+            127.0533397,
+            37.5973547
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330229759",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59726414444444,
+        "longitude": 127.05301416666667,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1258.6,
+        "source_url": "https://www.openstreetmap.org/way/330229759",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0533255,
+            37.5964455
+          ],
+          [
+            127.0533431,
+            37.5964541
+          ],
+          [
+            127.0534277,
+            37.5964806
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330229762",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59646006666667,
+        "longitude": 127.05336543333334,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1275.4,
+        "source_url": "https://www.openstreetmap.org/way/330229762",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0551489,
+            37.5958763
+          ],
+          [
+            127.0553375,
+            37.5959249
+          ],
+          [
+            127.0553774,
+            37.5960295
+          ],
+          [
+            127.0554365,
+            37.596038
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330548310",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.595967175,
+        "longitude": 127.055325075,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1442.2,
+        "source_url": "https://www.openstreetmap.org/way/330548310",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0555373,
+            37.5960431
+          ],
+          [
+            127.0558683,
+            37.5959657
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/330548312",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5960044,
+        "longitude": 127.0557028,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1475.7,
+        "source_url": "https://www.openstreetmap.org/way/330548312",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0297464,
+            37.5882228
+          ],
+          [
+            127.0297377,
+            37.5882919
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/332080692",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58825735,
+        "longitude": 127.02974205,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1114.9,
+        "source_url": "https://www.openstreetmap.org/way/332080692",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "source": "survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0286725,
+            37.5895552
+          ],
+          [
+            127.0285634,
+            37.5897216
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/332080695",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5896384,
+        "longitude": 127.02861795,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1097.3,
+        "source_url": "https://www.openstreetmap.org/way/332080695",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0536965,
+            37.5972899
+          ],
+          [
+            127.0536182,
+            37.5970808
+          ],
+          [
+            127.0533917,
+            37.5971505
+          ],
+          [
+            127.0532948,
+            37.5972104
+          ],
+          [
+            127.0532715,
+            37.5971741
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/332562895",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.597181139999996,
+        "longitude": 127.05345454,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1295.1,
+        "source_url": "https://www.openstreetmap.org/way/332562895",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0214379,
+            37.599841
+          ],
+          [
+            127.0216471,
+            37.5998231
+          ],
+          [
+            127.0217681,
+            37.5998123
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/379537226",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.599825466666665,
+        "longitude": 127.0216177,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1618.4,
+        "source_url": "https://www.openstreetmap.org/way/379537226",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "yes",
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0326776,
+            37.5813637
+          ],
+          [
+            127.0326915,
+            37.5813052
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/379555973",
+        "kind": "stairs",
+        "name": "왕산로19바길",
+        "latitude": 37.58133445,
+        "longitude": 127.03268455,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1628.3,
+        "source_url": "https://www.openstreetmap.org/way/379555973",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "up",
+          "name": "왕산로19바길",
+          "name:en": "Wangsan-ro 19ba-gil",
+          "name:ko": "왕산로19바길",
+          "source": "survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0318395,
+            37.5894567
+          ],
+          [
+            127.0316648,
+            37.5894654
+          ],
+          [
+            127.0313128,
+            37.5894831
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/392740612",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.589468399999994,
+        "longitude": 127.0316057,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 903.1,
+        "source_url": "https://www.openstreetmap.org/way/392740612",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "no",
+          "highway": "steps",
+          "source": "bing, local knowledge"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0310299,
+            37.5895246
+          ],
+          [
+            127.0310002,
+            37.5895455
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/392740615",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.589535049999995,
+        "longitude": 127.03101505,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 936.4,
+        "source_url": "https://www.openstreetmap.org/way/392740615",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0262098,
+            37.5931754
+          ],
+          [
+            127.0262818,
+            37.5931197
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/393240562",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59314755,
+        "longitude": 127.0262458,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1143.8,
+        "source_url": "https://www.openstreetmap.org/way/393240562",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "down",
+          "source": "local knowledge"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0338924,
+            37.5820354
+          ],
+          [
+            127.0337854,
+            37.5821673
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/394282837",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58210135,
+        "longitude": 127.0338389,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1514.9,
+        "source_url": "https://www.openstreetmap.org/way/394282837",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "up",
+          "source": "survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0283547,
+            37.5850586
+          ],
+          [
+            127.0280355,
+            37.5849189
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/394374374",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58498875,
+        "longitude": 127.0281951,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1472.7,
+        "source_url": "https://www.openstreetmap.org/way/394374374",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "down",
+          "source": "survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0270213,
+            37.5844617
+          ],
+          [
+            127.026944,
+            37.5845656
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/394374377",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58451365,
+        "longitude": 127.02698265000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1582.8,
+        "source_url": "https://www.openstreetmap.org/way/394374377",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "up",
+          "source": "Bing, survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0267461,
+            37.5843804
+          ],
+          [
+            127.0266776,
+            37.5844799
+          ],
+          [
+            127.0266515,
+            37.5845178
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/394374385",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58445936666667,
+        "longitude": 127.02669173333334,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1604.5,
+        "source_url": "https://www.openstreetmap.org/way/394374385",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "down",
+          "source": "survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0320904,
+            37.587044
+          ],
+          [
+            127.0321607,
+            37.5870036
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/394382776",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5870238,
+        "longitude": 127.03212555,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1082.7,
+        "source_url": "https://www.openstreetmap.org/way/394382776",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "up",
+          "lit": "no",
+          "source": "Bing, survey"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.030978,
+            37.5873373
+          ],
+          [
+            127.0306909,
+            37.5875124
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/394382780",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.587424850000005,
+        "longitude": 127.03083445,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1115.7,
+        "source_url": "https://www.openstreetmap.org/way/394382780",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "incline": "up",
+          "source": "bing, local knowledge",
+          "surface": "paved"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0273243,
+            37.5836142
+          ],
+          [
+            127.0272661,
+            37.583701
+          ],
+          [
+            127.0271905,
+            37.5838027
+          ],
+          [
+            127.0271103,
+            37.5839106
+          ],
+          [
+            127.0270536,
+            37.5839869
+          ],
+          [
+            127.0270151,
+            37.5840467
+          ],
+          [
+            127.0269601,
+            37.5841319
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/435327110",
+        "kind": "stairs",
+        "name": "애기능 산책로",
+        "latitude": 37.58388485714285,
+        "longitude": 127.02713142857144,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1627.0,
+        "source_url": "https://www.openstreetmap.org/way/435327110",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "handrail": "no",
+          "highway": "steps",
+          "lit": "yes",
+          "name": "애기능 산책로",
+          "surface": "wood",
+          "width": "2"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0318804,
+            37.5809736
+          ],
+          [
+            127.0318403,
+            37.5809613
+          ],
+          [
+            127.0317946,
+            37.5809477
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/448201200",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.580960866666665,
+        "longitude": 127.03183843333333,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1693.8,
+        "source_url": "https://www.openstreetmap.org/way/448201200",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0266104,
+            37.5927
+          ],
+          [
+            127.0267478,
+            37.5926112
+          ],
+          [
+            127.0268493,
+            37.5925456
+          ],
+          [
+            127.0268871,
+            37.5925178
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/448713871",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59259365,
+        "longitude": 127.02677365,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1112.0,
+        "source_url": "https://www.openstreetmap.org/way/448713871",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0211746,
+            37.5938945
+          ],
+          [
+            127.0213896,
+            37.5938835
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/463206158",
+        "kind": "stairs",
+        "name": "동소문로26마길",
+        "latitude": 37.593889,
+        "longitude": 127.02128210000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1566.1,
+        "source_url": "https://www.openstreetmap.org/way/463206158",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "name": "동소문로26마길",
+          "name:en": "Dongsomun-ro 26ma-gil",
+          "name:ko": "동소문로26마길"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0520777,
+            37.5965679
+          ],
+          [
+            127.0520171,
+            37.5966043
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/478080903",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.596586099999996,
+        "longitude": 127.05204739999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1162.1,
+        "source_url": "https://www.openstreetmap.org/way/478080903",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0518088,
+            37.596965
+          ],
+          [
+            127.0517686,
+            37.5971054
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/478410786",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59703519999999,
+        "longitude": 127.0517887,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1147.8,
+        "source_url": "https://www.openstreetmap.org/way/478410786",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "layer": "-1"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0527299,
+            37.5965761
+          ],
+          [
+            127.0527656,
+            37.5965962
+          ],
+          [
+            127.0528408,
+            37.5966138
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/478410788",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59659536666667,
+        "longitude": 127.05277876666668,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1226.0,
+        "source_url": "https://www.openstreetmap.org/way/478410788",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0539561,
+            37.5954466
+          ],
+          [
+            127.0539389,
+            37.5958165
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/518581361",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59563155,
+        "longitude": 127.05394749999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1319.0,
+        "source_url": "https://www.openstreetmap.org/way/518581361",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0536245,
+            37.5944321
+          ],
+          [
+            127.0535924,
+            37.5943704
+          ],
+          [
+            127.0536178,
+            37.5943524
+          ],
+          [
+            127.0535835,
+            37.594285
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/519611256",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.594359975,
+        "longitude": 127.05360455,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1290.1,
+        "source_url": "https://www.openstreetmap.org/way/519611256",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0553774,
+            37.5960295
+          ],
+          [
+            127.0551219,
+            37.5961095
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/519611258",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5960695,
+        "longitude": 127.05524965000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1436.4,
+        "source_url": "https://www.openstreetmap.org/way/519611258",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "yes",
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0535722,
+            37.5980501
+          ],
+          [
+            127.0535949,
+            37.5979098
+          ],
+          [
+            127.0535599,
+            37.59771
+          ],
+          [
+            127.0534219,
+            37.5975647
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/536382613",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59780865,
+        "longitude": 127.053537225,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1316.4,
+        "source_url": "https://www.openstreetmap.org/way/536382613",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0541211,
+            37.5973427
+          ],
+          [
+            127.0541477,
+            37.597487
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/536392396",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59741485,
+        "longitude": 127.05413440000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1358.7,
+        "source_url": "https://www.openstreetmap.org/way/536392396",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0540597,
+            37.5969924
+          ],
+          [
+            127.0540831,
+            37.5971199
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/536392398",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59705615,
+        "longitude": 127.0540714,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1346.2,
+        "source_url": "https://www.openstreetmap.org/way/536392398",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0551852,
+            37.5961805
+          ],
+          [
+            127.0552455,
+            37.5963247
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/536392399",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5962526,
+        "longitude": 127.05521535,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1435.1,
+        "source_url": "https://www.openstreetmap.org/way/536392399",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0230859,
+            37.5804243
+          ],
+          [
+            127.0231798,
+            37.5804357
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/540235857",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58043,
+        "longitude": 127.02313285,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 2147.9,
+        "source_url": "https://www.openstreetmap.org/way/540235857",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0207581,
+            37.5856023
+          ],
+          [
+            127.0208814,
+            37.5855843
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/540235861",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5855933,
+        "longitude": 127.02081974999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1918.6,
+        "source_url": "https://www.openstreetmap.org/way/540235861",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0203162,
+            37.5868221
+          ],
+          [
+            127.0204589,
+            37.5868481
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/540235862",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5868351,
+        "longitude": 127.02038755,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1879.2,
+        "source_url": "https://www.openstreetmap.org/way/540235862",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0469427,
+            37.5804525
+          ],
+          [
+            127.0474361,
+            37.5803011
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/550974490",
+        "kind": "escalator",
+        "name": "",
+        "latitude": 37.580376799999996,
+        "longitude": 127.04718940000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1789.3,
+        "source_url": "https://www.openstreetmap.org/way/550974490",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "conveying": "yes",
+          "highway": "steps",
+          "layer": "-1",
+          "lit": "yes",
+          "tunnel": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0530911,
+            37.5944922
+          ],
+          [
+            127.0534171,
+            37.5944958
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/551936877",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.594494,
+        "longitude": 127.0532541,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1258.4,
+        "source_url": "https://www.openstreetmap.org/way/551936877",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0545995,
+            37.5953849
+          ],
+          [
+            127.0543859,
+            37.5953787
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/566411070",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5953818,
+        "longitude": 127.0544927,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1366.0,
+        "source_url": "https://www.openstreetmap.org/way/566411070",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0542414,
+            37.5944618
+          ],
+          [
+            127.0542911,
+            37.5944459
+          ],
+          [
+            127.0543165,
+            37.594414
+          ],
+          [
+            127.0543199,
+            37.5943115
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/589007911",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5944083,
+        "longitude": 127.054292225,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1350.2,
+        "source_url": "https://www.openstreetmap.org/way/589007911",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0455846,
+            37.6046539
+          ],
+          [
+            127.0456409,
+            37.6046945
+          ],
+          [
+            127.0457069,
+            37.6047138
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/669609352",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.6046874,
+        "longitude": 127.04564413333333,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1216.6,
+        "source_url": "https://www.openstreetmap.org/way/669609352",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "yes",
+          "highway": "steps",
+          "incline": "down",
+          "lit": "yes",
+          "ramp": "no",
+          "surface": "concrete",
+          "width": "2"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0452924,
+            37.6049691
+          ],
+          [
+            127.0453741,
+            37.6049938
+          ],
+          [
+            127.0454247,
+            37.6050331
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/669609353",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.60499866666667,
+        "longitude": 127.04536373333333,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1235.6,
+        "source_url": "https://www.openstreetmap.org/way/669609353",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "yes",
+          "highway": "steps",
+          "lit": "yes",
+          "surface": "concrete",
+          "width": "2"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0378556,
+            37.6024229
+          ],
+          [
+            127.0378809,
+            37.6023823
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/704467802",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.602402600000005,
+        "longitude": 127.03786825,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 818.1,
+        "source_url": "https://www.openstreetmap.org/way/704467802",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "yes",
+          "highway": "steps",
+          "lit": "yes",
+          "surface": "wood",
+          "width": "2"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0405325,
+            37.6008235
+          ],
+          [
+            127.0405897,
+            37.6007929
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/704467807",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.6008082,
+        "longitude": 127.04056109999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 649.7,
+        "source_url": "https://www.openstreetmap.org/way/704467807",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "yes",
+          "highway": "steps",
+          "lit": "yes",
+          "surface": "wood",
+          "width": "2"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0340388,
+            37.5899181
+          ],
+          [
+            127.0339796,
+            37.5902204
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/787353488",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59006925,
+        "longitude": 127.0340092,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 711.0,
+        "source_url": "https://www.openstreetmap.org/way/787353488",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0319762,
+            37.5893441
+          ],
+          [
+            127.0319671,
+            37.5894221
+          ],
+          [
+            127.0319021,
+            37.589459
+          ],
+          [
+            127.031803,
+            37.5894233
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/792411487",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.589412124999996,
+        "longitude": 127.0319121,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 888.3,
+        "source_url": "https://www.openstreetmap.org/way/792411487",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "handrail": "yes",
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0269601,
+            37.5841319
+          ],
+          [
+            127.0269459,
+            37.5842769
+          ],
+          [
+            127.0269133,
+            37.5843751
+          ],
+          [
+            127.0268838,
+            37.5844515
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/802936059",
+        "kind": "stairs",
+        "name": "애기능 산책로",
+        "latitude": 37.58430885,
+        "longitude": 127.026925775,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1603.1,
+        "source_url": "https://www.openstreetmap.org/way/802936059",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "handrail": "no",
+          "highway": "steps",
+          "lit": "yes",
+          "name": "애기능 산책로",
+          "surface": "wood",
+          "width": "2"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0356166,
+            37.5896592
+          ],
+          [
+            127.0353676,
+            37.5894151
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/802936077",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58953715,
+        "longitude": 127.0354921,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 691.1,
+        "source_url": "https://www.openstreetmap.org/way/802936077",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0344921,
+            37.5914319
+          ],
+          [
+            127.0349327,
+            37.5918115
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803044658",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.591621700000005,
+        "longitude": 127.03471239999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 540.1,
+        "source_url": "https://www.openstreetmap.org/way/803044658",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0326761,
+            37.5869729
+          ],
+          [
+            127.0327029,
+            37.5869981
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803623185",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5869855,
+        "longitude": 127.0326895,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1059.4,
+        "source_url": "https://www.openstreetmap.org/way/803623185",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0323734,
+            37.5866883
+          ],
+          [
+            127.0323304,
+            37.5866478
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803623188",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58666805,
+        "longitude": 127.03235190000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1105.1,
+        "source_url": "https://www.openstreetmap.org/way/803623188",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "foot": "yes",
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0339643,
+            37.5893183
+          ],
+          [
+            127.033687,
+            37.5895072
+          ],
+          [
+            127.0336238,
+            37.5895498
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803623213",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.589458433333334,
+        "longitude": 127.03375836666667,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 778.5,
+        "source_url": "https://www.openstreetmap.org/way/803623213",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "highway": "steps",
+          "surface": "concrete",
+          "tactile_paving": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0270392,
+            37.5852979
+          ],
+          [
+            127.026988,
+            37.5852738
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803710527",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.585285850000005,
+        "longitude": 127.0270136,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1518.1,
+        "source_url": "https://www.openstreetmap.org/way/803710527",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.026973,
+            37.5853854
+          ],
+          [
+            127.0269223,
+            37.5853587
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803710530",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.585372050000004,
+        "longitude": 127.02694765,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1515.3,
+        "source_url": "https://www.openstreetmap.org/way/803710530",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0268931,
+            37.5852882
+          ],
+          [
+            127.0265914,
+            37.5851548
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/803710533",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5852215,
+        "longitude": 127.02674225,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1539.9,
+        "source_url": "https://www.openstreetmap.org/way/803710533",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0340643,
+            37.5889328
+          ],
+          [
+            127.0341125,
+            37.5889014
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/804525724",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5889171,
+        "longitude": 127.0340884,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 811.9,
+        "source_url": "https://www.openstreetmap.org/way/804525724",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0342959,
+            37.5889782
+          ],
+          [
+            127.0343666,
+            37.5890443
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/804525725",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58901125,
+        "longitude": 127.03433125000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 791.8,
+        "source_url": "https://www.openstreetmap.org/way/804525725",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0332772,
+            37.5882159
+          ],
+          [
+            127.0333309,
+            37.5881793
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/804525727",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5881976,
+        "longitude": 127.03330405,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 916.6,
+        "source_url": "https://www.openstreetmap.org/way/804525727",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.033549,
+            37.5882828
+          ],
+          [
+            127.0334652,
+            37.5882049
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/804525728",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58824385,
+        "longitude": 127.0335071,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 902.6,
+        "source_url": "https://www.openstreetmap.org/way/804525728",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0340522,
+            37.5887498
+          ],
+          [
+            127.0341199,
+            37.5888138
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/804525730",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5887818,
+        "longitude": 127.03408605,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 824.8,
+        "source_url": "https://www.openstreetmap.org/way/804525730",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0324408,
+            37.5900067
+          ],
+          [
+            127.0324175,
+            37.590023
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/807058729",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59001485,
+        "longitude": 127.03242915,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 808.7,
+        "source_url": "https://www.openstreetmap.org/way/807058729",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.03466,
+            37.5896539
+          ],
+          [
+            127.0347002,
+            37.5896903
+          ],
+          [
+            127.0347374,
+            37.5897222
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/807198495",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5896888,
+        "longitude": 127.03469919999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 710.6,
+        "source_url": "https://www.openstreetmap.org/way/807198495",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0329792,
+            37.589872
+          ],
+          [
+            127.0328134,
+            37.5897792
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/807801799",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5898256,
+        "longitude": 127.0328963,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 795.2,
+        "source_url": "https://www.openstreetmap.org/way/807801799",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.029144,
+            37.5905108
+          ],
+          [
+            127.0291407,
+            37.590572
+          ],
+          [
+            127.0291445,
+            37.5906904
+          ],
+          [
+            127.0290628,
+            37.5906937
+          ],
+          [
+            127.0290655,
+            37.5907501
+          ],
+          [
+            127.0290517,
+            37.5907744
+          ],
+          [
+            127.0290158,
+            37.5908128
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/808222742",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59068631428572,
+        "longitude": 127.02908928571428,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1001.0,
+        "source_url": "https://www.openstreetmap.org/way/808222742",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.025643,
+            37.5834218
+          ],
+          [
+            127.0259359,
+            37.5835499
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/818753446",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58348585,
+        "longitude": 127.02578944999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1738.0,
+        "source_url": "https://www.openstreetmap.org/way/818753446",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0333319,
+            37.5890774
+          ],
+          [
+            127.0332564,
+            37.5891283
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/819103568",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58910285,
+        "longitude": 127.03329414999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 834.6,
+        "source_url": "https://www.openstreetmap.org/way/819103568",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0330111,
+            37.5887828
+          ],
+          [
+            127.0329287,
+            37.58884
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/819103570",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5888114,
+        "longitude": 127.0329699,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 877.7,
+        "source_url": "https://www.openstreetmap.org/way/819103570",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0256621,
+            37.5921221
+          ],
+          [
+            127.0257986,
+            37.5920274
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/828743227",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.592074749999995,
+        "longitude": 127.02573035,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1215.9,
+        "source_url": "https://www.openstreetmap.org/way/828743227",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0353866,
+            37.5893195
+          ],
+          [
+            127.0357205,
+            37.5895968
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/829085903",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58945815,
+        "longitude": 127.03555355,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 696.6,
+        "source_url": "https://www.openstreetmap.org/way/829085903",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0345001,
+            37.5912773
+          ],
+          [
+            127.0343797,
+            37.5911713
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/837483266",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5912243,
+        "longitude": 127.0344399,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 588.6,
+        "source_url": "https://www.openstreetmap.org/way/837483266",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0326867,
+            37.588627
+          ],
+          [
+            127.0327759,
+            37.5885668
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/860888128",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5885969,
+        "longitude": 127.0327313,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 909.4,
+        "source_url": "https://www.openstreetmap.org/way/860888128",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.033089,
+            37.588981
+          ],
+          [
+            127.0331687,
+            37.5889275
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/860888132",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58895425,
+        "longitude": 127.03312885,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 856.6,
+        "source_url": "https://www.openstreetmap.org/way/860888132",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0335253,
+            37.589365
+          ],
+          [
+            127.0335931,
+            37.5893161
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/860888135",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58934055,
+        "longitude": 127.0335592,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 799.5,
+        "source_url": "https://www.openstreetmap.org/way/860888135",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.025506,
+            37.5835021
+          ],
+          [
+            127.0256444,
+            37.5833149
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/866481320",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5834085,
+        "longitude": 127.02557519999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1757.1,
+        "source_url": "https://www.openstreetmap.org/way/866481320",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0321941,
+            37.5885461
+          ],
+          [
+            127.0322952,
+            37.5885387
+          ],
+          [
+            127.0323998,
+            37.5885488
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/875533627",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.588544533333334,
+        "longitude": 127.03229636666667,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 937.7,
+        "source_url": "https://www.openstreetmap.org/way/875533627",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "handrail": "yes",
+          "highway": "steps",
+          "incline": "down",
+          "surface": "wood",
+          "tactile_paving": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0320546,
+            37.5882941
+          ],
+          [
+            127.0319917,
+            37.5883441
+          ],
+          [
+            127.0318968,
+            37.5884084
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/875533628",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58834886666667,
+        "longitude": 127.03198103333334,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 972.1,
+        "source_url": "https://www.openstreetmap.org/way/875533628",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "handrail": "no",
+          "highway": "steps",
+          "incline": "up",
+          "surface": "wood",
+          "tactile_paving": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0513788,
+            37.6053671
+          ],
+          [
+            127.0515571,
+            37.6053403
+          ],
+          [
+            127.0517506,
+            37.6052988
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/899450024",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.6053354,
+        "longitude": 127.05156216666666,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1588.1,
+        "source_url": "https://www.openstreetmap.org/way/899450024",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0514729,
+            37.6053181
+          ],
+          [
+            127.0516739,
+            37.6052814
+          ],
+          [
+            127.0517803,
+            37.6052599
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/899450025",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.60528646666666,
+        "longitude": 127.05164236666667,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1589.1,
+        "source_url": "https://www.openstreetmap.org/way/899450025",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0322684,
+            37.589849
+          ],
+          [
+            127.0321972,
+            37.5899117
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/909550016",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58988035,
+        "longitude": 127.0322328,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 831.5,
+        "source_url": "https://www.openstreetmap.org/way/909550016",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0296615,
+            37.5912871
+          ],
+          [
+            127.0296473,
+            37.5912352
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/909550026",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59126115,
+        "longitude": 127.0296544,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 926.8,
+        "source_url": "https://www.openstreetmap.org/way/909550026",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0242858,
+            37.5914866
+          ],
+          [
+            127.0242909,
+            37.5914547
+          ],
+          [
+            127.0243483,
+            37.591407
+          ],
+          [
+            127.0244207,
+            37.5913469
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278823",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5914238,
+        "longitude": 127.024336425,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1354.4,
+        "source_url": "https://www.openstreetmap.org/way/923278823",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.024786,
+            37.5919313
+          ],
+          [
+            127.024844,
+            37.5918774
+          ],
+          [
+            127.024912,
+            37.5918164
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278825",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59187503333333,
+        "longitude": 127.02484733333334,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1296.8,
+        "source_url": "https://www.openstreetmap.org/way/923278825",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0251444,
+            37.5921679
+          ],
+          [
+            127.0251847,
+            37.5920927
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278830",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5921303,
+        "longitude": 127.02516455,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1262.2,
+        "source_url": "https://www.openstreetmap.org/way/923278830",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0252258,
+            37.5921048
+          ],
+          [
+            127.025229,
+            37.5920879
+          ],
+          [
+            127.025246,
+            37.5919957
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278833",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5920628,
+        "longitude": 127.02523359999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1258.3,
+        "source_url": "https://www.openstreetmap.org/way/923278833",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0255884,
+            37.5919252
+          ],
+          [
+            127.0256812,
+            37.5920119
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278834",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.591968550000004,
+        "longitude": 127.0256348,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1227.3,
+        "source_url": "https://www.openstreetmap.org/way/923278834",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0244339,
+            37.5908143
+          ],
+          [
+            127.0244542,
+            37.5908343
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278837",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.590824299999994,
+        "longitude": 127.02444405,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1367.1,
+        "source_url": "https://www.openstreetmap.org/way/923278837",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0242423,
+            37.5911166
+          ],
+          [
+            127.0242789,
+            37.5911064
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278838",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5911115,
+        "longitude": 127.02426059999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1371.6,
+        "source_url": "https://www.openstreetmap.org/way/923278838",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0244954,
+            37.5917327
+          ],
+          [
+            127.0245349,
+            37.5916975
+          ],
+          [
+            127.024598,
+            37.591645
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278840",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.591691733333334,
+        "longitude": 127.02454276666667,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1328.3,
+        "source_url": "https://www.openstreetmap.org/way/923278840",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0280537,
+            37.5918515
+          ],
+          [
+            127.0281914,
+            37.5920588
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/923278842",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59195515,
+        "longitude": 127.02812255,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1019.5,
+        "source_url": "https://www.openstreetmap.org/way/923278842",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0340401,
+            37.5893999
+          ],
+          [
+            127.0337709,
+            37.5895811
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/943702813",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5894905,
+        "longitude": 127.0339055,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 768.0,
+        "source_url": "https://www.openstreetmap.org/way/943702813",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "access": "yes",
+          "highway": "steps",
+          "surface": "concrete",
+          "tactile_paving": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0321824,
+            37.5875881
+          ],
+          [
+            127.0320161,
+            37.587704
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932548",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.587646050000004,
+        "longitude": 127.03209925,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1027.4,
+        "source_url": "https://www.openstreetmap.org/way/944932548",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0319544,
+            37.5876528
+          ],
+          [
+            127.032147,
+            37.5875258
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932550",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.587589300000005,
+        "longitude": 127.0320507,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1035.1,
+        "source_url": "https://www.openstreetmap.org/way/944932550",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.031113,
+            37.5872237
+          ],
+          [
+            127.0311826,
+            37.5871767
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932557",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5872002,
+        "longitude": 127.0311478,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1117.6,
+        "source_url": "https://www.openstreetmap.org/way/944932557",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0317311,
+            37.5867898
+          ],
+          [
+            127.0318127,
+            37.5867323
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932559",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58676105,
+        "longitude": 127.0317719,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1124.4,
+        "source_url": "https://www.openstreetmap.org/way/944932559",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "layer": "-1"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0318925,
+            37.5866549
+          ],
+          [
+            127.0319199,
+            37.5865905
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932572",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5866227,
+        "longitude": 127.03190620000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1130.6,
+        "source_url": "https://www.openstreetmap.org/way/944932572",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0319922,
+            37.5866549
+          ],
+          [
+            127.0320191,
+            37.5865937
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932573",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5866243,
+        "longitude": 127.03200565,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1125.6,
+        "source_url": "https://www.openstreetmap.org/way/944932573",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0323839,
+            37.5894678
+          ],
+          [
+            127.0324413,
+            37.5894308
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/944932590",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5894493,
+        "longitude": 127.0324126,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 854.8,
+        "source_url": "https://www.openstreetmap.org/way/944932590",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0280513,
+            37.5855379
+          ],
+          [
+            127.0280566,
+            37.5855507
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/953224062",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.585544299999995,
+        "longitude": 127.02805395,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1434.4,
+        "source_url": "https://www.openstreetmap.org/way/953224062",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0255001,
+            37.5910698
+          ],
+          [
+            127.0255357,
+            37.591045
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/991301370",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5910574,
+        "longitude": 127.02551790000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1269.4,
+        "source_url": "https://www.openstreetmap.org/way/991301370",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0505235,
+            37.5872629
+          ],
+          [
+            127.0506254,
+            37.5872746
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1109174131",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58726875,
+        "longitude": 127.05057445,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1341.5,
+        "source_url": "https://www.openstreetmap.org/way/1109174131",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0510842,
+            37.5904401
+          ],
+          [
+            127.0510906,
+            37.5903858
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1109214321",
+        "kind": "stairs",
+        "name": "회기로12길",
+        "latitude": 37.59041295,
+        "longitude": 127.0510874,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1186.3,
+        "source_url": "https://www.openstreetmap.org/way/1109214321",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "name": "회기로12길",
+          "name:en": "Hoegi-ro 12-gil",
+          "name:ko": "회기로12길"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0493226,
+            37.5894171
+          ],
+          [
+            127.0493934,
+            37.5893108
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1109214324",
+        "kind": "stairs",
+        "name": "회기로12길",
+        "latitude": 37.58936395,
+        "longitude": 127.049358,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1113.9,
+        "source_url": "https://www.openstreetmap.org/way/1109214324",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "name": "회기로12길",
+          "name:en": "Hoegi-ro 12-gil",
+          "name:ko": "회기로12길"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0469534,
+            37.5866633
+          ],
+          [
+            127.0467354,
+            37.5867082
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1118401475",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58668575,
+        "longitude": 127.0468444,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1163.6,
+        "source_url": "https://www.openstreetmap.org/way/1118401475",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0470043,
+            37.5866435
+          ],
+          [
+            127.0471941,
+            37.5866019
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1118401480",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5866227,
+        "longitude": 127.04709919999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1182.6,
+        "source_url": "https://www.openstreetmap.org/way/1118401480",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0470747,
+            37.5868145
+          ],
+          [
+            127.0471941,
+            37.5867868
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1118401485",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58680065,
+        "longitude": 127.0471344,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1168.8,
+        "source_url": "https://www.openstreetmap.org/way/1118401485",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.047009,
+            37.5868283
+          ],
+          [
+            127.0465906,
+            37.5869399
+          ],
+          [
+            127.0465692,
+            37.5869441
+          ],
+          [
+            127.0465531,
+            37.5869452
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1118401489",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.586914375,
+        "longitude": 127.04668047499999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1134.5,
+        "source_url": "https://www.openstreetmap.org/way/1118401489",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0413379,
+            37.6042245
+          ],
+          [
+            127.0413765,
+            37.6041342
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1149641023",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.604179349999995,
+        "longitude": 127.0413572,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1031.0,
+        "source_url": "https://www.openstreetmap.org/way/1149641023",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0401572,
+            37.6004772
+          ],
+          [
+            127.0401303,
+            37.6004812
+          ],
+          [
+            127.0400959,
+            37.6005243
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1211909467",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.60049423333333,
+        "longitude": 127.0401278,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 608.2,
+        "source_url": "https://www.openstreetmap.org/way/1211909467",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0404189,
+            37.5998638
+          ],
+          [
+            127.0402513,
+            37.5998515
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1211909468",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.599857650000004,
+        "longitude": 127.0403351,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 542.2,
+        "source_url": "https://www.openstreetmap.org/way/1211909468",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "layer": "1"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0409177,
+            37.6005699
+          ],
+          [
+            127.0409599,
+            37.6006498
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1211909470",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.60060985,
+        "longitude": 127.04093879999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 636.3,
+        "source_url": "https://www.openstreetmap.org/way/1211909470",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0430908,
+            37.589199
+          ],
+          [
+            127.0431351,
+            37.5891783
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1214017318",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58918865,
+        "longitude": 127.04311295,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 750.8,
+        "source_url": "https://www.openstreetmap.org/way/1214017318",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "handrail": "no",
+          "highway": "steps",
+          "incline": "up",
+          "lit": "no",
+          "ramp": "no",
+          "step_count": "13",
+          "surface": "wood",
+          "tactile_paving": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0572258,
+            37.5824166
+          ],
+          [
+            127.0569431,
+            37.5824
+          ],
+          [
+            127.0568894,
+            37.5822372
+          ],
+          [
+            127.0567075,
+            37.5822286
+          ],
+          [
+            127.0561741,
+            37.5822058
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1216407064",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58229764,
+        "longitude": 127.05678798,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 2117.8,
+        "source_url": "https://www.openstreetmap.org/way/1216407064",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0561741,
+            37.5822058
+          ],
+          [
+            127.0561782,
+            37.582131
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1216407066",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5821684,
+        "longitude": 127.05617615,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 2088.0,
+        "source_url": "https://www.openstreetmap.org/way/1216407066",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0567075,
+            37.5822286
+          ],
+          [
+            127.0567048,
+            37.5821477
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1216407067",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58218815,
+        "longitude": 127.05670615,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 2120.7,
+        "source_url": "https://www.openstreetmap.org/way/1216407067",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0504991,
+            37.5819404
+          ],
+          [
+            127.0505169,
+            37.5819617
+          ],
+          [
+            127.0505323,
+            37.5819813
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344824",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58196113333333,
+        "longitude": 127.0505161,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1779.1,
+        "source_url": "https://www.openstreetmap.org/way/1217344824",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.05055,
+            37.5819879
+          ],
+          [
+            127.050563,
+            37.5819879
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344825",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5819879,
+        "longitude": 127.0505565,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1778.7,
+        "source_url": "https://www.openstreetmap.org/way/1217344825",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.050576,
+            37.5821315
+          ],
+          [
+            127.0505742,
+            37.5821269
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344827",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5821292,
+        "longitude": 127.0505751,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1766.8,
+        "source_url": "https://www.openstreetmap.org/way/1217344827",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0510228,
+            37.5828332
+          ],
+          [
+            127.0510106,
+            37.5828376
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344838",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5828354,
+        "longitude": 127.05101669999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1726.9,
+        "source_url": "https://www.openstreetmap.org/way/1217344838",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0510258,
+            37.5827545
+          ],
+          [
+            127.0510374,
+            37.5827487
+          ],
+          [
+            127.051036,
+            37.5827285
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344843",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.582743900000004,
+        "longitude": 127.05103306666666,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1735.8,
+        "source_url": "https://www.openstreetmap.org/way/1217344843",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0510211,
+            37.5826549
+          ],
+          [
+            127.0510124,
+            37.5826262
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344844",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58264055,
+        "longitude": 127.05101675,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1744.1,
+        "source_url": "https://www.openstreetmap.org/way/1217344844",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0506781,
+            37.5825215
+          ],
+          [
+            127.0506418,
+            37.5825347
+          ],
+          [
+            127.0505688,
+            37.5825611
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1217344848",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5825391,
+        "longitude": 127.05062956666666,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1732.6,
+        "source_url": "https://www.openstreetmap.org/way/1217344848",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0542045,
+            37.583686
+          ],
+          [
+            127.0542156,
+            37.5837878
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1270741587",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.583736900000005,
+        "longitude": 127.05421005,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1842.3,
+        "source_url": "https://www.openstreetmap.org/way/1270741587",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0571852,
+            37.5888983
+          ],
+          [
+            127.0571604,
+            37.5889049
+          ],
+          [
+            127.0571453,
+            37.5889137
+          ],
+          [
+            127.0571377,
+            37.5889269
+          ],
+          [
+            127.0571336,
+            37.5889424
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1339768158",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58891724,
+        "longitude": 127.05715244000001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1741.5,
+        "source_url": "https://www.openstreetmap.org/way/1339768158",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0579523,
+            37.5890444
+          ],
+          [
+            127.0579288,
+            37.5891182
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1339768180",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.589081300000004,
+        "longitude": 127.05794055,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1798.6,
+        "source_url": "https://www.openstreetmap.org/way/1339768180",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0530466,
+            37.5965898
+          ],
+          [
+            127.0530767,
+            37.5965405
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1358633609",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59656515,
+        "longitude": 127.05306165,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1250.3,
+        "source_url": "https://www.openstreetmap.org/way/1358633609",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "ramp": "wheelchair"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0560629,
+            37.5897152
+          ],
+          [
+            127.0560647,
+            37.589697
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1359027164",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5897061,
+        "longitude": 127.0560638,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1619.3,
+        "source_url": "https://www.openstreetmap.org/way/1359027164",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0520937,
+            37.5940331
+          ],
+          [
+            127.0520921,
+            37.5940007
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1359256042",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5940169,
+        "longitude": 127.05209289999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1160.5,
+        "source_url": "https://www.openstreetmap.org/way/1359256042",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0520842,
+            37.5938957
+          ],
+          [
+            127.0520839,
+            37.5938686
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1359256043",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59388215,
+        "longitude": 127.05208404999999,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1161.4,
+        "source_url": "https://www.openstreetmap.org/way/1359256043",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0521478,
+            37.5939406
+          ],
+          [
+            127.0520874,
+            37.5939433
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1359256045",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59394195,
+        "longitude": 127.0521176,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1163.6,
+        "source_url": "https://www.openstreetmap.org/way/1359256045",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0502387,
+            37.5943936
+          ],
+          [
+            127.050282,
+            37.5943882
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1430769305",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59439089999999,
+        "longitude": 127.05026035,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 995.9,
+        "source_url": "https://www.openstreetmap.org/way/1430769305",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.035284,
+            37.591383
+          ],
+          [
+            127.0353354,
+            37.5914198
+          ],
+          [
+            127.0353336,
+            37.5914579
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1459536135",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59142023333333,
+        "longitude": 127.03531766666667,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 521.7,
+        "source_url": "https://www.openstreetmap.org/way/1459536135",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0336856,
+            37.5916645
+          ],
+          [
+            127.0337023,
+            37.5916347
+          ],
+          [
+            127.0337883,
+            37.5916621
+          ],
+          [
+            127.0338013,
+            37.5916347
+          ],
+          [
+            127.0337163,
+            37.5916044
+          ],
+          [
+            127.0337238,
+            37.5915881
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1459536136",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.591631416666665,
+        "longitude": 127.03373626666666,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 602.6,
+        "source_url": "https://www.openstreetmap.org/way/1459536136",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0258877,
+            37.591487
+          ],
+          [
+            127.0259613,
+            37.5914165
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1461310966",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.591451750000004,
+        "longitude": 127.0259245,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1220.7,
+        "source_url": "https://www.openstreetmap.org/way/1461310966",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0307354,
+            37.5906402
+          ],
+          [
+            127.0308522,
+            37.5907632
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1464145953",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5907017,
+        "longitude": 127.0307938,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 872.3,
+        "source_url": "https://www.openstreetmap.org/way/1464145953",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0540364,
+            37.5830902
+          ],
+          [
+            127.0541354,
+            37.5831321
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1474307303",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.58311115,
+        "longitude": 127.0540859,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1883.0,
+        "source_url": "https://www.openstreetmap.org/way/1474307303",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0543744,
+            37.5835109
+          ],
+          [
+            127.0543784,
+            37.5835599
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1474307305",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5835354,
+        "longitude": 127.0543764,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 1868.4,
+        "source_url": "https://www.openstreetmap.org/way/1474307305",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0347588,
+            37.590873
+          ],
+          [
+            127.0348168,
+            37.5908237
+          ],
+          [
+            127.0348417,
+            37.5908447
+          ],
+          [
+            127.0348748,
+            37.590818
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1494626163",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.590839849999995,
+        "longitude": 127.03482302500001,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 599.4,
+        "source_url": "https://www.openstreetmap.org/way/1494626163",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0356704,
+            37.5905219
+          ],
+          [
+            127.0357575,
+            37.5904583
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1494626164",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.5904901,
+        "longitude": 127.03571395,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 588.3,
+        "source_url": "https://www.openstreetmap.org/way/1494626164",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "layer": "-1"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0345594,
+            37.590062
+          ],
+          [
+            127.034613,
+            37.5901098
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1495140502",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.590085900000005,
+        "longitude": 127.0345862,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 679.3,
+        "source_url": "https://www.openstreetmap.org/way/1495140502",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0346002,
+            37.5909694
+          ],
+          [
+            127.0345705,
+            37.5910061
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1495140511",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59098775,
+        "longitude": 127.03458535,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 599.8,
+        "source_url": "https://www.openstreetmap.org/way/1495140511",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0331163,
+            37.5910287
+          ],
+          [
+            127.033148,
+            37.5910608
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1499363564",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.59104475,
+        "longitude": 127.03313215,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 685.4,
+        "source_url": "https://www.openstreetmap.org/way/1499363564",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "surface": "paving_stones"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.0328091,
+            37.5903062
+          ],
+          [
+            127.0327329,
+            37.5903568
+          ]
+        ]
+      },
+      "properties": {
+        "id": "osm:way/1499363565",
+        "kind": "stairs",
+        "name": "",
+        "latitude": 37.590331500000005,
+        "longitude": 127.032771,
+        "coordinate_role": "mean_of_vertices",
+        "distance_from_school_m": 762.5,
+        "source_url": "https://www.openstreetmap.org/way/1499363565",
+        "source_snapshot": "2026-10-28T05:19:18Z",
+        "field_verified": false,
+        "operational_status": "unknown",
+        "license": "ODbL-1.0",
+        "osm_tags": {
+          "highway": "steps",
+          "surface": "paving_stones"
+        }
+      }
+    }
+  ]
+}

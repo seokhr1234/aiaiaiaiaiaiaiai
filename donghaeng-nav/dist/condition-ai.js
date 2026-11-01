@@ -1,0 +1,7 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.ConditionAI=factory()})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+const FLAGS=['wheelchair','avoidSteps','avoidSlope','rest','short','recognized'];
+function validate(value){if(!value||typeof value!=='object'||Array.isArray(value))throw Error('이동 조건 응답 형식이 올바르지 않아요.');const result={};for(const key of FLAGS){if(typeof value[key]!=='boolean')throw Error('이동 조건 응답 형식이 올바르지 않아요.');result[key]=value[key]}const minutes=value.restMinutes;if(minutes!==null&&(!Number.isInteger(minutes)||minutes<1||minutes>99))throw Error('휴식 간격 응답이 올바르지 않아요.');result.restMinutes=minutes;result.restKind=value.restKind===undefined?'any':value.restKind;if(!['any','bench','shelter'].includes(result.restKind))throw Error('휴식 장소 응답이 올바르지 않아요.');result.maxSlope=value.maxSlope===undefined?null:value.maxSlope;if(result.maxSlope!==null&&(!Number.isFinite(result.maxSlope)||result.maxSlope<0||result.maxSlope>45))throw Error('경사 제한 응답이 올바르지 않아요.');if(result.maxSlope!==null)result.avoidSlope=true;result.avoidSteps=result.avoidSteps||result.wheelchair;result.recognized=result.recognized||FLAGS.slice(0,5).some(k=>result[k]);return result}
+function merge(local,remote){const safe=validate(remote);return {...local,...safe,restKind:remote.restKind===undefined?(local.restKind||'any'):safe.restKind,maxSlope:remote.maxSlope===undefined?(local.maxSlope??null):safe.maxSlope,speed:safe.wheelchair?55:local.speed,source:'Gemini'}}
+return {FLAGS,validate,merge};
+});

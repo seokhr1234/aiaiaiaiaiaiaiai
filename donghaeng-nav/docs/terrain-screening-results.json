@@ -1,0 +1,74 @@
+{
+  "pass": true,
+  "allEdges": 21553,
+  "coverage": {
+    "legacy_hint": 14551,
+    "source_range": 2461,
+    "neighborhood_proxy": 3872,
+    "structure_unresolved": 667,
+    "osm_registered": 2
+  },
+  "actualRoadTests": [
+    {
+      "start": [
+        37.5995513,
+        127.0412035
+      ],
+      "meters": 3008,
+      "assistancePreview": true,
+      "screening": {
+        "estimated": 2728.536492936297,
+        "range": 178.9766880471281,
+        "structure": 0,
+        "missing": 0
+      },
+      "riskSegments": 9
+    },
+    {
+      "start": [
+        37.599,
+        127.042
+      ],
+      "meters": 3357,
+      "assistancePreview": true,
+      "screening": {
+        "estimated": 3010.720442719118,
+        "range": 229.995394951518,
+        "structure": 0,
+        "missing": 0
+      },
+      "riskSegments": 11
+    },
+    {
+      "start": [
+        37.6000164,
+        127.0430297
+      ],
+      "meters": 3688,
+      "assistancePreview": true,
+      "screening": {
+        "estimated": 3351.339263322813,
+        "range": 229.995394951518,
+        "structure": 0,
+        "missing": 0
+      },
+      "riskSegments": 11
+    },
+    {
+      "start": [
+        37.60192,
+        127.0414554
+      ],
+      "meters": 2723,
+      "assistancePreview": true,
+      "screening": {
+        "estimated": 2439.3729547791695,
+        "range": 178.9766880471281,
+        "structure": 0,
+        "missing": 0
+      },
+      "riskSegments": 9
+    }
+  ],
+  "notice": "All edges classified; numeric terrain estimates are not surveyed sidewalk slopes. Structures remain unresolved. Assistance previews are not independent wheelchair recommendations."
+}

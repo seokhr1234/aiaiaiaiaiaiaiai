@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "actualTiles": 135,
+  "cursorDriftPixels": 0.40199502484492816,
+  "checks": [
+    "real OSM tiles with Referer",
+    "one background",
+    "mouse drag",
+    "cursor-anchored wheel zoom",
+    "zoom buttons",
+    "route calculation and facility-toggle independence",
+    "presentation mode",
+    "tile failure fallback",
+    "fallback zoom",
+    "route preserved through outage",
+    "retry removes fallback",
+    "offline/online recovery",
+    "390px mobile and presentation resize",
+    "split source matches bundled HTML",
+    "file mode single GridLayer, zoom and zero external requests",
+    "empty fallback data leaves route controls usable"
+  ],
+  "pageErrors": []
+}

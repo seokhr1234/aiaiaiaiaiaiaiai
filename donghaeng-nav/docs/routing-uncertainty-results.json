@@ -1,0 +1,40 @@
+{
+  "pass": true,
+  "rootCause": "unmeasured structural slopes omitted from minimax ordering",
+  "checks": [
+    "unknown surface exposure is prioritized before peak grade",
+    "longer measured-reference path wins over unmeasured shortcut",
+    "rotated coordinates choose identical route topology",
+    "no station waypoint passed to the engine",
+    "ordinary shortest path unchanged"
+  ],
+  "actual": {
+    "meters": 3008,
+    "unresolvedSurfaceMeters": 0,
+    "referenceCeiling": 6.41,
+    "assistancePreview": true,
+    "maxLatitude": 37.6042826,
+    "streets": [
+      "보행로",
+      "화랑로",
+      "월곡로16길",
+      "월곡로",
+      "화랑로11길",
+      "생활도로",
+      "화랑로9길",
+      "화랑로5길",
+      "오패산로4길",
+      "오패산로",
+      "오패산로1길",
+      "오패산로1가길",
+      "화랑로1길",
+      "종암로",
+      "종암로24길",
+      "종암로28길",
+      "월곡로5길",
+      "월곡로6길",
+      "월곡로10길",
+      "월곡로4길"
+    ]
+  }
+}

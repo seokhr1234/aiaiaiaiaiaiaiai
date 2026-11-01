@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "newSourcesPromoted": 0,
+  "rawTilezenEdgesUnchanged": true,
+  "review": {
+    "legacy_hint": 14553,
+    "unconfirmed": 3872,
+    "source_disagreement": 2461,
+    "terrain_inapplicable": 667
+  },
+  "routeImpact": [
+    {
+      "name": "short",
+      "condition": "가장 짧은 거리로 가고 싶어요.",
+      "before": {
+        "meters": 351,
+        "hintMeters": 285,
+        "unknownMeters": 47
+      },
+      "after": {
+        "meters": 351,
+        "hintMeters": 167,
+        "unknownMeters": 165,
+        "conflictMeters": 118,
+        "structuralMeters": 0,
+        "stop": null,
+        "passability": "unverified"
+      },
+      "geometryChanged": false
+    },
+    {
+      "name": "bench",
+      "condition": "무릎이 아파 벤치에서 쉬고 싶어요.",
+      "before": {
+        "meters": 431,
+        "hintMeters": 334,
+        "unknownMeters": 47
+      },
+      "after": {
+        "meters": 404,
+        "hintMeters": 286,
+        "unknownMeters": 77,
+        "conflictMeters": 3,
+        "structuralMeters": 0,
+        "stop": "월곡역 · 엘리베이터와 세 갈래 횡단보도 사이 삼각형 쉼터",
+        "passability": "unverified"
+      },
+      "geometryChanged": true
+    },
+    {
+      "name": "wheelchair",
+      "condition": "휠체어를 이용해요. 계단을 피해주세요.",
+      "before": {
+        "meters": 380,
+        "hintMeters": 298,
+        "unknownMeters": 63
+      },
+      "after": {
+        "meters": 395,
+        "hintMeters": 162,
+        "unknownMeters": 214,
+        "conflictMeters": 115,
+        "structuralMeters": 0,
+        "stop": null,
+        "passability": "unverified"
+      },
+      "geometryChanged": true
+    },
+    {
+      "name": "limit",
+      "condition": "경사도 5% 초과를 피하고 쉼터에서 쉬고 싶어요.",
+      "before": {
+        "meters": 463,
+        "hintMeters": 370,
+        "unknownMeters": 46
+      },
+      "after": {
+        "meters": 434,
+        "hintMeters": 304,
+        "unknownMeters": 98,
+        "conflictMeters": 34,
+        "structuralMeters": 0,
+        "stop": "새마을금고월곡(본점)",
+        "passability": "unverified"
+      },
+      "geometryChanged": true
+    }
+  ],
+  "note": "No independent road-surface ground truth; route changes do not prove improved physical accessibility."
+}

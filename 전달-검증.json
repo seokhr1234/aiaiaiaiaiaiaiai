@@ -1,0 +1,25 @@
+{
+  "created": "2026-10-31",
+  "purpose": "Codex development handoff; field routing unresolved",
+  "precision_1000_original_included": false,
+  "precision_importer_implemented": false,
+  "credentials_included": true,
+  "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
+  "files": 428,
+  "html_sha256": "3513665d64e4e328421dfe4beb61abd5bd498dc0e1f5f6078dbda8d0b179766f",
+  "verification": {
+    "copied_project_build": true,
+    "server_root_app_setup_http_200": true,
+    "api_key_configured": true,
+    "chrome_offline_ui": true,
+    "browser_script_errors": [],
+    "standalone_htmls_equal": true,
+    "precision_original_included": false,
+    "osm_tiles_ui": true,
+    "html_contains_credentials": false,
+    "compact_map_actions_ui": true
+  },
+  "updated": "2026-11-01",
+  "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",
+  "folder_bytes_at_update": 518293146
+}

@@ -1,0 +1,48 @@
+{
+  "version": "2026-10-31-leaflet-osm-tiles",
+  "facility_records": 17485,
+  "counts": {
+    "bench": 2288,
+    "elevator": 244,
+    "escalator": 56,
+    "seating": 3263,
+    "shelter": 4460,
+    "stairs": 4427,
+    "complex": 2745,
+    "apartment": 2
+  },
+  "source_sha256": "c031278f1f97e2c3a1b2f28048eec4cea44bd9006a071d5b57ba0e28ae1437fe",
+  "terrain": {
+    "source": "Mapzen/Tilezen Terrain Tiles · AWS",
+    "source_url": "https://registry.opendata.aws/terrain-tiles/",
+    "attribution": "Mapzen/Tilezen; SRTM/GMTED2010 terrain data courtesy of the U.S. Geological Survey",
+    "attribution_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+    "fetched_date": "2026-10-31",
+    "graph_sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+    "height_unit": "metres",
+    "slope_unit": "percent",
+    "method": "Bilinear Terrarium elevations, along-way centred 60m window; minimum 30m support",
+    "tile_zoom": 14,
+    "tile_pixel_spacing_m_at_wolgok": 7.57,
+    "underlying_dem_resolution": "Varies by source; pixel spacing is not DEM accuracy",
+    "field_verified": false,
+    "excluded_bridge_tunnel_layer_ways": 153,
+    "notice": "지형 표고로 계산한 추정 경사 · 보도 실측 아님 · 턱/교량/지하/짧은 급경사·건물 영향은 별도 확인",
+    "coverage": {
+      "south": 37.58,
+      "west": 127.02,
+      "north": 37.611,
+      "east": 127.058
+    },
+    "review_state": "current",
+    "review_policy": "2026-10-31-v1",
+    "new_sources_promoted": 0
+  },
+  "html_sha256": "3513665d64e4e328421dfe4beb61abd5bd498dc0e1f5f6078dbda8d0b179766f",
+  "html_bytes": 12642583,
+  "external_requests_required": false,
+  "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
+  "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure",
+  "optional_condition_api": "Gemini via local server; condition text only",
+  "external_deployment": false
+}

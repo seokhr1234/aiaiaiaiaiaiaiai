@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "results": {
+    "short": "6분\n351m · 연결 구간 포함 추정",
+    "rest": "9분\n404m · 연결 구간 포함 추정",
+    "wheelchair": "8분\n395m · 연결 구간 포함 추정"
+  },
+  "consoleErrors": [],
+  "externalRequests": 0,
+  "checks": [
+    "compact collapsed map callout on desktop and mobile",
+    "mouse and keyboard disclosure",
+    "rest evidence opens facility popup",
+    "report dialog reachable on desktop and mobile",
+    "offline local HTML",
+    "three real routes",
+    "step navigation",
+    "source popup",
+    "individual and all facility toggles independent of routing",
+    "presentation mode",
+    "simulation",
+    "save and reopen",
+    "destination search",
+    "390px no overflow",
+    "denied GPS fallback"
+  ]
+}
