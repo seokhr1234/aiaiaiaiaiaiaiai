@@ -32,7 +32,7 @@ http://127.0.0.1:4173 에서 월곡역 최종 HTML과 API를 함께 사용합니
 
 ## 수정 / HTML 재생성
 
-실제 기능 소스는 이 폴더의 `dist/`입니다. 상위 폴더의 `dist/`는 과거 시안입니다.
+실제 기능 소스는 이 폴더의 `dist/`입니다. 상위 폴더의 과거 시안 `dist/`는 현재 저장소에서 제거했습니다. 로컬·GitHub 반영 기준은 [최상위 README](../README.md)의 '로컬과 GitHub의 기준 폴더'를 따릅니다.
 
 ```sh
 python3 scripts/build-html.py
@@ -74,7 +74,7 @@ OpenStreetMap contributors: https://www.openstreetmap.org/copyright (ODbL 1.0), 
 
 ## 시설 지도 레이어 (2026-10-28)
 
-현재 기능의 소스는 `donghaeng-nav/dist/`이며, 상위 폴더의 `dist/`는 이전 시안으로 유지했습니다. `scripts/build-html.py`는 기능·시설 데이터·내장 벡터 지도를 합쳐 상위 폴더의 `동행길-시연.html`을 갱신합니다. 외부 배포는 하지 않았습니다.
+현재 기능의 소스는 저장소 기준 `donghaeng-nav/dist/`이며, 상위 폴더의 이전 시안 `dist/`는 제거했습니다. `scripts/build-html.py`는 기능·시설 데이터·내장 벡터 지도를 합쳐 상위 폴더의 `동행길-최종.html`, `동행길-시연.html`, `동행길-전달용.html`을 갱신합니다. 외부 배포는 하지 않았습니다.
 
 - 벤치: 기본 ON, 초록색 의자 아이콘. 계단: 기본 OFF, 주황색 계단 아이콘과 실제 선형. 에스컬레이터: 기본 OFF, 보라색 아이콘과 실제 선형.
 - 지도 왼쪽의 ‘시설 지도’에서 종류별 표시와 전체 켜기/끄기. 모바일은 기본 접힘이며 터치 버튼은 44px 이상입니다.

@@ -60,6 +60,21 @@
 
 원래 프로젝트 상위의 과거 `dist/` 목업은 전달에서 뺐습니다. **실제 수정 대상은 `donghaeng-nav/dist/`입니다.** 원래 개발자의 `.env`, API 키, 계정 정보, 브라우저 프로필, 가상환경은 넣지 않았습니다.
 
+### 로컬과 GitHub의 기준 폴더
+
+개발 기준은 로컬 `동행길-Codex-전달/`이며, GitHub 저장소 최상위가 이 폴더에 대응합니다. `bbb/`는 이전 프로젝트 참고용이고 `bbb/.donghaeng-publish/`는 Git 커밋·푸시용 작업 복사본입니다. 앞으로 반영할 때는 파일 추가·수정과 함께 더 이상 쓰지 않는 기존 파일도 비교하세요.
+
+| 경로 | 관리 기준 |
+| --- | --- |
+| `donghaeng-nav/dist/` | 실제 앱 소스·지도·시설 데이터. 로컬과 GitHub에 모두 필요합니다. 이름만 보고 빌드 임시 파일로 제외하지 마세요. |
+| 최상위 `dist/` | 사용하지 않는 과거 목업. 현재 저장소에서 제거했으며 다시 추가하지 않습니다. |
+| 최상위 `research/` | 사용자가 별도로 올린 조사 자료. 로컬 전달 폴더에 없어도 삭제·덮어쓰기하지 않습니다. |
+| `donghaeng-nav/data/` | 로컬 원본·가공 조사 자료. 기존 추적 파일은 유지하되 대용량 로컬 원본 전체를 자동 업로드하지 않습니다. 실행에 필요한 자료는 `donghaeng-nav/dist/`에 포함됩니다. |
+| `.env`, 인증서·개인 위치 로그 | 로컬 전용. GitHub에 포함하지 않습니다. |
+| `커밋-예정파일.md` | 이전 업로드 당시의 일회성 메모. 현재 파일 목록이 아니며 Git 추적에서 제외합니다. |
+
+동기화할 때는 이 예외를 적용해 비교하며, `research/`를 포함한 저장소 전체에 일괄 삭제 동기화를 실행하지 않습니다. 과거 최상위 계획서·스크린샷은 정리했고, 현재 계획은 `내비게이션-구현계획.md`, 현재 화면과 검증은 `donghaeng-nav/docs/`를 참고하세요.
+
 ## 3. 실행 방법
 
 ### 화면만 확인
@@ -175,7 +190,7 @@ node donghaeng-nav/scripts/launch.mjs --no-open
 | 장소·휴식 후보 모델 | `donghaeng-nav/dist/final-model.js` |
 | 시설 지도·토글·팝업 | `donghaeng-nav/dist/facilities.js` |
 | 배경 지도 | `donghaeng-nav/dist/seoul-base.js` |
-| OSM 도로망/주변 지물 | `dist/map-data.json`, `dist/map-context.json` (프로젝트 최상위의 과거 dist와 혼동하지 않기) |
+| OSM 도로망/주변 지물 | `donghaeng-nav/dist/map-data.json`, `donghaeng-nav/dist/map-context.json` |
 | 런타임 고도·검토 자료 | `donghaeng-nav/dist/terrain-data.json` |
 | 지형 원본/조사 | `donghaeng-nav/data/terrain/research/` |
 | 시설 원본·근거 | `donghaeng-nav/data/accessibility/` |

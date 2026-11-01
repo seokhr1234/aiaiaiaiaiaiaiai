@@ -62,3 +62,7 @@
 프로젝트 루트에서 `python3 donghaeng-nav/scripts/extract-accessibility.py`를 실행하면 저장된 두 원본으로 CSV·GeoJSON·요약을 재생성한다. 네트워크 호출은 없다.
 
 학교 주변 신규 OSM 추출에는 `school-overpass.ql`을 Overpass API에 제출할 수 있다. 기존 원본 갱신 또는 앱 반영은 이 정리 작업에서 수행하지 않았다.
+
+## 벤치 우선 자료
+
+벤치 전용 파일과 학교 가까운 순서의 목록, 추가 조사 출처는 로컬 원본 자료의 `benches/README.md`에 정리했다. 이 원본 자료 묶음은 GitHub 업로드 대상에 포함되지 않을 수 있으며, 앱에서 사용하는 시설 자료는 `donghaeng-nav/dist/data/accessibility/`에 있다. 기존 벤치 67개 중 학교 기준 직선거리 1km 이내는 47개다.

@@ -10,3 +10,7 @@ __pycache__/
 *.key
 *.pem
 navigation-private-logs/
+
+# 전달 프로젝트의 과거 최상위 목업과 일회성 업로드 메모
+/dist/
+/커밋-예정파일.md
