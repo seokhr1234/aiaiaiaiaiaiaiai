@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "checks": [
+    "status reports environment configuration without calling Gemini or disclosing the key",
+    "Vercel original and rewritten URLs, parsed and streamed bodies share the local Gemini contract",
+    "invalid, cross-origin and private/configuration requests are rejected before provider calls",
+    "bad model, provider rate limits, network errors and invalid responses fail without exposing details",
+    "instance concurrency limit rejects excess requests and releases capacity after completion",
+    "provider timeout aborts the request and returns a controlled fallback response",
+    "deployment serves only runtime assets and the function has no disk key store or listening server"
+  ],
+  "realGemini": false,
+  "vercelRuntime": false,
+  "deployed": false,
+  "note": "Local Node HTTP tests of the exported handler, Vercel URL rewrite and parsed-body shapes; actual Vercel build and provider access remain unverified."
+}

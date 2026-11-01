@@ -26,7 +26,12 @@
     "navigation_progress_accuracy_m": 35,
     "navigation_offroute_accuracy_m": 25,
     "navigation_reroute_accuracy_m": 25,
-    "navigation_arrival_accuracy_m": 15
+    "navigation_arrival_accuracy_m": 15,
+    "vercel_api_prepared": true,
+    "vercel_api_local_mock": true,
+    "vercel_api_build_verified": false,
+    "vercel_api_deployed": false,
+    "real_gemini_for_vercel_verified": false
   },
   "updated": "2026-11-01",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",

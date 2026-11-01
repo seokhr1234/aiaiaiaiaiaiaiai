@@ -2,6 +2,8 @@
 
 전체 수정 이력과 앞으로의 필수 기록 규칙은 [수정이력.md](수정이력.md)에 있습니다. **모든 수정은 작업 완료 전에 이 문서에 추가 기록하세요.** 작업 지침은 [AGENTS.md](AGENTS.md)를 따릅니다.
 
+Vercel의 지도·GPS 배포에 Gemini를 연결하는 Node.js 함수와 설정은 [Vercel API 연결 안내](donghaeng-nav/docs/vercel-api.md)에 정리했습니다. 코드와 로컬 모의 검사를 준비했으며, 새 커밋 배포와 Production 환경변수·실제 Gemini 호출 확인은 사용자가 진행해야 합니다. 기존 `Other`와 저장소 최상위 Root Directory를 유지합니다.
+
 다음 기능의 설계는 [내비게이션 구현 계획](내비게이션-구현계획.md)에 정리했습니다. Android Chrome·iPhone Safari의 GPS 품질·선분 매칭·자동 구간 안내·재탐색·휴식·도착 확인과 현장 검증 단계에 대한 계획이며, 현재 구현 완료를 뜻하지 않습니다.
 
 ## GPS 안내·경로 재생 — 기술 시연 버전
