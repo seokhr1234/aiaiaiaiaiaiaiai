@@ -1,0 +1,128 @@
+{
+  "packageDate": "2026-11-04",
+  "realGeminiWithUserKey": false,
+  "physicalPhoneVerified": false,
+  "reports": {
+    "portable-ai-ui-results.json": {
+      "pass": true,
+      "realGeminiCall": false,
+      "provider": "mock direct Google API transport; no real credential used",
+      "physicalPhone": false,
+      "checks": [
+        "invalid URL rejected without saving or echoing input",
+        "single HTML direct Gemini contract to Google only; key in header, condition without location; validated response routes through actual graph",
+        "same text uses successful interpretation cache",
+        "403 becomes explicit local fallback with no raw upstream/key leakage",
+        "malformed response rejected; failed analysis retried",
+        "reload clears key; no persistent key storage"
+      ],
+      "browserErrors": [],
+      "fileBytes": 15013769
+    },
+    "portable-ai-cors-check.json": {
+      "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+      "method": "OPTIONS",
+      "credentialSent": false,
+      "status": 200,
+      "allowOrigin": "null",
+      "allowMethods": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+      "allowHeaders": "content-type,x-goog-api-key",
+      "retrievedAt": "2026-11-03T14:53:13.566288+00:00",
+      "notice": "Preflight only. Does not validate a user key, quota, model generation, or physical phone local-file execution."
+    },
+    "building-routing-results.json": {
+      "pass": true,
+      "fixtureRole": "Existing OSM apartment-area node, not the user GPS coordinate",
+      "oldMeters": 1065.950342999166,
+      "newMeters": 1112.7119167451472,
+      "oldBodyConflicts": [
+        {
+          "key": "7018577832-7018577851",
+          "overlapMeters": 4.892073066099493
+        },
+        {
+          "key": "7018577837-7018577851",
+          "overlapMeters": 1.2711816680472845
+        },
+        {
+          "key": "11227690466-5084549847",
+          "overlapMeters": 2.800536143509361
+        }
+      ],
+      "newBodyConflicts": 0,
+      "excludedSurfaceSegments": 466,
+      "checks": [
+        "synthetic through-building shortcut reroutes on existing ground network",
+        "source graph immutable and cached",
+        "registered bridge preserved for separate level review",
+        "actual apartment-area route no ground-building intersections",
+        "registered stairs still excluded"
+      ],
+      "fieldVerified": false
+    },
+    "navigation-guidance-results.json": {
+      "pass": true,
+      "checks": [
+        "80m ahead right turn and target road",
+        "50m ahead left turn after actual progress",
+        "remaining distance updates",
+        "poor GPS never continues stale turn guidance",
+        "pause/denied/signal loss/parallel road ambiguity/offroute explicit holds",
+        "arrival action separate",
+        "transient GPS failure clears stale fix and recovers on next watch sample; denied permission stops watch"
+      ],
+      "physicalGps": false
+    },
+    "navigation-ui-results.json": {
+      "pass": true,
+      "checks": [
+        "separate replay mode, step, pause, resume and cleanup",
+        "building overlap blocks GPS; adapter test uses a derived road endpoint, not an invented entrance",
+        "GPS navigation map banner and trip summary render on browser location updates; 30m fix passes the 35m policy",
+        "browser geolocation adapter with simulated permission and fix, visible trial label",
+        "live browser accuracy loss replaces turn with GPS hold instruction",
+        "navigation progress and live panel motion coexist",
+        "pausing in-flight reroute cannot mutate displayed route",
+        "risk alternative blocks GPS start and remains replayable",
+        "small phone and desktop navigation panel",
+        "bundled HTML contains the 35 metre policy and offline replay works"
+      ],
+      "browserErrors": [],
+      "realPhone": false,
+      "physicalGps": false,
+      "realGemini": false
+    },
+    "auto-routing-ui-results.json": {
+      "pass": true,
+      "blockedTarget": {
+        "name": "월곡꿈그림도서관",
+        "screeningPercent": 5.47,
+        "requestedPercent": 5
+      },
+      "workflowEndpoint": "Derived graph road node for AI/rest tests only; not a library entrance",
+      "realGeminiCall": false,
+      "provider": "Gemini provider stub only during this automated test",
+      "checks": [
+        "5% request rejects library approach estimated at 5.47%, without skipping the last segment",
+        "one click AI interpretation and actual graph routing",
+        "terrain elevations embedded offline",
+        "5 percent slope limit displayed",
+        "bench and shelter preferences",
+        "registered hours or fallback explanation",
+        "no location sent to AI",
+        "interpretation caching",
+        "facility visibility independent of routing",
+        "stale request cancellation",
+        "API failure falls back and still routes",
+        "no manual routing conditions",
+        "wheelchair automatically avoids steps and slope burden",
+        "failed AI is retried on next submit",
+        "saved text reinterpreted",
+        "mobile no horizontal overflow",
+        "presentation mode",
+        "offline file honestly labels local fallback"
+      ],
+      "browserErrors": []
+    }
+  }
+}
