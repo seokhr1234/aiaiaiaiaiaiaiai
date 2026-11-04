@@ -1,4 +1,4 @@
-(function(root){'use strict';const Plan=typeof module!=='undefined'?require('./navigation-plan.js'):root.NavigationPlan;
+(function(root){'use strict';const Plan=typeof module!=='undefined'?require('./navigation-plan.js'):root.NavigationPlan,Endpoint=typeof module!=='undefined'?require('./endpoint-routing.js'):root.EndpointRouting;
 function fromFix(E,graph,fix,destination,profile,{restOutcome,unavailableRestIds=[],previousLayer=null}={}){
  const candidates=[],seen=new Set();
  for(const node of graph.nodes.values())for(const edge of node.edges){if(seen.has(edge.key))continue;seen.add(edge.key);const end=graph.nodes.get(edge.to);if(!end||!graph.main.has(node.id)||!graph.main.has(end.id))continue;
@@ -19,7 +19,7 @@ function fromFix(E,graph,fix,destination,profile,{restOutcome,unavailableRestIds
  nodes.set(best.end.id,{...best.end,edges:[...best.end.edges,{...reverse,to:id,d:d2}]});
  const completed=restOutcome==='completed',pool=(graph.restPlaces||graph.benches||[]).filter(p=>!unavailableRestIds.includes(p.id));
  // Only the already completed waypoint is omitted; the user's profile remains intact.
- const internal=completed?{...profile,rest:false}:{...profile};const route=E.route({...graph,nodes,main,restPlaces:pool,benches:pool,meta:{...graph.meta,allowAssistancePreview:false}},fix.ll,destination.ll,internal);
+ const internal=completed?{...profile,rest:false}:{...profile};const route=Endpoint.route(E,{...graph,nodes,main,restPlaces:pool,benches:pool,meta:{...graph.meta,allowAssistancePreview:false}},fix.ll,destination.ll,internal);
  if(route.assistancePreview)throw Error('위험 대안으로 자동 변경하지 않습니다.');
  return {...route,p:{...profile},restFulfilled:completed};
 }

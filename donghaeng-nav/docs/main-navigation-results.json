@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "checks": [
+    "Node root/app/index and legacy bundle serve main; all source assets load under root/app; private/unknown paths blocked",
+    "Default browser entry boots precision 16169 features, combined building audit, GPS tracker and 35m policy",
+    "Mock Gemini request contains condition only; real runtime routing excludes building overlaps; facility visibility preserves route",
+    "Replay/stop and simulated independent GPS fixes, drag pauses camera, follow resumes, stop/denial clear watchers",
+    "Provider failure keeps honest local routing; guide starts input from saved view",
+    "Mobile menu/guide and 320px/393px/landscape layouts without horizontal overflow",
+    "Invalid runtime dataset shows boot error and keeps route action disabled",
+    "Built standalone boots same precision data and latest GPS module over localhost"
+  ],
+  "browserErrors": [],
+  "realGemini": false,
+  "physicalGps": false,
+  "physicalPhone": false,
+  "nativeFileBrowserVerified": false,
+  "externalHttpsBlocked": true
+}

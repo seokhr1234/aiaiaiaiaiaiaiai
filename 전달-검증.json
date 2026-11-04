@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "8bdb8147f5375f90d80456e657f67b4d72cf8ee5aa364671de0bf2f8a864c452",
+  "html_sha256": "deada400592c0e094ef9ba4bb01b05efd73e5ed9c18d10eb14ef092ac21ad07c",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -33,7 +33,7 @@
     "vercel_api_deployed": false,
     "real_gemini_for_vercel_verified": false
   },
-  "updated": "2026-11-01",
+  "updated": "2026-11-04",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",
   "folder_bytes_at_update": 518293146,
   "user_reported_phone_observation": {
@@ -51,5 +51,14 @@
     "date": "2026-11-04",
     "scope": "Usage guide only; runtime data and navigation code preserved",
     "verification": "donghaeng-nav/docs/usage-guide-review.md"
+  },
+  "main_program": "이동약자를 위한 내비게이션",
+  "precision_runtime_included": true,
+  "precision_runtime_loader_implemented": true,
+  "main_promotion": {
+    "version": "2026-11-04-main-navigation",
+    "review": "donghaeng-nav/docs/main-navigation-promotion.md",
+    "original_gis_reprocessed": false,
+    "field_verified": false
   }
 }

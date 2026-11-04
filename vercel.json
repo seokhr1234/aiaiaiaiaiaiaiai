@@ -11,6 +11,8 @@
     }
   },
   "rewrites": [
+    {"source": "/app", "destination": "/index.html"},
+    {"source": "/app/:path*", "destination": "/:path*"},
     {"source": "/api/status", "destination": "/api/index?route=status"},
     {"source": "/api/analyze-condition", "destination": "/api/index?route=analyze-condition"}
   ]

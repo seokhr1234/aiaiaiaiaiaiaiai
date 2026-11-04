@@ -117,7 +117,11 @@ try {
   const entry = await readFile(new URL('../../api/index.mjs', import.meta.url), 'utf8');
   const shared = await readFile(new URL('./condition-api.mjs', import.meta.url), 'utf8');
   assert(!/readFile|saveConfig|readConfig|createServer|listen\(/.test(entry + shared));
-  assert.equal(config.rewrites.length, 2);
+  assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/api/')).map(rule => rule.source), ['/api/status', '/api/analyze-condition']);
+  assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/app')), [
+    {source: '/app', destination: '/index.html'},
+    {source: '/app/:path*', destination: '/:path*'}
+  ]);
   checks.push('deployment serves only runtime assets and the function has no disk key store or listening server');
   const report = {pass: true, checks, realGemini: false, vercelRuntime: false, deployed: false, note: 'Local Node HTTP tests of the exported handler, Vercel URL rewrite and parsed-body shapes; actual Vercel build and provider access remain unverified.'};
   await writeFile(new URL('../docs/vercel-api-results.json', import.meta.url), JSON.stringify(report, null, 2) + '\n');

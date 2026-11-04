@@ -53,7 +53,7 @@ tiles.on('tileload',event=>failedTiles.delete(event.tile));
 tiles.on('tileunload',event=>failedTiles.delete(event.tile));
 tiles.on('load',()=>{clearTimeout(timer);if(failedTiles.size)showFallback('타일 연결 실패 · 내장 지도로 보완');else onlineReady()});
 function connect(){
-if(!canRequestTiles){showFallback('내장 지도 · 파일 시연');status.title='OSM 타일 지도와 AI는 동행길-실행.cmd로 서버를 실행해 이용하세요.';return}
+if(!canRequestTiles){showFallback('내장 지도 · 파일 시연');status.title='내장 지도를 표시합니다. AI는 화면의 키 입력에서 연결할 수 있어요.';return}
 if(navigator.onLine===false){disconnect();return}
 failedTiles.clear();report('loading','OpenStreetMap 연결 중…');startTimer();
 if(map.hasLayer(tiles))tiles.redraw();else tiles.addTo(map);

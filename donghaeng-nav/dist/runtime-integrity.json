@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "source": {
+    "repository_commit": "7c16922c302bae11f89e009b5744d499dbd80cf1",
+    "file": "유석현유석현.html",
+    "sha256": "6e510f90d6793d399d327b99889b69c70f3cf0f33ea1f4aedc306b539d3d3b98",
+    "kind": "Existing standalone runtime snapshot; not a fresh DXF conversion or field verification"
+  },
+  "data": [
+    {
+      "id": "bundled-map-data",
+      "path": "map-data.json",
+      "sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+      "bytes": 2678726
+    },
+    {
+      "id": "bundled-map-context",
+      "path": "map-context.json",
+      "sha256": "ee61ec66d6916edce5d01a48b4888860ffdfb822386b92d9465c63aaa1c35872",
+      "bytes": 3340812
+    },
+    {
+      "id": "bundled-seoul-base",
+      "path": "data/accessibility/seoul/seoul-base.json",
+      "sha256": "8632d2b544225662243e1a5b953fd8914c558295f2a626d1cdd1b9f9c0a11e3f",
+      "bytes": 26970635
+    },
+    {
+      "id": "bundled-terrain",
+      "path": "terrain-data.json",
+      "sha256": "bc2a1db535b7346f3d585cf269acc799b410b056c52124c52a3c7e8d98b12594",
+      "bytes": 12290459
+    },
+    {
+      "id": "bundled-facilities-seoul",
+      "path": "data/accessibility/seoul/seoul-facilities.geojson",
+      "sha256": "c031278f1f97e2c3a1b2f28048eec4cea44bd9006a071d5b57ba0e28ae1437fe",
+      "bytes": 20168118
+    },
+    {
+      "id": "bundled-access-reports",
+      "path": "data/precision/access-reports.json",
+      "sha256": "e33c45500f53d385a1884f1bad5fc130857bfd2de5a6d3e04c685f1764b7d6c3",
+      "bytes": 1144
+    },
+    {
+      "id": "bundled-precision-map",
+      "path": "data/precision/precision-map.geojson",
+      "sha256": "876ad5216be134b779aab319386e3addbd06a4500029eebec35256c91cf6c6c8",
+      "bytes": 15947826
+    },
+    {
+      "id": "bundled-crossings-review",
+      "path": "data/precision/crossings-review.geojson",
+      "sha256": "615aec503786dd1ea5d4e3ff5cbb5cbb7af34d50be5ad587fd2c4d1b17c96435",
+      "bytes": 811494
+    }
+  ],
+  "protected_code": {
+    "engine.js": "c80155cf3c6b2eab2536d9e1e52fbdc49674c6495286099ffc8fa04470573743",
+    "endpoint-routing.js": "3cd0f1f551b6b97d7c70a1f445cea0d3198a47a82ea7e5a412e4b0ab26072efb",
+    "access-review.js": "12b042aca301113e62c45c823751819a65fd96f3ca8f5331af91f27b5dc72493",
+    "precision-connections.js": "f6ed2afb3928c2b19bdb18b829620595b6677eb4b9b3be53f22a17a5d3b8ac74"
+  },
+  "field_verified": false,
+  "precision_role": "Review geometry and building-overlap screening; not a verified pedestrian network"
+}

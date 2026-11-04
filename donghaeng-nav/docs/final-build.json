@@ -1,5 +1,12 @@
 {
-  "version": "2026-11-01-navigation-accuracy-35m",
+  "version": "2026-11-04-main-navigation",
+  "main_source": "donghaeng-nav/dist/index.html",
+  "source_snapshot": {
+    "repository_commit": "7c16922c302bae11f89e009b5744d499dbd80cf1",
+    "file": "유석현유석현.html",
+    "sha256": "6e510f90d6793d399d327b99889b69c70f3cf0f33ea1f4aedc306b539d3d3b98",
+    "kind": "Existing standalone runtime snapshot; not a fresh DXF conversion or field verification"
+  },
   "facility_records": 17485,
   "counts": {
     "bench": 2288,
@@ -38,16 +45,14 @@
     "review_policy": "2026-10-31-v1",
     "new_sources_promoted": 0
   },
-  "html_sha256": "8bdb8147f5375f90d80456e657f67b4d72cf8ee5aa364671de0bf2f8a864c452",
-  "html_bytes": 12710531,
+  "precision_records": 16169,
+  "precision_field_verified": false,
+  "runtime_validation": "Exact snapshot hashes and graph binding; original GIS inputs not reprocessed",
+  "html_sha256": "deada400592c0e094ef9ba4bb01b05efd73e5ed9c18d10eb14ef092ac21ad07c",
+  "html_bytes": 15026403,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
-  "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer; file mode or connection failure",
-  "optional_condition_api": "Gemini via local server; condition text only",
-  "external_deployment": false,
-  "usage_guide_update": {
-    "date": "2026-11-04",
-    "scope": "Usage guide only; runtime data and navigation code preserved",
-    "verification": "donghaeng-nav/docs/usage-guide-review.md"
-  }
+  "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",
+  "optional_condition_api": "Gemini via server; optional direct key only in file/content mode",
+  "external_deployment": false
 }
