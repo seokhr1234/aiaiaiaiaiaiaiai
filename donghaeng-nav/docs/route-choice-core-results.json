@@ -1,7 +1,9 @@
 {
   "pass": true,
   "checks": [
-    "Distinct constrained alternatives on three-branch graph; 10 attempt bound, unchanged input graph and wheelchair exclusions",
+    "Distinct constrained alternatives on three-branch graph; 24 attempt bound, unchanged input graph and wheelchair exclusions",
+    "Geographically different slightly dominated alternatives retained; nested-loop duplicates rejected; exclusions preserve endpoints/input graph; attempt/time limits reported",
+    "Excluding the only admissible branch cannot substitute steep/stair routes; cancellation between searches discards the run",
     "No constrained path stays empty; duplicate single path stays one; generation cancellation",
     "Strict anonymous metric schema, unknown/duplicate IDs and constraint bypass rejected; explicit wheelchair and numeric limits preserved",
     "Portable file-mode comparison uses anonymous contract and rejects responses after key change (isolated JS, not native file browser)",

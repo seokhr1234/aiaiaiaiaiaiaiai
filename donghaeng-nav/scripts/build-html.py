@@ -78,10 +78,10 @@ def build():
         path.write_text(html, encoding='utf-8', newline='\n')
     facilities = json.loads(local_file(datasets['bundled-facilities-seoul']['path']).read_bytes())['features']
     manifest = {
-        'version': '2026-11-04-ai-route-choice',
+        'version': '2026-11-04-route-candidate-diversity',
         'main_source': 'donghaeng-nav/dist/index.html',
         'project_name': '동행길',
-        'route_choice': {'max_attempts': 10, 'max_candidates': 5, 'explanation': 'Decision-time final response; no new request on click', 'real_gemini_verified': False},
+        'route_choice': {'max_attempts': 24, 'time_budget_ms': 4000, 'max_candidates': 5, 'explanation': 'Decision-time final response; no new request on click', 'real_gemini_verified': False},
         'source_snapshot': lock['source'],
         'facility_records': len(facilities),
         'counts': dict(Counter(f['properties']['kind'] for f in facilities)),

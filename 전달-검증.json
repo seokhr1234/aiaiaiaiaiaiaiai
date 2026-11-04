@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "ba27b498dba0da5d6d70327327a1b1816aa4768a3bca3dacf30ca05f821e7d00",
+  "html_sha256": "c9e8f7587865a3d3ab11e55c82b909df6003f2aa251aea9d9e75a9210351d162",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -56,7 +56,7 @@
   "precision_runtime_included": true,
   "precision_runtime_loader_implemented": true,
   "main_promotion": {
-    "version": "2026-11-04-ai-route-choice",
+    "version": "2026-11-04-route-candidate-diversity",
     "review": "donghaeng-nav/docs/main-navigation-promotion.md",
     "original_gis_reprocessed": false,
     "field_verified": false

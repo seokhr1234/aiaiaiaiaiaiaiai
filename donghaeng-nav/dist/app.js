@@ -80,7 +80,7 @@ $('#search').onsubmit=async ev=>{
   const generated=await RouteCandidates.generate(E,EndpointRouting,graph,origin,destination.ll,p,{signal:controller.signal,onProgress:()=>$('#search-status').textContent='서로 다른 경로 후보를 찾고 있어요…'});
   if(!current())return;
   routes=generated.routes.map(r=>({...r,label:r.variantLabel}));selected=0;
-  routeSelection={source:'algorithm',selectedId:routes[0]?.candidateId||null,decision:null,createdAt:new Date().toISOString(),message:routes.length===1?'중복·비교 지표를 정리한 뒤 남은 후보가 하나예요.':'계산된 경사·미확인 구간과 거리를 비교한 결과예요.',summaries:routes.map(r=>({id:r.candidateId,...r.selectionMetrics}))};
+  routeSelection={source:'algorithm',selectedId:routes[0]?.candidateId||null,decision:null,createdAt:new Date().toISOString(),generation:{attempts:generated.attempts,...generated.diagnostics},message:routes.length===1?'현재 조건에서 구분되는 후보 1개를 찾았어요. 대체 경로를 더 찾지 못해 AI 비교는 하지 않았어요.':'계산된 경사·미확인 구간과 거리를 비교한 결과예요.',summaries:routes.map(r=>({id:r.candidateId,...r.selectionMetrics}))};
   if(routes.length>1){
    if(!PortableAI.isFile()||PortableAI.hasKey()){
     $('#search-status').textContent='Gemini가 '+routes.length+'개 후보를 비교하고 있어요…';searchLabel('AI가 경로를 비교하고 있어요…');
@@ -123,6 +123,12 @@ function showRouteReason(){
   if(chosen){box.append(textEl('p',record.decision.summary,'choice-summary'));for(const [key,title] of [['advantages','선택한 장점'],['tradeoffs','감수한 점'],['cautions','미확인 사항']]){box.append(textEl('h3',title));const list=textEl('ul','');record.decision[key].forEach(t=>list.append(textEl('li',t)));box.append(list)}}
   else{const comment=record.decision.comparisons.find(c=>c.id===r.candidateId);if(comment)box.append(textEl('p',comment.comment));}
  }else box.append(textEl('p',record.message,'choice-summary'));
+ if(record.generation){
+  const g=record.generation,detail=textEl('details','','choice-generation');detail.append(textEl('summary','후보 탐색 결과'));
+  detail.append(textEl('p',`같은 이동 조건으로 ${g.attempts}회 탐색해 비교 후보 ${record.summaries.length}개를 남겼어요. 같은 길 ${g.duplicates||0}회, 조건·연결 검사 제외 ${g.ineligible||0}회, 연결 경로 없음 ${g.noPath||0}회입니다.`));
+  if(g.excessiveDetours)detail.append(textEl('p','다른 수치상 이점 없이 우회가 크게 늘어나는 경로는 제외했어요.'));
+  detail.append(textEl('p',g.stopReason==='time-budget'||g.stopReason==='attempt-limit'?'탐색 한도 안의 결과이며 가능한 모든 길을 확인한 것은 아니에요.':'내장 도로망에서 탐색한 결과이며 실제 통행 가능 여부는 미확인입니다.'));box.append(detail);
+ }
  if(record.summaries.length){
   const detail=textEl('details','','choice-comparison');detail.append(textEl('summary','다른 후보와 수치 비교'));const table=textEl('table',''),head=textEl('tr','');['후보','거리','최대 참고 경사','미확인 구간'].forEach(t=>head.append(textEl('th',t)));table.append(head);
   for(const m of record.summaries){const row=textEl('tr','');[m.id.replace('R','경로 '),Math.round(m.distanceMeters)+'m',m.maxReferenceSlope===null?'미확인':m.maxReferenceSlope+'%',Math.round(m.unknownMeters)+'m'].forEach(t=>row.append(textEl('td',t)));table.append(row)}detail.append(table);

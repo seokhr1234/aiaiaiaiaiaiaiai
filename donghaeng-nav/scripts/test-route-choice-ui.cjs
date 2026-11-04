@@ -10,7 +10,7 @@ async function main(){
    if(mode==='slow')await new Promise(r=>release=r);
    const id=mode==='bad'?'R9':input.candidates[1].id;
    result={selectedId:id,summary:'경사와 미확인 구간을 비교해 두 번째 후보를 선택했습니다.',advantages:['참고 경사와 거리의 차이를 함께 비교했습니다.'],tradeoffs:['최단 거리보다 길 수 있습니다.'],cautions:['보도 실측·시설 상태는 확인되지 않았습니다.'],comparisons:input.candidates.map(c=>({id:c.id,comment:c.id===id?'이번 요청에서 선택한 후보입니다.':'거리와 참고 경사가 다른 후보입니다.'}))};
-  }else result={wheelchair:true,avoidSteps:true,avoidSlope:true,rest:false,restKind:'any',restMinutes:null,maxSlope:null,short:false,recognized:true};
+  }else result={wheelchair:!raw.includes('다리가'),avoidSteps:true,avoidSlope:true,rest:false,restKind:'any',restMinutes:null,maxSlope:null,short:false,recognized:true};
   return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(result)}]}}]}));
  }});
  await new Promise(r=>app.listen(0,'127.0.0.1',r));const url='http://127.0.0.1:'+app.address().port;let browser;
@@ -18,6 +18,7 @@ async function main(){
   browser=await pw.chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{}),args:['--no-sandbox']});const context=await browser.newContext({viewport:{width:1440,height:1000}});await context.route('https://**',r=>r.abort());
   const p=await context.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto(url+(process.env.ROUTE_CHOICE_BUNDLE?'/동행길-최종.html':'/'));await p.waitForFunction(()=>!document.querySelector('#find-route').disabled,null,{timeout:60000});
   await p.evaluate(()=>{
+   window.routeChoiceRuntime={graph,precisionController};
    const data={elements:[...[[1,37.6,127.04],[2,37.6,127.045],[3,37.6001,127.0425],[4,37.6015,127.0425],[5,37.5975,127.0425]].map(([id,lat,lon])=>({type:'node',id,lat,lon})),...[[3,'4.5%'],[4,'3%'],[5,'1%']].map(([n,incline],i)=>({type:'way',id:100+i,nodes:[1,n,2],tags:{highway:'footway',incline}}))]};graph=NavEngine.createGraph(data);graph.meta.allowAssistancePreview=true;
    const audit=PrecisionConnections.create({features:[]});precisionController={ready:Promise.resolve(),getAudit:()=>audit,reviewRoute:(r,a,b)=>PrecisionConnections.routeReview(audit,r,a,b)};
    setOrigin([37.6,127.04],'테스트 출발점');setDestination({ll:[37.6,127.045],name:'테스트 목적지'});
@@ -39,6 +40,13 @@ async function main(){
   checks.push('Comparison deadline/abort branch retains a valid algorithm result without losing candidates');
   mode='normal';const count=selections;await search('휠체어로 경사 0.5% 이하로 가고 싶어요.');assert.equal(selections,count);assert.equal(await p.evaluate(()=>routeSelection.source),'unavailable');assert.equal(await p.locator('.navigation-start').count(),0);await p.evaluate(()=>{startNavigation(false)});assert.equal(await p.evaluate(()=>navigationSession),null);
   checks.push('No eligible candidates are never sent to AI; review alternative cannot start live GPS');
+  await p.evaluate(()=>{graph=NavEngine.createGraph({elements:[{type:'node',id:1,lat:37.6,lon:127.04},{type:'node',id:2,lat:37.6,lon:127.045},{type:'way',id:10,nodes:[1,2],tags:{highway:'footway',incline:'1%'}}]});setOrigin([37.6,127.04],'테스트 출발점');setDestination({ll:[37.6,127.045],name:'테스트 목적지'})});
+  await search('휠체어로 경사를 피해서 가고 싶어요.');assert.equal(selections,count);assert.equal(await p.evaluate(()=>routes.length),1);assert.equal(await p.evaluate(()=>routeSelection.source),'algorithm');
+  await p.locator('.route-reason-button').click();assert.match(await p.locator('#route-reason-content').innerText(),/AI 비교는 하지 않았어요/);await p.locator('.choice-generation summary').click();assert.match(await p.locator('.choice-generation').innerText(),/후보 1개/);await p.keyboard.press('Escape');
+  checks.push('A genuine single route skips AI and explains bounded search/deduplication as algorithm output');
+  await p.evaluate(()=>{graph=window.routeChoiceRuntime.graph;precisionController=window.routeChoiceRuntime.precisionController;setOrigin(EndpointRouting.arrivalNear(graph,[37.5989,127.042]).ll,'루나밸리 부근 도로 기준점');chooseDestination('school')});
+  await search('다리가 아파서 오르막이 어려워요');assert.equal(selections,count+1);assert.equal(await p.evaluate(()=>routeSelection.source),'Gemini');assert(await p.evaluate(()=>routes.length>=3&&routes.length<=5));assert.equal(await p.evaluate(()=>profile.wheelchair),false);assert(await p.evaluate(()=>routes.every(r=>r.edges.every(e=>!e.steps))));
+  checks.push('Current runtime graph Luna-center road reference to school with leg-pain/uphill condition supplies multiple valid candidates to mocked Gemini; exact user pin/field access unverified');
   assert.deepEqual(errors,[]);const result={pass:true,checks,browserErrors:errors,syntheticRouteFixture:true,realGemini:false,physicalGps:false};fs.writeFileSync(path.join(out,'route-choice-ui-results.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
  }finally{release?.();await browser?.close();app.closeAllConnections();await new Promise(r=>app.close(r))}
 }

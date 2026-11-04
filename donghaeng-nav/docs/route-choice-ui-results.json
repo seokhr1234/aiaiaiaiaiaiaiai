@@ -6,7 +6,9 @@
     "Mobile reason dialog and invalid AI route ID use honest algorithm fallback",
     "Editing during comparison aborts selection and discards a late decision/explanation",
     "Comparison deadline/abort branch retains a valid algorithm result without losing candidates",
-    "No eligible candidates are never sent to AI; review alternative cannot start live GPS"
+    "No eligible candidates are never sent to AI; review alternative cannot start live GPS",
+    "A genuine single route skips AI and explains bounded search/deduplication as algorithm output",
+    "Current runtime graph Luna-center road reference to school with leg-pain/uphill condition supplies multiple valid candidates to mocked Gemini; exact user pin/field access unverified"
   ],
   "browserErrors": [],
   "syntheticRouteFixture": true,

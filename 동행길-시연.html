@@ -1170,31 +1170,68 @@ function eligible(E,r,p,audit,origin,destination){
  if(audit){const review=(Connections||root.PrecisionConnections).routeReview(audit,r,origin,destination);if(review?.needsGeometryReview)return false;}
  return true;
 }
-function overlap(a,b){const lengths=new Map();for(const e of a.edges){const k=e.parentKey||e.key;lengths.set(k,(lengths.get(k)||0)+e.d)}let shared=0;for(const e of b.edges){const k=e.parentKey||e.key,n=lengths.get(k)||0,d=Math.min(n,e.d);shared+=d;lengths.set(k,n-d)}return shared/Math.max(a.length,b.length,1)}
-async function generate(E,X,graph,origin,destination,p,{signal,maxAttempts=10,maxCandidates=5,timeBudgetMs=3000,onProgress=()=>{}}={}){
+function overlap(a,b){const lengths=new Map();for(const e of a.edges){const k=e.parentKey||e.key;lengths.set(k,(lengths.get(k)||0)+e.d)}let shared=0;for(const e of b.edges){const k=e.parentKey||e.key,n=lengths.get(k)||0,d=Math.min(n,e.d);shared+=d;lengths.set(k,n-d)}return shared/Math.max(Math.min(a.length,b.length),1)}
+const dimensions=r=>{const m=r.selectionMetrics;return [m.distanceMeters,m.maxReferenceSlope??Infinity,m.above3Meters,m.unknownMeters,m.unresolvedMeters,m.stairsMeters,m.roughMeters,m.connectionMeters]};
+function dominates(a,b){const x=dimensions(a),y=dimensions(b);return x.every((v,i)=>v<=y[i])&&x.some((v,i)=>v<y[i])}
+// Sample the route by distance rather than by the number of tiny OSM segments.
+function sections(r,count=5){const groups=Array.from({length:count},()=>[]);let distance=0;for(const e of r.edges){groups[Math.min(count-1,Math.floor((distance+e.d/2)/Math.max(r.length,1)*count))].push(e);distance+=e.d}return groups.filter(g=>g.length)}
+function branchKeys(graph,r){
+ const endpoints=new Set([r.edges[0]?.key,r.edges.at(-1)?.key]),items=[];let distance=0;
+ r.edges.forEach((e,i)=>{distance+=e.d;const key=e.parentKey||e.key;const branching=[r.ids[i],r.ids[i+1]].some(id=>new Set((graph.nodes.get(id)?.edges||[]).map(x=>x.to)).size>2);if(!endpoints.has(key)&&branching&&!items.some(x=>x.key===key))items.push({key,position:(distance-e.d/2)/Math.max(r.length,1)})});
+ const selected=[];for(const target of [.5,.25,.75,.1,.9,.4,.6]){const item=items.filter(x=>!selected.includes(x.key)).sort((a,b)=>Math.abs(a.position-target)-Math.abs(b.position-target))[0];if(item)selected.push(item.key)}return selected;
+}
+async function generate(E,X,graph,origin,destination,p,{signal,maxAttempts=24,maxCandidates=5,timeBudgetMs=4000,onProgress=()=>{}}={}){
  if(signal?.aborted)throw new DOMException('Aborted','AbortError');
- const profile=E.wheelchairProfile(p),working={...graph,meta:{...graph.meta,allowAssistancePreview:false}},pool=[],all=[],started=Date.now();let attempts=0;
- const audit=graph.meta?.buildingAudit;
- function acceptable(r){return eligible(E,r,profile,audit,origin,destination);}
- function add(r,label){r={...r,p:{...profile},variantLabel:label};all.push(r);if(!acceptable(r))return;const m=metrics(E,r);r.selectionMetrics=m;if(pool.some(x=>overlap(x,r)>.9))return;pool.push(r)}
+ const profile=E.wheelchairProfile(p),working={...graph,meta:{...graph.meta,allowAssistancePreview:false}},pool=[],started=Date.now();let attempts=0;
+ const diagnostics={successful:0,ineligible:0,duplicates:0,noPath:0,distinct:0,excessiveDetours:0,stopReason:null};
+ function add(r,label){
+  diagnostics.successful++;r={...r,p:{...profile},variantLabel:label};
+  if(!eligible(E,r,profile,graph.meta?.buildingAudit,origin,destination)){diagnostics.ineligible++;return false}
+  r.selectionMetrics=metrics(E,r);
+  if(pool.some(x=>overlap(x,r)>.9)){diagnostics.duplicates++;return false}pool.push(r);return true;
+ }
+ const unexpected=error=>error instanceof ReferenceError||error instanceof TypeError;
  let base;
- try{attempts++;base=X.route(E,working,origin,destination,profile);add(base,'기본 후보')}catch(error){if(error instanceof ReferenceError||error instanceof TypeError)throw error;if(signal?.aborted)throw new DOMException('Aborted','AbortError');return {routes:[],attempts,error:error.message};}
- const penaltyMap=(edges,factor=2.8)=>new Map(edges.map(e=>[e.key,factor]));
- const plans=[['경사 부담 우선',penaltyMap(base.edges.filter(e=>E.screeningGrade(e)>2))],['미확인 구간 최소화',penaltyMap(base.edges.filter(e=>E.slopeOf(e)===null||E.unresolvedSurfaceMeters(e)>0))],... [2.8,8,16].map(factor=>['다른 도로 연결',penaltyMap(base.edges,factor)])];
+ try{attempts++;base=X.route(E,working,origin,destination,profile);add(base,'기본 후보')}catch(error){if(unexpected(error))throw error;if(signal?.aborted)throw new DOMException('Aborted','AbortError');diagnostics.noPath++;diagnostics.stopReason='no-connected-route';return {routes:[],attempts,error:error.message,diagnostics};}
+ const penaltyMap=(edges,factor=2.8)=>new Map(edges.map(e=>[e.parentKey||e.key,factor]));
+ const cuts=branchKeys(graph,base).map(key=>({label:'다른 갈림길',excludedKeys:new Set([key])}));
+ const targeted=sections(base).map(edges=>({label:'다른 구간 연결',penalty:penaltyMap(edges,16)}));
+ const plans=[
+  {label:'경사 부담 우선',penalty:penaltyMap(base.edges.filter(e=>E.screeningGrade(e)>2))},
+  {label:'미확인 구간 최소화',penalty:penaltyMap(base.edges.filter(e=>E.slopeOf(e)===null||E.unresolvedSurfaceMeters(e)>0))},
+  ...cuts.slice(0,3),...targeted,
+  ...[2.8,8,16].map(factor=>({label:'다른 도로 연결',penalty:penaltyMap(base.edges,factor)})),...cuts.slice(3)
+ ];
  const seen=new Set();
- while(attempts<maxAttempts&&Date.now()-started<timeBudgetMs){
+ while(plans.length&&attempts<maxAttempts&&Date.now()-started<timeBudgetMs&&pool.length<8){
   if(signal?.aborted)throw new DOMException('Aborted','AbortError');
-  const plan=plans.shift();if(!plan)break;const [label,penalty]=plan,token=[...penalty].sort().join('|');if(!penalty.size||seen.has(token))continue;seen.add(token);
+  const plan=plans.shift(),{label,penalty,excludedKeys}=plan;
+  const token=excludedKeys?'exclude:'+[...excludedKeys].sort().join('|'):'penalty:'+JSON.stringify([...penalty].sort());
+  if(!(excludedKeys?.size||penalty?.size)||seen.has(token))continue;seen.add(token);
   onProgress(attempts);await new Promise(resolve=>setTimeout(resolve,0));if(signal?.aborted)throw new DOMException('Aborted','AbortError');
+  if(Date.now()-started>=timeBudgetMs)break;
   attempts++;
-  try{const r=X.route(E,working,origin,destination,profile,{penalty});const previous=all.length;add(r,label);if(attempts<maxAttempts&&all.length>previous){const cumulative=new Map(penalty);const factor=Math.max(...penalty.values());r.edges.forEach(e=>cumulative.set(e.key,factor));plans.push(['다른 연결 후보',cumulative]);}}
-  catch{/* A constrained alternative may not exist. Never relax the profile. */}
+  try{
+   const r=X.route(E,working,origin,destination,profile,{penalty,excludedKeys});
+   if(add(r,label)){
+    // An alternative can expose a branch absent from the initial route.
+    for(const key of branchKeys(graph,r).slice(0,2))plans.push({label:'다른 갈림길',excludedKeys:new Set([key])});
+    if(penalty){const cumulative=new Map(penalty);r.edges.forEach(e=>cumulative.set(e.parentKey||e.key,8));plans.push({label:'다른 연결 후보',penalty:cumulative})}
+   }
+  }catch(error){if(unexpected(error))throw error;diagnostics.noPath++;}
  }
  const score=r=>[profile.wheelchair?r.selectionMetrics.unresolvedMeters:0,r.edges.reduce((total,e)=>total+E.cost(e,profile),0),r.totalLength];
- pool.sort((a,b)=>{const x=score(a),y=score(b);for(let i=0;i<x.length;i++)if(x[i]!==y[i])return x[i]-y[i];return 0});
- const dimensions=r=>[r.selectionMetrics.distanceMeters,r.selectionMetrics.maxReferenceSlope??Infinity,r.selectionMetrics.above3Meters,r.selectionMetrics.unknownMeters,r.selectionMetrics.unresolvedMeters,r.selectionMetrics.connectionMeters];
- const frontier=pool.filter(r=>!pool.some(other=>{if(other===r)return false;const a=dimensions(other),b=dimensions(r);return a.every((v,i)=>v<=b[i])&&a.some((v,i)=>v<b[i]);}));
- return {routes:frontier.slice(0,maxCandidates).map((r,i)=>({...r,candidateId:'R'+(i+1)})),attempts};
+ const compare=(a,b)=>{const x=score(a),y=score(b);for(let i=0;i<x.length;i++)if(x[i]!==y[i])return x[i]-y[i];return 0};pool.sort(compare);
+ // Keep geographically different backups even if all measured figures are a
+ // little worse. Missing curb/access evidence is not captured by those figures.
+ // Remove only substantially longer alternatives with no measured benefit.
+ const useful=pool.filter(r=>!pool.some(other=>other!==r&&r.selectionMetrics.distanceMeters>other.selectionMetrics.distanceMeters*1.5+100&&dominates(other,r)));
+ diagnostics.distinct=pool.length;diagnostics.excessiveDetours=pool.length-useful.length;
+ diagnostics.stopReason=pool.length>=8?'candidate-pool':Date.now()-started>=timeBudgetMs?'time-budget':attempts>=maxAttempts?'attempt-limit':'plans-exhausted';
+ const frontier=useful.filter(r=>!useful.some(other=>other!==r&&dominates(other,r)));
+ const backups=useful.filter(r=>!frontier.includes(r));
+ const chosen=[...frontier,...backups].slice(0,Math.max(1,Math.min(5,maxCandidates))).sort(compare);
+ return {routes:chosen.map((r,i)=>({...r,candidateId:'R'+(i+1)})),attempts,diagnostics};
 }
 return {generate,metrics,eligible,overlap};
 });
@@ -1368,7 +1405,7 @@ function nearestSegment(graph,ll,profile={}){
  return best;
 }
 function arrivalNear(graph,ll){const s=nearestSegment(graph,ll);return {ll:s.ll,referenceGap:s.distance,wayId:s.edge.id,roadName:s.edge.name,fieldVerified:false,notice:'등록 도로 선분 위 도착 기준점 · 실제 보도·출입구 미확인'}}
-function route(E,graph,origin,destination,profile,{penalty}={}){
+function route(E,graph,origin,destination,profile,{penalty,excludedKeys}={}){
  if(graph.meta?.buildingAudit)graph=graph.meta.buildingAudit.filterGraph(graph);
  const first=nearestSegment(graph,origin,profile),last=nearestSegment(graph,destination,profile),nodes=new Map(graph.nodes),main=new Set(graph.main),groups=new Map();let serial=0;
  for(const s of [first,last]){s.id='endpoint-projection-'+(++serial);while(nodes.has(s.id))s.id+='-';nodes.set(s.id,{id:s.id,ll:s.ll,tags:{},edges:[]});main.add(s.id);if(!groups.has(s.edge.key))groups.set(s.edge.key,[]);groups.get(s.edge.key).push(s)}
@@ -1379,6 +1416,9 @@ function route(E,graph,origin,destination,profile,{penalty}={}){
   edit(base.node.id).edges=edit(base.node.id).edges.filter(e=>!(e.key===forward.key&&e.to===base.end.id));edit(base.end.id).edges=edit(base.end.id).edges.filter(e=>!(e.key===forward.key&&e.to===base.node.id));
   for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],d=forward.d*(b.t-a.t);edit(a.id).edges.push({...forward,to:b.id,d,parentKey:forward.key});edit(b.id).edges.push({...reverse,to:a.id,d,parentKey:forward.key})}
  }
+ // Exclusions apply after projecting the same endpoints, in both directions.
+ // A candidate search must not silently snap onto a different parallel road.
+ if(excludedKeys?.size)for(const [id,node] of nodes){const edges=node.edges.filter(e=>!excludedKeys.has(e.parentKey||e.key));if(edges.length!==node.edges.length)nodes.set(id,{...node,edges})}
  let internal=profile;if(profile.rest&&profile.restMinutes){const budget=profile.restMinutes-first.distance/(profile.speed||65);if(budget<=0)throw Error('출발 연결만으로 요청한 첫 휴식 간격을 넘어요. 출발 위치를 확인해 주세요.');internal={...profile,restMinutes:budget}}const working={...graph,nodes,main};if(profile.rest&&graph.meta?.buildingAudit){const eligible=place=>{const near=E.nearest(working,place.ll,profile);return near&&graph.meta.buildingAudit.assess(near.node.ll,place.ll).status!=='building_overlap'};working.benches=(graph.benches||[]).filter(eligible);if(graph.restPlaces)working.restPlaces=graph.restPlaces.filter(eligible)}const result=E.route(working,first.ll,last.ll,internal,penalty),gaps=[first.distance,last.distance];if(result.restStop)result.restStop.firstDistance+=first.distance;
  result.gaps=gaps;result.totalLength=result.length+gaps[0]+gaps[1]+(result.restStop?2*result.restStop.gap:0);result.minutes=Math.max(1,Math.ceil(result.totalLength/(profile.speed||65)));result.endpointProjection={version:1,origin:{ll:first.ll,gap:first.distance,wayId:first.edge.id},destination:{ll:last.ll,gap:last.distance,wayId:last.edge.id},fieldVerified:false};
  return result;
@@ -1660,7 +1700,7 @@ $('#search').onsubmit=async ev=>{
   const generated=await RouteCandidates.generate(E,EndpointRouting,graph,origin,destination.ll,p,{signal:controller.signal,onProgress:()=>$('#search-status').textContent='서로 다른 경로 후보를 찾고 있어요…'});
   if(!current())return;
   routes=generated.routes.map(r=>({...r,label:r.variantLabel}));selected=0;
-  routeSelection={source:'algorithm',selectedId:routes[0]?.candidateId||null,decision:null,createdAt:new Date().toISOString(),message:routes.length===1?'중복·비교 지표를 정리한 뒤 남은 후보가 하나예요.':'계산된 경사·미확인 구간과 거리를 비교한 결과예요.',summaries:routes.map(r=>({id:r.candidateId,...r.selectionMetrics}))};
+  routeSelection={source:'algorithm',selectedId:routes[0]?.candidateId||null,decision:null,createdAt:new Date().toISOString(),generation:{attempts:generated.attempts,...generated.diagnostics},message:routes.length===1?'현재 조건에서 구분되는 후보 1개를 찾았어요. 대체 경로를 더 찾지 못해 AI 비교는 하지 않았어요.':'계산된 경사·미확인 구간과 거리를 비교한 결과예요.',summaries:routes.map(r=>({id:r.candidateId,...r.selectionMetrics}))};
   if(routes.length>1){
    if(!PortableAI.isFile()||PortableAI.hasKey()){
     $('#search-status').textContent='Gemini가 '+routes.length+'개 후보를 비교하고 있어요…';searchLabel('AI가 경로를 비교하고 있어요…');
@@ -1703,6 +1743,12 @@ function showRouteReason(){
   if(chosen){box.append(textEl('p',record.decision.summary,'choice-summary'));for(const [key,title] of [['advantages','선택한 장점'],['tradeoffs','감수한 점'],['cautions','미확인 사항']]){box.append(textEl('h3',title));const list=textEl('ul','');record.decision[key].forEach(t=>list.append(textEl('li',t)));box.append(list)}}
   else{const comment=record.decision.comparisons.find(c=>c.id===r.candidateId);if(comment)box.append(textEl('p',comment.comment));}
  }else box.append(textEl('p',record.message,'choice-summary'));
+ if(record.generation){
+  const g=record.generation,detail=textEl('details','','choice-generation');detail.append(textEl('summary','후보 탐색 결과'));
+  detail.append(textEl('p',`같은 이동 조건으로 ${g.attempts}회 탐색해 비교 후보 ${record.summaries.length}개를 남겼어요. 같은 길 ${g.duplicates||0}회, 조건·연결 검사 제외 ${g.ineligible||0}회, 연결 경로 없음 ${g.noPath||0}회입니다.`));
+  if(g.excessiveDetours)detail.append(textEl('p','다른 수치상 이점 없이 우회가 크게 늘어나는 경로는 제외했어요.'));
+  detail.append(textEl('p',g.stopReason==='time-budget'||g.stopReason==='attempt-limit'?'탐색 한도 안의 결과이며 가능한 모든 길을 확인한 것은 아니에요.':'내장 도로망에서 탐색한 결과이며 실제 통행 가능 여부는 미확인입니다.'));box.append(detail);
+ }
  if(record.summaries.length){
   const detail=textEl('details','','choice-comparison');detail.append(textEl('summary','다른 후보와 수치 비교'));const table=textEl('table',''),head=textEl('tr','');['후보','거리','최대 참고 경사','미확인 구간'].forEach(t=>head.append(textEl('th',t)));table.append(head);
   for(const m of record.summaries){const row=textEl('tr','');[m.id.replace('R','경로 '),Math.round(m.distanceMeters)+'m',m.maxReferenceSlope===null?'미확인':m.maxReferenceSlope+'%',Math.round(m.unknownMeters)+'m'].forEach(t=>row.append(textEl('td',t)));table.append(row)}detail.append(table);

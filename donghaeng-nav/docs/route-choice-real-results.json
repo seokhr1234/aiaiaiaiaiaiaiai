@@ -3,8 +3,27 @@
   "cases": [
     {
       "name": "station-library",
-      "attempts": 10,
-      "eligibleCandidates": 2,
+      "condition": "짧은 길로 가고 싶어요",
+      "origin": [
+        37.60192731294593,
+        127.04142695101596
+      ],
+      "destination": [
+        37.604059195143165,
+        127.0418332514647
+      ],
+      "attempts": 22,
+      "elapsedMs": 3605,
+      "eligibleCandidates": 5,
+      "diagnostics": {
+        "successful": 22,
+        "ineligible": 0,
+        "duplicates": 14,
+        "noPath": 0,
+        "distinct": 8,
+        "excessiveDetours": 2,
+        "stopReason": "candidate-pool"
+      },
       "summary": [
         {
           "distanceMeters": 345.1,
@@ -12,6 +31,32 @@
           "maxReferenceSlope": 6.4,
           "above3Meters": 265.2,
           "unknownMeters": 164.6,
+          "unresolvedMeters": 0,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 350.7,
+          "minutes": 6,
+          "maxReferenceSlope": 8.9,
+          "above3Meters": 238.7,
+          "unknownMeters": 90.2,
+          "unresolvedMeters": 0,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 374.7,
+          "minutes": 6,
+          "maxReferenceSlope": 6.4,
+          "above3Meters": 285.4,
+          "unknownMeters": 189.9,
           "unresolvedMeters": 0,
           "stairsMeters": 0,
           "roughMeters": 0,
@@ -31,14 +76,46 @@
           "connectionMeters": 0,
           "restFulfilled": false,
           "fieldVerified": false
+        },
+        {
+          "distanceMeters": 695.7,
+          "minutes": 11,
+          "maxReferenceSlope": 8.2,
+          "above3Meters": 349.4,
+          "unknownMeters": 161.4,
+          "unresolvedMeters": 0,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
         }
       ],
       "error": null
     },
     {
       "name": "station-school",
-      "attempts": 10,
-      "eligibleCandidates": 4,
+      "condition": "경사를 피해서 가고 싶어요",
+      "origin": [
+        37.60192731294593,
+        127.04142695101596
+      ],
+      "destination": [
+        37.595671460099574,
+        127.0383308790316
+      ],
+      "attempts": 11,
+      "elapsedMs": 1596,
+      "eligibleCandidates": 5,
+      "diagnostics": {
+        "successful": 11,
+        "ineligible": 0,
+        "duplicates": 3,
+        "noPath": 0,
+        "distinct": 8,
+        "excessiveDetours": 0,
+        "stopReason": "candidate-pool"
+      },
       "summary": [
         {
           "distanceMeters": 833.2,
@@ -47,6 +124,32 @@
           "above3Meters": 334.4,
           "unknownMeters": 236,
           "unresolvedMeters": 58.3,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 752,
+          "minutes": 12,
+          "maxReferenceSlope": 8.8,
+          "above3Meters": 301.9,
+          "unknownMeters": 214.1,
+          "unresolvedMeters": 50,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 883.8,
+          "minutes": 14,
+          "maxReferenceSlope": 8.8,
+          "above3Meters": 298.1,
+          "unknownMeters": 220.9,
+          "unresolvedMeters": 50,
           "stairsMeters": 0,
           "roughMeters": 0,
           "connectionMeters": 0,
@@ -67,25 +170,12 @@
           "fieldVerified": false
         },
         {
-          "distanceMeters": 1068.1,
-          "minutes": 17,
-          "maxReferenceSlope": 9.7,
-          "above3Meters": 244.2,
-          "unknownMeters": 165.6,
-          "unresolvedMeters": 50,
-          "stairsMeters": 0,
-          "roughMeters": 0,
-          "connectionMeters": 0,
-          "restFulfilled": false,
-          "fieldVerified": false
-        },
-        {
-          "distanceMeters": 1127.8,
+          "distanceMeters": 1149.3,
           "minutes": 18,
-          "maxReferenceSlope": 6.5,
-          "above3Meters": 451.3,
-          "unknownMeters": 266.5,
-          "unresolvedMeters": 56.5,
+          "maxReferenceSlope": 9.7,
+          "above3Meters": 276.7,
+          "unknownMeters": 187.5,
+          "unresolvedMeters": 58.3,
           "stairsMeters": 0,
           "roughMeters": 0,
           "connectionMeters": 0,
@@ -97,10 +187,124 @@
     },
     {
       "name": "wheelchair-school",
+      "condition": "휠체어로 경사를 피해 주세요",
+      "origin": [
+        37.60192731294593,
+        127.04142695101596
+      ],
+      "destination": [
+        37.595671460099574,
+        127.0383308790316
+      ],
       "attempts": 1,
+      "elapsedMs": 290,
       "eligibleCandidates": 0,
+      "diagnostics": {
+        "successful": 0,
+        "ineligible": 0,
+        "duplicates": 0,
+        "noPath": 1,
+        "distinct": 0,
+        "excessiveDetours": 0,
+        "stopReason": "no-connected-route"
+      },
       "summary": [],
       "error": "현재 자료에서 휠체어 경사 회피 조건을 만족하는 우회 후보를 찾지 못했어요. 급경사 회피 조건을 풀어 경로를 제시하지 않습니다. 출발·도착 위치와 현장 접근 동선을 확인해 주세요."
+    },
+    {
+      "name": "luna-center-school",
+      "condition": "다리가 아파서 오르막이 어려워요",
+      "origin": [
+        37.5989000008173,
+        127.04200478213971
+      ],
+      "destination": [
+        37.595671460099574,
+        127.0383308790316
+      ],
+      "attempts": 13,
+      "elapsedMs": 1929,
+      "eligibleCandidates": 5,
+      "diagnostics": {
+        "successful": 13,
+        "ineligible": 0,
+        "duplicates": 5,
+        "noPath": 0,
+        "distinct": 8,
+        "excessiveDetours": 1,
+        "stopReason": "candidate-pool"
+      },
+      "summary": [
+        {
+          "distanceMeters": 813.3,
+          "minutes": 19,
+          "maxReferenceSlope": 7.9,
+          "above3Meters": 271.1,
+          "unknownMeters": 198.2,
+          "unresolvedMeters": 56.5,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 845.9,
+          "minutes": 19,
+          "maxReferenceSlope": 6.5,
+          "above3Meters": 219.6,
+          "unknownMeters": 141.6,
+          "unresolvedMeters": 56.5,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 755.4,
+          "minutes": 17,
+          "maxReferenceSlope": 7.9,
+          "above3Meters": 339.7,
+          "unknownMeters": 250.2,
+          "unresolvedMeters": 56.5,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 837.2,
+          "minutes": 19,
+          "maxReferenceSlope": 7.9,
+          "above3Meters": 306.1,
+          "unknownMeters": 198.2,
+          "unresolvedMeters": 56.5,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 906.7,
+          "minutes": 21,
+          "maxReferenceSlope": 15.7,
+          "above3Meters": 354,
+          "unknownMeters": 276,
+          "unresolvedMeters": 56.5,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        }
+      ],
+      "error": null,
+      "previousCandidateCount": 1,
+      "baselineCommit": "7da3bc0928b2f9169c6627cc7f351b39bc0b890b",
+      "endpointNote": "Road-projected reference in Luna center/south area, not the user's exact pin or a verified entrance"
     }
   ],
   "scope": "Current runtime graph, road-projected test endpoints; not physical field verification",

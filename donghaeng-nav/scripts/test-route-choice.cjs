@@ -7,12 +7,28 @@ async function main(){
  const checks=[],g=fixture(),from=[37.6,127.04],to=[37.6,127.045],p=E.wheelchairProfile(E.parseState('휠체어로 경사를 피하고 싶어요.'));
  g.meta.buildingAudit=require('../dist/precision-connections').create({features:[]});
  const before=JSON.stringify([...g.nodes]),generated=await C.generate(E,X,g,from,to,p,{timeBudgetMs:10000});
- assert(generated.routes.length>=3&&generated.routes.length<=5);assert(generated.attempts<=10);assert.equal(JSON.stringify([...g.nodes]),before);
+ assert(generated.routes.length>=3&&generated.routes.length<=5);assert(generated.attempts<=24);assert.equal(JSON.stringify([...g.nodes]),before);
  const costs=generated.routes.map(r=>r.edges.reduce((sum,e)=>sum+E.cost(e,p),0));assert.deepEqual(costs,[...costs].sort((a,b)=>a-b));assert(E.cost({d:100,incline:null},p)>=1000);
  for(const r of generated.routes){assert(C.eligible(E,r,p));assert(r.edges.every(e=>!e.steps&&E.screeningGrade(e)<=5));assert(!r.assistancePreview)}
- checks.push('Distinct constrained alternatives on three-branch graph; 10 attempt bound, unchanged input graph and wheelchair exclusions');
+ checks.push('Distinct constrained alternatives on three-branch graph; 24 attempt bound, unchanged input graph and wheelchair exclusions');
+ // Three separate roads with the same slope: strict Pareto pruning used to
+ // discard the longer two, leaving Gemini nothing to compare.
+ const dominated=fixture();for(const node of dominated.nodes.values())for(const edge of node.edges)edge.incline=2;
+ const alternatives=await C.generate(E,X,dominated,from,to,p);
+ assert.equal(alternatives.routes.length,3);assert(alternatives.routes.every(r=>r.selectionMetrics.maxReferenceSlope===2));
+ for(const [i,a] of alternatives.routes.entries())for(const b of alternatives.routes.slice(i+1))assert(C.overlap(a,b)<=.9);
+ const only=alternatives.routes[0],loop={...only,edges:[...only.edges,...only.edges],length:only.length*2};assert.equal(C.overlap(only,loop),1);
+ const snapshot=JSON.stringify([...dominated.nodes]),blockedKey=only.edges[0].key;
+ const diverted=X.route(E,dominated,from,to,p,{excludedKeys:new Set([blockedKey])});assert(!diverted.edges.some(e=>(e.parentKey||e.key)===blockedKey));assert.equal(JSON.stringify([...dominated.nodes]),snapshot);
+ const limited=await C.generate(E,X,dominated,from,to,p,{maxAttempts:1});assert.equal(limited.attempts,1);assert.equal(limited.routes.length,1);assert.equal(limited.diagnostics.stopReason,'attempt-limit');
+ const timed=await C.generate(E,X,dominated,from,to,p,{timeBudgetMs:0});assert.equal(timed.attempts,1);assert.equal(timed.diagnostics.stopReason,'time-budget');
+ checks.push('Geographically different slightly dominated alternatives retained; nested-loop duplicates rejected; exclusions preserve endpoints/input graph; attempt/time limits reported');
+ const constrained=fixture();for(const node of constrained.nodes.values())for(const edge of node.edges){edge.incline=edge.id===100?2:7;if(edge.id===102)edge.steps=true}
+ const safe=X.route(E,constrained,from,to,p),blocked=new Set(safe.edges.map(e=>e.key));assert.throws(()=>X.route(E,constrained,from,to,p,{excludedKeys:blocked}));
+ const during=new AbortController();await assert.rejects(()=>C.generate(E,X,dominated,from,to,p,{signal:during.signal,onProgress:()=>during.abort()}),{name:'AbortError'});
+ checks.push('Excluding the only admissible branch cannot substitute steep/stair routes; cancellation between searches discards the run');
  const restricted=await C.generate(E,X,g,from,to,{...p,maxSlope:.5});assert.equal(restricted.routes.length,0);
- const one=await C.generate(E,X,E.createGraph({elements:[{type:'node',id:1,lat:37.6,lon:127.04},{type:'node',id:2,lat:37.6,lon:127.045},{type:'way',id:10,nodes:[1,2],tags:{highway:'footway',incline:'1%'}}]}),from,to,p);assert.equal(one.routes.length,1);
+ const one=await C.generate(E,X,E.createGraph({elements:[{type:'node',id:1,lat:37.6,lon:127.04},{type:'node',id:2,lat:37.6,lon:127.045},{type:'way',id:10,nodes:[1,2],tags:{highway:'footway',incline:'1%'}}]}),from,to,p);assert.equal(one.routes.length,1);assert(one.diagnostics.duplicates>0);
  const abort=new AbortController();abort.abort();await assert.rejects(()=>C.generate(E,X,g,from,to,p,{signal:abort.signal}),{name:'AbortError'});
  checks.push('No constrained path stays empty; duplicate single path stays one; generation cancellation');
  const input=R.input('휠체어로 경사를 피해 주세요.',p,generated.routes),reply=decision(input);assert.equal(R.validateDecision(reply,input.candidates).selectedId,reply.selectedId);

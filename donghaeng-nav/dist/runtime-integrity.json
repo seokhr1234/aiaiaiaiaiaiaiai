@@ -58,10 +58,10 @@
   ],
   "protected_code": {
     "engine.js": "a3825aad705ea36974d680d5ef6d667a22e5991576e2f689b71031af423fae03",
-    "endpoint-routing.js": "9df46c529bb35218fdf46725d9f8b193fe1242750aba99961dc1d8a842a666b2",
+    "endpoint-routing.js": "6316704c18220f12bfefbc124a7e570902aa1b5ad80d621fbfa6ba15cd950536",
     "access-review.js": "12b042aca301113e62c45c823751819a65fd96f3ca8f5331af91f27b5dc72493",
     "precision-connections.js": "f6ed2afb3928c2b19bdb18b829620595b6677eb4b9b3be53f22a17a5d3b8ac74",
-    "route-candidates.js": "3adfe5c1815e95a8c13b848541f87325fe3b0fc14d655c0c11779cefeeff0e98",
+    "route-candidates.js": "e8a3985a3e5f7642c04c747d601d545d841029ee5815ecf6d0c2b17afcdbbf08",
     "route-choice.js": "c0c4f3273e6dc63ed48f93464b4b363147b3dfc8e45e95ee13c8cca7b8f4573d",
     "condition-ai.js": "6af1d3a63ec647e26cdd3d688198908fa8a456d9266ec7ea803471ea6c4e1062"
   },
@@ -69,13 +69,14 @@
   "precision_role": "Review geometry and building-overlap screening; not a verified pedestrian network",
   "code_revision": {
     "date": "2026-11-04",
-    "change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged",
+    "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
     "validation": [
       "docs/route-choice-core-results.json",
       "docs/route-choice-ui-results.json",
       "docs/route-choice-real-results.json",
       "docs/navigation-core-results.json"
     ],
-    "field_verified": false
+    "field_verified": false,
+    "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
   }
 }

@@ -1,9 +1,10 @@
 {
-  "version": "2026-11-04-ai-route-choice",
+  "version": "2026-11-04-route-candidate-diversity",
   "main_source": "donghaeng-nav/dist/index.html",
   "project_name": "동행길",
   "route_choice": {
-    "max_attempts": 10,
+    "max_attempts": 24,
+    "time_budget_ms": 4000,
     "max_candidates": 5,
     "explanation": "Decision-time final response; no new request on click",
     "real_gemini_verified": false
@@ -55,8 +56,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact snapshot hashes and graph binding; original GIS inputs not reprocessed",
-  "html_sha256": "ba27b498dba0da5d6d70327327a1b1816aa4768a3bca3dacf30ca05f821e7d00",
-  "html_bytes": 15046067,
+  "html_sha256": "c9e8f7587865a3d3ab11e55c82b909df6003f2aa251aea9d9e75a9210351d162",
+  "html_bytes": 15050149,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",
