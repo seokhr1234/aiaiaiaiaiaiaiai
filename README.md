@@ -4,7 +4,7 @@
 
 전체 변경은 [수정이력.md](수정이력.md), 작업 규칙은 [AGENTS.md](AGENTS.md), 이번 전환의 근거와 검사 범위는 [메인 전환 기록](donghaeng-nav/docs/main-navigation-promotion.md)을 참고하세요.
 
-최신 발표자료: [동행길 발표자료 수정본](동행길_발표자료_수정본.pptx).
+최신 발표자료: [동행길 발표자료 최종본](동행길_발표자료_최종.pptx).
 
 ## 실행
 
