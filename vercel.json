@@ -3,6 +3,7 @@
   "framework": null,
   "buildCommand": "",
   "installCommand": "",
+  "ignoreCommand": "git log -1 --pretty=%B | grep -Fq '[skip vercel]'",
   "outputDirectory": "donghaeng-nav/dist",
   "functions": {
     "api/index.mjs": {

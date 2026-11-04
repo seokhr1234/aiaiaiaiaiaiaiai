@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "4a2686b89e5f3dcfa5ad5efe423499954ceffe74b1ff0552360374db07cb74f9",
+  "html_sha256": "8bdb8147f5375f90d80456e657f67b4d72cf8ee5aa364671de0bf2f8a864c452",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -46,5 +46,10 @@
     "source": "user report",
     "adjusted_policy_retested_on_device": false,
     "complete_field_navigation_verified": false
+  },
+  "usage_guide_update": {
+    "date": "2026-11-04",
+    "scope": "Usage guide only; runtime data and navigation code preserved",
+    "verification": "donghaeng-nav/docs/usage-guide-review.md"
   }
 }

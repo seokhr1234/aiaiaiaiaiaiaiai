@@ -53,7 +53,27 @@ $('#save-route').onclick=()=>{const r=routes[selected];if(!r)return;const item={
 $$('[data-view]').forEach(b=>b.onclick=()=>{if(isMobileUI())setMobileMode(b.dataset.view==='saved'?'saved':routes.length?'results':'input');$$('[data-view]').forEach(x=>x.classList.toggle('active',x===b));$('#planner').hidden=b.dataset.view!=='route';$('#saved-view').hidden=b.dataset.view!=='saved';$('.intro').hidden=b.dataset.view==='saved';if(b.dataset.view==='saved')renderSaved()});
 function renderSaved(){const c=$('#saved-list'),items=read('donghaeng.school.routes');c.replaceChildren();if(!items.length)c.append(textEl('p','경로 상세에서 저장하면 여기에 나타나요.','empty-note'));items.forEach(item=>{const box=textEl('div','','saved-item');box.append(textEl('b',item.destination.name),textEl('p',item.condition));const open=textEl('button','이 조건으로 다시 찾기 →');open.onclick=()=>{setOrigin(item.origin,item.originName);setDestination(item.destination);setCondition(item.condition);$('[data-view="route"]').click();$('#search').requestSubmit()};const del=textEl('button','삭제');del.onclick=()=>{if(write('donghaeng.school.routes',items.filter(x=>x.id!==item.id)))renderSaved()};box.append(open,del);c.append(box)})}
 function info(title,text){$('#info-title').textContent=title;$('#info-text').textContent=text;$('#info-dialog').showModal()}
-$('#about').onclick=()=>info('월곡역에서, 나의 속도로','① 현재 위치 사용을 누르고 권한을 허용하세요. ② 월곡역 주변 목적지를 검색 결과에서 고르거나 지도에서 선택하세요. ③ 몸 상태를 입력하고 길 찾기를 누르면 자동 AI 해석과 경로 추천을 진행합니다. 조건을 따로 체크할 필요 없이 입력 문장을 자동으로 해석합니다. 길 찾기를 누르면 입력한 상태 문장만 서버를 거쳐 Google Gemini로 전송합니다. 위치·목적지·지도 자료는 보내지 않습니다. 연결 실패 시 기기 내 해석으로 전환합니다. 실제 OSM 도로 그래프를 탐색하고, 등록 계단 제외·경사 부담 가중치·등록 벤치 경유를 적용합니다. 서버로 실행하면 배경 지도 타일을 OpenStreetMap에서 받아 표시하며, 현재 보는 지도 영역의 타일 요청이 OSM 서버로 전송됩니다. 타일 연결 실패나 파일 단독 실행에서는 내장 공개 지도 자료를 표시합니다. Gemini에는 상태 문장만 보내며 서버는 이를 저장하지 않습니다. 경로/제보 저장은 이 브라우저에만 적용됩니다. 시설은 서울 전역 공개 자료이며, 경로는 월곡역 주변 내장 도로망을 사용합니다. 보도 턱·폭·출입구·경사는 OSM 표기와 기존 Tilezen 참고 추정을 구별하며, 서울시 표고·등고선과 Copernicus는 비교·위험 검토 범위로 구분하며 노면 실측 경사로 채택하지 않습니다. 지형 경사는 보도 실측이 아니며 짧은 급경사·턱·교량·지하를 보장하지 않습니다. 사진 확인과 실시간 이용 가능은 다릅니다. 이용 조건과 미확인 정보를 함께 확인해 주세요.');
+// usage-guide:start
+function openUsageGuide(){
+ const guide=$('#usage-guide'),fileMode=['file:','content:'].includes(location.protocol);
+ const portable=fileMode&&globalThis.PortableAI?.isFile();
+ $('#usage-ai-flow').textContent=portable?'AI 키를 설정하면 상태 문장과 인증용 키를 Google Gemini로 직접 보내요. 키는 이 창의 메모리에서만 사용해요.':fileMode?'파일 실행에서는 기기 내 해석을 사용해요. 상태 문장을 외부 AI로 보내지 않아요.':'길 찾기를 누르면 상태 문장만 서버를 거쳐 Google Gemini로 보내요. 서버는 상태 문장을 저장하지 않아요.';
+ $('#usage-ai-boundary').textContent=fileMode&&!portable?'출발지·목적지·지도 자료도 AI로 보내지 않아요.':'위치·목적지·지도 자료는 AI로 보내지 않으며, 연결 실패 시 기기 내 해석으로 전환해요.';
+ $('#usage-precision-note').hidden=!document.getElementById('bundled-precision-map');
+ guide.querySelectorAll('details').forEach(item=>item.open=false);
+ guide.showModal();guide.querySelector('.usage-body').scrollTop=0;
+ $('#usage-title').focus({preventScroll:true});
+}
+$('#about').onclick=openUsageGuide;
+$('#usage-start').onclick=()=>{
+ $('#usage-guide').close();
+ $('[data-view="route"]').click();setMobileMode('input');
+ requestAnimationFrame(()=>{
+  $('#destination-query').focus({preventScroll:true});
+  if(!isMobileUI())$('#destination-query').scrollIntoView({block:'nearest'});
+ });
+};
+// usage-guide:end
 $('#report-open').onclick=()=>{$('#report-place').value=destination?.name||originName;renderReports();$('#report-dialog').showModal()};$('#report-form').onsubmit=e=>{e.preventDefault();const p=$('#report-place').value.trim(),t=$('#report-text').value.trim();if(!p||!t)return toast('위치와 상세 내용을 입력해 주세요.');if(write('donghaeng.school.reports',[{place:p,text:t,type:$('#report-type').value,date:new Date().toLocaleDateString('ko-KR')},...read('donghaeng.school.reports')])){$('#report-form').reset();renderReports();toast('제보를 이 브라우저에 저장했어요. 경로에 자동 반영되지는 않습니다.')}};
 function renderReports(){const c=$('#report-history'),items=read('donghaeng.school.reports');c.replaceChildren();if(items.length)c.append(textEl('b','내 제보 '+items.length+'건'));items.slice(0,5).forEach(x=>c.append(textEl('p',`${x.type} · ${x.place} / ${x.text}`)))}
 $$('dialog .close').forEach(b=>b.onclick=()=>b.closest('dialog').close());document.addEventListener('click',e=>{if(!e.target.closest('.destination-field'))$('#places').replaceChildren()});window.addEventListener('pagehide',()=>stopTracking(false));
