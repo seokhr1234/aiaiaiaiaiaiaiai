@@ -80,6 +80,7 @@ def build():
     manifest = {
         'version': '2026-11-04-main-navigation',
         'main_source': 'donghaeng-nav/dist/index.html',
+        'project_name': '동행길',
         'source_snapshot': lock['source'],
         'facility_records': len(facilities),
         'counts': dict(Counter(f['properties']['kind'] for f in facilities)),
@@ -98,7 +99,7 @@ def build():
     (ROOT / 'donghaeng-nav/docs/final-build.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     handoff_path = ROOT / '전달-검증.json'
     handoff = json.loads(handoff_path.read_text())
-    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-04', main_program='이동약자를 위한 내비게이션', precision_runtime_included=True, precision_runtime_loader_implemented=True)
+    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-04', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
     handoff['main_promotion'] = {'version': manifest['version'], 'review': 'donghaeng-nav/docs/main-navigation-promotion.md', 'original_gis_reprocessed': False, 'field_verified': False}
     handoff_path.write_text(json.dumps(handoff, ensure_ascii=False, indent=2) + '\n')
     sums = package / 'SHA256SUMS.txt'

@@ -14,7 +14,7 @@ async function main(){
  const url='http://127.0.0.1:'+app.address().port;let browser;
  try{
   for(const route of ['/','/app/','/index.html']){
-   const r=await fetch(url+route);assert.equal(r.status,200);assert.match(await r.text(),/<title>이동약자를 위한 내비게이션<\/title>/);
+   const r=await fetch(url+route);assert.equal(r.status,200);assert.match(await r.text(),/<title>동행길<\/title>/);
   }
   const html=fs.readFileSync(path.join(root,'donghaeng-nav/dist/index.html'),'utf8');
   for(const [,asset] of html.matchAll(/(?:src|data-src|href)="([^"#]+\.(?:js|json|geojson|css))"/g)){
@@ -23,7 +23,7 @@ async function main(){
   }
   for(const route of ['/.env','/donghaeng-nav/.env','/research/test.json','/runtime-integrity.json','/data/precision/unknown.json'])assert.equal((await fetch(url+route)).status,404);
   assert.equal(await (await fetch(url+'/app.js')).text(),await (await fetch(url+'/app/app.js')).text());
-  assert.match(await (await fetch(url+'/동행길-최종.html')).text(),/<title>이동약자를 위한 내비게이션<\/title>/);
+  assert.match(await (await fetch(url+'/동행길-최종.html')).text(),/<title>동행길<\/title>/);
   checks.push('Node root/app/index and legacy bundle serve main; all source assets load under root/app; private/unknown paths blocked');
   browser=await pw.chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{}),args:['--no-sandbox']});
   const context=await browser.newContext({viewport:{width:1440,height:1000}});
