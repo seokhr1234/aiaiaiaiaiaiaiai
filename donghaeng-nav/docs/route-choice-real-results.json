@@ -1,0 +1,109 @@
+{
+  "pass": true,
+  "cases": [
+    {
+      "name": "station-library",
+      "attempts": 10,
+      "eligibleCandidates": 2,
+      "summary": [
+        {
+          "distanceMeters": 345.1,
+          "minutes": 6,
+          "maxReferenceSlope": 6.4,
+          "above3Meters": 265.2,
+          "unknownMeters": 164.6,
+          "unresolvedMeters": 0,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 385.8,
+          "minutes": 6,
+          "maxReferenceSlope": 9.3,
+          "above3Meters": 287.8,
+          "unknownMeters": 95,
+          "unresolvedMeters": 0,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "station-school",
+      "attempts": 10,
+      "eligibleCandidates": 4,
+      "summary": [
+        {
+          "distanceMeters": 833.2,
+          "minutes": 13,
+          "maxReferenceSlope": 8.8,
+          "above3Meters": 334.4,
+          "unknownMeters": 236,
+          "unresolvedMeters": 58.3,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 921.8,
+          "minutes": 15,
+          "maxReferenceSlope": 9.7,
+          "above3Meters": 277.8,
+          "unknownMeters": 217.5,
+          "unresolvedMeters": 50,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 1068.1,
+          "minutes": 17,
+          "maxReferenceSlope": 9.7,
+          "above3Meters": 244.2,
+          "unknownMeters": 165.6,
+          "unresolvedMeters": 50,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        },
+        {
+          "distanceMeters": 1127.8,
+          "minutes": 18,
+          "maxReferenceSlope": 6.5,
+          "above3Meters": 451.3,
+          "unknownMeters": 266.5,
+          "unresolvedMeters": 56.5,
+          "stairsMeters": 0,
+          "roughMeters": 0,
+          "connectionMeters": 0,
+          "restFulfilled": false,
+          "fieldVerified": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "wheelchair-school",
+      "attempts": 1,
+      "eligibleCandidates": 0,
+      "summary": [],
+      "error": "현재 자료에서 휠체어 경사 회피 조건을 만족하는 우회 후보를 찾지 못했어요. 급경사 회피 조건을 풀어 경로를 제시하지 않습니다. 출발·도착 위치와 현장 접근 동선을 확인해 주세요."
+    }
+  ],
+  "scope": "Current runtime graph, road-projected test endpoints; not physical field verification",
+  "realGemini": false,
+  "fieldVerified": false
+}

@@ -41,7 +41,7 @@ async function main(){
   checks.push('Default browser entry boots precision 16169 features, combined building audit, GPS tracker and 35m policy');
   await page.locator('#condition').fill('가장 짧은 길로 가고 싶어요.');await page.locator('#find-route').click();
   await page.waitForFunction(()=>routes.length&&!document.querySelector('#find-route').disabled);
-  assert.equal(requests.length,1);assert.equal(requests[0].contents[0].parts[0].text,'가장 짧은 길로 가고 싶어요.');
+  assert.equal(requests.filter(r=>!r.generationConfig.responseJsonSchema.properties.selectedId).length,1);assert.equal(requests[0].contents[0].parts[0].text,'가장 짧은 길로 가고 싶어요.');
   assert.match(await page.locator('#parser-note').innerText(),/Gemini/);
   assert(await page.evaluate(()=>routes.every(r=>r.connectionReview.bodyConflicts.length===0)));
   const ids=await page.evaluate(()=>routes[0].ids.join(','));

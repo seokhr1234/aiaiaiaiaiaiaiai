@@ -1,13 +1,13 @@
 # Vercel에서 Gemini API 연결하기
 
-작성: 2026-11-01, Asia/Seoul. 코드와 로컬 모의 검사를 준비한 상태다. 실제 Vercel 빌드·배포와 사용자 키의 Gemini 연결은 아직 확인하지 않았다. 재배포는 사용자가 진행한다.
+작성: 2026-11-01, 갱신: 2026-11-04, Asia/Seoul. 현재 조건 해석과 후보 비교 API를 함께 제공한다. 이번 후보 비교 변경은 로컬 모의 검사까지 완료했으며 새 코드의 실제 배포·사용자 키 Gemini 호출은 별도 확인이 필요하다. 커밋·푸시 시 자동 배포는 사용자 기본 지침에 따라 허용한다.
 
 ## 요청이 실행되는 방식
 
-휴대폰의 ‘내 상태에 맞는 길 찾기’ → 같은 사이트의 `POST /api/analyze-condition` → Vercel Node.js 함수 → Gemini → 검증된 이동 조건 → 기존 브라우저 경로 엔진 순서다. 브라우저는 상태 문장만 보내고, 서버 함수가 환경변수의 키를 사용한다. 지도 좌표·이동 기록을 Gemini에 보내지 않는다. 함수 실행 버튼이나 별도 AI 버튼을 추가할 필요는 없다.
+휴대폰의 길 찾기 → `POST /api/analyze-condition`의 조건 해석 → 브라우저 후보 생성 → 후보가 2개 이상이면 `POST /api/select-route`로 Gemini 비교·선택 순서다. 조건 해석에는 상태 문장만 보내며 후보 비교에는 이동 조건과 익명 후보별 거리·참고 경사·미확인 구간 요약도 전달한다. 좌표·출발/목적지 이름·도로/시설명·지도 도형은 자동 전송하지 않는다. 서버 함수는 환경변수의 키를 사용한다. 함수 실행 버튼이나 별도 AI 버튼을 추가할 필요는 없다.
 
 - `api/index.mjs`: Vercel이 요청마다 호출하는 Node.js 함수 진입점. `app.listen()` 없이 기본 내보내기 함수로 요청을 받는다.
-- `vercel.json`: 실제 화면은 `donghaeng-nav/dist/`에서 제공하고, `/api/status`와 `/api/analyze-condition`을 하나의 함수로 연결한다.
+- `vercel.json`: 실제 화면은 `donghaeng-nav/dist/`에서 제공하고, `/api/status`, `/api/analyze-condition`, `/api/select-route`를 하나의 함수로 연결한다.
 - `donghaeng-nav/scripts/condition-api.mjs`: 로컬 서버와 Vercel이 함께 쓰는 Gemini 요청·입력/응답 검증·오류 처리.
 - 로컬 전용 `/setup`과 `/api/config`는 Vercel 함수에서 제공하지 않는다. 배포 함수는 `.env` 파일을 읽거나 키를 파일로 저장하지 않는다.
 
@@ -27,7 +27,7 @@ Vercel의 공식 [Node.js 함수](https://vercel.com/docs/functions/runtimes/nod
 
 이 함수에는 `PORT` 설정이 필요 없다. 환경변수를 바꾼 뒤에는 새 배포가 필요하다. [Vercel 환경변수 안내](https://vercel.com/docs/environment-variables).
 
-5. 최신 배포가 Ready이면 Production · Current 상태를 확인하거나 Promote한다. 재배포·운영 전환은 사용자가 직접 진행한다.
+5. 최신 배포가 Ready이면 Production · Current 상태를 확인하거나 Promote한다. 배포·운영 전환은 사용자의 최신 지침에 따라 진행한다.
 
 ## 배포 후 확인하기
 
@@ -60,3 +60,9 @@ fetch('/api/analyze-condition', {
 - `CHROME_PATH`를 실제 Chrome 경로로 지정하고 `node donghaeng-nav/scripts/test-auto-plan-ui.cjs`: 기존 버튼의 자동 AI 해석과 기기 내 대체 동작 검사.
 - 검사는 로컬 Node·Chrome과 모의 Google 응답을 사용한다. 실제 Vercel 런타임·빌드 성공, 실제 Gemini 인증·할당량은 미검증이다.
 - 인스턴스 내 동시 요청 제한은 3개이며 전역 사용량 제한이 아니다. 실제 GPS·경로 데이터·35m 정책·HTML은 변경하지 않았다. `research/`는 수정하거나 배포 함수 의존성으로 추가하지 않았다.
+
+## 후보 비교 API
+
+`POST /api/select-route`는 상태 문장, 이동 조건, 익명 후보 2~5개의 정형 수치를 검사하고 Gemini의 최종 선택 번호·요약·장점·감수한 점·미확인 사항·후보별 의견을 반환한다. 후보 하나/없음은 호출하지 않는다. 잘못된 번호·형식·조건 위반은 거부하고 클라이언트가 알고리즘 선택으로 구분한다. 버튼으로 선택 이유를 볼 때는 이미 받은 답변을 표시하며 다시 호출하지 않는다.
+
+본문의 수치 허용 목록·상한·좌표 필드 거부는 `route-choice.js`, 상태 해석과 공유하는 HTTP·출처·동시 요청·시간 초과 처리는 `condition-api.mjs`에서 확인할 수 있다. [구현·검증 범위](ai-route-choice.md)를 참고한다. 기존 ‘HTML/경로는 변경하지 않음’ 기록은 최초 API 추가 당시의 범위다.

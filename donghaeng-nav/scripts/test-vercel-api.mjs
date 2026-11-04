@@ -12,6 +12,12 @@ const success = () => new Response(JSON.stringify({candidates: [{content: {parts
 let mode = 'normal', pending = [], calls = [];
 globalThis.fetch = async (url, options) => {
   calls.push({url, options});
+  const payload = JSON.parse(options.body);
+  if (payload.generationConfig.responseJsonSchema.properties.selectedId) {
+    const input = JSON.parse(payload.contents[0].parts[0].text);
+    return new Response(JSON.stringify({candidates: [{content: {parts: [{text: JSON.stringify({selectedId: input.candidates[0].id, summary: '제공된 후보를 비교한 결과입니다.', advantages: ['거리와 경사를 함께 비교했습니다.'], tradeoffs: ['이동 부담 차이가 있습니다.'], cautions: ['노면 실측은 미확인입니다.'], comparisons: input.candidates.map(c => ({id: c.id, comment: '전달된 수치를 비교했습니다.'}))})}]}}]}));
+  }
+
   if (mode === 'rate-limit') return new Response('{}', {status: 429});
   if (mode === 'failure') throw Error('internal-provider-detail-do-not-return');
   if (mode === 'invalid-profile') return new Response(JSON.stringify({candidates: [{content: {parts: [{text: '{"wheelchair":"true"}'}]}}]}));
@@ -112,12 +118,23 @@ try {
   } finally { await close(timeout.app); }
   checks.push('provider timeout aborts the request and returns a controlled fallback response');
 
+  for (const headers of [{}, {'x-test-original-url': '1'}, {'x-test-body-format': 'object'}]) {
+    const reply = await nativeFetch(instance.url + '/api/select-route', {method: 'POST', headers: {'Content-Type': 'application/json', ...headers}, body: JSON.stringify({condition: '경사 회피'})});
+    assert.equal(reply.status, 400);
+  }
+  process.env.GEMINI_MODEL = 'gemini-test-model';
+  const selectionInput = {condition: '휠체어로 경사를 피하고 싶어요.', profile: {wheelchair: true, avoidSteps: true, avoidSlope: true, rest: false, short: false, maxSlope: 5, restKind: 'any'}, candidates: [1, 2].map(i => ({id: 'R' + i, distanceMeters: 300 + i * 50, minutes: 7, maxReferenceSlope: 3, above3Meters: 0, unknownMeters: 20, unresolvedMeters: 0, stairsMeters: 0, roughMeters: 0, connectionMeters: 10, restFulfilled: false, fieldVerified: false}))};
+  for (const headers of [{}, {'x-test-original-url': '1'}, {'x-test-body-format': 'object'}]) {
+    const reply = await nativeFetch(instance.url + '/api/select-route', {method: 'POST', headers: {'Content-Type': 'application/json', ...headers}, body: JSON.stringify(selectionInput)});
+    assert.equal(reply.status, 200); assert.equal((await reply.json()).decision.selectedId, 'R1');
+  }
+  checks.push('route selection original/rewritten URLs and parsed bodies return validated anonymous candidate decisions');
   assert.equal(config.outputDirectory, 'donghaeng-nav/dist');
   assert.equal(config.functions['api/index.mjs'].maxDuration, 30);
   const entry = await readFile(new URL('../../api/index.mjs', import.meta.url), 'utf8');
   const shared = await readFile(new URL('./condition-api.mjs', import.meta.url), 'utf8');
   assert(!/readFile|saveConfig|readConfig|createServer|listen\(/.test(entry + shared));
-  assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/api/')).map(rule => rule.source), ['/api/status', '/api/analyze-condition']);
+  assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/api/')).map(rule => rule.source), ['/api/status', '/api/analyze-condition', '/api/select-route']);
   assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/app')), [
     {source: '/app', destination: '/index.html'},
     {source: '/app/:path*', destination: '/:path*'}

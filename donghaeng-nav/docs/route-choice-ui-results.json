@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "checks": [
+    "Three distinct constrained candidates; Gemini R2 applied; original explanation and comparison shown with no request on repeated clicks",
+    "Manual route selection does not inherit the AI-selected route explanation",
+    "Mobile reason dialog and invalid AI route ID use honest algorithm fallback",
+    "Editing during comparison aborts selection and discards a late decision/explanation",
+    "Comparison deadline/abort branch retains a valid algorithm result without losing candidates",
+    "No eligible candidates are never sent to AI; review alternative cannot start live GPS"
+  ],
+  "browserErrors": [],
+  "syntheticRouteFixture": true,
+  "realGemini": false,
+  "physicalGps": false
+}

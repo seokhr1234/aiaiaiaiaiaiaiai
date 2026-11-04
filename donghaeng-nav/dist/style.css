@@ -213,3 +213,9 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
 #usage-guide #usage-start{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:13px 18px;border:0;border-radius:12px;background:#176d52;color:#fff;font-size:16px;font-weight:700}
 @media(max-width:700px){#usage-guide{width:calc(100% - 24px);max-height:calc(100dvh - 24px);border-radius:20px}#usage-guide .usage-header{padding:20px 18px 16px}#usage-guide h2{font-size:24px}#usage-guide .usage-body{padding:0 18px 18px;scrollbar-gutter:auto}#usage-guide .usage-steps>li{padding:12px;gap:10px}#usage-guide .usage-footer{padding:12px 18px max(12px,env(safe-area-inset-bottom))}}
 /* usage-guide:end */
+/* Candidate comparison explanations use text nodes, never model HTML. */
+.route-reason-button{width:100%;min-height:44px;margin:8px 0;font-size:14px}.choice-badge{color:#176d52;font-weight:700;font-size:12px}
+#route-reason-dialog{max-width:620px;width:calc(100% - 24px);max-height:calc(100dvh - 24px);overflow:auto}
+#route-reason-dialog h2{font-size:22px;line-height:1.5}#route-reason-content p,#route-reason-content li{font-size:16px;line-height:1.7;overflow-wrap:anywhere}
+#route-reason-content h3{font-size:16px;margin:20px 0 8px}.choice-summary{padding:14px;border-radius:12px;background:#eef5ee}.choice-source,.choice-footnote{color:#58685d;font-size:13px!important}
+.choice-comparison{margin:18px 0;border-top:1px solid #dfe7df;padding-top:12px}.choice-comparison summary{min-height:44px;cursor:pointer;font-weight:700}.choice-comparison table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}.choice-comparison th,.choice-comparison td{padding:8px 4px;border-bottom:1px solid #dfe7df;text-align:left;overflow-wrap:anywhere}

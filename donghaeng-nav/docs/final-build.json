@@ -1,7 +1,13 @@
 {
-  "version": "2026-11-04-main-navigation",
+  "version": "2026-11-04-ai-route-choice",
   "main_source": "donghaeng-nav/dist/index.html",
   "project_name": "동행길",
+  "route_choice": {
+    "max_attempts": 10,
+    "max_candidates": 5,
+    "explanation": "Decision-time final response; no new request on click",
+    "real_gemini_verified": false
+  },
   "source_snapshot": {
     "repository_commit": "7c16922c302bae11f89e009b5744d499dbd80cf1",
     "file": "유석현유석현.html",
@@ -49,8 +55,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact snapshot hashes and graph binding; original GIS inputs not reprocessed",
-  "html_sha256": "0e4fd89505bdb79472f1732a17ef2cc26acf70d21313a00ff22a583b51a53e2c",
-  "html_bytes": 15026317,
+  "html_sha256": "ba27b498dba0da5d6d70327327a1b1816aa4768a3bca3dacf30ca05f821e7d00",
+  "html_bytes": 15046067,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",

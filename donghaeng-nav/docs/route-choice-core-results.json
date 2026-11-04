@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "checks": [
+    "Distinct constrained alternatives on three-branch graph; 10 attempt bound, unchanged input graph and wheelchair exclusions",
+    "No constrained path stays empty; duplicate single path stays one; generation cancellation",
+    "Strict anonymous metric schema, unknown/duplicate IDs and constraint bypass rejected; explicit wheelchair and numeric limits preserved",
+    "Portable file-mode comparison uses anonymous contract and rejects responses after key change (isolated JS, not native file browser)",
+    "Local route selection API: structured reply, hidden thoughts discarded, privacy/origin rejection, invalid response, quota and timeout"
+  ],
+  "realGemini": false,
+  "fieldVerified": false
+}

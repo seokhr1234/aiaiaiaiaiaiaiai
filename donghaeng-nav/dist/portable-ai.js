@@ -12,6 +12,13 @@ async function analyze(condition,{signal,fetchImpl=root.fetch.bind(root)}={}){
  if(!response.ok)throw Error(response.status===429?'Gemini 사용 한도 초과 · 할당량을 확인해 주세요.':[400,401,403].includes(response.status)?'키 인증 실패 · 키의 API 권한·제한을 확인해 주세요.':response.status===404?'이 키에서 Gemini 모델을 사용할 수 없어요.':'Gemini 응답 오류 · 잠시 후 다시 시도해 주세요.');
  let data;try{data=await response.json();const text=data.candidates?.[0]?.content?.parts?.filter(p=>!p.thought).map(p=>p.text||'').join('');return root.ConditionAI.validate(JSON.parse(text))}catch{throw Error('Gemini 응답 형식 오류 · 다시 시도해 주세요.')}
 }
+async function selectRoute(input,{signal,fetchImpl=root.fetch.bind(root)}={}){
+ const clean=root.RouteChoice.validateInput(input);if(!key)throw Error('AI 키가 없어요.');const started=version;
+ const response=await fetchImpl('https://generativelanguage.googleapis.com/v1beta/models/'+root.ConditionRequest.defaultModel+':generateContent',{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':key},body:JSON.stringify(root.RouteChoice.request(clean)),signal,credentials:'omit',referrerPolicy:'no-referrer',redirect:'error',cache:'no-store'});
+ if(started!==version)throw Error('키 설정이 바뀌었어요.');if(!response.ok)throw Error('Gemini 경로 비교 연결에 실패했어요.');
+ const data=await response.json();if(started!==version)throw Error('키 설정이 바뀌었어요.');const text=data.candidates?.[0]?.content?.parts?.filter(p=>!p.thought).map(p=>p.text||'').join('');
+ return root.RouteChoice.validateDecision(JSON.parse(text),clean.candidates);
+}
 function init({onChange=()=>{}}={}){
  const dialog=document.getElementById('portable-key-dialog'),form=document.getElementById('portable-key-form'),input=document.getElementById('portable-key-input'),status=document.getElementById('portable-key-status');if(!dialog)return;
  const buttons=[...document.querySelectorAll('[data-open-portable-key]')];
@@ -21,5 +28,5 @@ function init({onChange=()=>{}}={}){
  document.getElementById('portable-key-clear').onclick=()=>{clear();input.value='';onChange();buttons.forEach(b=>b.textContent='AI 키 입력');status.textContent='키를 삭제했어요. 기기 내 해석을 사용합니다.'};
  root.addEventListener('pagehide',()=>{clear();input.value=''});root.addEventListener('pageshow',()=>{if(!key)buttons.forEach(b=>b.textContent='AI 키 입력')});
 }
-root.PortableAI={isFile,normalize,configure,clear,hasKey:()=>!!key,analyze,init};
+root.PortableAI={isFile,normalize,configure,clear,hasKey:()=>!!key,analyze,selectRoute,init};
 })(globalThis);

@@ -39,6 +39,8 @@ node donghaeng-nav/scripts/launch.mjs --no-open
 - 경로 GPS 안내·모의 재생, 다음 행동·남은 거리, 일시정지·종료·휴식/도착 확인을 제공합니다. 위험 검토 대안의 실제 GPS 안내는 제한합니다.
 - 경로 안내와 별개의 위치 추적, 정확도 원·신호 상태, 현재 위치를 따라가는 지도와 드래그 후 따라가기 복귀 기능을 포함합니다.
 - 이용안내는 세 단계 카드·짧은 필수 확인·펼침형 질문으로 제공합니다.
+- 동일한 이동 조건으로 최대 10회 경로를 탐색해 중복·열등 후보를 정리하고 최대 5개를 Gemini가 비교합니다. 결과의 **이 길을 선택한 이유**에서 선택 당시 설명·장단점·후보 수치를 확인할 수 있습니다.
+- 후보가 하나면 알고리즘으로 선택하고, 조건을 만족하는 후보가 없으면 검토용 경로를 AI 추천과 분리합니다. 비교 실패·시간 초과도 알고리즘 선택으로 표시합니다.
 
 ### AI와 저장
 
@@ -46,7 +48,7 @@ HTTP(S)에서는 서버의 `/api/analyze-condition`을 사용합니다. 로컬 �
 
 단일 HTML의 `file:`/`content:` 실행에서는 창에서 입력한 Gemini 키로 직접 연결할 수 있습니다. 키는 창 메모리에서만 사용하며 키 미입력·연결 실패는 기기 내 해석으로 구분합니다. 실제 키·모델·할당량은 별도 확인이 필요합니다.
 
-AI에는 상태 문장만 보내며 위치·목적지·지도 자료를 보내지 않습니다. 온라인 배경지도는 현재 영역의 타일을 OpenStreetMap에 요청합니다. 경로와 제보는 이 브라우저에 저장되고 다른 기기와 동기화되지 않습니다. 기존 저장 키를 유지해 이전 저장 내용이 사라지지 않도록 했습니다.
+조건 해석에는 상태 문장을 보내고, 후보 비교에는 상태 문장·이동 조건과 익명 경로 번호별 거리·참고 경사·미확인 구간 등 요약을 추가로 보냅니다. 좌표·출발/목적지 이름·지도 도형을 자동 전송하지 않습니다. 선택 이유 버튼은 보관된 최종 답변을 보여 주며 추가 API 요청을 하지 않습니다. 온라인 배경지도는 현재 영역의 타일을 OpenStreetMap에 요청합니다. 경로와 제보는 이 브라우저에 저장되고 다른 기기와 동기화되지 않습니다. 기존 저장 키를 유지해 이전 저장 내용이 사라지지 않도록 했습니다.
 
 ## 개발·빌드 기준
 
@@ -56,6 +58,7 @@ AI에는 상태 문장만 보내며 위치·목적지·지도 자료를 보내�
 | --- | --- |
 | `donghaeng-nav/dist/index.html`, `style.css`, `app.js` | 메인 화면·스타일·동작 |
 | `engine.js`, `endpoint-routing.js`, `precision-connections.js`, `access-review.js` | 기존 엔진과 선분 연결·건물 겹침·제보 검토 |
+| `route-candidates.js`, `route-choice.js` | 후보 생성·익명 비교 계약·Gemini 응답 검증 |
 | `navigation-*.js`, `gps-tracker.js` | 경로 안내와 독립 위치 추적 |
 | `condition-ai.js`, `condition-request.js`, `portable-ai.js` | AI 응답 처리와 파일 실행 연결 |
 | `data-loader.js`, `data/precision/` | 런타임 자료 로딩과 정밀지도·횡단부·접속 제보 |
@@ -80,11 +83,16 @@ node donghaeng-nav/scripts/test-navigation-core.cjs
 node donghaeng-nav/scripts/test-condition-api.mjs
 node donghaeng-nav/scripts/test-vercel-api.mjs
 node donghaeng-nav/scripts/test-main-navigation.cjs
+node donghaeng-nav/scripts/test-route-choice.cjs
+node donghaeng-nav/scripts/test-route-choice-real.cjs
+node donghaeng-nav/scripts/test-route-choice-ui.cjs
 ```
 
 브라우저 검사에는 Playwright와 Chromium이 필요합니다. 시스템 브라우저 사용 시 `CHROME_PATH`를 지정하세요. 모의 Gemini·GPS 검사를 실제 기기·실제 생성·현장 검증으로 해석하지 마세요.
 
 Vercel은 저장소 최상위 Root Directory와 `donghaeng-nav/dist`를 사용합니다. `/app/`도 같은 화면으로 연결합니다. `[skip vercel]` 커밋은 `ignoreCommand`로 자동 빌드를 생략합니다. 사용자 지침에 따라 커밋·푸시 시 Vercel 자동 배포는 기본 허용합니다. 배포 생략을 별도로 요청한 경우에만 해당 표시를 넣습니다. 자세한 서버 API 설정은 [Vercel API 안내](donghaeng-nav/docs/vercel-api.md)를 참고하세요.
+
+구현과 검증 범위: [Gemini 경로 비교·선택과 이유 표시](donghaeng-nav/docs/ai-route-choice.md). 실제 사용자 키로 새 비교 API를 호출하는 검증과 현장 통행 검증은 별도입니다.
 
 ## 아직 확인이 필요한 것
 

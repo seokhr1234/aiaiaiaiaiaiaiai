@@ -7,6 +7,7 @@
     "bad model, provider rate limits, network errors and invalid responses fail without exposing details",
     "instance concurrency limit rejects excess requests and releases capacity after completion",
     "provider timeout aborts the request and returns a controlled fallback response",
+    "route selection original/rewritten URLs and parsed bodies return validated anonymous candidate decisions",
     "deployment serves only runtime assets and the function has no disk key store or listening server"
   ],
   "realGemini": false,
