@@ -34,8 +34,8 @@
     {
       "id": "bundled-facilities-seoul",
       "path": "data/accessibility/seoul/seoul-facilities.geojson",
-      "sha256": "c031278f1f97e2c3a1b2f28048eec4cea44bd9006a071d5b57ba0e28ae1437fe",
-      "bytes": 20168118
+      "sha256": "748353c79db105cb1c48ee0c45bcb4564d727b40fdfd7405a16c5415c2e10095",
+      "bytes": 20181433
     },
     {
       "id": "bundled-access-reports",
@@ -54,6 +54,12 @@
       "path": "data/precision/crossings-review.geojson",
       "sha256": "615aec503786dd1ea5d4e3ff5cbb5cbb7af34d50be5ad587fd2c4d1b17c96435",
       "bytes": 811494
+    },
+    {
+      "id": "bundled-terrain-evidence",
+      "path": "data/terrain/evidence.json",
+      "sha256": "a94f671ddc81b4831aacf872fa243cde25473ebbaf51690b8c8479327afdabcc",
+      "bytes": 5553154
     }
   ],
   "protected_code": {
@@ -63,20 +69,41 @@
     "precision-connections.js": "f6ed2afb3928c2b19bdb18b829620595b6677eb4b9b3be53f22a17a5d3b8ac74",
     "route-candidates.js": "e8a3985a3e5f7642c04c747d601d545d841029ee5815ecf6d0c2b17afcdbbf08",
     "route-choice.js": "c0c4f3273e6dc63ed48f93464b4b363147b3dfc8e45e95ee13c8cca7b8f4573d",
-    "condition-ai.js": "6af1d3a63ec647e26cdd3d688198908fa8a456d9266ec7ea803471ea6c4e1062"
+    "condition-ai.js": "6af1d3a63ec647e26cdd3d688198908fa8a456d9266ec7ea803471ea6c4e1062",
+    "gps-quality.js": "81b64a4b9a714dc5f994572e08de9d105b2d76b64360756a64f712c6e48a83d6",
+    "gps-tracker.js": "75cb8f9b1553be32a955f63983c31accc0c341f11a148daf35c27851cbf83838",
+    "navigation-core.js": "aa344a5c2f0da6c4bd4fe2b4a60f005393359a35b50559eb258effbd116550db",
+    "navigation-session.js": "ef4088055b554947666de9894bae39bee5ac64ce9307f840d56603b598bae965",
+    "navigation-ui.js": "1477537a531843e9abd4d8d558d5f4153758590abded33227eee65457f3a0072",
+    "terrain-evidence.js": "9bb1879ad6f11240ec636b00d7bf715e88189dd909449009d0fa78a99a5aec72"
   },
   "field_verified": false,
   "precision_role": "Review geometry and building-overlap screening; not a verified pedestrian network",
   "code_revision": {
-    "date": "2026-11-04",
-    "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+    "date": "2026-11-05",
+    "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
     "validation": [
-      "docs/route-choice-core-results.json",
-      "docs/route-choice-ui-results.json",
-      "docs/route-choice-real-results.json",
-      "docs/navigation-core-results.json"
+      "docs/gps-quality-results.json",
+      "docs/gps-quality-ui-results.json",
+      "docs/evidence-results.json",
+      "docs/navigation-core-results.json",
+      "docs/main-navigation-results.json",
+      "docs/route-choice-real-results.json"
     ],
     "field_verified": false,
-    "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+    "new_slope_values_promoted": 0,
+    "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+    "previous_revision": {
+      "date": "2026-11-04",
+      "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+      "validation": [
+        "docs/route-choice-core-results.json",
+        "docs/route-choice-ui-results.json",
+        "docs/route-choice-real-results.json",
+        "docs/navigation-core-results.json"
+      ],
+      "field_verified": false,
+      "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+    }
   }
 }

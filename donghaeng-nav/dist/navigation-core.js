@@ -41,7 +41,7 @@ function create(plan,options={}){
  }
  function tick(now){if(!state.fix)return snapshot();const age=now-state.fix.timestamp;if(age>=policy.lostMs){arrivalSince=null;return publish('signal-lost','GPS 신호가 오래 갱신되지 않아 안내를 보류합니다.',{arrival:false})}if(age>=policy.staleMs)return publish('signal-delayed','GPS 갱신이 지연되고 있어요.',{arrival:false});return snapshot()}
  function rest(action){if(!plan.rest)return snapshot();if(action==='start'&&state.restStatus==='near'){resting=true;return publish('resting','휴식 중 · 실제 위치와 이용 상태를 확인하세요.',{restStatus:'resting'})}if(action==='resume'&&resting||action==='skip'){resting=false;restDone=true;return publish('waiting',action==='skip'?'휴식 장소를 지나갑니다. 휴식 완료를 뜻하지 않습니다.':'휴식을 마쳤어요. 새 위치에서 이동을 재개합니다.',{restStatus:action==='skip'?'skipped':'completed'})}return snapshot()}
- return {consume,tick,rest,snapshot,resetPosition(){lastFix=null;lastMatch=null;lastTimestamp=-Infinity;arrivalSince=null;offSince=null;offCount=0;pendingBackward=null;return publish('waiting','새 GPS 위치를 확인하고 있어요.',{arrival:false,match:null,fix:null})},plan};
+ return {consume,tick,rest,snapshot,hold(message){return publish('unstable',message,{arrival:false})},resetPosition(){lastFix=null;lastMatch=null;lastTimestamp=-Infinity;arrivalSince=null;offSince=null;offCount=0;pendingBackward=null;return publish('waiting','새 GPS 위치를 확인하고 있어요.',{arrival:false,match:null,fix:null})},plan};
 }
 const api={create};if(typeof module!=='undefined')module.exports=api;else root.NavigationCore=api;
 })(typeof globalThis==='undefined'?this:globalThis);

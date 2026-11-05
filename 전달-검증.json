@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "c9e8f7587865a3d3ab11e55c82b909df6003f2aa251aea9d9e75a9210351d162",
+  "html_sha256": "b9a08400b1e13f2b6596129b7c8c83fafd2e1ce50653faf96b2337c2f376bf17",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -33,7 +33,7 @@
     "vercel_api_deployed": false,
     "real_gemini_for_vercel_verified": false
   },
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",
   "folder_bytes_at_update": 518293146,
   "user_reported_phone_observation": {
@@ -56,9 +56,29 @@
   "precision_runtime_included": true,
   "precision_runtime_loader_implemented": true,
   "main_promotion": {
-    "version": "2026-11-04-route-candidate-diversity",
+    "version": "2026-11-05-gps-evidence",
     "review": "donghaeng-nav/docs/main-navigation-promotion.md",
     "original_gis_reprocessed": false,
     "field_verified": false
+  },
+  "supplementary_evidence": {
+    "review_date": "2026-11-05",
+    "archive_originally_collected": "2026-10-31",
+    "selected_points": 944,
+    "selected_contours": 191,
+    "edges_with_support": 19548,
+    "edges_without_support": 2005,
+    "enriched_shelters": 15,
+    "new_slope_values_promoted": 0,
+    "field_verified": false
+  },
+  "gps_stabilization": {
+    "display_stabilization": true,
+    "routing_uses_original_fixes": true,
+    "jump_confirmation_samples": 3,
+    "jump_confirmation_ms": 2000,
+    "origin_max_accuracy_m": 25,
+    "max_fix_accuracy_m": 50,
+    "physical_gps_verified": false
   }
 }

@@ -1,0 +1,97 @@
+{
+  "checked_date": "2026-11-05",
+  "sources": [
+    {
+      "id": "seoul-cooling",
+      "url": "https://data.seoul.go.kr/dataList/OA-21065/S/1/datasetView.do",
+      "title": "서울시 무더위쉼터",
+      "findings": "API TbGtnHwcwP, 인증키/페이지 단위 전체 취득 필요. 이번에 신규 원본 미다운로드.",
+      "access_mode": "web_page"
+    },
+    {
+      "id": "national-cooling",
+      "url": "https://www.data.go.kr/data/15013199/standard.do",
+      "title": "전국무더위쉼터 표준데이터",
+      "findings": "서울 자료와 시설명·주소·기준일로 중복 판정해야 함. 원본 미다운로드.",
+      "access_mode": "web_search"
+    },
+    {
+      "id": "mois-cooling",
+      "url": "https://www.data.go.kr/catalog/15138456/openapi.json",
+      "title": "행정안전부 무더위쉼터",
+      "findings": "공식 카탈로그의 API 식별자·JSON/XML 제공 확인. 전체 응답 미수집.",
+      "access_mode": "web_catalog"
+    },
+    {
+      "id": "seongbuk-libraries",
+      "url": "https://www.sb.go.kr/children/contents.do?key=367",
+      "title": "성북구 구립도서관",
+      "findings": "2025-12-26 수정 표의 운영시간/휴관일. 무더위쉼터 운영시간과 별개.",
+      "access_mode": "web_index_table"
+    },
+    {
+      "id": "library-floors",
+      "url": "https://www.sbc.go.kr/attach/record/SEONGBUK/appendix/a09/A0007166.pdf",
+      "title": "성북구의회 2026 성북문화재단 출연 동의안",
+      "findings": "공식 PDF 웹 색인의 시설 층수·주소. 파일 다운로드 실패. 층수 불일치 보류.",
+      "access_mode": "web_index_table"
+    },
+    {
+      "id": "odong-access",
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=172646e9-64ae-4a93-8aa3-69a1b517158a",
+      "title": "한국관광공사 오동숲속도서관",
+      "findings": "2026-06-23 수정. 운영/휴무, 자동문·장애인 주차/화장실 등록 확인. 접근 보행로 경사는 미기재.",
+      "access_mode": "web_body"
+    },
+    {
+      "id": "seongbuk-updates",
+      "url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=6350&searchCtgry=%EC%95%88%EC%A0%84",
+      "title": "성북구 쉼터 변경 공지",
+      "findings": "2026-05-29 신규 5·해제 3 공지 발견. 시설별 명단 확보 전 지도 추가/삭제 금지.",
+      "access_mode": "web_index"
+    },
+    {
+      "id": "seoul-elevation",
+      "url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do",
+      "title": "서울시 경사도(표고·등고선)",
+      "findings": "2023년 기준 수치지형도, 2025-03-20 파일 갱신. 메타 수정은 실측일이 아님. 기존 확보 ZIP 재추출.",
+      "access_mode": "web_body_and_supplied_archive"
+    },
+    {
+      "id": "ngii-dem",
+      "url": "https://www.ngii.go.kr/lib/file/pr_01.pdf",
+      "title": "국토지리정보원 수치표고모형 안내",
+      "findings": "1/5/10m 격자 제품 설명. 해당 지역 원본 미취득. 격자 간격을 노면 정확도로 해석하지 않음.",
+      "access_mode": "web_index"
+    },
+    {
+      "id": "ngii-surface",
+      "url": "https://www.ngii.go.kr/nlsc/nsoutput/ouputintro3",
+      "title": "국토위성센터 DSM/DEM 설명",
+      "findings": "DSM은 지형 외 건물·수목 포함. 지상 보행로·교량 노면과 구분 필요.",
+      "access_mode": "web_index"
+    },
+    {
+      "id": "w3c-gps",
+      "url": "https://www.w3.org/TR/geolocation/",
+      "title": "W3C Geolocation",
+      "findings": "accuracy는 수신 불확실성. 고정밀 요청은 힌트이며 하드웨어 정밀도 향상을 보장하지 않음.",
+      "access_mode": "web_body"
+    },
+    {
+      "id": "osm",
+      "url": "https://api.openstreetmap.org/api/0.6/",
+      "title": "OpenStreetMap API",
+      "findings": "새 벤치·incline·wheelchair/access 등록 비교 수집 대상. 현재 실행기 CONNECT 403.",
+      "access_mode": "network_blocked"
+    },
+    {
+      "id": "overpass",
+      "url": "https://overpass-api.de/api/interpreter",
+      "title": "Overpass",
+      "findings": "보행/벤치/쉼터 공간 범위 원본 수집 대상. 현재 실행기 CONNECT 403.",
+      "access_mode": "network_blocked"
+    }
+  ],
+  "bulk_acquisition_complete": false
+}

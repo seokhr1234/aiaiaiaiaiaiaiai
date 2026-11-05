@@ -44,6 +44,14 @@ def build():
         raise ValueError('도로망과 지형 검토 자료가 일치하지 않습니다.')
     if terrain['review']['inputs']['map_context_sha256'] != datasets['bundled-map-context']['sha256']:
         raise ValueError('주변 지물과 지형 검토 자료가 일치하지 않습니다.')
+    evidence = json.loads(local_file(datasets['bundled-terrain-evidence']['path']).read_bytes())
+    if (evidence.get('version') != 1 or evidence.get('graph_sha256') != graph_hash
+            or evidence.get('field_verified') is not False or evidence.get('routing_eligible') is not False
+            or evidence.get('new_slope_values_promoted') != 0):
+        raise ValueError('추가 표고 근거의 도로망 연결·검토 전용 상태가 다릅니다.')
+    if (not isinstance(evidence.get('edges'), dict)
+            or len(evidence['edges']) != evidence['edges_with_support'] + evidence['edges_without_support']):
+        raise ValueError('추가 표고 근거의 구간 집계가 다릅니다.')
     precision = json.loads(local_file(datasets['bundled-precision-map']['path']).read_bytes())
     if precision.get('metadata', {}).get('schema') != 'donghaeng-precision-v1':
         raise ValueError('정밀지도 스키마가 다릅니다.')
@@ -78,7 +86,7 @@ def build():
         path.write_text(html, encoding='utf-8', newline='\n')
     facilities = json.loads(local_file(datasets['bundled-facilities-seoul']['path']).read_bytes())['features']
     manifest = {
-        'version': '2026-11-04-route-candidate-diversity',
+        'version': '2026-11-05-gps-evidence',
         'main_source': 'donghaeng-nav/dist/index.html',
         'project_name': '동행길',
         'route_choice': {'max_attempts': 24, 'time_budget_ms': 4000, 'max_candidates': 5, 'explanation': 'Decision-time final response; no new request on click', 'real_gemini_verified': False},
@@ -87,9 +95,23 @@ def build():
         'counts': dict(Counter(f['properties']['kind'] for f in facilities)),
         'source_sha256': datasets['bundled-facilities-seoul']['sha256'],
         'terrain': terrain['meta'],
+        'supplementary_evidence': {
+            'review_date': evidence['reviewed_date'],
+            'archive_originally_collected': evidence['archive_originally_collected'],
+            'selected_points': evidence['selected_points'],
+            'selected_contours': evidence['selected_contours'],
+            'edges_with_support': evidence['edges_with_support'],
+            'edges_without_support': evidence['edges_without_support'],
+            'enriched_shelters': sum(bool(f['properties'].get('rest_evidence_note')) for f in facilities),
+            'new_slope_values_promoted': 0, 'field_verified': False,
+        },
+        'gps': {'display_stabilization': True, 'routing_uses_original_fixes': True,
+                'jump_confirmation_samples': 3, 'jump_confirmation_ms': 2000,
+                'origin_max_accuracy_m': 25, 'max_fix_accuracy_m': 50,
+                'physical_gps_verified': False},
         'precision_records': len(precision['features']),
         'precision_field_verified': False,
-        'runtime_validation': 'Exact snapshot hashes and graph binding; original GIS inputs not reprocessed',
+        'runtime_validation': 'Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged',
         'html_sha256': sha(html.encode()), 'html_bytes': len(html.encode()),
         'external_requests_required': False,
         'online_basemap': 'OpenStreetMap raster tiles via Leaflet; HTTP(S) only',
@@ -100,8 +122,10 @@ def build():
     (ROOT / 'donghaeng-nav/docs/final-build.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     handoff_path = ROOT / '전달-검증.json'
     handoff = json.loads(handoff_path.read_text())
-    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-04', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
+    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-05', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
     handoff['main_promotion'] = {'version': manifest['version'], 'review': 'donghaeng-nav/docs/main-navigation-promotion.md', 'original_gis_reprocessed': False, 'field_verified': False}
+    handoff['supplementary_evidence'] = manifest['supplementary_evidence']
+    handoff['gps_stabilization'] = manifest['gps']
     handoff_path.write_text(json.dumps(handoff, ensure_ascii=False, indent=2) + '\n')
     sums = package / 'SHA256SUMS.txt'
     names = {unicodedata.normalize('NFC', p.name): p for p in package.iterdir()}

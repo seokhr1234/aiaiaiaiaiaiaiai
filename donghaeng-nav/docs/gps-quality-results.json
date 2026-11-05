@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "checks": [
+    "Seeded stationary jitter reduced without reducing reported sensor uncertainty or modifying navigation input",
+    "Walking at 1.2 m/s follows with less than 3 m display lag in deterministic simulation",
+    "One jump cannot move the marker; three consistent displaced fixes over two seconds reacquire",
+    "Poor accuracy, invalid/future/old/out-of-order fixes rejected; reset discards filter history",
+    "Independent tracker holds jumps, marks stale data and ignores late callbacks after permission denial",
+    "Navigation blocks jump-driven progress/arrival, resumes on coherent raw fixes, clears display history across background resume"
+  ],
+  "metrics": {
+    "stationaryRawRmsM": 5.020381948165503,
+    "stationaryDisplayRmsM": 2.122420606359058,
+    "walkingMaxDisplayLagM": 1.48806130205447
+  },
+  "physicalGps": false,
+  "realAccuracyImprovementVerified": false,
+  "scope": "Deterministic simulation; stabilizes display and rejects unreliable fixes, cannot improve GNSS hardware or remove systematic bias"
+}

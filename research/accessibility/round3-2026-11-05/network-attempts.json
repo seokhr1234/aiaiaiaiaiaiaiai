@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-05",
+  "policy": "restricted; no official-data domains in executor allow list",
+  "attempts": [
+    {
+      "url": "https://data.seoul.go.kr/dataList/OA-21065/S/1/datasetView.do",
+      "result": "Tunnel connection failed: 403 Forbidden"
+    },
+    {
+      "url": "https://overpass-api.de/api/status",
+      "result": "Tunnel connection failed: 403 Forbidden"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/way/379761187.json",
+      "result": "Tunnel connection failed: 403 Forbidden"
+    }
+  ],
+  "continued_via": "Available web connector official-source reading; no network-policy bypass"
+}

@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "checks": [
+    "21553 graph-bound evidence rows; malformed/stale/promoted evidence rejected before attachment",
+    "Terrain support never changes edges or routing weights; structure/absent support remains unverified",
+    "15 enriched facilities; all identities, coordinates, official hours and verification flags preserved",
+    "Rest eligibility and operating-hour decisions unchanged by supplementary documents"
+  ],
+  "counts": {
+    "points": 944,
+    "contours": 191,
+    "edgesWithNearbySupport": 19548,
+    "edgesWithoutNearbySupport": 2005,
+    "enrichedFacilities": 15,
+    "newVerifiedSlopes": 0,
+    "newFacilities": 0
+  },
+  "fieldVerified": false
+}

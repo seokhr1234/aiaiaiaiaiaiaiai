@@ -36,6 +36,7 @@ node donghaeng-nav/scripts/launch.mjs --no-open
 - 서울 전역 공개 시설 표시, 검색·핀 조정, 휴식 후보, 경로 저장·브라우저 내 제보와 모바일 하단 패널을 제공합니다. 시설 토글은 표시만 바꿉니다.
 - 1:1,000 지도 16도엽의 **기존 변환 자료 16,169피처**를 검토 레이어로 포함합니다. 도로·보도 경계를 검증된 보행 중심선으로 취급하지 않습니다.
 - 지상 경로와 건물 내부의 겹침 제외, 도로 선분 연결, 출입구·승강기 연결 미확인 표시를 포함합니다. 학교 안내점은 건물 앞 도로 기준이며 실제 출입문 검증은 아닙니다.
+- GPS 점프·오래된/저품질 표본을 거르고 위치 표시를 안정화합니다. 수신 오차를 줄여 표시하지 않으며 원래 좌표로 진행·도착을 판단합니다.
 - 경로 GPS 안내·모의 재생, 다음 행동·남은 거리, 일시정지·종료·휴식/도착 확인을 제공합니다. 위험 검토 대안의 실제 GPS 안내는 제한합니다.
 - 경로 안내와 별개의 위치 추적, 정확도 원·신호 상태, 현재 위치를 따라가는 지도와 드래그 후 따라가기 복귀 기능을 포함합니다.
 - 이용안내는 세 단계 카드·짧은 필수 확인·펼침형 질문으로 제공합니다.
@@ -59,7 +60,8 @@ HTTP(S)에서는 서버의 `/api/analyze-condition`을 사용합니다. 로컬 �
 | `donghaeng-nav/dist/index.html`, `style.css`, `app.js` | 메인 화면·스타일·동작 |
 | `engine.js`, `endpoint-routing.js`, `precision-connections.js`, `access-review.js` | 기존 엔진과 선분 연결·건물 겹침·제보 검토 |
 | `route-candidates.js`, `route-choice.js` | 후보 생성·익명 비교 계약·Gemini 응답 검증 |
-| `navigation-*.js`, `gps-tracker.js` | 경로 안내와 독립 위치 추적 |
+| `navigation-*.js`, `gps-tracker.js`, `gps-quality.js` | 경로 안내·독립 위치 추적·공통 GPS 품질 필터 |
+| `terrain-evidence.js`, `data/terrain/evidence.json` | 도로별 표고 근거 표시 (경사 계산·가중치에 미사용) |
 | `condition-ai.js`, `condition-request.js`, `portable-ai.js` | AI 응답 처리와 파일 실행 연결 |
 | `data-loader.js`, `data/precision/` | 런타임 자료 로딩과 정밀지도·횡단부·접속 제보 |
 | `runtime-integrity.json` | 승격한 런타임 자료·보호 코드의 해시와 출처 스냅샷 |
@@ -79,6 +81,9 @@ python3 donghaeng-nav/scripts/build-html.py
 ### 확인 명령
 
 ```sh
+node donghaeng-nav/scripts/test-gps-quality.cjs
+node donghaeng-nav/scripts/test-gps-quality-ui.cjs
+node donghaeng-nav/scripts/test-evidence.cjs
 node donghaeng-nav/scripts/test-navigation-core.cjs
 node donghaeng-nav/scripts/test-condition-api.mjs
 node donghaeng-nav/scripts/test-vercel-api.mjs
@@ -107,3 +112,5 @@ Vercel은 저장소 최상위 Root Directory와 `donghaeng-nav/dist`를 사용�
 사용자 최상위 `research/`는 삭제·덮어쓰지 않습니다. `.env`, 인증서, 개인 위치 로그, 대용량 로컬 조사 원본은 Git에 포함하지 않습니다. `donghaeng-nav/data/`의 기존 추적 자료와 출처를 보존합니다. 모든 수정은 최상위 수정이력에 날짜(KST)·요청·변경·검증·남은 한계를 추가합니다.
 
 이전 기록의 ‘정밀지도 미연결’·구버전 화면 설명은 당시 상태입니다. 현재 상태는 이 README와 [메인 전환 기록](donghaeng-nav/docs/main-navigation-promotion.md)을 우선하고, 과거 검사 기록은 해당 시점의 결과로 읽어 주세요.
+
+2026-11-05: [쉼터 15곳 근거 보강·표고 근거 추출·GPS 안정화 보고서](research/accessibility/round3-2026-11-05/README.md). 새 시설 좌표나 실측 경사로 오인하지 않도록 원문·미수집·현장 미확인 상태를 구분합니다.

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "reviewed_date": "2026-11-05",
+  "archive_originally_collected": "2026-10-31",
+  "source_url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do",
+  "archive_sha256": "4fbe3c7e061b5974e7403ec116855304ed8ae321eebcc0d12c31ca8fb7be30bf",
+  "graph_sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+  "source_crs": "EPSG:5174",
+  "display_crs": "EPSG:4326",
+  "distance_crs": "EPSG:32652",
+  "support_reference": "edge_midpoint",
+  "vertical_datum": "unconfirmed",
+  "source_height_units": "not independently verified",
+  "field_verified": false,
+  "routing_eligible": false,
+  "new_slope_values_promoted": 0,
+  "bbox": [
+    127.017,
+    37.577,
+    127.061,
+    37.614
+  ],
+  "source_counts": {
+    "spot": 45870,
+    "contour": 8570
+  },
+  "selected_points": 944,
+  "selected_contours": 191,
+  "edges_with_support": 19548,
+  "edges_without_support": 2005
+}

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-04-route-candidate-diversity",
+  "version": "2026-11-05-gps-evidence",
   "main_source": "donghaeng-nav/dist/index.html",
   "project_name": "동행길",
   "route_choice": {
@@ -26,7 +26,7 @@
     "complex": 2745,
     "apartment": 2
   },
-  "source_sha256": "c031278f1f97e2c3a1b2f28048eec4cea44bd9006a071d5b57ba0e28ae1437fe",
+  "source_sha256": "748353c79db105cb1c48ee0c45bcb4564d727b40fdfd7405a16c5415c2e10095",
   "terrain": {
     "source": "Mapzen/Tilezen Terrain Tiles · AWS",
     "source_url": "https://registry.opendata.aws/terrain-tiles/",
@@ -53,11 +53,31 @@
     "review_policy": "2026-10-31-v1",
     "new_sources_promoted": 0
   },
+  "supplementary_evidence": {
+    "review_date": "2026-11-05",
+    "archive_originally_collected": "2026-10-31",
+    "selected_points": 944,
+    "selected_contours": 191,
+    "edges_with_support": 19548,
+    "edges_without_support": 2005,
+    "enriched_shelters": 15,
+    "new_slope_values_promoted": 0,
+    "field_verified": false
+  },
+  "gps": {
+    "display_stabilization": true,
+    "routing_uses_original_fixes": true,
+    "jump_confirmation_samples": 3,
+    "jump_confirmation_ms": 2000,
+    "origin_max_accuracy_m": 25,
+    "max_fix_accuracy_m": 50,
+    "physical_gps_verified": false
+  },
   "precision_records": 16169,
   "precision_field_verified": false,
-  "runtime_validation": "Exact snapshot hashes and graph binding; original GIS inputs not reprocessed",
-  "html_sha256": "c9e8f7587865a3d3ab11e55c82b909df6003f2aa251aea9d9e75a9210351d162",
-  "html_bytes": 15050149,
+  "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
+  "html_sha256": "b9a08400b1e13f2b6596129b7c8c83fafd2e1ce50653faf96b2337c2f376bf17",
+  "html_bytes": 15698726,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",
