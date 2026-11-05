@@ -1,0 +1,26 @@
+{
+  "id": "overpass-incline",
+  "url": "https://overpass-api.de/api/interpreter",
+  "form": {
+    "data": "[out:json][timeout:35];nwr[\"incline\"](37.577,127.017,37.614,127.061);out meta geom;"
+  },
+  "timeout": 50,
+  "requested_at_utc": "2026-11-05T09:55:57.027919+00:00",
+  "requested_at_kst": "2026-11-05T18:55:57.027924+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://overpass-api.de/api/interpreter",
+  "response_headers": {
+    "server": "envoy",
+    "date": "Thu, 05 Nov 2026 09:56:33 GMT",
+    "content-type": "application/json"
+  },
+  "bytes": 16380,
+  "sha256": "1e9ae1b7ed77072575f955b2b86145e501a907bc2c45994c437ef5c6d6165ca6",
+  "response_path": "raw/overpass-incline/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:56:33.967867+00:00"
+}

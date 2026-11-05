@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "0d0c844d87700f995efe9a1c10c3ca3069e1b72f",
+  "request_records_checked": 40,
+  "preserved_previous_research_files": 111,
+  "runtime_data_hashes_checked": 9,
+  "protected_code_hashes_checked": 13,
+  "unchanged_tracked_html_files": 10,
+  "runtime_tree_unchanged": true,
+  "reconciliation_assertions_passed": true,
+  "field_verified": false,
+  "actual_phone_gps_tested": false,
+  "new_slope_values_promoted": 0,
+  "scope": "Local original/metadata reconciliation and preservation checks; no new runtime behavior, browser/GPS/field tests"
+}

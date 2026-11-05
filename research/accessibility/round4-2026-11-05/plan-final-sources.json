@@ -1,0 +1,18 @@
+[
+  {
+    "id": "overpass-map-comparable",
+    "url": "https://overpass-api.de/api/interpreter",
+    "form": {
+      "data": "[out:json][timeout:45];(way[highway](37.580,127.020,37.611,127.058);nwr[amenity~\"bench|cafe|library|school|community_centre|shelter\"](37.584,127.025,37.607,127.053);node[highway=bus_stop](37.584,127.025,37.607,127.053););out meta center;>;out meta qt;"
+    },
+    "timeout": 90
+  },
+  {
+    "id": "ngii-portal-http",
+    "url": "http://map.ngii.go.kr/mn/mainPage.do"
+  },
+  {
+    "id": "ngii-dem-catalog-http",
+    "url": "http://www.data.go.kr/data/15059920/fileData.do"
+  }
+]

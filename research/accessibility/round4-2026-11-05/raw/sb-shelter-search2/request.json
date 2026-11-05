@@ -1,0 +1,22 @@
+{
+  "id": "sb-shelter-search2",
+  "url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=5927&searchCnd=SJ&searchKrwd=%EB%AC%B4%EB%8D%94%EC%9C%84%EC%89%BC%ED%84%B0&pageUnit=50&searchCtgry=%EC%95%88%EC%A0%84&pageIndex=1",
+  "requested_at_utc": "2026-11-05T09:58:15.023285+00:00",
+  "requested_at_kst": "2026-11-05T18:58:15.023289+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=5927&searchCnd=SJ&searchKrwd=%EB%AC%B4%EB%8D%94%EC%9C%84%EC%89%BC%ED%84%B0&pageUnit=50&searchCtgry=%EC%95%88%EC%A0%84&pageIndex=1",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:58:16 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 219085,
+  "sha256": "c50a568317b5d715e0c7e2cae6d8a67e36ee20ed34beb75d38af36fc179c19bf",
+  "response_path": "raw/sb-shelter-search2/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:58:17.892777+00:00"
+}

@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "0d0c844d87700f995efe9a1c10c3ca3069e1b72f",
+  "sources": [
+    {
+      "id": "S4-01",
+      "title": "서울시 무더위쉼터 OA-21065",
+      "source_as_of": {
+        "facility_year": "2026",
+        "catalog_data_updated": "2026-11-05",
+        "catalog_metadata_modified": "2026-08-11",
+        "individual_effective_dates": null
+      },
+      "source_crs": {
+        "projected": "EPSG:5186 explicitly labelled",
+        "lonlat_datum": null,
+        "analysis_interpretation": "EPSG:4326; checked against labelled projected fields"
+      },
+      "status": "complete public CSV (4092 rows); public API sample only (5 rows, total 4092)",
+      "license": "KOGL type 1 per source catalog",
+      "coordinate_role": "facility reference, not verified entrance",
+      "field_verified": false,
+      "collections": [
+        {
+          "request_id": "seoul-shelter-catalog",
+          "url": "https://data.seoul.go.kr/dataList/OA-21065/S/1/datasetView.do",
+          "collected_at_kst": "2026-11-05T18:55:55.617669+09:00",
+          "http_status": 200,
+          "sha256": "2c4dde06c26839aea900d327674d39208376b24a076dd53ff4019ee9925b35ea"
+        },
+        {
+          "request_id": "seoul-shelter-sheet",
+          "url": "https://data.seoul.go.kr/dataList/sheetView.do?infId=OA-21065&srvType=S",
+          "collected_at_kst": "2026-11-05T18:56:50.622969+09:00",
+          "http_status": 200,
+          "sha256": "1a1e42067402b2179cca80080d8930c6fbb04e70274a810426cc6f1ceef50d71"
+        },
+        {
+          "request_id": "seoul-shelter-csv",
+          "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+          "collected_at_kst": "2026-11-05T18:58:14.339366+09:00",
+          "http_status": 200,
+          "sha256": "9b2d96168234870dd78f4246f4062c668c2fd86a3cf8e4f0907e9247d01625ac"
+        },
+        {
+          "request_id": "seoul-shelter-total",
+          "url": "https://data.seoul.go.kr/dataList/dataView.do?infId=OA-21065&srvType=S&serviceKind=1&onepagerow=1000&pageNo=1",
+          "collected_at_kst": "2026-11-05T18:59:17.193898+09:00",
+          "http_status": 200,
+          "sha256": "3aa1efe39a18a9e84efabf3f29458f26763377909497b7b75ca1f41b7b9c284a"
+        },
+        {
+          "request_id": "seoul-shelter-sample-http",
+          "url": "http://openapi.seoul.go.kr:8088/sample/json/TbGtnHwcwP/1/5/",
+          "collected_at_kst": "2026-11-05T18:59:17.195430+09:00",
+          "http_status": 200,
+          "sha256": "d4e7b16ef118e9480e25a175439b158eef62bbefd2654ac238c002fcbaa7e3d6"
+        }
+      ]
+    },
+    {
+      "id": "S4-02",
+      "title": "OpenStreetMap / Overpass",
+      "source_as_of": {
+        "comparable_query_database_timestamp": "2026-11-05T09:59:27Z",
+        "incline_query_database_timestamp": "2026-11-05T09:55:17Z",
+        "element_edit_dates": "raw timestamp fields; not survey/field-verification dates",
+        "map_api_responses": "four separate live snapshots; no atomic database timestamp"
+      },
+      "source_crs": "EPSG:4326",
+      "vertical_datum": null,
+      "status": "original XML/JSON acquired; bbox/query scope only",
+      "license": "ODbL 1.0; © OpenStreetMap contributors",
+      "field_verified": false,
+      "collections": [
+        {
+          "request_id": "overpass-map-comparable",
+          "url": "https://overpass-api.de/api/interpreter",
+          "collected_at_kst": "2026-11-05T19:00:06.560932+09:00",
+          "http_status": 200,
+          "sha256": "0a369e8adc22a3b00a1434d64ee7c928be4e5eff3c33e4fe418e973eddd96d93"
+        },
+        {
+          "request_id": "overpass-incline",
+          "url": "https://overpass-api.de/api/interpreter",
+          "collected_at_kst": "2026-11-05T18:55:57.027924+09:00",
+          "http_status": 200,
+          "sha256": "1e9ae1b7ed77072575f955b2b86145e501a907bc2c45994c437ef5c6d6165ca6"
+        },
+        {
+          "request_id": "osm-map-0-0",
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.017000,37.577000,127.039000,37.595500",
+          "collected_at_kst": "2026-11-05T18:56:52.687353+09:00",
+          "http_status": 200,
+          "sha256": "6a2351b8932e5ddccae20a96474a55b774019c639d4ba5c64f652a39772fc7e0"
+        },
+        {
+          "request_id": "osm-map-0-1",
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.017000,37.595500,127.039000,37.614000",
+          "collected_at_kst": "2026-11-05T18:56:56.101314+09:00",
+          "http_status": 200,
+          "sha256": "1992a0721e7fe3c8ad58ed9177e58d7ac88daa8ca7f8bc0595dbeddd1317968c"
+        },
+        {
+          "request_id": "osm-map-1-0",
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.039000,37.577000,127.061000,37.595500",
+          "collected_at_kst": "2026-11-05T18:56:56.191920+09:00",
+          "http_status": 200,
+          "sha256": "f61591fa38adb717043702b70c4ce00f3edef469452d2faacb4f6d191716f3cc"
+        },
+        {
+          "request_id": "osm-map-1-1",
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.039000,37.595500,127.061000,37.614000",
+          "collected_at_kst": "2026-11-05T18:56:57.979099+09:00",
+          "http_status": 200,
+          "sha256": "5e038703f4b21d6f8f04c6ce35db214e8db5c1f4d0e89e7f866b8d1ed1f495d1"
+        }
+      ]
+    },
+    {
+      "id": "S4-03",
+      "title": "서울시 표고점·등고선 OA-22241, seq1 and seq2",
+      "source_as_of": {
+        "catalog_description": "2023 NGII digital topographic map",
+        "seq1_attachment_updated": "2023-12-26",
+        "seq2_attachment_updated": "2025-03-20",
+        "seq1_xml_export": "2022-06-03",
+        "seq2_xml_export": "2025-03-18",
+        "feature_survey_date": null
+      },
+      "source_crs": "EPSG:5174 verified from both ZIP PRJ files",
+      "vertical_datum": null,
+      "HEIGHT_units": "not independently verified; projected XY units metre",
+      "status": "two ZIPs acquired and CRC checked; seq2 identical to prior original; greater precision not established",
+      "license": "KOGL type 1 per source catalog",
+      "field_verified": false,
+      "collections": [
+        {
+          "request_id": "seoul-terrain-catalog",
+          "url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do",
+          "collected_at_kst": "2026-11-05T18:55:55.619450+09:00",
+          "http_status": 200,
+          "sha256": "134604c17cb801fd493f63c8764b5c4eaa6b25c1482682a5817104e5cdeccb73"
+        },
+        {
+          "request_id": "seoul-terrain-zip1",
+          "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+          "collected_at_kst": "2026-11-05T18:56:51.752978+09:00",
+          "http_status": 200,
+          "sha256": "0243111efc7bc30a03b992e92c419c9a9e891bc7df3094ffe0abf85dae24f44c"
+        },
+        {
+          "request_id": "seoul-terrain-zip2-get",
+          "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?infId=OA-22241&infSeq=1&seq=2&useCache=false",
+          "collected_at_kst": "2026-11-05T18:59:17.745592+09:00",
+          "http_status": 200,
+          "sha256": "4fbe3c7e061b5974e7403ec116855304ed8ae321eebcc0d12c31ca8fb7be30bf"
+        }
+      ]
+    },
+    {
+      "id": "S4-04",
+      "title": "성북구 무더위쉼터 신규·해제 공지 3건",
+      "source_as_of": {
+        "notice_publication_dates": [
+          "2026-05-06",
+          "2026-05-18",
+          "2026-05-29"
+        ],
+        "current_operation": null
+      },
+      "source_crs": null,
+      "coordinate_information": "addresses/bus-stop identifiers only; no geocoding performed",
+      "status": "official HTML and full notice JPEGs acquired; visual transcription; no field confirmation",
+      "license": "official source attribution; separate image reuse license not established",
+      "field_verified": false,
+      "collections": [
+        {
+          "request_id": "sb-notice-9581227",
+          "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9581227",
+          "collected_at_kst": "2026-11-05T18:59:20.422472+09:00",
+          "http_status": 200,
+          "sha256": "132a7635e42b137bba2986bba5413dc1ec6b00e92aa8c9c78f56d400eb92b63f"
+        },
+        {
+          "request_id": "sb-notice-image-05_29_165623",
+          "url": "https://www.sb.go.kr/upload/edit/2026_05_29_165623.jpg",
+          "collected_at_kst": "2026-11-05T19:00:34.328053+09:00",
+          "http_status": 200,
+          "sha256": "9c8b78a365616a030c7cd34f6a99cd0c953b872d8901bb1461de89581e592748"
+        },
+        {
+          "request_id": "sb-notice-9581034",
+          "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9581034",
+          "collected_at_kst": "2026-11-05T18:59:21.239815+09:00",
+          "http_status": 200,
+          "sha256": "681434fc4a41a2aecfe221c00eeefd38e0aec977e63627c0e7e41448a793012f"
+        },
+        {
+          "request_id": "sb-notice-image-05_18_160511",
+          "url": "https://www.sb.go.kr/upload/edit/2026_05_18_160511.jpg",
+          "collected_at_kst": "2026-11-05T19:00:34.329184+09:00",
+          "http_status": 200,
+          "sha256": "02394981f4ece2279082a8e4acb741ae3ca88eeacfc1e89ef6227349d7f97f25"
+        },
+        {
+          "request_id": "sb-notice-9580690",
+          "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9580690",
+          "collected_at_kst": "2026-11-05T18:59:22.726276+09:00",
+          "http_status": 200,
+          "sha256": "62c5c59fd999714a586109c340584891b47ee51410d8f93e758612f889d96519"
+        },
+        {
+          "request_id": "sb-notice-image-05_06_110624",
+          "url": "https://www.sb.go.kr/upload/edit/2026_05_06_110624.jpg",
+          "collected_at_kst": "2026-11-05T19:00:34.328965+09:00",
+          "http_status": 200,
+          "sha256": "955362f9ef52c7826095b5dcbd41be33c1ceebb7941a686d247c9abaa6f5205b"
+        }
+      ]
+    },
+    {
+      "id": "S4-05",
+      "title": "국토환경성평가지도 지형 분석 안내",
+      "source_as_of": {
+        "active_page_notice": "2022 NGII 5m DEM",
+        "commented_out_HTML_notice": "2020; not current visible source declaration",
+        "local_tile_date": null
+      },
+      "source_crs": null,
+      "vertical_datum": null,
+      "status": "HTML acquired; raster/original tile, accuracy and school coverage not acquired",
+      "license": null,
+      "field_verified": false,
+      "collections": [
+        {
+          "request_id": "neins-terrain",
+          "url": "https://webgis.neins.go.kr/map.do",
+          "collected_at_kst": "2026-11-05T18:58:21.269665+09:00",
+          "http_status": 200,
+          "sha256": "bbf44db32083358d49089bc6be2cfc69b2dc9510819bfa1ea71617a14d19f4dd"
+        }
+      ]
+    },
+    {
+      "id": "S4-06",
+      "title": "NGII DEM/성과내역/국토정보플랫폼·서울안전누리 후속 원본",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "status": "HTTP 503 upstream connection timeout/error bodies preserved; no target-region high-resolution original acquired",
+      "license": null,
+      "field_verified": false,
+      "collections": [
+        {
+          "request_id": "ngii-dem-catalog",
+          "url": "https://www.data.go.kr/data/15059920/fileData.do",
+          "collected_at_kst": "2026-11-05T18:55:57.972455+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-dem-inventory",
+          "url": "https://www.data.go.kr/data/15067637/fileData.do",
+          "collected_at_kst": "2026-11-05T18:56:00.309336+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-dem-json",
+          "url": "https://www.data.go.kr/catalog/15059920/fileData.json",
+          "collected_at_kst": "2026-11-05T18:58:15.967286+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-inventory-json",
+          "url": "https://www.data.go.kr/catalog/15067637/fileData.json",
+          "collected_at_kst": "2026-11-05T18:58:17.893850+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-portal",
+          "url": "https://map.ngii.go.kr/mn/mainPage.do",
+          "collected_at_kst": "2026-11-05T18:56:03.933573+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-digital-map",
+          "url": "https://map.ngii.go.kr/ms/map/NlipMap.do",
+          "collected_at_kst": "2026-11-05T18:58:18.148866+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-dem-notice",
+          "url": "https://www.ngii.go.kr/nlsc/service/nsoperation2/board?id=102815",
+          "collected_at_kst": "2026-11-05T18:58:23.222119+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        },
+        {
+          "request_id": "ngii-portal-http",
+          "url": "http://map.ngii.go.kr/mn/mainPage.do",
+          "collected_at_kst": "2026-11-05T19:00:06.562107+09:00",
+          "http_status": 503,
+          "sha256": "9deff96f9b5925fa5081257849ace321304b382d64cfb67d90a21a3c7cbf2925"
+        },
+        {
+          "request_id": "ngii-dem-catalog-http",
+          "url": "http://www.data.go.kr/data/15059920/fileData.do",
+          "collected_at_kst": "2026-11-05T19:00:06.561882+09:00",
+          "http_status": 503,
+          "sha256": "9deff96f9b5925fa5081257849ace321304b382d64cfb67d90a21a3c7cbf2925"
+        },
+        {
+          "request_id": "safecity-slope",
+          "url": "https://safecity.seoul.go.kr/distFclt/cfMapDs/cfMapDs.page?menuId=MENU_SSNS_000016",
+          "collected_at_kst": "2026-11-05T18:56:05.868941+09:00",
+          "http_status": 503,
+          "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+        }
+      ]
+    }
+  ]
+}

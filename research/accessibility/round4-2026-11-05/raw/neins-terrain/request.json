@@ -1,0 +1,22 @@
+{
+  "id": "neins-terrain",
+  "url": "https://webgis.neins.go.kr/map.do",
+  "requested_at_utc": "2026-11-05T09:58:21.269660+00:00",
+  "requested_at_kst": "2026-11-05T18:58:21.269665+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://webgis.neins.go.kr/map.do",
+  "response_headers": {
+    "server": "envoy",
+    "date": "Thu, 05 Nov 2026 09:58:27 GMT",
+    "content-type": "text/html;charset=UTF-8"
+  },
+  "bytes": 183078,
+  "sha256": "bbf44db32083358d49089bc6be2cfc69b2dc9510819bfa1ea71617a14d19f4dd",
+  "response_path": "raw/neins-terrain/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:58:27.784772+00:00"
+}

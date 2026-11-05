@@ -1,0 +1,2 @@
+# Preserve downloaded HTTP bodies byte-for-byte, including original line endings.
+raw/**/response.bin binary

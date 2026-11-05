@@ -1,0 +1,22 @@
+{
+  "id": "seoul-shelter-total",
+  "url": "https://data.seoul.go.kr/dataList/dataView.do?infId=OA-21065&srvType=S&serviceKind=1&onepagerow=1000&pageNo=1",
+  "requested_at_utc": "2026-11-05T09:59:17.193888+00:00",
+  "requested_at_kst": "2026-11-05T18:59:17.193898+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://data.seoul.go.kr/dataList/dataView.do?infId=OA-21065&srvType=S&serviceKind=1&onepagerow=1000&pageNo=1",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:59:18 GMT",
+    "content-type": "text/html;charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 642013,
+  "sha256": "3aa1efe39a18a9e84efabf3f29458f26763377909497b7b75ca1f41b7b9c284a",
+  "response_path": "raw/seoul-shelter-total/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:59:20.422163+00:00"
+}

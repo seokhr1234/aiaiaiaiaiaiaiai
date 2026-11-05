@@ -1,0 +1,23 @@
+{
+  "id": "seoul-shelter-sample",
+  "url": "https://openapi.seoul.go.kr:8088/sample/json/TbGtnHwcwP/1/5/",
+  "requested_at_utc": "2026-11-05T09:58:14.340651+00:00",
+  "requested_at_kst": "2026-11-05T18:58:14.340655+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 503,
+  "final_url": "https://openapi.seoul.go.kr:8088/sample/json/TbGtnHwcwP/1/5/",
+  "response_headers": {
+    "content-length": "211",
+    "content-type": "text/plain",
+    "date": "Thu, 05 Nov 2026 09:58:14 GMT",
+    "server": "envoy"
+  },
+  "bytes": 211,
+  "sha256": "0a23cb635f2c5b9896f577a2d3ceb20400d4033dd2979c717dc721870f85079e",
+  "response_path": "raw/seoul-shelter-sample/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:58:15.023049+00:00"
+}

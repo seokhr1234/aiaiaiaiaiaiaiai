@@ -1,0 +1,31 @@
+[
+  {
+    "id": "seoul-shelter-total",
+    "url": "https://data.seoul.go.kr/dataList/dataView.do?infId=OA-21065&srvType=S&serviceKind=1&onepagerow=1000&pageNo=1"
+  },
+  {
+    "id": "seoul-shelter-sample-http",
+    "url": "http://openapi.seoul.go.kr:8088/sample/json/TbGtnHwcwP/1/5/"
+  },
+  {
+    "id": "seoul-shelter-sample-443",
+    "url": "https://openapi.seoul.go.kr/sample/json/TbGtnHwcwP/1/5/"
+  },
+  {
+    "id": "seoul-terrain-zip2-get",
+    "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?infId=OA-22241&infSeq=1&seq=2&useCache=false",
+    "timeout": 90
+  },
+  {
+    "id": "sb-notice-9581227",
+    "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9581227"
+  },
+  {
+    "id": "sb-notice-9581034",
+    "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9581034"
+  },
+  {
+    "id": "sb-notice-9580690",
+    "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9580690"
+  }
+]

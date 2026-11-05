@@ -1,0 +1,30 @@
+{
+  "source": "OA-21065",
+  "collected_date_kst": "2026-11-05",
+  "source_facility_years": {
+    "2026": 4092
+  },
+  "catalog_data_updated": "2026-11-05",
+  "catalog_metadata_modified": "2026-08-11",
+  "row_effective_or_survey_dates": null,
+  "csv_rows": 4092,
+  "api_total": 4092,
+  "sheet_total": 4092,
+  "api_sample_rows": 5,
+  "full_api_acquired": false,
+  "full_public_csv_acquired": true,
+  "old_runtime_records": 4092,
+  "new_keys": [],
+  "old_keys_not_in_new_csv": [],
+  "changed_official_fields": [],
+  "seongbuk_rows": 264,
+  "bbox_rows": 193,
+  "source_projected_crs": "EPSG:5186 (explicit source labels)",
+  "source_lonlat_datum": null,
+  "analysis_lonlat_interpretation": "EPSG:4326; numeric compatibility checked",
+  "projected_lonlat_residual_m_max": 2.8548172641854728e-08,
+  "invalid_coordinate_row_numbers": [],
+  "coordinate_role": "facility reference, not an entrance or individual seat",
+  "field_verified": false,
+  "runtime_changes": 0
+}

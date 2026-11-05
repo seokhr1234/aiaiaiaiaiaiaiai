@@ -1,0 +1,488 @@
+
+
+
+
+<link rel="stylesheet" href="/js/grid/ui/arongi/AXJ.min.css"/>
+<link rel="stylesheet" href="/js/grid/ui/jquery-ui.css"/>
+<script src="/js/grid/dist/AXJ.min.js"></script>
+<script src="/js/grid/lib/AXGrid.js"></script>
+<script src="/js/grid/lib/AXUtil.js"></script>
+  
+<script type="text/javascript">
+    /*axisj 시작*/
+    AXConfig.AXReq.dataSendMethod = "json"
+    AXConfig.AXGrid.fitToWidthRightMargin = 0;
+
+    var pageID = "AXGrid";
+    var AXGrid_instances = [];
+    var fnObj = {
+        pageStart: function () {
+
+            fnObj.grid.bind();
+        },
+        grid: {
+            target: new AXGrid(),
+            bind: function () {
+
+                window.myGrid = fnObj.grid.target;
+
+                var getColGroup = function () {
+                    return [{key:"YEAR", label:"시설년도", width:120, align:"LEFT"},{key:"AREA_CD", label:"위치코드", width:120, align:"LEFT"},{key:"FACILITY_TYPE1", label:"시설구분1", width:120, align:"LEFT"},{key:"FACILITY_TYPE2", label:"시설구분2", width:120, align:"LEFT"},{key:"R_AREA_NM", label:"쉼터명칭", width:200, align:"LEFT"},{key:"R_DETL_ADD", label:"도로명주소", width:200, align:"LEFT"},{key:"LOTNO_ADDR", label:"지번주소", width:120, align:"LEFT"},{key:"OPR_DAYS", label:"기본운영_요일", width:120, align:"LEFT"},{key:"OPR_START_TIME", label:"기본운영_시작시간", width:120, align:"LEFT"},{key:"OPR_END_TIME", label:"기본운영_종료시간", width:120, align:"LEFT"},{key:"EXT_OPR_YN", label:"연장운영_운영여부", width:120, align:"LEFT"},{key:"EXT_OPR_DAYS", label:"연장운영_요일", width:120, align:"LEFT"},{key:"EXT_OPR_START_TIME", label:"연장운영_시작시간", width:120, align:"LEFT"},{key:"EXT_OPR_END_TIME", label:"연장운영_종료시간", width:120, align:"LEFT"},{key:"ADD_OPR_YN", label:"추가운영_운영여부", width:120, align:"LEFT"},{key:"ADD_OPR_DAYS", label:"추가운영_요일", width:120, align:"LEFT"},{key:"ADD_OPR_START_TIME", label:"추가운영_시작시간", width:120, align:"LEFT"},{key:"ADD_OPR_END_TIME", label:"추가운영_종료시간", width:120, align:"LEFT"},{key:"RMRK", label:"비고", width:120, align:"LEFT"},{key:"LON", label:"경도", width:120, align:"LEFT"},{key:"LAT", label:"위도", width:120, align:"LEFT"},{key:"MAP_COORD_X", label:"X좌표(EPSG:5186)", width:120, align:"LEFT"},{key:"MAP_COORD_Y", label:"Y좌표(EPSG:5186)", width:120, align:"LEFT"}];
+
+                };
+
+                myGrid.setConfig({
+                    targetID: "AXGridTarget",
+                    theme : "AXGrid",
+                    colHeadAlign: "center", // 헤드의 기본 정렬 값
+                    emptyListMSG: "조회된 데이터가 없습니다.",
+                    viewMode: AXUtil.browser.mobile?"mobile":"grid",
+                    //sort: true, //정렬을 원하지 않을 경우 (tip
+                    colHeadTool: true, // column tool use
+                    fitToWidth: false, // 너비에 자동 맞춤
+                    viewMode: AXUtil.browser.mobile?"mobile":"grid",
+                    colGroup: getColGroup(),
+
+                    body: {
+                        marker: function(){
+
+                        },
+//                          onclick: function(){
+//                              toast.push(Object.toJSON({index:this.index, r:this.r, c:this.c, item:this.item}));
+//                          },
+                        addClass: function(){
+                            // red, green, blue, yellow, white, gray
+                            if(this.index % 2 == 0){
+                                return "blue";
+                            }else{
+                                return "white";
+                            }
+                        }
+                    }
+//                 	,
+//                     page:{
+//                         paging:true,
+//                      pageNo:1,
+//                      pageSize:100
+//                         onchange: function(pageNo){
+//                             $('#pageNo').val(pageNo)
+//                             fnObj.pageStart();
+//                         }
+//                     }
+                });
+
+                var param = $("#frmSheet").serialize();
+                myGrid.setList({
+                    ajaxUrl : "/dataList/dataView.do?onepagerow=1000&"+param,
+                    ajaxPars: "browser1="+axf.browser.name+"&version="+axf.browser.version.number(),
+                    onLoad  : function(){
+                    	console.log(this);
+                        $('#gridTotalCnt').val(JSON.stringify(this.page.totalCount));
+                    },
+                    onError : function(){
+                        trace('fail')
+
+                    }
+                });
+                //trace(myGrid.getSortParam());
+
+
+            },
+            deleteItem: function (index) {
+                $.Event(event).stopPropagation(); // 버튼클릭 이벤트가 row click 이벤트를 발생시키지 않도록 합니다.
+                var item = myGrid.list[index];
+                toast.push('deleteItem: ' + $.param(item).dec());
+            },
+            getExcel: function (type) {
+                var obj = myGrid.getExcelFormat(type);
+                //trace(obj);
+                $("#printout").html(Object.toJSON(obj));
+            },
+            getSelectedItem: function () {
+                //trace(this.target.getSelectedItem());
+                toast.push('콘솔창에 데이터를 출력하였습니다.');
+            }
+        }
+    };
+
+    jQuery(document.body).ready(function () {
+
+        fnObj.pageStart();
+
+        if('0' == 1 && 'true' == 'false') {
+            $('#Wrapfilter_op').show();
+            if('[]' != ''){
+                $('.InSelWrap').show();
+            }
+        }
+
+        $("[id^='AXGridTarget_AX_colHeadText_AX_0_AX']").css("padding-top","");
+        
+    });
+
+    $('input[name=txtFilter]').keydown(function(e){
+		if (e.keyCode == 13) {
+			e.preventDefault();
+			fnObj.pageStart();
+        }
+    });
+    
+    $('.InputsinBtn').click(function(e){
+        fnObj.pageStart();
+    });
+
+    
+    
+    function filterCheck(){
+        var bf_name = "";
+
+        if($(".ipb").length > 0){
+            for(var i=0; i<$(".ipb").length; i++){
+                var startName = $(".ipb")[i].name;
+                var endName = $(".ipb")[i+1].name;
+                var startDate = $("input[name="+startName+"]").val();
+                var endDate = $("input[name="+endName+"]").val();
+
+                if(startDate != "" && endDate == ""){
+                    alert("검색 종료일을 선택하세요.");
+                    $("input[name="+endName+"]").focus();
+                    return false;
+                }else if(startDate == "" && endDate != ""){
+                    alert("검색 시작일을 선택하세요.");
+                    $("input[name="+startName+"]").focus();
+                    return false;
+                }else if(startDate != "" && endDate != ""){
+                    if(!checkNumber(startDate)){
+                        alert("날짜는 숫자로만 입력하세요. 예)2000-01-01");
+                        $("input[name="+startName+"]").val("");
+                        return false;
+                    }else if(!checkNumber(endDate)){
+                        alert("날짜는 숫자로만 입력하세요. 예)2000-01-01");
+                        $("input[name="+endName+"]").val("");
+                        return false;
+                    }else if(startDate > endDate){
+                        alert("검색 시작일은 종료일보다 클 수 없습니다.");
+                        $("input[name="+endName+"]").focus();
+                        return false;
+                    }
+                }
+                i++;
+            }
+        }
+
+        // 검색조건 중 checkbox에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=chk]").length; i++){
+            var check_nm = $("input[id=chk_"+i+"]").attr("name");
+            if(bf_name != check_nm){
+                if($("input[name="+check_nm+"]").attr("reqName") != ""){
+                    if($("input[name="+check_nm+"]:checked").length < 1){
+                        alert($("input[name="+check_nm+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                        return false;
+                    }
+                }
+                bf_name = check_nm;
+            }
+        }
+
+        // 검색조건 중 raio에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=rad]").length; i++){
+            var radio_nm = $("input[id=rad_"+i+"]").attr("name");
+            if(bf_name != radio_nm){
+                if($("input[name="+radio_nm+"]").attr("reqName") != ""){
+                    if($("input[name="+radio_nm+"]:checked").length < 1){
+                        alert($("input[name="+radio_nm+"]").attr("reqName") + radio_nm + "은(는) 필수입력 항목입니다.");
+                        return false;
+                    }
+                }
+                bf_name = radio_nm;
+            }
+        }
+
+        // 검색조건 중 combo에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("select[id^=com]").length; i++){
+            if($("select[id=com_"+i+"]").attr("reqName") != ""){
+                if($("select[id=com_"+i+"] option:selected").val() == ""){
+                    alert($("select[id=com_"+i+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                    return false;
+                }
+            }
+        }
+
+        // 검색조건 중 sdate에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=sdt]").length; i++){
+            if($("input[id=sdt_"+i+"]").attr("reqName") != ""){
+                if($("input[id=sdt_"+i+"]").val() == ""){
+                    alert($("input[id=sdt_"+i+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                    return false;
+                }
+            }
+        }
+        // 검색조건 중 pdate에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=pdt]").length; i++){
+            if($("input[id=pdt_"+i+"]").attr("reqName") != ""){
+                if($("input[id=pdt_"+i+"]").val() == ""){
+                    alert($("input[id=pdt_"+i+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                    return false;
+                }
+            }
+        }
+        // 검색조건 중 ldate에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=ldt]").length; i++){
+            if($("input[id=ldt_"+i+"]").attr("reqName") != ""){
+                if($("input[id=ldt_"+i+"]").val() == ""){
+                    alert($("input[id=ldt_"+i+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                    return false;
+                }
+            }
+        }
+        // 검색조건 중 fdate에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=fdt]").length; i++){
+            if($("input[id=fdt_"+i+"]").attr("reqName") != ""){
+                if($("input[id=fdt_"+i+"]").val() == ""){
+                    alert($("input[id=fdt_"+i+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                    return false;
+                }
+            }
+        }
+        // 검색조건 중 ddate에 대하여 reqName 값을 지정한 것만 필수체크
+        for(var i=1; i<=$("input[id^=ddt]").length; i++){
+            if($("input[id=ddt_"+i+"]").attr("reqName") != ""){
+                if($("input[id=ddt_"+i+"]").val() == ""){
+                    alert($("input[id=ddt_"+i+"]").attr("reqName") + "은(는) 필수입력 항목입니다.");
+                    return false;
+                }
+            }
+        }
+
+
+        if(document.frmSheet.filterCol.value != "" && document.frmSheet.filterCol.value != "필터선택" && document.frmSheet.txtFilter.value.trim() ==""){
+            alert("검색어를 입력하세요.");
+            document.frmSheet.txtFilter.select();
+            return false;
+        }
+
+        if(specialCheck(document.frmSheet.txtFilter.value)) {
+            alert('특수문자는 입력할 수 없습니다.');
+            document.frmSheet.txtFilter.value = "";
+            return false;
+        }
+
+        return true;
+    }
+
+
+    /*Sheet 각종 처리*/
+    var isDown = "N";   //파일변환여부
+    var strTime = 0;    //파일변환 버튼 클릭 시간(최초)
+    var curTime = 0;    //파일변환 버튼 클릭 시간(중간)
+
+    function doAction(sAction)
+    {    	
+    	
+    	// 20231012 OA-21275 일 때만 조건 생성
+    	var pathName = this.location.pathname;
+    	var startLength = this.location.pathname.indexOf('OA-');
+    	var oaName = pathName.substr(startLength, 8);
+    	
+    	if(oaName == 'OA-21275') {
+    		if(document.frmSheet.filterCol.value == "필터선택" || document.frmSheet.txtFilter.value.trim() == ""){
+    			alert("데이터 양이 많아 필드명과 검색명을 필수적으로 입력해야 합니다.");
+    			return false;
+    		}
+    		
+    		var searchTxt = document.frmSheet.txtFilter.value.trim();
+			var searchTxtLength = document.frmSheet.txtFilter.value.trim().length;
+    		// 접수연도 ACC_YEAR 자치구코드 SGG_CD 법정동코드 BJDONG_CD 계약일 DEAL_YMD 자치구명 SGG_NM 본번 BONBEON 부번 BUBEON
+    		if(document.frmSheet.filterCol.value == "ACC_YEAR" || document.frmSheet.filterCol.value == "SGG_CD" || document.frmSheet.filterCol.value == "BJDONG_CD"
+    				|| document.frmSheet.filterCol.value == "DEAL_YMD" || document.frmSheet.filterCol.value == "BONBEON" || document.frmSheet.filterCol.value == "BUBEON") { 
+    			//if(searchTxtLength != 4 || parseInt(searchTxt).toString().length != 4) {
+    			if(searchTxtLength <= 3) {
+    				alert("검색명이 너무 짧습니다. 4자리 이상 입력해 주시기 바랍니다.");
+    				return false;
+    			}
+    		} else {
+    			if(searchTxtLength <= 1) {
+    				alert("검색명이 너무 짧습니다. 2자리 이상 입력해 주시기 바랍니다.");
+    				return false;
+    			}
+    		}
+    	}
+    	// 20231012 여기까지
+    		
+    	if(document.frmSheet.filterCol.value == "필터선택" && document.frmSheet.txtFilter.value.trim() != ""){
+			alert("검색어를 확인해주세요.");
+			return false;
+    	}
+		
+        var totRows = $('#gridTotalCnt').val();
+        var mod = parseInt(totRows/5000);
+        var sec = (mod + 1) * 2;    //다운로드 예상시간 측정
+
+        if(filterCheck()){
+            var toDay  = new Date();
+            if(isDown == "N"){
+                strTime = toDay.getTime();
+            }else{
+                curTime = toDay.getTime();
+                var time_lag = ((curTime - strTime)/1000).toFixed(0);
+                var time = sec - time_lag;
+                if(time > 0 && time_lag <= 60){
+                    alert("다운로드 중입니다.");
+                    return false;
+                }else{
+                    strTime = toDay.getTime();
+                }
+            }
+            if(sec > 10){
+                if(!confirm("대용량의 데이터인 경우, 다소 시간이 소요될 수 있습니다.")){
+                    return false;
+                }
+            }
+
+            var bypassYn = "N";
+            if (sAction=="xlsx" || sAction=="json" || sAction=="csv" )
+            {
+                isDown = "Y";
+                if ( bypassYn == 'Y') {
+                	
+                    document.frmSheet.method="get";
+                    document.frmSheet.action = "http://openapi.seoul.go.kr:8088/file/"+sAction+"/OA-21065/SAMPLE_VIEW";
+                    document.frmSheet.submit();
+                } else {
+                    document.frmSheet.method="post";
+                    //운영서버 반영
+                    document.frmSheet.action = "//datafile.seoul.go.kr/bigfile/iot/sheet/"+sAction+"/download.do";
+                    //document.frmSheet.action = "http://localhost:80/bigfile/iot/sheet/"+sAction+"/download.do";
+                    document.frmSheet.submit();
+                }
+                
+                var hiddenIframeId = 'filedown';
+                var iframe = document.getElementById(hiddenIframeId);
+                if(iframe != null){
+                  	blockUI();
+                  	var timer = setInterval(function() {
+	   					var iframeDoc = iframe.contentDocument	|| iframe.contentWindow.document;
+    					// Check if loading is complete
+    					if (iframeDoc.readyState == 'complete' || iframeDoc.readyState == 'interactive') {
+    						unBlockUI();
+    						clearInterval(timer);
+    						return;
+    					}
+    				}, 3000);
+                }
+                
+            }
+        }
+        
+    }
+
+    function specialCheck(val) {
+        var special_pattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
+
+        return special_pattern.test(val);
+    }
+    
+    //파일 다운로드를 submit할 때 아래 함수 실행
+	function blockUI() {
+// 		$('#frmSheet').oLoader({
+		$('#uiTabguide1').oLoader({
+ 			image : '/resources/img/common/loading_bar.gif',			
+			backgroundColor : '#eee',
+// 			backgroundColor : '#fff',
+			fadeInTime : 500,
+			fadeOutTime : 0,
+			fadeLevel : 0.9
+		});
+
+	}
+
+	function unBlockUI() {
+// 		$('#frmSheet').oLoader('hide');
+		$('#uiTabguide1').oLoader('hide');
+		//clearInterval(downloadTimer);
+	}
+    
+
+</script>
+
+
+<section class="ui-tab-pnl selected">
+<form name="frmSheet" id="frmSheet" method="post" >
+    <input type="hidden" name="srvType" value="S"/>
+    <input type="hidden" name="infId" id="infId" value="OA-21065"/> <!-- 추가:파일다운로드 변경 (2016.05.09-한국정보공학D&S)-->
+    <input type="hidden" name="serviceKind" id="serviceKind" value="0"/> <!-- 추가:파일다운로드 변경 (2016.05.09-한국정보공학D&S)-->
+    <input type="hidden" name="pageNo" id="pageNo" value="1"/>
+    <input type="hidden" name="gridTotalCnt" id="gridTotalCnt" />
+    <input type="hidden" name="ssUserId" id="ssUserId" value="SAMPLE_VIEW" />
+    <input type="hidden" name="strWhere" id="strWhere" value=""/>
+    <input type="hidden" name="strOrderby" id="strOrderby" value=""/>
+
+    <div class="tbl-base-s type-form" id="Wrapfilter_op" style="display:none">
+    	<table>
+			<caption>
+				<strong>조건</strong>
+				<span class="ui-caption"></span>
+			</caption>
+			<colgroup>
+				<col class="col1">
+				<col class="col2">
+			</colgroup>
+			<tbody>
+    
+    		</tbody>
+    	</table>
+    	<input type="hidden" id="filterTypes" value="true" />
+    </div>
+
+
+    <div class="tbl-base-s type-form" id="Wrapfilter">
+    	<table>
+			<caption>
+				<strong>조건</strong>
+				<span class="ui-caption"></span>
+			</caption>
+			<colgroup>
+				<col class="col1">
+				<col class="col2">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">필드명</th>
+					<td>
+						<select title="필드명선택" name="filterCol" id="selt_filterCol" style=" max-width: 100%;">
+							<option>필터선택</option>
+				        
+				          	<option value="R_AREA_NM">쉼터명칭</option>
+				        
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">검색명</th>
+					<td>
+						<input type="text" class="inp-base" name="txtFilter" id="txtFilter" title="펄터 검색" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<div class="btn-wrap align-r">
+		<button type="button" class="btn-base-s" id="btnCsv"  onclick="javascript:serviceDownload('csv');"><span class="InputsinBtn" title="CSV 내려받기">내려받기(CSV)</span></button>
+		<button type="button" class="btn-base-s" id="btnJson" onclick="javascript:serviceDownload('json');"><span class="InputsinBtn" title="JSON 내려받기">내려받기(JSON)</span></button>
+		<button type="button" class="btn-base-s"><span class="InputsinBtn" title="sheet 조회">조회</span></button>
+	</div>
+			
+			
+			
+    <div id="AXPage" class="TableIn_Title">
+        <div class="AXGrid">
+            <div id="AXGridTarget" style="height: 450px;"></div>
+        </div>
+    </div>
+
+	<iframe id="filedown" style="height: 0;" title="파일다운로드 프레임"></iframe>
+
+</form>
+</section>

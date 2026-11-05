@@ -1,0 +1,23 @@
+{
+  "id": "ngii-dem-notice",
+  "url": "https://www.ngii.go.kr/nlsc/service/nsoperation2/board?id=102815",
+  "requested_at_utc": "2026-11-05T09:58:23.222111+00:00",
+  "requested_at_kst": "2026-11-05T18:58:23.222119+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 503,
+  "final_url": "https://www.ngii.go.kr/nlsc/service/nsoperation2/board?id=102815",
+  "response_headers": {
+    "content-length": "91",
+    "content-type": "text/plain",
+    "date": "Thu, 05 Nov 2026 09:58:28 GMT",
+    "server": "envoy"
+  },
+  "bytes": 91,
+  "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+  "response_path": "raw/ngii-dem-notice/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:58:28.788961+00:00"
+}

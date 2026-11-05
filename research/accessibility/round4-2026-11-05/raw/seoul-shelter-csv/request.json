@@ -1,0 +1,34 @@
+{
+  "id": "seoul-shelter-csv",
+  "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+  "form": {
+    "srvType": "S",
+    "infId": "OA-21065",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "txtFilter": ""
+  },
+  "timeout": 90,
+  "requested_at_utc": "2026-11-05T09:58:14.339354+00:00",
+  "requested_at_kst": "2026-11-05T18:58:14.339366+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:58:15 GMT",
+    "server": "envoy",
+    "content-disposition": "attachment; filename=\"ìì¸ì ë¬´ëìì¼í°.csv\"",
+    "content-type": "application/x-msdownload;charset=CP949"
+  },
+  "bytes": 1175116,
+  "sha256": "9b2d96168234870dd78f4246f4062c668c2fd86a3cf8e4f0907e9247d01625ac",
+  "response_path": "raw/seoul-shelter-csv/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:58:15.966968+00:00"
+}

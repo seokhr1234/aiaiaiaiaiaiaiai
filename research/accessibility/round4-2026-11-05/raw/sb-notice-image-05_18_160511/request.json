@@ -1,0 +1,25 @@
+{
+  "id": "sb-notice-image-05_18_160511",
+  "url": "https://www.sb.go.kr/upload/edit/2026_05_18_160511.jpg",
+  "requested_at_utc": "2026-11-05T10:00:34.329182+00:00",
+  "requested_at_kst": "2026-11-05T19:00:34.329184+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://www.sb.go.kr/upload/edit/2026_05_18_160511.jpg",
+  "response_headers": {
+    "etag": "W/\"211767-1779087342511\"",
+    "last-modified": "Mon, 18 May 2026 06:55:42 GMT",
+    "content-length": "211767",
+    "date": "Thu, 05 Nov 2026 10:00:35 GMT",
+    "content-type": "image/jpeg;charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 211767,
+  "sha256": "02394981f4ece2279082a8e4acb741ae3ca88eeacfc1e89ef6227349d7f97f25",
+  "response_path": "raw/sb-notice-image-05_18_160511/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T10:00:35.956469+00:00"
+}

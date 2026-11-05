@@ -1,0 +1,30 @@
+{
+  "id": "seoul-terrain-zip1",
+  "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+  "form": {
+    "infId": "OA-22241",
+    "infSeq": "1",
+    "seq": "1"
+  },
+  "timeout": 90,
+  "requested_at_utc": "2026-11-05T09:56:51.752974+00:00",
+  "requested_at_kst": "2026-11-05T18:56:51.752978+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:56:53 GMT",
+    "server": "envoy",
+    "content-disposition": "attachment; filename=\"ìì¸ì ê²½ì¬ë.zip\"",
+    "content-length": "103960741",
+    "content-type": "application/x-msdownload"
+  },
+  "bytes": 103960741,
+  "sha256": "0243111efc7bc30a03b992e92c419c9a9e891bc7df3094ffe0abf85dae24f44c",
+  "response_path": "raw/seoul-terrain-zip1/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:56:57.976783+00:00"
+}

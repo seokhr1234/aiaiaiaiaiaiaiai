@@ -1,0 +1,43 @@
+[
+  {
+    "id": "seoul-shelter-catalog",
+    "url": "https://data.seoul.go.kr/dataList/OA-21065/S/1/datasetView.do"
+  },
+  {
+    "id": "seoul-terrain-catalog",
+    "url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do"
+  },
+  {
+    "id": "osm-map",
+    "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.017,37.577,127.061,37.614",
+    "timeout": 90
+  },
+  {
+    "id": "overpass-incline",
+    "url": "https://overpass-api.de/api/interpreter",
+    "form": {
+      "data": "[out:json][timeout:35];nwr[\"incline\"](37.577,127.017,37.614,127.061);out meta geom;"
+    },
+    "timeout": 50
+  },
+  {
+    "id": "sb-shelter-notices",
+    "url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=6350&searchCtgry=%EC%95%88%EC%A0%84"
+  },
+  {
+    "id": "ngii-dem-catalog",
+    "url": "https://www.data.go.kr/data/15059920/fileData.do"
+  },
+  {
+    "id": "ngii-dem-inventory",
+    "url": "https://www.data.go.kr/data/15067637/fileData.do"
+  },
+  {
+    "id": "ngii-portal",
+    "url": "https://map.ngii.go.kr/mn/mainPage.do"
+  },
+  {
+    "id": "safecity-slope",
+    "url": "https://safecity.seoul.go.kr/distFclt/cfMapDs/cfMapDs.page?menuId=MENU_SSNS_000016"
+  }
+]

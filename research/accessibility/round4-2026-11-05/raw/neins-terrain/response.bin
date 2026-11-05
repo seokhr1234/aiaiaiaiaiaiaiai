@@ -1,0 +1,3760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>국토환경성평가지도</title>
+
+	<!-- 퍼블리싱  css-->
+<!-- 	<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Noto+Sans" type="text/css"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+	
+<!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" type="text/css"> -->
+	<link rel="stylesheet" href="/assets/js/common/library/jquery-ui-1.13.2.custom/jquery-ui.min.css" type="text/css">
+	
+	<link rel="stylesheet" href="/assets/css/user/owl.carousel.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/user/reset.css?v=20240708" type="text/css">
+	<link rel="stylesheet" href="/assets/css/user/default.css?v=20240809" type="text/css">
+	<!-- openlayers 공식 css -->
+	<link rel="stylesheet" href="/assets/js/common/component/openlayers-5.1.3/css/ol.css" type="text/css">
+	<!-- openlayers custom css -->
+	<link rel="stylesheet" href="/assets/css/user/userOpenLayers.css?v=20240709" type="text/css">
+	<!-- openlayers custom google API -->
+	<link rel="stylesheet" href="/assets/js/common/component/ol3-google-maps-v0.20.0/ol3gm.css" type="text/css">
+	
+	<!-- 20200131 로딩바 css추가 easy loading -->
+	<link rel="stylesheet" href="/assets/css/user/easy-loading.css">
+	<script type="text/javascript" src="/assets/js/user/layoutCommon.js"></script>
+
+	<!-- gis js -->
+	<script src="/assets/js/common/component/openlayers-5.1.3/build/ol.js"></script>
+	<!-- jsts js -->
+	<script src="/assets/js/common/component/jsts-1.6.0/jsts.min.js"></script>
+	<!-- proj4js -->
+	<script src="/assets/js/common/component/proj4js-2.5.0/dist/proj4.js"></script>
+	<!-- jQuery js -->
+<!-- 	<script src="/assets/js/common/library/jquery-1.12.4.min.js"></script> -->
+	<script src="/assets/js/common/library/jquery-3.7.1.min.js"></script>
+	<script src="/assets/js/common/library/jquery-migrate-1.4.1.min.js"></script>
+	<script src="/assets/js/common/library/jquery.cookie.js"></script>
+	
+<!-- 	<script src="/assets/js/common/library/jquery-ui.min.js"></script> -->
+	<script src="/assets/js/common/library/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+	
+	
+	<!-- openlayers custom google API -->
+	<script src="/assets/js/common/component/ol3-google-maps-v0.20.0/ol3gm.js"></script>
+	<!-- file save js-->
+	<script src="/assets/js/common/library/file/es6-promise.auto.js"></script>
+	<script src="/assets/js/common/library/file/es6-promise.min.js"></script>
+	<script src="/assets/js/common/library/file/html2canvas.js"></script>
+	<script src="/assets/js/common/library/file/FileSaver.min.js"></script>
+	<!-- ajax js -->
+	<script src="/assets/js/common/library/ajax/ajaxCommon.js"></script>
+	<!-- gis custom js -->
+	<script src="/assets/js/user/gis/customLayer.js?v=20250423"></script>
+		<script src="/assets/js/user/gis/customMap.js?v=20240731"></script>
+		<script src="/assets/js/user/gis/customDraw.js?v=20240722"></script>
+		<script src="/assets/js/user/gis/customCommon.js?v=20240911"></script>
+	<!-- 20200131 로딩바 js추가 easy loading -->
+	<script src="/assets/js/user/gis/easy-loading.js"></script>
+	<!-- 20200914 WPS 스크립트 추가 -->
+	<script src="/assets/js/user/gis/customWps.js?v=240607"></script>
+	<!-- 2021 기능개선 스크립트 추가 (JS) -->
+	<script src="/assets/js/user/gis/customJS.js?v=240607"></script>
+	<!-- envLoc Js -->
+	<script type="text/javascript" src="/assets/js/user/gis/envLoc.js?v=20241021"></script>
+	
+	<!-- evlclSprt Js -->
+	<script src="/assets/js/user/gis/evlclSprt.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script>
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+	</script>
+	
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBJ56TNKEZ"></script>
+				<script type="text/javascript">
+					window.dataLayer = window.dataLayer || [];
+					gtag('js', new Date());
+					gtag('config', 'G-YBJ56TNKEZ');
+				</script>
+			<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBJ56TNKEZ"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				gtag('js', new Date());
+				gtag('config', 'G-YBJ56TNKEZ');
+				
+			</script>
+		
+	 Global site tag (gtag.js) - Google Analytics -->
+	
+	<script>
+		var ecvamNeinsDomain = 'https://ecvam.neins.go.kr';
+		var ecvamKeiDomain = 'https://ecvam.kei.re.kr';
+		var webgisNeinsDomain = 'https://webgis.neins.go.kr';
+		var webgisKeiDomain = 'https://webgis.kei.re.kr';
+		var vWorldDomain = 'https://webgis.neins.go.kr';
+		var vWorldkeys = vworldUrl();
+		var vWorldBaseUrl = 'https://api.vworld.kr/req/wmts/1.0.0/';
+		var vWorldWmsUrl = 'https://api.vworld.kr/req/wms?';
+		var vWorldSearchUrl = 'https://api.vworld.kr/req/search?';
+		var vWorldSearchDataUrl = 'https://api.vworld.kr/req/data?';
+		var vWorldSearchAdresUrl = 'https://api.vworld.kr/req/address?';
+		var proxyUrl = 'https://webgis.neins.go.kr/proxy/proxy.do?url=';
+	 	var geoserverWmsUrl = "/proxy/geoserver/ECVAM/wms";
+        var geoserverWmtsUrl = "/proxy/geoserver/gwc/service/wmts";
+		var heritageKey = 'IEJ8BzBj3lxmijMV';
+		var heritageDomain = 'https://webgis.kei.re.kr';
+		var dataPotalUrl = 'https://apis.data.go.kr/1480523/';
+		var dataPotalKey = 'ecjhlXtGU5BCeQnYeIvr2i7IeKC%2BeAXFEyskJ4qKZ5DgoWJ%2F3gec9rBe1NYT7zt8DDeUPnVq%2FQwGTSPCo3BCiQ%3D%3D';
+		var dataEcoPotalUrl = 'https://apis.data.go.kr/B553084/ecoapi/EcologyzmpService/wms/getEcologyzmpWMS';
+		var dataEcoPotalKey = 'ecjhlXtGU5BCeQnYeIvr2i7IeKC+eAXFEyskJ4qKZ5DgoWJ/3gec9rBe1NYT7zt8DDeUPnVq/QwGTSPCo3BCiQ==';
+		
+		var geoserverTileUrl = "/proxy/geoserver/ECVAM/wms";
+		
+		var geoserverWpsUrl = "/proxy/geoserver/wps";
+		var geoserverWmsUrl = "/proxy/geoserver/ECVAM/wms";
+		var geoserverWmtsUrl = "/proxy/geoserver/gwc/service/wmts";
+		
+		var rasterAnalysisDetailUrl = "/proxy/raster/detail"; 
+		
+		var rasterAnalysisFeatureUrl = "/proxy/raster/feature";
+		var rasterAnalysisFeatureDtl = "/proxy/raster/featureDtl";
+		var vectorAreaAnalysisUrl = "/proxy/vector/area";
+		var rasterAnalysisLandUseUrl = "/proxy/raster/landuse";
+		var rasterGhAnalysisFeatureUrl = "/proxy/raster/ghFeature";
+		
+		var envLocAnalysisFeatureUrl = "/proxy/envloc/feature";
+		var envLocAnalysisGetArea = "/proxy/envloc/getArea";
+		var envLocAnalysisPop = "/proxy/envloc/pop";
+		var envLocAnalysisWater = "/proxy/envloc/water";
+		let envLocAnalysisMount = "/proxy/envloc/mount";
+		let envLocAnalysisRgrpAttr = "/proxy/envloc/rgrpAttr";
+		let envLocAnalysisRgrpList = '';
+		let safemapApikey = 'S8X8HPBE-S8X8-S8X8-S8X8-S8X8HPBEKT';
+		let safemapUrl = 'https://safemap.go.kr/openapi2/IF_0046_WMS';
+		
+		var mobileDomain = 'https://mwebgis.neins.go.kr/';
+		var mediaMatchMedia = '768';
+
+		$(document).ready(function() {
+			if ($("ul.gnb").length > 0 && $("ul.ft_gnb").length > 0) {
+				var ftGnb = $("ul.gnb").clone();
+
+				$(ftGnb).find(".depth2").attr("class", "ft_depth2");
+				$(".ft_gnb").append($(ftGnb).html());
+			}
+		});
+	</script>
+	<!-- 프로토타입 적용 -->
+	<!-- 싱글맵일때 -->
+	<script src="/assets/js/user/gis/customSingleMap.js?v=240828"></script>
+	<!-- 멀티맵일때 -->
+	<!-- 퍼블리싱 js -->
+	<script src="/assets/js/user/owl.carousel.min.js"></script>
+	<script src="/assets/js/user/default.js?v=20241212"></script>
+	<script src="/assets/js/user/userCommon.js?v=20240607"></script>
+	<!-- 멀티맵일때 -->
+	
+
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/assets/images/img/top.ico"/>
+<link rel="apple-touch-icon" href="/assets/images/img/top.ico"/>
+<style>
+
+/* 
+	.more {display:block;width: 120px;height: 16px;background-image:url('/assets/images/img/lnb_open1.png');margin-left:178px;border-top : 1px solid #666666;} 
+	.close {display:block;background-image:url('/assets/images/img/lnb_close1.png');width: 120px;height: 16px;margin-left:178px;}
+*/
+.more {display: block;width: 100%;height: 18px;background: url('/assets/images/img/lnb_open1.png') no-repeat 50%;border-top: 1px solid #C4C4C4;cursor: pointer;}
+.close{display: block;width: 100%;height: 18px;background: url('/assets/images/img/lnb_close1.png') no-repeat 50%;border-top: 1px solid #C4C4C4;cursor: pointer}
+
+.blind {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+.more:hover, .close:hover {cursor:pointer;}
+.board {font-family:'돋움';font-size:13px;position:absolute;top:30px;width:410px;height:135px;background:pink;visibility:hidden;}
+.list {float:left;}
+.list li {list-style:none;margin-top:5px;}
+.list li:hover {text-decoration:underline;cursor:pointer;}
+#main_right_tools{position:absolute; top:34.8em; right:0.7em; z-index:9; font-size:13px;transition:all 0.3s ease; -webkit-transition:all 0.3s ease;}
+#main_right_tools .map_ctrl1{text-align:right;}
+#main_right_tools .map_ctrl1 .map_op{overflow:hidden; position:relative; display:block; width:2.875em; height:2.875em; line-height:2.875em; background-color:#fff; border-radius:0.2em; text-align:center; box-shadow:2px 2px 5px rgba(0,0,0,0.2);transition:width 0.3s ease; -webkit-transition:width 0.3s ease;}
+#main_right_tools .map_ctrl1 .map_op:hover{width:14.4em;}
+#main_right_tools .map_ctrl1 .map_op a{position:absolute; top:0; display:block; width:2.875em;}
+#main_right_tools .map_ctrl1 .map_op a:after{content:""; position:absolute; top:calc(50% - 1.3em); right:-1px; width:1px; height:2.6em; background-color:#E7E7E7;}
+#main_right_tools .map_ctrl1 .map_op .map_btn{left:0; display:none;color:black;}
+#main_right_tools .map_ctrl1 .map_op .sky_btn{left:2.875em;}
+#main_right_tools .map_ctrl1 .map_op .night_btn{left:5.75em;}
+#main_right_tools .map_ctrl1 .map_op .gray_btn{left:8.625em;}
+#main_right_tools .map_ctrl1 .map_op .osm_btn{left:11.5em;}
+#main_right_tools .map_ctrl1 .map_op[data-option="map"]:hover .map_btn{color:#005DB7;}
+#main_right_tools .map_ctrl1 .map_op[data-option="sky"]:hover .sky_btn{color:#005DB7;}
+#main_right_tools .map_ctrl1 .map_op[data-option="gray"]:hover .gray_btn{color:#005DB7;}
+#main_right_tools .map_ctrl1 .map_op[data-option="night"]:hover .night_btn{color:#005DB7;}
+@media screen and (max-width:1024px){
+	#main_right_tools{font-size:15px;}
+}
+@media screen and (max-width:920px){
+	#main_right_tools{font-size:13px;}
+}
+@media screen and (max-width:740px){
+	#main_right_tools{top:5.5em;}
+}
+</style>
+<!-- shp파일 업로드 -->
+<script src="/assets/js/common/component/jindo/jindo.js"></script>
+<script src="/assets/js/common/component/jindo/jindo.Component.js"></script>
+<script src="/assets/js/common/component/jindo/jindo.UIComponent.js"></script>
+<script src="/assets/js/common/component/jindo/jindo.BrowseButton.js"></script>
+<script src="/assets/js/common/component/jindo/jindo.UploadQueue.js"></script>
+<script src="/assets/js/user/gis/jindo-setting.js?v=20241121"></script>
+<script>
+	var db_x, db_y;
+	var o;
+	var format = new ol.format.WKT();
+	var parser = new jsts.io.OL3Parser();
+	var ecvamNeinsDomain = 'https://ecvam.neins.go.kr';
+	//지번검색 분석에 대한 알림창 팝업
+	var Alert = {
+		confirm : function(msg, fn1, fn2) {
+			$('#mapAlert')
+					.html(
+							'<table><tr valign="top"><td style="width:30px;"><span class="ui-icon ui-icon-circle-check" style="float: left; margin: 3px 7px 50px 0;"></span></td><td><p>'
+									+ msg + '</p></td></tr></table>').dialog({
+						title : '알림',
+						modal : true,
+						position : {
+							my : "center",
+							at : "center",
+							of : window
+						},
+						close : function() {
+							$(this).dialog('close');
+						},
+						buttons : {
+							/*
+							'1:25,000' : function() {
+								$(this).dialog('close');
+								if (fn1 && typeof (fn1) == "function") {
+									fn1();
+								}
+							},
+							*/
+							'1:5,000' : function() {
+								$(this).dialog('close');
+								if (fn2 && typeof (fn2) == "function") {
+									fn2();
+								}
+							}
+						}
+					});
+		}
+	};
+	
+	/* 민원발생지역 선택 모드 */
+	let selectMode = false;
+	
+	$(document).ready(function(){
+		if(typeof navigator.platform.toLowerCase==='function' && typeof window.matchMedia==='function'){
+			var filter = "win16|win32|win64|macintel|mac|";
+			var isMobile = false;
+			if(filter.indexOf(navigator.platform.toLowerCase()) < 0){
+				isMobile = true;
+			}
+			if(isMobile){
+				var isDesktopMode = window.matchMedia("(max-width: "+mediaMatchMedia+"px)").matches;
+				if (isDesktopMode) {
+					location.href = mobileDomain;
+					//location.href = "https://mwebgis.neins.go.kr/";
+				}
+			}		
+		}
+		
+		const vectorSource = new ol.source.Vector({
+	       features: []
+	    });
+	    
+	    const vectorLayer = new ol.layer.Vector({
+	       source: vectorSource,
+	       id: "opinionLayer",
+	       title: "opinionLayer",
+	       style: new ol.style.Style({
+	          stroke: new ol.style.Stroke({
+	             color: 'rgba(255,0,0,1)',
+	             width: 2
+	          }),
+	          fill: new ol.style.Fill({
+	             color: 'rgba(255,0,0,0.2)'
+	          })
+	       })
+	    });
+	    
+	    map.addLayer(vectorLayer);
+	    
+	});	
+	//창 크기 변경시 사이즈 조절
+	$(window).resize(function() {
+		windowResize('sampleMap');
+	});
+	/* 20211001 수정
+	*  url ? 뒤에 아무것도없을때 그린면적 삭제가 안되는 오류 조치
+	*  compareUrl 초기할당
+	*/
+	function showMapInfoDiv(){
+		$('.mapInfoDiv').css('display','block');
+		return '맵 위치정보를 활성화 하였습니다.';
+	}
+	
+	$(document).ready(function() {
+		//토지이용 규제정보 용
+		//o = jindoSetting('cada','o');
+		//환경입지분석 용
+		o = jindoSetting('envLoc','o');
+		evl = jindoEvlSetting('evlcl', 'evl')
+		//맵의 현재 view 정보를 확인하는 함수
+		map.on('moveend', function(){
+			const mapView = map.getView();
+			const mapLocationValue = {
+					//'size' : map.getSize(),
+					'zoom' : mapView.getZoom(),
+					'extent' : mapView.calculateExtent(map.getSize())
+			}
+			const extentKey = ['minX','minY','maxX','maxY'];
+			var html = '';
+			for(var i=0; i<5; i++){
+				html +='<span>';
+				if(i==4){
+					html +='zoom레벨 : '+ mapLocationValue.zoom;
+					html +='</span>';				
+				}else{
+					html +=extentKey[i]+' : '+ mapLocationValue.extent[i];
+					html +='</span></br>';
+				}
+			}
+			$('.mapInfoDiv div').html(html);
+		});
+		
+		/* 민원 발생지역 세부내역 확인 */
+/* 		map.on("singleclick", e => {
+			if (!selectMode) return;
+			
+			map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
+
+				if(layer.get("id") !== "opinionAndQnaLayer"){
+					return;
+				}
+				console.log(feature.getProperties())
+				$(".opinion_popup .tit span").html(feature.getProperties().cvlcpt_addr_content);
+				//$(".opinion_popup .opinion_se span").html(feature.getProperties().cvlcpt_se_cd === "CV001" ? "문의사항" : "의견보내기");
+				$(".opinion_popup .opinion_se span").html(feature.getProperties().name);
+				$(".opinion_popup .opinion_title span").html(feature.getProperties().title);
+				$(".opinion_popup .opinion_date span").html(feature.getProperties().date);
+				
+				$(".opinion_popup #opinion_se_cd").val(feature.getProperties().cvlcpt_se_cd);
+				$(".opinion_popup #opinion_seq").val(feature.getProperties().cvlcpt_seq);
+				
+				$(".opinion_popup").width(263);
+				do {
+					$(".rclick_layer").width($(".rclick_layer").width()+1);
+				} while ($(".rclick_layer .tit span").height() > $(".rclick_layer .tit").height());
+				
+				
+				let opinionPopupLeft = Math.round(e.pixel[0]) + 10;
+				let opinionPopupTop = Math.round(e.pixel[1]) + Math.round($(".opinion_popup").height()/2);
+				$(".opinion_popup").css({
+					"left" : (opinionPopupLeft + $(".opinion_popup").width() > $(".ol-viewport").width() ? ((opinionPopupLeft-$(".opinion_popup").width()-50)+"px") : opinionPopupLeft + "px"),
+					"top" : (opinionPopupTop + $(".opinion_popup").height() > $(".ol-viewport").height() ? ((opinionPopupTop-$(".opinion_popup").height()-50)+"px") : opinionPopupTop + "px")
+				}).show();
+				
+			
+			})
+		}) */
+
+		map.on("singleclick", e => {
+		    if (!selectMode) return;
+		 	// 비우기
+		 	let seq = 1; // 순번
+	        $("#opinionTable tbody").empty();
+		    map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
+
+		        if(layer.get("id") !== "opinionAndQnaLayer") return;
+
+		        const props = feature.getProperties();
+
+		        // 주소
+		        $(".opinion_popup .tit span").html(props.cvlcpt_addr_content);
+		        
+		        let displayTitle = props.title;
+		        if(displayTitle.length > 12){
+		            displayTitle = displayTitle.substring(0, 12) + '...';
+		        }
+		        
+		        const tr = document.createElement("tr");
+		        tr.innerHTML =
+		            '<td style="text-align:center; vertical-align:middle; width:7%; border:1px solid #ccc; height:30px;">' + seq + '</td>' +
+		            '<td style="text-align:center; vertical-align:middle; width:40%; border:1px solid #ccc; height:30px;" colspan="1">' + displayTitle + '</td>' +
+		            '<td style="text-align:center; vertical-align:middle; width:20%; border:1px solid #ccc; height:30px;" colspan="1">' + props.date + '</td>' +
+		            '<td style="text-align:center; vertical-align:middle; width:13%; border:1px solid #ccc; height:30px;" colspan="1">' + props.name + '</td>' +
+		            '<td style="text-align:center; vertical-align:middle; width:20%; border:1px solid #ccc; height:30px;" colspan="1">' +
+		            '<button style="padding:2px 6px; font-size:11px; border:1px solid #EAEAEA; border-radius:5px; background-color:#EFEFEF; cursor:pointer;" ' +
+		            'onclick="moveParentPage(\'' + props.cvlcpt_se_cd + '\', \'' + props.cvlcpt_seq + '\')">' +
+		            '민원상세 이동</button></td>';
+		            
+		        document.querySelector("#opinionTable tbody").appendChild(tr);
+		        seq++; // 순번 증가
+
+		        $(".opinion_popup #opinion_se_cd").val(props.cvlcpt_se_cd);
+		        $(".opinion_popup #opinion_seq").val(props.cvlcpt_seq);
+
+		        $(".opinion_popup").width(410);
+		        do {
+		            $(".rclick_layer").width($(".rclick_layer").width()+1);
+		        } while ($(".rclick_layer .tit span").height() > $(".rclick_layer .tit").height());
+
+		        let opinionPopupLeft = Math.round(e.pixel[0]) + 10;
+		        let opinionPopupTop = Math.round(e.pixel[1]) + Math.round($(".opinion_popup").height()/2);
+		        $(".opinion_popup").css({
+		            "left" : (opinionPopupLeft + $(".opinion_popup").width() > $(".ol-viewport").width() ? ((opinionPopupLeft-$(".opinion_popup").width()-50)+"px") : opinionPopupLeft + "px"),
+		            "top" : (opinionPopupTop + $(".opinion_popup").height() > $(".ol-viewport").height() ? ((opinionPopupTop-$(".opinion_popup").height()-50)+"px") : opinionPopupTop + "px")
+		        }).show();
+		    });
+		 	
+		});
+
+		
+		//warnInfoPopup끄기
+		warnInfoPopupOff();
+		$('.more').click(function(){
+			if($('.more').hasClass('more')){
+				$('.more').addClass('close').removeClass('more');
+				$('.popup_layer').css('height', 'calc(100% - 134px)');
+				$('.popup_cnt').css('height', '406px');
+				$('.close').attr('title', '레이어 선택 보기창 접기');
+			}else if($('.close').hasClass('close')){
+				$('.close').addClass('more').removeClass('close');  
+				$('.popup_layer').css('height', '471px');
+				$('.popup_cnt').css('height', '282px');
+				$('.more').attr('title', '레이어 선택 보기창 펼치기');
+			}
+		});
+		var readInUrl = window.location.search;
+		
+		//wms호출
+		if(readInUrl == '?wmsCall'){
+			readInUrl="";
+		}else if(readInUrl == '?EVLCL'){ //EVLCL로 접속했을때
+			readInUrl="";
+			$('#lnb .mnb_list li:eq(5)').css({'display' : 'block'}) //평가분류지원 아이콘 block
+		}
+
+		if(readInUrl != ""){
+			readInUrl.split("?")[1];
+			$("#compareUrl").val(readInUrl.split("?")[1]);
+			fnAjax("/map/shareUrl.ajax", $('#urlFrm').serialize(), "json", compare_Result, error);
+		}else{
+			$("#compareUrl").val("MTM2MDYxOTguNjk4OTEyMjI2LDQwMzQ5MjYuMjYxNzI0OTk4MiwxNDc4MDI3MS40NTMzNzI1MzQsNDU2NjMxNi40ODIzNjM1NDM1NTFLOUdTVlcyWUlVRlJRODNaTjdKQVAwT0hDNjRF");
+			fnAjax("/map/shareUrl.ajax", $('#urlFrm').serialize(), "json", compare_Result, error);
+		}
+		$(".SummaryMove").on("click",function(){
+			$(".SummaryMove").attr("href", ecvamNeinsDomain+"/contents/contents02.do")
+		});
+		$("#howLayer2").hide();
+		$("#nav .gnb li:eq(0) a").attr('style','right:20px;width:max-content')
+		//접속시 국토환경성평가지도 펼쳐지고 select까지
+		$('#lnb .panel').animate({
+			left : '100px'
+		}, 240);
+		$('.lnb_close').css({
+			'z-index' : '1'
+		}).siblings('.lnb_open').animate({
+			left : "449px"
+		}, 200).css({
+			'z-index' : '2'
+		});
+		
+		if(seCd == undefined || seCd == 'UR001'){//최초접속이거나 팝업url 접속이 아닐떄
+			$('.mnb_list li a:eq(0)').click();	
+		}
+		
+		$('.depth1_tit:eq(0)').click();
+		//$('.depth2_tit span:eq(0)').click();
+		$('.depth2_tit:eq(0) > a').click();
+		//로딩시 1:5000으로 변경 2022.10.24 백동현
+		 if(readInUrl == "") $('#ldepth1_1').trigger('click'); 
+		//도엽다운로드->webGIS보기 시 사용
+		var x = '';
+		var y = '';
+		var opin_seq = '';
+		var qna_seq = '';
+		 
+		var scale = '';
+		var gubun = '';
+		let juso = '';
+		let pnu = '';
+		if (gubun != "") {
+			document.getElementById('howLayer1').style.display = "none"; // 일주일동안 안보기 팝업 숨김 */
+			if (gubun == "move") {
+				//레이어 리스트 표출
+				$('#lnb .panel').animate({
+					left : '100px'
+				}, 240);
+				$('.lnb_close').css({
+					'z-index' : '1'
+				}).siblings('.lnb_open').animate({
+					left : "449px"
+				}, 200).css({
+					'z-index' : '2'
+				});
+				$('.mnb_list li a:eq(0)').click();
+				$('.lnb_open').click();
+				$('.depth1_tit:eq(5)').click();//행정구역도/도엽도 펼치기
+				//레이어 리스트 표출
+				$('#accList ul li:nth-child(2) a').click();
+				//선택한 축척에 따라 레이어 온 및 넘어온 좌표로 이동 및 마커 표시
+				var layerIndex = scale == "25000" ? 3 : 4;
+				$('.depth1_tit:eq(5)').siblings('ul').find('input[type=checkbox]:eq(' + layerIndex + ')').prop("checked", true).change();//레이어 on
+				goPointMarker(x, y);//마커 생성 및 지도 이동
+				if(scale == '5000'){
+					//22.11.03 백동현 >> 다운로드로 지도 왔을 경우 5000적용
+				    //$('#accList ul li:nth-child(2) a').click();
+				    $('.acc5000>a').trigger('click') 
+				    $('#ldepth6_6_06').click();
+				    map.getView().setZoom(15);
+				    }else{
+				    	$('#accList ul li:nth-child(2) a').click();
+				        $('#ldepth6_5_05').click();
+				        map.getView().setZoom(12);
+					}
+					}else if (gubun == "analysis") {
+						$('#lnb .panel').animate({
+							left : '100px'
+						}, 240);
+						$('.lnb_close').css({
+							'z-index' : '1'
+						}).siblings('.lnb_open').animate({
+							left : "449px"
+						}, 200).css({
+							'z-index' : '2'
+						});
+						//최종결과 레이어 기본적으로on
+						$('.depth1_tit:eq(0)').click();
+						$('.depth2_tit a:eq(0)').click();
+						$('.popup_layer.left li:eq(0) input').val("70%");
+						//등급분석 선택
+						$('.mnb_list li a.mnb_rate').click();
+						$('.lnb_open').click();
+							} else if (gubun == "landUse") {
+								//레이어 리스트 표출
+								$('#lnb .panel').animate({
+									left : '100px'
+								}, 240);
+								$('.lnb_close').css({
+									'z-index' : '1'
+								}).siblings('.lnb_open').animate({
+									left : "449px"
+								}, 200).css({
+									'z-index' : '2'
+								});
+								$('.mnb_list li a:eq(4)').click();
+								$('.lnb_open').click();
+							}else if(gubun == "envLoc"){ //환경입지분석
+								//레이어 리스트 표출
+								$('#lnb .panel').animate({
+									left : '100px'
+								}, 240);
+								$('.lnb_close').css({
+									'z-index' : '1'
+								}).siblings('.lnb_open').animate({
+									left : "449px"
+								}, 200).css({
+									'z-index' : '2'
+								});
+								$('.mnb_list li a.mnb_regulation').click();
+								$('.lnb_open').click();
+							} else if (gubun == "pastYear") {
+								//레이어 리스트 표출
+								$('#lnb .panel').animate({
+									left : '100px'
+								}, 240);
+								$('.lnb_close').css({
+									'z-index' : '1'
+								}).siblings('.lnb_open').animate({
+									left : "449px"
+								}, 200).css({
+									'z-index' : '2'
+								});
+								$('.mnb_list li a.mnb_past').click();
+								$('.lnb_open').click();
+							} else if (gubun == "opinion") {
+								
+                        getCvlcptFeature("CV002", opin_seq);
+                        if(!!juso && juso != ""){
+                        	let newJuso = juso.split(/(?=\[)/);
+                        	$('.mnb_list li a.mnb_search').click();
+
+                        	if(newJuso[1] == null){ // []가 없을 경우
+                        		$('#queryText').val(juso);
+                     		}else{ // 주소 이름에 []가 있을 경우 []안의 공백 없애기
+                     		   let splitJuso = newJuso[1].replace(/\s+/g, '');
+                     		   let concatJuso = newJuso[0] +splitJuso;
+                     		   $('#queryText').val(concatJuso);
+                     		 }
+                     		
+                        	
+                        	 $('.btn_search_inte').click();
+                        } else {
+                            $('.mnb_list li a.mnb_search').click();
+                            if($('#liArealdepth6_7_07').length > 0){
+                               
+                            }else{
+                               $('.layer_depth1 li').find(`input[type="checkbox"][value="LY000307"]`).prop("checked",true).change();
+                            }
+                         }
+                        
+								
+							} else if (gubun == "qna") {
+								
+								getCvlcptFeature("CV001", qna_seq);
+								
+								if(!!juso && juso != ""){
+									let newJuso = juso.split(/(?=\[)/);
+									$('.mnb_list li a.mnb_search').click();
+									
+									if(newJuso[1] == null){ // []가 없을 경우
+										$('#queryText').val(juso);
+									}else{ // 주소 이름에 []가 있을 경우 []안의 공백 없애기
+										let splitJuso = newJuso[1].replace(/\s+/g, '');
+										let concatJuso = newJuso[0] +splitJuso;
+										$('#queryText').val(concatJuso);
+									}
+									
+									$('.btn_search_inte').click();
+								}else{
+									$('.mnb_list li a.mnb_search').click();
+									if($('#liArealdepth6_7_07').length > 0){
+										
+									}else{
+										$('.layer_depth1 li').find(`input[type="checkbox"][value="LY000307"]`).prop("checked",true).change();
+									}
+								}
+							}else if(gubun == "search"){//250102 daeun 분석버튼 클릭시 분석 탭, 이동버튼 클릭시 검색탭이동
+								$('.layer_depth1 li').find(`input[type="checkbox"][value="LY000166"]`).prop("checked",true).change();
+								
+								goPointMarker(x, y);
+								if(pnu != ""){
+									$('.mnb_list li a.mnb_rate').click();
+									$('.layer_depth1 li').find(`input[type="checkbox"][value="LY000307"]`).prop("checked",true).change();
+									getAnalysisCadastralPopup(juso,pnu,'ecvam');
+								}else{
+									$('.mnb_list li a.mnb_search').click();
+									
+									let newJuso = juso.split(/(?=\[)/);
+									if(newJuso[1] == null){ // []가 없을 경우 
+										$('#queryText').val(juso);
+									}else{ // 주소 이름에 []가 있을 경우 []안의 공백 없애기
+										let splitJuso = newJuso[1].replace(/\s+/g, ''); 
+										let concatJuso = newJuso[0] +splitJuso; 
+										$('#queryText').val(concatJuso);
+									}
+									$('.btn_search_inte').click();
+								}
+							}
+						} else if(readInUrl != ""){
+							document.getElementById('howLayer1').style.display = "none";
+						}else{
+							//쿠키값 가져와서 체크())
+							cookiedata = document.cookie;
+							if (cookiedata.indexOf("wcookie=done") < 0) {
+								$('#howLayer1').fadeIn();
+							} else {
+								document.getElementById('howLayer1').style.display = "none"; // 팝업h창 아이디
+							}
+						}
+						
+						// 20190718 배경지도 눌렀을때 다른 탭의 배경지도도 눌려지게 설정
+						$("input:radio[name=ldepth7_radio1]").click(function() {
+							var id = this.id;
+							id = id.slice(0, -1);
+							$("#" + id).prop("checked", true);
+							$("#" + id + "2").prop("checked", true);
+						}); 
+						$("input:radio[name=ldepth7_radio2]").click(function() {
+							var id = this.id;
+							id = id.slice(0, -1);
+							$("#" + id).prop("checked", true);
+							$("#" + id + "1").prop("checked", true);
+						});
+						$("input:radio[name=ldepth7_radio]").click(function() {
+							var id = this.id;
+							var id1 = id + "1";
+							var id2 = id + "2";
+							$("#" + id1).prop("checked", true);
+							$("#" + id2).prop("checked", true);
+						});
+						$("input:radio[name=ldepth7_radio1]").each(function(){
+						    if( $(this).is(":checked") == true ){
+						      var tmpVal = $(this).val();
+						    }
+						  });
+			/*			$("#main_right_tools > div > div > a.map_mode_nm").click(function(){
+						    $('.depth1_tit:eq(3)').siblings('ul').find('input:radio[id=ldepth7_1_01]').prop("checked",true).change();
+						});
+						$("#main_right_tools > div > div > a.sky_btn").click(function(){
+						    $('.depth1_tit:eq(3)').siblings('ul').find('input:radio[id=ldepth7_2_02]').prop("checked",true).change();
+						});
+						$("#main_right_tools > div > div > a.night_btn").click(function(){
+						    $('.depth1_tit:eq(3)').siblings('ul').find('input:radio[id=ldepth7_5_05]').prop("checked",true).change();
+						});
+						$("#main_right_tools > div > div > a.gray_btn").click(function(){
+						    $('.depth1_tit:eq(3)').siblings('ul').find('input:radio[id=ldepth7_6_06]').prop("checked",true).change();
+						});
+						$("#main_right_tools > div > div > a.osm_btn").click(function(){
+						    $('.depth1_tit:eq(3)').siblings('ul').find('input:radio[id=ldepth7_7_07]').prop("checked",true).change();
+						});*/
+
+						// 기본지도 버튼 클릭 시
+						$("#main_right_tools > div > div > a.map_mode_nm").click(function(){
+						    $('a.depth1_tit:contains("배경지도")').next('ul').find('input:radio[id=ldepth7_1_01]').prop("checked", true).change();
+						});
+
+						// 위성지도 버튼 클릭 시
+						$("#main_right_tools > div > div > a.sky_btn").click(function(){
+						    $('a.depth1_tit:contains("배경지도")').next('ul').find('input:radio[id=ldepth7_2_02]').prop("checked", true).change();
+						});
+
+						// 야간지도 버튼 클릭 시
+						$("#main_right_tools > div > div > a.night_btn").click(function(){
+						    $('a.depth1_tit:contains("배경지도")').next('ul').find('input:radio[id=ldepth7_5_05]').prop("checked", true).change();
+						});
+
+						// 흰색지도 버튼 클릭 시
+						$("#main_right_tools > div > div > a.gray_btn").click(function(){
+						    $('a.depth1_tit:contains("배경지도")').next('ul').find('input:radio[id=ldepth7_6_06]').prop("checked", true).change();
+						});
+
+						// 오픈스트리트맵 버튼 클릭 시
+						$("#main_right_tools > div > div > a.osm_btn").click(function(){
+						    $('a.depth1_tit:contains("배경지도")').next('ul').find('input:radio[id=ldepth7_7_07]').prop("checked", true).change();
+						});
+
+						
+						
+						
+							  //$('.depth1_tit:eq(3)').siblings('ul').find('input:radio[id=ldepth7_5_05]').prop("checked",true);
+						/* if($('#liArealdepth6_7_07').length > 0){
+					        console.log("jquery : 해당 객체 존재함"); $('.depth1_tit:eq(2)').siblings('ul').find('input[type=checkbox]:eq(5)').prop("checked",true).change();
+					    }else{
+					        console.log("jquery : 해당 객체 존재안함");
+					      
+					    } */
+	$(".click_moveToFeature ul li").click(function(){
+		var gubun = this.id
+		fnAnalysisMoveToFeature(db_x, db_y, gubun);
+	});
+
+	$(document).on('click', '.move-btn', function () {
+      const uid = parseFloat($(this).data('uid'));
+      if (!this.dataset.uid || isNaN(uid)) {
+         console.warn('moveToMap 호출 생략: uid 없음', this);
+         return;
+      }
+      moveToMap(uid);
+      });
+	});
+
+	
+	//토지이용규제 shp업로드실행
+	//환경입지분석 shp업로드실행
+	function upload(analType) {
+		var jindo;
+		jindo = o;
+		if (jindo.getInfo().count.load != 4) {
+			if (jindo.getInfo().count.total == 0) {
+				alert("shp이 선택되지 않았습니다.");
+				return;
+			}
+			if (jindo.getInfo().count.total < 4) {
+				alert("*.shp, *.dbf, *.prj, *.shx 파일 모두 업로드 하시기 바랍니다.");
+				return;
+			}
+			if (jindo.getInfo().count.total > 4) {
+				alert("최대 4개 파일까지만 가능합니다.");
+				jindo.remove();
+				return;
+			}
+			var fileNm = createFileNm();
+			$("#frmShp #shpFileName").val(fileNm);
+			jindo._url = '/fileUpload/analysisShpUpload.ajax?type=left&strFileNm=' + fileNm;
+			jindo.upload();
+		} else {
+			alert("버퍼설정을 바꾸려면 shp파일을 재업로드 해야합니다.");
+			jindo.remove();
+			//$(".buffer_box input:eq(1)").val("0");
+		}
+	}
+
+	//토지이용규제 shp 분석처리
+	function analysisToShp() {
+		//로딩중 열기 - loadingBar 변경 20200203
+		/* $(".detail_load_box").show(); */
+		EasyLoading.show({
+			type : EasyLoading.TYPE['BALL_SCALE_RIPPLE_MULTIPLE'],
+			text : 'loading'
+		});
+		var layer = getLayerById(map, "landUseFeature");
+		layer.getSource().clear();
+		layer.setVisible(true);
+		var opaVal = $("#shpOpacity").val(); 
+		opaVal = Number(opaVal);
+		layer.setOpacity(opaVal); // 버퍼 투명도
+
+		var coordinateList = $("#frmShp #shpCoordinate").val().split("|");
+		createLandUseLayerFeature(layer, coordinateList);
+		map.getView().fit(layer.getSource().getExtent());
+
+		//분석 로그
+		var resultCode = insertGisLog("LM004", 'LF011', '');
+		if (resultCode == 'success') {
+			//분석
+			var url = proxyUrl + rasterAnalysisLandUseUrl;
+			var params = $('#frmShp').serialize();
+			fnAjaxAsync(url, params, "json", function(result) {
+				if (result.info.resultTotal > 0) {
+					var resultCount = $(".analy_result_list:eq(1)").siblings()
+							.find("span");
+					var resultList = $(".analy_result_list:eq(1)");
+
+					createLandUseAnalysisList(result.info.resultList,
+							resultList, resultCount);
+				} else {
+					var resultCount = $(".analy_result_list:eq(1)").siblings()
+							.find("span").text("0");
+					var resultList = $(".analy_result_list:eq(1)").empty()
+							.append("검색결과가 없습니다.");
+				}
+				//로딩중 닫기
+				/* $(".detail_load_box").hide(); */
+				EasyLoading.hide();
+			}, error);
+		}
+	}
+	//토지이용규제 레이어 온오프
+	function landUseLayerOnOff(obj) {
+		var layerNm = obj.value;
+		var onOff = obj.checked;
+
+		getLayerById(map, layerNm).setVisible(onOff);//레이어 off
+	}
+	//토지이용규제 지적 분석처리
+	function analysisToCadastral() {
+		var coordinateList = $("#frmCadastral #cadaOriginalCoordinate").val().split("|");
+		if(coordinateList == null || coordinateList == '') {
+			alert('선택된 지적이 없습니다.')
+			return
+		}
+		//로딩중 열기 - loadingBar 변경 20200203
+		/* $(".detail_load_box").show(); */
+		EasyLoading.show({
+			type : EasyLoading.TYPE['BALL_SCALE_RIPPLE_MULTIPLE'],
+			text : 'loading'
+		});
+		//원본 지적 피쳐생성
+		var layer = getLayerById(map, "landUseFeature2");
+		layer.getSource().clear();
+		layer.setVisible(true);
+		createLandUseLayerFeature(layer, coordinateList);
+
+		layer = getLayerById(map, "landUseFeature");
+		layer.getSource().clear();
+		layer.setVisible(true);
+		// 버퍼 투명도
+		/* var opaVal = $("#cadastralOpacity").val().replace("%", "");
+		opaVal = Number(opaVal)/100; */
+		layer.setOpacity($("#cadastralOpacity").val());
+
+		var geomString = "";
+		var bufferValue = $(".buffer_box input:eq(0)").val();
+		var geomString = createBufferCoordinate(coordinateList, bufferValue, true);
+		createLandUseLayerFeature(layer, geomString.split("|"));
+
+		map.getView().fit(layer.getSource().getExtent());
+		$("#frmCadastral #cadaCoordinate").val(geomString);
+
+		//분석 로그
+		var resultCode = insertGisLog("LM004", 'LF012', '');
+		if (resultCode == 'success') {
+			//분석
+			var url = proxyUrl + rasterAnalysisLandUseUrl;
+			var params = $('#frmCadastral').serialize();
+
+			fnAjaxAsync(url, params, "json", function(result) {
+				if (result.info.resultTotal > 0) {
+					var resultCount = $(".analy_result_list:eq(0)").siblings()
+							.find("span");
+					var resultList = $(".analy_result_list:eq(0)");
+
+					createLandUseAnalysisList(result.info.resultList,
+							resultList, resultCount);
+				} else {
+					var resultCount = $(".analy_result_list:eq(0)").siblings()
+							.find("span").text("0");
+					var resultList = $(".analy_result_list:eq(0)").empty()
+							.append("검색결과가 없습니다.");
+				}
+				//로딩중 닫기
+				/* $(".detail_load_box").hide(); */
+				EasyLoading.hide();
+			}, error);
+		}
+
+	}
+
+	// 토지이용계획 화면 호출
+	function fnLuris() {
+		var url = "http://www.eum.go.kr/web/ar/lu/luLandDet.jsp?";
+		url += "&mode=search&sMode=search&selGbn=umd&isNoScr=script&&flag=";
+		url += "&pnu=" + lPnu;
+		url += "&selSido=" + lSelSido;
+		url += "&selSgg=" + lSelSgg;
+		url += "&selUmd=" + lSelUmd;
+		url += "&selRi=" + lSelRi;
+		url += "&landGbn=" + lLandGbn;
+		url += "&bobn=" + lBobn;
+		url += "&bubn=" + lBubn;
+
+		window
+				.open(url, "_blank",
+						"width=800, height=900, toolbar=no, menubar=no, scrollbars=yes, resizable=yes");
+		initRightClickPopup();
+		return false;
+
+	}
+	// 도시계획 열람 서비스 화면 호출
+	function fnLup(url) {
+		url += "?&mode=search&sMode=search&selGbn=umd&isNoScr=script&&flag=";
+		url += "&pnu=" + lPnu;
+		url += "&selSido=" + lSelSido;
+		url += "&selSgg=" + lSelSgg;
+		url += "&selUmd=" + lSelUmd;
+		url += "&selRi=" + lSelRi;
+		url += "&landGbn=" + lLandGbn;
+		url += "&bobn=" + lBobn;
+		url += "&bubn=" + lBubn;
+
+        window.open(url, '_blank', 'width=800, height=900, toolbar=no, menubar=no, scrollbars=yes, resizable=yes');
+    }
+
+	// 임시 벡터 피처 분석
+	function fnAnalysisTempFeature(gbn, kind) {
+		var geomStringSplit = [];
+		var geomStringSplitResult = [];
+		// tempFeature :: customSingleMap.js 202 Line Number >> 변수 지정
+		var geom = tempFeature.getGeometry();			// 피처에서 지오메트리 가져오기
+		
+		var format = new ol.format.WKT();				// wkt포맷 선언
+		var geomString =  format.writeGeometry(geom);	// 지오메트리 wkt형식으로 변환
+			geomStringSplit = geomString.split("),(");
+			geomStringSplitResult.push(geomStringSplit[0]+"))");
+			for(var i=1;i<geomStringSplit.length;i++){
+				if(i<geomStringSplit.length){
+					geomStringSplitResult.push("POLYGON(("+geomStringSplit[i]+"))");
+				}
+			}
+			
+		$("#analysisFrm #analCoordinate").val(geomStringSplitResult[$("#tfSelect").val()]);// 좌표정보
+		$("#analysisFrm #analFeatureType").val(geom.getType());// 피처타입
+		$("#analysisFrm #analEpsgCd").val("EPSG:3857");// 좌표계
+		$("#analysisFrm #analScaleValue").val(nowScaleValue);// 축척
+		
+		if(gbn=='gh') {	// 경사도/고도
+			$("#analysisFrm #analGhDivision").val(kind);
+			$("#analysisFrm #analAnalysisType").val(kind);
+			$("#analysisFrm #analAnalysisType").val("draw");
+			$("#analysisFrm  #analLayerAnalysisGroupCd").val(nowScaleValue=="25000"? "AG001" : "AG003");// 레이어
+			$("#analysisFrm").attr("action",  "/popup/ghAnalysisDrawPopup.do");
+		}else{ // 국토환경성평가
+			$("#analysisFrm #analAnalysisType").val("draw");
+			/* $("#analysisFrm #layerAnalysisGroupCd").val(nowScaleValue=="25000"? "AG001" : "AG003"); */
+			$("#analysisFrm #analLayerAnalysisGroupCd").val(nowScaleValue=="5000"? "AG003" : "AG001");
+			$("#analysisFrm").attr("action", "/popup/analysisDrawPopup.do");
+		}
+		
+		var popupName = createCode(8, 8);
+		$("#analysisFrm").attr("target", popupName);
+		popup_open('',popupName,797,900);
+		$("#analysisFrm").submit();
+	}
+	
+	// 임시 포인트 분석
+	function fnAnalysisMoveToFeature(db_x, db_y, gbn) {
+		var geomStringSplit = [];
+		var geomStringSplitResult = [];
+		// tempFeature :: customSingleMap.js 202 Line Number >> 변수 지정
+		var geom = new ol.geom.Point([db_x, db_y]);
+		
+		var format = new ol.format.WKT();// wkt포맷 선언
+		var geomString = format.writeGeometry(geom);// 지오메트리 wkt형식으로 변환
+		
+		if(gbn == "gradient" || gbn == "height"){
+		    $("#analysisFrm  #analGhDivision").val(gbn);// 경사도 고도 그리기, 지점분석  파라미터 구분값
+		    $("#analysisFrm  #analCoordinate").val(geomString);// 좌표정보
+		    $("#analysisFrm  #analFeatureType").val(geom.getType());// 피처타입
+		    $("#analysisFrm  #analEpsgCd").val("EPSG:3857");// 좌표계
+		    $("#analysisFrm  #analScaleValue").val(nowScaleValue);// 축척
+		    $("#analysisFrm  #analLayerAnalysisGroupCd").val("AG007");// 레이어
+		                                                                               // 그룹
+		    var ghName = createCode(8, 8);
+		    $("#analysisFrm  #analAnalysisType").val(gbn);// 분석타입
+		    $("#analysisFrm").attr("target", ghName);
+		    $("#analysisFrm").attr("action",  "/popup/ghAnalysisDrawPopup.do");
+		    popup_open('',ghName,797,900);
+		    $("#analysisFrm").submit();
+		}else{
+			$("#analysisFrm #analCoordinate").val(geomString);// 좌표정보
+			$("#analysisFrm #analFeatureType").val(geom.getType());// 피처타입
+			$("#analysisFrm #analEpsgCd").val("EPSG:3857");// 좌표계
+			$("#analysisFrm #analScaleValue").val(nowScaleValue);// 축척
+			$("#analysisFrm #analLayerAnalysisGroupCd").val(nowScaleValue=="25000"? "AG001" : "AG003");// 레이어
+																									// 그룹
+			var popupName = createCode(8, 8);
+			$("#analysisFrm #analAnalysisType").val("draw");// 분석타입
+			$("#analysisFrm").attr("target", popupName);
+			$("#analysisFrm").attr("action", "/popup/analysisDrawPopup.do");
+			popup_open('',popupName,797,900);
+			$("#analysisFrm").submit();
+		}
+	}
+	function guideScreenClose() {
+		 $("#howLayer2").show(); 
+	}
+	/* 위치 선택 */
+	//선택한 위치 저장용 배열
+   let locations = [];
+   // 배열 식별을 위한 uid카운터
+   window.uidCounter = 0;
+   
+	$(document).on('click', function(e){
+		   if(!$(e.target).closest('.srch').length) {
+			   $('.srch_result_div').stop().slideUp();
+			   $('.srch').removeClass('over');
+			}
+		 });
+	
+	function searchJusoCustom(no) {
+		  if ($("#search-juso").val() === '') {
+			   alert("지번을 입력해주세요.");
+			   return;
+			}
+
+        let query = replaceAdmZoneNm($("#search-juso").val());
+        let category;
+        for (var i = 0; i < query.length; i++) {
+           if (query[i].charAt(query[i].length - 1) !== '로' && query[i].charAt(query[i].length - 1) !== '길') {
+              category = "parcel";
+           } else {
+              category = "road";
+              break;
+           }
+        }
+        
+        let url = createVworldSearchUrl(vWorldSearchUrl, 'search', 'search', 'address', category, no, '1000', $("#search-juso").val());
+        
+        fnAjax(url, null, "jsonp", function(result) {
+           let admZoneList = $(".list-result-box-popup > ul").empty();
+           
+           totalGun = result.response.record.total;
+           $('.result-box-popup span').text(totalGun.toLocaleString());
+           /* $('.srch_result_div').slideDown(); */
+
+           if (totalGun == 0) {
+              admZoneList.append('<li class="search_result_none">검색결과가 없습니다.</li>');
+              return;
+           }
+
+           let totalItem = result.response.result.items;
+           for (let i = 0; i < totalItem.length; i++) {
+              let item = totalItem[i];
+              let jusoText = item.address.road ?
+              item.address.parcel + ' [' + item.address.road + ']' :
+              item.address.parcel;
+              admZoneList.append(createCustomJusoList(jusoText, item.point.x, item.point.y, item.id));
+            }
+         }, error);
+      }
+	   
+      
+      function createCustomJusoList(juso, x, y, pnu) {
+    	   let tag = $('<li/>').append(
+    			'<p style="width:200px;">' + juso + '</p>' +
+            '<a href="javascript:void(0)" style="width:41px"; class="add-place" data-x=' + x +' data-y='+y+' data-pnu=' + pnu + '>위치추가</a>'
+         );
+    	   return tag;
+    	}
+      $(document).on('click', '.list-result-box-popup .add-place', function(e) {
+    	   e.preventDefault();
+    	   ++window.uidCounter;
+    	   const juso = $(this).closest('li').find('p').text();
+    	   const x    = parseFloat(this.dataset.x);
+    	   const y    = parseFloat(this.dataset.y);
+    	   const pnu  = this.dataset.pnu;
+    	   
+    	   // 위치추가 클릭시 결과 영역 닫기
+    	   e.preventDefault();
+         e.stopPropagation();
+         closeBox(getBox($(this)));
+         
+    	   addLocation(juso, x, y, pnu, "search");
+    	});
+      function addLocation(juso, x, y, pnu, type) {
+          
+          const uid = window.uidCounter; 
+          if(type == 'search'){
+             getPolygonFromVWorld(juso, x, y, pnu);
+          }
+          
+           const container = $('.list-box-popup');
+           const newEntry = $('<div/>', { class: 'list', 'data-pnu': pnu }).append(
+                   $('<div/>', { class: 'list-tit' }).append(
+                      $('<p/>', {text: juso}),
+                      $('<div/>', { class: 'list-btn-div' }).append(
+                         $('<a/>', { 
+                            href: 'javascript:', 
+                            class: 'move-btn', 
+                            text: '이동',
+                            'data-uid' : uid,
+                            'data-x': x,
+                            'data-y': y
+                         }),
+                         $('<a/>', { 
+                            href: 'javascript:', 
+                            class: 'delete-btn', 
+                            text: '닫기',
+                            click: function () {
+                               removeLocation(uid);
+                               /* $(this).closest('.list').remove(); */
+                            }
+                         })
+                      )
+                   ),
+                   $('<p/>', { 
+                      class: 'ex-txt', text: '※ 해당 위치의 부가설명을 입력해주세요.' }),
+                      $('<input/>', {
+                         type: 'text',
+                         placeholder: '위치의 부가설명을 입력해주세요.',
+                         required: true 
+                      })
+                   );
+                container.append(newEntry);
+
+        }
+      function getPolygonFromVWorld(juso, x, y, pnu){
+          
+          const dataUrl =  proxyUrl + 'https://api.vworld.kr/req/data?service=data' +
+          '&version=2.0&request=GetFeature&crs=EPSG:3857&format=json' +
+          '&data=LP_PA_CBND_BUBUN&attribute=true' +
+          '&attrfilter=pnu:=:' + pnu +
+          '&apiKey=' + vWorldkeys +
+          '&domain=' + vWorldDomain;
+                     
+          $.getJSON(dataUrl, function (res) {
+             const features = res?.response?.result?.featureCollection?.features;
+             if (features && features.length > 0){
+                const format = new ol.format.GeoJSON();
+                const feature = format.readFeature(features[0], {});
+                const uid = window.uidCounter;
+                feature.set("uid",uid);
+
+                map.getLayers().getArray().find(ele=>ele.get("title")==="opinionLayer").getSource().addFeature(feature)
+                
+                locations.push({ uid, juso, x, y, pnu, feature });
+                moveToMap(uid);
+                
+             } else {
+                alert("폴리곤 정보를 찾을 수 없습니다.");
+             }
+          });
+      }
+      function moveToMap(uid) {
+          const loc = locations.find(ele => ele.uid === uid);
+          if (loc){
+           const extent = loc.feature.getGeometry().getExtent();
+           
+           map.getView().fit(extent, { padding: [50, 50, 50, 50] });
+          }
+          else{
+             alert("선택된 위치로 이동할 수 없습니다 다시 시도해주세요.");
+             return;
+          }
+       }
+      function removeLocation(uid) {
+    	  
+    	   const idx = locations.findIndex(ele => ele.uid === uid);
+    	   const targetLayer = map.getLayers().getArray().find(ele=>ele.get("title")==="opinionLayer"); 
+    	  
+         if(idx !== -1){
+        	  
+            targetLayer.getSource().removeFeature(locations[idx].feature);
+            locations.splice(idx,1);
+            $(".list-box-popup .list")[idx].remove();
+         } 
+      }
+      /* 민원발생지역 레이어 On/Off */
+      function opinionAndQnaLayerOnOff(){
+    	  const opinionAndQnaLayer = map.getLayers().getArray().find(ele=>ele.get("id")=="opinionAndQnaLayer");
+    	  opinionAndQnaLayer.setVisible(!opinionAndQnaLayer.getVisible())
+      }
+      /* 민원발생지역 정보 확인 */
+      function toggleSelectMode(){
+    	   if(selectMode){
+    		   selectMode = false;
+    		   //alert("피쳐 선택 모드가 비활성화 되었습니다.");
+    	   }else{
+    		   selectMode = true;
+    		   //alert("피쳐 선택 모드가 활성화 되었습니다. \n민원 세부내역을 확인할 피쳐를 지도화면에서 선택해주세요");
+    	   }
+      }
+      /* 민원 세부내역 확인(parent 페이지를 해당 세부내역 페이지로 이동) */
+      function moveParentPage(opinionsecd, opinionseq) {
+    	   const opinionSeCd = opinionsecd;
+    	   const opinionSeq = opinionseq;
+    	   
+    	   var hostUrl = $(location).attr("host");
+    	   var returnDomain = "";
+    	   
+    	   if(hostUrl.indexOf("neins") != -1){ // neins 도메인이라면
+    		   returnDomain = ecvamNeinsDomain;
+    	   }else{ // kei도메인, 개발서버, localhost
+    		   returnDomain = ecvamKeiDomain;
+    	   }
+    	   
+    	   let url = "/rhksflwk/board/";
+    	   if(opinionSeCd == "CV001"){
+    		   url += "qna/qnaView.do?board_seq=";
+    	   }else if (opinionSeCd == "CV002"){
+    		   url += "opinion/opinionView.do?opin_seq=";
+    	   }
+    	   url += opinionSeq;
+
+    	   if (window.opener) {
+    		    window.opener.postMessage(
+    		        { action: "redirect", url: url }, returnDomain  // 부모 페이지 origin 명시
+    		    );
+    		}
+      }
+      const BOX_SEL = '.srch-result-div-popup';
+      const SCOPE_SEL = '.srch-input';
+      function getBox($from) {
+          if ($from && $from.length) {
+            return $from.closest(SCOPE_SEL).find(BOX_SEL);
+          }
+          return $(BOX_SEL);
+        }
+      // 열기: 자연 높이 측정 후 0 -> target
+      function openBox($box) {
+        if (!$box || !$box.length) return;
+        if ($box.is(':visible') && $box.height() > 0) return;
+
+        $box.stop(true, true).css({ display: 'block', height: 'auto' });
+        const target = $box.prop('scrollHeight');
+        $box.css({ height: 0, overflow: 'hidden' })
+            .animate({ height: target }, 200, function () {
+              $(this).css({ height: 'auto' });
+            });
+      }
+
+      // 닫기: 현재 -> 0
+      function closeBox($box) {
+        if (!$box || !$box.length) return;
+        $box.stop(true, true)
+            .css({ overflow: 'hidden' })
+            .animate({ height: 0 }, 200, function () {
+              $(this).css({ display: 'none' });
+            });
+      }
+
+      // 검색 아이콘 클릭 → 열기
+      $(document).on('click', '.srch-ico', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openBox(getBox($(this)));
+      });
+
+      // 내부 클릭 시 닫힘 방지
+      $(document).on('click', SCOPE_SEL+' input, '+BOX_SEL, function (e) {
+        e.stopPropagation();
+      });
+
+      
+
+      // 바깥 클릭 시 닫기 (pointerdown + click 보강)
+      function outsideHandler(e) {
+        const $t = $(e.target);
+        const insideScope = $t.closest(SCOPE_SEL).length > 0;
+        const insideBox = $t.closest(BOX_SEL).length > 0;
+        if (!insideScope && !insideBox) {
+          closeBox($(BOX_SEL));
+        }
+      }
+      $(document).on('pointerdown.srchOutside', outsideHandler);
+      $(document).on('click.srchOutsideFallback', outsideHandler);
+
+      // ESC 닫기
+      $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') closeBox($(BOX_SEL));
+      });
+
+      // (선택) 다른 라디오/탭 전환 시 닫기
+      $(document).on('change', 'input[name="place"]', function () {
+        closeBox($(BOX_SEL));
+      });
+      
+</script>
+
+</head>
+<body>
+	<!-- 건너뛰기 링크 -->
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#header">본문 바로가기</a></li>
+			<li><a href="#container">주 메뉴 바로가기</a></li>
+		</ul>
+	</div> 
+	<!-- 전자정부 공식웹사이트 안내영역 -->
+	 <!-- <div class="ev_cont">
+		<div class="ev_logo">
+			<span class="ev_text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+		</div>
+	</div>  --> 
+	
+	<div id="mapAlert"></div>
+	
+	<div class="click_tempLayer">
+		<ul>
+			<li class="rc03">
+				<a href="javascript:fnAnalysisTempFeature(null, null);">국토환경성평가 분석</a>
+			</li>
+			<li class="rc04">
+				<a href="javascript:fnAnalysisTempFeature('gh', 'gradient');">경사도 분석</a>
+			</li>
+			<li class="rc05">
+				<a href="javascript:fnAnalysisTempFeature('gh', 'height');">표고 분석</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="click_moveToFeature">
+		<ul>
+			<li id="ecvamPoint" class="rc03">
+				<a>국토환경성평가 지점분석</a>
+			</li>
+			<li id="gradient" class="rc04">
+				<a>경사도 지점분석</a>
+			</li>
+			<li id="height" class="rc05">
+				<a>표고 지점분석</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="rclick_layer">
+		<div class="tit">
+			<span></span>
+		</div>
+		<ul>            
+		<li class="rc09" style="display: none;">
+		    <div class="table-container">
+		        <table>
+		            <tr>
+		                <td class="short-border">소유구분</td>
+		                <td class="right-align" id="soyu-posesn"><div class="box" id="soyou-legend"></div>-</td>
+		            </tr>
+		            <tr>
+		                <td class="short-border">토지면적</td>
+		                <td class="right-align" id="soyu-ar">-</td>
+		            </tr>
+		            <tr>
+		                <td class="short-border">지목</td>
+		                <td class="right-align" id="soyu-lndcgr">-</td>
+		            </tr>
+		            <tr>
+		                <td class="short-border">소유권변동일자</td>
+		                <td class="right-align" id="soyu-changeDate">-</td>
+		            </tr>
+		        </table>
+		    </div>
+			</li>
+			<!--  <li class="rc02"><a href="javascript:fnLuris();" onclick="gtag('event', '지도우클릭_토지이용규제정보서비스조회', {'event_category':'지도우클릭_토지이용규제정보서비스조회', 'event_label':'지도우클릭_토지이용규제정보서비스조회'})">토지이용규제정보 서비스 조회</a></li>-->
+ 			 <li class="rc02">
+                <a href="javascript:fnLuris();" onclick="gtag('event', '지도우클릭_토지이용규제정보서비스조회', {'event_category':'지도우클릭_토지이용규제정보서비스조회', 'event_label':'지도우클릭_토지이용규제정보서비스조회'})">토지이용규제정보</a>
+                <div class="divider"></div>
+                <a href="javascript:void(0);" onclick="gtag('event', '지도우클릭_도시계획열람조회', {'event_category':'지도우클릭_도시계획열람조회', 'event_label':'지도우클릭_도시계획열람조회'}); fnLup('https://www.eum.go.kr/web/cp/cv/cvUpisDet.jsp');">도시계획 열람</a>
+            </li>
+            <li class="rc08 doyup_down">
+            	<a href="javascript:pointDoyup(this);" onclick="gtag('event', '지도우클릭_도엽다운로드', {'event_category':'지도우클릭_도엽다운로드', 'event_label':'지도우클릭_도엽다운로드'})">도엽다운로드</a>
+            	<button type="button" onclick="doyupOnOff(this);" title="5000도엽도 켜기">OFF</button>
+            </li>
+			<li class="rc03"><a href="javascript:getAnalysisInterAction(this);" onclick="gtag('event', '지도우클릭_국토환경성평가지점분석', {'event_category':'지도우클릭_국토환경성평가지점분석', 'event_label':'지도우클릭_국토환경성평가지점분석'})">국토환경성평가 지점분석</a></li>
+			<li class="rc07"><a href="javascript:getAnalysisPolygonAction('ecvam');" onclick="gtag('event', '지도우클릭_국토환경성평가지적분석', {'event_category':'지도우클릭_국토환경성평가지적분석', 'event_label':'지도우클릭_국토환경성평가지적분석'})">국토환경성평가 지적분석</a></li>
+			<li class="rc04">
+				<a href="javascript:;">경사도
+					<span id="gradientAnalysisResult" class="rc_span"></span>
+					<button type="button" onclick="javascript:getAnalysisPolygonAction('gradient');gtag('event', '지도우클릭_경사도', {'event_category':'지도우클릭_경사도', 'event_label':'지도우클릭_경사도'})" title="경사도 지적분석">분석</button>
+				</a> 
+			</li>
+			<li class="rc05">
+				<a href="javascript:;">표고
+				<span id="heightAnalysisResult" class="rc_span"></span>
+				<button type="button" onclick="javascript:getAnalysisPolygonAction('height');gtag('event', '지도우클릭_표고', {'event_category':'지도우클릭_표고', 'event_label':'지도우클릭_표고'})" title="표고 지적분석">분석</button>
+				</a> 
+			</li>
+			<li class="rc06">
+				<a href="javascript:;">가시권분석</a>
+				<div class="rc_inp">
+					<label for="radius" class="sr-only">가시권반경</label>
+					<input type="text" id="radius" title="가시권반경"><sub>m</sub>
+					<button type="button" onclick="javascript:fnRadialLineOfSight(); gtag('event', '지도우클릭_가시권분석', {'event_category':'지도우클릭_가시권분석', 'event_label':'지도우클릭_가시권분석'});" title="가시권 분석">분석</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+   
+   <!-- 민원 세부내역 확인용 popup -->
+<!--     <div class="opinion_popup">
+      <div class="tit">
+         <span></span>
+      </div>
+      <ul>            
+         <li class="rc02">
+            <a href="javascript:moveParentPage();">민원 세부내역 확인</a>
+         </li>
+         
+         <input type="hidden" id="opinion_se_cd" name="opinion_se_cd" >   
+         <input type="hidden" id="opinion_seq" name="opinion_seq" >   
+         <li class="opinion_title"><a>제목<span style="color:black"></span></a></li>
+         <li class="opinion_date"><a>작성일<span style="color:black"></span></a></li>
+         <li class="opinion_se"><a>작성자<span style="color:black"></span></a></li>
+      </ul>
+   </div> -->
+  <div class="opinion_popup">
+      <div class="tit">
+         <span></span>
+      </div>
+	<table id="opinionTable" border="1" cellspacing="0" cellpadding="5" style = "width: 100%">
+	  <thead>
+		<tr style="height:30px; background-color:#F5F5F5;">
+		  <th style="border:1px solid #ccc;">순번</th>
+		  <th style="border:1px solid #ccc;">제목</th>
+		  <th style="border:1px solid #ccc;">작성일</th>
+		  <th style="border:1px solid #ccc;">작성자</th>
+		  <th style="border:1px solid #ccc;">세부내역 확인</th>
+		</tr>
+	  </thead>
+	  <tbody>
+	    <!-- 클릭할 때마다 여기에 tr이 추가됩니다 -->
+	  </tbody>
+	</table>
+   </div>  
+   
+	<!-- <div class="detail_load_box" style="display: none;">
+    <div class="inner">
+    <script>
+        
+    </script>
+      <img src="/assets/images/img/detail_box_load2.gif" alt=""> <em>정보를
+        불러오는 중입니다.</em> <span>잠시만 기다려 주세요</span>
+    </div>
+  </div> -->
+	<div id="howLayer1" class="howlayer" onclick="guideScreenClose()" style="display: none;">
+		<div class="howLayer1_1">
+			<!-- <img src="/assets/images/img/howLayer1_1.png" alt="사용예시 1번"> -->
+			<div class="hidden_explanation">
+				<h1>사용예시 1번에 대한 설명입니다.</h1>
+				<h2>사용예시 1번의 첫번째, 화면 상단의 축척변환 버튼에 대한 설명입니다.</h2>
+				<ul>
+					<li>1:2,5000, 1:5,000 버튼이 존재하며 활성화된 버튼은 지도의 축척비율을 나타냅니다.</li>
+				</ul>
+				<h2>사용예시 1번의 두번째, 화면 상단의 축척변환 활성화 OFF 버튼에 대한 설명입니다.</h2>
+				<ul>
+					<li>활성화 OFF 버튼을 활성화시키면 1:5,000 이하의 축척에서는 5000 축척의 지도로 자동 변환됩니다.</li>
+				</ul>
+				<h2>사용예시 1번의 세번째, 화면 상단의 초기화 버튼에 대한 설명입니다.</h2>
+				<ul>
+					<li>지도를 초기화합니다.</li>
+				</ul>
+				<h2>사용예시 1번의 네번째, 화면 상단의 행정구역 선택에 대한 설명입니다.</h2>
+				<ul>
+					<li>시도, 시군구, 읍면동 순으로 행정구역을 선택할 수 있습니다.</li>
+					<li>읍면동에 대한 행정구역이 선택된 경우 해당 구역으로 지도상의 위치가 이동됩니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_1_2">
+			<img src="/assets/images/img/howLayer1_1_2.png" alt="사용예시 2번">
+			<div class="hidden_explanation">
+				<h1>사용예시 2번에 대한 설명입니다.</h1>
+				<h2>사용예시 2번의 첫번째, 화면 상단의 행정구역 선택에 대한 설명입니다.</h2>
+				<ul>
+					<li>시도, 시군구, 읍면동 순으로 행정구역을 선택할 수 있습니다.</li>
+					<li>읍면동에 대한 행정구역이 선택된 경우 해당 구역으로 지도상의 위치가 이동됩니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_2">
+			<img src="/assets/images/img/howLayer1_2.png?v=20240603" alt="사용예시 3번">
+			<div class="hidden_explanation">
+				<h1>사용예시 3번에 대한 설명입니다.</h1>
+				<h2>사용예시 3번의 첫번째, 화면 좌측의 사이드 메뉴 중 국토환경성 평가등급분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>원하는 구역의 국토환경성평가지도의 평가등급, 평가등급별 면적을 분석할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 3번의 두번째, 화면 좌측의 사이드 메뉴 중 경사도 및 표고 분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>원하는 구역의 경사도, 표고를 분석할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 3번의 세번째, 화면 좌측의 사이드 메뉴 중 토지이용규제 정보 조회에 대한 설명입니다.</h2>
+				<ul>
+					<li>원하는 구역의 토지이용 규제정보를 분석할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 3번의 네번째, 화면 좌측의 사이드 메뉴 중 과거자료 조회에 대한 설명입니다.</h2>
+				<ul>
+					<li>화면 상에서 2009년~2019년 평가지도를 보실 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_3">
+			<img src="/assets/images/img/howLayer1_3.png?v=20240603" alt="사용예시 4번">
+			<div class="hidden_explanation">
+				<h1>사용예시 4번은 화면 상단의 레이어선택보기 버튼 클릭시 출력되는 팝업에 대한 설명입니다.</h1>
+				<ul>
+					<li>해당 팝업에서는 현재 선택된 레이어의 리스트를 보여줍니다.</li>
+					<li>목록 좌측으로는 레이어의 명칭을 보여줍니다.</li>
+					<li>각 레이어별로 위치이동 버튼, 투명도 조절, 레이어 삭제, 레이어 숨기기 버튼이 존재합니다.</li>
+					<li>위치이동 버튼은 지도 상의 최상단으로 보여지는 레이어의 순서를 변경합니다.</li>
+					<li>투명도 조절은 직접 0~100까지의 숫자를 입력함으로써 조절하거나, 투명도 올리기, 내리기 버튼으로
+						조절이 가능합니다.</li>
+					<li>레이어 삭제 버튼은 선택한 레이어를 목록에서 삭제합니다.</li>
+					<li>레이어 숨기기 버튼은 화면 상에서 해당 레이어가 표출되지 않도록 합니다. 다시 한번 클릭시 레이어가
+						지도에 표출됩니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_5">
+			<img src="/assets/images/img/howLayer1_5.png" alt="사용예시 5번">
+			<div class="hidden_explanation">
+				<h1>사용예시 5번에 대한 설명입니다.</h1>
+				<h2>사용예시 5번은 화면 우측의 도형삭제에 대한 설명입니다.</h2>
+				<ul>
+					<li>도형삭제 클릭 시 화면에 표출된 분석한 도형을 삭제할 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_6">
+			<img src="/assets/images/img/howLayer1_6.png" alt="사용예시 6번">
+			<div class="hidden_explanation">
+				<h1>사용예시 6번에 대한 설명입니다.</h1>
+				<h2>사용예시 6번의 첫번째, 자료제공서비스 상세페이지와 연계 버튼에 대한 설명입니다.</h2>
+				<ul>
+					<li>레이어 우측에 있는 다운로드 연계 버튼을 클릭하여 자료제공서비스페이지로 이동할 수 있습니다.</li>
+					<li>이동 후 페이지내에서 공간정보 다운로드, 메타데이터 다운로드, 스타일 다운로드 등을할 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_7">
+			<img src="/assets/images/img/howLayer1_7.png?v=20240702" alt="사용예시 7번">
+			<div class="hidden_explanation">
+				<h1>사용예시 7번에 대한 설명입니다.</h1>
+				<h2>사용예시 7번의 첫번째, 주소에 대한 설명입니다.</h2>
+				<ul>
+					<li>지도상의 원하는 지점에 우클릭 시 지점의 주소를 확인할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 7번의 두번째, 토지이용규제정보 서비스 조회에 대한 설명입니다.</h2>
+				<ul>
+					<li>지도상의 원하는 지점에 우클릭 후 두번째 메뉴를 선택하여 지점의 토지이용계획을 조회할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 7번의 세번째, 국토환경성평가지점분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>지도상의 원하는 지점에 우클릭 후 세번째 메뉴를 선택하여 국토환경성평가지점분석을 조회할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 7번의 네번째, 다섯번째 경사도, 표고 지점분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>지도상의 원하는 지점에 우클릭 후 네번째, 다섯번째 메뉴를 선택하여 경사도, 표고의 지점분석을 조회할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 7번의 여섯번째, 가시권분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>지도상의 원하는 지점에 우클릭 후 여섯번째 메뉴를 선택하여 가시권 거리를 입력한 후 분석을 통하여 가시권을 조회할 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_8">
+			<a tabindex=1 href="javascript:;" onclick="guideScreenClose()">닫기</a>
+		 </div>
+	</div>
+	<div id="howLayer2" class="howlayer2" onclick="btn_close('#howLayer2')" style="display: none;">
+		<div class="howLayer2_1">
+			<img src="/assets/images/img/howLayer2_1.png" alt="사용예시 8번">
+			<div class="hidden_explanation">
+				<h1>사용예시 8번에 대한 설명입니다.</h1>
+				<h2>사용예시 8번의 첫번째, 국토환경성평가지도 지적분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>지적분석을 통하여 분석하고자 하는 지적(주소)을 입력하여 선택한 지적에 대한 평가 등급별 면적을 조회할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 8번의 두번째, 국토환경성평가지도 SHP파일 분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>SHP파일 분석을 통하여 분석하고자 하는 지역의 SHP파일을 업로드하여 평가 등급별 면적을 조회할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 8번의 세번째, 국토환경성평가지도 그리기 분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>그리기 분석을 통하여 분석하고자 하는 지역의 폴리곤을 그려서 평가 등급별 면적을 조회할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 8번의 네번째, 국토환경성평가지도 지점 분석에 대한 설명입니다.</h2>
+				<ul>
+					<li>지점 분석을 통하여 분석하고자 하는 지역을 마우스로 클릭하여 해당 지점의 평가등급을 조회할 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer2_2">
+			<img src="/assets/images/img/howLayer2_2.png?v=20240709" alt="사용예시 9번">
+			<div class="hidden_explanation">
+				<h1>사용예시 9번에 대한 설명입니다.</h1>
+				<h2>사용예시 9번의 첫번째, 화면 좌측의 화면에 대한 설명입니다.</h2>
+				<ul>
+					<li>국토환경성평가등급분석을 통하여 표출된 결과창에서 상세보기 버튼을 클릭할 수 있습니다.</li>
+				</ul>
+				<h2>사용예시 9번의 두번째, 화면 우측의 화면에 대한 설명입니다.</h2>
+				<ul>
+					<li>상세보기 버튼을 클릭하게되면 분석결과 평가에 사용된 평가항목을 확인할 수 있고 하단 버튼을 이용하여
+					초기 분석결과 화면으로 이동할 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer2_3">
+			<a tabindex=1 href="javascript:;" class="popup_day" onclick="weekcloseWin();" title="일주일간 보이지 않기"> 
+			<!-- <img src="/assets/images/img/howLayer2_3.png" alt="사용예시 10번"> -->
+			<img src="/assets/images/img/howLayer_chk.png" alt="사용예시 10번">
+			일주일간 보이지 않기
+			</a>
+			<div class="hidden_explanation">
+				<h1>사용예시 10번은 화면 하단의 일주일간 보지 않기에 대한 설명입니다.</h1>
+				<ul>
+					<li>일주일간 보지않기 클릭 시 사용예시에 대한 화면이 일주일간 활성화되지 않습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="howLayer1_8">
+			<a tabindex=1 href="javascript:;" onclick="btn_close('#howLayer2')">닫기</a>
+		 </div>
+	</div>
+	<div id="wrap">
+		<header id="header">
+			<h1 id="logo">
+				<a href="javascript:goMenu3('/main.do');"
+					title="국토환경성평가지도 홈페이지 새창 열기"> <img
+					src="/assets/images/img/logo.png" alt="환경부 국토환경성평가지도">
+				</a>
+			</h1>
+			<div id="accList">
+				<ul>
+					<li class="acc5000"><a href="javascript:;" title="1 : 5,000 축척 선택됨">1 : 5,000</a></li>
+					<li class="acc25000"><a href="javascript:;" title="1 : 25,000 축척 선택되지 않음">1 : 25,000</a></li>
+				</ul>
+				<a href="javascript:;" class="btn_acc">축척변환 활성화 <span>OFF</span></a>
+				<a href="javascript:;" class="btn_refresh">새로고침</a>
+				<div class="popup_acc popup" id="popup_acc">
+					<div class="inner">
+						<div class="popup_qa">
+							<h2>
+								<span id="scale">1:5,000</span> 지도를 조회하시겠습니까?
+							</h2>
+							<p>확인을 누르면 축척에 따라 자동 변경됩니다.</p>
+							<div class="qa_btn">
+								<a href="javascript:;" class="popup_submit">확인</a> 
+								<a
+									href="javascript:;"
+									onclick="btn_close('#popup_acc'); return false;"
+									class="popup_close">취소</a>
+							</div>
+						</div>
+						<div class="popup_info">
+							<p>1:5,000 지도는 2021년 11월 기준 전국 구축이 완료 되었습니다.</p>
+							<p>1:5,000 지도와 1:25,000 지도는 평가기준과 구축시기, 구축방법에 따라 등급이 상이할 수
+								있습니다.</p>
+							<p>
+								1:5,000 지도를 좀 더 자세히 알고 싶으시면 <a class="SummaryMove">여기</a>를
+								클릭하세요.
+							</p>
+						</div>
+						<div class="popup_bottom">
+							<input type="checkbox" id="popup_day" name="popup_day"
+								class="popup_day" checked="checked"><label
+								for="popup_day">오늘 하루 보지 않기</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav id="nav">
+				<ul class="gnb">
+					<li>
+							                    <a href="javascript:goMenu2('0','1000000','/contents/contents02.do');">국토환경성평가지도</a>
+							                </li>
+							            <li>
+							                    <a href="javascript:goMenu('0','2000000','dataNeinsGoKr');">자료제공서비스</a>
+							                </li>
+							            <li>
+							                    <a href="javascript:goMenu2('0','4000000','/api/apiContents02.do');">오픈API</a>
+							                </li>
+							            <li>
+							                    <a href="javascript:goMenu2('0','3000000','/board/notice/noticeList.do');">알림정보</a>
+							                </li>
+							            </ul>
+			</nav>
+		</header>
+		<div id="container" style="overflow: hidden;">
+			<aside id="lnb">
+				<div class="mnb">
+					<ul class="mnb_list">
+						<li><a href="javascript:;" id="mnb_layer" class="mnb_layer" title="레이어 검색" role="tab" onclick="gtag('event', '레이어 선택 접속', {'event_category':'레이어 선택 접속', 'event_label':'레이어 선택 접속'})">레이어</a></li>
+						<li><a href="javascript:;" id="mnb_search" class="mnb_search" title="검색" role="tab" onclick="gtag('event', '검색 접속', {'event_category':'검색 접속', 'event_label':'검색 접속'})">검색</a></li>
+						<li><a href="javascript:;" id="mnb_rate" class="mnb_rate line2" title="국토환경성평가등급분석" role="tab" onclick="gtag('event', '평가등급분석 접속', {'event_category':'평가등급분석 접속', 'event_label':'평가등급분석 접속'})">국토환경성<br>평가등급분석</a></li>
+						<li><a href="javascript:;" id="mnb_gh" class="mnb_gh" title="지형분석" role="tab" onclick="gtag('event', '지형분석 접속', {'event_category':'지형분석 접속', 'event_label':'지형분석 접속'})">지형분석</a></li>
+						<!-- 토지이용 규제정보 
+						<li><a href="javascript:;" class="mnb_regulation line2" onclick="gtag('event', '토지이용규제정보조회 접속', {'event_category':'토지이용규제정보조회 접속', 'event_label':'토지이용규제정보조회 접속'})">토지이용규제<br>정보조회</a></li>
+						-->
+						<!-- 환경입지분석 -->
+						<li><a href="javascript:;" id="mnb_regulation" class="mnb_regulation line2" title="환경입지분석" role="tab" onclick="gtag('event', '환경입지분석 접속', {'event_category':'환경입지분석 접속', 'event_label':'환경입지분석 접속'});">환경입지<br>분석</a></li>
+						<li style="display: none;"><a href="javascript:;" id="mnb_evlcl" class="mnb_evlcl" title="평가분류지원" role="tab" onclick="gtag('event', '평가분류지원 접속', {'event_category':'평가분류지원 접속', 'event_label':'평가분류지원 접속'});">평가분류지원</a></li>
+						<li><a href="javascript:;" id="mnb_past" class="mnb_past" title="과거자료조회" role="tab" onclick="gtag('event', '과거자료 조회', {'event_category':'과거자료 조회', 'event_label':'과거자료 조회'})">과거자료조회</a></li>
+					</ul>
+				</div>
+				<div class="panel">
+					<div class="panel_content panel_layer">
+						<div class="panel_top">
+							<h2>
+								레이어 선택(<span class="layer_total">0</span>)
+							</h2>
+							<a href="javascript:clearLayerTab();" class="panel_refresh" title="레이어 선택 초기화">
+							 	<span class="sr-only">레이어 선택 초기화</span>
+							</a>
+						</div>
+						<div class="panel_main">
+							<!-- 위치 정보 출력 태그 -->
+							<div class="mapInfoDiv" style="display:none; position: absolute; left:100%; z-index:10; margin:50px 0px 0px 50px; width:60%;">
+								<h4>맵 위치 정보</h4>
+								<div></div>
+							</div>
+								
+							<div class="panel_list panel_layer_list left layer-all">
+								<div class="search_layer_box">
+									<label for="search-layer" class="sr-only">검색할 레이어 입력</label>
+									<input type="text" id="search-layer" class="search_layer" placeholder="검색할 레이어를 입력해주세요" onkeypress="javascript:if(event.keyCode==13) {seachLayer()}">
+									<button class="search_btn" onclick="seachLayer();gtag('event', '레이어검색', {'event_category':'레이어검색', 'event_label':'레이어검색'});" title="레이어 검색"></button>
+								</div>
+								<ul class="layer_depth1">
+								</ul>
+							</div>
+						</div>
+						<div class="panel_bottom panel_layer_bottom">
+							<a href="javascript:;" class="select_layer_info" title="선택된 레이어 정보보기">선택된 레이어 정보보기</a>
+						</div>
+					</div>
+					<div class="panel_content panel_search">
+						<div class="panel_top2">
+							<ul class="panel_top_list">
+								<li class="on"><a href="javascript:;" title="통합검색 선택됨">통합검색</a></li>
+								<li><a href="javascript:;" title="지번검색 선택되지 않음">지번검색</a></li>
+							</ul>
+						</div>
+						<div class="panel_main">
+							<div class="panel_list panel_search_list inte">
+								<div class="keyword_form">
+									<div class="search_area">
+										<label for="queryText" class="sr-only">키워드 입력</label>
+										<input type="text" placeholder="키워드 입력" id="queryText" name="queryText" title="키워드입력" onkeypress="if(event.keyCode==13){getTotalSearch('1');}">
+										<a href="javascript:;" class="btn_search_inte"
+											onclick="javascript:getTotalSearch('1'); gtag('event', '검색 - 통합검색', {'event_category':'검색 - 통합검색', 'event_label':'검색 - 통합검색'});" title="행정구역 검색">검색</a>
+									</div>
+									<span>예) 중동, 중동 산1-1, 가야(도엽), 358094(도엽번호)</span>
+								</div>
+								<div class="search_wrap">
+									<div class="search_result">
+										<div class="search_result_tit">
+											<h3 class="panel_tit">
+												검색결과(총 <span>0</span>건)
+											</h3>
+										</div>
+										<ul class="search_cate_list">
+											<li class="on"><a href="javascript:;" title="통합검색 전체 결과" aria-selected="true">전체</a></li>
+											<li><a href="javascript:;" title="통합검색 도엽 결과" aria-selected="false">도엽</a></li>
+											<li><a href="javascript:;" title="통합검색 명칭 결과" aria-selected="false">명칭</a></li>
+											<li><a href="javascript:;" title="통합검색 행정구역 결과" aria-selected="false">행정구역</a></li>
+										</ul>
+									</div>
+									<div class="search_result_list on">
+										<div class="search_result_menu search_leaf">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													도엽(<span>0</span>)
+												</h3>
+												<a href="javascript:;" class="search_more" title="도엽 더보기">더보기</a>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+										<div class="search_result_menu search_appel">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													명칭(<span>0</span>)
+												</h3>
+												<a href="javascript:;" class="search_more" title="명칭 더보기">더보기</a>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+										<div class="search_result_menu search_admini">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													행정구역(<span>0</span>)
+												</h3>
+												<a href="javascript:;" class="search_more" title="행중구역 더보기">더보기</a>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+									</div>
+									<div class="search_result_list">
+										<div class="search_result_menu search_doyup">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													도엽(<span>0</span>)
+												</h3>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+									</div>
+									<div class="search_result_list">
+										<div class="search_result_menu search_poi">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													명칭(<span>0</span>)
+												</h3>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+									</div>
+									<div class="search_result_list">
+										<div class="search_result_menu search_admZone">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													행정구역(<span>0</span>)
+												</h3>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel_list panel_search_list addr">
+								<div class="addr_form">
+									<div class="addr_box">
+										<div class="addr_tit">
+											<span>지역</span>
+										</div>
+										<div class="addr_cnt">
+											<label for="sido3" class="sr-only">시도선택</label>
+											<select name="sido3" id="sido3" title="시도선택" onchange="javascript:selectAdmZoneCdList(this.value, 'sgg','selectBox');">
+												<option value="">시/도 선택</option>
+											</select> 
+											<label for="gugun3" class="sr-only">구군선택</label>
+											<select name="gugun3" id="gugun3" title="구군선택" onchange="javascript:selectAdmZoneCdList(this.value, 'emdBub','selectBox');">
+												<option value="">구/군 선택</option>
+											</select> 
+											<label for="dong3" class="sr-only">읍면동선택</label>
+											<select name="dong3" id="dong3" title="읍면동선택">
+												<option value="">읍/면/동 선택</option>
+											</select>
+										</div>
+									</div>
+									<div class="addr_box">
+										<div class="addr_tit">
+											<span>지번</span>
+										</div>
+										<div class="addr_cnt">
+											<label for="queryBonbunText" class="sr-only">본번 입력</label>
+											<input type="text" style="width: 100px" placeholder="본번 입력" id="queryBonbunText" name="queryBonbunText" title="본번입력" onkeypress="if(event.keyCode==13){ javascript:selectCadastralSearch('1'); return false; }" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+											<label for="queryBubunText" class="sr-only">부번 입력</label>
+											<input type="text" style="width: 100px; margin: 0 0 0 11px" placeholder="부번 입력" id="queryBubunText" name="queryBubunText" title="부번입력" onkeypress="if(event.keyCode==13){ javascript:selectCadastralSearch('1'); return false; }" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+											<!-- <a href="javascript:;" ><span>‘리’ 입력시 ‘리’와’산’ 사이에 띄어쓰기를 하시기 바랍니다.</span></a> -->
+										</div>
+									</div>
+									<a href="javascript:;" class="btn_redline"
+										onclick="javascript:selectCadastralSearch('1'); gtag('event', '검색 - 지번검색', {'event_category':'검색 - 지번검색', 'event_label':'검색 - 지번검색'});" title="지번 검색">검색</a>
+								</div>
+								<div class="search_wrap">
+									<div class="search_result_list">
+										<div class="search_result_menu search_cadastral">
+											<div class="search_result_tit">
+												<h3 class="panel_tit">
+													검색결과(총<span>0</span>건)
+												</h3>
+											</div>
+											<ul class="search_detail_list">
+												<li class="search_result_none">검색결과가없습니다.</li>
+											</ul>
+											<div class="search_paging"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel_content panel_rate">
+						<div class="panel_top">
+							<h2>국토환경성평가등급분석</h2>
+						</div>
+						<div class="panel_main">
+							<div class="panel_list panel_rate_list">
+								<ul class="rate_cate">
+									<li class="rate_point">
+									<a href="javascript:;" onclick="popup_open('/popup/searchCadastralPopup.do','searchCadastralPopup',510,866); gtag('event', '지적분석_평가등급', {'event_category':'지적분석_평가등급', 'event_label':'지적분석_평가등급'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_point.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지적분석</dt>
+												<dd>분석하고자 하는 지적(주소)을 입력하여 선택한 지적에 대한 평가 등급별 면적을 조회할 수
+													있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_shp"><a href="javascript:;"
+										onclick="popup_open('/popup/searchShpUploadPopup.do','searchShpUploadPopup',510,520); gtag('event', 'SHP파일 분석_평가등급', {'event_category':'SHP파일 분석_평가등급', 'event_label':'SHP파일 분석_평가등급'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_shp.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>SHP파일 분석</dt>
+												<dd>분석하고자 하는 지역의 SHP파일을 업로드하여 평가 등급별 면적을 조회 할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_draw"><a href="javascript:;"
+										onclick="javascript:createDraw('Polygon'); gtag('event', '그리기 분석_평가등급', {'event_category':'그리기 분석_평가등급', 'event_label':'그리기 분석_평가등급'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_draw.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>그리기 분석</dt>
+												<dd>분석하고자 하는 지역에 폴리곤을 그려서 평가 등급별 면적을 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_analy"><a href="javascript:;"
+										onclick="javascript:createDraw('Point'); gtag('event', '지점 분석_평가등급', {'event_category':'지점 분석_평가등급', 'event_label':'지점 분석_평가등급'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_analy.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지점 분석</dt>
+												<dd>분석하고자 하는 지역을 마우스로 클릭하여 해당 지점의 평가등급을 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel_bottom panel_rate_bottom" style="top:565px!important">
+							<p>※ 분석 가능한 면적은 최대 50km²로 제한되어 있습니다.</p>
+						</div>
+						<div class="panel_bottom panel_rate_bottom">
+							<p>※ 본 자료는 참고용 자료로 분석결과에 오차가 발생 할 수 있습니다. 그리기 분석과 지점 분석 시 조회
+								중인 지도를 기준으로 분석 결과를 제공합니다.</p>
+						</div>
+					</div>
+					<!-- 경사도표고추가 -->
+					<div class="panel_content panel_gh">
+						<div class="panel_top_geomAnaly">
+							<ul class="panel_top_list">
+								<li class="on"><a href="javascript:;" title="경사도분석 선택됨">경사도분석</a></li>
+								<li class=""><a href="javascript:;" title="표고분석 선택되지 않음">표고분석</a></li>
+								<li class=""><a href="javascript:;" title="향분석 선택되지 않음">향분석</a></li>
+							</ul>
+						</div>
+						<div class="panel_main">
+							
+							<div class="panel_list panel_rate_list" style="display: block;">
+								<!-- 	<ul class="past_info_gh">
+									<li>2020년 제작된 국토지리정보원 수치표고모델(5m)
+										<br>자료를 기준으로 분석결과를 제공합니다.  </li>
+								</ul> -->
+								<ul class="rate_cate">
+									<li class="rate_point"><a href="javascript:;"
+										onclick="popup_open('/popup/searchGCadastralPopup.do','searchGCadastralPopup',510,755); gtag('event', '지적분석_경사도분석', {'event_category':'지적분석_경사도분석', 'event_label':'지적분석_경사도분석'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_point.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지적분석</dt>
+												<dd>분석하고자 하는 지적(주소)을 입력하여 선택한 지적에 대한 경사도를 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_shp"><a href="javascript:;"
+										onclick="popup_open('/popup/searchGShpUploadPopup.do','searchGShpUploadPopup',515,445); gtag('event', 'SHP파일 분석_경사도분석', {'event_category':'SHP파일 분석_경사도분석', 'event_label':'SHP파일 분석_경사도분석'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_shp.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>SHP파일 분석</dt>
+												<dd>분석하고자 하는 지역의 SHP파일을 업로드하여 경사도를 조회 할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_draw"><a href="javascript:;"
+										onclick="javascript:createGhDraw('Polygon', 'gradient'); gtag('event', '그리기 분석_경사도분석', {'event_category':'그리기 분석_경사도분석', 'event_label':'그리기 분석_경사도분석'});">
+											<!-- onclick="popup_open('/analysis/analysisGhPopup.do','analysisGhPopup',510,866);"> -->
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_draw.png" alt="" aria-hidden="true">
+											</div>\
+											<dl class="rate_cate_txt">
+												<dt>그리기 분석</dt>
+												<dd>분석하고자 하는 지역에 폴리곤을 그려서 경사도를 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_analy"><a href="javascript:;"
+										onclick="javascript:createGhDraw('Point', 'gradient'); gtag('event', '지점 분석_경사도분석', {'event_category':'지점 분석_경사도분석', 'event_label':'지점 분석_경사도분석'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_analy.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지점 분석</dt>
+												<dd>분석하고자 하는 지역을 마우스로 클릭하여 해당 지점의 경사도를 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+								</ul>
+							</div>
+							<div class="panel_list panel_rate_list" style="display: none;">
+						<!-- 	<ul class="past_info_gh">
+									<li>2020년 제작된 국토지리정보원 수치표고모델(5m)
+										<br>자료를 기준으로 분석결과를 제공합니다.  </li>
+								</ul> -->
+								<ul class="rate_cate">
+									<li class="rate_point"><a href="javascript:;" onclick="popup_open('/popup/searchHCadastralPopup.do','searchHCadastralPopup',510,755); gtag('event', '지적분석_표고분석', {'event_category':'지적분석_표고분석', 'event_label':'지적분석_표고분석'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_point.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지적분석</dt>
+												<dd>분석하고자 하는 지적(주소)을 입력하여 선택한 지적에 대한 표고를 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_shp"><a href="javascript:;" onclick="popup_open('/popup/searchHShpUploadPopup.do','searchHShpUploadPopup',515,445); gtag('event', 'SHP파일 분석_표고분석', {'event_category':'SHP파일 분석_표고분석', 'event_label':'SHP파일 분석_표고분석'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_shp.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>SHP파일 분석</dt>
+												<dd>분석하고자 하는 지역의 SHP파일을 업로드하여 표고를 조회 할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_draw"><a href="javascript:;" onclick="javascript:createGhDraw('Polygon', 'height'); gtag('event', '그리기 분석_표고분석', {'event_category':'그리기 분석_표고분석', 'event_label':'그리기 분석_표고분석'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_draw.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>그리기 분석</dt>
+												<dd>분석하고자 하는 지역에 폴리곤을 그려서 표고를 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_analy">
+									<a href="javascript:;" onclick="javascript:createGhDraw('Point', 'height'); gtag('event', '지점 분석_표고분석', {'event_category':'지점 분석_표고분석', 'event_label':'지점 분석_표고분석'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_analy.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지점 분석</dt>
+												<dd>분석하고자 하는 지역을 마우스로 클릭하여 해당 지점의 표고를 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+								</ul>
+							</div>
+							<div class="panel_list panel_rate_list" style="display: none;">
+								<ul class="rate_cate">
+									<li class="rate_point"><a href="javascript:;" onclick="popup_open('/popup/searchACadastralPopup.do','searchACadastralPopup',510,755); gtag('event', '지적분석_향분석', {'event_category':'지적분석_향분석', 'event_label':'지적분석_향분석'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_point.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지적분석</dt>
+												<dd>분석하고자 하는 지적(주소)을 입력하여 선택한 지적에 대한 향을 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_shp"><a href="javascript:;" onclick="popup_open('/popup/searchAShpUploadPopup.do','searchAShpUploadPopup',515,445); gtag('event', 'SHP파일 분석_향분석', {'event_category':'SHP파일 분석_향분석', 'event_label':'SHP파일 분석_향분석'});" title="새 창 열기">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_shp.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>SHP파일 분석</dt>
+												<dd>분석하고자 하는 지역의 SHP파일을 업로드하여 향을 조회 할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_draw"><a href="javascript:;" onclick="javascript:createGhDraw('Polygon', 'aspect'); gtag('event', '그리기 분석_향분석', {'event_category':'그리기 분석_향분석', 'event_label':'그리기 분석_향분석'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_draw.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>그리기 분석</dt>
+												<dd>분석하고자 하는 지역에 폴리곤을 그려서 향을 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+									<li class="rate_analy">
+									<a href="javascript:;" onclick="javascript:createGhDraw('Point', 'aspect'); gtag('event', '지점 분석_향분석', {'event_category':'지점 분석_향분석', 'event_label':'지점 분석_향분석'});">
+											<div class="rate_cate_img">
+												<img src="/assets/images/img/rate_analy.png" alt="" aria-hidden="true">
+											</div>
+											<dl class="rate_cate_txt">
+												<dt>지점 분석</dt>
+												<dd>분석하고자 하는 지역을 마우스로 클릭하여 해당 지점의 향을 조회할 수 있습니다.</dd>
+											</dl>
+									</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel_bottom panel_rate_bottom" style="top:565px!important">
+							<p>※ 분석 가능한 면적은 최대 50km²로 제한되어 있습니다.</p>
+						</div>
+						<div class="panel_bottom panel_rate_bottom">
+							<p>※ 본 자료는 2022년 제작된 국토지리정보원 수치표고모델(5m)자료로 분석결과에 오차가 발생 할 수 있습니다. 그리기 분석과 지점 분석 시 조회
+								중인 지도를 기준으로 분석 결과를 제공합니다.</p>
+							<p>※ 보안상의 문제로 일부 지역 서비스 이용이 불가합니다.</p>
+						</div>
+					</div>
+					<!-- 경사도표고끝 -->
+					
+					<!--토지이용규제정보 시작 
+					<div class="panel_content panel_regulation">
+						<div class="panel_top2">
+							<ul class="panel_top_list">
+								<li class="on"><a href="javascript:;" title="지적분석 선택됨">지적분석</a></li>
+								<li><a href="javascript:;" title="SHP파일분석 선택되지 않음">SHP파일분석</a></li>
+							</ul>
+						</div>
+						<div class="panel_main">
+							<div
+								class="panel_list panel_regulation_list panel_layer_list point left">
+								<ul class="layer_depth1">
+									<li>
+										<span class="base_map_on1 on">ON</span>
+										<a href="javascript:;" class="depth1_tit1">배경지도</a>
+										<ul class="layer_depth3 base_map">
+											<li>
+												<input data-objIdx="0" type="radio" id="ldepth7_1_011" title="배경지도" name="ldepth7_radio1" value="LY000176" data-svcid="Base" data-initindex="0" checked="checked">
+												<label for="ldepth7_1_011">
+												<span class="depth3_tit">Vworld Base</span>
+												</label>
+											</li>
+											<li>
+												<input data-objIdx="0" type="radio" id="ldepth7_2_021" title="위성지도" name="ldepth7_radio1" value="LY000177" data-svcid="Satellite" data-initindex="1">
+													<label for="ldepth7_2_021">
+													<span class="depth3_tit">Vworld Satellite</span>
+													</label>
+												</li> 
+										</ul>
+									</li>
+								</ul>
+								<span style="height: 5px">&nbsp;</span>
+								<div class="regulation_info">
+									<a href="javascript:clearLandUseTab();"><span>지번을 선택하여 지번 주변의 토지이용규제 정보를 조회 할 수 있습니다.</span></a>
+								</div>
+								<div class="point_result">
+									<form id="frmCadastral" name="frmCadastral" method="post">
+										<input type="hidden" id="cadaCoordinate" name="coordinate" >
+										<input type="hidden" id="cadaOriginalCoordinate" name="originalCoordinate" >
+										<input type="hidden" id="cadaEpsgCd" name="epsgCd" value="EPSG:3857" >
+										<input type="hidden" id="cadaOpacityValue" name="opacity" value="0.7">
+										<input type="hidden" id="cadaAnalysisType" name="analysisType" value="cadastral" >
+										<input type="hidden" id="cadaLayerAnalysisGroupCd" name="layerAnalysisGroupCd" value="AG006" >
+									</form>
+									<h3 class="panel_tit">
+										지적 선택 결과(총 <span>0</span>건)<a href="javascript:;"
+											class="btn_point_search"
+											onclick="popup_open('/popup/searchCadastralAddPopup.do','searchCadastralAddPopup',510,777);">지적검색</a>
+									</h3>
+									<div class="point_result_list before">
+										<span>선택된 지적이 없습니다.</span>
+									</div>
+								</div>
+								<div class="buffer_set" style="padding: 0 0 23px">
+									<h3 class="panel_tit">버퍼/투명도 설정</h3>
+									<div class="buffer_box">
+										<label for="cadastralRadius" class="sr-only">버퍼반경</label>
+										<input type="text" id="cadastralRadius" title="버퍼반경" placeholder="숫자를 입력하세요." onkeydown="only_num(this)" value="0"> <span>m</span>
+									</div>
+									<div class="customizing" id="cadastralOpacityDiv" style="right: 0px;">
+										<label for="cadastralOpacity" class="sr-only">버퍼투명도</label>
+										<input class="range" id="cadastralOpacity" title="버퍼투명도" type="range" min="0" max="1" step="0.1" value="0.7" style="width: 129px">
+									</div>
+
+								</div>
+								<a href="javascript:;" class="btn_redline"onclick="javascript:analysisToCadastral();">분석</a>
+								<div class="analy_result">
+									<h3 class="panel_tit">
+										분석결과(총 <span>0</span>건)
+									</h3>
+									<ul class="analy_result_list">
+									</ul>
+								</div>
+							</div>
+
+							<div
+								class="panel_list panel_regulation_list panel_layer_list sch left">
+								<ul class="layer_depth1">
+									<li><span class="base_map_on2 on">ON</span><a
+										href="javascript:;" class="depth1_tit2">배경지도</a>
+										<ul class="layer_depth3 base_map">
+											<li>
+												<input data-objIdx="0" type="radio" id="ldepth7_1_012" title="배경지도" name="ldepth7_radio2" value="LY000176" data-svcid="Base" data-initindex="0" checked="checked">
+												<label for="ldepth7_1_012">
+												<span class="depth3_tit">Vworld Base</span></label></li>
+										</ul></li>
+								</ul>
+								<span style="height: 5px">&nbsp;</span>
+								<div class="regulation_info">
+									<span>분석하고자 하는 지역의 WGS84 세계측지계 (EPSG:3857)를 가진 SHP파일을 업로드하여 토지이용규제정보를 조회 할 수 있습니다.</span>
+								</div>
+								<div class="shp_file">
+									<h3 class="panel_tit">사용자 SHP파일 첨부</h3>
+									<form id="frmShp" name="frmShp" method="post" class="shp_file_upload" enctype="multipart/form-data">
+										<input type="hidden" id="shpFileName" name="fileName">
+										<input type="hidden" id="shpCoordinate" name="coordinate">
+										<input type="hidden" id="shpOriginalCoordinate" name="originalCoordinate">
+										
+										<input type="hidden" id="shpEpsgCd" name="epsgCd" value="EPSG:3857" >
+										<input type="hidden" id="shpAnalysisType" name="analysisType" value="shp" >
+										<input type="hidden" id="shpType" name="type" value="left">
+										<input type="hidden" id="shpOpacityValue" name="opacity" value="0.7">
+										<input type="hidden" id="shpLayerAnalysisGroupCd" name="layerAnalysisGroupCd" value="AG006" >
+										<div id="fileButton1" class="file_upload_box browsebutton">
+											<div class="browse-box">
+												<label for="filenameExtension"  class="sr-only">파일확장자</label>
+												<input type="file" class="browse-file-input" name="browse" id="filenameExtension1" title="파일확장자" accept=".shp, .dbf, .prj, .shx">
+											</div>
+											<a class="browse-button" href="#" onclick="return false;">파일선택</a>
+											<div id="popup_filedrag1" class="file_drag">파일을 여기로 드래그
+												하세요.</div>
+										</div>
+										<ul id="cadaFileList" class="shp_file_list"></ul>
+									</form>
+									<span class="shp_file_cautions">한번에 shp, dbf, prj, shx
+										파일을 선택하여 업로드 해주시기 바랍니다.</span> <span class="shp_file_cautions">CAD파일은
+										좌표체계를 가진 SHP파일로 변환하여 업로드 시 분석 가능합니다.</span>
+								</div>
+								<div class="buffer_set" style="padding: 0 0 23px">
+									<h3 class="panel_tit">버퍼/투명도 설정</h3>
+									<div class="buffer_box">
+										<label for="shpRadius" class="sr-only">버퍼반경</label>
+										<input type="text" id="shpRadius" title="버퍼반경" placeholder="숫자를 입력하세요." onkeydown="only_num(this)" value="0"><span>m</span>
+									</div>
+									<div class="customizing" id="shpOpacityDiv" style="right: 0px;">
+										<label for="shpOpacity" class="sr-only">버퍼투명도</label>
+										<input class="range" id="shpOpacity" title="버퍼투명도" type="range" min="0" max="1" step="0.1" value="0.7" style="width: 129px;">
+										
+									</div>
+								</div>
+								<a href="javascript:;" class="btn_redline" onclick="javascript:upload('cada');">분석</a>
+								<div class="analy_result">
+									<h3 class="panel_tit">
+										분석결과(총 <span>0</span>건)
+									</h3>
+									<ul class="analy_result_list">
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--토지이용규제정보 끝 -->
+					
+					<!-- 환경입지분석 시작 -->
+					<div class="panel_content panel_regulation">
+						<div class="panel_top2">
+							<ul class="panel_top_list">
+								<li class="on"><a href="javascript:;" title="지적분석 선택됨">지적분석</a></li>
+								<li><a href="javascript:;" title="SHP파일분석 선택되지 않음">SHP파일분석</a></li>
+							</ul>
+						</div>
+						<div class="panel_main">
+							<div class="panel_list panel_regulation_list panel_layer_list point left">
+								<!-- 
+								<ul class="layer_depth1">
+									<li>
+										<span class="base_map_on1 on">ON</span>
+										<a href="javascript:;" class="depth1_tit1">배경지도</a>
+										<ul class="layer_depth3 base_map">
+											<li>
+												<input data-objIdx="0" type="radio" id="ldepth7_1_011" title="배경지도" name="ldepth7_radio1" value="LY000176" data-svcid="Base" data-initindex="0" checked="checked">
+												<label for="ldepth7_1_011">
+												<span class="depth3_tit">Vworld Base</span>
+												</label>
+											</li>
+											<li>
+												<input data-objIdx="0" type="radio" id="ldepth7_2_021" title="위성지도" name="ldepth7_radio1" value="LY000177" data-svcid="Satellite" data-initindex="1">
+													<label for="ldepth7_2_021">
+													<span class="depth3_tit">Vworld Satellite</span>
+													</label>
+												</li> 
+										</ul>
+									</li>
+								</ul>
+								<span style="height: 5px">&nbsp;</span>
+								 -->
+								<div class="regulation_info">
+									<a href="javascript:clearLandUseTab();"><span>지번을 선택하여 지번 주변의 환경입지 분석정보를 조회할 수 있습니다.</span></a>
+								</div>
+								<div class="point_result">
+									<form id="frmCadastral" name="frmCadastral" method="post">
+										<input type="hidden" id="cadaCoordinate" name="coordinate" >
+										<input type="hidden" id="cadaOriginalCoordinate" name="originalCoordinate" >
+										<input type="hidden" id="cadaEpsgCd" name="epsgCd" value="EPSG:3857" >
+										<input type="hidden" id="cadaOpacityValue" name="opacity" value="0.7">
+										<input type="hidden" id="cadaAnalysisType" name="analysisType" value="cadastral" >
+										<input type="hidden" id="cadaLayerGroupCd" name="layerGroupCd" value="LG007" >
+										<input type="hidden" id="cadaParentLayerNm" name="cadaParentLayerNm">
+										<input type="hidden" id="cadaStatusLayerId" name="cadaStatusLayerId">
+									</form>
+									<h3 class="panel_tit">
+										지적 선택 결과(총 <span>0</span>건)<a href="javascript:;"
+											class="btn_point_search"
+											onclick="popup_open('/popup/searchCadastralAddPopup.do','searchCadastralAddPopup',510,777);" title="새 창 열기">지적검색</a>
+									</h3>
+									<div class="point_result_list before" id="envLocAddrLst">
+										<span>선택된 지적이 없습니다.</span>
+									</div>
+								</div>
+								<div class="buffer_set" style="padding: 0 0 23px">
+									<h3 class="panel_tit">버퍼/투명도 설정</h3>
+									<div class="buffer_box">
+										<label for="cadastralRadius" class="sr-only">버퍼반경</label>
+										<select id="cadastralRadius">
+											<option value="0">0</option>
+											<option value="100" selected>100</option>
+											<option value="200">200</option>
+											<option value="300">300</option>
+											<option value="400">400</option>
+											<option value="500">500</option>
+										</select>
+ 										<span>m</span>
+									</div>
+									<div class="customizing" id="cadastralOpacityDiv" style="right: 0px;">
+										<label for="cadastralOpacity" class="sr-only">버퍼투명도</label>
+										<input class="range" id="cadastralOpacity" title="버퍼투명도" type="range" min="0" max="1" step="0.1" value="0.7" style="width: 129px">
+									</div>
+
+								</div>
+								<a href="javascript:;" class="btn_redline status_chk">환경입지 현황조회</a>
+								<div class="panel_bottom panel_rate_bottom" style="top:590px!important">
+									<p>※ 분석 가능한 면적은 최대 50km²로 제한되어 있습니다.</p>
+								</div>								
+								<div class="panel_bottom panel_rate_bottom">
+									<p>※ 본 자료는 참고용 자료로 분석결과에 오차가 발생 할 수 있습니다. 지적 분석 시 조회
+										중인 지도를 기준으로 분석 결과를 제공합니다.</p>
+								</div>
+							</div>
+						
+							<div class="panel_list panel_regulation_list panel_layer_list sch left">
+								<!-- 
+								<ul class="layer_depth1">
+									<li><span class="base_map_on2 on">ON</span><a
+										href="javascript:;" class="depth1_tit2">배경지도</a>
+										<ul class="layer_depth3 base_map">
+											<li>
+												<input data-objIdx="0" type="radio" id="ldepth7_1_012" title="배경지도" name="ldepth7_radio2" value="LY000176" data-svcid="Base" data-initindex="0" checked="checked">
+												<label for="ldepth7_1_012">
+												<span class="depth3_tit">Vworld Base</span></label></li>
+										</ul></li>
+								</ul>
+								<span style="height: 5px">&nbsp;</span>
+								 -->
+								<div class="regulation_info">
+									<span>분석하고자 하는 지역의 WGS84 세계측지계 (EPSG:3857)를 가진 SHP파일을 업로드하여 환경입지분석을 조회할 수 있습니다.</span>
+								</div>
+								<div class="shp_file">
+									<h3 class="panel_tit">사용자 SHP파일 첨부</h3>
+									<form id="frmShp" name="frmShp" method="post" class="shp_file_upload" enctype="multipart/form-data">
+										<input type="hidden" id="shpFileName" name="fileName">
+										<input type="hidden" id="shpCoordinate" name="coordinate">
+										<input type="hidden" id="shpOriginalCoordinate" name="originalCoordinate">
+										<input type="hidden" id="shpEpsgCd" name="epsgCd" value="EPSG:3857" >
+										<input type="hidden" id="shpAnalysisType" name="analysisType" value="shp" >
+										<input type="hidden" id="shpType" name="type" value="left">
+										<input type="hidden" id="shpOpacityValue" name="opacity" value="0.7">
+										<input type="hidden" id="shpLayerAnalysisGroupCd" name="layerAnalysisGroupCd" value="AG006" >
+										<input type="hidden" id="shpLayerGroupCd" name="layerGroupCd" value="LG007" >
+										<div id="fileButton1" class="file_upload_box browsebutton">
+											<div class="browse-box">
+												<label for="filenameExtension1"  class="sr-only">파일확장자</label>
+												<input type="file" class="browse-file-input" name="browse" id="filenameExtension1" title="파일확장자" accept=".shp, .dbf, .prj, .shx">
+											</div>
+											<a class="browse-button" href="#" onclick="return false;">파일선택</a>
+											<div id="popup_filedrag1" class="file_drag">파일을 여기로 드래그
+												하세요.</div>
+										</div>
+										<ul id="cadaFileList" class="shp_file_list"></ul>
+									</form>
+									<span class="shp_file_cautions">한번에 shp, dbf, prj, shx파일을 선택하여 업로드 해주시기 바랍니다.</span>
+									<span class="shp_file_cautions">1024KB 이하의 shp파일만 분석이 가능합니다.</span>
+									<span class="shp_file_cautions">CAD파일은 좌표체계를 가진 SHP파일로 변환하여 업로드 시 분석 가능합니다.</span>
+									<span class="shp_file_cautions"><a href="https://ecvam.neins.go.kr/board/data/dataView.do?board_seq=15&pageIndex=2" target="_blank">[좌표] 국토환경성평가지도 좌표체계 및 좌표계 변환 방법</a></span>
+								</div>
+								<div class="buffer_set" style="padding: 0 0 23px">
+									<h3 class="panel_tit">버퍼/투명도 설정</h3>
+									<div class="buffer_box">
+										<label for="shpRadius" class="sr-only">버퍼반경</label>
+										<select id="shpRadius">
+											<option value="0">0</option>
+											<option value="100" selected>100</option>
+											<option value="200">200</option>
+											<option value="300">300</option>
+										<option value="400">400</option>
+											<option value="500">500</option>
+										</select>
+										<span>m</span>
+									</div>
+									<div class="customizing" id="shpOpacityDiv" style="right: 0px;">
+										<label for="shpOpacity" class="sr-only">버퍼투명도</label>
+										<input class="range" id="shpOpacity" title="버퍼투명도" type="range" min="0" max="1" step="0.1" value="0.7" style="width: 129px;">
+									</div>
+								</div>
+								<a href="javascript:;" class="btn_redline" onclick="javascript:upload('envLoc');">환경입지 현황조회</a>
+								<div class="panel_bottom panel_rate_bottom" style="top:580px!important">
+									<p>※ 분석 가능한 면적은 최대 50km²로 제한되어 있습니다.</p>
+								</div>	
+								<div class="panel_bottom panel_rate_bottom">
+									<p>※ 본 자료는 참고용 자료로 분석결과에 오차가 발생 할 수 있습니다. SHP파일 분석 시 조회
+										중인 지도를 기준으로 분석 결과를 제공합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 환경입지분석 끝 -->
+					
+					<!-- 평가분류지원 [s] -->
+					<div class="panel_content panel_evlcl">
+						<div class="select_target">
+							<div class="panel_top2">
+								<ul class="panel_top_list">
+									<li class="on"><a href="javascript:;" title="지적분석 선택됨">지적분석</a></li>
+									<li><a href="javascript:;" title="SHP파일분석 선택되지 않음">SHP파일분석</a></li>
+								</ul>
+							</div>
+							<div class="panel_main">
+								<div class="panel_list panel_regulation_list panel_layer_list point left">
+									<div class="regulation_info">
+										<a href="javascript:clearLandUseTab();"><span>지번을 선택하여 지번 주변의 평가분류지원 대상 정보를 조회할 수 있습니다.</span></a>
+									</div>
+									<div class="point_result" id="evlclPointResult">
+										<form id="frmEvlCadastral" name="frmEvlCadastral" method="post">
+											<input type="hidden" id="cadaEvlCoordinate" name="evlCoordinate" >
+											<input type="hidden" id="cadaOrgEvlCoordinate" name="cadaOrgEvlCoordinate">
+											<input type="hidden" id="cadaEpsgCd" name="epsgCd" value="EPSG:3857" >
+											<input type="hidden" id="cadaEvlOpacityValue" name="opacity" value="0.7">
+										</form>
+										<h3 class="panel_tit">
+											지적 선택 결과(총 <span>0</span>건)<a href="javascript:;"
+												class="btn_point_search"
+												onclick="popup_open('/popup/searchCadastralEvlclPopup.do','searchCadastralEVLCLPopup',510,777);"  title="새 창 열기">지적검색</a>
+										</h3>
+										<div class="point_result_list before" id="evlclPointResultLst">
+											<span>선택된 지적이 없습니다.</span>
+										</div>
+									</div>
+									<a href="javascript:;" class="btn_redline evlcl_chk">평가분류사업 선택</a>
+									<div class="panel_bottom panel_rate_bottom">
+										<p>※ 본 자료는 참고용 자료로 분석결과에 오차가 발생 할 수 있습니다. 지적 분석 시 조회
+											중인 지도를 기준으로 분석 결과를 제공합니다.</p>
+									</div>
+								</div>
+							
+								<div class="panel_list panel_regulation_list panel_layer_list sch left">
+									<div class="regulation_info">
+										<span>분석하고자 하는 지역의 WGS84 세계측지계 (EPSG:3857)를 가진 SHP파일을 업로드하여 평가분류지원 대상을 조회할 수 있습니다.</span>
+									</div>
+									<div class="shp_file">
+										<h3 class="panel_tit">사용자 SHP파일 첨부</h3>
+										<form id="evlFrmShp" name="evlFrmShp" method="post" class="shp_file_upload" enctype="multipart/form-data">
+											<input type="hidden" id="evlShpFileName" name="fileName">
+											<input type="hidden" id="shpCoordinate" name="coordinate">
+											<input type="hidden" id="shpOriginalCoordinate" name="originalCoordinate">
+											<input type="hidden" id="shpEpsgCd" name="epsgCd" value="EPSG:3857" >
+											<input type="hidden" id="shpAnalysisType" name="analysisType" value="shp" >
+											<input type="hidden" id="shpType" name="type" value="evlcl">
+											<input type="hidden" id="shpOpacityValue" name="opacity" value="0.7">
+											<div id="fileButton2" class="file_upload_box browsebutton">
+												<div class="browse-box">
+													<label for="filenameExtension1"  class="sr-only">파일확장자</label>
+													<input type="file" class="browse-file-input" name="browse" id="filenameExtension1" title="파일확장자" accept=".shp, .dbf, .prj, .shx">
+												</div>
+												<a class="browse-button" href="#" onclick="return false;">파일선택</a>
+												<div id="popup_filedrag2" class="file_drag">파일을 여기로 드래그 하세요.</div>
+											</div>
+											<ul id="evlFileList" class="shp_file_list"></ul>
+										</form>
+										<span class="shp_file_cautions">한번에 shp, dbf, prj, shx파일을 선택하여 업로드 해주시기 바랍니다.</span>
+										<span class="shp_file_cautions">1024KB 이하의 shp파일만 분석이 가능합니다.</span>
+										<span class="shp_file_cautions">CAD파일은 좌표체계를 가진 SHP파일로 변환하여 업로드 시 분석 가능합니다.</span>
+										<span class="shp_file_cautions"><a href="https://ecvam.neins.go.kr/board/data/dataView.do?board_seq=15&pageIndex=2" target="_blank">[좌표] 국토환경성평가지도 좌표체계 및 좌표계 변환 방법</a></span>
+									</div>
+									<a href="javascript:;" class="btn_redline" onclick="javascript:uploadEvlShp('evlcl');">평가분류사업 선택</a>
+									<div class="panel_bottom panel_rate_bottom">
+										<p>※ 본 자료는 참고용 자료로 분석결과에 오차가 발생 할 수 있습니다. SHP파일 분석 시 조회
+											중인 지도를 기준으로 분석 결과를 제공합니다.</p>
+									</div>
+								</div>
+							</div>
+					</div>
+						<div class="select_business" style="display: none">
+							<div class="panel_top">
+								<h2>평가분류지원</h2>
+								<button class="area_anal" onclick="evlBack('bus');">대상지 변경</button>
+								<!-- <a href="javascript:void(0);" title="뒤로가기" class="evl-back" onclick="evlBack('bus');">
+									<span class="sr-only">뒤로가기</span>
+								</a> -->
+							</div>
+							<div class="panel_main">
+								<div class="panel_list panel_rate_list">
+									<ul class="rate_cate">
+										<li class="">
+											<a href="javascript:;" onclick="evlShowCheckLst(this)" data-evlbus='AG018'>
+												<div class="rate_cate_img">
+													<img src="/assets/images/img/evl_complex.png" alt="" aria-hidden="true">
+												</div>
+												<dl class="rate_cate_txt">
+													<dt>산업단지 개발사업</dt>
+												</dl>
+											</a>
+										</li>
+										<li class="">
+											<a href="javascript:;" onclick="evlShowCheckLst(this)" data-evlbus='AG019'>
+												<div class="rate_cate_img">
+													<img src="/assets/images/img/evl_housing.png" alt="" aria-hidden="true">
+												</div>
+												<dl class="rate_cate_txt">
+													<dt>택지개발사업</dt>
+												</dl>
+											</a>
+										</li>
+										<li class="">
+											<a href="javascript:;" onclick="evlShowCheckLst(this)" data-evlbus='AG020'>
+												<div class="rate_cate_img">
+													<img src="/assets/images/img/evl_tourist.png" alt="" aria-hidden="true">
+												</div>
+												<dl class="rate_cate_txt">
+													<dt>관광지 개발사업</dt>
+												</dl>
+											</a>
+										</li>
+										<li class="">
+											<a href="javascript:;" onclick="evlShowCheckLst(this)" data-evlbus='AG021'>
+												<div class="rate_cate_img">
+													<img src="/assets/images/img/evl_road.png" alt="" aria-hidden="true">
+												</div>
+												<dl class="rate_cate_txt">
+													<dt>도로건설사업</dt>
+												</dl>
+											</a>
+										</li>
+										<li class="">
+											<a href="javascript:;" onclick="evlShowCheckLst(this)" data-evlbus='AG022'>
+												<div class="rate_cate_img">
+													<img src="/assets/images/img/evl_small.png" alt="" aria-hidden="true">
+												</div>
+												<dl class="rate_cate_txt">
+													<dt>소규모 환경영향평가 대상사업</dt>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="chkLst-area tab-content-bg" style="display: none">
+							<div class="select-bus-label tab-title-wrap">
+								<h4>생활환경 영향 평가</h4>
+								<a href="javascript:void(0);" title="뒤로가기" class="evl-back" onclick="evlBack('chk');">
+									<span class="sr-only">뒤로가기</span>
+								</a>
+							</div>
+							<div class="chk-list-area radio-survey-wrap" id=chkListArea>
+							</div>
+							<div>
+								<button type="button" id="evlAnaly" data-evlanaly="" class="evlcl-analysis-btn" onClick="evlAnaly(this);">분석하기</button>
+							</div>
+							
+							<div class="analysis-results-wrap active" id="analysisRst" style="display: none;">
+							<div class="tab-title-wrap" id="evlChkTitle">
+								<p>생활환경 영향평가 결과</p>
+								<a href="javascript:;" class="btn_s btn_s_xls" onclick="javascript:downEvlExcelToLog('evlChk');" title="엑셀로 저장">XLS</a>
+							</div>
+							<div class="analysis-results-table" id="analyRstTbl">
+								<table>
+								<caption>생활환경 영향평과 결과 테이블</caption>
+									<colgroup>
+										<col width="23.3%">
+										<col width="36.4%">
+										<col width="*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">순번</th>
+											<th scope="col">예</th>
+											<th scope="col">아니오</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td></td>
+											<td><span class="chk"></span></td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th scope="col">합계</th>
+											<th scope="col">0개</th>
+											<th scope="col">8개</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+					
+							<div class="analysis-btn-wrap" id="notNatuValArea" style="display: none;">
+								<!-- 심층평가 대상 -->
+								<div class="target-badge">심층평가 대상</div>
+							</div>
+							<div class="analysis-btn-wrap" id="natuValArea" style="display: none;">
+								<!-- 입지타당성 평가하기 -->
+								<button type="button" class="analysis-results-badge eval-btn" onclick="natuValAnaly();">
+								자연환경 변수 평가하기
+								</button>
+							</div>
+						</div>
+						</div>
+					</div> 
+					<!-- 평가분류지원 [e] -->
+					
+					<div class="panel_content panel_past">
+						<div class="panel_top">
+							<h2>과거자료조회</h2>
+						</div>
+						<div class="panel_main">
+							<div class="panel_list panel_past_list">
+								<ul class="past_info">
+									<li>선택한 년도의 하반기 자료를 기준으로 제공합니다.</li>
+									<li>본 자료는 참고용 자료로 일부 자료에서 오차가 발생 할 수 있습니다.</li>
+								</ul>
+								<div class="past_map">
+									<h3 class="panel_tit">지도선택</h3>
+									<ul class="past_map_list">
+										<li class="on">
+											<a href="javascript:;" data-value="ecvam" aria-selected="true">국토환경성<br>평가지도</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-value="law" aria-selected="false">법제적<br>평가지도</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-value="eco" aria-selected="false">환경생태적<br>평가지도</a>
+										</li>
+									</ul>
+								</div>
+								<div class="past_lookup">
+									<h3 class="panel_tit">조회년도</h3>
+									<div class="past_slide"></div>
+									<!-- <a href="javascript:;" class="btn_redline" id="pastLayerOnoff" name="pastLayerOnoff">조회하기</a> -->
+									<!-- <a href="javascript:;" class="btn_redline" id="pastLayerDown" name="pastLayerDown">다운로드하기</a> -->
+								</div>
+								<!-- <div class="past_download">
+                  <h3 class="panel_tit">과거자료 다운로드</h3>
+                  <ul class="past_download_list"></ul>
+                  <a href="javascript:;" class="btn_redline" id="pastLayerDown" name="pastLayerDown">다운로드하기</a>
+                </div> -->
+							</div>
+						</div>
+					</div>
+										
+					<!-- 231018 yjlee 분석현황[s] -->
+					<div class="panel_content pancel_status">
+						<div class="panel_top pancel_status_top">
+							<h2>
+								분석현황
+							</h2>
+							<button class="area_anal reset_area_anal">대상지 변경</button>
+						</div>
+						<div class="envLocContent">
+							<div class="basic_status_area">
+								<div id="envLocAdressLst"></div>
+								<div id="envLocAreaInfo"></div>
+								<div id="envLocPopInfo"></div>
+								<div id="envLocWaterInfo"></div>
+								<div id="envLocMountInfo"></div>
+							</div>
+							<div class="panel_list panel_layer_list ">
+								<ul class="layer_depth1 envLocResultUl"></ul>
+							</div>
+						</div>
+						<div class="panel_bottom panel_layer_bottom">
+							<a href="javascript:;" class="btn_redline fullStatusCheckPopupOpen"onClick="gtag('event', '환경입지분석_전체현황조회', {'event_category':'환경입지분석_전체현황조회', 'event_label':'환경입지분석_전체현황조회'})">입지분석 전체현황 조회</a>
+						</div>
+					</div>
+					<!-- 231018 yjlee 분석현황[e] -->
+					
+				</div>
+				<a href="javascript:;" class="lnb_open" title="메뉴 콘텐츠 닫기" aria-expanded="true">메뉴 콘텐츠 닫기</a>
+			</aside>
+			<div id="contents">
+				<div class="snb">
+					<div class="add_list">
+						<label for="sido1" class="sr-only">시도선택</label>
+						<select name="sido1" id=sido1 title="시도선택" onchange="javascript:selectAdmZoneCdList(this.value, 'sgg','topMenu'); goToSelectedSido(this);">
+							<option value="">시/도 선택</option>
+						</select> 
+						<label for="gugun1" class="sr-only">구군선택</label>
+						<select name="gugun1" id="gugun1" title="구군선택" onchange="javascript:selectAdmZoneCdList(this.value, 'emdBub','topMenu'); goToSelectedSgg(this);">
+							<option value="">구/군 선택</option>
+						</select> 
+						<label for="dong1" class="sr-only">읍면동선택</label>
+						<select name="dong1" id="dong1" title="읍면동선택" onchange="javascript:goToSelectedEmd(this);">
+							<option value="">읍/면/동 선택</option>
+						</select>
+						<div class="add_select">
+							<div class="add_select_top">
+								<h2>행정구역 선택</h2>
+								<a href="javascript:;" class="btn_addclose"
+									onclick="btn_close('.add_select'); $('.btn_addmore').removeClass('on'); return false;">주소창
+									닫기</a>
+							</div>
+							<div class="add_select_cnt">
+								<div class="add_select_box">
+									<h3>시/도</h3>
+									<div id="sido2">
+										<ul></ul>
+									</div>
+								</div>
+								<div class="add_select_box">
+									<h3>구/군</h3>
+									<div id="gugun2">
+										<ul></ul>
+									</div>
+								</div>
+								<div class="add_select_box">
+									<h3>읍/면/동</h3>
+									<div id="dong2">
+										<ul></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layer_ctrl">
+						<ul>
+							<li><a href="javascript:;" class="btn_layer">레이어 선택 보기 창</a></li>
+							<li><a href="javascript:;" class="btn_email"
+								onclick="btn_open('#popup_spot'); return false;">이메일</a></li>
+							<li><a href="javascript:;" class="btn_mapdown" id="export">지도저장</a></li>
+							<li><a href="javascript:;" class="btn_print" id="print">지도인쇄</a></li>
+							<li><a href="/mapDual.do" class="btn_interface">화면분할</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="map">
+					<div id="mapArea" style="width: 100%;">
+						<div id="sampleMap" style="width: 100%; height: 873px;"></div>
+						<div class="popup_layer left type2" tabindex="0">
+							<div class="popup_top">
+	                            <h2>레이어 선택 보기 창</h2>
+	                            <a href="javascript:;" class="btn_mini on" title="팝업 최소화">팝업높이 축소</a> 
+	                            <a href="javascript:;" class="btn_close" onclick="btn_close('.popup_layer.left'); return false;" title="팝업 닫기">팝업닫기</a>
+	                        </div>
+                        	<div class="popup_cnt">
+								<ul id="layerList" class="lastLayerLeft">
+								</ul>
+							</div>
+							<span class="more" title="레이어 선택 보기창 펼치기">
+                           		<span class="blind">V</span>
+                        	</span>
+							
+						</div>
+						
+ 						<div class="popup_layer type3" tabindex="0" style="display: none;" data-admin-only="true">
+                     <div class="popup_top">
+                        <h2>민원발생지역 레이어 제어 창</h2>
+                        <a href="javascript:;" class="btn_mini on" title="팝업 최소화">팝업높이 축소</a> 
+                        <a href="javascript:;" class="btn_close" onclick="btn_close('.popup_layer.type3'); return false;" title="팝업 닫기">팝업닫기</a>
+                     </div>
+                     <div class="popup_cnt">
+                        <div class="top-side">
+			                  <div class="select-area">
+			                     <label for="year" class="sr-only">민원발생 연도선택</label>
+			                     <select name="year" id=year title="민원발생 연도선택">
+			                        <option value="">민원발생 연도선택</option>
+			                     </select>
+			                  </div>
+			               <div class="onoff-area">
+			                  <p>ON/OFF</p>
+			                  <div class="btn_onoff_wrap"> <input class="btn_onoff_inp" type="checkbox" role="switch" checked="" title="레이어보기 스위치" onclick="opinionAndQnaLayerOnOff();"></div>
+			               </div>
+			            </div>
+			            <div class="bottom-side">
+			               <a href="javascript:" onclick="toggleSelectMode();">민원정보조회 버튼</a>
+			                  <div class="ex-div">
+			                     <p class="tit">민원정보조회</p>
+			                     <p class="story">
+			                     아이콘을 선택하고 민원발생지역<br />
+			                     클릭 시 민원정보를 조회할 수 있습니다.
+			                     </p>
+			                  </div>
+			            </div>
+                     </div>
+                     
+                  </div>
+				     
+						<div class="eco_2015_g legend-area" style="display: none;">
+							<span>생태자연도</span>
+							<ul>
+								<li>1등급</li>
+								<li>2등급</li>
+								<li>3등급</li>
+								<li>별도관리지역</li>
+							</ul>
+						</div>
+						
+						<div class="acuatic legend-area" style="display: none;">
+							<span>수생태계건강성조사</span>
+							<ul>
+								<li>하천</li>
+								<li>하구</li>
+							</ul>
+						</div>
+						<div class="g15 legend-area" style="display: none;">
+							<span>생물권보전지역도</span>
+							<table>
+							<caption>생물권보전지역도 범례</caption>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">육상</th>
+										<th scope="col">해상</th>
+										<th scope="col">갯벌</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>핵심구역</td>
+										<td>
+											<ul>
+												<li class="land-core"></li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li class="sea-core"></li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li class="mudflat-core"></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>완충구역</td>
+										<td>
+											<ul>
+												<li class="land-buffer"></li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li class="sea-buffer"></li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li class="mudflat-buffer"></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>협력구역</td>
+										<td>
+											<ul>
+												<li class="land-coop"></li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li class="sea-coop"></li>
+											</ul>
+										</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="dt_d160 legend-area" style="display: none;">
+							<span>토지소유정보</span>
+							<ul>
+								<li>미분류</li>
+								<li>기타</li>
+								<li>기타단체</li>
+								<li>종교단체</li>
+								<li>중종</li>
+								<li>법인</li>
+								<li>군유지</li>
+								<li>시,도유지</li>
+								<li>외국인,외국공공기관</li>
+								<li>국유지</li>
+								<li>개인(관외)</li>
+								<li>개인</li>
+								<li>일본인,창씨명등</li>
+							</ul>
+						</div>
+						<div class="g04 legend-area" style="display: none;">
+							<span>생태·경관보전지역</span>
+							<ul>
+								<li>생태·경관보전지역</li>
+								<li>시도생태·경관보전지역</li>
+							</ul>
+						</div>
+						<div class="g16 legend-area" style="display: none;">
+							<span>해양보호구역</span>
+							<ul>
+								<li>해양생태계보호구역</li>
+								<li>해양생물보호구역</li>
+								<li>해양경관보호구역</li>
+							</ul>
+						</div>
+						<div class="LY000761_rgrp_027 legend-area" style="display: none;">
+							<ul>
+								<li>5도 미만  </li>
+								<li>5~10도 미만</li>
+								<li>10~15도 미만</li>
+								<li>15~20도 미만 </li>
+								<li>20~25도 미만</li>
+								<li>25~30도 미만</li>
+								<li>30도 이상</li>
+							</ul>
+						</div>
+						
+						<div class="LY000760_rgrp_026 legend-area" style="display: none;">
+							<ul>
+							<li>10m 미만</li>
+							<li>10~50m 미만</li>
+							<li>50~100m 미만</li>
+							<li>100~200m 미만</li>
+							<li>200~300m 미만</li>
+							<li>300~400m 미만</li>
+							<li>400~500m 미만</li>
+							<br>
+							<li>500~600m 미만</li>
+							<li>600~700m 미만</li>
+							<li>700~800m 미만</li>
+							<li>800~900m 미만</li>
+							<li>900~1000m 미만</li>
+							<li>1000m 이상</li>
+							</ul>
+						</div>
+						<!-- 산사태위험등급도 -->
+						<div class="LY000772_rgrp_036 legend-area" style="display: none;">
+							<ul>
+							<li>1등급</li>
+							<li>2등급</li>
+							<li>3등급</li>
+							<li>4등급</li>
+							<li>5등급</li>
+						</div>
+						<!-- 산사태위험지도 -->
+						<div class="A2SM_SANSATAI legend-area" style="display: none;">
+							<ul>
+							<li>1등급</li>
+							<li>2등급</li>
+							<li>3등급</li>
+							<li>4등급</li>
+							<li>5등급</li>
+						</div>
+						
+						<!-- 하천범람 (도시하천) -->
+						<div class="A2SM_FLOODFOVRRISK1 legend-area" style="display: none;">
+							<ul>
+							<li>1등급(0.5m 미만)</li>
+							<li>2등급(0.5m ~ 1.0m 미만)</li>
+							<li>3등급(1.0m ~ 2.0m 미만)</li>
+							<li>4등급(2.0m ~ 5.0m 미만)</li>
+							<li>5등급(5.0m 이상)</li>
+						</div>
+						
+						<!-- 하천범람 (지방하천) -->
+						<div class="A2SM_FLOODFOVRRISK2 legend-area" style="display: none;">
+							<ul>
+							<li>1등급(0.5m 미만)</li>
+							<li>2등급(0.5m ~ 1.0m 미만)</li>
+							<li>3등급(1.0m ~ 2.0m 미만)</li>
+							<li>4등급(2.0m ~ 5.0m 미만)</li>
+							<li>5등급(5.0m 이상)</li>
+						</div>
+						<!-- 임상 -->
+						<div class="map_ft_type legend-area" style="display: none;">
+							<span>임상</span>
+							<ul>
+								<li>침엽수림</li>
+								<li>활엽수립</li>
+								<li>혼효림</li>
+								<li>죽림</li>
+							</ul>		
+						</div>						
+						<!-- 경급 -->
+						<div class="map_ft_dmcls legend-area" style="display: none;">
+							<span>경급</span>
+							<ul>
+								<li>치수</li>
+								<li>소경목</li>
+								<li>중경목</li>
+								<li>대경목</li>
+							</ul>
+						</div>	
+						<!-- 영급 -->
+						<div class="map_ft_agcls legend-area" style="display: none;">
+							<span>영급</span>
+							<ul>
+								<li>1영급</li>
+								<li>2영급</li>
+								<li>3영급</li>
+								<li>4영급</li>
+								<li>5영급</li>
+								<li>6영급</li>
+								<li>7영급</li>
+								<li>8영급</li>
+								<li>9영급</li>
+							</ul>
+						</div>	
+						<!-- 밀도 -->
+						<div class="map_ft_dnst legend-area" style="display: none;">
+							<span>밀도</span>
+							<ul>
+								<li>소</li>
+								<li>중</li>
+								<li>밀</li>
+							</ul>
+						</div>					
+						<!-- 자연환경복원 후보목록 -->
+						<div class="g18 legend-area" style="display: none;">
+							<span>자연환경복원 후보목록</span>
+							<ul>
+								<li>1 그룹</li>
+								<li>2 그룹</li>
+								<li>3 그룹</li>
+							</ul>
+						</div>	
+						<div id="mapPosition"></div>
+					</div>
+					<div class="map_ctrl">
+						<div class="zoom_ctrl">
+							<a href="javascript:;" class="zoom_plus" title="지도확대">지도확대</a>
+							<div class="zoom_bar"></div>
+							<a href="javascript:;" class="zoom_minus" title="지도축소">지도축소</a>
+						</div>
+						
+						<!-- <div class="tools_2">
+              <a href="javascript:;" class="tools_gis" onclick="javascript:initMap();">전체보기</a>
+              <a href="javascript:;" class="tools_minimize" onclick="javascript:createMeasureDraw('Polygon');">면적</a>
+              <a href="javascript:;" class="tools_area" onclick="javascript:createMeasureDraw('LineString');">거리</a>
+              <a href="javascript:;" class="tools_gradient" onclick="javascript:createGhDraw('Polygon', 'gradient');">경사도</a>
+              <a href="javascript:;" class="tools_height" onclick="javascript:createGhDraw('Polygon', 'height');">고도</a>
+            </div> -->
+						<div class="tools">
+							<a href="javascript:;" class="tools_gis" onclick="javascript:initMap();">전체보기</a>
+							<a href="javascript:;" class="tools_minimize" onclick="javascript:createMeasureDraw('Polygon');">면적</a>
+							<a href="javascript:;" class="tools_area" onclick="javascript:createMeasureDraw('LineString');">거리</a>
+							<a href="javascript:;" class="tools_shape" id="btnResetFeature">도형삭제</a>
+							<a href="javascript:;" class="tools_url" onclick="javascript:ShareUrlBtn('UR001');">url</a>
+						</div>
+						<div id="main_right_tools">
+						<!--  베이스 지도 모드 선택  -->
+							<div class="map_ctrl1">
+								<div class="map_op">
+									<a href="javascript:;" class="map_mode_nm" style="display: block; color: black;" title="기본지도">지도</a>
+									<a href="javascript:;" class="map_btn" style="color: black;">지도</a>
+									<a href="javascript:;" class="sky_btn" style="color: black;" title="위성지도">위성</a>
+									<a href="javascript:;" class="night_btn" style="color: black;" title="야간지도">야간</a>
+									<a href="javascript:;" class="gray_btn" style="color: black;" title="흰색지도">흰색</a>
+									<a href="javascript:;" class="osm_btn" style="color: black;" title="오픈스트리트맵(OpenStreetMap)">OSM</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="map_rate legend-area" style="display: none;">
+						<ul>
+							<li>1등급</li>
+							<li>2등급</li>
+							<li>3등급</li>
+							<li>4등급</li>
+							<li>5등급</li>
+							<li>평가외</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup_search popup" id="popup_search">
+				<div class="inner">
+					<div class="popup_qa">
+						<h2>검색결과가 없습니다.</h2>
+						<p>1 : 25,000 지도로 분석하시겠습니까?</p>
+						<div class="qa_btn">
+							<a href="javascript:;" class="popup_submit">분석</a> 
+							<a href="javascript:;" onclick="btn_close('#popup_search'); return false;" class="popup_close">취소</a>
+						</div>
+					</div>
+					<div class="popup_info">
+						<p>1 : 5,000 지도는 전국을 구축 중에 있으며,</p>
+						<p>구축되지 않은 지역은 분석서비스를 제공하지 않습니다.</p>
+						<p>해당지역의 1 : 25,000 지도를 분석하려면 분석을 클릭하세요.</p>
+					</div>
+				</div>
+			</div>
+			<div class="popup_possible popup" id="popup_possible">
+				<div class="inner">
+					<div class="popup_qa">
+						<h2>
+							1:5,000 이상의 축척에서만<br>분석이 가능합니다.
+						</h2>
+						<div class="qa_btn">
+							<a href="javascript:;" class="popup_submit popup_close"
+								onclick="zoomMapToClosePopup(0, 'popup_possible'); return false;">확인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ghpopup_possible popup" id="ghpopup_possible">
+				<div class="inner">
+					<div class="popup_qa">
+						<h2>
+							1:5,000 이상의 축척에서만<br>분석이 가능합니다.
+						</h2>
+						<div class="qa_btn">
+							<a href="javascript:;" class="popup_submit popup_close"
+								onclick="ghzoomMapToClosePopup(0, 'ghpopup_possible'); return false;">확인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup_spot popup" id="popup_spot">
+				<div class="inner">
+					<span>지점을 선택해주세요.</span> <a href="javascript:;"
+						onclick="btn_close('#popup_spot'); return false;">확인</a>
+				</div>
+			</div>
+			<div class="popup_opinion popup" id="popup_opinion">
+				<div class="inner">
+					<div class="popup_top">
+						<h2>의견 보내기</h2>
+						<a href="javascript:;" class="btn_close"
+							onclick="btn_close('#popup_opinion'); return false;">팝업닫기</a>
+					</div>
+					<div class="popup_cnt">
+						<div class="popup_info">
+							<p>선택한 지역에 대한 다양한 의견을 보내주시면</p>
+							<p>정확한 서비스 제공에 반영하도록 노력하겠습니다.</p>
+						</div>
+						<div class="popup_privacy">
+							<div class="privacy_tab">
+								<ul>
+									<li class="on">이용약관</li>
+									<li>개인정보처리방침</li>
+								</ul>
+							</div>
+							<div class="privacy_cnt_wrap">
+								<div class="privacy_cnt on">
+									<div class="privacy_info">
+										국토환경성평가지도 시스템 이용약관<br> <br> 제 1 장 총칙<br> 제 1 조
+										(목적)<br> 본 약관은 국토환경성평가지도 시스템에서 제공하는 의견보내기 서비스(이하 "서비스")의
+										이용조건 및 절차, 이용자와 국토환경성평가지도 시스템의 권리, 의무, 책임사항과 기타 필요한 사항을 규정함을
+										목적으로 합니다.<br> <br> 제 2 조 (약관의 효력과 변경)<br> 1.
+										국토환경성평가지도 시스템은 귀하가 본 약관 내용에 동의하는 경우, 국토환경성평가지도 시스템의 서비스 제공 행위
+										및 귀하의 서비스 사용 행위에 본 약관이 우선적으로 적용됩니다.<br> 2. 국토환경성평가지도 시스템은
+										본 약관을 사전 고지 없이 변경할 수 있고, 변경된 약관은 국토환경성평가지도 시스템 내에 공지하거나
+										e-mail을 통해 이용자에게 공지하며, 공지와 동시에 그 효력이 발생됩니다. 이용자가 변경된 약관에 동의하지
+										않는 경우, 이용자는 한국환경연구원 국토환경정보센터에 개인정보 삭제를 요청 할 수 있으며 계속 사용의
+										경우는 약관 변경에 대한 동의로 간주됩니다.<br> <br> 제 3 조 (약관 외 준칙)<br>
+										이 약관에 명시되지 않은 사항은 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 전기통신기본법, 전기통신사업법
+										등 관계법령과 개인정보처리방침, 행정자치부가 별도로 정한 지침 등의 규정에 따릅니다.<br> <br>
+										제 4 조 (용어의 정의)<br> 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+										<br> 1. 이용자 : 국토환경성평가지도 시스템에 개인 정보를 제공하여 의견보내기 작성을 한 자로서
+										국토환경성평가지도 시스템에서 제공하는 서비스를 계속해서 이용할 수 있는 자. <br> 2. 성함 :
+										이용자의 식별과 서비스 이용을 위하여 이용자가 설정한 이름.<br> 3. 이메일 : 이용자와 성함이
+										일치하는지를 확인하고 통신상의 자신의 비밀보호를 위하여 이용자 자신이 기입한 메일주소.<br> 4.
+										등록 : 국토환경성평가지도 시스템에서 제공하는 작성 양식에 해당 정보를 기입하고, 본 약관에 동의하여 서비스
+										이용계약을 완료시키는 행위. <br> <br> 제 2 장 서비스 제공 및 이용<br>
+										제 5 조 (이용계약의 성립)<br> 작성자는 온라인으로 국토환경성평가지도 시스템에서 제공하는
+										의견보내기 작성 양식에 따라 작성정보(개인정보)를 기입한 후 이 약관에 동의한다는 의사 표시를 함으로써
+										의견보내기을 작성합니다. 국토환경성평가지도 시스템은 이러한 작성에 있어, 전자우편주소를 통해 본인인증을 요청한
+										후 작성자가 본인인증을 한 경우에 한하여 의견보내기 작성이 가능합니다. <br> <br> 제
+										6 조 (개인정보 사용에 대한 동의)<br> 1. 의견보내기 작성 시 입력한 개인정보는 개인정보
+										보호법에 의해 보호됩니다. <br> 2. 국토환경성평가지도 시스템은 서비스 제공과 관련해서 수집된
+										이용자의 신상정보를 본인의 승낙 없이 제3자에게 누설, 배포하지 않습니다. 단, 다른 법률의 규정에 의해
+										국가기관의 요구가 있는 경우, 범죄에 대한 수사상의 목적이 있거나 정보통신윤리위원회의 요청이 있는 경우 또는
+										기타 관계법령에서 정한 절차에 따른 요청이 있는 경우, 귀하가 국토환경성평가지도 시스템에 제공한 개인정보를
+										스스로 공개한 경우에는 그러하지 않습니다. <br> 3. 본 약관에 따라 의견보내기를 작성 하는 것은,
+										국토환경성평가지도 시스템 의견보내기 작성 시 기재한 개인정보를 수집, 이용하는 것에 동의하는 것으로 간주됩니다.
+										<br> <br> 제 7 조 (사용자의 정보 보안)<br> 1. 작성자가
+										국토환경성평가지도 시스템 의견보내기 작성 절차를 완료하는 순간부터 귀하는 입력한 정보의 비밀을 유지할 책임이
+										있으며, 이용자의 성함과 이메일을 사용하여 발생하는 모든 결과에 대한 책임은 이용자 본인에게 있습니다. <br>
+										2. 성함과 이메일에 관한 모든 관리의 책임은 이용자에게 있으며, 이용자의 성함나 이메일이 부정하게 사용되었다는
+										사실을 발견한 경우에는 즉시 국토환경성평가지도 시스템에 신고하여야 합니다. 신고를 하지 않음으로 인한 모든
+										책임은 이용자 본인에게 있습니다. <br> 3. 이용자는 국토환경성평가지도 시스템 서비스의 사용 종료
+										시 마다 정확히 접속을 종료해야 하며, 정확히 종료하지 아니함으로써 제3자가 귀하에 관한 정보를 이용하게 되는
+										등의 결과로 인해 발생하는 손해 및 손실에 대하여 국토환경성평가지도 시스템은 책임을 부담하지 아니합니다.<br>
+										<br> 제 8 조 (서비스의 중지)<br> 1. 국토환경성평가지도 시스템은 이용자가 본
+										약관의 내용에 위배되는 행동을 한 경우, 임의로 서비스 사용을 제한 및 중지할 수 있습니다.<br> <br>
+										제 9 조 (서비스의 변경 및 해지)<br> 1. 국토환경성평가지도 시스템은 귀하가 서비스를 이용하여
+										기대하는 손익이나 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을 지지 않으며, 이용자가 본 서비스에
+										게재한 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 관하여는 책임을 지지 않습니다. <br> 2.
+										국토환경성평가지도 시스템은 서비스 이용과 관련하여 작성자에게 발생한 손해 중 작성자의 고의, 과실에 의한 손해에
+										대하여 책임을 부담하지 아니합니다.<br> <br> 제 3 장 의무 및 책임<br>
+										제 10 조 (국토환경성평가지도 시스템의 의무)<br> 1. 국토환경성평가지도 시스템은 이용자의 개인
+										신상 정보를 전자정부법에 따른 업무처리상의 목적이나 본인의 승낙 없이 타인에게 누설, 배포하지 않습니다. 다만,
+										전기통신관련법령 등 관계법령에 의하여 관계 국가기관 등의 요구가 있는 경우에는 그러하지 아니합니다.<br>
+										<br> 제 11 조 (작성자 의무)<br> 1. 의견보내기 작성 시에 요구되는 정보는
+										정확하게 기입하여야 하며 자신의 성함 및 이메일을 제3자에게 이용하게 해서는 안 됩니다. <br> 2.
+										이용자은 국토환경성평가지도 시스템의 사전 승낙 없이 서비스를 이용하여 어떠한 영리행위도 할 수 없습니다.<br>
+										<br> 제 4 장 기타<br> 제 12 조 (손해배상)<br> 국토환경성평가지도
+										시스템은 서비스와 관련하여 이용자에게 어떠한 손해가 발생하더라도 국토환경성평가지도 시스템이 고의로 행한
+										범죄행위를 제외하고 이에 대하여 책임을 부담하지 아니합니다.<br> 제 13 조 (면책조항)<br>
+										1. 국토환경성평가지도 시스템은 이용자나 제3자에 의해 표출된 의견을 승인하거나 반대하거나 수정하지 않습니다.
+										국토환경성평가지도 시스템은 어떠한 경우라도 이용자가 서비스에 담긴 정보에 의존해 얻은 이득이나 입은 손해에 대해
+										책임이 없습니다. <br> 2. 국토환경성평가지도 시스템은 이용자 간 또는 이용자와 제3자간에 서비스를
+										매개로 하여 물품거래 혹은 금전적 거래 등과 관련하여 어떠한 책임도 부담하지 아니하고, 이용자가 서비스의 이용과
+										관련하여 기대하는 이익에 관하여 책임을 부담하지 않습니다.<br> <br> 제 14 조
+										(재판관할)<br> 국토환경성평가지도 시스템과 이용자 간에 발생한 서비스 이용에 관한 분쟁에 대하여는
+										대한민국 법을 적용하며, 본 분쟁으로 인한 소는 대한민국의 법원에 제기합니다.<br> <br>
+										부 칙<br> (시행일) 본 약관은 2017년 1월 1일부터 시행됩니다.<br>
+									</div>
+									<div class="privacy_agree">
+										<input type="radio" name="tagree" id="tAgree"> <label
+											for="tAgree">동의합니다.</label> <input type="radio" name="tagree"
+											id="tDisagree"> <label for="tDisagree">동의하지
+											않습니다.</label>
+									</div>
+								</div>
+								<div class="privacy_cnt">
+									<div class="privacy_info">
+										개인정보 수집 및 이용에 대한 안내<br> <br> 한국환경연구원(이하 “KEI”)은
+										개인정보보호법 등 관련법령에 의거하여, 개인정보를 수집 · 이용함에 있어서 정보 주체로 부터의 이용 동의 여부를
+										사전에 고지하고 있습니다. 정보주체가 되는 이용자께서는 아래 내용을 확인하시고, 동의 여부를 선택하여 주시기
+										바랍니다.<br> <br> 1. 개인정보의 수집 및 이용목적<br> - KEI는
+										의견보내기 서비스를 위한 목적으로 개인정보를 처리합니다.<br> <br> 2. 수집하는
+										개인정보의 항목<br> - 개인정보 수집 항목(필수) : 성함, 이메일 주소<br> <br>
+										3. 개인정보의 보유 및 이용기간<br> 1) 보유근거 : 정보주체의 동의<br> 2)
+										수집경로 : 온라인 접수 (e-mail발송)<br> 3) 보유기간 : 해지 작성시까지<br>
+										<br> 4. 동의를 거부할 권리 및 동의 거부에 따른 안내<br> - 이용자는 본 안내에
+										따른 개인정보 수집에 대하여 거부할 권리가 있습니다.<br> - 본 개인정보 수집에 대하여 거부하시는
+										경우, 의견보내기 서비스 작성이 이루어지지 않음에 따라 연구원의 의견보내기 관련 서비스를 이용하실 수 없습니다.<br>
+										<br> 5. 개인정보의 제3자 제공에 관한 사항<br> - 수집된 개인정보는 이용자의 동의
+										없이 제3자에게 제공하지 않습니다.<br>
+									</div>
+									<div class="privacy_agree">
+										<input type="radio" name="pagree" id="pAgree"> <label
+											for="pAgree">동의합니다.</label> <input type="radio" name="pagree"
+											id="pDisagree"> <label for="pDisagree">동의하지
+											않습니다.</label>
+									</div>
+								</div>
+							</div>
+							<div class="privacy_all">
+								<input type="checkbox" id="allAgree" class="form_input_check">
+								<label for="allAgree" class="form_check_txt">위 내용을 모두
+									확인하고 동의합니다.(전체동의)</label>
+							</div>
+						</div>
+						<form id="opinionFrm" name="opinionFrm">
+							<input type="hidden" id="termsOfServiceYn" name="termsOfServiceYn"> 
+							<input type="hidden" id="pinfoYn" name="pinfoYn"> 
+							<input type="hidden" id="x" name="x"> 
+							<input type="hidden" id="y" name="y">
+							<input type="hidden" id="locations" name="locations">
+							<table>
+								<caption>의견보내기
+								<span>선택한 지역에 대한 다양한 의견을 보낼 수 있습니다.</span>
+								<colgroup>
+									<col style="width: 110px"> 
+									<col style="width: 357px">
+								</colgroup>
+								<tbody>
+									<tr>
+									<th scope="col">이름</th>
+									<td>
+									<label for="writer" class="sr-only">이름</label>
+									<input type="text" placeholder="이름을 입력하세요." id="writer" name="writer" title="이름"></td>
+								</tr>
+								<tr>
+									<th scope="col">이메일</th>									
+									<td>
+									<label for="email" class="sr-only">이메일</label>
+									<input type="email" placeholder="이메일을 입력하세요." id="email" name="email" title="이메일"></td>
+								</tr>
+								<tr>
+									<th scope="col">제목</th>
+									<td>
+									<label for="title" class="sr-only">제목</label>
+									<input type="text" placeholder="제목을 입력하세요." id="title" name="title" title="제목"></td>
+								</tr>
+								<tr style="display: none;">
+									<th scope="col">평가등급도</th>									
+									<td>
+									<label for="data_type" class="sr-only">평가등급선택</label>
+									<select name="data_type" id="data_type" title="평가등급선택">
+										<option value="DT002">국토환경성평가지도 1:5,000</option>
+										<!-- 축척선택 삭제 22.11.03 
+										<option value="DT001">국토환경성평가지도 1:25,000</option>
+										 -->
+										 	
+											<!-- 
+											<option value="DT001">국토환경성평가지도 1:25,000</option>
+												<option value="DT002">국토환경성평가지도 1:5,000</option>
+												
+											 -->
+									</select></td>
+								</tr>
+								<tr>
+									<th scope="col">직업</th>
+									<td>
+										<label for="job" class="sr-only">직업선택</label>
+										<select name="job" id="job" title="직업선택">
+											<option value="JO001">공무원</option>
+											<option value="JO002">연구원</option>
+											<option value="JO003">일반회사원</option>
+											<option value="JO004">시민단체</option>
+											<option value="JO005">학생</option>
+											<option value="JO006">기타</option>
+											</select></td>
+								</tr>
+								<tr>
+                           <th scope="col">위치</th>
+                           <!-- <td>
+                              <label for="search-juso" class="sr-only">지번 검색</label>
+                              <input type="text" placeholder="지번을 검색해주세요." id="search-juso" title="지번 검색" onkeypress="javascript:if(event.keyCode==13) {searchJusoCustom(1)}">
+                              <a href="javascript:;" onclick="searchJusoCustom(1); gtag('event', '의견보내기주소검색', {'event_category':'의견보내기주소검색', 'event_label':'의견보내기주소검색'});" class="srch_btn" title="주소검색">
+                                 검색하기
+                              </a>
+                              <div class="srch_result_div">
+                                 <div class="result_scroll">4줄 이상 스크롤 됨
+                                    2001 : 검색결과 카운팅 : 시작
+                                    <p class="srch_result_txt">
+                                       검색결과 총 <span>129447</span>건
+                                    </p>
+                                    //2001 : 검색결과 카운팅 : 끝
+                                     2001 : 검색결과 영역 : 시작
+                                    <div class="srch_result_list">
+                                       <ul>
+                                          2001 : 검색결과 추가 : 시작
+                                       </ul>
+                                    </div>
+                                    //2001 : 검색결과 영역 : 끝
+                                 </div>
+                              </div>
+                              <div id="selected-location-wrapper" style="max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; background: #f9f9f9;">
+                              <h4 style="margin-bottom: 10px;">선택 위치 목록</h4>
+                              <div id="selected-location-list" class="selected-location-wrap">
+                                 선택 위치 추가 영역
+                              </div>
+                           </div>
+                           </td> -->
+                           <td class="pd0">
+                    <div class="srch-input m10">
+                      <label for="search-juso" class="sr-only">제목</label>
+                      <input type="text" placeholder="지번을 검색해주세요." id="search-juso" name="search-juso" title="지번 검색" onkeydown="if(event.key === 'Enter'){searchJusoCustom(1); openBox(getBox($(this)));}" />
+                      <a href="javascript:" onclick="searchJusoCustom(1);"class="srch-ico" title="지번 검색 버튼">검색</a>
+                      <!-- 결과 -->
+                      <div class="srch-result-div-popup">
+                        <div class="result-box-popup"><!-- 검색결과 -->
+                          <p>검색결과 총 <span>129447</span>건</p>
+                        </div>
+                        <div class="list-result-box-popup"><!-- 검색리스트 -->
+                          <ul>
+                            <!-- 리스트 -->
+                            
+                          </ul>
+                          <ul style="display:none;"><!-- 검색결과 없음 -->
+                            <li>
+                              <p>검색결과가 없습니다.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="list-box-popup">
+                        <!-- list 추가되는 리스트 -->
+                        
+
+                        
+
+                        
+                      </div>
+                    </div>
+                  </td>
+                           
+                        </tr>
+								<tr>
+									<th scope="col">내용</th>
+									<td>
+									<label for="content" class="sr-only">내용</label>
+									<textarea name="content" id="content" title="내용" cols="30" rows="10" placeholder="내용을 입력하세요."></textarea></td>
+								</tr>
+								</tbody>
+							</table>
+							<div class="qa_btn">
+								<a href="javascript:;" class="popup_submit">의견보내기</a> <a
+									href="javascript:;"
+									onclick="btn_close('#popup_opinion'); return false;"
+									class="popup_close">닫기</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="popup_spot popup" id="popup_complete">
+				<div class="inner">
+					<span>의견 보내기가 완료되었습니다.</span> <a href="javascript:;"
+						onclick="btn_close('#popup_complete'); return false;">확인</a>
+				</div>
+			</div>
+
+			<div id="url_popup_poll" class="popup url_popup_poll">
+				<div class="inner">
+					<div class="popup_top">
+						<h5>공유 URL</h5>
+						<a href="#" class="btn_close"
+							onclick="btn_close('#url_popup_poll'); return false;">닫기</a>
+					</div>
+					<div class="popup_cnt">
+						<div class="poll_form">
+							<div class="point-icon-hh6">
+								<label for="input_url" class="sr-only">공유 URL</label>
+								<input style="width:600px;" type="text" id="input_url" title="input_url" name="input_url" class="form-control">
+							</div>
+						</div>
+						<a href="javascript:url_copy();" class="url_copy">복사</a>
+					</div>
+				</div>
+			</div>
+			<!--도엽다운로드  form[s]-->
+			<form id="doyupform" name="doyupform" method="post">
+				<input type="hidden" id="doyup_code" class="doyup_code" name="doyup_code">
+				<input type="hidden" id="downdata" class="downdata" name="downdata">
+				<input type="hidden" id="doyupName" class="doyupName" name="doyupName">
+				<!-- 설문조사 form 2025년 이전[s] -->	
+				<div id="doyup_popup_poll" class="popup popup_poll" tabindex="0">
+					<div class="inner" >
+						<div class="popup_top">
+							<h5>사용자 설문조사</h5>
+							<a href="#" class="btn_close" onclick="popup_close('#doyup_popup_poll'); return false;">닫기</a>
+						</div>
+						<div class="popup_cnt">
+							<div class="poll_form">
+								<h6>기본정보</h6>
+								<table>
+									<!-- WA : 59page -->
+									<caption>
+										기본정보
+										<span>연령대, 성별, 직업 등 사용자 기본 정보를 선택</span>	
+									</caption>
+									<colgroup>
+										<col style="width: 111px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">연령대</th>
+											<td>
+												<input type="radio" id="year_1" name="year" value="YR001"><label for="year_1">10대</label>
+												<input type="radio" id="year_2" name="year" value="YR002"><label for="year_2">20대</label>
+												<input type="radio" id="year_3" name="year" value="YR003"><label for="year_3">30대</label>
+												<input type="radio" id="year_4" name="year" value="YR004"><label for="year_4">40대</label>
+												<input type="radio" id="year_5" name="year" value="YR005"><label for="year_5">50대</label>
+												<input type="radio" id="year_6" name="year" value="YR007"><label for="year_6">60대 이상</label>
+												</td>
+										</tr>
+										<tr>
+											<th scope="row">성별</th>
+											<td>
+												<input type="radio" id="sex_1" name="sex" value="SE001"><label for="sex_1">남</label>
+												<input type="radio" id="sex_2" name="sex" value="SE002"><label for="sex_2">여</label>
+												</td>
+										</tr>
+										<tr>
+											<th scope="row">직업</th>
+											<td>
+												<input type="radio" id="job_1" name="job" value="JO001"><label for="job_1">공무원</label>
+												<input type="radio" id="job_2" name="job" value="JO002"><label for="job_2">연구원</label>
+												<input type="radio" id="job_3" name="job" value="JO003"><label for="job_3">일반회사원</label>
+												<input type="radio" id="job_4" name="job" value="JO004"><label for="job_4">시민단체</label>
+												<input type="radio" id="job_5" name="job" value="JO005"><label for="job_5">학생</label>
+												<input type="radio" id="job_6" name="job" value="JO006"><label for="job_6">기타</label>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="poll_form">
+								<h6>활용정보</h6>
+								<table>
+									<caption>
+										활용정보
+										<span>자료 사용목적을 선택</span>	
+									</caption>
+									<colgroup>
+										<col style="width: 111px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">자료사용<br>목적</th>
+											<td>
+												<input type="radio" id="usepurpose_1" name="usepurpose" value="SO001"><label for="usepurpose_1">사전환경성검토</label>
+												<input type="radio" id="usepurpose_2" name="usepurpose" value="SO002"><label for="usepurpose_2">환경영향평가</label>
+												<input type="radio" id="usepurpose_3" name="usepurpose" value="SO003"><label for="usepurpose_3">환경정책</label>
+												<input type="radio" id="usepurpose_4" name="usepurpose" value="SO004"><label for="usepurpose_4">도시계획</label>
+												<input type="radio" id="usepurpose_5" name="usepurpose" value="SO005"><label for="usepurpose_5">학술연구</label>
+												<input type="radio" id="usepurpose_6" name="usepurpose" value="SO006"><label for="usepurpose_6">홍보자료</label>
+												<input type="radio" id="usepurpose_7" name="usepurpose" value="SO007"><label for="usepurpose_7">기초환경자료수집</label>
+												<input type="radio" id="usepurpose_8" name="usepurpose" value="SO008"><label for="usepurpose_8">기타</label>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<a href="javascript:doyupDownload();" class="btn_down last_el">다운로드</a>
+						</div>
+					</div>
+				</div>
+				<!-- 설문조사 form 2025년 이전[e] -->
+				<!-- 설문조사 form 2025년 이후[s] -->
+				<div id="doyup25_popup_poll" class="popup popup_poll" tabindex="0">
+					<div class="inner" style="height: 628px;">
+						<div class="popup_top">
+							<h5>사용자 설문조사</h5>
+							<a href="#" class="btn_close" onclick="popup_close('#doyup25_popup_poll'); return false;">닫기</a>
+						</div>
+						<div class="popup_cnt">
+							<div class="poll_form">
+								<h6>기본정보</h6>
+								<table>
+									<!-- WA : 59page -->
+									<caption>
+										기본정보
+										<span>연령대, 성별, 활용기관 형태 등 사용자 기본 정보를 선택</span>	
+									</caption>
+									<colgroup>
+										<col style="width: 111px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">연령대</th>
+											<td>
+												<input type="radio" id="year25_1" name="year" value="YR001"><label for="year25_1">10대</label>
+												<input type="radio" id="year25_2" name="year" value="YR002"><label for="year25_2">20대</label>
+												<input type="radio" id="year25_3" name="year" value="YR003"><label for="year25_3">30대</label>
+												<input type="radio" id="year25_4" name="year" value="YR004"><label for="year25_4">40대</label>
+												<input type="radio" id="year25_5" name="year" value="YR005"><label for="year25_5">50대</label>
+												<input type="radio" id="year25_6" name="year" value="YR007"><label for="year25_6">60대 이상</label>
+												</td>
+										</tr>
+										<tr>
+											<th scope="row">성별</th>
+											<td>
+												<input type="radio" id="sex25_1" name="sex" value="SE001"><label for="sex25_1">남</label>
+												<input type="radio" id="sex25_2" name="sex" value="SE002"><label for="sex25_2">여</label>
+												</td>
+										</tr>
+										<tr>
+											<th scope="row">활용기관 형태</th>
+											<td>
+												<input type="radio" id="job25_1" name="institutioncd" value="FF001"><label for="job25_1">중앙정부</label>
+												<input type="radio" id="job25_2" name="institutioncd" value="FF002"><label for="job25_2">지방정부</label>
+												<input type="radio" id="job25_3" name="institutioncd" value="FF003"><label for="job25_3">연구기관</label>
+												<input type="radio" id="job25_4" name="institutioncd" value="FF004"><label for="job25_4">학계</label>
+												<input type="radio" id="job25_5" name="institutioncd" value="FF005"><label for="job25_5">환경영향평가업체</label>
+												<input type="radio" id="job25_6" name="institutioncd" value="FF006"><label for="job25_6">토지개발사업체</label>
+												<input type="radio" id="job25_7" name="institutioncd" value="FF007"><label for="job25_7">비영리단체(NGO)</label>
+												<input type="radio" id="job25_8" name="institutioncd" value="SO008"><label for="job25_8">기타</label>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="poll_form">
+								<h6>활용정보</h6>
+								<table>
+									<caption>
+										활용정보
+										<span>자료 활용목적을 선택</span>	
+									</caption>
+									<colgroup>
+										<col style="width: 111px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">활용목적</th>
+											<td>
+												<input type="radio" id="usepurpose25_1" name="purposecd" value="PR002"><label for="usepurpose25_1">환경계획</label>
+												<input type="radio" id="usepurpose25_2" name="purposecd" value="PR003"><label for="usepurpose25_2">토지이용계획</label>
+												<input type="radio" id="usepurpose25_3" name="purposecd" value="PR004"><label for="usepurpose25_3">부동산 개발</label>
+												<input type="radio" id="usepurpose25_4" name="purposecd" value="PR005"><label for="usepurpose25_4">교육자료</label>
+												<input type="radio" id="usepurpose25_5" name="purposecd" value="PR006"><label for="usepurpose25_5">학술연구</label>
+												<input type="radio" id="usepurpose25_6" name="purposecd" value="PR007"><label for="usepurpose25_6">행정업무</label>
+												<input type="radio" id="usepurpose25_7" name="purposecd" value="SO002"><label for="usepurpose25_7">환경영향평가</label>
+												<input type="radio" id="usepurpose25_8" name="purposecd" value="SO008"><label for="usepurpose25_8">기타</label>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<a href="javascript:doyupDownload();" class="btn_down last_el">다운로드</a>
+						</div>
+					</div>
+				</div>
+			<!-- 설문조사 form 2025년 이후[e] -->
+			</form>
+			<!--도엽다운로드  form[e] -->
+			
+			<div class="popup_spot popup" id="popup_zoomCheck">
+				<div class="inner">
+					<span>1:5,000 이상의 축척에서만<br>정보가 표출됩니다</span>
+					<a href="javascript:;" onclick="zoomMapToClosePopup(0, 'popup_zoomCheck'); return false;">확인</a>
+				</div>
+			</div>
+			<!-- 안내문구 닫힘 태그 -->
+			<div class="warnInfoPopup" style="position:absolute; left:484px; bottom:85%; width:990px; z-index:1; background-color:rgba(255,255,255,0.7); padding:11px; border-radius: 7px; border: 1px solid #999;">
+				<span style="color:#f60909; margin-right:15px;">&#183; 본 시스템에서 제공하는 모든 정보 및 분석결과는 실제 현황과 차이가 있으므로 법적효력이 없으며 참고용으로 사용하시고 용도외 사용을 금합니다.</span>
+				<label style="width:25px; top:5px; cursor:pointer;" for="warnInfoPopupAgree">동의함</label>
+				<input style="height:25px; margin-left:5px;" type="checkbox" id='warnInfoPopupAgree' checked>
+			</div>
+
+			<!-- 안내문구 닫힘 태그 -->
+			<div class="BsnsAreaInfoPopup" style="position:absolute; left:450px; bottom:20%; width:520px; z-index:1; background-color:rgba(255,255,255,0.7); padding:15px; display:none;">
+				<span style="margin-right:15px;">&#183; 사업구역의 자세한 정보는 EIAGIS에서 확인하실 수 있습니다.</span>
+				<a style="margin-left:20px; color:#f60909;" href="https://eiagis.eiass.go.kr/main.do" target="_blank">EIAGIS 바로가기</a>
+			</div>
+
+		</div>
+	</div>
+
+	
+	<!-- 메타정보 보기용  form -->
+	<form id="metaFrm" name="metaFrm" method="post">
+		<!--<input type="hidden" id="metaType" name="metaType"/> 현재 보여줄 메타타입 저장(한개, 여러개, 좌/우 여러개) -->
+		<input type="hidden" id="ceckLeft" name="ceckLeft">
+		<!-- 왼쪽 체크된 레이어아이디 저장 -->
+		<input type="hidden" id="ceckRight" name="ceckRight">
+		<!-- 오른쪽 체크된 레이어아이디 저장 -->
+	</form>
+
+	<!-- 분석용  form -->
+	<form id="analysisFrm" name="analysisFrm" method="post">
+		<input type="hidden" id="analCoordinate" name="coordinate">
+		<!-- 좌표정보 -->
+		<input type="hidden" id="analFeatureType" name="featureType">
+		<!-- 지적은 기본폴리곤 -->
+		<input type="hidden" id="analEpsgCd" name="epsgCd">
+		<!-- 지적은 반환좌표계가 3857 -->
+		<input type="hidden" id="analScaleValue" name="scaleValue">
+		<!-- 데이터축척값 -->
+		<input type="hidden" id="analLayerAnalysisGroupCd" name="layerAnalysisGroupCd">
+		<!-- 레이어 그룹코드 -->
+		<input type="hidden" id="analAnalysisType" name="analysisType">
+		<!-- 분석타입 -->
+		<input type="hidden" id="analGhDivision" name="ghDivision">
+		<!-- 경사도 표고 그리기, 지점분석시 파라미터구분값 -->
+		<input type="hidden" id="analAddress" name="address">
+		<!-- 주소 -->
+	</form>
+
+	<!-- 로그저장 frm -->
+	<form id="logFrm" name="logFrm" method="post">
+		<input type="hidden" name="menuType" id="menuType"> 
+		<input type="hidden" name="functionType" id="functionType"> 
+		<input type="hidden" name="dataType" id="dataType"> 
+		<input type="hidden" name="year" id="year">
+		<input type="hidden" name="table" id="table" />
+		<input type="hidden" name="fileName" id="fileName"/>
+	</form>
+
+	<!-- 영향평가 속성조회 frm -->
+	<form id="eiassInfoFrm" name="eiassInfoFrm" method="post">
+		<input type="hidden" name="mgtNo" id="mgtNo"> 
+		<input type="hidden" name="mgtParamNm" id="mgtParamNm"> 
+		<input type="hidden" name="layerName" id="layerName">
+	</form>
+	
+	<!-- url 저장 frm -->
+	<form id="saveUrlFrm" name="saveUrlFrm" method="post">
+		<input type="hidden" name="matchUrl" id="matchUrl">
+		<input type="hidden" name="extent" id="extent">
+		<input type="hidden" name="visibleId" id="visibleId">
+		<input type="hidden" name="zoomLevel" id="zoomLevel">
+		<input type="hidden" name="tempLayer" id="tempLayer">
+		<input type="hidden" name="scaleOp" id="scaleOp">
+		<input type="hidden" name="tempPointLayer" id="tempPointLayer">
+	</form>
+	
+	<!-- url 가져오기 frm -->
+	<form id="urlFrm" name="urlFrm" method="post">
+		<input type="hidden" name="compareUrl" id="compareUrl">
+	</form>
+	
+	<!-- url boolean -->
+	<form id="booleanFrm" name="booleanFrm" method="post">
+		<input type="hidden" name="tfSelect" id="tfSelect">
+	</form>
+	
+	<form id="ecnLocPopup" name="ecnLocPopup" method="post">
+		<input type="hidden" id="ecnLocCoordinate" name="coordinate" >
+		<input type="hidden" id="ecnLocOriginalCoordinate" name="originalCoordinate" >
+		<input type="hidden" id="ecnLocEpsgCd" name="epsgCd" value="EPSG:3857" >
+		<input type="hidden" id="ecnLocLayerGroupCd" name="layerGroupCd" value="LG007" >
+		<input type="hidden" id="ecnLocParentLayerNm" name="ecnLocParentLayerNm">
+		<input type="hidden" id="ecnLocStatusLayerId" name="ecnLocStatusLayerId">
+		<input type="hidden" id="ecnLocLayerLst" name="ecnLocLayerLst[]">
+	</form>
+	
+	<form id="evlvlPopup" name="evlvlPopup" method="post">
+		<input type="hidden" id="evlBusCd" name="evlBusCd" >
+		<input type="hidden" id="evlChkY" name="evlChkY" >
+		<input type="hidden" id="evlChkN" name="evlChkN" >
+		<input type="hidden" id="evlCoordinate" name="evlCoordinate" >
+		<input type="hidden" id="evlOrgCoordinate" name="evlOrgCoordinate">
+		<input type="hidden" id="evlEpsgCd" name="evlEpsgCd" value="EPSG:3857" >
+		<input type="hidden" id="evlOpacityValue" name="opacity" value="0.7">
+	</form>
+
+	<!-- 메뉴관련  form -->
+	<form id="menuFrm" name="menuFrm" method="post">
+		<input type="hidden" name="menuNo" id="menuNo" value="">
+		<input type="hidden" name="upperNo" id="upperNo" value="">
+		<input type="hidden" name="menuUrl" id="menuUrl" value="">
+	</form>
+</body>
+</html>

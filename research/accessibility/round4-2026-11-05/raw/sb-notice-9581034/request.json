@@ -1,0 +1,22 @@
+{
+  "id": "sb-notice-9581034",
+  "url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9581034",
+  "requested_at_utc": "2026-11-05T09:59:21.239809+00:00",
+  "requested_at_kst": "2026-11-05T18:59:21.239815+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://www.sb.go.kr/www/selectBbsNttView.do?key=5927&bbsNo=91&nttNo=9581034",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:59:22 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 206507,
+  "sha256": "681434fc4a41a2aecfe221c00eeefd38e0aec977e63627c0e7e41448a793012f",
+  "response_path": "raw/sb-notice-9581034/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:59:23.224952+00:00"
+}

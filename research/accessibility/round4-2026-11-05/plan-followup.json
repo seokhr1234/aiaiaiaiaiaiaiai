@@ -1,0 +1,54 @@
+[
+  {
+    "id": "seoul-shelter-sheet",
+    "url": "https://data.seoul.go.kr/dataList/sheetView.do?infId=OA-21065&srvType=S"
+  },
+  {
+    "id": "seoul-shelter-api-doc",
+    "url": "https://data.seoul.go.kr/dataList/openApiView.do?infId=OA-21065&srvType=A"
+  },
+  {
+    "id": "sb-notices-search",
+    "url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=6350&searchCnd=all&searchKrwd=%EB%AC%B4%EB%8D%94%EC%9C%84%EC%89%BC%ED%84%B0&pageUnit=50"
+  },
+  {
+    "id": "seoul-terrain-zip1",
+    "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+    "form": {
+      "infId": "OA-22241",
+      "infSeq": "1",
+      "seq": "1"
+    },
+    "timeout": 90
+  },
+  {
+    "id": "seoul-terrain-zip2",
+    "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+    "form": {
+      "infId": "OA-22241",
+      "infSeq": "1",
+      "seq": "2"
+    },
+    "timeout": 90
+  },
+  {
+    "id": "osm-map-0-0",
+    "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.017000,37.577000,127.039000,37.595500",
+    "timeout": 90
+  },
+  {
+    "id": "osm-map-0-1",
+    "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.017000,37.595500,127.039000,37.614000",
+    "timeout": 90
+  },
+  {
+    "id": "osm-map-1-0",
+    "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.039000,37.577000,127.061000,37.595500",
+    "timeout": 90
+  },
+  {
+    "id": "osm-map-1-1",
+    "url": "https://www.openstreetmap.org/api/0.6/map?bbox=127.039000,37.595500,127.061000,37.614000",
+    "timeout": 90
+  }
+]

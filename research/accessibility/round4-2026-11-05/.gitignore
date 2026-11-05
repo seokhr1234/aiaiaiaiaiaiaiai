@@ -1,0 +1,8 @@
+# Large local original downloads remain available in this workspace.
+# Request manifests, hashes, plans and analysis scripts are retained in Git.
+/raw/seoul-terrain-zip1/response.bin
+/raw/seoul-terrain-zip2-get/response.bin
+/raw/osm-map-*-*/response.bin
+/raw/overpass-map-comparable/response.bin
+/analysis/*-selected.geojson
+**/partial.bin

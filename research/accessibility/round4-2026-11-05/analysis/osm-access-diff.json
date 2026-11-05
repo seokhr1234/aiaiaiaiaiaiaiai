@@ -1,0 +1,2547 @@
+[
+  {
+    "type": "node",
+    "id": 292077276,
+    "before_version": 5,
+    "after_version": 5,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2965677400,
+    "before_version": 5,
+    "after_version": 5,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3828636506,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5217286184,
+    "before_version": 4,
+    "after_version": 4,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5217286185,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579127484,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130588,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130595,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130601,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130604,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130607,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130612,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130616,
+    "before_version": 4,
+    "after_version": 4,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130619,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130622,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130630,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130637,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130647,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130653,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130658,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130664,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8570378910,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing:markings": "no",
+      "highway": "crossing",
+      "tactile_paving": "no"
+    },
+    "tags_after": {
+      "crossing:markings": "no",
+      "highway": "crossing",
+      "tactile_paving": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13386290607,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13386290608,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13931554102,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "barrier": "gate"
+    },
+    "tags_after": {
+      "barrier": "gate"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290019,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290087,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290177,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290228,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290237,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290289,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290297,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290303,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290310,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290319,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290324,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290330,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290331,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290340,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290345,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290350,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290357,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290362,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290367,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290373,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290381,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290388,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290406,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290411,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290418,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290425,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290433,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290444,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290449,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290464,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290475,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290484,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290490,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290497,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290504,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290521,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290534,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290569,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465833,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465835,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465914,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465925,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465933,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465940,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465950,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465958,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465967,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465972,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465995,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466005,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466032,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466037,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466048,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466055,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466061,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466068,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466075,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466084,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466091,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466100,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466105,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466111,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466120,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466131,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466136,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466141,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466150,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466161,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466168,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466175,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466180,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466185,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466194,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466203,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466210,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466219,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466229,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466234,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466239,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466246,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466258,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466263,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466273,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466279,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466296,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466306,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466311,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466317,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466322,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466329,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466336,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466343,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466352,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466359,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466366,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466371,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466377,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466384,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466389,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466394,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466399,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466405,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466413,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200466438,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "entrance": "yes"
+    },
+    "tags_after": {
+      "entrance": "yes"
+    }
+  },
+  {
+    "type": "way",
+    "id": 292666320,
+    "before_version": 11,
+    "after_version": 11,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "cycleway": "track",
+      "footway": "crossing",
+      "highway": "footway",
+      "lit": "yes",
+      "name": "정릉천자전거길",
+      "oneway": "no"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "cycleway": "track",
+      "footway": "crossing",
+      "highway": "footway",
+      "lit": "yes",
+      "name": "정릉천자전거길",
+      "oneway": "no"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622897,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622900,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622904,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622905,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622907,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622909,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622911,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622913,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622915,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622917,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622919,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622921,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622923,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622924,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622926,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622928,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622929,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622931,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "way",
+    "id": 810622933,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "footway": "crossing",
+      "highway": "footway"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5217286184,
+    "before_version": 4,
+    "after_version": 4,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130630,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130637,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130647,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130653,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130658,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130664,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14196290237,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2965677400,
+    "before_version": 5,
+    "after_version": 5,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3828636506,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5217286185,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "bicycle": "yes",
+      "crossing": "marked",
+      "crossing:markings": "zebra",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579127484,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130588,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130595,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130601,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130604,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130607,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130612,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130616,
+    "before_version": 4,
+    "after_version": 4,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130619,
+    "before_version": 3,
+    "after_version": 3,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7579130622,
+    "before_version": 2,
+    "after_version": 2,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14200465833,
+    "before_version": 1,
+    "after_version": 1,
+    "status": "unchanged_version_and_tags",
+    "tags_before": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    },
+    "tags_after": {
+      "crossing": "marked",
+      "crossing:markings": "yes",
+      "highway": "crossing"
+    }
+  }
+]

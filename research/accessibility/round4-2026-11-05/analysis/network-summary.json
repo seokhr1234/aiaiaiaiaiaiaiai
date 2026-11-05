@@ -1,0 +1,12 @@
+{
+  "attempts": 40,
+  "http_status_counts": {
+    "200": 25,
+    "503": 12,
+    "400": 1,
+    "None": 2
+  },
+  "note": "Includes HTTP error bodies and transport failures. HTTP 200 is not automatically dataset acquisition.",
+  "first_request_kst": "2026-11-05T18:55:55.617669+09:00",
+  "last_request_kst": "2026-11-05T19:00:34.329184+09:00"
+}

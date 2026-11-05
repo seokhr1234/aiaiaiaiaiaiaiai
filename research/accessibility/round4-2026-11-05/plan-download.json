@@ -1,0 +1,55 @@
+[
+  {
+    "id": "seoul-shelter-csv",
+    "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+    "form": {
+      "srvType": "S",
+      "infId": "OA-21065",
+      "serviceKind": "1",
+      "pageNo": "1",
+      "ssUserId": "SAMPLE_VIEW",
+      "strWhere": "",
+      "strOrderby": "",
+      "txtFilter": ""
+    },
+    "timeout": 90
+  },
+  {
+    "id": "seoul-shelter-sample",
+    "url": "https://openapi.seoul.go.kr:8088/sample/json/TbGtnHwcwP/1/5/"
+  },
+  {
+    "id": "seoul-terrain-zip2-retry",
+    "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+    "form": {
+      "infId": "OA-22241",
+      "infSeq": "1",
+      "seq": "2"
+    },
+    "timeout": 90
+  },
+  {
+    "id": "sb-shelter-search2",
+    "url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=5927&searchCnd=SJ&searchKrwd=%EB%AC%B4%EB%8D%94%EC%9C%84%EC%89%BC%ED%84%B0&pageUnit=50&searchCtgry=%EC%95%88%EC%A0%84&pageIndex=1"
+  },
+  {
+    "id": "ngii-dem-json",
+    "url": "https://www.data.go.kr/catalog/15059920/fileData.json"
+  },
+  {
+    "id": "ngii-inventory-json",
+    "url": "https://www.data.go.kr/catalog/15067637/fileData.json"
+  },
+  {
+    "id": "ngii-digital-map",
+    "url": "https://map.ngii.go.kr/ms/map/NlipMap.do"
+  },
+  {
+    "id": "neins-terrain",
+    "url": "https://webgis.neins.go.kr/map.do"
+  },
+  {
+    "id": "ngii-dem-notice",
+    "url": "https://www.ngii.go.kr/nlsc/service/nsoperation2/board?id=102815"
+  }
+]

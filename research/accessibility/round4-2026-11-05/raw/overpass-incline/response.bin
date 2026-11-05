@@ -1,0 +1,807 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-05T09:55:17Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 379555973,
+  "timestamp": "2020-04-20T08:05:57Z",
+  "version": 3,
+  "changeset": 83806082,
+  "user": "octel",
+  "uid": 238290,
+  "bounds": {
+    "minlat": 37.5813052,
+    "minlon": 127.0326776,
+    "maxlat": 37.5813637,
+    "maxlon": 127.0326915
+  },
+  "nodes": [
+    3828659266,
+    3828659152
+  ],
+  "geometry": [
+    { "lat": 37.5813637, "lon": 127.0326776 },
+    { "lat": 37.5813052, "lon": 127.0326915 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "up",
+    "name": "왕산로19바길",
+    "name:en": "Wangsan-ro 19ba-gil",
+    "name:ko": "왕산로19바길",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 379555990,
+  "timestamp": "2016-10-17T19:30:59Z",
+  "version": 5,
+  "changeset": 42966952,
+  "user": "Tungmar",
+  "uid": 427807,
+  "bounds": {
+    "minlat": 37.5823900,
+    "minlon": 127.0314264,
+    "maxlat": 37.5827062,
+    "maxlon": 127.0314531
+  },
+  "nodes": [
+    3828659318,
+    3964517826
+  ],
+  "geometry": [
+    { "lat": 37.5823900, "lon": 127.0314531 },
+    { "lat": 37.5827062, "lon": 127.0314264 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "incline": "down"
+  }
+},
+{
+  "type": "way",
+  "id": 393240562,
+  "timestamp": "2016-01-24T16:38:38Z",
+  "version": 1,
+  "changeset": 36779285,
+  "user": "munh",
+  "uid": 3541204,
+  "bounds": {
+    "minlat": 37.5931197,
+    "minlon": 127.0262098,
+    "maxlat": 37.5931754,
+    "maxlon": 127.0262818
+  },
+  "nodes": [
+    3964481088,
+    3964542062
+  ],
+  "geometry": [
+    { "lat": 37.5931754, "lon": 127.0262098 },
+    { "lat": 37.5931197, "lon": 127.0262818 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "down",
+    "source": "local knowledge"
+  }
+},
+{
+  "type": "way",
+  "id": 394282837,
+  "timestamp": "2016-01-28T06:30:33Z",
+  "version": 1,
+  "changeset": 36850852,
+  "user": "munh",
+  "uid": 3541204,
+  "bounds": {
+    "minlat": 37.5820354,
+    "minlon": 127.0337854,
+    "maxlat": 37.5821673,
+    "maxlon": 127.0338924
+  },
+  "nodes": [
+    3828659301,
+    3828659306
+  ],
+  "geometry": [
+    { "lat": 37.5820354, "lon": 127.0338924 },
+    { "lat": 37.5821673, "lon": 127.0337854 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "up",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 394374374,
+  "timestamp": "2016-01-28T14:38:03Z",
+  "version": 1,
+  "changeset": 36858183,
+  "user": "munh",
+  "uid": 3541204,
+  "bounds": {
+    "minlat": 37.5849189,
+    "minlon": 127.0280355,
+    "maxlat": 37.5850586,
+    "maxlon": 127.0283547
+  },
+  "nodes": [
+    3959364846,
+    3959366167
+  ],
+  "geometry": [
+    { "lat": 37.5850586, "lon": 127.0283547 },
+    { "lat": 37.5849189, "lon": 127.0280355 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "down",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 394374377,
+  "timestamp": "2016-01-28T14:38:04Z",
+  "version": 1,
+  "changeset": 36858183,
+  "user": "munh",
+  "uid": 3541204,
+  "bounds": {
+    "minlat": 37.5844617,
+    "minlon": 127.0269440,
+    "maxlat": 37.5845656,
+    "maxlon": 127.0270213
+  },
+  "nodes": [
+    3973884639,
+    3973884640
+  ],
+  "geometry": [
+    { "lat": 37.5844617, "lon": 127.0270213 },
+    { "lat": 37.5845656, "lon": 127.0269440 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "up",
+    "source": "Bing, survey"
+  }
+},
+{
+  "type": "way",
+  "id": 394374385,
+  "timestamp": "2020-05-19T05:35:38Z",
+  "version": 3,
+  "changeset": 85416130,
+  "user": "introducingloona",
+  "uid": 10956114,
+  "bounds": {
+    "minlat": 37.5843804,
+    "minlon": 127.0266515,
+    "maxlat": 37.5845178,
+    "maxlon": 127.0267461
+  },
+  "nodes": [
+    3973889160,
+    7536125382,
+    4627801154
+  ],
+  "geometry": [
+    { "lat": 37.5843804, "lon": 127.0267461 },
+    { "lat": 37.5844799, "lon": 127.0266776 },
+    { "lat": 37.5845178, "lon": 127.0266515 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "down",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 394382776,
+  "timestamp": "2020-09-10T01:18:15Z",
+  "version": 4,
+  "changeset": 90669557,
+  "user": "introducingloona",
+  "uid": 10956114,
+  "bounds": {
+    "minlat": 37.5870036,
+    "minlon": 127.0320904,
+    "maxlat": 37.5870440,
+    "maxlon": 127.0321607
+  },
+  "nodes": [
+    3973981259,
+    7891595839
+  ],
+  "geometry": [
+    { "lat": 37.5870440, "lon": 127.0320904 },
+    { "lat": 37.5870036, "lon": 127.0321607 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "up",
+    "lit": "no",
+    "source": "Bing, survey"
+  }
+},
+{
+  "type": "way",
+  "id": 394382780,
+  "timestamp": "2016-01-28T15:26:02Z",
+  "version": 1,
+  "changeset": 36859134,
+  "user": "munh",
+  "uid": 3541204,
+  "bounds": {
+    "minlat": 37.5873373,
+    "minlon": 127.0306909,
+    "maxlat": 37.5875124,
+    "maxlon": 127.0309780
+  },
+  "nodes": [
+    3959316764,
+    3392142318
+  ],
+  "geometry": [
+    { "lat": 37.5873373, "lon": 127.0309780 },
+    { "lat": 37.5875124, "lon": 127.0306909 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "up",
+    "source": "bing, local knowledge",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 468730708,
+  "timestamp": "2019-06-29T21:33:35Z",
+  "version": 3,
+  "changeset": 71744379,
+  "user": "octel",
+  "uid": 238290,
+  "bounds": {
+    "minlat": 37.5895870,
+    "minlon": 127.0273206,
+    "maxlat": 37.5898513,
+    "maxlon": 127.0274612
+  },
+  "nodes": [
+    4456975004,
+    4632050715,
+    4632050716,
+    4632050717
+  ],
+  "geometry": [
+    { "lat": 37.5895870, "lon": 127.0274612 },
+    { "lat": 37.5895956, "lon": 127.0274167 },
+    { "lat": 37.5897498, "lon": 127.0273360 },
+    { "lat": 37.5898513, "lon": 127.0273206 }
+  ],
+  "tags": {
+    "access": "no",
+    "bicycle": "no",
+    "foot": "yes",
+    "footway": "sidewalk",
+    "highway": "footway",
+    "incline": "up",
+    "name": "개운사2길",
+    "name:en": "Gaeunsa 2-gil",
+    "name:ko": "개운사2길",
+    "surface": "concrete",
+    "tracktype": "grade1",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 471697553,
+  "timestamp": "2020-03-10T08:58:37Z",
+  "version": 2,
+  "changeset": 81999609,
+  "user": "octel",
+  "uid": 238290,
+  "bounds": {
+    "minlat": 37.5966605,
+    "minlon": 127.0170842,
+    "maxlat": 37.5968819,
+    "maxlon": 127.0171555
+  },
+  "nodes": [
+    3828480735,
+    4167931779
+  ],
+  "geometry": [
+    { "lat": 37.5966605, "lon": 127.0171555 },
+    { "lat": 37.5968819, "lon": 127.0170842 }
+  ],
+  "tags": {
+    "highway": "steps",
+    "incline": "down",
+    "name": "아리랑로4가길",
+    "name:en": "Arirang-ro 4ga-gil",
+    "name:ko": "아리랑로4가길"
+  }
+},
+{
+  "type": "way",
+  "id": 496284460,
+  "timestamp": "2020-03-09T04:29:09Z",
+  "version": 2,
+  "changeset": 81942151,
+  "user": "octel",
+  "uid": 238290,
+  "bounds": {
+    "minlat": 37.5824192,
+    "minlon": 127.0283309,
+    "maxlat": 37.5828177,
+    "maxlon": 127.0289676
+  },
+  "nodes": [
+    4879926932,
+    4879926933,
+    4879926934
+  ],
+  "geometry": [
+    { "lat": 37.5828177, "lon": 127.0289676 },
+    { "lat": 37.5825598, "lon": 127.0285483 },
+    { "lat": 37.5824192, "lon": 127.0283309 }
+  ],
+  "tags": {
+    "highway": "service",
+    "incline": "0%",
+    "lanes": "1",
+    "name": "안암로9가길",
+    "name:en": "Anam-ro 9ga-gil",
+    "name:ko": "안암로9가길",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 669609352,
+  "timestamp": "2024-12-31T04:03:50Z",
+  "version": 3,
+  "changeset": 160818428,
+  "user": "chiho_kang",
+  "uid": 10604125,
+  "bounds": {
+    "minlat": 37.6046539,
+    "minlon": 127.0455846,
+    "maxlat": 37.6047138,
+    "maxlon": 127.0457069
+  },
+  "nodes": [
+    6270605036,
+    5737375972,
+    6270605037
+  ],
+  "geometry": [
+    { "lat": 37.6046539, "lon": 127.0455846 },
+    { "lat": 37.6046945, "lon": 127.0456409 },
+    { "lat": 37.6047138, "lon": 127.0457069 }
+  ],
+  "tags": {
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "down",
+    "lit": "yes",
+    "ramp": "no",
+    "surface": "concrete",
+    "width": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 875533627,
+  "timestamp": "2021-06-10T07:30:52Z",
+  "version": 2,
+  "changeset": 106136549,
+  "user": "introducingloona",
+  "uid": 10956114,
+  "bounds": {
+    "minlat": 37.5885387,
+    "minlon": 127.0321941,
+    "maxlat": 37.5885488,
+    "maxlon": 127.0323998
+  },
+  "nodes": [
+    8149300481,
+    8819984989,
+    8819984988
+  ],
+  "geometry": [
+    { "lat": 37.5885461, "lon": 127.0321941 },
+    { "lat": 37.5885387, "lon": 127.0322952 },
+    { "lat": 37.5885488, "lon": 127.0323998 }
+  ],
+  "tags": {
+    "access": "yes",
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "down",
+    "surface": "wood",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 875533628,
+  "timestamp": "2021-06-10T07:30:52Z",
+  "version": 2,
+  "changeset": 106136549,
+  "user": "introducingloona",
+  "uid": 10956114,
+  "bounds": {
+    "minlat": 37.5882941,
+    "minlon": 127.0318968,
+    "maxlat": 37.5884084,
+    "maxlon": 127.0320546
+  },
+  "nodes": [
+    8819984997,
+    8819985001,
+    8149300488
+  ],
+  "geometry": [
+    { "lat": 37.5882941, "lon": 127.0320546 },
+    { "lat": 37.5883441, "lon": 127.0319917 },
+    { "lat": 37.5884084, "lon": 127.0318968 }
+  ],
+  "tags": {
+    "access": "yes",
+    "handrail": "no",
+    "highway": "steps",
+    "incline": "up",
+    "surface": "wood",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1214017318,
+  "timestamp": "2024-04-28T05:32:01Z",
+  "version": 8,
+  "changeset": 150603662,
+  "user": "hangukhistory",
+  "uid": 17860844,
+  "bounds": {
+    "minlat": 37.5891783,
+    "minlon": 127.0430908,
+    "maxlat": 37.5891990,
+    "maxlon": 127.0431351
+  },
+  "nodes": [
+    11247749169,
+    11247749168
+  ],
+  "geometry": [
+    { "lat": 37.5891990, "lon": 127.0430908 },
+    { "lat": 37.5891783, "lon": 127.0431351 }
+  ],
+  "tags": {
+    "handrail": "no",
+    "highway": "steps",
+    "incline": "up",
+    "lit": "no",
+    "ramp": "no",
+    "step_count": "13",
+    "surface": "wood",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1339377202,
+  "timestamp": "2025-01-01T12:31:39Z",
+  "version": 6,
+  "changeset": 160861150,
+  "user": "chiho_kang",
+  "uid": 10604125,
+  "bounds": {
+    "minlat": 37.5797716,
+    "minlon": 127.0560472,
+    "maxlat": 37.5798759,
+    "maxlon": 127.0561236
+  },
+  "nodes": [
+    12389415131,
+    12389415260
+  ],
+  "geometry": [
+    { "lat": 37.5798759, "lon": 127.0560472 },
+    { "lat": 37.5797716, "lon": 127.0561236 }
+  ],
+  "tags": {
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "up",
+    "ramp": "no",
+    "surface": "concrete",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1339377216,
+  "timestamp": "2025-01-01T12:31:38Z",
+  "version": 6,
+  "changeset": 160861150,
+  "user": "chiho_kang",
+  "uid": 10604125,
+  "bounds": {
+    "minlat": 37.5796506,
+    "minlon": 127.0561236,
+    "maxlat": 37.5797716,
+    "maxlon": 127.0562122
+  },
+  "nodes": [
+    12389415171,
+    12389415260
+  ],
+  "geometry": [
+    { "lat": 37.5796506, "lon": 127.0562122 },
+    { "lat": 37.5797716, "lon": 127.0561236 }
+  ],
+  "tags": {
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "up",
+    "ramp": "no",
+    "surface": "concrete",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1339377221,
+  "timestamp": "2025-01-01T12:31:41Z",
+  "version": 7,
+  "changeset": 160861152,
+  "user": "chiho_kang",
+  "uid": 10604125,
+  "bounds": {
+    "minlat": 37.5797319,
+    "minlon": 127.0563109,
+    "maxlat": 37.5798561,
+    "maxlon": 127.0564020
+  },
+  "nodes": [
+    12389415184,
+    12389415277
+  ],
+  "geometry": [
+    { "lat": 37.5797319, "lon": 127.0564020 },
+    { "lat": 37.5798561, "lon": 127.0563109 }
+  ],
+  "tags": {
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "up",
+    "ramp": "no",
+    "step_count": "45",
+    "surface": "concrete",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1339377245,
+  "timestamp": "2025-01-01T12:31:36Z",
+  "version": 7,
+  "changeset": 160861152,
+  "user": "chiho_kang",
+  "uid": 10604125,
+  "bounds": {
+    "minlat": 37.5798561,
+    "minlon": 127.0562417,
+    "maxlat": 37.5799503,
+    "maxlon": 127.0563109
+  },
+  "nodes": [
+    12389415278,
+    12389415277
+  ],
+  "geometry": [
+    { "lat": 37.5799503, "lon": 127.0562417 },
+    { "lat": 37.5798561, "lon": 127.0563109 }
+  ],
+  "tags": {
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "up",
+    "ramp": "no",
+    "step_count": "43",
+    "surface": "concrete",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1358626453,
+  "timestamp": "2025-02-10T12:31:55Z",
+  "version": 1,
+  "changeset": 162348578,
+  "user": "economy0762",
+  "uid": 21586183,
+  "bounds": {
+    "minlat": 37.5885339,
+    "minlon": 127.0585914,
+    "maxlat": 37.5885838,
+    "maxlon": 127.0586785
+  },
+  "nodes": [
+    12393170573,
+    12393170572,
+    12393170571,
+    12393170570,
+    12393170569,
+    12393170568
+  ],
+  "geometry": [
+    { "lat": 37.5885838, "lon": 127.0586629 },
+    { "lat": 37.5885635, "lon": 127.0585914 },
+    { "lat": 37.5885489, "lon": 127.0585987 },
+    { "lat": 37.5885700, "lon": 127.0586728 },
+    { "lat": 37.5885572, "lon": 127.0586785 },
+    { "lat": 37.5885339, "lon": 127.0585989 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "incline": "up"
+  }
+},
+{
+  "type": "way",
+  "id": 1358964792,
+  "timestamp": "2025-11-25T13:41:00Z",
+  "version": 3,
+  "changeset": 175111176,
+  "user": "LuxuryCoop",
+  "uid": 7245212,
+  "bounds": {
+    "minlat": 37.5886429,
+    "minlon": 127.0565506,
+    "maxlat": 37.5888021,
+    "maxlon": 127.0567112
+  },
+  "nodes": [
+    12578172257,
+    3831193162,
+    12578106863
+  ],
+  "geometry": [
+    { "lat": 37.5886429, "lon": 127.0565754 },
+    { "lat": 37.5887355, "lon": 127.0565506 },
+    { "lat": 37.5888021, "lon": 127.0567112 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "incline": "up",
+    "lanes": "1",
+    "oneway": "no",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1358966119,
+  "timestamp": "2025-11-25T13:41:00Z",
+  "version": 2,
+  "changeset": 175111176,
+  "user": "LuxuryCoop",
+  "uid": 7245212,
+  "bounds": {
+    "minlat": 37.5886012,
+    "minlon": 127.0565754,
+    "maxlat": 37.5886429,
+    "maxlon": 127.0565866
+  },
+  "nodes": [
+    9776882750,
+    12578172257
+  ],
+  "geometry": [
+    { "lat": 37.5886012, "lon": 127.0565866 },
+    { "lat": 37.5886429, "lon": 127.0565754 }
+  ],
+  "tags": {
+    "highway": "service",
+    "incline": "up",
+    "lanes": "1",
+    "oneway": "no",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1358966120,
+  "timestamp": "2025-02-11T05:16:33Z",
+  "version": 1,
+  "changeset": 162376107,
+  "user": "economy0762",
+  "uid": 21586183,
+  "bounds": {
+    "minlat": 37.5888223,
+    "minlon": 127.0569921,
+    "maxlat": 37.5889227,
+    "maxlon": 127.0572569
+  },
+  "nodes": [
+    12393170488,
+    12393170486,
+    12393170485,
+    3831193165
+  ],
+  "geometry": [
+    { "lat": 37.5888223, "lon": 127.0572569 },
+    { "lat": 37.5888531, "lon": 127.0571349 },
+    { "lat": 37.5888882, "lon": 127.0570115 },
+    { "lat": 37.5889227, "lon": 127.0569921 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "incline": "down"
+  }
+},
+{
+  "type": "way",
+  "id": 1463044275,
+  "timestamp": "2025-12-31T06:43:07Z",
+  "version": 1,
+  "changeset": 176659280,
+  "user": "옥토옥토",
+  "uid": 12811566,
+  "bounds": {
+    "minlat": 37.5863794,
+    "minlon": 127.0268013,
+    "maxlat": 37.5865093,
+    "maxlon": 127.0269377
+  },
+  "nodes": [
+    13420453314,
+    13420453315,
+    13420453316,
+    13420453317,
+    13420453318,
+    13420453319,
+    13420453320,
+    13420453321,
+    13420453322
+  ],
+  "geometry": [
+    { "lat": 37.5863794, "lon": 127.0269377 },
+    { "lat": 37.5863998, "lon": 127.0269363 },
+    { "lat": 37.5864001, "lon": 127.0268023 },
+    { "lat": 37.5864220, "lon": 127.0268013 },
+    { "lat": 37.5864231, "lon": 127.0269321 },
+    { "lat": 37.5864456, "lon": 127.0269274 },
+    { "lat": 37.5864431, "lon": 127.0268340 },
+    { "lat": 37.5864516, "lon": 127.0268340 },
+    { "lat": 37.5865093, "lon": 127.0268943 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "incline": "yes"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "seoul-shelter-api-doc",
+  "url": "https://data.seoul.go.kr/dataList/openApiView.do?infId=OA-21065&srvType=A",
+  "requested_at_utc": "2026-11-05T09:56:50.624033+00:00",
+  "requested_at_kst": "2026-11-05T18:56:50.624036+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://data.seoul.go.kr/dataList/openApiView.do?infId=OA-21065&srvType=A",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:56:52 GMT",
+    "content-type": "text/html;charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 20953,
+  "sha256": "1991164ef5b714ce7f3ac87fa7d4b2875a71c213d5ac76296c802667899a46d9",
+  "response_path": "raw/seoul-shelter-api-doc/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:56:52.365343+00:00"
+}

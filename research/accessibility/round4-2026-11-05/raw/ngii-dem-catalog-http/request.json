@@ -1,0 +1,23 @@
+{
+  "id": "ngii-dem-catalog-http",
+  "url": "http://www.data.go.kr/data/15059920/fileData.do",
+  "requested_at_utc": "2026-11-05T10:00:06.561876+00:00",
+  "requested_at_kst": "2026-11-05T19:00:06.561882+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 503,
+  "final_url": "http://www.data.go.kr/data/15059920/fileData.do",
+  "response_headers": {
+    "content-length": "95",
+    "content-type": "text/plain",
+    "date": "Thu, 05 Nov 2026 10:00:45 GMT",
+    "server": "envoy"
+  },
+  "bytes": 95,
+  "sha256": "9deff96f9b5925fa5081257849ace321304b382d64cfb67d90a21a3c7cbf2925",
+  "response_path": "raw/ngii-dem-catalog-http/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T10:00:46.042666+00:00"
+}

@@ -1,0 +1,846 @@
+{
+  "bbox": [
+    127.017,
+    37.577,
+    127.061,
+    37.614
+  ],
+  "source_crs": "EPSG:4326 (OSM)",
+  "database_timestamp": "2026-11-05T09:55:17Z",
+  "elements": [
+    {
+      "type": "way",
+      "id": 379555973,
+      "version": 3,
+      "timestamp": "2020-04-20T08:05:57Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "up",
+        "name": "왕산로19바길",
+        "name:en": "Wangsan-ro 19ba-gil",
+        "name:ko": "왕산로19바길",
+        "source": "survey"
+      },
+      "nodes": [
+        3828659266,
+        3828659152
+      ],
+      "geometry": [
+        {
+          "lat": 37.5813637,
+          "lon": 127.0326776
+        },
+        {
+          "lat": 37.5813052,
+          "lon": 127.0326915
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 379555990,
+      "version": 5,
+      "timestamp": "2016-10-17T19:30:59Z",
+      "tags": {
+        "highway": "footway",
+        "incline": "down"
+      },
+      "nodes": [
+        3828659318,
+        3964517826
+      ],
+      "geometry": [
+        {
+          "lat": 37.58239,
+          "lon": 127.0314531
+        },
+        {
+          "lat": 37.5827062,
+          "lon": 127.0314264
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 393240562,
+      "version": 1,
+      "timestamp": "2016-01-24T16:38:38Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "down",
+        "source": "local knowledge"
+      },
+      "nodes": [
+        3964481088,
+        3964542062
+      ],
+      "geometry": [
+        {
+          "lat": 37.5931754,
+          "lon": 127.0262098
+        },
+        {
+          "lat": 37.5931197,
+          "lon": 127.0262818
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 394282837,
+      "version": 1,
+      "timestamp": "2016-01-28T06:30:33Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "up",
+        "source": "survey"
+      },
+      "nodes": [
+        3828659301,
+        3828659306
+      ],
+      "geometry": [
+        {
+          "lat": 37.5820354,
+          "lon": 127.0338924
+        },
+        {
+          "lat": 37.5821673,
+          "lon": 127.0337854
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 394374374,
+      "version": 1,
+      "timestamp": "2016-01-28T14:38:03Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "down",
+        "source": "survey"
+      },
+      "nodes": [
+        3959364846,
+        3959366167
+      ],
+      "geometry": [
+        {
+          "lat": 37.5850586,
+          "lon": 127.0283547
+        },
+        {
+          "lat": 37.5849189,
+          "lon": 127.0280355
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 394374377,
+      "version": 1,
+      "timestamp": "2016-01-28T14:38:04Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "up",
+        "source": "Bing, survey"
+      },
+      "nodes": [
+        3973884639,
+        3973884640
+      ],
+      "geometry": [
+        {
+          "lat": 37.5844617,
+          "lon": 127.0270213
+        },
+        {
+          "lat": 37.5845656,
+          "lon": 127.026944
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 394374385,
+      "version": 3,
+      "timestamp": "2020-05-19T05:35:38Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "down",
+        "source": "survey"
+      },
+      "nodes": [
+        3973889160,
+        7536125382,
+        4627801154
+      ],
+      "geometry": [
+        {
+          "lat": 37.5843804,
+          "lon": 127.0267461
+        },
+        {
+          "lat": 37.5844799,
+          "lon": 127.0266776
+        },
+        {
+          "lat": 37.5845178,
+          "lon": 127.0266515
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 394382776,
+      "version": 4,
+      "timestamp": "2020-09-10T01:18:15Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "up",
+        "lit": "no",
+        "source": "Bing, survey"
+      },
+      "nodes": [
+        3973981259,
+        7891595839
+      ],
+      "geometry": [
+        {
+          "lat": 37.587044,
+          "lon": 127.0320904
+        },
+        {
+          "lat": 37.5870036,
+          "lon": 127.0321607
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 394382780,
+      "version": 1,
+      "timestamp": "2016-01-28T15:26:02Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "up",
+        "source": "bing, local knowledge",
+        "surface": "paved"
+      },
+      "nodes": [
+        3959316764,
+        3392142318
+      ],
+      "geometry": [
+        {
+          "lat": 37.5873373,
+          "lon": 127.030978
+        },
+        {
+          "lat": 37.5875124,
+          "lon": 127.0306909
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 468730708,
+      "version": 3,
+      "timestamp": "2019-06-29T21:33:35Z",
+      "tags": {
+        "access": "no",
+        "bicycle": "no",
+        "foot": "yes",
+        "footway": "sidewalk",
+        "highway": "footway",
+        "incline": "up",
+        "name": "개운사2길",
+        "name:en": "Gaeunsa 2-gil",
+        "name:ko": "개운사2길",
+        "surface": "concrete",
+        "tracktype": "grade1",
+        "width": "3"
+      },
+      "nodes": [
+        4456975004,
+        4632050715,
+        4632050716,
+        4632050717
+      ],
+      "geometry": [
+        {
+          "lat": 37.589587,
+          "lon": 127.0274612
+        },
+        {
+          "lat": 37.5895956,
+          "lon": 127.0274167
+        },
+        {
+          "lat": 37.5897498,
+          "lon": 127.027336
+        },
+        {
+          "lat": 37.5898513,
+          "lon": 127.0273206
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 471697553,
+      "version": 2,
+      "timestamp": "2020-03-10T08:58:37Z",
+      "tags": {
+        "highway": "steps",
+        "incline": "down",
+        "name": "아리랑로4가길",
+        "name:en": "Arirang-ro 4ga-gil",
+        "name:ko": "아리랑로4가길"
+      },
+      "nodes": [
+        3828480735,
+        4167931779
+      ],
+      "geometry": [
+        {
+          "lat": 37.5966605,
+          "lon": 127.0171555
+        },
+        {
+          "lat": 37.5968819,
+          "lon": 127.0170842
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 496284460,
+      "version": 2,
+      "timestamp": "2020-03-09T04:29:09Z",
+      "tags": {
+        "highway": "service",
+        "incline": "0%",
+        "lanes": "1",
+        "name": "안암로9가길",
+        "name:en": "Anam-ro 9ga-gil",
+        "name:ko": "안암로9가길",
+        "surface": "asphalt",
+        "width": "1"
+      },
+      "nodes": [
+        4879926932,
+        4879926933,
+        4879926934
+      ],
+      "geometry": [
+        {
+          "lat": 37.5828177,
+          "lon": 127.0289676
+        },
+        {
+          "lat": 37.5825598,
+          "lon": 127.0285483
+        },
+        {
+          "lat": 37.5824192,
+          "lon": 127.0283309
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 669609352,
+      "version": 3,
+      "timestamp": "2024-12-31T04:03:50Z",
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "surface": "concrete",
+        "width": "2"
+      },
+      "nodes": [
+        6270605036,
+        5737375972,
+        6270605037
+      ],
+      "geometry": [
+        {
+          "lat": 37.6046539,
+          "lon": 127.0455846
+        },
+        {
+          "lat": 37.6046945,
+          "lon": 127.0456409
+        },
+        {
+          "lat": 37.6047138,
+          "lon": 127.0457069
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 875533627,
+      "version": 2,
+      "timestamp": "2021-06-10T07:30:52Z",
+      "tags": {
+        "access": "yes",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "surface": "wood",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        8149300481,
+        8819984989,
+        8819984988
+      ],
+      "geometry": [
+        {
+          "lat": 37.5885461,
+          "lon": 127.0321941
+        },
+        {
+          "lat": 37.5885387,
+          "lon": 127.0322952
+        },
+        {
+          "lat": 37.5885488,
+          "lon": 127.0323998
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 875533628,
+      "version": 2,
+      "timestamp": "2021-06-10T07:30:52Z",
+      "tags": {
+        "access": "yes",
+        "handrail": "no",
+        "highway": "steps",
+        "incline": "up",
+        "surface": "wood",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        8819984997,
+        8819985001,
+        8149300488
+      ],
+      "geometry": [
+        {
+          "lat": 37.5882941,
+          "lon": 127.0320546
+        },
+        {
+          "lat": 37.5883441,
+          "lon": 127.0319917
+        },
+        {
+          "lat": 37.5884084,
+          "lon": 127.0318968
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1214017318,
+      "version": 8,
+      "timestamp": "2024-04-28T05:32:01Z",
+      "tags": {
+        "handrail": "no",
+        "highway": "steps",
+        "incline": "up",
+        "lit": "no",
+        "ramp": "no",
+        "step_count": "13",
+        "surface": "wood",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        11247749169,
+        11247749168
+      ],
+      "geometry": [
+        {
+          "lat": 37.589199,
+          "lon": 127.0430908
+        },
+        {
+          "lat": 37.5891783,
+          "lon": 127.0431351
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1339377202,
+      "version": 6,
+      "timestamp": "2025-01-01T12:31:39Z",
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        12389415131,
+        12389415260
+      ],
+      "geometry": [
+        {
+          "lat": 37.5798759,
+          "lon": 127.0560472
+        },
+        {
+          "lat": 37.5797716,
+          "lon": 127.0561236
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1339377216,
+      "version": 6,
+      "timestamp": "2025-01-01T12:31:38Z",
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        12389415171,
+        12389415260
+      ],
+      "geometry": [
+        {
+          "lat": 37.5796506,
+          "lon": 127.0562122
+        },
+        {
+          "lat": 37.5797716,
+          "lon": 127.0561236
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1339377221,
+      "version": 7,
+      "timestamp": "2025-01-01T12:31:41Z",
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "step_count": "45",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        12389415184,
+        12389415277
+      ],
+      "geometry": [
+        {
+          "lat": 37.5797319,
+          "lon": 127.056402
+        },
+        {
+          "lat": 37.5798561,
+          "lon": 127.0563109
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1339377245,
+      "version": 7,
+      "timestamp": "2025-01-01T12:31:36Z",
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "step_count": "43",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      },
+      "nodes": [
+        12389415278,
+        12389415277
+      ],
+      "geometry": [
+        {
+          "lat": 37.5799503,
+          "lon": 127.0562417
+        },
+        {
+          "lat": 37.5798561,
+          "lon": 127.0563109
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1358626453,
+      "version": 1,
+      "timestamp": "2025-02-10T12:31:55Z",
+      "tags": {
+        "highway": "footway",
+        "incline": "up"
+      },
+      "nodes": [
+        12393170573,
+        12393170572,
+        12393170571,
+        12393170570,
+        12393170569,
+        12393170568
+      ],
+      "geometry": [
+        {
+          "lat": 37.5885838,
+          "lon": 127.0586629
+        },
+        {
+          "lat": 37.5885635,
+          "lon": 127.0585914
+        },
+        {
+          "lat": 37.5885489,
+          "lon": 127.0585987
+        },
+        {
+          "lat": 37.58857,
+          "lon": 127.0586728
+        },
+        {
+          "lat": 37.5885572,
+          "lon": 127.0586785
+        },
+        {
+          "lat": 37.5885339,
+          "lon": 127.0585989
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1358964792,
+      "version": 3,
+      "timestamp": "2025-11-25T13:41:00Z",
+      "tags": {
+        "highway": "footway",
+        "incline": "up",
+        "lanes": "1",
+        "oneway": "no",
+        "surface": "asphalt",
+        "width": "1"
+      },
+      "nodes": [
+        12578172257,
+        3831193162,
+        12578106863
+      ],
+      "geometry": [
+        {
+          "lat": 37.5886429,
+          "lon": 127.0565754
+        },
+        {
+          "lat": 37.5887355,
+          "lon": 127.0565506
+        },
+        {
+          "lat": 37.5888021,
+          "lon": 127.0567112
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1358966119,
+      "version": 2,
+      "timestamp": "2025-11-25T13:41:00Z",
+      "tags": {
+        "highway": "service",
+        "incline": "up",
+        "lanes": "1",
+        "oneway": "no",
+        "surface": "asphalt",
+        "width": "1"
+      },
+      "nodes": [
+        9776882750,
+        12578172257
+      ],
+      "geometry": [
+        {
+          "lat": 37.5886012,
+          "lon": 127.0565866
+        },
+        {
+          "lat": 37.5886429,
+          "lon": 127.0565754
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1358966120,
+      "version": 1,
+      "timestamp": "2025-02-11T05:16:33Z",
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "incline": "down"
+      },
+      "nodes": [
+        12393170488,
+        12393170486,
+        12393170485,
+        3831193165
+      ],
+      "geometry": [
+        {
+          "lat": 37.5888223,
+          "lon": 127.0572569
+        },
+        {
+          "lat": 37.5888531,
+          "lon": 127.0571349
+        },
+        {
+          "lat": 37.5888882,
+          "lon": 127.0570115
+        },
+        {
+          "lat": 37.5889227,
+          "lon": 127.0569921
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    },
+    {
+      "type": "way",
+      "id": 1463044275,
+      "version": 1,
+      "timestamp": "2025-12-31T06:43:07Z",
+      "tags": {
+        "highway": "footway",
+        "incline": "yes"
+      },
+      "nodes": [
+        13420453314,
+        13420453315,
+        13420453316,
+        13420453317,
+        13420453318,
+        13420453319,
+        13420453320,
+        13420453321,
+        13420453322
+      ],
+      "geometry": [
+        {
+          "lat": 37.5863794,
+          "lon": 127.0269377
+        },
+        {
+          "lat": 37.5863998,
+          "lon": 127.0269363
+        },
+        {
+          "lat": 37.5864001,
+          "lon": 127.0268023
+        },
+        {
+          "lat": 37.586422,
+          "lon": 127.0268013
+        },
+        {
+          "lat": 37.5864231,
+          "lon": 127.0269321
+        },
+        {
+          "lat": 37.5864456,
+          "lon": 127.0269274
+        },
+        {
+          "lat": 37.5864431,
+          "lon": 127.026834
+        },
+        {
+          "lat": 37.5864516,
+          "lon": 127.026834
+        },
+        {
+          "lat": 37.5865093,
+          "lon": 127.0268943
+        }
+      ],
+      "field_verified": false,
+      "routing_eligible": false
+    }
+  ],
+  "note": "up/down/yes are not numeric grades; numeric values are mapper registrations, not field measurements by this project"
+}

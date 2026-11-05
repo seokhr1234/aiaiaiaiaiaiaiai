@@ -1,0 +1,1122 @@
+{
+  "collected_date_kst": "2026-11-05",
+  "source_crs": "EPSG:4326 (OSM)",
+  "comparison_query": "same selection as donghaeng-nav/scripts/fetch-map.py; meta output added",
+  "old_database_timestamp": "2026-10-28T05:19:18Z",
+  "new_database_timestamp": "2026-11-05T09:59:27Z",
+  "duplicate_output_entries_before": 11,
+  "duplicate_output_entries_after": 11,
+  "counts_before": {
+    "node": 20954,
+    "way": 4762
+  },
+  "counts_after": {
+    "node": 20959,
+    "way": 4762
+  },
+  "added_to_query_result": [
+    {
+      "type": "node",
+      "id": 9655918655
+    },
+    {
+      "type": "node",
+      "id": 14324716597
+    },
+    {
+      "type": "node",
+      "id": 14324716598
+    },
+    {
+      "type": "node",
+      "id": 14324716599
+    },
+    {
+      "type": "node",
+      "id": 14324966587
+    },
+    {
+      "type": "node",
+      "id": 14324966588
+    },
+    {
+      "type": "node",
+      "id": 14324966589
+    },
+    {
+      "type": "node",
+      "id": 14324966590
+    },
+    {
+      "type": "node",
+      "id": 14324966591
+    },
+    {
+      "type": "node",
+      "id": 14324966593
+    }
+  ],
+  "no_longer_in_query_result": [
+    {
+      "type": "node",
+      "id": 2135060885
+    },
+    {
+      "type": "node",
+      "id": 2135060901
+    },
+    {
+      "type": "node",
+      "id": 2135060923
+    },
+    {
+      "type": "node",
+      "id": 9655918656
+    },
+    {
+      "type": "node",
+      "id": 10139257031
+    }
+  ],
+  "membership_change_not_proof_of_creation_or_deletion": true,
+  "changed_existing": [
+    {
+      "type": "node",
+      "id": 287710035,
+      "version": 7,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "junction": "yes",
+            "name": "청량리역 교차로",
+            "name:ko": "청량리역 교차로"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "name": "청량리역",
+            "name:en": "Cheongnyangni Station",
+            "name:ko": "청량리역",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 414683355,
+      "version": 12,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5763738,
+          "after": 37.5762582
+        },
+        "lon": {
+          "before": 127.0344998,
+          "after": 127.0344848
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 414686006,
+      "version": 8,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "junction": "yes",
+            "name": "제기사거리",
+            "name:en": "Jegi Crossroad",
+            "name:ko": "제기사거리",
+            "name:ko-Latn": "Jegisageori"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "name": "제기사거리",
+            "name:en": "Jegi Crossroad",
+            "name:ko": "제기사거리",
+            "name:ko-Latn": "Jegisageori",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 414686008,
+      "version": 8,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "name": "청량리경찰서",
+            "name:en": "Cheongnyangni Police Station",
+            "name:ko": "청량리경찰서",
+            "name:ko-Latn": "Cheongnyangnigyeongchalseo"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "name": "청량리경찰서",
+            "name:en": "Cheongnyangni Police Station",
+            "name:ko": "청량리경찰서",
+            "name:ko-Latn": "Cheongnyangnigyeongchalseo",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 414686031,
+      "version": 7,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "junction": "yes",
+            "name": "고대앞사거리",
+            "name:en": "Godaeap Crossroad",
+            "name:ko": "고대앞사거리",
+            "name:ko-Latn": "Godaeapsageori"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "name": "고대앞사거리",
+            "name:en": "Godaeap Crossroad",
+            "name:ko": "고대앞사거리",
+            "name:ko-Latn": "Godaeapsageori",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 414686055,
+      "version": 10,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "name": "고려대앞삼거리",
+            "name:en": "Goryeodaeapsamgeori",
+            "name:ko": "고려대앞삼거리",
+            "name:ko-Latn": "Goryeodaeapsamgeori"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "name": "고려대앞삼거리",
+            "name:en": "Goryeodaeapsamgeori",
+            "name:ko": "고려대앞삼거리",
+            "name:ko-Latn": "Goryeodaeapsamgeori",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 436818245,
+      "version": 5,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "junction": "yes",
+            "name": "홍파초교",
+            "name:ko": "홍파초교"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "name": "홍파초교",
+            "name:ko": "홍파초교",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 436833515,
+      "version": 10,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "lat": {
+          "before": 37.5792189,
+          "after": 37.5792274
+        },
+        "lon": {
+          "before": 127.0424385,
+          "after": 127.0424637
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 436860746,
+      "version": 3,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 436871394,
+      "version": 4,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 436872024,
+      "version": 6,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 436881889,
+      "version": 4,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060826,
+      "version": 5,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.572208,
+          "after": 37.5722524
+        },
+        "lon": {
+          "before": 127.0367913,
+          "after": 127.0366882
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060829,
+      "version": 3,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5718425,
+          "after": 37.5718912
+        },
+        "lon": {
+          "before": 127.0408701,
+          "after": 127.0407623
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060831,
+      "version": 4,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5716353,
+          "after": 37.5716485
+        },
+        "lon": {
+          "before": 127.0415569,
+          "after": 127.0415248
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060842,
+      "version": 3,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5719583,
+          "after": 37.572007
+        },
+        "lon": {
+          "before": 127.0401969,
+          "after": 127.0400891
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060847,
+      "version": 5,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.572331,
+          "after": 37.5723451
+        },
+        "lon": {
+          "before": 127.0360431,
+          "after": 127.0360669
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060859,
+      "version": 5,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5731884,
+          "after": 37.5731576
+        },
+        "lon": {
+          "before": 127.0347677,
+          "after": 127.0347612
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060878,
+      "version": 5,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5727954,
+          "after": 37.5727802
+        },
+        "lon": {
+          "before": 127.0351342,
+          "after": 127.0351356
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060896,
+      "version": 3,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5699454,
+          "after": 37.5699153
+        },
+        "lon": {
+          "before": 127.0452232,
+          "after": 127.0452996
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060907,
+      "version": 6,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5736066,
+          "after": 37.5736339
+        },
+        "lon": {
+          "before": 127.0345558,
+          "after": 127.034503
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060909,
+      "version": 3,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5720619,
+          "after": 37.5720719
+        },
+        "lon": {
+          "before": 127.0391498,
+          "after": 127.0392861
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 2135060918,
+      "version": 6,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5739127,
+          "after": 37.573924
+        },
+        "lon": {
+          "before": 127.034476,
+          "after": 127.0344429
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 3830520119,
+      "version": 3,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 3964537800,
+      "version": 7,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "crossing": "traffic_signals",
+            "highway": "crossing"
+          },
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352126636,
+      "version": 4,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5733687,
+          "after": 37.5733178
+        },
+        "lon": {
+          "before": 127.0346467,
+          "after": 127.0346472
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352126638,
+      "version": 4,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5729653,
+          "after": 37.572918
+        },
+        "lon": {
+          "before": 127.0349529,
+          "after": 127.0349809
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352126642,
+      "version": 4,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5724143,
+          "after": 37.5724241
+        },
+        "lon": {
+          "before": 127.0357976,
+          "after": 127.03581
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352126644,
+      "version": 4,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5722573,
+          "after": 37.5722889
+        },
+        "lon": {
+          "before": 127.0363501,
+          "after": 127.036345
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352126645,
+      "version": 2,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.57191,
+          "after": 37.5719587
+        },
+        "lon": {
+          "before": 127.0405334,
+          "after": 127.0404256
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352126646,
+      "version": 2,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5717446,
+          "after": 37.5717927
+        },
+        "lon": {
+          "before": 127.0411945,
+          "after": 127.0411068
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 9732424951,
+      "version": 2,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "lat": {
+          "before": 37.5719837,
+          "after": 37.5720324
+        },
+        "lon": {
+          "before": 127.0399402,
+          "after": 127.0398324
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 11800685452,
+      "version": 3,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 12241031014,
+      "version": 5,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 12449558279,
+      "version": 3,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 12475207439,
+      "version": 2,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "junction": "yes",
+            "name": "서울시립대앞",
+            "name:en": "University of Seoul Front",
+            "name:ko": "서울시립대앞",
+            "name:ko-Latn": "Seoulsiripdaeap"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 12475207443,
+      "version": 2,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "junction": "yes",
+            "name": "서울시립대앞",
+            "name:en": "University of Seoul Front",
+            "name:ko": "서울시립대앞",
+            "name:ko-Latn": "Seoulsiripdaeap"
+          }
+        }
+      }
+    },
+    {
+      "type": "node",
+      "id": 12475207444,
+      "version": 2,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {},
+          "after": {
+            "junction": "yes",
+            "name": "서울시립대앞",
+            "name:en": "University of Seoul Front",
+            "name:ko": "서울시립대앞",
+            "name:ko-Latn": "Seoulsiripdaeap"
+          }
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 203491741,
+      "version": 29,
+      "last_edit": "2026-10-28T09:58:11Z",
+      "changes": {
+        "nodes": {
+          "before": [
+            2147578808,
+            2135060855,
+            2135060903,
+            13240436825,
+            2135060844,
+            2135060920,
+            2135060908,
+            2135060866,
+            13240436933,
+            2135060880,
+            2135060828,
+            2135060876,
+            2135060877,
+            2135060871,
+            13049399735,
+            2135060825,
+            2135060830,
+            13240436815,
+            2135060914,
+            2135060923,
+            10139257031,
+            2135060918,
+            2135060907,
+            5352126636,
+            2135060859,
+            5352126638,
+            2135060878,
+            5352126640,
+            2135060853,
+            5352126642,
+            2135060847,
+            5352126644,
+            2135060826,
+            2135060885,
+            2135060909,
+            9732424951,
+            2135060842,
+            5352126645,
+            2135060829,
+            5352126646,
+            2135060831,
+            2135060901,
+            13240436709,
+            2135060896,
+            2135060869,
+            2135060861,
+            2135060884
+          ],
+          "after": [
+            2147578808,
+            2135060855,
+            2135060903,
+            13240436825,
+            2135060844,
+            2135060920,
+            2135060908,
+            2135060866,
+            13240436933,
+            2135060880,
+            2135060828,
+            2135060876,
+            2135060877,
+            2135060871,
+            13049399735,
+            2135060825,
+            2135060830,
+            13240436815,
+            2135060914,
+            14324966593,
+            2135060918,
+            14324966590,
+            2135060907,
+            14324966589,
+            5352126636,
+            2135060859,
+            14324966591,
+            5352126638,
+            2135060878,
+            5352126640,
+            2135060853,
+            5352126642,
+            2135060847,
+            5352126644,
+            2135060826,
+            2135060909,
+            9732424951,
+            2135060842,
+            5352126645,
+            2135060829,
+            5352126646,
+            2135060831,
+            14324966588,
+            13240436709,
+            14324966587,
+            2135060896,
+            2135060869,
+            2135060861,
+            2135060884
+          ]
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 416580151,
+      "version": 9,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "bridge": "yes",
+            "foot": "no",
+            "highway": "residential",
+            "lanes": "2",
+            "layer": "1",
+            "name": "청량리역 고가도로교",
+            "name:en": "Jeonnong-ro 37-gil",
+            "name:ko": "청량리역 고가도로교",
+            "oneway": "yes",
+            "surface": "asphalt"
+          },
+          "after": {
+            "bridge": "yes",
+            "foot": "no",
+            "highway": "residential",
+            "lanes": "2",
+            "layer": "1",
+            "name": "청량리역고가도로교",
+            "name:en": "Jeonnong-ro 37-gil",
+            "name:ko": "청량리역고가도로교",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 416580152,
+      "version": 8,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "tags": {
+          "before": {
+            "bridge": "yes",
+            "foot": "no",
+            "highway": "residential",
+            "lanes": "2",
+            "layer": "1",
+            "name": "청량리역 고가도로교",
+            "name:ko": "청량리역 고가도로교",
+            "oneway": "yes"
+          },
+          "after": {
+            "bridge": "yes",
+            "foot": "no",
+            "highway": "residential",
+            "lanes": "2",
+            "layer": "1",
+            "name": "청량리역고가도로교",
+            "name:ko": "청량리역고가도로교",
+            "oneway": "yes"
+          }
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 704467803,
+      "version": 11,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "nodes": {
+          "before": [
+            13737973303,
+            10128271009,
+            2962063135,
+            2962063136,
+            2962063137,
+            2962063138,
+            2962063139,
+            2962063140,
+            2962063141,
+            2962063142,
+            2962063143,
+            2962063144,
+            2962063145,
+            2962063146,
+            2962063147,
+            6577710558,
+            2962063148,
+            2962063149,
+            10128293326,
+            2962063150,
+            12283827389,
+            2962063151,
+            9655918656,
+            6265962830,
+            6265962829,
+            2962063152,
+            2962063153,
+            10128293327,
+            2962063154,
+            2962063155,
+            2962063156,
+            10128293331,
+            2962063157,
+            2962063158,
+            7496540828,
+            7496540827,
+            2962063159,
+            2965688889,
+            10128293338,
+            6466078118,
+            13152003133,
+            2962063160
+          ],
+          "after": [
+            13737973303,
+            10128271009,
+            2962063135,
+            2962063136,
+            2962063137,
+            2962063138,
+            2962063139,
+            2962063140,
+            2962063141,
+            2962063142,
+            2962063143,
+            2962063144,
+            2962063145,
+            2962063146,
+            2962063147,
+            6577710558,
+            2962063148,
+            2962063149,
+            10128293326,
+            2962063150,
+            12283827389,
+            2962063151,
+            9655918655,
+            6265962830,
+            6265962829,
+            2962063152,
+            2962063153,
+            10128293327,
+            2962063154,
+            2962063155,
+            2962063156,
+            10128293331,
+            2962063157,
+            2962063158,
+            7496540828,
+            7496540827,
+            2962063159,
+            2965688889,
+            10128293338,
+            6466078118,
+            13152003133,
+            2962063160
+          ]
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 1346002322,
+      "version": 6,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "nodes": {
+          "before": [
+            436870877,
+            9776807690,
+            436844936
+          ],
+          "after": [
+            436870877,
+            14324716598,
+            9776807690,
+            436844936
+          ]
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 1346002335,
+      "version": 8,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "nodes": {
+          "before": [
+            12449619205,
+            13568916683,
+            13568916682,
+            13568916685,
+            12449619204,
+            13525477922,
+            12449619203,
+            12449619202,
+            12449558300,
+            12475207443
+          ],
+          "after": [
+            12449619205,
+            13568916683,
+            13568916682,
+            13568916685,
+            12449619204,
+            13525477922,
+            12449619203,
+            12449619202,
+            14324716597,
+            12449558300,
+            12475207443
+          ]
+        }
+      }
+    },
+    {
+      "type": "way",
+      "id": 1348651360,
+      "version": 3,
+      "last_edit": "2026-10-28T07:48:24Z",
+      "changes": {
+        "nodes": {
+          "before": [
+            3830520119,
+            12389414806,
+            12475207442,
+            3830520187,
+            3830520218,
+            9776807728,
+            12475207446,
+            12475207437,
+            12475207445,
+            436844935,
+            12475207444
+          ],
+          "after": [
+            3830520119,
+            12389414806,
+            12475207442,
+            3830520187,
+            3830520218,
+            9776807728,
+            12475207446,
+            12475207437,
+            12475207445,
+            14324716599,
+            436844935,
+            12475207444
+          ]
+        }
+      }
+    }
+  ],
+  "four_map_tiles_unique_counts": {
+    "node": 92942,
+    "way": 14390,
+    "relation": 804
+  },
+  "four_map_tiles_cross_response_conflicts": [],
+  "four_map_tiles_snapshot_note": "four separate live API responses, not one atomic snapshot; support elements may lie outside bbox; relation member completeness not guaranteed",
+  "old_access_comparison_counts": {
+    "unchanged_version_and_tags": 171
+  },
+  "incline_count_in_wider_bbox": 25,
+  "incline_value_counts": {
+    "up": 15,
+    "down": 8,
+    "0%": 1,
+    "yes": 1
+  },
+  "field_verified": false,
+  "runtime_changes": 0,
+  "new_slope_values_promoted": 0
+}

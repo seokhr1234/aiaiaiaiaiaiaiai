@@ -1,0 +1,26 @@
+{
+  "id": "overpass-map-comparable",
+  "url": "https://overpass-api.de/api/interpreter",
+  "form": {
+    "data": "[out:json][timeout:45];(way[highway](37.580,127.020,37.611,127.058);nwr[amenity~\"bench|cafe|library|school|community_centre|shelter\"](37.584,127.025,37.607,127.053);node[highway=bus_stop](37.584,127.025,37.607,127.053););out meta center;>;out meta qt;"
+  },
+  "timeout": 90,
+  "requested_at_utc": "2026-11-05T10:00:06.560910+00:00",
+  "requested_at_kst": "2026-11-05T19:00:06.560932+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://overpass-api.de/api/interpreter",
+  "response_headers": {
+    "server": "envoy",
+    "date": "Thu, 05 Nov 2026 10:00:45 GMT",
+    "content-type": "application/json"
+  },
+  "bytes": 6689656,
+  "sha256": "0a369e8adc22a3b00a1434d64ee7c928be4e5eff3c33e4fe418e973eddd96d93",
+  "response_path": "raw/overpass-map-comparable/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T10:00:48.526690+00:00"
+}

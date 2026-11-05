@@ -1,0 +1,22 @@
+{
+  "id": "sb-shelter-notices",
+  "url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=6350&searchCtgry=%EC%95%88%EC%A0%84",
+  "requested_at_utc": "2026-11-05T09:55:57.515053+00:00",
+  "requested_at_kst": "2026-11-05T18:55:57.515057+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://www.sb.go.kr/www/selectBbsNttList.do?bbsNo=91&key=6350&searchCtgry=%EC%95%88%EC%A0%84",
+  "response_headers": {
+    "date": "Thu, 05 Nov 2026 09:55:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 242533,
+  "sha256": "f0f4a2d8ba3af658ff932aead5617ec6f2818a022dab412e7c985adf05935d2c",
+  "response_path": "raw/sb-shelter-notices/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-05T09:56:00.308845+00:00"
+}

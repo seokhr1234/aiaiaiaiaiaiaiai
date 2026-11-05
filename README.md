@@ -114,3 +114,5 @@ Vercel은 저장소 최상위 Root Directory와 `donghaeng-nav/dist`를 사용�
 이전 기록의 ‘정밀지도 미연결’·구버전 화면 설명은 당시 상태입니다. 현재 상태는 이 README와 [메인 전환 기록](donghaeng-nav/docs/main-navigation-promotion.md)을 우선하고, 과거 검사 기록은 해당 시점의 결과로 읽어 주세요.
 
 2026-11-05: [쉼터 15곳 근거 보강·표고 근거 추출·GPS 안정화 보고서](research/accessibility/round3-2026-11-05/README.md). 새 시설 좌표나 실측 경사로 오인하지 않도록 원문·미수집·현장 미확인 상태를 구분합니다.
+
+2026-11-05 후속: [새 환경 실제 수집·쉼터 전체 CSV/OSM/표고 원본 대조](research/accessibility/round4-2026-11-05/README.md). 쉼터 4,092행과 최신 OSM·서울 표고 ZIP 2개를 확보하고 운영시간 차이·접근 실패를 기록했습니다. 앱 자료는 유지하며 NGII 고해상도 새 원본·현장 검증·새 경사 승격은 미완료/0건입니다.
