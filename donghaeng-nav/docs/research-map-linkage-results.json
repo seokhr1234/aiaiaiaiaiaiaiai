@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "recheckedShelters": 4092,
+  "linkedNotices": 3,
+  "conflicts": 2,
+  "newCoordinates": 0,
+  "newSlopes": 0,
+  "fieldVerified": false,
+  "checks": [
+    "All 17485 facility identities/geometries and source/operation fields preserved; changes restricted to evidence metadata",
+    "4092 verified recheck labels; absent/malformed verification cannot appear confirmed",
+    "Two conflicting records excluded from automatic rest; exactly one previously eligible record withheld; other candidates/statuses unchanged",
+    "Eight other runtime datasets and all prior research preserved"
+  ]
+}

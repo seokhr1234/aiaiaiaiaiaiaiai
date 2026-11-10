@@ -1,0 +1,30 @@
+{
+  "collection_batch": "round4-2026-11-05",
+  "official_shelters_rechecked": 4092,
+  "matched_notices": [
+    {
+      "id": "seoul:cooling:361769f9311bcbaa",
+      "name": "동일하이빌뉴시티경로당",
+      "published_date": "2026-05-06",
+      "hours_conflict": true
+    },
+    {
+      "id": "seoul:cooling:6fcea078832f652a",
+      "name": "보문느티나무경로당",
+      "published_date": "2026-05-06",
+      "hours_conflict": false
+    },
+    {
+      "id": "seoul:cooling:80f8394aa06897d9",
+      "name": "성북문화예술교육센터(2층커뮤니티라운지)",
+      "published_date": "2026-05-18",
+      "hours_conflict": true
+    }
+  ],
+  "hours_conflicts": 2,
+  "new_coordinates": 0,
+  "unmatched_notices_applied": 0,
+  "new_slope_values_promoted": 0,
+  "source_csv_sha256": "9b2d96168234870dd78f4246f4062c668c2fd86a3cf8e4f0907e9247d01625ac",
+  "field_verified": false
+}

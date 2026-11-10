@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "runtime_datasets": 9,
+  "protected_code_files": 15,
+  "identical_html_outputs": 5,
+  "package_and_handoff_hashes_match": true,
+  "prior_research_unchanged": true,
+  "new_coordinates": 0,
+  "new_slope_values_promoted": 0,
+  "field_verified": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

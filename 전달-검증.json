@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "b9a08400b1e13f2b6596129b7c8c83fafd2e1ce50653faf96b2337c2f376bf17",
+  "html_sha256": "c0c0e1d73bf583bfce2fe1bfc7bce5133635f62d0de5a3e88f93f97e4f58b4ed",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -56,7 +56,7 @@
   "precision_runtime_included": true,
   "precision_runtime_loader_implemented": true,
   "main_promotion": {
-    "version": "2026-11-05-gps-evidence",
+    "version": "2026-11-05-official-research",
     "review": "donghaeng-nav/docs/main-navigation-promotion.md",
     "original_gis_reprocessed": false,
     "field_verified": false
@@ -69,6 +69,9 @@
     "edges_with_support": 19548,
     "edges_without_support": 2005,
     "enriched_shelters": 15,
+    "official_shelters_rechecked": 4092,
+    "linked_round4_notices": 3,
+    "official_hours_conflicts": 2,
     "new_slope_values_promoted": 0,
     "field_verified": false
   },

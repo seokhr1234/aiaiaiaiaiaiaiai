@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-gps-evidence",
+  "version": "2026-11-05-official-research",
   "main_source": "donghaeng-nav/dist/index.html",
   "project_name": "동행길",
   "route_choice": {
@@ -26,7 +26,7 @@
     "complex": 2745,
     "apartment": 2
   },
-  "source_sha256": "748353c79db105cb1c48ee0c45bcb4564d727b40fdfd7405a16c5415c2e10095",
+  "source_sha256": "cb16455270e7492755a96bf4a742c06a41da41a6efe81cb7d6e3a4366061a3f9",
   "terrain": {
     "source": "Mapzen/Tilezen Terrain Tiles · AWS",
     "source_url": "https://registry.opendata.aws/terrain-tiles/",
@@ -61,6 +61,9 @@
     "edges_with_support": 19548,
     "edges_without_support": 2005,
     "enriched_shelters": 15,
+    "official_shelters_rechecked": 4092,
+    "linked_round4_notices": 3,
+    "official_hours_conflicts": 2,
     "new_slope_values_promoted": 0,
     "field_verified": false
   },
@@ -76,8 +79,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
-  "html_sha256": "b9a08400b1e13f2b6596129b7c8c83fafd2e1ce50653faf96b2337c2f376bf17",
-  "html_bytes": 15698726,
+  "html_sha256": "c0c0e1d73bf583bfce2fe1bfc7bce5133635f62d0de5a3e88f93f97e4f58b4ed",
+  "html_bytes": 15729382,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",

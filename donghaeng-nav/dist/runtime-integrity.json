@@ -34,8 +34,8 @@
     {
       "id": "bundled-facilities-seoul",
       "path": "data/accessibility/seoul/seoul-facilities.geojson",
-      "sha256": "748353c79db105cb1c48ee0c45bcb4564d727b40fdfd7405a16c5415c2e10095",
-      "bytes": 20181433
+      "sha256": "cb16455270e7492755a96bf4a742c06a41da41a6efe81cb7d6e3a4366061a3f9",
+      "bytes": 21316977
     },
     {
       "id": "bundled-access-reports",
@@ -75,35 +75,52 @@
     "navigation-core.js": "aa344a5c2f0da6c4bd4fe2b4a60f005393359a35b50559eb258effbd116550db",
     "navigation-session.js": "ef4088055b554947666de9894bae39bee5ac64ce9307f840d56603b598bae965",
     "navigation-ui.js": "1477537a531843e9abd4d8d558d5f4153758590abded33227eee65457f3a0072",
-    "terrain-evidence.js": "9bb1879ad6f11240ec636b00d7bf715e88189dd909449009d0fa78a99a5aec72"
+    "terrain-evidence.js": "9bb1879ad6f11240ec636b00d7bf715e88189dd909449009d0fa78a99a5aec72",
+    "facilities.js": "e08a1f86e98b59b8a89d237ba36dd42e5e435091c6aee7f720c20080b49ad3dc",
+    "final-model.js": "f05592756fa21e66968205dde41d4bba65bdf05a91cc826da87a1f114ea66426"
   },
   "field_verified": false,
   "precision_role": "Review geometry and building-overlap screening; not a verified pedestrian network",
   "code_revision": {
     "date": "2026-11-05",
-    "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
+    "change": "Attach round4 official CSV recheck to 4092 existing shelters and three address-matched notices; flag two hours conflicts and withhold them from automatic rest; no geometry or slope changes",
     "validation": [
-      "docs/gps-quality-results.json",
-      "docs/gps-quality-ui-results.json",
+      "docs/research-map-linkage-results.json",
       "docs/evidence-results.json",
+      "docs/research-map-linkage-ui-results.json",
       "docs/navigation-core-results.json",
       "docs/main-navigation-results.json",
       "docs/route-choice-real-results.json"
     ],
     "field_verified": false,
     "new_slope_values_promoted": 0,
-    "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+    "dataset_scope": "One facility metadata dataset updated; eight other runtime datasets and thirteen previously protected code files unchanged; facility display and rest selection added to protected code",
     "previous_revision": {
-      "date": "2026-11-04",
-      "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+      "date": "2026-11-05",
+      "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
       "validation": [
-        "docs/route-choice-core-results.json",
-        "docs/route-choice-ui-results.json",
-        "docs/route-choice-real-results.json",
-        "docs/navigation-core-results.json"
+        "docs/gps-quality-results.json",
+        "docs/gps-quality-ui-results.json",
+        "docs/evidence-results.json",
+        "docs/navigation-core-results.json",
+        "docs/main-navigation-results.json",
+        "docs/route-choice-real-results.json"
       ],
       "field_verified": false,
-      "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+      "new_slope_values_promoted": 0,
+      "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+      "previous_revision": {
+        "date": "2026-11-04",
+        "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+        "validation": [
+          "docs/route-choice-core-results.json",
+          "docs/route-choice-ui-results.json",
+          "docs/route-choice-real-results.json",
+          "docs/navigation-core-results.json"
+        ],
+        "field_verified": false,
+        "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+      }
     }
   }
 }

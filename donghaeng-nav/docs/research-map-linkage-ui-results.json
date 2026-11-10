@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "checks": [
+    "/: mobile/desktop recheck dates, conflicting hours/hold warning, source links, unchanged counts and toggles",
+    "/동행길-최종.html: mobile/desktop recheck dates, conflicting hours/hold warning, source links, unchanged counts and toggles",
+    "empty: no false confirmation; existing empty/error state",
+    "invalid: no false confirmation; existing empty/error state"
+  ],
+  "browserErrors": [],
+  "fieldVerified": false,
+  "actualGpsTested": false
+}

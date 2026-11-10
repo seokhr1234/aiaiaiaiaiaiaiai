@@ -4,7 +4,7 @@
     "21553 graph-bound evidence rows; malformed/stale/promoted evidence rejected before attachment",
     "Terrain support never changes edges or routing weights; structure/absent support remains unverified",
     "15 enriched facilities; all identities, coordinates, official hours and verification flags preserved",
-    "Rest eligibility and operating-hour decisions unchanged by supplementary documents"
+    "One newly flagged conflicting shelter withheld from automatic rest; all other candidates and operating-hour decisions unchanged"
   ],
   "counts": {
     "points": 944,
