@@ -20,7 +20,9 @@ function fromFix(E,graph,fix,destination,profile,{restOutcome,unavailableRestIds
  const completed=restOutcome==='completed',pool=(graph.restPlaces||graph.benches||[]).filter(p=>!unavailableRestIds.includes(p.id));
  // Only the already completed waypoint is omitted; the user's profile remains intact.
  const internal=completed?{...profile,rest:false}:{...profile};const route=Endpoint.route(E,{...graph,nodes,main,restPlaces:pool,benches:pool,meta:{...graph.meta,allowAssistancePreview:false}},fix.ll,destination.ll,internal);
- if(route.assistancePreview)throw Error('위험 대안으로 자동 변경하지 않습니다.');
+ const eligible=typeof module!=='undefined'?require('./route-candidates.js').eligible:root.RouteCandidates.eligible;
+ if(!eligible(E,route,internal,graph.meta?.buildingAudit,fix.ll,destination.ll))throw Error('원래 이동 조건을 만족하는 대체 경로가 없습니다.');
+ if(internal.rest&&internal.restMinutes&&(route.restStop.firstDistance/(internal.speed||65)>internal.restMinutes))throw Error('요청한 휴식 간격을 만족하는 대체 경로가 없습니다.');
  return {...route,p:{...profile},restFulfilled:completed};
 }
 const api={fromFix};if(typeof module!=='undefined')module.exports=api;else root.NavigationRouting=api;

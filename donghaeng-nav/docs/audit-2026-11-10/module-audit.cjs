@@ -1,0 +1,16 @@
+const fs=require('node:fs'),path=require('node:path');
+const base=path.resolve(__dirname,'../../dist'),E=require(path.join(base,'engine')),F=require(path.join(base,'final-model')),M=require(path.join(base,'facilities')),R=require(path.join(base,'navigation-routing'));
+const results={baseline:'079c4467786a9e9dd546f434e215904e40ebad50',cases:[]};
+const g=E.createGraph(require(path.join(base,'map-data.json')));E.applyTerrain(g,require(path.join(base,'terrain-data.json')));
+g.restPlaces=F.restCandidates(M.normalize([{data:JSON.parse(fs.readFileSync(path.join(base,'data/accessibility/seoul/seoul-facilities.geojson'),'utf8'))}]).features,E);g.benches=g.restPlaces;
+const p=E.parseState('중간에 벤치에서 쉬고 싶어요');
+const route=R.fromFix(E,g,{ll:[37.60192731294593,127.04142695101596],accuracy:5,timestamp:Date.now()},{name:'도서관',ll:[37.604059195143165,127.0418332514647]},p,{unavailableRestIds:g.restPlaces.map(p=>p.id)});
+results.cases.push({name:'reroute-without-required-rest',fixture:'Real runtime graph, all 229 rest candidates simulated unavailable',restRequired:route.p.rest,restStop:route.restStop??null,restFulfilled:route.restFulfilled,messages:route.messages});
+const elements=[1,2,3].map((id,i)=>({type:'node',id,lat:37.6+i*.001,lon:127.04}));elements.push({type:'way',id:100,nodes:[1,2,3],tags:{highway:'footway'}});
+const small=E.createGraph({elements}),stop={id:'test-shelter',kind:'shelter',name:'합성 운영시간 검사 시설',ll:[37.601,127.04],officialFields:{'기본운영_요일':'월,화,수,목,금','기본운영_시작시간':'09:00','기본운영_종료시간':'18:00'}};small.restPlaces=[stop];
+const startTime='2026-11-10T08:59:00Z',timed=E.route(small,[37.6,127.04],[37.602,127.04],{...E.parseState('쉼터에서 쉬고 싶어요'),atTime:startTime});
+const arrival=new Date(Date.parse(startTime)+timed.restStop.firstDistance/65*60000).toISOString();
+results.cases.push({name:'scheduled-close-before-arrival',fixture:'Synthetic straight path; public-style weekday/hour fields; departure 17:59 KST, close 18:00',selected:timed.restStop.name,firstDistance:timed.restStop.firstDistance,departure:startTime,arrival,atDeparture:E.restStatus(stop,startTime),atArrival:E.restStatus(stop,arrival)});
+for(const input of ['내리막을 피하고 싶어요.','내리막이 힘들어서 경사가 없는 길로 가고 싶어요.','오르막을 피하고 싶어요.','계단을 내려갈 수 없어요.','계단이 힘들지 않아요.','쉬운 길로 가고 싶어요.','쉬지 않고 가장 짧은 길로 가요.','휠체어를 쓰지 않습니다.'])results.cases.push({name:'local-parser',input,profile:E.parseState(input)});
+fs.writeFileSync(path.join(__dirname,'module-results.json'),JSON.stringify(results,null,2));
+console.log(JSON.stringify(results,null,2));

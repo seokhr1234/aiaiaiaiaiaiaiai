@@ -1,0 +1,176 @@
+{
+  "baseline": "079c4467786a9e9dd546f434e215904e40ebad50",
+  "cases": [
+    {
+      "name": "reroute-without-required-rest",
+      "fixture": "Real runtime graph, all 229 rest candidates simulated unavailable",
+      "restRequired": true,
+      "restStop": null,
+      "restFulfilled": false,
+      "messages": [
+        "허용한 우회·휴식 간격 안에서 연결 가능한 벤치·쉼터를 찾지 못했어요. 휴식 조건은 충족되지 않았습니다.",
+        "자료 간 차이가 큰 122m는 경사 미확인으로 처리했어요."
+      ]
+    },
+    {
+      "name": "scheduled-close-before-arrival",
+      "fixture": "Synthetic straight path; public-style weekday/hour fields; departure 17:59 KST, close 18:00",
+      "selected": "합성 운영시간 검사 시설",
+      "firstDistance": 111.19499999974084,
+      "departure": "2026-11-10T08:59:00Z",
+      "arrival": "2026-11-10T09:00:42.641Z",
+      "atDeparture": {
+        "eligible": true,
+        "note": "등록 운영시간 안 · 계절 운영·현재 개방·이용 자격은 미확인"
+      },
+      "atArrival": {
+        "eligible": false,
+        "note": "등록 운영시간 밖 · 자동 경유 제외"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "내리막을 피하고 싶어요.",
+      "profile": {
+        "raw": "내리막을 피하고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": false,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "내리막이 힘들어서 경사가 없는 길로 가고 싶어요.",
+      "profile": {
+        "raw": "내리막이 힘들어서 경사가 없는 길로 가고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": false,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "오르막을 피하고 싶어요.",
+      "profile": {
+        "raw": "오르막을 피하고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": true,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "계단을 내려갈 수 없어요.",
+      "profile": {
+        "raw": "계단을 내려갈 수 없어요.",
+        "wheelchair": false,
+        "avoidSteps": true,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "계단이 힘들지 않아요.",
+      "profile": {
+        "raw": "계단이 힘들지 않아요.",
+        "wheelchair": false,
+        "avoidSteps": true,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "쉬운 길로 가고 싶어요.",
+      "profile": {
+        "raw": "쉬운 길로 가고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": true,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "쉬지 않고 가장 짧은 길로 가요.",
+      "profile": {
+        "raw": "쉬지 않고 가장 짧은 길로 가요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": true,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    },
+    {
+      "name": "local-parser",
+      "input": "휠체어를 쓰지 않습니다.",
+      "profile": {
+        "raw": "휠체어를 쓰지 않습니다.",
+        "wheelchair": true,
+        "avoidSteps": true,
+        "avoidSlope": true,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 55,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      }
+    }
+  ]
+}

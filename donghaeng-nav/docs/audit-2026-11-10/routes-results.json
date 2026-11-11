@@ -1,0 +1,867 @@
+{
+  "scope": "Real local browser, missing Gemini key; no field GPS",
+  "cases": [
+    {
+      "destinationName": "library",
+      "input": "가장 짧은 길로 가고 싶어요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "ll": [
+          37.6041524,
+          127.0418124
+        ],
+        "name": "월곡꿈그림도서관",
+        "id": 1149429846,
+        "type": "library"
+      },
+      "profile": {
+        "raw": "가장 짧은 길로 가고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": true,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      },
+      "source": "unavailable",
+      "routeCount": 1,
+      "status": "요청 조건과 연결 검사를 만족하는 추천 후보가 없어요. 아래는 검토용이며 AI 선택 대상이 아니에요.",
+      "routes": [
+        {
+          "length": 358.2229933166448,
+          "assistance": false,
+          "ineligible": true,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "building_overlap",
+              "lengthMeters": 10.525431717797971,
+              "overlapMeters": 7.687935076382703,
+              "buildingIds": [
+                "precision:377051199:42C:816",
+                "osm:building:1149429846"
+              ],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": true,
+            "needsGeometryReview": true,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 118m는 경사 미확인으로 처리했어요."
+          ]
+        }
+      ],
+      "canStartGps": false,
+      "body": "맞춤 경로\n6분\n358m · 예상\n등록 계단 0구간\n\n경사 추정 최대 6.1% · 보도 실측 아님\n\n경로 정보\n\n도착 연결 약 11m 중 약 8m가 정밀지도 건물 도형과 겹칩니다. 출입구·층위 확인 전에는 이 직선을 이동 동선으로 안내할 수 없어요.\n\n도착 진입 위치를 지도에서 수정\n이동 순서 보기 →\n이 길을 선택한 이유GPS 위치 추적경로 재생"
+    },
+    {
+      "destinationName": "school",
+      "input": "가장 짧은 길로 가고 싶어요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "name": "서울사대부중 앞",
+        "ll": [
+          37.595671460099574,
+          127.0383308790316
+        ],
+        "type": "road_arrival",
+        "sourceUrl": "https://www.openstreetmap.org/node/10991332954",
+        "reference": {
+          "name": "fortissimo",
+          "ll": [
+            37.5957319,
+            127.0381472
+          ],
+          "id": 10991332954,
+          "gap": 17.52294612847447
+        },
+        "arrivalNotice": "등록 도로 선분 위 도착 기준점 · 실제 보도·출입구 미확인"
+      },
+      "profile": {
+        "raw": "가장 짧은 길로 가고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": true,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      },
+      "source": "algorithm",
+      "routeCount": 5,
+      "status": "AI 비교를 완료하지 못해 알고리즘 결과를 사용해요.",
+      "routes": [
+        {
+          "length": 754.602621204087,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 118m는 경사 미확인으로 처리했어요.",
+            "교량·지하·계단 등 50m에는 지형 높이를 적용하지 않았어요."
+          ]
+        },
+        {
+          "length": 835.8065958658888,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 118m는 경사 미확인으로 처리했어요.",
+            "교량·지하·계단 등 58m에는 지형 높이를 적용하지 않았어요."
+          ]
+        },
+        {
+          "length": 941.158787846329,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 121m는 경사 미확인으로 처리했어요.",
+            "교량·지하·계단 등 50m에는 지형 높이를 적용하지 않았어요."
+          ]
+        },
+        {
+          "length": 942.5952880127768,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 121m는 경사 미확인으로 처리했어요.",
+            "교량·지하·계단 등 58m에는 지형 높이를 적용하지 않았어요."
+          ]
+        },
+        {
+          "length": 1070.7579762838639,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 69m는 경사 미확인으로 처리했어요.",
+            "교량·지하·계단 등 50m에는 지형 높이를 적용하지 않았어요."
+          ]
+        }
+      ],
+      "canStartGps": true,
+      "body": "기본 후보\n12분\n755m · 예상\n등록 계단 0구간\n\n경사 추정 최대 5.9% · 보도 실측 아님\n\n경로 정보\n이동 순서 보기 →\n이 길을 선택한 이유안내 시작경로 재생\n다른 구간 연결\n13분\n836m · 예상\n등록 계단 0구간\n\n경사 추정 최대 8.4% · 보도 실측 아님\n\n경로 정보\n경사 부담 우선\n15분\n941m · 예상\n등록 계단 0구간\n\n경사 추정 최대 6.5% · 보도 실측 아님\n\n경로 정보\n다른 구간 연결\n15분\n943m · 예상\n등록 계단 0구간\n\n경사 추정 최대 6.1% · 보도 실측 아님\n\n경로 정보\n다른 구간 연결\n17분\n1071m · 예상\n등록 계단 0구간\n\n경사 추정 최대 6.1% · 보도 실측 아님\n\n경로 정보"
+    },
+    {
+      "destinationName": "library",
+      "input": "중간에 벤치에서 쉬고 싶어요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "ll": [
+          37.6041524,
+          127.0418124
+        ],
+        "name": "월곡꿈그림도서관",
+        "id": 1149429846,
+        "type": "library"
+      },
+      "profile": {
+        "raw": "중간에 벤치에서 쉬고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": true,
+        "restKind": "bench",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      },
+      "source": "unavailable",
+      "routeCount": 1,
+      "status": "요청 조건과 연결 검사를 만족하는 추천 후보가 없어요. 아래는 검토용이며 AI 선택 대상이 아니에요.",
+      "routes": [
+        {
+          "length": 424.03832150445396,
+          "rest": "월곡역 · 엘리베이터와 세 갈래 횡단보도 사이 삼각형 쉼터",
+          "assistance": false,
+          "ineligible": true,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "building_overlap",
+              "lengthMeters": 10.525431717797971,
+              "overlapMeters": 7.687935076382703,
+              "buildingIds": [
+                "precision:377051199:42C:816",
+                "osm:building:1149429846"
+              ],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": {
+              "status": "unverified",
+              "lengthMeters": 10.897134734299383,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "needsEndpointReview": true,
+            "needsGeometryReview": true,
+            "fieldVerified": false
+          },
+          "messages": [
+            "휴식 장소는 시설 기준·추정 위치예요. 실제 의자와 출입 동선을 확인해 주세요.",
+            "자료 간 차이가 큰 105m는 경사 미확인으로 처리했어요."
+          ]
+        }
+      ],
+      "canStartGps": false,
+      "body": "벤치 경유\n7분\n424m · 예상\n등록 계단 0구간\n\n경사 추정 최대 8.5% · 보도 실측 아님\n\n☕ 월곡역 · 엘리베이터와 세 갈래 횡단보도 사이 삼각형 쉼터 · 약 2분 뒤 휴식\n\n경로 정보\n\n도착 연결 약 11m 중 약 8m가 정밀지도 건물 도형과 겹칩니다. 출입구·층위 확인 전에는 이 직선을 이동 동선으로 안내할 수 없어요.\n\n도착 진입 위치를 지도에서 수정\n이동 순서 보기 →\n이 길을 선택한 이유GPS 위치 추적경로 재생"
+    },
+    {
+      "destinationName": "triangle",
+      "input": "가장 짧은 길로 가고 싶어요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "name": "월곡역 · 엘리베이터와 세 갈래 횡단보도 사이 삼각형 쉼터",
+        "ll": [
+          37.60235,
+          127.0416
+        ],
+        "facilityId": "review:wolgok-more:elevator-crosswalk-triangle"
+      },
+      "profile": {
+        "raw": "가장 짧은 길로 가고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": true,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      },
+      "source": "algorithm",
+      "routeCount": 3,
+      "status": "AI 비교를 완료하지 못해 알고리즘 결과를 사용해요.",
+      "routes": [
+        {
+          "length": 58.63478069067369,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 1.2636734936038576,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": []
+        },
+        {
+          "length": 78.835934784004,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 1.2636734936038576,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": []
+        },
+        {
+          "length": 127.3299594106869,
+          "assistance": false,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 1.2636734936038576,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": []
+        }
+      ],
+      "canStartGps": true,
+      "body": "기본 후보\n1분\n59m · 예상\n등록 계단 0구간\n\n경사 추정 최대 4.7% · 보도 실측 아님\n\n경로 정보\n이동 순서 보기 →\n이 길을 선택한 이유안내 시작경로 재생\n경사 부담 우선\n2분\n79m · 예상\n등록 계단 0구간\n\n경사 추정 최대 4.7% · 보도 실측 아님\n\n경로 정보\n다른 갈림길\n2분\n127m · 예상\n등록 계단 0구간\n\n경사 추정 최대 8.3% · 보도 실측 아님\n\n경로 정보"
+    },
+    {
+      "destinationName": "stop",
+      "input": "가장 짧은 길로 가고 싶어요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "name": "월곡역 정류장 · KB국민은행 앞 승차대 의자",
+        "ll": [
+          37.60306999,
+          127.0423481
+        ],
+        "facilityId": "review:wolgok-stop-kb-202606"
+      },
+      "profile": {
+        "raw": "가장 짧은 길로 가고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": true,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      },
+      "source": "unavailable",
+      "routeCount": 1,
+      "status": "요청 조건과 연결 검사를 만족하는 추천 후보가 없어요. 아래는 검토용이며 AI 선택 대상이 아니에요.",
+      "routes": [
+        {
+          "length": 179.65067515005174,
+          "assistance": false,
+          "ineligible": true,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "building_overlap",
+              "lengthMeters": 4.726593420371303,
+              "overlapMeters": 2.0167010874525553,
+              "buildingIds": [
+                "osm:building:750325723"
+              ],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": true,
+            "needsGeometryReview": true,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 43m는 경사 미확인으로 처리했어요."
+          ]
+        }
+      ],
+      "canStartGps": false,
+      "body": "맞춤 경로\n3분\n180m · 예상\n등록 계단 0구간\n\n경사 추정 최대 4.0% · 보도 실측 아님\n\n경로 정보\n\n도착 연결 약 5m 중 약 2m가 정밀지도 건물 도형과 겹칩니다. 출입구·층위 확인 전에는 이 직선을 이동 동선으로 안내할 수 없어요.\n\n도착 진입 위치를 지도에서 수정\n이동 순서 보기 →\n이 길을 선택한 이유GPS 위치 추적경로 재생"
+    },
+    {
+      "destinationName": "school",
+      "input": "휠체어를 이용해요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "name": "서울사대부중 앞",
+        "ll": [
+          37.595671460099574,
+          127.0383308790316
+        ],
+        "type": "road_arrival",
+        "sourceUrl": "https://www.openstreetmap.org/node/10991332954",
+        "reference": {
+          "name": "fortissimo",
+          "ll": [
+            37.5957319,
+            127.0381472
+          ],
+          "id": 10991332954,
+          "gap": 17.52294612847447
+        },
+        "arrivalNotice": "등록 도로 선분 위 도착 기준점 · 실제 보도·출입구 미확인"
+      },
+      "profile": {
+        "raw": "휠체어를 이용해요.",
+        "wheelchair": true,
+        "avoidSteps": true,
+        "avoidSlope": true,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": 5,
+        "short": false,
+        "restMinutes": null,
+        "speed": 55,
+        "recognized": true,
+        "source": "이 기기에서 문장 규칙으로 해석",
+        "wheelchairSlopePolicy": "conservative-heuristic-v1"
+      },
+      "source": "unavailable",
+      "routeCount": 2,
+      "status": "요청 조건과 연결 검사를 만족하는 추천 후보가 없어요. 아래는 검토용이며 AI 선택 대상이 아니에요.",
+      "routes": [
+        {
+          "length": 2902.0802136336424,
+          "assistance": true,
+          "ineligible": true,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "노면 경사를 평가할 수 없는 구조물·고도 결측 통과량을 먼저 최소화한 뒤 경사와 이동 부담을 비교합니다. 미확인을 평지로 취급하지 않습니다.",
+            "휠체어 경사 회피 조건을 만족하는 경로가 없습니다. 아래는 급경사 위험을 포함한 검토용 대안이며 독립 이동 추천이 아닙니다. 현장 확인과 이동 지원이 필요합니다.",
+            "기존 단일 추정이 없는 378m도 보완 지형·자료 범위·구조물로 분류했습니다. 노면 실측과 통행 상태는 미확인입니다.",
+            "요청한 참고 경사 5% 회피 조건을 충족하지 못한 위험 대안입니다. 이동 지원과 현장 확인이 필요합니다.",
+            "지형 고도로 추정한 경사를 반영했어요. 보도 실측·짧은 급경사·턱 정보와는 다를 수 있어요.",
+            "휠체어 추천 정책: 등록·참고 추정 5% 초과 회피(요청이 더 엄격하면 그 값), 경사 미확인 구간 부담 우선 반영. 5%는 추천 정책값이며 안전 기준·노면 경사 보장이 아닙니다.",
+            "보도 턱·폭·출입구는 미검증입니다. 휠체어 통행 가능을 보장하지 않아요.",
+            "참고 추정이 요청 상한을 넘는 98m가 포함돼요. 노면 실측값은 미확인입니다.",
+            "자료 간 차이가 큰 255m는 경사 미확인으로 처리했어요."
+          ]
+        },
+        {
+          "length": 866.1963890258164,
+          "assistance": true,
+          "ineligible": true,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "unverified",
+              "lengthMeters": 0,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": false,
+            "needsGeometryReview": false,
+            "fieldVerified": false
+          },
+          "messages": [
+            "사용자가 양쪽 승강기 존재를 확인한 육교 이용 검토 대안입니다. 점선은 기존 지도 접근 지점을 잇는 연결 가설이며 승강기 문 위치가 아닙니다. 승강기 문·보도 접속·운행·상판 경사 확인 전 GPS 안내는 제한합니다.",
+            "기존 단일 추정이 없는 38m도 보완 지형·자료 범위·구조물로 분류했습니다. 노면 실측과 통행 상태는 미확인입니다.",
+            "지형 고도로 추정한 경사를 반영했어요. 보도 실측·짧은 급경사·턱 정보와는 다를 수 있어요.",
+            "교량·지하·계단 등 10m에는 지형 높이를 적용하지 않았어요.",
+            "기존 단일 추정이 없는 226m도 보완 지형·자료 범위·구조물로 분류했습니다. 노면 실측과 통행 상태는 미확인입니다.",
+            "자료 간 차이가 큰 118m는 경사 미확인으로 처리했어요.",
+            "교량·지하·계단 등 103m에는 지형 높이를 적용하지 않았어요.",
+            "등록 계단·휠체어 통행 불가 표시는 제외했습니다. 지형 추정 상단 8.84%, 참고 상한을 넘는 추정 구간 약 184m. 이용 경험 제보와 지형 추정이 다르며, 실측 노면 경사·승강기 운행은 확인되지 않았습니다."
+          ]
+        }
+      ],
+      "canStartGps": false,
+      "body": "대체 경로\n53분\n2902m · 예상\n등록 계단 0구간\n\n경로 미리보기 · 실제 GPS 안내 아님\n\n경사 추정 최대 7.3% · 보도 실측 아님\n\n경로 정보\n이동 순서 보기 →\n이 길을 선택한 이유GPS 위치 추적경로 재생\n육교 경유\n16분\n866m · 예상\n등록 계단 0구간\n\n경로 미리보기 · 실제 GPS 안내 아님\n\n경로 정보"
+    },
+    {
+      "destinationName": "library",
+      "input": "내리막을 피하고 싶어요.",
+      "origin": [
+        37.60192,
+        127.0414554
+      ],
+      "destination": {
+        "ll": [
+          37.6041524,
+          127.0418124
+        ],
+        "name": "월곡꿈그림도서관",
+        "id": 1149429846,
+        "type": "library"
+      },
+      "profile": {
+        "raw": "내리막을 피하고 싶어요.",
+        "wheelchair": false,
+        "avoidSteps": false,
+        "avoidSlope": false,
+        "rest": false,
+        "restKind": "any",
+        "maxSlope": null,
+        "short": false,
+        "restMinutes": null,
+        "speed": 65,
+        "recognized": false,
+        "source": "이 기기에서 문장 규칙으로 해석"
+      },
+      "source": "unavailable",
+      "routeCount": 1,
+      "status": "요청 조건과 연결 검사를 만족하는 추천 후보가 없어요. 아래는 검토용이며 AI 선택 대상이 아니에요.",
+      "routes": [
+        {
+          "length": 364.9899328220638,
+          "assistance": false,
+          "ineligible": true,
+          "connectionReview": {
+            "origin": {
+              "status": "unverified",
+              "lengthMeters": 2.6348671712999328,
+              "overlapMeters": 0,
+              "buildingIds": [],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "destination": {
+              "status": "building_overlap",
+              "lengthMeters": 10.525431717797971,
+              "overlapMeters": 7.687935076382703,
+              "buildingIds": [
+                "precision:377051199:42C:816",
+                "osm:building:1149429846"
+              ],
+              "source": "NGII 1:1,000 + OSM mapped building boundaries",
+              "precisionHash": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+              "contextTimestamp": "2026-10-28T05:30:27Z",
+              "fieldVerified": false,
+              "passability": "unverified",
+              "notice": "건물 도형과의 2차원 겹침 검사입니다. 출입구·층위·통행 가능을 확정하지 않습니다."
+            },
+            "bodyConflicts": [],
+            "rest": null,
+            "needsEndpointReview": true,
+            "needsGeometryReview": true,
+            "fieldVerified": false
+          },
+          "messages": [
+            "자료 간 차이가 큰 122m는 경사 미확인으로 처리했어요."
+          ]
+        }
+      ],
+      "canStartGps": false,
+      "body": "맞춤 경로\n6분\n365m · 예상\n등록 계단 0구간\n\n경사 추정 최대 7.4% · 보도 실측 아님\n\n경로 정보\n\n도착 연결 약 11m 중 약 8m가 정밀지도 건물 도형과 겹칩니다. 출입구·층위 확인 전에는 이 직선을 이동 동선으로 안내할 수 없어요.\n\n도착 진입 위치를 지도에서 수정\n이동 순서 보기 →\n이 길을 선택한 이유GPS 위치 추적경로 재생"
+    }
+  ],
+  "errors": []
+}

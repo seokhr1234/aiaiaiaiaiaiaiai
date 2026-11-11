@@ -1,0 +1,154 @@
+{
+  "pass": true,
+  "scope": "Local Node, cold Chromium mobile viewport, 4 Mbps/80ms/4x CPU, OSM tiles aborted; not a physical phone or Vercel speed claim",
+  "beforeBootMs": 184664,
+  "bootMs": 18037,
+  "precision": 16169,
+  "buildings": 15483,
+  "heap": 177208957,
+  "maxLongTask": 4650,
+  "requests": [
+    {
+      "path": "/leaflet.css",
+      "bytes": 3832
+    },
+    {
+      "path": "/style.css",
+      "bytes": 16134
+    },
+    {
+      "path": "/leaflet.js",
+      "bytes": 43006
+    },
+    {
+      "path": "/terrain-evidence.js",
+      "bytes": 1130
+    },
+    {
+      "path": "/seoul-base.js",
+      "bytes": 3617
+    },
+    {
+      "path": "/engine.js",
+      "bytes": 10023
+    },
+    {
+      "path": "/facilities.js",
+      "bytes": 9663
+    },
+    {
+      "path": "/final-model.js",
+      "bytes": 2012
+    },
+    {
+      "path": "/condition-ai.js",
+      "bytes": 1138
+    },
+    {
+      "path": "/condition-request.js",
+      "bytes": 1721
+    },
+    {
+      "path": "/route-choice.js",
+      "bytes": 2927
+    },
+    {
+      "path": "/route-candidates.js",
+      "bytes": 3506
+    },
+    {
+      "path": "/portable-ai.js",
+      "bytes": 2255
+    },
+    {
+      "path": "/navigation-policy.js",
+      "bytes": 644
+    },
+    {
+      "path": "/navigation-plan.js",
+      "bytes": 3462
+    },
+    {
+      "path": "/gps-quality.js",
+      "bytes": 1739
+    },
+    {
+      "path": "/navigation-core.js",
+      "bytes": 3280
+    },
+    {
+      "path": "/navigation-session.js",
+      "bytes": 2271
+    },
+    {
+      "path": "/endpoint-routing.js",
+      "bytes": 2751
+    },
+    {
+      "path": "/access-review.js",
+      "bytes": 2624
+    },
+    {
+      "path": "/navigation-routing.js",
+      "bytes": 2013
+    },
+    {
+      "path": "/navigation-ui.js",
+      "bytes": 3104
+    },
+    {
+      "path": "/precision-connections.js",
+      "bytes": 3135
+    },
+    {
+      "path": "/precision-map.js",
+      "bytes": 4371
+    },
+    {
+      "path": "/gps-tracker.js",
+      "bytes": 1262
+    },
+    {
+      "path": "/data-loader.js",
+      "bytes": 1387
+    },
+    {
+      "path": "/saved-data.js",
+      "bytes": 798
+    },
+    {
+      "path": "/app.js",
+      "bytes": 26157
+    },
+    {
+      "path": "/map-data.json.gz",
+      "bytes": 450975
+    },
+    {
+      "path": "/map-context.json.gz",
+      "bytes": 506452
+    },
+    {
+      "path": "/terrain-data.json.gz",
+      "bytes": 1147071
+    },
+    {
+      "path": "/data/accessibility/seoul/seoul-facilities.geojson.gz",
+      "bytes": 1776540
+    },
+    {
+      "path": "/data/precision/access-reports.json.gz",
+      "bytes": 1028
+    },
+    {
+      "path": "/data/precision/precision-map.geojson.gz",
+      "bytes": 1635640
+    },
+    {
+      "path": "/data/precision/crossings-review.geojson.gz",
+      "bytes": 59762
+    }
+  ],
+  "entryReview": true,
+  "fieldVerified": false
+}

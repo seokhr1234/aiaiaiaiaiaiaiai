@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "baseline_commit": "079c4467786a9e9dd546f434e215904e40ebad50",
+  "original_datasets_byte_identical": 9,
+  "protected_code_hashes": 19,
+  "verified_gzip_assets": 9,
+  "html_copies": 5,
+  "html_sha256": "7c019cbce81d86f46b892471179ad36bdd3e3faae2612238e60facdc223c0013",
+  "package_checksums_match": true,
+  "tracked_research_and_source_data_unchanged": true,
+  "prior_audit_preserved": "docs/audit-2026-11-10 (historical reproduction files retained; not rewritten)",
+  "passing_reports": [
+    "audit-fixes-unit-results",
+    "audit-fixes-ui-results",
+    "audit-fixes-boot-results",
+    "navigation-core-results",
+    "route-choice-core-results",
+    "route-choice-real-results",
+    "route-choice-ui-results",
+    "main-navigation-results",
+    "vercel-api-results",
+    "evidence-results"
+  ],
+  "new_slope_values_promoted": 0,
+  "physical_gps_verified": false,
+  "field_verified": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

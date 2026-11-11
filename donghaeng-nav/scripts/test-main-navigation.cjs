@@ -39,6 +39,7 @@ async function main(){
   assert.equal(state.precision,16169);assert(state.buildings>10000);assert.equal(state.tracker,'function');assert.equal(state.policy,35);
   await page.screenshot({path:path.join(out,'main-navigation-desktop.png')});
   checks.push('Default browser entry boots precision 16169 features, combined building audit, GPS tracker and 35m policy');
+  await page.locator('[data-destination="school"]').click();
   await page.locator('#condition').fill('가장 짧은 길로 가고 싶어요.');await page.locator('#find-route').click();
   await page.waitForFunction(()=>routes.length&&!document.querySelector('#find-route').disabled);
   assert.equal(requests.filter(r=>!r.generationConfig.responseJsonSchema.properties.selectedId).length,1);assert.equal(requests[0].contents[0].parts[0].text,'가장 짧은 길로 가고 싶어요.');
@@ -77,7 +78,7 @@ async function main(){
   await page.screenshot({path:path.join(out,'main-navigation-mobile.png')});
   checks.push('Mobile menu/guide and 320px/393px/landscape layouts without horizontal overflow');
   const broken=await context.newPage();broken.on('pageerror',e=>errors.push(e.message));
-  await broken.route('**/data/precision/precision-map.geojson',r=>r.fulfill({status:200,contentType:'application/json',body:'invalid JSON'}));
+  await broken.route('**/data/precision/precision-map.geojson*',r=>r.fulfill({status:200,contentType:'application/json',body:'invalid JSON'}));
   await broken.goto(url+'/app/');await broken.waitForFunction(()=>document.querySelector('#boot-status').textContent.includes('오류'));
   assert(await broken.locator('#find-route').isDisabled());await broken.close();
   checks.push('Invalid runtime dataset shows boot error and keeps route action disabled');

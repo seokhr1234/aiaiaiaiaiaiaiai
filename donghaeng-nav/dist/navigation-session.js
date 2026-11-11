@@ -29,7 +29,10 @@ function create(plan,{geolocation=globalThis.navigator?.geolocation,now=()=>Date
   const s=core.snapshot();if(!active||inFlight||!reroute||!s.fixUsable||!s.fix||s.fix.accuracy>Policy.rerouteAccuracy||now()-s.fix.timestamp>Policy.maxSampleAge||now()-lastReroute<Policy.rerouteCooldown)return false;
   inFlight=true;phase='rerouting';const generation=epoch,version=core.plan.version,profile=core.plan.profile;emit();
   try{const result=await reroute(s.fix,profile,{restOutcome,unavailableRestIds:[...unavailableRestIds],plan:core.plan});if(!active||generation!==epoch||version!==core.plan.version)return false;
-   if(!result||result.assistancePreview)throw Error('unsafe replacement');core=Core.create(result);quality.reset();displayFix=null;lastReroute=now();phase='waiting';emit();return true;
+   if(!result||result.assistancePreview)throw Error('unsafe replacement');
+   for(const key of ['wheelchair','avoidSteps','avoidSlope','rest','restKind','maxSlope','restMinutes'])if(key in profile&&result.profile?.[key]!==profile[key])throw Error('changed profile');
+   if(profile.rest&&restOutcome!=='completed'&&(!result.rest||result.restFulfilled||profile.restKind==='shelter'&&result.rest.kind!=='shelter'||profile.restKind==='bench'&&result.rest.kind==='shelter'||profile.restMinutes&&(!Number.isFinite(result.rest.firstDistance)||result.rest.firstDistance/(profile.speed||65)>profile.restMinutes)))throw Error('missing required rest');
+   core=Core.create(result);quality.reset();displayFix=null;lastReroute=now();phase='waiting';emit();return true;
   }catch{if(generation===epoch&&active){lastReroute=now();phase='reroute-failed';emit()}return false}
   finally{if(generation===epoch){inFlight=false;emit()}}
  }

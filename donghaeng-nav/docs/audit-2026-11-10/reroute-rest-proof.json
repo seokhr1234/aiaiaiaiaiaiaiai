@@ -1,0 +1,11 @@
+{
+  "case": "all rest unavailable reroute",
+  "restRequired": true,
+  "restStop": null,
+  "restFulfilled": false,
+  "messages": [
+    "허용한 우회·휴식 간격 안에서 연결 가능한 벤치·쉼터를 찾지 못했어요. 휴식 조건은 충족되지 않았습니다.",
+    "자료 간 차이가 큰 122m는 경사 미확인으로 처리했어요."
+  ],
+  "excludedPlaces": 229
+}

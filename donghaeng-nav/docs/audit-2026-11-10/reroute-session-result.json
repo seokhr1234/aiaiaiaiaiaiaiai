@@ -1,0 +1,15 @@
+{
+  "fixture": "Real route and navigation session; replacement callback simulates all local rest candidates unavailable",
+  "initialRest": "월곡역 정류장 · KB국민은행 앞 승차대 의자",
+  "beforePhase": "navigating",
+  "fixUsable": true,
+  "rerouteApplied": true,
+  "resultingRestRequired": true,
+  "resultingRest": null,
+  "resultingRestFulfilled": false,
+  "resultingPhase": "waiting",
+  "routeMessages": [
+    "허용한 우회·휴식 간격 안에서 연결 가능한 벤치·쉼터를 찾지 못했어요. 휴식 조건은 충족되지 않았습니다.",
+    "자료 간 차이가 큰 122m는 경사 미확인으로 처리했어요."
+  ]
+}

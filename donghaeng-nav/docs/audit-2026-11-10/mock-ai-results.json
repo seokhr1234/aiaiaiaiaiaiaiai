@@ -1,0 +1,94 @@
+{
+  "scope": "Mock provider responses only; real AI key unavailable",
+  "selection": {
+    "source": "Gemini",
+    "selectedId": "R2",
+    "displayedId": "R2"
+  },
+  "explanation": "동행길 · 경로 비교\n×\nGemini가 이 길을 선택한 이유\n\nGemini가 후보 선택 당시 반환한 설명입니다.\n\n제공된 후보 수치를 비교한 모의 선택입니다.\n\n선택한 장점\n이동 거리를 참고했어요.\n감수한 점\n자료 차이가 있는 구간을 확인하세요.\n미확인 사항\n현재 노면과 출입 동선은 미확인입니다.\n후보 탐색 결과\n다른 후보와 수치 비교\n\n참고 경사는 보도 실측이 아닙니다. 미확인 구간과 시설 상태는 현장 확인이 필요해요.\n\n선택 시각 · 2026. 11. 10. 오전 11:55:23",
+  "canceled": {
+    "routeCount": 0,
+    "selection": null,
+    "disabled": false,
+    "condition": "휠체어를 이용해요."
+  },
+  "requests": [
+    {
+      "endpoint": "condition",
+      "keys": [
+        "condition"
+      ]
+    },
+    {
+      "endpoint": "selection",
+      "keys": [
+        "condition",
+        "profile",
+        "candidates"
+      ],
+      "profileKeys": [
+        "wheelchair",
+        "avoidSteps",
+        "avoidSlope",
+        "rest",
+        "short",
+        "maxSlope",
+        "restKind"
+      ],
+      "candidateKeys": [
+        "id",
+        "distanceMeters",
+        "minutes",
+        "maxReferenceSlope",
+        "above3Meters",
+        "unknownMeters",
+        "unresolvedMeters",
+        "stairsMeters",
+        "roughMeters",
+        "connectionMeters",
+        "restFulfilled",
+        "fieldVerified"
+      ],
+      "candidateCount": 5
+    },
+    {
+      "endpoint": "condition",
+      "keys": [
+        "condition"
+      ]
+    },
+    {
+      "endpoint": "selection",
+      "keys": [
+        "condition",
+        "profile",
+        "candidates"
+      ],
+      "profileKeys": [
+        "wheelchair",
+        "avoidSteps",
+        "avoidSlope",
+        "rest",
+        "short",
+        "maxSlope",
+        "restKind"
+      ],
+      "candidateKeys": [
+        "id",
+        "distanceMeters",
+        "minutes",
+        "maxReferenceSlope",
+        "above3Meters",
+        "unknownMeters",
+        "unresolvedMeters",
+        "stairsMeters",
+        "roughMeters",
+        "connectionMeters",
+        "restFulfilled",
+        "fieldVerified"
+      ],
+      "candidateCount": 5
+    }
+  ],
+  "errors": []
+}

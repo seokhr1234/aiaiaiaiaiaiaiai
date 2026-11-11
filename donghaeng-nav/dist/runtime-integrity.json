@@ -63,8 +63,8 @@
     }
   ],
   "protected_code": {
-    "engine.js": "a3825aad705ea36974d680d5ef6d667a22e5991576e2f689b71031af423fae03",
-    "endpoint-routing.js": "6316704c18220f12bfefbc124a7e570902aa1b5ad80d621fbfa6ba15cd950536",
+    "engine.js": "02b0f3ba11442bd2e3cf675dd97b15472e5f2c29ecfd3b85d8cb36f60cb2d651",
+    "endpoint-routing.js": "a9e717e856a6d55ed624b1de3080644228d8bbcf90c7d16100bca00da030b606",
     "access-review.js": "12b042aca301113e62c45c823751819a65fd96f3ca8f5331af91f27b5dc72493",
     "precision-connections.js": "f6ed2afb3928c2b19bdb18b829620595b6677eb4b9b3be53f22a17a5d3b8ac74",
     "route-candidates.js": "e8a3985a3e5f7642c04c747d601d545d841029ee5815ecf6d0c2b17afcdbbf08",
@@ -73,53 +73,73 @@
     "gps-quality.js": "81b64a4b9a714dc5f994572e08de9d105b2d76b64360756a64f712c6e48a83d6",
     "gps-tracker.js": "75cb8f9b1553be32a955f63983c31accc0c341f11a148daf35c27851cbf83838",
     "navigation-core.js": "aa344a5c2f0da6c4bd4fe2b4a60f005393359a35b50559eb258effbd116550db",
-    "navigation-session.js": "ef4088055b554947666de9894bae39bee5ac64ce9307f840d56603b598bae965",
+    "navigation-session.js": "80de01464a955f7a10a46beec5b843946803c9dae5e2ccd3b6f3927be0ce4d7a",
     "navigation-ui.js": "1477537a531843e9abd4d8d558d5f4153758590abded33227eee65457f3a0072",
     "terrain-evidence.js": "9bb1879ad6f11240ec636b00d7bf715e88189dd909449009d0fa78a99a5aec72",
-    "facilities.js": "e08a1f86e98b59b8a89d237ba36dd42e5e435091c6aee7f720c20080b49ad3dc",
-    "final-model.js": "f05592756fa21e66968205dde41d4bba65bdf05a91cc826da87a1f114ea66426"
+    "facilities.js": "e88796878338d640b1fb3df70e1f84f4ddc931a5661921787ac5e5ff8cd7ceb8",
+    "final-model.js": "f05592756fa21e66968205dde41d4bba65bdf05a91cc826da87a1f114ea66426",
+    "app.js": "d4151f3e87fb375a4798e2c8c581fa499af0f4bd79a5bee5a03a8c4f7775340c",
+    "data-loader.js": "40be9a148797b51785154fe524b999c80230d3fca461b4b7c34cd968f541b196",
+    "seoul-base.js": "37ad7ae6acccc033106353cc1266ffd0a1ef9818e28065cca36f278bec65726b",
+    "saved-data.js": "8440c0b9883dbd26c4ac5658883c4192f001a34fdc0a2e93a2763612d66512f7"
   },
   "field_verified": false,
   "precision_role": "Review geometry and building-overlap screening; not a verified pedestrian network",
   "code_revision": {
-    "date": "2026-11-05",
-    "change": "Attach round4 official CSV recheck to 4092 existing shelters and three address-matched notices; flag two hours conflicts and withhold them from automatic rest; no geometry or slope changes",
+    "date": "2026-11-10",
+    "change": "Audit fixes: preserve reroute/rest contract, arrival-time shelter check, local negations/downhill, responsive evidence popups, storage recovery, explicit entry selection, focus restoration and compressed/deferred boot",
     "validation": [
-      "docs/research-map-linkage-results.json",
-      "docs/evidence-results.json",
-      "docs/research-map-linkage-ui-results.json",
+      "docs/audit-fixes-unit-results.json",
       "docs/navigation-core-results.json",
-      "docs/main-navigation-results.json",
-      "docs/route-choice-real-results.json"
+      "docs/route-choice-core-results.json",
+      "docs/route-choice-real-results.json",
+      "docs/audit-fixes-ui-results.json",
+      "docs/audit-fixes-boot-results.json",
+      "docs/main-navigation-results.json"
     ],
     "field_verified": false,
     "new_slope_values_promoted": 0,
-    "dataset_scope": "One facility metadata dataset updated; eight other runtime datasets and thirteen previously protected code files unchanged; facility display and rest selection added to protected code",
+    "dataset_scope": "All nine original runtime datasets byte-identical; deterministic gzip assets generated separately; routing data and slope weights unchanged",
     "previous_revision": {
       "date": "2026-11-05",
-      "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
+      "change": "Attach round4 official CSV recheck to 4092 existing shelters and three address-matched notices; flag two hours conflicts and withhold them from automatic rest; no geometry or slope changes",
       "validation": [
-        "docs/gps-quality-results.json",
-        "docs/gps-quality-ui-results.json",
+        "docs/research-map-linkage-results.json",
         "docs/evidence-results.json",
+        "docs/research-map-linkage-ui-results.json",
         "docs/navigation-core-results.json",
         "docs/main-navigation-results.json",
         "docs/route-choice-real-results.json"
       ],
       "field_verified": false,
       "new_slope_values_promoted": 0,
-      "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+      "dataset_scope": "One facility metadata dataset updated; eight other runtime datasets and thirteen previously protected code files unchanged; facility display and rest selection added to protected code",
       "previous_revision": {
-        "date": "2026-11-04",
-        "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+        "date": "2026-11-05",
+        "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
         "validation": [
-          "docs/route-choice-core-results.json",
-          "docs/route-choice-ui-results.json",
-          "docs/route-choice-real-results.json",
-          "docs/navigation-core-results.json"
+          "docs/gps-quality-results.json",
+          "docs/gps-quality-ui-results.json",
+          "docs/evidence-results.json",
+          "docs/navigation-core-results.json",
+          "docs/main-navigation-results.json",
+          "docs/route-choice-real-results.json"
         ],
         "field_verified": false,
-        "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+        "new_slope_values_promoted": 0,
+        "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+        "previous_revision": {
+          "date": "2026-11-04",
+          "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+          "validation": [
+            "docs/route-choice-core-results.json",
+            "docs/route-choice-ui-results.json",
+            "docs/route-choice-real-results.json",
+            "docs/navigation-core-results.json"
+          ],
+          "field_verified": false,
+          "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+        }
       }
     }
   }

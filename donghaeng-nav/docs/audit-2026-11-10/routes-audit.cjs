@@ -1,0 +1,10 @@
+const pw=require('playwright'),fs=require('node:fs'),path=require('node:path');
+(async()=>{const browser=await pw.chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const context=await browser.newContext({viewport:{width:1440,height:1000}});await context.route('https://**',r=>r.abort());const p=await context.newPage(),results=[],errors=[];p.on('pageerror',e=>errors.push(e.message));
+try{await p.goto('http://127.0.0.1:4173');await p.waitForFunction(()=>!document.querySelector('#find-route').disabled,null,{timeout:60000});
+for(const [destinationName,input] of [['library','가장 짧은 길로 가고 싶어요.'],['school','가장 짧은 길로 가고 싶어요.'],['library','중간에 벤치에서 쉬고 싶어요.'],['triangle','가장 짧은 길로 가고 싶어요.'],['stop','가장 짧은 길로 가고 싶어요.'],['school','휠체어를 이용해요.'],['library','내리막을 피하고 싶어요.']]){
+ await p.locator('[data-destination="'+destinationName+'"]').click();await p.locator('#condition').fill(input);await p.locator('#find-route').click();await p.waitForFunction(()=>!document.querySelector('#find-route').disabled&&!selectionRequest&&!analysisRequest,null,{timeout:90000});
+ const result=await p.evaluate(()=>({origin,destination,profile,source:routeSelection?.source,routeCount:routes.length,status:document.querySelector('#search-status').textContent,routes:routes.map(r=>({length:r.totalLength,rest:r.restStop?.name,assistance:r.assistancePreview,ineligible:r.selectionIneligible,connectionReview:r.connectionReview,messages:r.messages})),canStartGps:[...document.querySelectorAll('.navigation-start')].some(x=>!x.disabled),body:document.querySelector('#routes').innerText}));
+ results.push({destinationName,input,...result});console.log(destinationName,input,result.source,result.routeCount,result.canStartGps);fs.writeFileSync(path.join(__dirname,'routes-results.json'),JSON.stringify({scope:'Real local browser, missing Gemini key; no field GPS',cases:results,errors},null,2));
+ if(destinationName==='library'&&input.startsWith('가장'))await p.screenshot({path:path.join(__dirname,'default-library-route.png')});
+}
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

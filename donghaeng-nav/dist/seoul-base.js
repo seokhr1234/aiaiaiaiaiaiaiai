@@ -39,7 +39,7 @@ async function showFallback(text){
 needsFallback=true;report('fallback',text);
 try{
 if(!fallbackPromise)fallbackPromise=(async()=>{const embedded=document.getElementById('bundled-seoul-base');let data;
-if(embedded)data=JSON.parse(embedded.textContent);else{const response=await fetch('data/accessibility/seoul/seoul-base.json');if(!response.ok)throw Error('base unavailable');data=await response.json()}
+if(embedded){await root.DONGHAENG_LOAD_DATA?.(embedded.id);data=JSON.parse(embedded.textContent)}else{const response=await fetch('data/accessibility/seoul/seoul-base.json');if(!response.ok)throw Error('base unavailable');data=await response.json()}
 if(!Array.isArray(data.features)||!data.features.length)throw Error('empty base');
 return offlineLayer(L,map,data)})();
 fallback=await fallbackPromise;if(needsFallback&&!disposed&&!map.hasLayer(fallback))fallback.addTo(map);

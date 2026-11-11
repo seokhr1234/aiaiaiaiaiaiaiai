@@ -223,3 +223,10 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
 .facility-popup .facility-evidence-warning{padding:10px;border:1px solid #a15c15;border-radius:8px;background:#fff4df;color:#623707;font-weight:600;line-height:1.5}
 
 .facility-popup h3{white-space:normal;overflow-wrap:anywhere}
+
+.facility-popup dl,.facility-popup p{font-size:13px;line-height:1.6}.facility-popup dt{color:#4c5d49}.facility-popup p{color:#475846}.storage-recovery{color:#71460e;font-size:14px;line-height:1.6}
+
+#destination-connection{padding:12px;border:1px solid #b47b30;border-radius:10px;background:#fff7e9;color:#583b14;font-size:14px;line-height:1.6}#destination-connection p{margin:0 0 8px}#destination-connection button{min-height:44px;white-space:normal;margin:4px 4px 0 0}
+
+@media(max-width:700px){.leaflet-container:has(.facility-popup) .map-source-control{visibility:hidden}}
+@media(max-width:700px){.leaflet-control-attribution{max-height:42px;overflow-y:auto;max-width:100%}}

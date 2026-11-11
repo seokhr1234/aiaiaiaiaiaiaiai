@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "checks": [
+    "gzip originals match; raw negotiated gzip and conditional 304 cache work",
+    "/: explicit entry selection keeps protection; selected candidate retains keyboard focus",
+    "/: 320px popup close is visible/hittable, warning retained, readable font",
+    "/: malformed stored route/report recovered through visible reset controls",
+    "/동행길-최종.html: explicit entry selection keeps protection; selected candidate retains keyboard focus",
+    "/동행길-최종.html: 320px popup close is visible/hittable, warning retained, readable font",
+    "/동행길-최종.html: malformed stored route/report recovered through visible reset controls",
+    "malformed mandatory precision still blocks routing"
+  ],
+  "browserErrors": [],
+  "realGps": false,
+  "fieldVerified": false
+}

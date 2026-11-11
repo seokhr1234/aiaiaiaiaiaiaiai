@@ -1,0 +1,16 @@
+{
+  "baseline": "079c4467786a9e9dd546f434e215904e40ebad50",
+  "scope": "Real local Node server; Gemini key missing; OSM tiles aborted deterministically; simulated GPS only",
+  "cases": [
+    {
+      "name": "slow-mobile-cold-boot",
+      "bootMs": 184664,
+      "bytes": 88913927,
+      "longTasks": 21,
+      "maxLongTask": 3631,
+      "heap": 177157632,
+      "status": "지도와 시설 자료를 준비하는 중… 9 / 9",
+      "errors": []
+    }
+  ]
+}

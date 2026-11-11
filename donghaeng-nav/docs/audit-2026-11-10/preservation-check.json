@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "079c4467786a9e9dd546f434e215904e40ebad50",
+  "runtime_data_hashes_checked": 9,
+  "protected_code_hashes_checked": 15,
+  "production_code_data_html_unchanged": true,
+  "prior_research_unchanged": true,
+  "findings_with_evidence": 9,
+  "real_gemini_tested": false,
+  "field_verified": false,
+  "physical_phone_tested": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

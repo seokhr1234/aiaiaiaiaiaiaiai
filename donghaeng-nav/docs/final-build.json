@@ -1,6 +1,62 @@
 {
-  "version": "2026-11-05-official-research",
+  "version": "2026-11-10-audit-fixes",
   "main_source": "donghaeng-nav/dist/index.html",
+  "compressed_assets": [
+    {
+      "path": "map-data.json.gz",
+      "sha256": "2bd0ce3f4a2b6f950b31da7c39f52f1f3610a05bad2318a32f9af507b42dab2b",
+      "bytes": 450675,
+      "source_sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12"
+    },
+    {
+      "path": "map-context.json.gz",
+      "sha256": "c0ba931d97c582bbfebbcd2947d1425d1ed13bb6286ca007f4f8b074789e5bf1",
+      "bytes": 506152,
+      "source_sha256": "ee61ec66d6916edce5d01a48b4888860ffdfb822386b92d9465c63aaa1c35872"
+    },
+    {
+      "path": "data/accessibility/seoul/seoul-base.json.gz",
+      "sha256": "21e5de2ec0e63f25efcf71b0c1898db63af1ab82576a4d2b7442a7793d9d232f",
+      "bytes": 5390550,
+      "source_sha256": "8632d2b544225662243e1a5b953fd8914c558295f2a626d1cdd1b9f9c0a11e3f"
+    },
+    {
+      "path": "terrain-data.json.gz",
+      "sha256": "a60227a479a3a6d04d78d27c78aad3ca88009b6eba71c573f7ca51e16fd62054",
+      "bytes": 1146771,
+      "source_sha256": "bc2a1db535b7346f3d585cf269acc799b410b056c52124c52a3c7e8d98b12594"
+    },
+    {
+      "path": "data/accessibility/seoul/seoul-facilities.geojson.gz",
+      "sha256": "fdd52ecb6b4783a75615187fec1a7bab692d05ffc5f905791b90655d310a501f",
+      "bytes": 1776240,
+      "source_sha256": "cb16455270e7492755a96bf4a742c06a41da41a6efe81cb7d6e3a4366061a3f9"
+    },
+    {
+      "path": "data/precision/access-reports.json.gz",
+      "sha256": "604019b186ca8a591100a382d0f9555114d5839f4096febe6431f20a64ec1634",
+      "bytes": 728,
+      "source_sha256": "e33c45500f53d385a1884f1bad5fc130857bfd2de5a6d3e04c685f1764b7d6c3"
+    },
+    {
+      "path": "data/precision/precision-map.geojson.gz",
+      "sha256": "50980fff497a4e87b8df36747d531b2a13ed82326b03a8b34e06deb047fd532d",
+      "bytes": 1635340,
+      "source_sha256": "876ad5216be134b779aab319386e3addbd06a4500029eebec35256c91cf6c6c8"
+    },
+    {
+      "path": "data/precision/crossings-review.geojson.gz",
+      "sha256": "7634278e29657ef226d75c9c76e1bf2af88418404430960e6b0fa2d8bfbcb9a3",
+      "bytes": 59462,
+      "source_sha256": "615aec503786dd1ea5d4e3ff5cbb5cbb7af34d50be5ad587fd2c4d1b17c96435"
+    },
+    {
+      "path": "data/terrain/evidence.json.gz",
+      "sha256": "9b3fca33e50577604b0791d5459f724fdd3c95ffe251322ec4bd4af5cf2bade2",
+      "bytes": 473311,
+      "source_sha256": "a94f671ddc81b4831aacf872fa243cde25473ebbaf51690b8c8479327afdabcc"
+    }
+  ],
   "project_name": "동행길",
   "route_choice": {
     "max_attempts": 24,
@@ -79,8 +135,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
-  "html_sha256": "c0c0e1d73bf583bfce2fe1bfc7bce5133635f62d0de5a3e88f93f97e4f58b4ed",
-  "html_bytes": 15729382,
+  "html_sha256": "7c019cbce81d86f46b892471179ad36bdd3e3faae2612238e60facdc223c0013",
+  "html_bytes": 15739017,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",

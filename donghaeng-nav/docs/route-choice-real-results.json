@@ -13,7 +13,7 @@
         127.0418332514647
       ],
       "attempts": 22,
-      "elapsedMs": 2395,
+      "elapsedMs": 2908,
       "eligibleCandidates": 5,
       "diagnostics": {
         "successful": 22,
@@ -105,7 +105,7 @@
         127.0383308790316
       ],
       "attempts": 11,
-      "elapsedMs": 1174,
+      "elapsedMs": 1290,
       "eligibleCandidates": 5,
       "diagnostics": {
         "successful": 11,
@@ -197,7 +197,7 @@
         127.0383308790316
       ],
       "attempts": 1,
-      "elapsedMs": 218,
+      "elapsedMs": 249,
       "eligibleCandidates": 0,
       "diagnostics": {
         "successful": 0,
@@ -223,7 +223,7 @@
         127.0383308790316
       ],
       "attempts": 13,
-      "elapsedMs": 1618,
+      "elapsedMs": 1434,
       "eligibleCandidates": 5,
       "diagnostics": {
         "successful": 13,

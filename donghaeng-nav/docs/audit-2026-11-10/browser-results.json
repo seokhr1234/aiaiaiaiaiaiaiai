@@ -1,0 +1,283 @@
+{
+  "baseline": "079c4467786a9e9dd546f434e215904e40ebad50",
+  "scope": "Real local Node server; Gemini key missing; OSM tiles aborted deterministically; simulated GPS only",
+  "cases": [
+    {
+      "name": "desktop-boot",
+      "bootMs": 3581,
+      "metrics": {
+        "resources": [
+          {
+            "path": "/leaflet.css",
+            "bytes": 15106,
+            "duration": 93.59999999997672
+          },
+          {
+            "path": "/style.css",
+            "bytes": 70961,
+            "duration": 98.70000000006985
+          },
+          {
+            "path": "/leaflet.js",
+            "bytes": 147852,
+            "duration": 111.10000000009313
+          },
+          {
+            "path": "/terrain-evidence.js",
+            "bytes": 1796,
+            "duration": 106.69999999995343
+          },
+          {
+            "path": "/seoul-base.js",
+            "bytes": 7536,
+            "duration": 107
+          },
+          {
+            "path": "/engine.js",
+            "bytes": 25157,
+            "duration": 107.30000000004657
+          },
+          {
+            "path": "/facilities.js",
+            "bytes": 23380,
+            "duration": 107.40000000002328
+          },
+          {
+            "path": "/final-model.js",
+            "bytes": 4484,
+            "duration": 117.80000000004657
+          },
+          {
+            "path": "/condition-request.js",
+            "bytes": 2677,
+            "duration": 130.80000000004657
+          },
+          {
+            "path": "/condition-ai.js",
+            "bytes": 2329,
+            "duration": 130.5
+          },
+          {
+            "path": "/route-choice.js",
+            "bytes": 6554,
+            "duration": 131
+          },
+          {
+            "path": "/navigation-policy.js",
+            "bytes": 863,
+            "duration": 130.89999999990687
+          },
+          {
+            "path": "/portable-ai.js",
+            "bytes": 4952,
+            "duration": 135.79999999993015
+          },
+          {
+            "path": "/route-candidates.js",
+            "bytes": 8139,
+            "duration": 135.59999999997672
+          },
+          {
+            "path": "/navigation-plan.js",
+            "bytes": 7459,
+            "duration": 170.29999999993015
+          },
+          {
+            "path": "/gps-quality.js",
+            "bytes": 3433,
+            "duration": 170.09999999997672
+          },
+          {
+            "path": "/navigation-core.js",
+            "bytes": 8436,
+            "duration": 176.19999999995343
+          },
+          {
+            "path": "/navigation-session.js",
+            "bytes": 5442,
+            "duration": 176.19999999995343
+          },
+          {
+            "path": "/endpoint-routing.js",
+            "bytes": 5731,
+            "duration": 176.19999999995343
+          },
+          {
+            "path": "/navigation-routing.js",
+            "bytes": 3597,
+            "duration": 176
+          },
+          {
+            "path": "/access-review.js",
+            "bytes": 4970,
+            "duration": 176.19999999995343
+          },
+          {
+            "path": "/navigation-ui.js",
+            "bytes": 7196,
+            "duration": 176.09999999997672
+          },
+          {
+            "path": "/precision-connections.js",
+            "bytes": 6753,
+            "duration": 193.5
+          },
+          {
+            "path": "/precision-map.js",
+            "bytes": 10480,
+            "duration": 194.30000000004657
+          },
+          {
+            "path": "/data-loader.js",
+            "bytes": 1443,
+            "duration": 191.5
+          },
+          {
+            "path": "/gps-tracker.js",
+            "bytes": 2432,
+            "duration": 190
+          },
+          {
+            "path": "/app.js",
+            "bytes": 77782,
+            "duration": 194.29999999993015
+          },
+          {
+            "path": "/map-data.json",
+            "bytes": 2679026,
+            "duration": 87.70000000006985
+          },
+          {
+            "path": "/map-context.json",
+            "bytes": 3341112,
+            "duration": 61.10000000009313
+          },
+          {
+            "path": "/data/accessibility/seoul/seoul-base.json",
+            "bytes": 26970935,
+            "duration": 188.5
+          },
+          {
+            "path": "/terrain-data.json",
+            "bytes": 12290759,
+            "duration": 88.09999999997672
+          },
+          {
+            "path": "/data/terrain/evidence.json",
+            "bytes": 5553454,
+            "duration": 34.59999999997672
+          },
+          {
+            "path": "/data/accessibility/seoul/seoul-facilities.geojson",
+            "bytes": 21317277,
+            "duration": 104.40000000002328
+          },
+          {
+            "path": "/data/precision/access-reports.json",
+            "bytes": 1444,
+            "duration": 12.300000000046566
+          },
+          {
+            "path": "/data/precision/precision-map.geojson",
+            "bytes": 15948126,
+            "duration": 64.20000000006985
+          },
+          {
+            "path": "/data/precision/crossings-review.geojson",
+            "bytes": 811794,
+            "duration": 8.400000000023283
+          }
+        ],
+        "longTasks": 13,
+        "maxLongTask": 1309,
+        "heap": 171947240
+      },
+      "errors": []
+    },
+    {
+      "name": "route-and-save-mobile",
+      "elapsedMs": 5533,
+      "route": {
+        "count": 1,
+        "selected": 0,
+        "source": "unavailable",
+        "summary": "요청 조건과 연결 검사를 만족하는 추천 후보가 없어요. 아래는 검토용이며 AI 선택 대상이 아니에요.",
+        "parser": "Gemini 키가 설정되지 않았어요. · 기기 내 해석"
+      },
+      "stored": "월곡꿈그림도서관\n\n가장 짧은 길로 가고 싶어요.\n\n이 조건으로 다시 찾기 →삭제",
+      "state": {
+        "mode": "results",
+        "plannerHidden": false,
+        "savedHidden": true
+      },
+      "errors": []
+    },
+    {
+      "name": "small-screen-facility-popup",
+      "rects": {
+        "popup": {
+          "left": 10,
+          "top": 167,
+          "right": 357,
+          "bottom": 495,
+          "width": 347,
+          "height": 328
+        },
+        "warning": {
+          "left": 31,
+          "top": 218.1875,
+          "right": 332,
+          "bottom": 270.1875,
+          "width": 301,
+          "height": 52
+        },
+        "sheet": {
+          "left": 0,
+          "top": 436,
+          "right": 320,
+          "bottom": 500,
+          "width": 320,
+          "height": 64
+        },
+        "map": {
+          "left": 0,
+          "top": 57,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 511
+        },
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "name": "saved-object",
+      "errors": [
+        "items.forEach is not a function"
+      ],
+      "content": "경로 상세에서 저장하면 여기에 나타나요."
+    },
+    {
+      "name": "saved-null-entry",
+      "errors": [
+        "Cannot read properties of null (reading 'destination')"
+      ],
+      "content": ""
+    },
+    {
+      "name": "saved-legacy-entry",
+      "errors": [
+        "Cannot read properties of undefined (reading 'name')"
+      ],
+      "content": ""
+    },
+    {
+      "name": "reports-object",
+      "errors": [
+        "items.slice is not a function"
+      ],
+      "content": ""
+    }
+  ]
+}

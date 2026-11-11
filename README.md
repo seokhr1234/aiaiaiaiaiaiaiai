@@ -6,6 +6,8 @@
 
 최신 발표자료: [동행길 발표자료 최종본](동행길_발표자료_최종.pptx).
 
+2026-11-10: [자율 점검 9개 항목 수정·검증](donghaeng-nav/docs/audit-fixes.md). 필수 휴식 재탐색 검증, 도착 예상 시각의 쉼터 운영시간 확인, 기기 내 문장 해석, 저장 복구와 모바일·키보드 조작을 보완했습니다. 건물 도형과 겹치는 목적지는 지도에서 실제 진입 위치를 지정하거나 검토용 경로를 명시적으로 선택합니다. 출입구 좌표를 새로 검증한 것은 아닙니다.
+
 ## 실행
 
 Node.js 18 이상에서 저장소 최상위에서 실행합니다.
@@ -75,6 +77,8 @@ python3 donghaeng-nav/scripts/build-html.py
 
 이 명령은 현재 런타임 자료와 보호된 경로 코드의 해시, 도로망·지형 검토의 연결을 확인하고 단일 HTML 5개와 해시 기록을 재생성합니다. 원본 GIS 전처리를 자동 재실행하지 않습니다. 입력이 달라지면 실패하며, 검증을 생략하거나 기존 해시를 임의로 맞추지 마세요.
 
+원본 9개 JSON/GeoJSON을 보존하며 같은 내용의 `.gz` 배포 파일도 생성합니다. 서버 화면은 압축 자료를 병렬로 준비하고, 서울 배경지도와 추가 표고 근거는 필요할 때 읽습니다. 필수 정밀지도·건물 겹침·지형 검토는 길 찾기 전에 준비합니다. Node 정적 응답은 gzip·ETag 재검증을 지원합니다.
+
 지형·경로 입력 변경은 원본/좌표계/수직기준·기존 GIS 검증과 실제 경로 검토를 먼저 수행한 뒤 근거와 함께 무결성 기록을 명시적으로 갱신해야 합니다. `prepare-terrain.py`·시설 전처리·`review-terrain.py`는 원본이 갖춰진 환경에서 사용하는 별도 절차로 유지합니다. 이 저장소의 변환본을 원본 DXF/XML 재입수·재변환 검증 완료로 해석하지 마세요.
 
 최상위 `유석…html` 두 파일은 이전 전달 스냅샷입니다. 메인 소스를 수정하고 공통 빌드를 사용하세요. 실행 패키지는 별도 개발 분기가 아니라 같은 빌드의 전달용 복사본입니다.
@@ -82,6 +86,9 @@ python3 donghaeng-nav/scripts/build-html.py
 ### 확인 명령
 
 ```sh
+node donghaeng-nav/scripts/test-audit-fixes.cjs
+node donghaeng-nav/scripts/test-audit-fixes-ui.cjs
+node donghaeng-nav/scripts/test-audit-boot.cjs
 node donghaeng-nav/scripts/test-gps-quality.cjs
 node donghaeng-nav/scripts/test-gps-quality-ui.cjs
 node donghaeng-nav/scripts/test-evidence.cjs

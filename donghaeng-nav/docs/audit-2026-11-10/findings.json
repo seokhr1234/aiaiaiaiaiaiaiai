@@ -1,0 +1,97 @@
+{
+  "baseline_commit": "079c4467786a9e9dd546f434e215904e40ebad50",
+  "checked_at_kst": "2026-11-10T20:59:56.404759+09:00",
+  "findings": [
+    {
+      "id": "A01",
+      "priority": "P1",
+      "category": "contract",
+      "title": "Required rest dropped on reroute",
+      "evidence": [
+        "reroute-session-result.json",
+        "module-results.json"
+      ]
+    },
+    {
+      "id": "A02",
+      "priority": "P2",
+      "category": "performance",
+      "title": "All 88.9MB runtime datasets block first interaction",
+      "evidence": [
+        "browser-results.json",
+        "slow-mobile-results.json"
+      ]
+    },
+    {
+      "id": "A03",
+      "priority": "P2",
+      "category": "interpretation",
+      "title": "Local parser misses downhill and common negations",
+      "evidence": [
+        "module-results.json",
+        "routes-results.json"
+      ]
+    },
+    {
+      "id": "A04",
+      "priority": "P2",
+      "category": "planning",
+      "title": "Shelter closes before planned arrival",
+      "evidence": [
+        "module-results.json"
+      ]
+    },
+    {
+      "id": "A05",
+      "priority": "P2",
+      "category": "mobile",
+      "title": "Popup close button outside 320px viewport",
+      "evidence": [
+        "accessibility-results.json",
+        "small-screen-popup-fresh.png"
+      ]
+    },
+    {
+      "id": "A06",
+      "priority": "P2",
+      "category": "robustness",
+      "title": "Unexpected stored JSON shapes break saved/report views",
+      "evidence": [
+        "browser-results.json"
+      ]
+    },
+    {
+      "id": "A07",
+      "priority": "P2",
+      "category": "improvement",
+      "title": "Quick destinations lack usable reviewed entrance connection",
+      "evidence": [
+        "routes-results.json",
+        "default-library-route.png"
+      ]
+    },
+    {
+      "id": "A08",
+      "priority": "P2",
+      "category": "accessibility",
+      "title": "Small popup labels and body text have low contrast",
+      "evidence": [
+        "accessibility-results.json"
+      ]
+    },
+    {
+      "id": "A09",
+      "priority": "P3",
+      "category": "accessibility",
+      "title": "Route selection rerender loses keyboard focus",
+      "evidence": [
+        "accessibility-results.json"
+      ]
+    }
+  ],
+  "production_fixes_applied": false,
+  "real_gemini_tested": false,
+  "field_verified": false,
+  "physical_phone_gps_tested": false,
+  "production_network_performance_tested": false
+}

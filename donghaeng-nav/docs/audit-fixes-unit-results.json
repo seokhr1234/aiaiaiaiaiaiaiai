@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "checks": [
+    "downhill, negations and easy/rest distinction without removing positive requirements",
+    "shelter closing before ETA rejected; earlier arrival accepted",
+    "real graph reroute cannot drop required rest; completed rest preserved; session independently rejects unsafe replacement",
+    "malformed storage recovered; valid entries retained without overwriting source"
+  ],
+  "realGps": false,
+  "fieldVerified": false
+}
