@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "baseline_commit": "5d28dcc8875e08770fd9dba8b0780557b5f11f29",
+  "changed_protected_runtime_files": [
+    "route-candidates.js"
+  ],
+  "original_datasets_byte_identical": 9,
+  "protected_runtime_files": 19,
+  "service_files_verified": 25,
+  "identical_html_files": 5,
+  "html_sha256": "17942fcc7bf12d7daf35764d6cc9712f324edca5ba21742b962ec900a7b23c64",
+  "package_hashes_match": true,
+  "all_prior_research_unchanged": true,
+  "prior_history_bytes_preserved": true,
+  "prior_performance_bytes_preserved": true,
+  "same_100_public_node_pairs_and_profiles": true,
+  "same_100_http_outcomes": true,
+  "passing_reports": [
+    "candidate-cache-results",
+    "route-choice-core-results",
+    "route-choice-real-results",
+    "route-choice-ui-results",
+    "expansion-core-results",
+    "main-navigation-results"
+  ],
+  "field_verified": false,
+  "new_slope_values_promoted": 0,
+  "citywide_routing": false,
+  "physical_gps_verified": false,
+  "actual_odsay_called": false
+}

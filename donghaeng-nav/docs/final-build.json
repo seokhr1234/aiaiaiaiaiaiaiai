@@ -4,7 +4,7 @@
   "expansion": {
     "online_page": "expansion.html",
     "service_code_files": 25,
-    "service_integrity_sha256": "dc53d460440d08d199d7ee37cb59bc2ab2a2c09379822b0de86df156a96e6ecf",
+    "service_integrity_sha256": "d06fbcda0b476f31cb50b446f0c8f927bede134908d3da89f94edf159dbd7c7f",
     "citywide_routing": false,
     "authenticated_transit_verified": false,
     "new_slope_values_promoted": 0
@@ -143,8 +143,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
-  "html_sha256": "38dcaa98f04cdc419519c1a35f82b41b9d81aef98696c531509be00b27c6862f",
-  "html_bytes": 15739189,
+  "html_sha256": "17942fcc7bf12d7daf35764d6cc9712f324edca5ba21742b962ec900a7b23c64",
+  "html_bytes": 15739393,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",

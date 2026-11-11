@@ -67,7 +67,7 @@
     "endpoint-routing.js": "a9e717e856a6d55ed624b1de3080644228d8bbcf90c7d16100bca00da030b606",
     "access-review.js": "12b042aca301113e62c45c823751819a65fd96f3ca8f5331af91f27b5dc72493",
     "precision-connections.js": "f6ed2afb3928c2b19bdb18b829620595b6677eb4b9b3be53f22a17a5d3b8ac74",
-    "route-candidates.js": "e8a3985a3e5f7642c04c747d601d545d841029ee5815ecf6d0c2b17afcdbbf08",
+    "route-candidates.js": "f8be3593704fc85574cadd3fcaf2bbce2de45b1dc407adef5b3dbfcfdeb28e90",
     "route-choice.js": "c0c4f3273e6dc63ed48f93464b4b363147b3dfc8e45e95ee13c8cca7b8f4573d",
     "condition-ai.js": "6af1d3a63ec647e26cdd3d688198908fa8a456d9266ec7ea803471ea6c4e1062",
     "gps-quality.js": "81b64a4b9a714dc5f994572e08de9d105b2d76b64360756a64f712c6e48a83d6",
@@ -87,68 +87,83 @@
   "precision_role": "Review geometry and building-overlap screening; not a verified pedestrian network",
   "code_revision": {
     "date": "2026-11-11",
-    "change": "Seoul expansion foundations: reference source acquisition, worker HTTP walking service and region exploration; original runtime graph/data unchanged",
+    "change": "Reuse identity of server graphs already disallowing assistance previews to retain building-audit cache; isolate callers allowing previews; original routing rules and nine datasets unchanged",
     "validation": [
+      "docs/candidate-cache-results.json",
       "docs/expansion-core-results.json",
-      "docs/expansion-ui-results.json"
+      "docs/route-choice-core-results.json",
+      "docs/route-choice-real-results.json",
+      "docs/route-choice-ui-results.json",
+      "docs/main-navigation-results.json"
     ],
     "field_verified": false,
     "new_slope_values_promoted": 0,
-    "dataset_scope": "Original nine runtime inputs unchanged; new wider OSM extraction is research-only",
+    "dataset_scope": "Original nine runtime inputs and building/slope/condition policies unchanged; performance optimization only",
     "previous_revision": {
-      "date": "2026-11-10",
-      "change": "Audit fixes: preserve reroute/rest contract, arrival-time shelter check, local negations/downhill, responsive evidence popups, storage recovery, explicit entry selection, focus restoration and compressed/deferred boot",
+      "date": "2026-11-11",
+      "change": "Seoul expansion foundations: reference source acquisition, worker HTTP walking service and region exploration; original runtime graph/data unchanged",
       "validation": [
-        "docs/audit-fixes-unit-results.json",
-        "docs/navigation-core-results.json",
-        "docs/route-choice-core-results.json",
-        "docs/route-choice-real-results.json",
-        "docs/audit-fixes-ui-results.json",
-        "docs/audit-fixes-boot-results.json",
-        "docs/main-navigation-results.json"
+        "docs/expansion-core-results.json",
+        "docs/expansion-ui-results.json"
       ],
       "field_verified": false,
       "new_slope_values_promoted": 0,
-      "dataset_scope": "All nine original runtime datasets byte-identical; deterministic gzip assets generated separately; routing data and slope weights unchanged",
+      "dataset_scope": "Original nine runtime inputs unchanged; new wider OSM extraction is research-only",
       "previous_revision": {
-        "date": "2026-11-05",
-        "change": "Attach round4 official CSV recheck to 4092 existing shelters and three address-matched notices; flag two hours conflicts and withhold them from automatic rest; no geometry or slope changes",
+        "date": "2026-11-10",
+        "change": "Audit fixes: preserve reroute/rest contract, arrival-time shelter check, local negations/downhill, responsive evidence popups, storage recovery, explicit entry selection, focus restoration and compressed/deferred boot",
         "validation": [
-          "docs/research-map-linkage-results.json",
-          "docs/evidence-results.json",
-          "docs/research-map-linkage-ui-results.json",
+          "docs/audit-fixes-unit-results.json",
           "docs/navigation-core-results.json",
-          "docs/main-navigation-results.json",
-          "docs/route-choice-real-results.json"
+          "docs/route-choice-core-results.json",
+          "docs/route-choice-real-results.json",
+          "docs/audit-fixes-ui-results.json",
+          "docs/audit-fixes-boot-results.json",
+          "docs/main-navigation-results.json"
         ],
         "field_verified": false,
         "new_slope_values_promoted": 0,
-        "dataset_scope": "One facility metadata dataset updated; eight other runtime datasets and thirteen previously protected code files unchanged; facility display and rest selection added to protected code",
+        "dataset_scope": "All nine original runtime datasets byte-identical; deterministic gzip assets generated separately; routing data and slope weights unchanged",
         "previous_revision": {
           "date": "2026-11-05",
-          "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
+          "change": "Attach round4 official CSV recheck to 4092 existing shelters and three address-matched notices; flag two hours conflicts and withhold them from automatic rest; no geometry or slope changes",
           "validation": [
-            "docs/gps-quality-results.json",
-            "docs/gps-quality-ui-results.json",
+            "docs/research-map-linkage-results.json",
             "docs/evidence-results.json",
+            "docs/research-map-linkage-ui-results.json",
             "docs/navigation-core-results.json",
             "docs/main-navigation-results.json",
             "docs/route-choice-real-results.json"
           ],
           "field_verified": false,
           "new_slope_values_promoted": 0,
-          "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+          "dataset_scope": "One facility metadata dataset updated; eight other runtime datasets and thirteen previously protected code files unchanged; facility display and rest selection added to protected code",
           "previous_revision": {
-            "date": "2026-11-04",
-            "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+            "date": "2026-11-05",
+            "change": "Shared GPS quality gating and conservative display stabilization; 15 existing shelters enriched with 26 official evidence entries; supplied OA-22241 source re-extracted for graph-bound support metadata, no new routing slopes",
             "validation": [
-              "docs/route-choice-core-results.json",
-              "docs/route-choice-ui-results.json",
-              "docs/route-choice-real-results.json",
-              "docs/navigation-core-results.json"
+              "docs/gps-quality-results.json",
+              "docs/gps-quality-ui-results.json",
+              "docs/evidence-results.json",
+              "docs/navigation-core-results.json",
+              "docs/main-navigation-results.json",
+              "docs/route-choice-real-results.json"
             ],
             "field_verified": false,
-            "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+            "new_slope_values_promoted": 0,
+            "dataset_scope": "One existing facility metadata dataset changed; seven previous datasets byte-identical; one supplementary terrain-evidence dataset added",
+            "previous_revision": {
+              "date": "2026-11-04",
+              "change": "Preserve geographically distinct alternatives, bounded segment/branch searches with fixed endpoint projections, honest single-candidate diagnostics; runtime data and global slope coefficient unchanged",
+              "validation": [
+                "docs/route-choice-core-results.json",
+                "docs/route-choice-ui-results.json",
+                "docs/route-choice-real-results.json",
+                "docs/navigation-core-results.json"
+              ],
+              "field_verified": false,
+              "previous_change": "Bounded alternative generation and validated Gemini candidate selection; data hashes unchanged"
+            }
           }
         }
       }

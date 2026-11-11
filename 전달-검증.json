@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "38dcaa98f04cdc419519c1a35f82b41b9d81aef98696c531509be00b27c6862f",
+  "html_sha256": "17942fcc7bf12d7daf35764d6cc9712f324edca5ba21742b962ec900a7b23c64",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,

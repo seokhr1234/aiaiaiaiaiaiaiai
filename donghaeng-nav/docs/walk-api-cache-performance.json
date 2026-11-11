@@ -1,0 +1,1527 @@
+{
+  "pass": true,
+  "reviewedDateKst": "2026-11-11",
+  "scope": "Existing Wolgok technical preview only; fixed synthetic public graph-node pairs, not Seoul-wide routes or physical passage",
+  "seed": 20261111,
+  "profiles": [
+    "가장 짧은 거리로 가고 싶어요.",
+    "계단을 피하고 싶어요.",
+    "중간에 벤치에 앉아서 쉬고 싶어요.",
+    "휠체어를 이용해요. 계단은 이용할 수 없어요."
+  ],
+  "datasetVersion": "756605c79c55fb7f000511c2daccdbb6264063fdbf560cd5619690c62be9a96c",
+  "graphVersion": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+  "protectedRuntimeCode": {
+    "engine.js": "02b0f3ba11442bd2e3cf675dd97b15472e5f2c29ecfd3b85d8cb36f60cb2d651",
+    "endpoint-routing.js": "a9e717e856a6d55ed624b1de3080644228d8bbcf90c7d16100bca00da030b606",
+    "access-review.js": "12b042aca301113e62c45c823751819a65fd96f3ca8f5331af91f27b5dc72493",
+    "precision-connections.js": "f6ed2afb3928c2b19bdb18b829620595b6677eb4b9b3be53f22a17a5d3b8ac74",
+    "route-candidates.js": "f8be3593704fc85574cadd3fcaf2bbce2de45b1dc407adef5b3dbfcfdeb28e90",
+    "route-choice.js": "c0c4f3273e6dc63ed48f93464b4b363147b3dfc8e45e95ee13c8cca7b8f4573d",
+    "condition-ai.js": "6af1d3a63ec647e26cdd3d688198908fa8a456d9266ec7ea803471ea6c4e1062",
+    "gps-quality.js": "81b64a4b9a714dc5f994572e08de9d105b2d76b64360756a64f712c6e48a83d6",
+    "gps-tracker.js": "75cb8f9b1553be32a955f63983c31accc0c341f11a148daf35c27851cbf83838",
+    "navigation-core.js": "aa344a5c2f0da6c4bd4fe2b4a60f005393359a35b50559eb258effbd116550db",
+    "navigation-session.js": "80de01464a955f7a10a46beec5b843946803c9dae5e2ccd3b6f3927be0ce4d7a",
+    "navigation-ui.js": "1477537a531843e9abd4d8d558d5f4153758590abded33227eee65457f3a0072",
+    "terrain-evidence.js": "9bb1879ad6f11240ec636b00d7bf715e88189dd909449009d0fa78a99a5aec72",
+    "facilities.js": "e88796878338d640b1fb3df70e1f84f4ddc931a5661921787ac5e5ff8cd7ceb8",
+    "final-model.js": "f05592756fa21e66968205dde41d4bba65bdf05a91cc826da87a1f114ea66426",
+    "app.js": "82f1fd61441f9a9cef630fb9008fad797cc942afc9df76f86b7ff136d9d83f8a",
+    "data-loader.js": "40be9a148797b51785154fe524b999c80230d3fca461b4b7c34cd968f541b196",
+    "seoul-base.js": "37ad7ae6acccc033106353cc1266ffd0a1ef9818e28065cca36f278bec65726b",
+    "saved-data.js": "8440c0b9883dbd26c4ac5658883c4192f001a34fdc0a2e93a2763612d66512f7"
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "server": "loopback Node HTTP; one routing worker; queue capacity 4",
+    "parentSnapshot": "loaded to construct fixtures",
+    "firstWorkerRequest": "cold worker snapshot; included as serial sample 1",
+    "providerCalls": 0
+  },
+  "serial": {
+    "requests": 100,
+    "eligible": 69,
+    "noEligibleCandidate": 31,
+    "errors": 0,
+    "coldWorkerMs": 3483,
+    "eligibleP50Ms": 2173,
+    "eligibleP95Ms": 5230,
+    "eligibleMaxMs": 5366,
+    "perProfile": [
+      {
+        "text": "가장 짧은 거리로 가고 싶어요.",
+        "requests": 25,
+        "eligible": 25,
+        "noEligibleCandidate": 0
+      },
+      {
+        "text": "계단을 피하고 싶어요.",
+        "requests": 25,
+        "eligible": 22,
+        "noEligibleCandidate": 3
+      },
+      {
+        "text": "중간에 벤치에 앉아서 쉬고 싶어요.",
+        "requests": 25,
+        "eligible": 21,
+        "noEligibleCandidate": 4
+      },
+      {
+        "text": "휠체어를 이용해요. 계단은 이용할 수 없어요.",
+        "requests": 25,
+        "eligible": 1,
+        "noEligibleCandidate": 24
+      }
+    ]
+  },
+  "concurrency10": {
+    "requests": 10,
+    "statusCounts": {
+      "200": 4,
+      "429": 6
+    },
+    "eligible": 3,
+    "processedP95Ms": 6571,
+    "queueLimitIsNotTenRequestSlo": true
+  },
+  "serialSamples": [
+    {
+      "id": 1,
+      "nodeIds": [
+        3828636713,
+        4655048509
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 413,
+      "milliseconds": 3483,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 2,
+      "nodeIds": [
+        7579130655,
+        7576453487
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1226,
+      "milliseconds": 815,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 3,
+      "nodeIds": [
+        8451897298,
+        5194570546
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 899,
+      "milliseconds": 4698,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 4,
+      "nodeIds": [
+        3830520295,
+        7607331583
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1009,
+      "milliseconds": 113,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 5,
+      "nodeIds": [
+        8570378894,
+        3442140794
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1434,
+      "milliseconds": 2526,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 6,
+      "nodeIds": [
+        4658867385,
+        10121692556
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1463,
+      "milliseconds": 1041,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 7,
+      "nodeIds": [
+        3836301780,
+        10694691214
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 377,
+      "milliseconds": 4511,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 4
+    },
+    {
+      "id": 8,
+      "nodeIds": [
+        8556013231,
+        3828636408
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1150,
+      "milliseconds": 94,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 9,
+      "nodeIds": [
+        3971089901,
+        282723738
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1112,
+      "milliseconds": 801,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 10,
+      "nodeIds": [
+        4632135615,
+        14196290570
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 949,
+      "milliseconds": 1632,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 11,
+      "nodeIds": [
+        6272903444,
+        3836381252
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1204,
+      "milliseconds": 4220,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 12,
+      "nodeIds": [
+        13931553990,
+        13953051163
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1237,
+      "milliseconds": 87,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 13,
+      "nodeIds": [
+        436866561,
+        4459432962
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 647,
+      "milliseconds": 2334,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 14,
+      "nodeIds": [
+        13401701032,
+        3828636801
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1140,
+      "milliseconds": 2532,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 15,
+      "nodeIds": [
+        7543693919,
+        8493792852
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 220,
+      "milliseconds": 4902,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 4
+    },
+    {
+      "id": 16,
+      "nodeIds": [
+        13568916385,
+        5378418812
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1232,
+      "milliseconds": 85,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 17,
+      "nodeIds": [
+        5012121312,
+        10121691991
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 901,
+      "milliseconds": 735,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 18,
+      "nodeIds": [
+        11612969863,
+        11013970093
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 708,
+      "milliseconds": 1876,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 19,
+      "nodeIds": [
+        7018577817,
+        13352574697
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1210,
+      "milliseconds": 4682,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 1
+    },
+    {
+      "id": 20,
+      "nodeIds": [
+        4456923415,
+        7614156415
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1076,
+      "milliseconds": 91,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 21,
+      "nodeIds": [
+        4713277190,
+        3830679972
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1294,
+      "milliseconds": 1278,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 22,
+      "nodeIds": [
+        14253697257,
+        13398088003
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1238,
+      "milliseconds": 1167,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 23,
+      "nodeIds": [
+        9776807870,
+        7018823005
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1055,
+      "milliseconds": 4528,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 4
+    },
+    {
+      "id": 24,
+      "nodeIds": [
+        7625662360,
+        292077472
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 913,
+      "milliseconds": 99,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 25,
+      "nodeIds": [
+        436871155,
+        13953051317
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 576,
+      "milliseconds": 2482,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 26,
+      "nodeIds": [
+        12390427109,
+        10228727082
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 444,
+      "milliseconds": 1301,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 27,
+      "nodeIds": [
+        13814705929,
+        13408889175
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 409,
+      "milliseconds": 4335,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 28,
+      "nodeIds": [
+        13815570903,
+        4452398939
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1349,
+      "milliseconds": 89,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 29,
+      "nodeIds": [
+        12389414805,
+        3831326937
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 992,
+      "milliseconds": 1549,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 30,
+      "nodeIds": [
+        13543291016,
+        3356235207
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1097,
+      "milliseconds": 1081,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 31,
+      "nodeIds": [
+        13695514863,
+        13814705920
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1212,
+      "milliseconds": 5258,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 1
+    },
+    {
+      "id": 32,
+      "nodeIds": [
+        13576226435,
+        13568916354
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 165,
+      "milliseconds": 91,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 33,
+      "nodeIds": [
+        14253697139,
+        3836213643
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1000,
+      "milliseconds": 1319,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 34,
+      "nodeIds": [
+        5191760814,
+        3838816974
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1279,
+      "milliseconds": 971,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 35,
+      "nodeIds": [
+        7646197981,
+        3968570115
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 723,
+      "milliseconds": 4872,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 36,
+      "nodeIds": [
+        13395814526,
+        13390826341
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 854,
+      "milliseconds": 95,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 37,
+      "nodeIds": [
+        8570378886,
+        10148626763
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 741,
+      "milliseconds": 2301,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 38,
+      "nodeIds": [
+        3375133594,
+        8556013310
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1061,
+      "milliseconds": 1108,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 39,
+      "nodeIds": [
+        7736237759,
+        13814706141
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 386,
+      "milliseconds": 5230,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 40,
+      "nodeIds": [
+        7576453465,
+        7018595961
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 918,
+      "milliseconds": 96,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 41,
+      "nodeIds": [
+        8496345591,
+        5058321981
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1177,
+      "milliseconds": 1252,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 42,
+      "nodeIds": [
+        3830865945,
+        3836213975
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1479,
+      "milliseconds": 1814,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 43,
+      "nodeIds": [
+        436871156,
+        3836537817
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 385,
+      "milliseconds": 4573,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 4
+    },
+    {
+      "id": 44,
+      "nodeIds": [
+        3828659356,
+        13398087945
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 576,
+      "milliseconds": 100,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 45,
+      "nodeIds": [
+        4456949124,
+        13398087803
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 204,
+      "milliseconds": 2509,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 46,
+      "nodeIds": [
+        13815570767,
+        14015147843
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 815,
+      "milliseconds": 2173,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 47,
+      "nodeIds": [
+        8605706317,
+        4160387875
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1456,
+      "milliseconds": 5363,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 48,
+      "nodeIds": [
+        13814705992,
+        7614407189
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 970,
+      "milliseconds": 108,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 49,
+      "nodeIds": [
+        13953038386,
+        4459432957
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 868,
+      "milliseconds": 1719,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 50,
+      "nodeIds": [
+        7614156434,
+        10018595015
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1093,
+      "milliseconds": 1219,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 51,
+      "nodeIds": [
+        8834989156,
+        7662654442
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1179,
+      "milliseconds": 5122,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 4
+    },
+    {
+      "id": 52,
+      "nodeIds": [
+        3830520350,
+        3817459502
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1375,
+      "milliseconds": 113,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 53,
+      "nodeIds": [
+        12578760443,
+        10017702473
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1352,
+      "milliseconds": 3026,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 54,
+      "nodeIds": [
+        8496353183,
+        4459511491
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1431,
+      "milliseconds": 78,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 55,
+      "nodeIds": [
+        8445067095,
+        7018938269
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1185,
+      "milliseconds": 5366,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 56,
+      "nodeIds": [
+        11279509514,
+        10121693070
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 778,
+      "milliseconds": 89,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 57,
+      "nodeIds": [
+        7554089687,
+        13423677972
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 659,
+      "milliseconds": 836,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 58,
+      "nodeIds": [
+        13401701156,
+        4456958508
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 153,
+      "milliseconds": 35,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 59,
+      "nodeIds": [
+        10742955531,
+        3830520081
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1428,
+      "milliseconds": 5062,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 60,
+      "nodeIds": [
+        7736237744,
+        7649519975
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 693,
+      "milliseconds": 93,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 61,
+      "nodeIds": [
+        7617572151,
+        7649544587
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 837,
+      "milliseconds": 1182,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 62,
+      "nodeIds": [
+        8451896944,
+        3817459369
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1142,
+      "milliseconds": 1892,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 63,
+      "nodeIds": [
+        8556013411,
+        4632135643
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 762,
+      "milliseconds": 4171,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 64,
+      "nodeIds": [
+        5404768231,
+        1936511900
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1484,
+      "milliseconds": 108,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 65,
+      "nodeIds": [
+        12580944081,
+        12389391584
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1046,
+      "milliseconds": 1127,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 66,
+      "nodeIds": [
+        8445067080,
+        7646197941
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 380,
+      "milliseconds": 1156,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 67,
+      "nodeIds": [
+        13390768084,
+        3828635918
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 956,
+      "milliseconds": 5147,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 68,
+      "nodeIds": [
+        13395814538,
+        8496392472
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 673,
+      "milliseconds": 88,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 69,
+      "nodeIds": [
+        11247749055,
+        3369547796
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1108,
+      "milliseconds": 1252,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 70,
+      "nodeIds": [
+        10121692538,
+        12393170273
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 390,
+      "milliseconds": 2409,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 71,
+      "nodeIds": [
+        10128271013,
+        7018577949
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1280,
+      "milliseconds": 957,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 72,
+      "nodeIds": [
+        13525478247,
+        12392878509
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 515,
+      "milliseconds": 75,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 73,
+      "nodeIds": [
+        8496345580,
+        14196290071
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 486,
+      "milliseconds": 1149,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 74,
+      "nodeIds": [
+        10121691838,
+        10121693015
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 738,
+      "milliseconds": 2497,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 75,
+      "nodeIds": [
+        4713360122,
+        11612962758
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1452,
+      "milliseconds": 4199,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 3
+    },
+    {
+      "id": 76,
+      "nodeIds": [
+        8748078643,
+        8076134278
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 906,
+      "milliseconds": 106,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 77,
+      "nodeIds": [
+        3830680382,
+        3828636881
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1133,
+      "milliseconds": 1319,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 78,
+      "nodeIds": [
+        7579130638,
+        7014234053
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1038,
+      "milliseconds": 2236,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 79,
+      "nodeIds": [
+        8451897155,
+        3828636924
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 442,
+      "milliseconds": 4777,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 80,
+      "nodeIds": [
+        4989326993,
+        10228726674
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 921,
+      "milliseconds": 123,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 81,
+      "nodeIds": [
+        3431343636,
+        2655472900
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1256,
+      "milliseconds": 1518,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 82,
+      "nodeIds": [
+        13395814578,
+        11612962763
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 747,
+      "milliseconds": 2454,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 83,
+      "nodeIds": [
+        10017701827,
+        13698958461
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1450,
+      "milliseconds": 4077,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 84,
+      "nodeIds": [
+        4456975008,
+        8509314934
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 480,
+      "milliseconds": 97,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 85,
+      "nodeIds": [
+        5066296663,
+        436881869
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1280,
+      "milliseconds": 1017,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 86,
+      "nodeIds": [
+        3375132882,
+        4658731215
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1475,
+      "milliseconds": 1810,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 87,
+      "nodeIds": [
+        12393171389,
+        3828715868
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1022,
+      "milliseconds": 4449,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 88,
+      "nodeIds": [
+        3828715660,
+        3442141093
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 377,
+      "milliseconds": 106,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 89,
+      "nodeIds": [
+        13390826127,
+        4172034435
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 647,
+      "milliseconds": 1029,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 90,
+      "nodeIds": [
+        10221971118,
+        3830520109
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 743,
+      "milliseconds": 1579,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 91,
+      "nodeIds": [
+        13698958414,
+        10017701827
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1429,
+      "milliseconds": 5052,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 92,
+      "nodeIds": [
+        3375133680,
+        10228726605
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1441,
+      "milliseconds": 87,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 93,
+      "nodeIds": [
+        8451884065,
+        13931554040
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 504,
+      "milliseconds": 1020,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 94,
+      "nodeIds": [
+        13525477919,
+        11279509544
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 364,
+      "milliseconds": 1311,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 95,
+      "nodeIds": [
+        436866828,
+        7625622851
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 1153,
+      "milliseconds": 4102,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 96,
+      "nodeIds": [
+        8570380554,
+        3828480887
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1484,
+      "milliseconds": 90,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 97,
+      "nodeIds": [
+        3830680233,
+        3372045530
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 638,
+      "milliseconds": 2382,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 98,
+      "nodeIds": [
+        3836301801,
+        6270605044
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 549,
+      "milliseconds": 975,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 99,
+      "nodeIds": [
+        13390768085,
+        8570812170
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 229,
+      "milliseconds": 4756,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 4
+    },
+    {
+      "id": 100,
+      "nodeIds": [
+        7662654442,
+        7624665132
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 244,
+      "milliseconds": 1885,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    }
+  ],
+  "concurrentSamples": [
+    {
+      "id": 1,
+      "nodeIds": [
+        3828636713,
+        4655048509
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 413,
+      "milliseconds": 911,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 2,
+      "nodeIds": [
+        7579130655,
+        7576453487
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1226,
+      "milliseconds": 1774,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 5
+    },
+    {
+      "id": 3,
+      "nodeIds": [
+        8451897298,
+        5194570546
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 899,
+      "milliseconds": 6475,
+      "status": 200,
+      "state": "technical_preview",
+      "candidateCount": 2
+    },
+    {
+      "id": 4,
+      "nodeIds": [
+        3830520295,
+        7607331583
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1009,
+      "milliseconds": 6571,
+      "status": 200,
+      "state": "no_eligible_candidate",
+      "candidateCount": 0
+    },
+    {
+      "id": 5,
+      "nodeIds": [
+        8570378894,
+        3442140794
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1434,
+      "milliseconds": 5,
+      "status": 429,
+      "state": "routing_busy",
+      "candidateCount": 0
+    },
+    {
+      "id": 6,
+      "nodeIds": [
+        4658867385,
+        10121692556
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 1463,
+      "milliseconds": 6,
+      "status": 429,
+      "state": "routing_busy",
+      "candidateCount": 0
+    },
+    {
+      "id": 7,
+      "nodeIds": [
+        3836301780,
+        10694691214
+      ],
+      "profileCase": 2,
+      "straightLineMeters": 377,
+      "milliseconds": 6,
+      "status": 429,
+      "state": "routing_busy",
+      "candidateCount": 0
+    },
+    {
+      "id": 8,
+      "nodeIds": [
+        8556013231,
+        3828636408
+      ],
+      "profileCase": 3,
+      "straightLineMeters": 1150,
+      "milliseconds": 6,
+      "status": 429,
+      "state": "routing_busy",
+      "candidateCount": 0
+    },
+    {
+      "id": 9,
+      "nodeIds": [
+        3971089901,
+        282723738
+      ],
+      "profileCase": 0,
+      "straightLineMeters": 1112,
+      "milliseconds": 6,
+      "status": 429,
+      "state": "routing_busy",
+      "candidateCount": 0
+    },
+    {
+      "id": 10,
+      "nodeIds": [
+        4632135615,
+        14196290570
+      ],
+      "profileCase": 1,
+      "straightLineMeters": 949,
+      "milliseconds": 7,
+      "status": 429,
+      "state": "routing_busy",
+      "candidateCount": 0
+    }
+  ],
+  "citywideSloVerified": false,
+  "productionPerformance": false,
+  "physicalPhone": false,
+  "fieldVerified": false,
+  "actualOdsay": false
+}

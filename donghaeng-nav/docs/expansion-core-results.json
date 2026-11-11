@@ -9,7 +9,7 @@
     "Every walking leg recomputed; delayed boarding propagated; departed service, stale access and unconfirmed rest never become eligible",
     "Thin backend proxy forwards supported routes; Vercel does not load city graph or disk keys"
   ],
-  "workerAndLocalComparisonMs": 5583,
+  "workerAndLocalComparisonMs": 4977,
   "physicalGps": false,
   "fieldVerified": false,
   "realOdsay": false,

@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "baselineCommit": "5d28dcc8875e08770fd9dba8b0780557b5f11f29",
+  "checks": [
+    "Twelve fixed real-graph pairs across four profiles match the previous candidate IDs, edges, metrics, rest/endpoints and diagnostics under equal attempt budgets",
+    "Input graph nodes/edge metadata remain byte-identical; callers allowing previews are still isolated and no assistance candidate becomes eligible"
+  ],
+  "fieldVerified": false,
+  "actualProviderCalls": 0
+}

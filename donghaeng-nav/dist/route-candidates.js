@@ -27,7 +27,9 @@ function branchKeys(graph,r){
 }
 async function generate(E,X,graph,origin,destination,p,{signal,maxAttempts=24,maxCandidates=5,timeBudgetMs=4000,onProgress=()=>{}}={}){
  if(signal?.aborted)throw new DOMException('Aborted','AbortError');
- const profile=E.wheelchairProfile(p),working={...graph,meta:{...graph.meta,allowAssistancePreview:false}},pool=[],started=Date.now();let attempts=0;
+ // Server snapshots already prohibit assistance previews. Preserve their graph
+ // identity so the building audit can reuse its cached filtered geometry.
+ const profile=E.wheelchairProfile(p),working=graph.meta?.allowAssistancePreview===false?graph:{...graph,meta:{...graph.meta,allowAssistancePreview:false}},pool=[],started=Date.now();let attempts=0;
  const diagnostics={successful:0,ineligible:0,duplicates:0,noPath:0,distinct:0,excessiveDetours:0,stopReason:null};
  function add(r,label){
   diagnostics.successful++;r={...r,p:{...profile},variantLabel:label};

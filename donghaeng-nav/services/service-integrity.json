@@ -9,7 +9,8 @@
     "docs/expansion-postgis-results.json",
     "docs/transit-vercel-results.json",
     "docs/postgis-api-results.json",
-    "docs/postgis-ui-results.json"
+    "docs/postgis-ui-results.json",
+    "docs/candidate-cache-results.json"
   ],
   "files": {
     "api/index.mjs": "2fc8a77d4866ff6c9c91539b45245dad0e309614ff305779221e7aa72f6198fc",
