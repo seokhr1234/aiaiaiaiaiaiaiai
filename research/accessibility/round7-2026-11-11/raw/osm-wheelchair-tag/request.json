@@ -1,0 +1,24 @@
+{
+  "id": "osm-wheelchair-tag",
+  "url": "https://wiki.openstreetmap.org/wiki/Key:wheelchair",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T11:17:57.275777+00:00",
+  "requested_at_kst": "2026-11-11T20:17:57.275782+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://wiki.openstreetmap.org/wiki/Key:wheelchair",
+  "response_headers": {
+    "last-modified": "Fri, 30 Oct 2026 22:18:52 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Wed, 11 Nov 2026 11:17:57 GMT",
+    "server": "envoy"
+  },
+  "bytes": 105506,
+  "sha256": "7cbeb7afafc20dd687c19b1b400b8f6bca27b3e88723f83c64afc2a7e3c2dd49",
+  "response_path": "raw/osm-wheelchair-tag/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T11:17:57.778343+00:00"
+}

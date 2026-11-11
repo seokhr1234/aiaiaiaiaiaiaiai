@@ -1,0 +1,44 @@
+{
+  "requested_date_kst": "2026-11-11",
+  "scope": "OSM community tag documentation, not new GIS observations",
+  "requests": [
+    {
+      "id": "osm-foot-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:foot",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 66617,
+      "sha256": "23386f2096959fa34bd89a86a9353521504c76ccb11b229127a6366a8a61aa31",
+      "error_type": null
+    },
+    {
+      "id": "osm-access-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:access",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 238741,
+      "sha256": "10d83cec79801d0aeb57d2318a3cbcc4aa55ba2ab3e485b11c8a368bb371a598",
+      "error_type": null
+    },
+    {
+      "id": "osm-wheelchair-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:wheelchair",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 105506,
+      "sha256": "7cbeb7afafc20dd687c19b1b400b8f6bca27b3e88723f83c64afc2a7e3c2dd49",
+      "error_type": null
+    },
+    {
+      "id": "osm-turn-restriction",
+      "url": "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 141700,
+      "sha256": "b5c9586ffff4ea32a186307b2560aa4b8916d11161a00ebbe0282ca12a59fa82",
+      "error_type": null
+    }
+  ],
+  "field_verified": false,
+  "new_slope_values_promoted": 0
+}

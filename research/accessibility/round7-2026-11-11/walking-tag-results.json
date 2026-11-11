@@ -1,0 +1,105 @@
+{
+  "reviewed_date_kst": "2026-11-11",
+  "original_collected_date_kst": "2026-11-11",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "source_url": "https://download.geofabrik.de/asia/south-korea.html",
+  "source_crs": "EPSG:4326",
+  "vertical_datum": null,
+  "study_bbox": [
+    126.7,
+    37.38,
+    127.3,
+    37.78
+  ],
+  "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "input_sha256": "3a28510cd7e31b99a590fe1e9f41b5f8d49b058ba6750222377bd58d65083de9",
+  "scope": "Only original study highway ways and relevant nodes; additional country-wide relation members are not citywide walking segments",
+  "objects": {
+    "node": 27274,
+    "way": 260828
+  },
+  "foot_rules": {
+    "no_registered_rule": 249619,
+    "positive_tag": 7825,
+    "denied_tag": 2554,
+    "sidepath_tag": 11,
+    "limited_tag": 805,
+    "unknown_tag_value": 14
+  },
+  "wheelchair_rules": {
+    "no_registered_rule": 260643,
+    "positive_tag": 114,
+    "denied_tag": 58,
+    "limited_tag": 13
+  },
+  "width": {
+    "missing": 257925,
+    "registered_numeric": 2884,
+    "unparsed": 19
+  },
+  "kerb_height": {
+    "missing": 260828
+  },
+  "incline": {
+    "missing": 259133,
+    "registered_numeric": 243,
+    "direction_only": 1357,
+    "unparsed": 95
+  },
+  "review_flags": {
+    "structure_or_level_requires_review": 15780,
+    "road_type_requires_review": 8447,
+    "steps_in_source": 6063,
+    "area_requires_separate_geometry_policy": 1218,
+    "foot_conditional_or_direction_requires_review": 4,
+    "vertical_or_mechanical_connection_unverified": 115,
+    "barrier_passage_unverified": 1,
+    "steps_and_wheelchair_positive_tag_requires_review": 7
+  },
+  "node_context": {
+    "crossing": 26504,
+    "kerb": 228,
+    "barrier": 245,
+    "entrance": 250,
+    "elevator": 276
+  },
+  "way_tag_presence": {
+    "highway": 260828,
+    "oneway": 37643,
+    "foot": 9065,
+    "width": 2903,
+    "surface": 37032,
+    "layer": 14528,
+    "tunnel": 4818,
+    "wheelchair": 185,
+    "sidewalk": 2711,
+    "bridge": 10781,
+    "access": 2918,
+    "smoothness": 600,
+    "sidewalk:left": 259,
+    "sidewalk:right": 276,
+    "incline": 1695,
+    "crossing": 17304,
+    "area": 1220,
+    "tactile_paving": 385,
+    "access:conditional": 4,
+    "opening_hours": 5,
+    "level": 338,
+    "conveying": 87,
+    "kerb": 25,
+    "crossing:signals": 11,
+    "barrier": 1
+  },
+  "rows": 288102,
+  "output": {
+    "path": "derived/walking-tag-audit.ndjson.gz",
+    "sha256": "c1914b749708c3de80c5b665864f3f6034b189829a8c25675ba22edc5c3ff50f",
+    "uncompressed_sha256": "63d6ac1125fbee63e04c2152128b81a149cc54acf25b977967d25916220a1af6",
+    "bytes": 2364654
+  },
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "notice": "Positive tags are registered claims only. Missing physical evidence stays unknown; no conditional/legal determination, new slope calculation, network connectivity or wheelchair passability is asserted."
+}

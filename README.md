@@ -14,6 +14,8 @@
 
 2026-11-11 재개: 기반 구현 `9282ea6`을 푸시하고 후속으로 [PostGIS 실제 API 조회](donghaeng-nav/docs/postgis-api-results.json)를 연결했습니다. 기본 메모리 조회를 유지하며 자료 서버의 `DONGHAENG_DATABASE_URL`로 선택할 수 있습니다. [같은 OSM 원본의 참조 보완·제한 관계 구조 점검](research/accessibility/round6-2026-11-11/README.md)도 진행했습니다. 운영 DB 배포·서울 전역 길찾기·실제 ODsay 키 호출·현장 검증은 남아 있습니다.
 
+2026-11-11 추가: 후속 `1030164`도 푸시했고, [도로 노드 태그 16,611개 복구·전체 보행 태그 점검](research/accessibility/round7-2026-11-11/README.md)과 [월곡 서버의 고정 100쌍/동시 10요청 성능 기준선](donghaeng-nav/docs/walk-api-performance.md)을 추가했습니다. 등록 태그를 현장 검증으로 바꾸거나 새 서울 경로망을 활성화하지 않았습니다.
+
 ## 실행
 
 Node.js 18 이상에서 저장소 최상위에서 실행합니다.

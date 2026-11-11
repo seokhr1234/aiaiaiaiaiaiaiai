@@ -1,0 +1,35 @@
+{
+  "requested_date_kst": "2026-11-11",
+  "scope": "OSM community tag documentation, not new GIS observations",
+  "requests": [
+    {
+      "id": "osm-width-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:width",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 103171,
+      "sha256": "fd0bfdd1c6a286ff0a0a969a9cc74fb26859737fb60f7a7db76f6c6abe5d0c93",
+      "error_type": null
+    },
+    {
+      "id": "osm-incline-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:incline",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 96342,
+      "sha256": "d9206c41b952ed64ac618352180fd1027d39699600f5f3327b4efac55661d758",
+      "error_type": null
+    },
+    {
+      "id": "osm-kerb-height-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:kerb:height",
+      "http_status": 200,
+      "transport_result": "http_response",
+      "bytes": 125556,
+      "sha256": "0aab1149b3df3b8c346862226499e884b12aedb41cc0ac580fb42379c3eb9661",
+      "error_type": null
+    }
+  ],
+  "field_verified": false,
+  "new_slope_values_promoted": 0
+}

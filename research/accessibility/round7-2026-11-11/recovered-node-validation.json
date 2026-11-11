@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "road_reference_nodes": 1330229,
+  "tagged_original_nodes_preserved": 35972,
+  "additional_tagged_nodes_recovered": 16611,
+  "all_tagged_recovery_rows": 52583,
+  "relevant_nodes_audited": 31934,
+  "source_coordinates_and_retained_tags_unchanged": true,
+  "hashes_and_counts_verified": true,
+  "complete_relevant_recovered_node_coverage": true,
+  "missing_physical_attributes_remain_null": true,
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0
+}

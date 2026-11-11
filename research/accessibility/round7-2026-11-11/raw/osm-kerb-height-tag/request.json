@@ -1,0 +1,24 @@
+{
+  "id": "osm-kerb-height-tag",
+  "url": "https://wiki.openstreetmap.org/wiki/Key:kerb:height",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T11:20:11.244210+00:00",
+  "requested_at_kst": "2026-11-11T20:20:11.244214+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://wiki.openstreetmap.org/wiki/Key:kerb:height",
+  "response_headers": {
+    "last-modified": "Fri, 30 Oct 2026 22:18:52 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Wed, 11 Nov 2026 11:20:11 GMT",
+    "server": "envoy"
+  },
+  "bytes": 125556,
+  "sha256": "0aab1149b3df3b8c346862226499e884b12aedb41cc0ac580fb42379c3eb9661",
+  "response_path": "raw/osm-kerb-height-tag/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T11:20:11.839952+00:00"
+}

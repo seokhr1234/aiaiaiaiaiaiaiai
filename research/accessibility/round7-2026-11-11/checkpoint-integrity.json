@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "reviewed_date_kst": "2026-11-11",
+  "baseline_commit": "1030164d7e2ec5878340e7326f79af58ea59fc4d",
+  "prior_tracked_research_unchanged": true,
+  "active_runtime_lock_and_graph_unchanged": true,
+  "raw_responses_verified": 10,
+  "response_status_counts": {
+    "503": 3,
+    "200": 7
+  },
+  "derived_artifacts_verified": 3,
+  "way_and_recovered_node_validation_pass": true,
+  "synthetic_local_http_pairs": 100,
+  "concurrent_local_requests": 10,
+  "citywide_slo_verified": false,
+  "field_verified": false,
+  "new_slope_values_promoted": 0
+}

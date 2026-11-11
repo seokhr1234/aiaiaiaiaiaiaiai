@@ -1,0 +1,24 @@
+{
+  "id": "osm-turn-restriction",
+  "url": "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T11:17:57.606929+00:00",
+  "requested_at_kst": "2026-11-11T20:17:57.606934+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+  "response_headers": {
+    "last-modified": "Sat, 07 Nov 2026 22:21:04 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Wed, 11 Nov 2026 11:17:58 GMT",
+    "server": "envoy"
+  },
+  "bytes": 141700,
+  "sha256": "b5c9586ffff4ea32a186307b2560aa4b8916d11161a00ebbe0282ca12a59fa82",
+  "response_path": "raw/osm-turn-restriction/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T11:17:58.918451+00:00"
+}

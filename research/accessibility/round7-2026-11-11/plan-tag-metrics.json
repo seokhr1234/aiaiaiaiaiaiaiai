@@ -1,0 +1,5 @@
+[
+  {"id":"osm-width-tag","url":"https://wiki.openstreetmap.org/wiki/Key:width","timeout":20},
+  {"id":"osm-incline-tag","url":"https://wiki.openstreetmap.org/wiki/Key:incline","timeout":20},
+  {"id":"osm-kerb-height-tag","url":"https://wiki.openstreetmap.org/wiki/Key:kerb:height","timeout":20}
+]

@@ -1,0 +1,26 @@
+{
+  "reviewed_date_kst": "2026-11-11",
+  "original_collected_date_kst": "2026-11-11",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "source_crs": "EPSG:4326",
+  "vertical_datum": null,
+  "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "coordinates_unchanged": true,
+  "road_nodes_expected": 1330229,
+  "road_nodes_found": 1330229,
+  "tagged_nodes_emitted": 52583,
+  "tagged_nodes_missing_from_intermediate": 16611,
+  "originally_tagged_nodes": 35972,
+  "elapsed_seconds": 84.92,
+  "output": {
+    "path": "derived/road-node-tags.ndjson.gz",
+    "sha256": "55a3aa23719b749f9c8d7a18298bbc12ee6be079a434d1d51b3ff83f2eb6e1ad",
+    "uncompressed_sha256": "34de17181a23a11100c9a5832ad62c34d95afc50a6b72b3324125b77a714ec52",
+    "bytes": 1317579
+  },
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "notice": "Recovered original node tags, not newly surveyed data. Existing runtime and round5/round6 files remain untouched."
+}

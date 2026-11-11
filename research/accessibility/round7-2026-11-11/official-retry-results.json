@@ -1,0 +1,35 @@
+{
+  "requested_date_kst": "2026-11-11",
+  "scope": "Public documentation/catalog requests; HTTP 200 alone does not establish new GIS acquisition",
+  "requests": [
+    {
+      "id": "ngii-map-retry",
+      "url": "https://map.ngii.go.kr/ms/map/NlipMap.do",
+      "http_status": 503,
+      "transport_result": "http_response",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "error_type": null
+    },
+    {
+      "id": "ngii-dem-catalog-retry",
+      "url": "https://www.data.go.kr/data/15059920/fileData.do",
+      "http_status": 503,
+      "transport_result": "http_response",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "error_type": null
+    },
+    {
+      "id": "official-bus-catalog-retry",
+      "url": "https://www.data.go.kr/data/15000314/openapi.do",
+      "http_status": 503,
+      "transport_result": "http_response",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "error_type": null
+    }
+  ],
+  "field_verified": false,
+  "new_slope_values_promoted": 0
+}

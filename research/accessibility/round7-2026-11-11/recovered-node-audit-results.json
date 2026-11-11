@@ -1,0 +1,67 @@
+{
+  "reviewed_date_kst": "2026-11-11",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "scope": "All original road-reference nodes inspected in the same PBF; only barrier/crossing/elevator/entrance/kerb nodes audited here",
+  "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "source_crs": "EPSG:4326",
+  "vertical_datum": null,
+  "road_nodes_checked": 1330229,
+  "tagged_road_nodes": 52583,
+  "relevant_nodes": 31934,
+  "node_context": {
+    "crossing": 26579,
+    "barrier": 3000,
+    "entrance": 2109,
+    "kerb": 1130,
+    "elevator": 278
+  },
+  "raw_tag_presence": {
+    "kerb": 1130,
+    "access": 317,
+    "foot": 155,
+    "wheelchair": 220,
+    "kerb:height": 2,
+    "width": 2
+  },
+  "foot_rule": {
+    "no_registered_rule": 31506,
+    "positive_tag": 264,
+    "denied_tag": 55,
+    "limited_tag": 108,
+    "unknown_tag_value": 1
+  },
+  "wheelchair_rule": {
+    "no_registered_rule": 31714,
+    "positive_tag": 163,
+    "denied_tag": 48,
+    "limited_tag": 9
+  },
+  "width": {
+    "missing": 31932,
+    "registered_numeric": 2
+  },
+  "kerb_height": {
+    "missing": 31932,
+    "registered_numeric": 2
+  },
+  "incline": {
+    "missing": 31934
+  },
+  "review_flags": {
+    "barrier_passage_unverified": 3000,
+    "vertical_or_mechanical_connection_unverified": 278,
+    "structure_or_level_requires_review": 119
+  },
+  "input_sha256": "55a3aa23719b749f9c8d7a18298bbc12ee6be079a434d1d51b3ff83f2eb6e1ad",
+  "output": {
+    "path": "derived/recovered-node-audit.ndjson.gz",
+    "sha256": "b625f0990ac0a735389fd2287544398582f2d531d4d0bd9aa3f22017f1152ede",
+    "uncompressed_sha256": "46eee3f2c7e0e9e779d769873f87b58a774ca0b41bc4c303401f345cd21eaf0b",
+    "bytes": 260485
+  },
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "notice": "Supersedes the intermediate node-only inventory, not the fully preserved way-tag counts. Physical passage and live elevator operation remain unverified."
+}

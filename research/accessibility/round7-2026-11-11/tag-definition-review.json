@@ -1,0 +1,82 @@
+{
+  "reviewed_date_kst": "2026-11-11",
+  "scope": "Community tag documentation, not a government accessibility standard or new GIS survey",
+  "documents": [
+    {
+      "id": "osm-foot-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:foot",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:17:56.146236+00:00",
+      "source_revision_id": 2908444,
+      "source_as_of": null,
+      "response_sha256": "23386f2096959fa34bd89a86a9353521504c76ccb11b229127a6366a8a61aa31",
+      "review": "보행 전용 foot 태그를 원래 값으로 보존. 등록 태그를 현장 검증으로 승격하지 않음."
+    },
+    {
+      "id": "osm-access-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:access",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:17:56.146728+00:00",
+      "source_revision_id": 3103266,
+      "source_as_of": null,
+      "response_sha256": "10d83cec79801d0aeb57d2318a3cbcc4aa55ba2ab3e485b11c8a368bb371a598",
+      "review": "접근 태그는 등록된 권한/제약을 설명하며 일반 access와 개별 교통수단 태그를 구분. 결측의 법적 기본 허용은 이번 감사에서 결정하지 않음."
+    },
+    {
+      "id": "osm-wheelchair-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:wheelchair",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:17:57.275777+00:00",
+      "source_revision_id": 3062598,
+      "source_as_of": null,
+      "response_sha256": "7cbeb7afafc20dd687c19b1b400b8f6bca27b3e88723f83c64afc2a7e3c2dd49",
+      "review": "yes/limited/no/designated를 구분. 계단·경사로 등 물리 연결의 현장 확인을 대체하지 않음."
+    },
+    {
+      "id": "osm-turn-restriction",
+      "url": "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:17:57.606929+00:00",
+      "source_revision_id": 3077464,
+      "source_as_of": null,
+      "response_sha256": "b5c9586ffff4ea32a186307b2560aa4b8916d11161a00ebbe0282ca12a59fa82",
+      "review": "일반 turn restriction을 보행에 일괄 적용하지 않음. 문서는 type/key restriction:foot일 때 보행에 적용한다고 설명."
+    },
+    {
+      "id": "osm-width-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:width",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:20:09.964688+00:00",
+      "source_revision_id": 3060666,
+      "source_as_of": null,
+      "response_sha256": "fd0bfdd1c6a286ff0a0a969a9cc74fb26859737fb60f7a7db76f6c6abe5d0c93",
+      "review": "폭 숫자의 기본 단위는 미터. 이 감사는 m/cm/mm만 정규화하고 범위/기타 단위는 미해석으로 보존."
+    },
+    {
+      "id": "osm-incline-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:incline",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:20:09.964195+00:00",
+      "source_revision_id": 3053127,
+      "source_as_of": null,
+      "response_sha256": "d9206c41b952ed64ac618352180fd1027d39699600f5f3327b4efac55661d758",
+      "review": "퍼센트와 각도·up/down을 구분. 도 단위를 새 퍼센트로 계산하지 않고 단위 없는 값도 미지정으로 보존."
+    },
+    {
+      "id": "osm-kerb-height-tag",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:kerb:height",
+      "http_status": 200,
+      "collected_at_utc": "2026-11-11T11:20:11.244210+00:00",
+      "source_revision_id": 3074064,
+      "source_as_of": null,
+      "response_sha256": "0aab1149b3df3b8c346862226499e884b12aedb41cc0ac580fb42379c3eb9661",
+      "review": "턱 높이의 기본 단위는 미터이며 원문 단위 보존. kerb 종류와 실제 높이 숫자의 존재는 다름."
+    }
+  ],
+  "generic_restriction_types_seen": {
+    "restriction": 6046
+  },
+  "restriction_foot_type_count": 0,
+  "field_verified": false,
+  "new_slope_values_promoted": 0
+}

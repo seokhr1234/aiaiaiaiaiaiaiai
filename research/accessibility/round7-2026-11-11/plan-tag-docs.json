@@ -1,0 +1,6 @@
+[
+  {"id":"osm-foot-tag","url":"https://wiki.openstreetmap.org/wiki/Key:foot","timeout":20},
+  {"id":"osm-access-tag","url":"https://wiki.openstreetmap.org/wiki/Key:access","timeout":20},
+  {"id":"osm-wheelchair-tag","url":"https://wiki.openstreetmap.org/wiki/Key:wheelchair","timeout":20},
+  {"id":"osm-turn-restriction","url":"https://wiki.openstreetmap.org/wiki/Relation:restriction","timeout":20}
+]

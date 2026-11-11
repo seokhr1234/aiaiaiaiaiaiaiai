@@ -1,0 +1,4 @@
+/derived/
+/raw/**/response.bin
+/raw/**/partial.bin
+__pycache__/

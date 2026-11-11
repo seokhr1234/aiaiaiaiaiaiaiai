@@ -1,0 +1,5 @@
+[
+  {"id":"ngii-map-retry","url":"https://map.ngii.go.kr/ms/map/NlipMap.do","timeout":20},
+  {"id":"ngii-dem-catalog-retry","url":"https://www.data.go.kr/data/15059920/fileData.do","timeout":20},
+  {"id":"official-bus-catalog-retry","url":"https://www.data.go.kr/data/15000314/openapi.do","timeout":20}
+]
