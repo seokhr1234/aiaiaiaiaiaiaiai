@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "file": "study-context.json.gz",
+      "nodes": 1833734,
+      "ways": 314407,
+      "missing_way_node_references": 0
+    },
+    {
+      "file": "study-places.json.gz",
+      "nodes": 196816,
+      "ways": 0,
+      "missing_way_node_references": 0
+    },
+    {
+      "file": "study-map.json.gz",
+      "nodes": 1330229,
+      "ways": 260828,
+      "missing_way_node_references": 0
+    }
+  ],
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "relations": 9648,
+  "relations_with_unresolved_members": 1634,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "field_verified": false,
+  "remaining": "Resolve external relation members, interpret restrictions, review connectivity/precision/terrain binding before active graph promotion"
+}

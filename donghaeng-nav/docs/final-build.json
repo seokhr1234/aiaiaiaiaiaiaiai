@@ -1,6 +1,14 @@
 {
-  "version": "2026-11-10-audit-fixes",
+  "version": "2026-11-11-expansion-foundation",
   "main_source": "donghaeng-nav/dist/index.html",
+  "expansion": {
+    "online_page": "expansion.html",
+    "service_code_files": 22,
+    "service_integrity_sha256": "d621e9261431369251396f07a32d3fe2fd51af003a4c347ffe2a8a9ac81cd7fd",
+    "citywide_routing": false,
+    "authenticated_transit_verified": false,
+    "new_slope_values_promoted": 0
+  },
   "compressed_assets": [
     {
       "path": "map-data.json.gz",
@@ -135,8 +143,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
-  "html_sha256": "7c019cbce81d86f46b892471179ad36bdd3e3faae2612238e60facdc223c0013",
-  "html_bytes": 15739017,
+  "html_sha256": "38dcaa98f04cdc419519c1a35f82b41b9d81aef98696c531509be00b27c6862f",
+  "html_bytes": 15739189,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",

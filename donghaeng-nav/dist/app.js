@@ -1,5 +1,6 @@
 'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],E=NavEngine,F=DonghaengFinal;
+if(/^https?:$/.test(location.protocol))$('#expansion-link').hidden=false;
 const storageIssues={};const read=k=>{try{const value=SavedData.decode(k,localStorage.getItem(k));storageIssues[k]=value.invalid;return value.items}catch{storageIssues[k]=0;return []}},write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{toast('브라우저 저장 공간에 접근할 수 없어요.');return false}};
 let graph,map,precisionController,origin=F.STATION.slice(),originName='월곡역 · 시연 기준점',destination=null,profile,analyzed='',routes=[],selected=0,watchId=null,currentStep=-1,detailGroups=[],toastTimer,pickMode=null,gpsMarker,accuracyCircle;
 let accessReports=[];

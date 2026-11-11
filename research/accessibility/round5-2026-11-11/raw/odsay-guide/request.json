@@ -1,0 +1,23 @@
+{
+  "id": "odsay-guide",
+  "url": "https://lab.odsay.com/guide/guide",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T09:56:25.730565+00:00",
+  "requested_at_kst": "2026-11-11T18:56:25.730574+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://lab.odsay.com/guide/guide",
+  "response_headers": {
+    "date": "Wed, 11 Nov 2026 09:56:26 GMT",
+    "server": "envoy",
+    "content-type": "text/html;charset=UTF-8"
+  },
+  "bytes": 136450,
+  "sha256": "785cf0e5ccff5eec8274c5d8a095f7b84a93918615c950dab053294a22ad21a7",
+  "response_path": "raw/odsay-guide/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T09:56:27.157352+00:00"
+}

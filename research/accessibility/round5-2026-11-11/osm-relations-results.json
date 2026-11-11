@@ -1,0 +1,18 @@
+{
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "relations": 9648,
+  "restriction_relations": 6046,
+  "relations_with_unresolved_members": 1634,
+  "output_sha256": "8af6db10d107618d5ac74f1bdd7e98841ffe36d01a9ecada3187324ebcb1fa5b",
+  "uncompressed_sha256": "3fcf4430847cb199d7c9d1fbbcf41411f75b775821694ce595cec06ae49e938a",
+  "bytes": 1004064,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "field_verified": false,
+  "notice": "Only relations touching retained study ways; unresolved external members and routing restriction interpretation remain pending",
+  "unresolved_detail": {
+    "path": "derived/unresolved-relation-members.json.gz",
+    "sha256": "4d1eaa3fb4070a2c08ceef51741647b2c18798d82a9a7620e3e320ea5d6a99ad",
+    "bytes": 186598
+  }
+}

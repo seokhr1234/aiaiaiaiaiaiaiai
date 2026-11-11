@@ -1,0 +1,26 @@
+{
+  "id": "osm-search-policy",
+  "url": "https://operations.osmfoundation.org/policies/nominatim/",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T09:56:31.459494+00:00",
+  "requested_at_kst": "2026-11-11T18:56:31.459501+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://operations.osmfoundation.org/policies/nominatim/",
+  "response_headers": {
+    "server": "envoy",
+    "date": "Wed, 11 Nov 2026 09:56:31 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "content-length": "8409",
+    "last-modified": "Mon, 09 Nov 2026 02:53:19 GMT",
+    "etag": "\"6af1359f-20d9\""
+  },
+  "bytes": 8409,
+  "sha256": "96f1c62c2b6d886d2c525cb60b5d2fbc24532d25ef477bc0aaf31ce786f9ad74",
+  "response_path": "raw/osm-search-policy/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T09:56:32.273400+00:00"
+}

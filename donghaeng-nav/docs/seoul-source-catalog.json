@@ -1,0 +1,1080 @@
+{
+  "version": 1,
+  "reviewed_date_kst": "2026-11-11",
+  "baseline_commit": "373c51208d81b17257c930c328dfa75748253f0e",
+  "datasets": [
+    {
+      "id": "bundled-map-data",
+      "path": "map-data.json",
+      "sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+      "bytes": 2678726,
+      "runtime_unchanged": true,
+      "metadata": {}
+    },
+    {
+      "id": "bundled-map-context",
+      "path": "map-context.json",
+      "sha256": "ee61ec66d6916edce5d01a48b4888860ffdfb822386b92d9465c63aaa1c35872",
+      "bytes": 3340812,
+      "runtime_unchanged": true,
+      "metadata": {}
+    },
+    {
+      "id": "bundled-seoul-base",
+      "path": "data/accessibility/seoul/seoul-base.json",
+      "sha256": "8632d2b544225662243e1a5b953fd8914c558295f2a626d1cdd1b9f9c0a11e3f",
+      "bytes": 26970635,
+      "runtime_unchanged": true,
+      "metadata": {}
+    },
+    {
+      "id": "bundled-terrain",
+      "path": "terrain-data.json",
+      "sha256": "bc2a1db535b7346f3d585cf269acc799b410b056c52124c52a3c7e8d98b12594",
+      "bytes": 12290459,
+      "runtime_unchanged": true,
+      "metadata": {
+        "source": "Mapzen/Tilezen Terrain Tiles · AWS",
+        "source_url": "https://registry.opendata.aws/terrain-tiles/",
+        "attribution": "Mapzen/Tilezen; SRTM/GMTED2010 terrain data courtesy of the U.S. Geological Survey",
+        "attribution_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+        "fetched_date": "2026-10-31",
+        "graph_sha256": "2767976879707815903b2123114f3aa2f1d88f2079b4dd2ec04ea218b4d75a12",
+        "height_unit": "metres",
+        "slope_unit": "percent",
+        "method": "Bilinear Terrarium elevations, along-way centred 60m window; minimum 30m support",
+        "tile_zoom": 14,
+        "tile_pixel_spacing_m_at_wolgok": 7.57,
+        "underlying_dem_resolution": "Varies by source; pixel spacing is not DEM accuracy",
+        "field_verified": false,
+        "excluded_bridge_tunnel_layer_ways": 153,
+        "notice": "지형 표고로 계산한 추정 경사 · 보도 실측 아님 · 턱/교량/지하/짧은 급경사·건물 영향은 별도 확인",
+        "coverage": {
+          "south": 37.58,
+          "west": 127.02,
+          "north": 37.611,
+          "east": 127.058
+        },
+        "review_state": "current",
+        "review_policy": "2026-10-31-v1",
+        "new_sources_promoted": 0
+      }
+    },
+    {
+      "id": "bundled-facilities-seoul",
+      "path": "data/accessibility/seoul/seoul-facilities.geojson",
+      "sha256": "cb16455270e7492755a96bf4a742c06a41da41a6efe81cb7d6e3a4366061a3f9",
+      "bytes": 21316977,
+      "runtime_unchanged": true,
+      "metadata": {}
+    },
+    {
+      "id": "bundled-access-reports",
+      "path": "data/precision/access-reports.json",
+      "sha256": "e33c45500f53d385a1884f1bad5fc130857bfd2de5a6d3e04c685f1764b7d6c3",
+      "bytes": 1144,
+      "runtime_unchanged": true,
+      "metadata": {}
+    },
+    {
+      "id": "bundled-precision-map",
+      "path": "data/precision/precision-map.geojson",
+      "sha256": "876ad5216be134b779aab319386e3addbd06a4500029eebec35256c91cf6c6c8",
+      "bytes": 15947826,
+      "runtime_unchanged": true,
+      "metadata": {
+        "title": "월곡역 주변 1:1,000 수치지형도 · 2025년 16도엽",
+        "provider": "국토교통부 국토지리정보원 · 국토정보플랫폼",
+        "source_url": "https://map.ngii.go.kr/ms/map/NlipMap.do",
+        "license": "국토지리정보원 출처표시 · 다운로드 사용자 준수사항 적용 (개별 XML 이용허락 미기재)",
+        "source_crs": "EPSG:5186",
+        "scale": 1000,
+        "as_of": "2025-08-14 고시 · 2024 촬영 / 2025 조사·제작",
+        "crs_verification": {
+          "status": "inferred_and_cross_checked_not_explicit_epsg_in_xml",
+          "xml_datum": "GRS80",
+          "method": "Compare all 16 sheet bounds with 0.005 degree sheet grid around Wolgok; EPSG:5186 matches. EPSG:5181/5174/5179 place sheets outside stated map area. No fitted translation or manual coordinate offset.",
+          "reference": "https://opengeospatial.github.io/ontology-crs/data/def/crs/EPSG/0/5186/index.html",
+          "limitation": "XML declares only GRS80; exact projected CRS is inferred from coordinates and sheet layout, not explicitly supplied in metadata."
+        },
+        "vertical_datum": "미확인 · 도면 Z를 보도 노면 실측고도로 취급하지 않음",
+        "license_reference": "https://www.ngii.go.kr/kor/content.do?sq=261",
+        "layer_mapping": {
+          "A0013110": "road_boundary",
+          "A0013111": "road_boundary",
+          "A0013112": "road_boundary",
+          "A0013113": "road_boundary",
+          "A0013114": "road_boundary",
+          "A0013115": "road_boundary",
+          "A0013116": "road_boundary",
+          "A0013117": "road_boundary",
+          "A0013118": "road_boundary",
+          "A0013122": "road_boundary",
+          "A0013140": "road_boundary",
+          "B0014110": "building",
+          "B0014111": "building",
+          "B0014112": "building",
+          "B0014113": "building",
+          "B0014114": "building",
+          "B0014115": "building",
+          "B0014116": "building",
+          "B0014117": "building",
+          "B0014118": "building",
+          "A0033324": "sidewalk",
+          "F0017114": "contour",
+          "F0017111": "contour",
+          "F0027217": "height"
+        },
+        "classification_references": [
+          "https://www.codil.or.kr/filebank/original/RK/OTKCRK210111/OTKCRK210111.pdf",
+          "https://www.codil.or.kr/filebank/original/RK/OTKCRK130016/OTKCRK130016.pdf",
+          "https://eia.kei.re.kr/home/boardDownload.es?bid=0003&list_no=571&mid=a10401000000&seq=1"
+        ],
+        "schema": "donghaeng-precision-v1",
+        "status": "loaded_for_review",
+        "original_sha256": "bd0dc84dd362d882bc1ce908143cc7b3bd9748c74235ed37b8876682f81107f6",
+        "sources": [
+          {
+            "sheet_id": "377051100",
+            "original_file": "(B010)수치지도_377051100_2025_000005243310.dxf",
+            "dxf_sha256": "5d67a5f88fe32f56dcf647d124a71bee6f90b0b093a9fcd78faf85e8a8b7dea1",
+            "xml_sha256": "1f105a18272fa390b78968add21c084ce0d4980df1bae361a3c98eba93f9bd3f",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 336,
+              "in_coverage": 336,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051187",
+            "original_file": "(B010)수치지도_377051187_2025_00000784441687.dxf",
+            "dxf_sha256": "c103ce360299af302feb2d9d69857228df513457923e457e7f668a135b02d1f0",
+            "xml_sha256": "b667a811d22f34c807fd5110f5ddb52dd6dadbd14e2ec14f2d4efe7256d3aaa2",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 3966,
+              "in_coverage": 3966,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051188",
+            "original_file": "(B010)수치지도_377051188_2025_00000741199682.dxf",
+            "dxf_sha256": "c452fe082e155b25da0525811765a47721799e01054e5c55fa2733b51be69106",
+            "xml_sha256": "d0d7d6971f23f9eae7a310aa1f253bb59c99a90aa32ff41d7bbb31ed2e81981c",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 4156,
+              "in_coverage": 4156,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051189",
+            "original_file": "(B010)수치지도_377051189_2025_00000187731474.dxf",
+            "dxf_sha256": "2da2e40eaefe27b2d55e0fa896b3eda976098319d363591c2ba439a716ecd042",
+            "xml_sha256": "68bdd23ca876063d157b757b2d16752638973a25326985998944622a5c4007ff",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 2851,
+              "in_coverage": 2851,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051190",
+            "original_file": "(B010)수치지도_377051190_2025_00000707007665.dxf",
+            "dxf_sha256": "3bc4bf58fb8198d908fc58f76818a56dff25232a0322b1d6158d871fbf2643da",
+            "xml_sha256": "352b43b0bf27fe5ffb1830f84d94ab86a22f29b2f83e3f16f3bc5aa8331da44c",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 4377,
+              "in_coverage": 4377,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051197",
+            "original_file": "(B010)수치지도_377051197_2025_00000871198670.dxf",
+            "dxf_sha256": "e811d6ae53c5dcc82971e0d8e74db9f263b4289f4ff48fe0859a914835230363",
+            "xml_sha256": "faa9479a7b34d5011049ccd2e2fd09d8b1117f9e306e405124cf365361246d4c",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 3732,
+              "in_coverage": 3732,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051198",
+            "original_file": "(B010)수치지도_377051198_2025_00000593782872.dxf",
+            "dxf_sha256": "f19c50ed06871bfc22dd5841e54868abe92dc5df4a4358c2f3d81d29cf5e4cd7",
+            "xml_sha256": "ab16a2d31a82af66434e9b8dc918fcc96e892278a209f240fe625bd5980184f8",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 3669,
+              "in_coverage": 3669,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051199",
+            "original_file": "(B010)수치지도_377051199_2025_00000737369269.dxf",
+            "dxf_sha256": "f07584d4126ac6ad8fc7e050eaa7aff91cac0b800ed3c17f19ca0714527b37f0",
+            "xml_sha256": "65e9c4a8169f695506707d104cdf9e984a714bd942da6aad610aad0305bf6ce0",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 3167,
+              "in_coverage": 3167,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051607",
+            "original_file": "(B010)수치지도_377051607_2025_00000657105799.dxf",
+            "dxf_sha256": "375e9707504044fafd37053a60b1aad73e5ff235dbfc8292bad37b12c4465c9a",
+            "xml_sha256": "fd2823a11172485bf23d0fb73d914e4eb07f8dfd6c57a29002908779af944ebf",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 3570,
+              "in_coverage": 3570,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051608",
+            "original_file": "(B010)수치지도_377051608_2025_00000146266217.dxf",
+            "dxf_sha256": "ac598b8ba0144cf1011df50a8e5e3c724fb1b5bc6242cf4955eed17af4d48958",
+            "xml_sha256": "7e7fe56cb4df3c5c2877476df1b5340c7c9889caf897319c75aae3ff0ce58a60",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 3913,
+              "in_coverage": 3913,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051609",
+            "original_file": "(B010)수치지도_377051609_2025_00000513397309.dxf",
+            "dxf_sha256": "ec13682926f4e90778d7703ff44bb3dfbbb3a63d8034e3e90e7a6721e083d041",
+            "xml_sha256": "bd03a9fb837b6dbf60f063012462e18fc0a27d132804254566793e3851bc5a92",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 1752,
+              "in_coverage": 1752,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051610",
+            "original_file": "(B010)수치지도_377051610_2025_0000067510014.dxf",
+            "dxf_sha256": "822f0e1ac9536ffa6d453b03b1fa0f0409ff2281c3a36e65999c0f6a02ea89d5",
+            "xml_sha256": "ab53b14a5fea240f03bf5c90af898ab323c52c97b5c455bc00fb5909ede342e4",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 273,
+              "in_coverage": 273,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051617",
+            "original_file": "(B010)수치지도_377051617_2025_0000041268641.dxf",
+            "dxf_sha256": "db3ffefda0ea93941a7904dca9668eed05d94674c6b7f0a1c0844c6e03eb659c",
+            "xml_sha256": "3454a8f356ba37b1bf3672c66501ec4b38077ce97421e1c5e05070450fcd6959",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 2095,
+              "in_coverage": 2095,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051618",
+            "original_file": "(B010)수치지도_377051618_2025_00000389075083.dxf",
+            "dxf_sha256": "6743bf54468f5465e9b594330e5b19bf14e93d9ba442feac67e108254dcf6521",
+            "xml_sha256": "3fd8e875cc4b9dbb53141ef7ef7981adae54186b9bd1132c2d73c10210286a45",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 2916,
+              "in_coverage": 2916,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051619",
+            "original_file": "(B010)수치지도_377051619_2025_00000270147666.dxf",
+            "dxf_sha256": "dd6889a9ffb6b90a0d8e69a9ff52d269378ea7220568de73de6a454bbd40a186",
+            "xml_sha256": "6910e1adf59dd70ef85916aa8808ea7cc0dd851ad41e503ee2644763cc607083",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 1667,
+              "in_coverage": 1667,
+              "outside": 0
+            }
+          },
+          {
+            "sheet_id": "377051620",
+            "original_file": "(B010)수치지도_377051620_2025_00000295171644.dxf",
+            "dxf_sha256": "8762ba9d92f2780664b300e701373d1d9555646af8d079a1f1d255dafeca82aa",
+            "xml_sha256": "91b2c7ee89577ce5696cc340da451c6f73d80f4487843ec636988c23b5427711",
+            "photography_year": "2024",
+            "survey_year": "2025",
+            "production_year": "2025",
+            "notice_date": "2025-08-14 00:00:00.0",
+            "counts": {
+              "input": 2281,
+              "in_coverage": 2281,
+              "outside": 0
+            }
+          }
+        ],
+        "field_verified": false,
+        "routing_integrated": false,
+        "counts": {
+          "input": 44721,
+          "in_coverage": 44721,
+          "outside": 0,
+          "unclassified_held_in_originals": 28552,
+          "output": 16169,
+          "sheets": 16,
+          "by_kind": {
+            "contour": 951,
+            "building": 10979,
+            "height": 48,
+            "road_boundary": 3393,
+            "sidewalk": 798
+          }
+        },
+        "display_processing": "확인된 분류만 표시. 미분류 도형은 원본에 보존. 표시 경위도 소수 7자리 반올림; Z 값 보존. 도형 단순화·수동 위치 보정 없음.",
+        "notice": "도면 경계선은 보행 중심선이 아닙니다. 경사·단차·출입구·층위·연결은 미검증입니다."
+      }
+    },
+    {
+      "id": "bundled-crossings-review",
+      "path": "data/precision/crossings-review.geojson",
+      "sha256": "615aec503786dd1ea5d4e3ff5cbb5cbb7af34d50be5ad587fd2c4d1b17c96435",
+      "bytes": 811494,
+      "runtime_unchanged": true,
+      "metadata": {
+        "schema": "donghaeng-crossings-review-v1",
+        "title": "학교 2km 공식 횡단보도 조사 참고",
+        "provider": "서울특별시·자치구 공개자료",
+        "source_url": "https://data.seoul.go.kr/dataList/OA-22906/S/1/datasetView.do",
+        "license": "공공누리 제1유형 · 출처표시",
+        "source_sha256": "f0261bf65cb5ba52fc726a1a112cd9e52f5477cf5b93f3efadcc58a99be8ff7d",
+        "field_verified": false,
+        "routing_integrated": false,
+        "notice": "공식 시설 점 자료이며 보도 접속·턱·층위·현재 통행 가능은 미확인"
+      }
+    },
+    {
+      "id": "bundled-terrain-evidence",
+      "path": "data/terrain/evidence.json",
+      "sha256": "a94f671ddc81b4831aacf872fa243cde25473ebbaf51690b8c8479327afdabcc",
+      "bytes": 5553154,
+      "runtime_unchanged": true,
+      "metadata": {}
+    }
+  ],
+  "precision_sheets": [
+    {
+      "sheet_id": "377051100",
+      "original_file": "(B010)수치지도_377051100_2025_000005243310.dxf",
+      "dxf_sha256": "5d67a5f88fe32f56dcf647d124a71bee6f90b0b093a9fcd78faf85e8a8b7dea1",
+      "xml_sha256": "1f105a18272fa390b78968add21c084ce0d4980df1bae361a3c98eba93f9bd3f",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 336,
+        "in_coverage": 336,
+        "outside": 0
+      },
+      "display_feature_count": 128,
+      "display_extent": [
+        127.045,
+        37.6,
+        127.05,
+        37.605
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051187",
+      "original_file": "(B010)수치지도_377051187_2025_00000784441687.dxf",
+      "dxf_sha256": "c103ce360299af302feb2d9d69857228df513457923e457e7f668a135b02d1f0",
+      "xml_sha256": "b667a811d22f34c807fd5110f5ddb52dd6dadbd14e2ec14f2d4efe7256d3aaa2",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 3966,
+        "in_coverage": 3966,
+        "outside": 0
+      },
+      "display_feature_count": 1584,
+      "display_extent": [
+        127.0299999,
+        37.6049999,
+        127.035,
+        37.61
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051188",
+      "original_file": "(B010)수치지도_377051188_2025_00000741199682.dxf",
+      "dxf_sha256": "c452fe082e155b25da0525811765a47721799e01054e5c55fa2733b51be69106",
+      "xml_sha256": "d0d7d6971f23f9eae7a310aa1f253bb59c99a90aa32ff41d7bbb31ed2e81981c",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 4156,
+        "in_coverage": 4156,
+        "outside": 0
+      },
+      "display_feature_count": 1446,
+      "display_extent": [
+        127.0349999,
+        37.605,
+        127.0400001,
+        37.61
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051189",
+      "original_file": "(B010)수치지도_377051189_2025_00000187731474.dxf",
+      "dxf_sha256": "2da2e40eaefe27b2d55e0fa896b3eda976098319d363591c2ba439a716ecd042",
+      "xml_sha256": "68bdd23ca876063d157b757b2d16752638973a25326985998944622a5c4007ff",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 2851,
+        "in_coverage": 2851,
+        "outside": 0
+      },
+      "display_feature_count": 932,
+      "display_extent": [
+        127.0399999,
+        37.605,
+        127.0450001,
+        37.61
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051190",
+      "original_file": "(B010)수치지도_377051190_2025_00000707007665.dxf",
+      "dxf_sha256": "3bc4bf58fb8198d908fc58f76818a56dff25232a0322b1d6158d871fbf2643da",
+      "xml_sha256": "352b43b0bf27fe5ffb1830f84d94ab86a22f29b2f83e3f16f3bc5aa8331da44c",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 4377,
+        "in_coverage": 4377,
+        "outside": 0
+      },
+      "display_feature_count": 1647,
+      "display_extent": [
+        127.0449999,
+        37.605,
+        127.0500001,
+        37.6100001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051197",
+      "original_file": "(B010)수치지도_377051197_2025_00000871198670.dxf",
+      "dxf_sha256": "e811d6ae53c5dcc82971e0d8e74db9f263b4289f4ff48fe0859a914835230363",
+      "xml_sha256": "faa9479a7b34d5011049ccd2e2fd09d8b1117f9e306e405124cf365361246d4c",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 3732,
+        "in_coverage": 3732,
+        "outside": 0
+      },
+      "display_feature_count": 1233,
+      "display_extent": [
+        127.0299999,
+        37.5999999,
+        127.0350001,
+        37.6050001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051198",
+      "original_file": "(B010)수치지도_377051198_2025_00000593782872.dxf",
+      "dxf_sha256": "f19c50ed06871bfc22dd5841e54868abe92dc5df4a4358c2f3d81d29cf5e4cd7",
+      "xml_sha256": "ab16a2d31a82af66434e9b8dc918fcc96e892278a209f240fe625bd5980184f8",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 3669,
+        "in_coverage": 3669,
+        "outside": 0
+      },
+      "display_feature_count": 1390,
+      "display_extent": [
+        127.0349999,
+        37.5999999,
+        127.0400001,
+        37.6050001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051199",
+      "original_file": "(B010)수치지도_377051199_2025_00000737369269.dxf",
+      "dxf_sha256": "f07584d4126ac6ad8fc7e050eaa7aff91cac0b800ed3c17f19ca0714527b37f0",
+      "xml_sha256": "65e9c4a8169f695506707d104cdf9e984a714bd942da6aad610aad0305bf6ce0",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 3167,
+        "in_coverage": 3167,
+        "outside": 0
+      },
+      "display_feature_count": 1203,
+      "display_extent": [
+        127.04,
+        37.5999999,
+        127.045,
+        37.6050001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051607",
+      "original_file": "(B010)수치지도_377051607_2025_00000657105799.dxf",
+      "dxf_sha256": "375e9707504044fafd37053a60b1aad73e5ff235dbfc8292bad37b12c4465c9a",
+      "xml_sha256": "fd2823a11172485bf23d0fb73d914e4eb07f8dfd6c57a29002908779af944ebf",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 3570,
+        "in_coverage": 3570,
+        "outside": 0
+      },
+      "display_feature_count": 1274,
+      "display_extent": [
+        127.0299999,
+        37.595,
+        127.0350001,
+        37.6000001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051608",
+      "original_file": "(B010)수치지도_377051608_2025_00000146266217.dxf",
+      "dxf_sha256": "ac598b8ba0144cf1011df50a8e5e3c724fb1b5bc6242cf4955eed17af4d48958",
+      "xml_sha256": "7e7fe56cb4df3c5c2877476df1b5340c7c9889caf897319c75aae3ff0ce58a60",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 3913,
+        "in_coverage": 3913,
+        "outside": 0
+      },
+      "display_feature_count": 1621,
+      "display_extent": [
+        127.035,
+        37.595,
+        127.0400001,
+        37.6000001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051609",
+      "original_file": "(B010)수치지도_377051609_2025_00000513397309.dxf",
+      "dxf_sha256": "ec13682926f4e90778d7703ff44bb3dfbbb3a63d8034e3e90e7a6721e083d041",
+      "xml_sha256": "bd03a9fb837b6dbf60f063012462e18fc0a27d132804254566793e3851bc5a92",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 1752,
+        "in_coverage": 1752,
+        "outside": 0
+      },
+      "display_feature_count": 592,
+      "display_extent": [
+        127.0399999,
+        37.595,
+        127.0450001,
+        37.6
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051610",
+      "original_file": "(B010)수치지도_377051610_2025_0000067510014.dxf",
+      "dxf_sha256": "822f0e1ac9536ffa6d453b03b1fa0f0409ff2281c3a36e65999c0f6a02ea89d5",
+      "xml_sha256": "ab53b14a5fea240f03bf5c90af898ab323c52c97b5c455bc00fb5909ede342e4",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 273,
+        "in_coverage": 273,
+        "outside": 0
+      },
+      "display_feature_count": 121,
+      "display_extent": [
+        127.0449999,
+        37.595,
+        127.0500001,
+        37.6000001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051617",
+      "original_file": "(B010)수치지도_377051617_2025_0000041268641.dxf",
+      "dxf_sha256": "db3ffefda0ea93941a7904dca9668eed05d94674c6b7f0a1c0844c6e03eb659c",
+      "xml_sha256": "3454a8f356ba37b1bf3672c66501ec4b38077ce97421e1c5e05070450fcd6959",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 2095,
+        "in_coverage": 2095,
+        "outside": 0
+      },
+      "display_feature_count": 634,
+      "display_extent": [
+        127.03,
+        37.59,
+        127.0350001,
+        37.5950001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051618",
+      "original_file": "(B010)수치지도_377051618_2025_00000389075083.dxf",
+      "dxf_sha256": "6743bf54468f5465e9b594330e5b19bf14e93d9ba442feac67e108254dcf6521",
+      "xml_sha256": "3fd8e875cc4b9dbb53141ef7ef7981adae54186b9bd1132c2d73c10210286a45",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 2916,
+        "in_coverage": 2916,
+        "outside": 0
+      },
+      "display_feature_count": 930,
+      "display_extent": [
+        127.0349999,
+        37.59,
+        127.04,
+        37.5950001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051619",
+      "original_file": "(B010)수치지도_377051619_2025_00000270147666.dxf",
+      "dxf_sha256": "dd6889a9ffb6b90a0d8e69a9ff52d269378ea7220568de73de6a454bbd40a186",
+      "xml_sha256": "6910e1adf59dd70ef85916aa8808ea7cc0dd851ad41e503ee2644763cc607083",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 1667,
+        "in_coverage": 1667,
+        "outside": 0
+      },
+      "display_feature_count": 645,
+      "display_extent": [
+        127.0399999,
+        37.59,
+        127.045,
+        37.5950001
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    },
+    {
+      "sheet_id": "377051620",
+      "original_file": "(B010)수치지도_377051620_2025_00000295171644.dxf",
+      "dxf_sha256": "8762ba9d92f2780664b300e701373d1d9555646af8d079a1f1d255dafeca82aa",
+      "xml_sha256": "91b2c7ee89577ce5696cc340da451c6f73d80f4487843ec636988c23b5427711",
+      "photography_year": "2024",
+      "survey_year": "2025",
+      "production_year": "2025",
+      "notice_date": "2025-08-14 00:00:00.0",
+      "counts": {
+        "input": 2281,
+        "in_coverage": 2281,
+        "outside": 0
+      },
+      "display_feature_count": 789,
+      "display_extent": [
+        127.0449999,
+        37.59,
+        127.05,
+        37.595
+      ],
+      "extent_role": "bounds of retained display features, not complete sheet coverage",
+      "field_verified": false,
+      "original_reacquired_this_round": false
+    }
+  ],
+  "public_requests": [
+    {
+      "id": "ngii-dem-catalog",
+      "url": "https://www.data.go.kr/data/15059920/fileData.do",
+      "http_status": 503,
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:25.621717+00:00",
+      "completed_at_utc": "2026-11-11T09:56:31.458830+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "ngii-map",
+      "url": "https://map.ngii.go.kr/ms/map/NlipMap.do",
+      "http_status": 503,
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:24.407855+00:00",
+      "completed_at_utc": "2026-11-11T09:56:30.127398+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "odsay-guide",
+      "url": "https://lab.odsay.com/guide/guide",
+      "http_status": 200,
+      "bytes": 136450,
+      "sha256": "785cf0e5ccff5eec8274c5d8a095f7b84a93918615c950dab053294a22ad21a7",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:25.730565+00:00",
+      "completed_at_utc": "2026-11-11T09:56:27.157352+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "odsay-terms-pricing",
+      "url": "https://lab.odsay.com/contact/contact",
+      "http_status": 200,
+      "bytes": 28640,
+      "sha256": "18102f1fa6d9a39ff3c76a3a66933909a66e0ff4b4220dd01e19e8ba2367aa89",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:27.157754+00:00",
+      "completed_at_utc": "2026-11-11T09:56:27.713723+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "official-bus-arrivals",
+      "url": "https://www.data.go.kr/data/15000314/openapi.do",
+      "http_status": 503,
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:27.714243+00:00",
+      "completed_at_utc": "2026-11-11T09:56:31.458623+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "official-elevator-status",
+      "url": "https://data.seoul.go.kr/dataList/OA-15994/A/1/datasetView.do",
+      "http_status": 200,
+      "bytes": 103638,
+      "sha256": "61eaa2c80973828dbf0555c2e990e3590d455e695ea57b8d301f6d39c0ca649a",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:30.127753+00:00",
+      "completed_at_utc": "2026-11-11T09:56:32.761999+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "osm-geofabrik-checksum",
+      "url": "https://download.geofabrik.de/asia/south-korea-latest.osm.pbf.md5",
+      "http_status": 200,
+      "bytes": 61,
+      "sha256": "1fabdca69d0dc61827a6a3de8f9619738d70284faa160d149cd39484ed43eebb",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:24.408679+00:00",
+      "completed_at_utc": "2026-11-11T09:56:25.730012+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "osm-geofabrik-index",
+      "url": "https://download.geofabrik.de/asia/south-korea.html",
+      "http_status": 200,
+      "bytes": 23986,
+      "sha256": "2c9e4a338fc007ebd74150a01dd0d5b980edb17a492382bb04b79243f1196e31",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:24.408433+00:00",
+      "completed_at_utc": "2026-11-11T09:56:25.621324+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "osm-korea-261109-md5",
+      "url": "https://download.geofabrik.de/asia/south-korea-261109.osm.pbf.md5",
+      "http_status": 200,
+      "bytes": 61,
+      "sha256": "ca3bd98baf45ddc592734989695a87636a5f26377df182247059061d1f42bccd",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:59:02.107699+00:00",
+      "completed_at_utc": "2026-11-11T09:59:03.262082+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "osm-korea-261109-pbf",
+      "url": "https://download.geofabrik.de/asia/south-korea-261109.osm.pbf",
+      "http_status": 200,
+      "bytes": 291406356,
+      "sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:59:02.107132+00:00",
+      "completed_at_utc": "2026-11-11T09:59:36.202099+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "osm-search-policy",
+      "url": "https://operations.osmfoundation.org/policies/nominatim/",
+      "http_status": 200,
+      "bytes": 8409,
+      "sha256": "96f1c62c2b6d886d2c525cb60b5d2fbc24532d25ef477bc0aaf31ce786f9ad74",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:31.459494+00:00",
+      "completed_at_utc": "2026-11-11T09:56:32.273400+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    },
+    {
+      "id": "osm-tiles-policy",
+      "url": "https://operations.osmfoundation.org/policies/tiles/",
+      "http_status": 200,
+      "bytes": 18698,
+      "sha256": "04908a9e2faf70ad3090b3b2db43de100f3ad61243c578413b67fb57ba6b6912",
+      "transport_result": "http_response",
+      "requested_at_utc": "2026-11-11T09:56:31.459293+00:00",
+      "completed_at_utc": "2026-11-11T09:56:32.239094+00:00",
+      "source_as_of": null,
+      "source_crs": null,
+      "vertical_datum": null,
+      "field_verified": false
+    }
+  ],
+  "acquisition_status": {
+    "ngii_citywide_precision": "not_acquired",
+    "ngii_originals_reacquired": false,
+    "transit_authenticated_call": false,
+    "transit_contract_verified": false,
+    "tile_production_contract": false,
+    "physical_gps_verified": false,
+    "new_slope_values_promoted": 0
+  },
+  "osm_study_extraction": {
+    "source": "Geofabrik / OpenStreetMap contributors",
+    "source_url": "https://download.geofabrik.de/asia/south-korea.html",
+    "source_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+    "source_as_of": "2026-11-09T21:22:17Z",
+    "bbox": [
+      126.7,
+      37.38,
+      127.3,
+      37.78
+    ],
+    "source_crs": "EPSG:4326",
+    "vertical_datum": null,
+    "license": "ODbL-1.0",
+    "field_verified": false,
+    "routing_eligible": false,
+    "notice": "Rectangular study extraction; incomplete relations and unverified connectivity; not an active routing dataset",
+    "pbf_md5_verified": true,
+    "pbf_generator": "osmium/1.16.0",
+    "ways": 260828,
+    "road_nodes": 1330229,
+    "building_ways": 314407,
+    "poi_nodes": 196816,
+    "relations_included": false,
+    "active_runtime_replaced": false,
+    "elapsed_seconds": 252.97,
+    "outputs": {
+      "study-context.json.gz": {
+        "bytes": 28925329,
+        "sha256": "ad55f45e56f10c3051952291b15e6a35243d5e8adf35c1e48fc1d02b9995e7f2",
+        "uncompressed_sha256": "6df22609621580bae61fa3d6f39c13619981c39b5d8e4b2fa68ba49a9e399308",
+        "uncompressed_bytes": 215013778,
+        "elements": 2148141
+      },
+      "study-places.json.gz": {
+        "bytes": 8066151,
+        "sha256": "3358752c77a8b222b748d0c0af71d256584a6eff3e08c507c2d132aa9794966e",
+        "uncompressed_sha256": "d326ccca2c592b0ed72c1a5cace4afe02683d4d56c54b4ee59b083d1c92d0026",
+        "uncompressed_bytes": 60682362,
+        "elements": 196816
+      },
+      "study-map.json.gz": {
+        "bytes": 25608299,
+        "sha256": "3a28510cd7e31b99a590fe1e9f41b5f8d49b058ba6750222377bd58d65083de9",
+        "uncompressed_sha256": "ce72d46d419f3d9fdb279262c378ec7e6a13e3eb84f098315a9ec5fc9d923a64",
+        "uncompressed_bytes": 161525919,
+        "elements": 1591057
+      }
+    },
+    "limitations": [
+      "bbox overlap selection can include ways outside the rectangle",
+      "relations/restrictions/multipolygons not yet validated; no pedestrian connectivity/terrain promotion"
+    ],
+    "storage": "lossless deterministic gzip after extraction; uncompressed copies removed to recover disk capacity"
+  },
+  "osm_study_relations": {
+    "source_as_of": "2026-11-09T21:22:17Z",
+    "relations": 9648,
+    "restriction_relations": 6046,
+    "relations_with_unresolved_members": 1634,
+    "output_sha256": "8af6db10d107618d5ac74f1bdd7e98841ffe36d01a9ecada3187324ebcb1fa5b",
+    "uncompressed_sha256": "3fcf4430847cb199d7c9d1fbbcf41411f75b775821694ce595cec06ae49e938a",
+    "bytes": 1004064,
+    "routing_eligible": false,
+    "active_runtime_replaced": false,
+    "field_verified": false,
+    "notice": "Only relations touching retained study ways; unresolved external members and routing restriction interpretation remain pending",
+    "unresolved_detail": {
+      "path": "derived/unresolved-relation-members.json.gz",
+      "sha256": "4d1eaa3fb4070a2c08ceef51741647b2c18798d82a9a7620e3e320ea5d6a99ad",
+      "bytes": 186598
+    }
+  }
+}

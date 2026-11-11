@@ -134,7 +134,7 @@ try {
   const entry = await readFile(new URL('../../api/index.mjs', import.meta.url), 'utf8');
   const shared = await readFile(new URL('./condition-api.mjs', import.meta.url), 'utf8');
   assert(!/readFile|saveConfig|readConfig|createServer|listen\(/.test(entry + shared));
-  assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/api/')).map(rule => rule.source), ['/api/status', '/api/analyze-condition', '/api/select-route']);
+  assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/api/')).map(rule => rule.source), ['/api/coverage','/api/features','/api/places','/api/routes/walk','/api/routes/transit','/api/journeys','/api/transit/status','/api/status', '/api/analyze-condition', '/api/select-route']);
   assert.deepEqual(config.rewrites.filter(rule => rule.source.startsWith('/app')), [
     {source: '/app', destination: '/index.html'},
     {source: '/app/:path*', destination: '/:path*'}

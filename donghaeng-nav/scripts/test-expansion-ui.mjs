@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import {createApp} from '../server.mjs';
+import {loadSnapshot,makeGraph,F} from '../services/expansion/snapshot.mjs';
+const require=createRequire(import.meta.url),pw=require('playwright'),X=require('../dist/endpoint-routing.js');
+let emptyTransit=false;
+const server=createApp({transitConfig:{apiKey:'test-only-key',enabled:true,fetchImpl:async()=>emptyTransit?new Response(JSON.stringify({result:{path:[]}})):new Response(JSON.stringify({result:{path:[{info:{totalTime:20},subPath:[{trafficType:3,sectionTime:2},{trafficType:2,sectionTime:10,startX:127.04,startY:37.6,endX:127.05,endY:37.61},{trafficType:3,sectionTime:3}]}]}}))}});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;let browser;
+const errors=[],checks=[];
+try{
+ const snapshot=await loadSnapshot(),graph=makeGraph(snapshot),school=graph.places.find(p=>p.name.toLowerCase()==='fortissimo'),start=X.arrivalNear(graph,F.STATION).ll,end=X.arrivalNear(graph,school.ll).ll;
+ browser=await pw.chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const context=await browser.newContext({viewport:{width:1440,height:1000}});await context.route('https://**',r=>r.abort());
+ const page=await context.newPage(),requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
+ await page.goto(base+'/expansion.html');await page.waitForFunction(()=>document.querySelector('#coverage-status').textContent.includes('16,169'));await page.waitForFunction(()=>document.querySelector('#feature-status').textContent.includes('건 표시'));
+ assert(!requests.some(r=>/\/(?:map-data|terrain-data|precision-map|seoul-facilities)\.(?:json|geojson)/.test(r)));assert.equal(await page.locator('input[type=checkbox]').count(),0);
+ checks.push('Region screen boots using area APIs without loading whole graph/terrain/precision/facilities into browser; coverage remains explicit');
+ await page.locator('#place-query').fill('도서관');await page.locator('#place-search button').click();await page.locator('.place-item').first().waitFor();await page.locator('.place-item').first().click();assert.match(await page.locator('#point-status').innerText(),/시설 기준점/);
+ await page.locator('#layer').selectOption('precision');await page.waitForFunction(()=>document.querySelector('#feature-status').textContent.includes('건 표시'));assert(await page.locator('.leaflet-interactive').count());
+ await page.evaluate(({start,end})=>{document.querySelector('#pick-start').click();map.fire('click',{latlng:L.latLng(start)});document.querySelector('#pick-end').click();map.fire('click',{latlng:L.latLng(end)})},{start,end});
+ await page.locator('#find').click();await page.waitForFunction(()=>!document.querySelector('#find').disabled&&document.querySelector('#route-results').textContent.includes('보행 경로'),null,{timeout:30000});assert.match(await page.locator('#route-results').innerText(),/현장 통행 미검증/);
+ checks.push('Facility search preserves reference-point warning; precision display and real worker walking result usable');
+ await page.locator('#mode').selectOption('transit');assert(await page.locator('#sharing-note').isVisible());await page.locator('#find').click();await page.waitForFunction(()=>document.querySelector('#route-results').textContent.includes('대중교통 참고 후보'));assert.match(await page.locator('#route-results').innerText(),/실제 안내 시작 불가/);assert.equal(await page.locator('.navigation-start').count(),0);
+ emptyTransit=true;await page.locator('#find').click();await page.waitForFunction(()=>document.querySelector('#route-results').textContent.includes('참고 후보를 받지 못했어요'));checks.push('Mock transit candidate remains reference-only, coordinate disclosure visible, no live navigation button; empty provider result explained');
+ await page.locator('#mode').selectOption('walk');await page.evaluate(()=>{document.querySelector('#pick-start').click();map.fire('click',{latlng:L.latLng(37.55,126.97)})});await page.locator('#find').click();await page.waitForFunction(()=>document.querySelector('#route-status').textContent.includes('월곡역 주변'));
+ await page.setViewportSize({width:320,height:568});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:new URL('../docs/expansion-mobile.png',import.meta.url).pathname,fullPage:true});
+ await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:new URL('../docs/expansion-desktop.png',import.meta.url).pathname,fullPage:true});
+ checks.push('Outside routing coverage rejected; 320px layout has no horizontal overflow');
+ const broken=await context.newPage();await broken.route('**/api/coverage',r=>r.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'test unavailable'})}));await broken.goto(base+'/expansion.html');await broken.waitForFunction(()=>document.querySelector('#coverage-status').textContent.includes('불러오지 못했어요'));await broken.close();checks.push('Unavailable backend coverage never becomes a false supported-region claim');
+ assert.deepEqual(errors,[]);const result={pass:true,checks,browserErrors:errors,realOdsay:false,physicalPhone:false,physicalGps:false,citywideRouting:false};await writeFile(new URL('../docs/expansion-ui-results.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
+}finally{await browser?.close();server.closeAllConnections();await new Promise(r=>server.close(r))}

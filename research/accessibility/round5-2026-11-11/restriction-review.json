@@ -1,0 +1,30 @@
+{
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "unresolved_relation_types": {
+    "route": 874,
+    "boundary": 309,
+    "multipolygon": 220,
+    "site": 7,
+    "restriction": 24,
+    "superroute": 1,
+    "building": 132,
+    "public_transport": 35,
+    "route_master": 1,
+    "bridge": 3,
+    "destination_sign": 27,
+    "network": 1
+  },
+  "restriction_relations": 6046,
+  "restriction_tag_keys": {
+    "restriction": 6043,
+    "restriction:conditional": 3,
+    "except": 3
+  },
+  "restrictions_with_unresolved_members": 24,
+  "foot_specific_restrictions": 0,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "field_verified": false,
+  "notice": "Statistics on retained relation tags only; absence of foot-specific tags does not prove unrestricted walking"
+}

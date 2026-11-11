@@ -38,6 +38,12 @@ def build():
     for name, expected in lock['protected_code'].items():
         if sha(local_file(name).read_bytes()) != expected:
             raise ValueError('경로 검증 입력이 바뀌었습니다: ' + name + ' · 재검증 후 무결성 기록을 갱신하세요.')
+    service_path = ROOT / 'donghaeng-nav/services/service-integrity.json'
+    services = json.loads(service_path.read_text())
+    for name, expected in services['files'].items():
+        target = (ROOT / name).resolve()
+        if not target.is_relative_to(ROOT.resolve()) or sha(target.read_bytes()) != expected:
+            raise ValueError('확장 서비스 입력 변경 · 재검증 필요: ' + name)
     terrain = json.loads(local_file(datasets['bundled-terrain']['path']).read_bytes())
     graph_hash = datasets['bundled-map-data']['sha256']
     if terrain['meta']['graph_sha256'] != graph_hash or terrain['review']['inputs']['map_data_sha256'] != graph_hash:
@@ -94,8 +100,11 @@ def build():
         path.write_text(html, encoding='utf-8', newline='\n')
     facilities = json.loads(local_file(datasets['bundled-facilities-seoul']['path']).read_bytes())['features']
     manifest = {
-        'version': '2026-11-10-audit-fixes',
+        'version': '2026-11-11-expansion-foundation',
         'main_source': 'donghaeng-nav/dist/index.html',
+        'expansion': {'online_page': 'expansion.html', 'service_code_files': len(services['files']),
+                      'service_integrity_sha256': sha(service_path.read_bytes()), 'citywide_routing': False,
+                      'authenticated_transit_verified': False, 'new_slope_values_promoted': 0},
         'compressed_assets': compressed_assets,
         'project_name': '동행길',
         'route_choice': {'max_attempts': 24, 'time_budget_ms': 4000, 'max_candidates': 5, 'explanation': 'Decision-time final response; no new request on click', 'real_gemini_verified': False},
@@ -134,7 +143,7 @@ def build():
     (ROOT / 'donghaeng-nav/docs/final-build.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     handoff_path = ROOT / '전달-검증.json'
     handoff = json.loads(handoff_path.read_text())
-    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-10', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
+    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-11', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
     handoff['main_promotion'] = {'version': manifest['version'], 'review': 'donghaeng-nav/docs/main-navigation-promotion.md', 'original_gis_reprocessed': False, 'field_verified': False}
     handoff['supplementary_evidence'] = manifest['supplementary_evidence']
     handoff['gps_stabilization'] = manifest['gps']

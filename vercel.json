@@ -11,6 +11,13 @@
     }
   },
   "rewrites": [
+    {"source": "/api/coverage", "destination": "/api/index?route=coverage"},
+    {"source": "/api/features", "destination": "/api/index?route=features"},
+    {"source": "/api/places", "destination": "/api/index?route=places"},
+    {"source": "/api/routes/walk", "destination": "/api/index?route=routes/walk"},
+    {"source": "/api/routes/transit", "destination": "/api/index?route=routes/transit"},
+    {"source": "/api/journeys", "destination": "/api/index?route=journeys"},
+    {"source": "/api/transit/status", "destination": "/api/index?route=transit/status"},
     {"source": "/app", "destination": "/index.html"},
     {"source": "/app/:path*", "destination": "/:path*"},
     {"source": "/api/status", "destination": "/api/index?route=status"},

@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "checks": [
+    "Actual api/index entry uses ODSAY_API_KEY without a walking backend",
+    "Original and rewritten/parsed-body transit requests return reference-only candidates",
+    "Missing key and explicit disable never call provider; no key in response",
+    "Static coverage fallback distinguishes known source extent from unavailable backend"
+  ],
+  "realOdsay": false,
+  "deployed": false
+}

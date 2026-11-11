@@ -1,0 +1,23 @@
+{
+  "id": "odsay-terms-pricing",
+  "url": "https://lab.odsay.com/contact/contact",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T09:56:27.157754+00:00",
+  "requested_at_kst": "2026-11-11T18:56:27.157760+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://lab.odsay.com/contact/contact",
+  "response_headers": {
+    "date": "Wed, 11 Nov 2026 09:56:27 GMT",
+    "server": "envoy",
+    "content-type": "text/html;charset=UTF-8"
+  },
+  "bytes": 28640,
+  "sha256": "18102f1fa6d9a39ff3c76a3a66933909a66e0ff4b4220dd01e19e8ba2367aa89",
+  "response_path": "raw/odsay-terms-pricing/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T09:56:27.713723+00:00"
+}

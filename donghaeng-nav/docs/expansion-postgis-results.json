@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "source_snapshots": 3,
+  "features": 34914,
+  "field_verified_rows": 0,
+  "valid_geometries": 34914,
+  "original_geometry_matches": 34914,
+  "facility_area_rows": 61,
+  "postgis_version": "3.5.7",
+  "scope": "Isolated local PostGIS container; schema/import/spatial validation, not production database integration",
+  "geometry_storage": "Original JSON including Z retained; 2D spatial index separate",
+  "duplicate_import_policy": "Reject duplicate source snapshot instead of overwriting",
+  "deployed": false,
+  "physicalGps": false,
+  "newSlopeValuesPromoted": 0
+}

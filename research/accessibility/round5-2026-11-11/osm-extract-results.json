@@ -1,0 +1,55 @@
+{
+  "source": "Geofabrik / OpenStreetMap contributors",
+  "source_url": "https://download.geofabrik.de/asia/south-korea.html",
+  "source_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "bbox": [
+    126.7,
+    37.38,
+    127.3,
+    37.78
+  ],
+  "source_crs": "EPSG:4326",
+  "vertical_datum": null,
+  "license": "ODbL-1.0",
+  "field_verified": false,
+  "routing_eligible": false,
+  "notice": "Rectangular study extraction; incomplete relations and unverified connectivity; not an active routing dataset",
+  "pbf_md5_verified": true,
+  "pbf_generator": "osmium/1.16.0",
+  "ways": 260828,
+  "road_nodes": 1330229,
+  "building_ways": 314407,
+  "poi_nodes": 196816,
+  "relations_included": false,
+  "active_runtime_replaced": false,
+  "elapsed_seconds": 252.97,
+  "outputs": {
+    "study-context.json.gz": {
+      "bytes": 28925329,
+      "sha256": "ad55f45e56f10c3051952291b15e6a35243d5e8adf35c1e48fc1d02b9995e7f2",
+      "uncompressed_sha256": "6df22609621580bae61fa3d6f39c13619981c39b5d8e4b2fa68ba49a9e399308",
+      "uncompressed_bytes": 215013778,
+      "elements": 2148141
+    },
+    "study-places.json.gz": {
+      "bytes": 8066151,
+      "sha256": "3358752c77a8b222b748d0c0af71d256584a6eff3e08c507c2d132aa9794966e",
+      "uncompressed_sha256": "d326ccca2c592b0ed72c1a5cace4afe02683d4d56c54b4ee59b083d1c92d0026",
+      "uncompressed_bytes": 60682362,
+      "elements": 196816
+    },
+    "study-map.json.gz": {
+      "bytes": 25608299,
+      "sha256": "3a28510cd7e31b99a590fe1e9f41b5f8d49b058ba6750222377bd58d65083de9",
+      "uncompressed_sha256": "ce72d46d419f3d9fdb279262c378ec7e6a13e3eb84f098315a9ec5fc9d923a64",
+      "uncompressed_bytes": 161525919,
+      "elements": 1591057
+    }
+  },
+  "limitations": [
+    "bbox overlap selection can include ways outside the rectangle",
+    "relations/restrictions/multipolygons not yet validated; no pedestrian connectivity/terrain promotion"
+  ],
+  "storage": "lossless deterministic gzip after extraction; uncompressed copies removed to recover disk capacity"
+}

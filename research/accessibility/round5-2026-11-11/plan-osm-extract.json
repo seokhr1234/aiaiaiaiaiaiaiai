@@ -1,0 +1,12 @@
+[
+  {
+    "id": "osm-korea-261109-pbf",
+    "url": "https://download.geofabrik.de/asia/south-korea-261109.osm.pbf",
+    "timeout": 120
+  },
+  {
+    "id": "osm-korea-261109-md5",
+    "url": "https://download.geofabrik.de/asia/south-korea-261109.osm.pbf.md5",
+    "timeout": 20
+  }
+]

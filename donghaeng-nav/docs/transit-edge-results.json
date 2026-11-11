@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "checks": [
+    "Vercel-style direct and rewritten/parsed-body routes use dynamic server env config; missing key never calls provider",
+    "Keys never returned; anonymous mode-independent condition contract, cross-origin/malformed inputs blocked before paid call",
+    "Malformed provider response fails safely and still consumes bounded attempt budget; no unsupported schedule/accessible claim"
+  ],
+  "realOdsay": false,
+  "deployed": false,
+  "actualKeyRequired": "ODSAY_API_KEY",
+  "globalBudgetEnforced": false
+}

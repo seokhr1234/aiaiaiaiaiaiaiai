@@ -1,0 +1,23 @@
+{
+  "id": "official-elevator-status",
+  "url": "https://data.seoul.go.kr/dataList/OA-15994/A/1/datasetView.do",
+  "timeout": 20,
+  "requested_at_utc": "2026-11-11T09:56:30.127753+00:00",
+  "requested_at_kst": "2026-11-11T18:56:30.127758+09:00",
+  "field_verified": false,
+  "source_as_of": null,
+  "source_crs": null,
+  "vertical_datum": null,
+  "http_status": 200,
+  "final_url": "https://data.seoul.go.kr/dataList/OA-15994/A/1/datasetView.do",
+  "response_headers": {
+    "date": "Wed, 11 Nov 2026 09:56:32 GMT",
+    "content-type": "text/html;charset=UTF-8",
+    "server": "envoy"
+  },
+  "bytes": 103638,
+  "sha256": "61eaa2c80973828dbf0555c2e990e3590d455e695ea57b8d301f6d39c0ca649a",
+  "response_path": "raw/official-elevator-status/response.bin",
+  "transport_result": "http_response",
+  "completed_at_utc": "2026-11-11T09:56:32.761999+00:00"
+}

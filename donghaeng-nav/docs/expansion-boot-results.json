@@ -1,0 +1,176 @@
+{
+  "pass": true,
+  "scope": "Local expansion page; 20 cold browser contexts, first cold backend then warm cache; 393x852, 4Mbps/80ms/4x CPU; external tiles aborted; not physical phone/Vercel",
+  "samples": [
+    {
+      "clientCold": true,
+      "backendCold": true,
+      "bootMs": 2127,
+      "bytes": 131887,
+      "maxLongTask": 72,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 922,
+      "bytes": 131887,
+      "maxLongTask": 64,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 882,
+      "bytes": 131887,
+      "maxLongTask": 69,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 954,
+      "bytes": 131887,
+      "maxLongTask": 161,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 794,
+      "bytes": 131887,
+      "maxLongTask": 91,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 817,
+      "bytes": 131887,
+      "maxLongTask": 65,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 888,
+      "bytes": 131887,
+      "maxLongTask": 72,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 974,
+      "bytes": 131887,
+      "maxLongTask": 78,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 856,
+      "bytes": 131887,
+      "maxLongTask": 77,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 990,
+      "bytes": 131887,
+      "maxLongTask": 158,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 847,
+      "bytes": 131887,
+      "maxLongTask": 78,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 926,
+      "bytes": 131887,
+      "maxLongTask": 158,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 848,
+      "bytes": 131887,
+      "maxLongTask": 71,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 965,
+      "bytes": 131887,
+      "maxLongTask": 98,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 812,
+      "bytes": 131887,
+      "maxLongTask": 85,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 871,
+      "bytes": 131887,
+      "maxLongTask": 81,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 823,
+      "bytes": 131887,
+      "maxLongTask": 79,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 908,
+      "bytes": 131887,
+      "maxLongTask": 137,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 898,
+      "bytes": 131887,
+      "maxLongTask": 69,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "backendCold": false,
+      "bootMs": 914,
+      "bytes": 131887,
+      "maxLongTask": 125,
+      "wholeDatasetRequests": 0
+    }
+  ],
+  "p95BootMs": 990,
+  "maxInitialResourceBytes": 131887,
+  "maxLongTaskMs": 161,
+  "targets": {
+    "bootUnder10s": true,
+    "resourcesUnder2MB": true,
+    "mainThreadUnder500ms": true
+  },
+  "physicalPhone": false,
+  "citywideRouting": false
+}

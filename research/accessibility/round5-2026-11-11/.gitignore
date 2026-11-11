@@ -1,0 +1,5 @@
+**/response.bin
+**/partial.bin
+*.osm.pbf
+
+/derived/

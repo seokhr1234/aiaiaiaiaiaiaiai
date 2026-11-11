@@ -8,6 +8,10 @@
 
 2026-11-10: [자율 점검 9개 항목 수정·검증](donghaeng-nav/docs/audit-fixes.md). 필수 휴식 재탐색 검증, 도착 예상 시각의 쉼터 운영시간 확인, 기기 내 문장 해석, 저장 복구와 모바일·키보드 조작을 보완했습니다. 건물 도형과 겹치는 목적지는 지도에서 실제 진입 위치를 지정하거나 검토용 경로를 명시적으로 선택합니다. 출입구 좌표를 새로 검증한 것은 아닙니다.
 
+2026-11-11: [서울 전역 보행·정밀지도·대중교통 확장 계획](donghaeng-nav/docs/seoul-expansion-plan.md). 네이버 API 없이 OSM·Leaflet·자체 보행 계산을 유지하고, 자료 분할·서버 계산·대중교통 후보 API·접근성/환승 검증을 단계적으로 추가하는 계획입니다. 확장 기능 구현 전이며 자료 확보·계약·현장 검증의 완료와 구분합니다.
+
+2026-11-11 후속: [확장 구현 현황·완료/남은 계획](donghaeng-nav/docs/seoul-expansion-progress.md). `/expansion.html`에 영역별 자료·시설 검색·서버 보행·대중교통 참고 화면을 추가했습니다. 보행 범위는 기존 월곡이며 새 서울 주변 OSM 추출본은 연구용으로 보존합니다. [Vercel `ODSAY_API_KEY`와 자료 서버 연결](donghaeng-nav/docs/expansion-service.md).
+
 ## 실행
 
 Node.js 18 이상에서 저장소 최상위에서 실행합니다.
@@ -26,6 +30,7 @@ node donghaeng-nav/scripts/launch.mjs --no-open
 | --- | --- |
 | `/`, `/app/` | 같은 최신 메인 프로그램의 분리 소스 화면 |
 | `/setup` | 로컬 서버의 Gemini 키 설정 화면 |
+| `/expansion.html` | 영역별 자료와 서버 보행·대중교통 참고 화면. Vercel 대중교통 후보는 `ODSAY_API_KEY`, 서버 보행/자료 조회는 별도 자료 서버 필요 |
 | `/동행길-최종.html` | 같은 프로그램을 단일 파일로 묶은 호환 주소 |
 | `동행길-최종.html`, `동행길-시연.html`, `동행길-전달용.html` | 같은 빌드의 호환 파일명 |
 | `이동약자-내비게이션-실행패키지/`의 HTML 2개 | 같은 빌드의 휴대폰·컴퓨터 전달용 파일 |
@@ -86,6 +91,10 @@ python3 donghaeng-nav/scripts/build-html.py
 ### 확인 명령
 
 ```sh
+node donghaeng-nav/scripts/test-expansion-core.mjs
+node donghaeng-nav/scripts/test-expansion-ui.mjs
+node donghaeng-nav/scripts/test-transit-edge.mjs
+node donghaeng-nav/scripts/test-transit-vercel.mjs
 node donghaeng-nav/scripts/test-audit-fixes.cjs
 node donghaeng-nav/scripts/test-audit-fixes-ui.cjs
 node donghaeng-nav/scripts/test-audit-boot.cjs

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "osm-geofabrik-index",
+    "url": "https://download.geofabrik.de/asia/south-korea.html",
+    "timeout": 20
+  },
+  {
+    "id": "osm-geofabrik-checksum",
+    "url": "https://download.geofabrik.de/asia/south-korea-latest.osm.pbf.md5",
+    "timeout": 20
+  },
+  {
+    "id": "ngii-map",
+    "url": "https://map.ngii.go.kr/ms/map/NlipMap.do",
+    "timeout": 20
+  },
+  {
+    "id": "ngii-dem-catalog",
+    "url": "https://www.data.go.kr/data/15059920/fileData.do",
+    "timeout": 20
+  },
+  {
+    "id": "odsay-guide",
+    "url": "https://lab.odsay.com/guide/guide",
+    "timeout": 20
+  },
+  {
+    "id": "odsay-terms-pricing",
+    "url": "https://lab.odsay.com/contact/contact",
+    "timeout": 20
+  },
+  {
+    "id": "official-bus-arrivals",
+    "url": "https://www.data.go.kr/data/15000314/openapi.do",
+    "timeout": 20
+  },
+  {
+    "id": "official-elevator-status",
+    "url": "https://data.seoul.go.kr/dataList/OA-15994/A/1/datasetView.do",
+    "timeout": 20
+  },
+  {
+    "id": "osm-tiles-policy",
+    "url": "https://operations.osmfoundation.org/policies/tiles/",
+    "timeout": 20
+  },
+  {
+    "id": "osm-search-policy",
+    "url": "https://operations.osmfoundation.org/policies/nominatim/",
+    "timeout": 20
+  }
+]
