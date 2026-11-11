@@ -3,9 +3,11 @@ import {loadSnapshot,coverage} from './snapshot.mjs';
 import {queryFeatures,queryPlaces} from './features.mjs';
 import {createRoutingService} from '../routing/pool.mjs';
 import {validateJourney} from '../transit/journey.mjs';
+import {createPostgisRepository} from './postgis.mjs';
 import {expansionPaths} from './routes.mjs';
 export {expansionPaths} from './routes.mjs';
-export function createExpansionHandler({routing=createRoutingService(),transit=null}={}){
+export function createExpansionHandler({routing=createRoutingService(),transit=null,databaseUrl='',featureRepository}={}){
+ const repository=featureRepository||(databaseUrl?createPostgisRepository({connectionString:databaseUrl}):null);
  const send=(res,status,value)=>{if(res.destroyed)return;res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(value))};
  const handler=async(req,res)=>{
   const url=new URL(req.url,'http://localhost');if(!expansionPaths.includes(url.pathname))return false;
@@ -14,8 +16,8 @@ export function createExpansionHandler({routing=createRoutingService(),transit=n
    const post=['/api/routes/walk','/api/routes/transit','/api/journeys'].includes(url.pathname);
    if(req.method!==(post?'POST':'GET'))throw new ServiceError(405,'method_not_allowed',post?'POST 요청을 사용해 주세요.':'GET 요청을 사용해 주세요.');
    let result;
-   if(url.pathname==='/api/coverage'){result=coverage(await loadSnapshot());if(transit)result.transit=transit.status()}
-   else if(url.pathname==='/api/features')result=await queryFeatures(url.searchParams);
+   if(url.pathname==='/api/coverage'){result=coverage(await loadSnapshot());result.featureStorage=repository?'postgis_configured':'memory';if(transit)result.transit=transit.status()}
+   else if(url.pathname==='/api/features')result=await queryFeatures(url.searchParams,{repository});
    else if(url.pathname==='/api/places')result=await queryPlaces(url.searchParams);
    else if(url.pathname==='/api/transit/status')result=transit?.status()||{state:'not_configured',reason:'대중교통 제공업체 설정이 필요해요.',fieldVerified:false};
    else {
@@ -40,5 +42,5 @@ export function createExpansionHandler({routing=createRoutingService(),transit=n
   finally{req.removeListener('aborted',aborted)}
   return true;
  };
- handler.close=()=>routing.close();return handler;
+ handler.close=()=>{routing.close();Promise.resolve(repository?.close?.()).catch(()=>{})};return handler;
 }

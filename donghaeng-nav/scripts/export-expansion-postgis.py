@@ -25,8 +25,8 @@ for kind, name in files:
           ','.join(quote(v) for v in [source_id,url,digest,meta.get('as_of'),meta.get('source_crs'),meta.get('vertical_datum'),license,json.dumps(meta,ensure_ascii=False)])+');')
     for i, f in enumerate(data['features']):
         p = f['properties']
-        print('INSERT INTO donghaeng.review_feature(source_id,ordinal,external_id,kind,original_geometry,geometry,properties,field_verified) VALUES ('+
-              ','.join([quote(source_id),str(i),quote(f.get('id') or p.get('id')),quote(p.get('kind') or kind),
+        print('INSERT INTO donghaeng.review_feature(source_id,ordinal,external_id,original_feature_id,kind,original_geometry,geometry,properties,field_verified) VALUES ('+
+              ','.join([quote(source_id),str(i),quote(f.get('id') or p.get('id')),quote(json.dumps(f['id'])) if f.get('id') is not None else 'NULL',quote(p.get('kind') or kind),
                         quote(json.dumps(f['geometry'],ensure_ascii=False)),
                         'ST_Force2D(ST_SetSRID(ST_GeomFromGeoJSON('+quote(json.dumps(f['geometry'],ensure_ascii=False))+'),4326))',quote(json.dumps(p,ensure_ascii=False)), 'false'])+');')
 print('COMMIT;')

@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS donghaeng.review_feature (
   source_id text NOT NULL REFERENCES donghaeng.source_snapshot(id),
   ordinal integer NOT NULL CHECK (ordinal >= 0),
   external_id text,
+  original_feature_id jsonb,
   kind text NOT NULL,
   original_geometry jsonb NOT NULL,
   geometry geometry(Geometry,4326) NOT NULL,

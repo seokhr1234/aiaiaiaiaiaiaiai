@@ -1,0 +1,47 @@
+{
+  "scans": [
+    {
+      "type": "r",
+      "requested": 18,
+      "found": 18,
+      "seconds": 2.506
+    },
+    {
+      "type": "w",
+      "requested": 28315,
+      "found": 27338,
+      "seconds": 9.887
+    },
+    {
+      "type": "n",
+      "requested": 227066,
+      "found": 227066,
+      "seconds": 69.799
+    }
+  ],
+  "added": {
+    "n": 227066,
+    "w": 27338,
+    "r": 18
+  },
+  "relation_total": 9666,
+  "source_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "reviewed_date_kst": "2026-11-11",
+  "previous_unresolved_original_relations": 1634,
+  "remaining_unresolved_original_relations": 1,
+  "remaining_unresolved_relations_total": 1,
+  "remaining_unresolved_types": {
+    "route": 1
+  },
+  "remaining_way_node_groups": 0,
+  "output_sha256": "56f02f8d99e8f9845c18a1cab23baad9d888dec7ac4ae10b23779fe2ca2c65d7",
+  "uncompressed_sha256": "01ae011808e6ffd8901a587e44673aeeab5bccc9936ac0e46dca0109542b3769",
+  "output_bytes": 5426065,
+  "elapsed_seconds": 84.37,
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "notice": "Missing members absent from this country PBF are not inferred; resolved membership is not pedestrian connectivity or permission"
+}

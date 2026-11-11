@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "checks": [
+    "Real PostGIS API matches memory API for three layers, source metadata, versions, stable pages and original IDs/Z geometry",
+    "All eight facility kind filters match the memory API",
+    "Returned database row edits fail against preserved source; no silent memory fallback or internal DB details",
+    "An edit outside the viewport invalidates the cached source and is rejected; restoring exact original content permits revalidation",
+    "A disappeared source row after cache initialization is rejected instead of reporting a false empty/partial area",
+    "Read-only PostgreSQL policy and mismatched snapshot rejection verified"
+  ],
+  "sourceRows": 34914,
+  "fieldVerifiedRows": 0,
+  "liveLocalPostgis": true,
+  "productionDatabase": false,
+  "activeGraphUnchanged": true
+}

@@ -17,22 +17,27 @@ function index(features){
 }
 async function store(){
  if(!pending)pending=loadSnapshot().then(s=>{
-  const datasets={facilities:index(s.facilities.features),precision:index(s.precision.features),crossings:index(s.data['bundled-crossings-review'].features)};
+  const datasets={};
   const places=s.facilities.features.filter(f=>f.properties.name).map(f=>{const c=Facilities.anchor(f);return {id:f.id,name:f.properties.name,address:f.properties.address||'',ll:[c[1],c[0]],type:f.kind,coordinateRole:f.properties.coordinate_role||'mapped_reference',sourceUrl:f.properties.source_url||null,fieldVerified:f.properties.field_verified===true}});
   return {snapshot:s,datasets,places};
  }).catch(error=>{pending=null;throw error});
  return pending;
 }
-export async function queryFeatures(params){
+export async function queryFeatures(params,{repository}={}){
  const bounds=bbox(params.get('bbox')),layer=params.get('layer')||'facilities';
  if(!['facilities','precision','crossings'].includes(layer))fail(400,'invalid_layer','자료 종류를 확인해 주세요.');
  const limit=integer(params.get('limit'),300,1000),offset=integer(params.get('offset'),0,1000000);
  if(!limit)fail(400,'invalid_limit','요청 건수는 1 이상이어야 해요.');
- const {snapshot,datasets}=await store();let found=datasets[layer].query(bounds);
- const kind=params.get('kind');if(kind)found=found.filter(f=>(f.kind||f.properties.kind)===kind);
+ const {snapshot,datasets}=await store();const kind=params.get('kind');let features,total;
+ if(repository){({features,total}=await repository.query(snapshot,layer,bounds,{kind,limit,offset}))}
+ else {
+  if(!datasets[layer])datasets[layer]=index(layer==='facilities'?snapshot.facilities.features:layer==='precision'?snapshot.precision.features:snapshot.data['bundled-crossings-review'].features);
+  let found=datasets[layer].query(bounds);if(kind)found=found.filter(f=>(f.kind||f.properties.kind)===kind);
+  features=found.slice(offset,offset+limit);total=found.length;
+ }
  const source=layer==='precision'?snapshot.precision.metadata:layer==='crossings'?snapshot.data['bundled-crossings-review'].metadata:{};const sourceMetadata=Object.fromEntries(['provider','source_url','source_crs','as_of','license','vertical_datum','crs_verification'].filter(k=>source[k]!==undefined).map(k=>[k,source[k]]));
  return {type:'FeatureCollection',sourceMetadata,schema:'donghaeng-features-v1',datasetVersion:snapshot.datasetVersion,layer,bounds,
-  features:found.slice(offset,offset+limit),total:found.length,offset,nextOffset:offset+limit<found.length?offset+limit:null,
+  features,total,offset,nextOffset:offset+limit<total?offset+limit:null,storage:repository?'postgis':'memory',
   fieldVerified:false,routingEligible:false,notice:'표시용 영역 조회입니다. 자료가 없다는 것이 실제 시설이 없다는 뜻은 아닙니다.'};
 }
 export async function queryPlaces(params){

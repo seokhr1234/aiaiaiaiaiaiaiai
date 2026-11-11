@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": [
+    "Region screen boots using area APIs without loading whole graph/terrain/precision/facilities into browser; coverage remains explicit",
+    "Facility search preserves reference-point warning; precision display and real worker walking result usable",
+    "Mock transit candidate remains reference-only, coordinate disclosure visible, no live navigation button; empty provider result explained",
+    "Outside routing coverage rejected; 320px layout has no horizontal overflow",
+    "Unavailable backend coverage never becomes a false supported-region claim"
+  ],
+  "browserErrors": [],
+  "realOdsay": false,
+  "physicalPhone": false,
+  "physicalGps": false,
+  "citywideRouting": false,
+  "featureStorage": "postgis",
+  "productionDatabase": false
+}

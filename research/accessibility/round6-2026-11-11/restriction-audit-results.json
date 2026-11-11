@@ -1,0 +1,49 @@
+{
+  "reviewed_date_kst": "2026-11-11",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "input_artifacts": {
+    "round5-2026-11-11/derived/study-map.json.gz": "3a28510cd7e31b99a590fe1e9f41b5f8d49b058ba6750222377bd58d65083de9",
+    "round5-2026-11-11/derived/study-context.json.gz": "ad55f45e56f10c3051952291b15e6a35243d5e8adf35c1e48fc1d02b9995e7f2",
+    "round5-2026-11-11/derived/study-relations.json.gz": "8af6db10d107618d5ac74f1bdd7e98841ffe36d01a9ecada3187324ebcb1fa5b",
+    "round6-2026-11-11/derived/resolved-members.json.gz": "56f02f8d99e8f9845c18a1cab23baad9d888dec7ac4ae10b23779fe2ca2c65d7"
+  },
+  "restrictions": 6046,
+  "listed_member_resolution_complete": 6046,
+  "structural_flags": {
+    "missing_to_role": 211,
+    "missing_from_role": 209,
+    "via_node_not_on_from_or_to": 62,
+    "missing_via_role": 215,
+    "via_node_requires_way_split": 18,
+    "multiple_from_or_to_requires_review": 64,
+    "unsupported_member_role": 11,
+    "via_way_chain_disconnected": 5,
+    "ambiguous_shared_nodes": 4
+  },
+  "relations_with_structural_flags": 628,
+  "topology": {
+    "shared_endpoint_node": 5273,
+    "not_checked": 539,
+    "disconnected_by_node_id": 67,
+    "shared_interior_node": 18,
+    "shared_node_way_chain": 145,
+    "multiple_shared_nodes": 4
+  },
+  "pedestrian_scope": {
+    "unspecified_pedestrian_scope": 6046
+  },
+  "conditional_relations": 3,
+  "except_foot_relations": 0,
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "output": {
+    "path": "derived/restriction-audit.json.gz",
+    "sha256": "d0027049e6d9e200ef513de5107c12852aea349e037271290aa56f66b2e99d27",
+    "uncompressed_sha256": "1ab6709d650bf6d80bffa89d615311f4ae226773e7ffd6133fdf1b8c9b188447",
+    "bytes": 122596
+  },
+  "notice": "Resolving listed references does not reconstruct missing relation roles or establish pedestrian permission; node sharing does not verify layers or real passage"
+}

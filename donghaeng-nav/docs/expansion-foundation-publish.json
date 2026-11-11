@@ -1,0 +1,42 @@
+{
+  "checked_date_kst": "2026-11-11",
+  "commit": "9282ea656c3879ae097aa0622973137053ea2873",
+  "github_statuses": [
+    {
+      "context": "Vercel – donghaeng",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/donghaeng/9UmAejV4hLwQjEw8qZKcv1of9GYs"
+    },
+    {
+      "context": "Vercel – aiaiaiaiaiaiaiai",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/aiaiaiaiaiaiaiai/4bf9Zq3fL9h6kbwhfzcu3jREPcMW"
+    }
+  ],
+  "skip_vercel": false,
+  "production_promoted": false,
+  "documented_alias": {
+    "origin": "https://aiaiaiaiaiaiaiai.vercel.app",
+    "observations": [
+      {
+        "path": "/",
+        "http_status": 404
+      },
+      {
+        "path": "/api/status",
+        "http_status": 404
+      },
+      {
+        "path": "/expansion.html",
+        "http_status": 404
+      },
+      {
+        "path": "/api/transit/status",
+        "http_status": 404
+      }
+    ]
+  },
+  "public_new_screen_verified": false,
+  "actual_odsay_called": false,
+  "note": "GitHub Vercel status success is distinct from verifying a usable public deployment URL. No production promotion or paid provider calls were performed."
+}

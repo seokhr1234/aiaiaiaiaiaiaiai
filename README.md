@@ -12,6 +12,8 @@
 
 2026-11-11 후속: [확장 구현 현황·완료/남은 계획](donghaeng-nav/docs/seoul-expansion-progress.md). `/expansion.html`에 영역별 자료·시설 검색·서버 보행·대중교통 참고 화면을 추가했습니다. 보행 범위는 기존 월곡이며 새 서울 주변 OSM 추출본은 연구용으로 보존합니다. [Vercel `ODSAY_API_KEY`와 자료 서버 연결](donghaeng-nav/docs/expansion-service.md).
 
+2026-11-11 재개: 기반 구현 `9282ea6`을 푸시하고 후속으로 [PostGIS 실제 API 조회](donghaeng-nav/docs/postgis-api-results.json)를 연결했습니다. 기본 메모리 조회를 유지하며 자료 서버의 `DONGHAENG_DATABASE_URL`로 선택할 수 있습니다. [같은 OSM 원본의 참조 보완·제한 관계 구조 점검](research/accessibility/round6-2026-11-11/README.md)도 진행했습니다. 운영 DB 배포·서울 전역 길찾기·실제 ODsay 키 호출·현장 검증은 남아 있습니다.
+
 ## 실행
 
 Node.js 18 이상에서 저장소 최상위에서 실행합니다.

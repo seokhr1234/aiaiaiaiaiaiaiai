@@ -1,0 +1,58 @@
+{
+  "pass": true,
+  "source_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "previous_unresolved_original_relations": 1634,
+  "remaining_unresolved_original_relations": 1,
+  "resolved_original_relations": 1633,
+  "remaining_unresolved_restriction_relations": 0,
+  "missing_added_way_node_groups": 0,
+  "added_objects": {
+    "n": 227066,
+    "w": 27338,
+    "r": 18
+  },
+  "remaining": [
+    {
+      "id": 3836355,
+      "type": "route",
+      "tags": {
+        "alt_name": "아주공로 1호선",
+        "colour": "#000081",
+        "int_name": "Asian Highway AH1",
+        "layer": "1",
+        "name": "아시안 하이웨이 1호선",
+        "name:bn": "এশিয়ান হাইওয়ে ১",
+        "name:de": "Asien Fernstraße AH1",
+        "name:en": "Asian Highway AH1",
+        "name:fa": "بزرگراه آسیایی شماره ۱",
+        "name:fr": "Route asiatique AH1",
+        "name:hi": "एशियाई राजमार्ग १",
+        "name:id": "Jalan Asia AH1",
+        "name:ja": "アジアハイウェイ1号線",
+        "name:km": "ផ្លូវហាយវេអាស៊ី១",
+        "name:ko": "아시안 하이웨이 1호선",
+        "name:ms": "Lebuh Raya Asia AH1",
+        "name:my": "အာရှအဝေးပြေး ၁",
+        "name:ru": "Азиатский маршрут AH1",
+        "name:th": "ทางหลวงสายเอเชียAH1",
+        "name:tr": "Asya Yolu AH1",
+        "name:vi": "Đường Xuyên Á AH1",
+        "name:zh": "亚洲公路1号线",
+        "network": "AsianHighway",
+        "ref": "AH1",
+        "route": "road",
+        "section": "Korea",
+        "state": "connection",
+        "type": "route",
+        "wikidata": "Q494205",
+        "wikipedia": "en:AH1"
+      },
+      "missing_members_count": 977,
+      "original_relation": true
+    }
+  ],
+  "field_verified": false,
+  "active_runtime_replaced": false,
+  "routing_eligible": false,
+  "new_slope_values_promoted": 0
+}

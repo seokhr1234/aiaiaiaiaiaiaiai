@@ -3,8 +3,8 @@
   "main_source": "donghaeng-nav/dist/index.html",
   "expansion": {
     "online_page": "expansion.html",
-    "service_code_files": 22,
-    "service_integrity_sha256": "d621e9261431369251396f07a32d3fe2fd51af003a4c347ffe2a8a9ac81cd7fd",
+    "service_code_files": 25,
+    "service_integrity_sha256": "dc53d460440d08d199d7ee37cb59bc2ab2a2c09379822b0de86df156a96e6ecf",
     "citywide_routing": false,
     "authenticated_transit_verified": false,
     "new_slope_values_promoted": 0

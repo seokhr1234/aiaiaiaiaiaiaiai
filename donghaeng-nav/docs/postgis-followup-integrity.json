@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "baseline_commit": "9282ea656c3879ae097aa0622973137053ea2873",
+  "reviewed_date_kst": "2026-11-11",
+  "original_datasets_byte_identical": 9,
+  "runtime_protected_code": 19,
+  "service_protected_files": 25,
+  "gzip_verified": 9,
+  "identical_html_files": 5,
+  "html_sha256": "38dcaa98f04cdc419519c1a35f82b41b9d81aef98696c531509be00b27c6862f",
+  "package_hashes_match": true,
+  "prior_tracked_research_unchanged": true,
+  "prior_history_bytes_preserved": true,
+  "same_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "remaining_unresolved_relations": 1,
+  "osm_restrictions_structurally_reviewed": 6046,
+  "osm_relations_with_structural_review_flags": 628,
+  "passing_reports": [
+    "postgis-api-results",
+    "postgis-ui-results",
+    "expansion-core-results",
+    "vercel-api-results"
+  ],
+  "actual_odsay_key_used": false,
+  "production_database_connected": false,
+  "active_runtime_graph_replaced": false,
+  "new_slope_values_promoted": 0,
+  "field_verified": false,
+  "physical_gps_verified": false,
+  "citywide_routing": false
+}
