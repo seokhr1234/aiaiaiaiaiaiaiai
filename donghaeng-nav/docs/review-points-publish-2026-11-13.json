@@ -1,0 +1,36 @@
+{
+  "checkedDateKst": "2026-11-13",
+  "commit": "3c09fd34f306faef694281c2392eab156c68707b",
+  "githubStatuses": [
+    {
+      "context": "Vercel – aiaiaiaiaiaiaiai",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/aiaiaiaiaiaiaiai/29yQuhf3Nyku2gP5ncTVyU33D2eY"
+    },
+    {
+      "context": "Vercel – donghaeng",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/donghaeng/6ZeyYr9DyX4D4VtnCYnpTptJNQep"
+    }
+  ],
+  "skipVercel": false,
+  "productionPromoted": false,
+  "legacyAliasProbes": [
+    {
+      "url": "https://aiaiaiaiaiaiaiai.vercel.app/expansion.html",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://aiaiaiaiaiaiaiai.vercel.app/api/features?layer=osm-review&bbox=127.035,37.595,127.046,37.607&limit=1",
+      "httpStatus": 404
+    }
+  ],
+  "consolePageProbe": {
+    "httpStatus": 200,
+    "readByteCap": 2097152,
+    "vercelAppHostFoundWithinReadBytes": false
+  },
+  "publicScreenVerified": false,
+  "actualOdsayCalled": false,
+  "note": "Two Vercel success checks do not identify a usable public preview URL. Existing documented alias failed; no backend/provider keys were requested or exposed."
+}
