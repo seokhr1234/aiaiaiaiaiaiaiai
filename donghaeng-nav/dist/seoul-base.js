@@ -1,4 +1,4 @@
-(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.SeoulBaseMap=factory()})(typeof globalThis!=='undefined'?globalThis:this,function(){
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(root);else root.SeoulBaseMap=factory(root)})(typeof globalThis!=='undefined'?globalThis:this,function(root){
 'use strict';
 function intersects(b,v){return b[0]<=v.east&&b[2]>=v.west&&b[1]<=v.north&&b[3]>=v.south}
 function visible(data,zoom,bounds){return data.features.filter(f=>f.z<=zoom&&intersects(f.b,bounds))}

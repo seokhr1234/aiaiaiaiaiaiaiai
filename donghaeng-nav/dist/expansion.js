@@ -1,5 +1,5 @@
 'use strict';
-const $=s=>document.querySelector(s),client=RegionClient.create(),map=L.map('map').setView([37.60192,127.0414554],16);
+const $=s=>document.querySelector(s),client=RegionClient.create(),map=L.map('map').fitBounds(CityMap.BOUNDS);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}).on('tileerror',()=>{$('#basemap-status').textContent='배경지도를 읽지 못했어요. 등록 자료와 길 찾기는 별도로 확인할 수 있어요.'}).addTo(map);
 const features=L.layerGroup().addTo(map),paths=L.layerGroup().addTo(map),pins={};let origin=null,destination=null,picking=null,featureEpoch=0,routeEpoch=0,searchEpoch=0,layerChanged=false;
 const node=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e};
@@ -24,6 +24,7 @@ $('#condition').oninput=clearRoute;$('#mode').onchange=()=>{clearRoute();$('#sha
 async function loadFeatures(){
  const epoch=++featureEpoch;client.cancel('features');features.clearLayers();const bounds=map.getBounds(),bbox=[bounds.getWest(),bounds.getSouth(),bounds.getEast(),bounds.getNorth()].join(','),layer=$('#layer').value;let offset=0,count=0,version=null;
  $('#review-note').hidden=layer!=='osm-review';
+ if(bounds.getEast()-bounds.getWest()>.3||bounds.getNorth()-bounds.getSouth()>.3||layer==='precision'&&map.getZoom()<17){$('#feature-status').textContent='지도를 확대하면 현재 영역의 등록 자료를 표시합니다. 정밀 경계선은 확대 수준 17부터 표시해요.';return}
  $('#feature-status').textContent='현재 화면의 자료를 읽고 있어요.';
  try{do{const query=new URLSearchParams({bbox,layer,limit:'300',offset:String(offset)}),data=await client.request('features','/api/features?'+query);if(epoch!==featureEpoch)return;
    if(version&&version!==data.datasetVersion)throw Error('자료 버전이 바뀌었어요. 지도를 움직여 다시 읽어 주세요.');version=data.datasetVersion;
@@ -46,15 +47,17 @@ map.on('moveend',()=>{clearTimeout(timer);if(popupAutoPan){popupAutoPan=false;re
 $('#place-search').onsubmit=async ev=>{ev.preventDefault();const epoch=++searchEpoch;$('#place-results').replaceChildren(node('p','검색 중…'));try{const data=await client.request('places','/api/places?'+new URLSearchParams({q:$('#place-query').value}));if(epoch!==searchEpoch)return;$('#place-results').replaceChildren(node('p',data.notice));for(const p of data.items){const b=node('button',p.name+(p.address?' · '+p.address:''));b.type='button';b.className='place-item';b.onclick=()=>{setPoint('end',p.ll,p.name);map.setView(p.ll,17);$('#place-results').replaceChildren();$('#point-status').textContent+=' · 시설 기준점, 실제 보행 진입 위치를 확인해 주세요.'};$('#place-results').append(b)}if(!data.items.length)$('#place-results').append(node('p','등록 자료에서 찾지 못했어요. 지도에서 위치를 지정해 주세요.'))}catch(e){if(epoch===searchEpoch)$('#place-results').replaceChildren(node('p',e.name==='AbortError'?'검색이 취소됐어요.':e.message))}};
 $('#cancel').onclick=()=>{clearRoute();$('#route-status').textContent='경로 계산을 취소했어요.'};
 $('#route-form').onsubmit=async ev=>{
- ev.preventDefault();if(!origin||!destination){$('#route-status').textContent='출발·도착 위치를 먼저 지정해 주세요.';return}clearRoute();const epoch=routeEpoch,profile=NavEngine.parseState($('#condition').value),transit=$('#mode').value==='transit';$('#find').disabled=true;$('#cancel').hidden=false;$('#route-status').textContent='입력한 이동 조건으로 경로를 찾고 있어요.';
- try{const result=await client.request('route',transit?'/api/routes/transit':'/api/routes/walk',{method:'POST',body:{origin,destination,profile,atTime:new Date().toISOString()}});if(epoch!==routeEpoch)return;
-  $('#route-status').textContent=result.notice;
+ ev.preventDefault();if(!origin||!destination){$('#route-status').textContent='출발·도착 위치를 먼저 지정해 주세요.';return}clearRoute();const epoch=routeEpoch,profile=NavEngine.parseState($('#condition').value),transit=$('#mode').value==='transit',city=$('#mode').value==='city-walk';$('#find').disabled=true;$('#cancel').hidden=false;$('#route-status').textContent='입력한 이동 조건으로 경로를 찾고 있어요.';
+ try{const result=await client.request('route',transit?'/api/routes/transit':city?'/api/routes/city-walk':'/api/routes/walk',{method:'POST',body:{origin,destination,profile,atTime:new Date().toISOString()}});if(epoch!==routeEpoch)return;
+  $('#route-status').textContent=city?'서울 등록 도로 참고 경로 · 현장 통행·접근성 미확인':result.notice;
   if(transit){if(!result.candidates.length)$('#route-results').append(node('p','제공업체에서 참고 후보를 받지 못했어요. 다른 시각·위치를 확인해 주세요.'));for(const candidate of result.candidates){const box=node('article','');box.className='result';box.append(node('b','대중교통 참고 후보 '+candidate.id),node('p',candidate.legs.map(l=>({walk:'도보',bus:'버스',subway:'지하철'})[l.mode]).join(' → ')),node('p','출입구·역내 연결·운행 시각·이동 조건 미검증 · 실제 안내 시작 불가'));$('#route-results').append(box)}}
+  else if(city){L.polyline(result.coordinates,{color:'#176d52',weight:5}).addTo(paths);map.fitBounds(L.latLngBounds(result.coordinates),{padding:[30,30]});const box=node('article','');box.className='result';box.append(node('b','서울 보행 참고 경로'),node('p',Math.round(result.distanceMeters)+'m · 약 '+result.minutes+'분'),node('p','경사 미등록 '+Math.round(result.unknownInclineMeters)+'m · 출발/도착 접속 미검증'));for(const message of result.notices)box.append(node('p',message));$('#route-results').append(box)}
   else for(const route of result.routes){L.polyline(route.coords,{color:'#176d52',weight:5}).addTo(paths);const box=node('article','');box.className='result';box.append(node('b','보행 경로 '+route.candidateId),node('p',Math.round(route.totalLength)+'m · 약 '+route.selectionMetrics.minutes+'분'),node('p','기록된 조건·건물 겹침 검사 통과 · 보도 실측·현장 통행 미검증'));for(const message of route.messages)box.append(node('p',message));$('#route-results').append(box)}
-  if(!transit&&!result.routes.length)$('#route-results').append(node('p','요청 조건과 연결 검사를 만족하는 후보를 찾지 못했어요. 조건을 자동 완화하지 않았습니다.'));
+  if(!transit&&!city&&!result.routes.length)$('#route-results').append(node('p','요청 조건과 연결 검사를 만족하는 후보를 찾지 못했어요. 조건을 자동 완화하지 않았습니다.'));
  }catch(e){if(epoch===routeEpoch)$('#route-status').textContent=e.name==='AbortError'?'경로 요청 시간이 초과됐어요. 다시 시도해 주세요.':e.message}
  finally{if(epoch===routeEpoch){$('#find').disabled=false;$('#cancel').hidden=true}}
 };
+client.request('city-coverage','/api/city/coverage').then(data=>{$('#city-coverage-status').textContent='서울 도보 참고 계산 · '+data.segments.toLocaleString()+'등록 구간 · 자료 기준 '+data.sourceMetadata.source_as_of+' · 휴식/접근성/현장 검증 미완료'}).catch(()=>{$('#city-coverage-status').textContent='서울 도보 자료를 확인하지 못했어요. 최신 배포와 서버 상태를 확인해 주세요.'});
 Promise.allSettled([
  client.request('coverage','/api/coverage').then(data=>{$('#coverage-status').textContent='보행 계산: '+(data.walking.serviceAvailable===false?'확장 자료 서버 연결 필요':data.walking.citywide?'자료별 지원 영역 참고':'월곡역 주변 시범 범위')+' / 정밀지도 '+data.precision.sheets+'도엽·'+data.precision.features.toLocaleString()+'도형 / 현장 검증 미완료. '+data.notice;if(data.walking.serviceAvailable===false&&data.reviewPoints?.state==='registered_display_data'&&!layerChanged){$('#layer').value='osm-review';loadFeatures()}}),
  client.request('transit-status','/api/transit/status').then(data=>{$('#transit-status').textContent=data.state==='reference_candidates_only'?'대중교통 참고 검색 설정됨 · 실제 연결은 요청 시 확인 · 접근성/시각 미검증':'대중교통 연결 준비 중 · 보행과 등록 자료는 별도로 확인할 수 있어요.'})

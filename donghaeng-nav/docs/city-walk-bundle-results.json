@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "tool": "@vercel/nft@1.11.1",
+  "required": [
+    "donghaeng-nav/services/city-walk/router.mjs",
+    "donghaeng-nav/services/city-walk/manifest.json",
+    "donghaeng-nav/services/city-walk/assets/graph.bin.gz",
+    "donghaeng-nav/services/city-walk/assets/ways.json.gz",
+    "donghaeng-nav/services/service-integrity.json"
+  ],
+  "totalFiles": 19,
+  "totalInputBytes": 32269156,
+  "warningCount": 0,
+  "oldWalkingDataBundled": false,
+  "sourcePbfBundled": false,
+  "actualVercelBuild": false
+}

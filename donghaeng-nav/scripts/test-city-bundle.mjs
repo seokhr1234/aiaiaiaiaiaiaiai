@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import {stat,writeFile} from 'node:fs/promises';
+const require=createRequire(import.meta.url),{nodeFileTrace}=require('@vercel/nft'),root=fileURLToPath(new URL('../../',import.meta.url));
+const trace=await nodeFileTrace(['api/index.mjs'],{base:root,processCwd:root}),required=['donghaeng-nav/services/city-walk/router.mjs','donghaeng-nav/services/city-walk/manifest.json','donghaeng-nav/services/city-walk/assets/graph.bin.gz','donghaeng-nav/services/city-walk/assets/ways.json.gz','donghaeng-nav/services/service-integrity.json'];
+for(const name of required)assert(trace.fileList.has(name),'Missing city function asset: '+name);
+assert.equal(trace.warnings.size,0);assert(![...trace.fileList].some(p=>/donghaeng-nav\/dist\/(?:map-data|map-context|terrain-data)\.json/.test(p)));
+let bytes=0;for(const name of trace.fileList)bytes+=(await stat(new URL('../../'+name,import.meta.url))).size;assert(bytes<100*1024*1024);
+const report={pass:true,tool:'@vercel/nft@'+require('@vercel/nft/package.json').version,required,totalFiles:trace.fileList.size,totalInputBytes:bytes,warningCount:trace.warnings.size,oldWalkingDataBundled:false,sourcePbfBundled:false,actualVercelBuild:false};
+await writeFile(new URL('../docs/city-walk-bundle-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

@@ -26,6 +26,6 @@ window.DONGHAENG_LOAD_DATA=(()=>{
  };
 })();
 window.DONGHAENG_DATA_READY=(async()=>{
- const entries=[...document.querySelectorAll('script[data-src],script[data-encoding="gzip-base64"]')].filter(e=>e.dataset.lazy!=='true');let loaded=0;
- await Promise.all(entries.map(async element=>{await window.DONGHAENG_LOAD_DATA(element.id);const status=document.getElementById('boot-status');if(status)status.textContent='길 찾기 자료를 준비하는 중… '+(++loaded)+' / '+entries.length}));
+ const entries=[...document.querySelectorAll('script[data-src],script[data-encoding="gzip-base64"]')].filter(e=>e.dataset.lazy!=='true');let loaded=0,failed=false;
+ await Promise.all(entries.map(async element=>{try{await window.DONGHAENG_LOAD_DATA(element.id)}catch(error){failed=true;throw error}const status=document.getElementById('boot-status');if(status&&!failed)status.textContent='길 찾기 자료를 준비하는 중… '+(++loaded)+' / '+entries.length}));
 })();

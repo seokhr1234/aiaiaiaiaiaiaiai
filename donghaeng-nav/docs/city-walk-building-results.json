@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "retained_segments_checked": 963670,
+  "registered_building_footprints": 314407,
+  "bounding_box_intersections": 4029,
+  "retained_building_interior_intersections": 0,
+  "source_registered_geometry_only": true,
+  "field_verified": false,
+  "building_courtyard_holes_not_inferred": true
+}

@@ -4,6 +4,8 @@
 
 운영 주소는 [donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)다. **2026-11-13 현재 이 주소는 기존 main 파일을 제공하며 아래 새 확장 경로는 404다.** 아래 기능 설명은 최신 feature 코드의 구현 범위이며, 운영 반영 확인은 [별도 절차](deployment-status-2026-11-13.md)를 따른다. ODsay 상태 경로의 404로 키 누락을 판단하지 않는다.
 
+서울 기본 화면·도보 참고 계산 후속은 [11월 13일 구현 기록](city-walk-2026-11-13.md)을 우선한다. 새 `/api/routes/city-walk`와 `/api/city/coverage`는 Vercel에서 별도 키·자료 서버 없이 처리하며, 기존 `/api/routes/walk`는 월곡 상세 API로 유지한다.
+
 ## 기본 실행
 
 ```sh
@@ -36,6 +38,8 @@ Vercel은 무거운 도로망을 적재하지 않는다. 자료 서버가 없으
 
 | 주소 | 기능·한계 |
 | --- | --- |
+| `GET /api/city/coverage` | 서울 OSM 참고 도보 자료 버전·범위·구간 수·출처·미검증 상태. 키/백엔드 불필요 |
+| `POST /api/routes/city-walk` | 서울 사각 범위의 원본 연결·건물 검사를 거친 도보 참고 경로. 휴식/접근성·현장·GPS 안내 미완료 |
 | `GET /api/coverage` | 데이터·그래프 버전, 월곡 보행 범위와 정밀·시설·현장 확인 수준 |
 | `GET /api/features?bbox=west,south,east,north&layer=facilities` | 표시 자료. `precision`, `crossings`, `osm-review`도 지원. 한 변 0.3도 이하, `limit` 최대 1000, `offset`/`nextOffset` 페이지 처리. 등록 접속점은 별도 표시 데이터 버전을 사용 |
 | `GET /api/places?q=도서관` | 보유 서울 등록 시설의 이름·주소 검색, 일반 주소 전체 검색은 미구현 |

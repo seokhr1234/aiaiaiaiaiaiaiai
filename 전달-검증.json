@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "17942fcc7bf12d7daf35764d6cc9712f324edca5ba21742b962ec900a7b23c64",
+  "html_sha256": "48cf7843083b9cb4ecc3559e28ae3da4e9746ac616a76e5310128d12d2a78d48",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -56,7 +56,7 @@
   "precision_runtime_included": true,
   "precision_runtime_loader_implemented": true,
   "main_promotion": {
-    "version": "2026-11-13-review-points",
+    "version": "2026-11-13-city-walk",
     "review": "donghaeng-nav/docs/main-navigation-promotion.md",
     "original_gis_reprocessed": false,
     "field_verified": false

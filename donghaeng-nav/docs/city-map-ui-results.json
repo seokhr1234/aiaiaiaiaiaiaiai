@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "checks": [
+    "Default main entry covers Seoul with no invented current location/destination, precision overlay off, city facilities clustered and city-wide search index; full existing building audit remains loaded",
+    "Precision boundaries require explicit enable and zoom 17+, draw only current viewport, remain off on reapply; switching display does not disable building validation",
+    "Main place search includes distant Seoul facilities, accepts their reference locations, and handles no match without fabricating an address",
+    "Main map accepts Seoul origin/destination and draws real server A* route with missing-grade/source notices; city route never enters local GPS guidance",
+    "Changing condition clears city geometry and an unverified rest requirement produces an explicit failure rather than a relaxed route",
+    "Explicit local demonstration remains available and retains original precision/endpoint safeguards",
+    "320px/393px/landscape and rebuilt standalone retain city initial view and clean overlay defaults",
+    "Expansion entry also starts at Seoul scale with city walking selected, suppresses huge overview feature requests and draws the actual city route"
+  ],
+  "initial": {
+    "zoom": 11,
+    "origin": null,
+    "destination": null,
+    "contains": true,
+    "precisionVisible": false,
+    "precisionCount": 16169,
+    "buildings": 15483,
+    "facilityMarkers": 16,
+    "cityPlaceCount": 7526,
+    "farPlaces": 6940
+  },
+  "browserErrors": [],
+  "realProviderCalls": 0,
+  "externalTilesBlocked": true,
+  "physicalPhone": false,
+  "fieldVerified": false,
+  "referenceCityWalking": true,
+  "accessibleCityWalkingVerified": false
+}

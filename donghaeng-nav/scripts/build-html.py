@@ -40,10 +40,16 @@ def build():
             raise ValueError('경로 검증 입력이 바뀌었습니다: ' + name + ' · 재검증 후 무결성 기록을 갱신하세요.')
     service_path = ROOT / 'donghaeng-nav/services/service-integrity.json'
     services = json.loads(service_path.read_text())
-    for name, expected in {**services['files'], **services.get('review_assets', {})}.items():
+    for name, expected in {**services['files'], **services.get('review_assets', {}), **services.get('city_assets', {})}.items():
         target = (ROOT / name).resolve()
         if not target.is_relative_to(ROOT.resolve()) or sha(target.read_bytes()) != expected:
             raise ValueError('확장 서비스 입력 변경 · 재검증 필요: ' + name)
+    city = json.loads((ROOT / 'donghaeng-nav/services/city-walk/manifest.json').read_text())
+    if city.get('validation_required') is not False or city['metadata']['field_verified'] is not False or city['metadata']['accessibility_verified'] is not False:
+        raise ValueError('서울 도보 자료의 참고용 검증 상태를 확인하세요.')
+    for name in ['city-walk-source-results', 'city-walk-building-results', 'city-walk-api-results']:
+        if not json.loads((ROOT / ('donghaeng-nav/docs/' + name + '.json')).read_text())['pass']:
+            raise ValueError('서울 도보 자료 검증이 필요합니다: ' + name)
     review_points = json.loads((ROOT / 'donghaeng-nav/services/expansion/review-points-manifest.json').read_text())
     if review_points.get('field_verified') is not False or review_points.get('routing_eligible') is not False or review_points.get('display_only') is not True:
         raise ValueError('등록 접속점은 표시 전용·현장 미확인 상태여야 합니다.')
@@ -103,11 +109,12 @@ def build():
         path.write_text(html, encoding='utf-8', newline='\n')
     facilities = json.loads(local_file(datasets['bundled-facilities-seoul']['path']).read_bytes())['features']
     manifest = {
-        'version': '2026-11-13-review-points',
+        'version': '2026-11-13-city-walk',
         'main_source': 'donghaeng-nav/dist/index.html',
         'expansion': {'online_page': 'expansion.html', 'service_code_files': len(services['files']), 'review_asset_files': len(services.get('review_assets', {})),
                       'service_integrity_sha256': sha(service_path.read_bytes()), 'citywide_routing': False,
                       'authenticated_transit_verified': False, 'new_slope_values_promoted': 0,
+                      'city_walk': {'reference_routing': True, 'online_only': True, 'nodes': city['nodes'], 'segments': city['segments'], 'dataset_version': city['dataset_version'], 'field_verified': False, 'accessibility_verified': False, 'rest_routing_supported': False, 'assets_verified': len(services['city_assets'])},
                       'review_points': {'records': review_points['records'], 'dataset_version': review_points['dataset_version'],
                                         'source_as_of': review_points['metadata']['as_of'], 'collected_date': review_points['metadata']['collected_date'],
                                         'reviewed_date': review_points['metadata']['reviewed_date'], 'display_only': True, 'field_verified': False, 'routing_eligible': False}},

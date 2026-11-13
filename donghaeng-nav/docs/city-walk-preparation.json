@@ -1,0 +1,40 @@
+{
+  "pass": true,
+  "counts": {
+    "source_segments": 1305938,
+    "incline_unknown": 962767,
+    "outside_extent": 339908,
+    "building_interior_withheld": 2360,
+    "registered_numeric_incline": 903
+  },
+  "nodes": 860822,
+  "segments": 963670,
+  "ways": 176600,
+  "building_polygons": 314407,
+  "invalid_buildings_conservative_bbox": 4,
+  "inputs": {
+    "research/accessibility/round8-2026-11-11/derived-v2/candidate-segments.ndjson.gz": "17f5154c228af5657ac49db273f9f242d43d6bcb57b78a49b8711ccbc1a3292e",
+    "research/accessibility/round5-2026-11-11/derived/study-context.json.gz": "ad55f45e56f10c3051952291b15e6a35243d5e8adf35c1e48fc1d02b9995e7f2"
+  },
+  "assets": {
+    "graph.bin.gz": {
+      "bytes": 29765742,
+      "sha256": "a982e144ee7249193aecd7c98f5fc2c7263e2e522fd75509fc6182c5164ac7f0",
+      "raw_bytes": 67468176,
+      "raw_sha256": "f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb"
+    },
+    "ways.json.gz": {
+      "bytes": 1504537,
+      "sha256": "0eecce506d7b80a1bbfd3c7a81b98914bb9e0dbf8eee620ce7f5d69ae41cfc18",
+      "raw_bytes": 15380476,
+      "raw_sha256": "08b1bb6763a28d27bd039572208b5562f7add3f13a3c559bb31542ee73ac56bb"
+    }
+  },
+  "shapely": "2.1.2",
+  "node_identity_preserved": true,
+  "coordinate_snaps": 0,
+  "fabricated_links": 0,
+  "new_slope_values_promoted": 0,
+  "field_verified": false,
+  "research_unchanged": true
+}

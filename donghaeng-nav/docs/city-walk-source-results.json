@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "segments_checked": 963670,
+  "original_node_coordinates_and_ids_checked": 860822,
+  "adjacency_arcs_checked": 1927340,
+  "building_overlap_withheld": 2360,
+  "outside_extent_withheld": 339908,
+  "unknown_incline_preserved": 962767,
+  "original_runtime_datasets_unchanged": 9,
+  "prior_research_unchanged": true,
+  "field_verified": false,
+  "accessibility_verified": false,
+  "new_measured_slopes": 0
+}

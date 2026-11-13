@@ -1,12 +1,12 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>동행길 · 지역별 자료와 경로</title><link rel="stylesheet" href="leaflet.css"><link rel="stylesheet" href="expansion.css"></head><body>
-<header><a href="./">← 동행길</a><h1>지역별 자료와 경로</h1><p>현재 보행 계산은 월곡역 주변 시범 범위입니다. 시설 표시와 정밀자료·현장 확인 범위는 달라요.</p></header>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>동행길 · 서울 지도와 경로</title><link rel="stylesheet" href="leaflet.css"><link rel="stylesheet" href="expansion.css"></head><body>
+<header><a href="./">← 동행길</a><h1>서울 지도와 경로</h1><p>서울 전역 OSM 보행 참고 경로를 계산합니다. 휴식·휠체어 조건과 미확인 연결은 결과를 제공하지 못할 수 있어요.</p></header>
 <main><section class="tools" aria-label="길 찾기와 자료 선택">
-<details><summary>자료와 지원 범위</summary><p id="coverage-status" role="status">지원 범위를 확인하고 있어요.</p></details>
+<details><summary>자료와 지원 범위</summary><p id="city-coverage-status" role="status">서울 도보 자료를 확인하고 있어요.</p><p id="coverage-status" role="status">지원 범위를 확인하고 있어요.</p></details>
 <form id="place-search"><label for="place-query">서울 등록 시설 이름·주소</label><div class="row"><input id="place-query" maxlength="80" required placeholder="도서관·쉼터·주소 검색"><button>찾기</button></div></form><div id="place-results" aria-live="polite"></div>
 <form id="route-form"><p>출발·도착 버튼을 선택한 뒤 지도에서 보행 위치를 눌러 주세요.</p><div class="row"><button id="pick-start" type="button" aria-pressed="false">출발 위치 지정</button><button id="pick-end" type="button" aria-pressed="false">도착 위치 지정</button></div><p id="point-status" role="status">출발·도착 위치를 지정해 주세요.</p>
 <label for="condition">오늘 이동 상태</label><textarea id="condition" maxlength="500" required>가장 짧은 길로 가고 싶어요.</textarea>
-<p>상태 문장은 이 기기에서 문장 규칙으로 해석합니다.</p><label for="mode">이동 방법</label><select id="mode"><option value="walk">보행 경로</option><option value="transit">버스·지하철 참고 후보</option></select>
+<p>상태 문장은 이 기기에서 문장 규칙으로 해석합니다.</p><label for="mode">이동 방법</label><select id="mode"><option value="city-walk">서울 보행 참고 경로</option><option value="walk">월곡 상세 시연</option><option value="transit">버스·지하철 참고 후보</option></select>
 <p id="transit-status">대중교통 연결 상태를 확인하고 있어요.</p><p id="sharing-note" hidden>대중교통 참고 검색에는 출발·도착 좌표가 대중교통 제공업체로 전송됩니다. 접근성·환승 시각은 미확인입니다.</p>
 <button id="find" class="primary">내 상태에 맞는 길 찾기</button><button id="cancel" type="button" hidden>계산 취소</button><p id="route-status" role="status"></p></form>
 <label for="layer">지도에 표시할 자료</label><select id="layer"><option value="facilities">서울 등록 시설</option><option value="precision">정밀지도 검토 도형</option><option value="crossings">공식 횡단보도 참고점</option><option value="osm-review">OSM 등록 접속점 · 현장 미확인</option></select><p id="review-note" hidden>서울 주변 도로 조사에서 확보한 차단물·출입구·턱·횡단·승강기 등록 지점입니다. 출입·보도 연결·유효 폭·운행 여부는 현장 미확인입니다. 팝업에서 자료 기준일과 등록값을 확인하세요. 지점에 초점을 둔 뒤 Enter 키로도 열 수 있습니다.</p><p id="basemap-status" role="status"></p><p id="feature-status" role="status"></p><div id="route-results" aria-live="polite"></div>
-</section><section id="map" aria-label="지역별 지도"></section></main><script src="leaflet.js"></script><script src="engine.js"></script><script src="facilities.js"></script><script src="region-client.js"></script><script src="expansion.js"></script></body></html>
+</section><section id="map" aria-label="지역별 지도"></section></main><script src="leaflet.js"></script><script src="engine.js"></script><script src="facilities.js"></script><script src="region-client.js"></script><script src="city-map.js"></script><script src="expansion.js"></script></body></html>

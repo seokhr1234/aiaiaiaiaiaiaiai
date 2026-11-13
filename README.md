@@ -26,6 +26,8 @@
 
 2026-11-13 지도 연결: `/expansion.html`에 **OSM 등록 접속점 · 현장 미확인** 레이어를 추가했습니다. 복구 원본의 31,934개 지점을 영역별로 조회하며 Vercel에서 별도 키·자료 서버 없이 표시합니다. [출처·등록값·검사·사용법](donghaeng-nav/docs/expansion-service.md). 보행 출입구·턱/폭·승강기 운행을 확인한 자료로 사용하지 않으며 활성 길찾기는 기존 월곡 범위입니다.
 
+2026-11-13 서울 확대: 기본 화면·등록 장소 검색·출발/도착 선택을 서울 전역으로 바꾸고, **서울 도보 참고 계산**을 별도 API로 연결했습니다. 원본 연결/건물 검사를 거친 963,670구간을 사용하며 ODsay 키·자료 서버 없이 동작합니다. 파란 정밀 경계선은 기본으로 끄고 확대 후 선택 표시하며 시설은 함께 묶습니다. **교량·지하/층위 보류로 연결되지 않는 곳이 있으며 서울 전역 휴식·휠체어 접근성 검증·GPS 경로 안내는 미완료입니다.** [구현·화면·검사·남은 작업](donghaeng-nav/docs/city-walk-2026-11-13.md). 기존 월곡 상세 기능과 연구/원본 9개는 보존합니다.
+
 ## 실행
 
 Node.js 18 이상에서 저장소 최상위에서 실행합니다.
@@ -44,7 +46,7 @@ node donghaeng-nav/scripts/launch.mjs --no-open
 | --- | --- |
 | `/`, `/app/` | 같은 최신 메인 프로그램의 분리 소스 화면 |
 | `/setup` | 로컬 서버의 Gemini 키 설정 화면 |
-| `/expansion.html` | 영역별 자료·서버 보행·대중교통 참고 화면. OSM 등록 접속점은 별도 키/자료 서버 없이 표시. 대중교통 후보는 `ODSAY_API_KEY`, 기존 시설/정밀·서버 보행은 별도 자료 서버 필요 |
+| `/expansion.html` | 서울 OSM 도보 참고 계산·등록 접속점은 키/자료 서버 없이 제공. 대중교통 후보는 `ODSAY_API_KEY`, 기존 시설/정밀·월곡 서버 상세 보행은 별도 자료 서버 필요 |
 | `/동행길-최종.html` | 같은 프로그램을 단일 파일로 묶은 호환 주소 |
 | `동행길-최종.html`, `동행길-시연.html`, `동행길-전달용.html` | 같은 빌드의 호환 파일명 |
 | `이동약자-내비게이션-실행패키지/`의 HTML 2개 | 같은 빌드의 휴대폰·컴퓨터 전달용 파일 |
@@ -54,7 +56,7 @@ node donghaeng-nav/scripts/launch.mjs --no-open
 ## 현재 포함한 기능
 
 - 상태 문장과 출발지·목적지를 입력하고 길 찾기를 한 번 누르면 이동 조건을 해석합니다. 별도 조건 체크박스나 AI 실행 버튼은 없습니다.
-- 서울 전역 공개 시설 표시, 검색·핀 조정, 휴식 후보, 경로 저장·브라우저 내 제보와 모바일 하단 패널을 제공합니다. 시설 토글은 표시만 바꿉니다.
+- 서울 전역 기본 지도·등록 시설 이름/주소 검색·핀 지정과 OSM 도보 참고 계산을 제공합니다. 미확인 연결은 보류하며 경사 결측을 0으로 바꾸지 않습니다. 월곡 상세 시연의 휴식·저장·제보·GPS 기능을 유지합니다. 시설 토글은 표시만 바꿉니다.
 - 공식 쉼터 4,092곳에 최신 전체 자료 대조일을 표시하고, 기존 시설과 대응시킨 공지 3건을 연결합니다. 운영 안내가 다른 2곳은 경고를 표시하고 자동 휴식 후보에서 제외합니다. [지도 근거 연결](donghaeng-nav/docs/research-map-linkage.md).
 - 1:1,000 지도 16도엽의 **기존 변환 자료 16,169피처**를 검토 레이어로 포함합니다. 도로·보도 경계를 검증된 보행 중심선으로 취급하지 않습니다.
 - 지상 경로와 건물 내부의 겹침 제외, 도로 선분 연결, 출입구·승강기 연결 미확인 표시를 포함합니다. 학교 안내점은 건물 앞 도로 기준이며 실제 출입문 검증은 아닙니다.
@@ -105,6 +107,9 @@ python3 donghaeng-nav/scripts/build-html.py
 ### 확인 명령
 
 ```sh
+node donghaeng-nav/scripts/test-city-walk.mjs
+node donghaeng-nav/scripts/test-city-map-ui.mjs
+node donghaeng-nav/scripts/test-city-layers.cjs
 node donghaeng-nav/scripts/test-expansion-core.mjs
 node donghaeng-nav/scripts/test-expansion-ui.mjs
 node donghaeng-nav/scripts/test-transit-edge.mjs

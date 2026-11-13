@@ -1,0 +1,108 @@
+{
+  "pass": true,
+  "checks": [
+    "Ten district pairs and three longer cross-area pairs across Seoul; real adjacency A* results preserve source IDs, no-step conditions, unregistered incline and reference/field flags; disconnected endpoints fail explicitly",
+    "Node and actual exported Vercel handler, original and rewritten URLs, return identical route/source segments; city coverage is independent of a backend or provider key",
+    "Out-of-area, malformed keys/profile/time, unsupported rest evidence, absent wheelchair grade evidence, wrong method/type and foreign origin fail without relaxing the condition",
+    "Missing/corrupt source-bound city graph fails closed",
+    "Oversized/malformed JSON is rejected and a controlled third concurrent request receives 429 while two active requests finish",
+    "A* cancellation and visit budget stop work; no straight-line substitute",
+    "Synthetic competing paths prove the stairs filter changes the result and unknown grade cannot satisfy a numeric slope ceiling"
+  ],
+  "samples": [
+    {
+      "district": "Jung",
+      "status": 200,
+      "distanceMeters": 972.9537888965706,
+      "visited": 306,
+      "elapsedMs": 38
+    },
+    {
+      "district": "Gangnam",
+      "status": 200,
+      "distanceMeters": 964.1506004992482,
+      "visited": 188,
+      "elapsedMs": 11
+    },
+    {
+      "district": "Mapo",
+      "status": 200,
+      "distanceMeters": 1514.4605648871013,
+      "visited": 417,
+      "elapsedMs": 10
+    },
+    {
+      "district": "Songpa",
+      "status": 200,
+      "distanceMeters": 1493.1265153528568,
+      "visited": 767,
+      "elapsedMs": 57
+    },
+    {
+      "district": "Gangseo",
+      "status": 200,
+      "distanceMeters": 850.189680511463,
+      "visited": 61,
+      "elapsedMs": 43
+    },
+    {
+      "district": "Geumcheon",
+      "status": 422,
+      "code": "city_no_connected_route",
+      "elapsedMs": 4
+    },
+    {
+      "district": "Dobong",
+      "status": 200,
+      "distanceMeters": 1707.9445838022207,
+      "visited": 597,
+      "elapsedMs": 3
+    },
+    {
+      "district": "Eunpyeong",
+      "status": 200,
+      "distanceMeters": 1504.9460021758396,
+      "visited": 592,
+      "elapsedMs": 33
+    },
+    {
+      "district": "Gwanak",
+      "status": 200,
+      "distanceMeters": 1268.1641089422528,
+      "visited": 216,
+      "elapsedMs": 4
+    },
+    {
+      "district": "Gangdong",
+      "status": 200,
+      "distanceMeters": 1239.5474111894403,
+      "visited": 360,
+      "elapsedMs": 8
+    },
+    {
+      "district": "north-cross-district",
+      "status": 200,
+      "distanceMeters": 16912.883949783238,
+      "visited": 73865,
+      "elapsedMs": 92
+    },
+    {
+      "district": "south-cross-district",
+      "status": 422,
+      "code": "city_no_connected_route",
+      "elapsedMs": 34
+    },
+    {
+      "district": "across-Han-withheld",
+      "status": 422,
+      "code": "city_no_connected_route",
+      "elapsedMs": 126
+    }
+  ],
+  "datasetVersion": "city-walk-f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",
+  "providerCalls": 0,
+  "fieldVerified": false,
+  "physicalGps": false,
+  "referenceRouting": true,
+  "accessibleCitywideRouting": false
+}

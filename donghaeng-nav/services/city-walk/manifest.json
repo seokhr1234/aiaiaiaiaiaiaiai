@@ -1,0 +1,112 @@
+{
+  "schema": "donghaeng-city-walk-graph-v1",
+  "dataset_version": "city-walk-f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",
+  "nodes": 860822,
+  "segments": 963670,
+  "ways": 176600,
+  "bounds": [
+    126.75,
+    37.4,
+    127.2,
+    37.72
+  ],
+  "layout": {
+    "nodeIds": {
+      "offset": 0,
+      "length": 860822,
+      "type": "d"
+    },
+    "coordinates": {
+      "offset": 6886576,
+      "length": 1721644,
+      "type": "d"
+    },
+    "offsets": {
+      "offset": 20659728,
+      "length": 860823,
+      "type": "I"
+    },
+    "targets": {
+      "offset": 24103024,
+      "length": 1927340,
+      "type": "I"
+    },
+    "edgeIndices": {
+      "offset": 31812384,
+      "length": 1927340,
+      "type": "I"
+    },
+    "starts": {
+      "offset": 39521744,
+      "length": 963670,
+      "type": "I"
+    },
+    "ends": {
+      "offset": 43376424,
+      "length": 963670,
+      "type": "I"
+    },
+    "wayIndex": {
+      "offset": 47231104,
+      "length": 963670,
+      "type": "I"
+    },
+    "parts": {
+      "offset": 51085784,
+      "length": 963670,
+      "type": "I"
+    },
+    "lengths": {
+      "offset": 54940464,
+      "length": 963670,
+      "type": "d"
+    },
+    "flags": {
+      "offset": 62649824,
+      "length": 963670,
+      "type": "B"
+    },
+    "slopes": {
+      "offset": 63613496,
+      "length": 963670,
+      "type": "f"
+    }
+  },
+  "assets": {
+    "graph.bin.gz": {
+      "bytes": 29765742,
+      "sha256": "a982e144ee7249193aecd7c98f5fc2c7263e2e522fd75509fc6182c5164ac7f0",
+      "raw_bytes": 67468176,
+      "raw_sha256": "f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb"
+    },
+    "ways.json.gz": {
+      "bytes": 1504537,
+      "sha256": "0eecce506d7b80a1bbfd3c7a81b98914bb9e0dbf8eee620ce7f5d69ae41cfc18",
+      "raw_bytes": 15380476,
+      "raw_sha256": "08b1bb6763a28d27bd039572208b5562f7add3f13a3c559bb31542ee73ac56bb"
+    }
+  },
+  "metadata": {
+    "source_url": "https://download.geofabrik.de/asia/south-korea.html",
+    "source_as_of": "2026-11-09T21:22:17Z",
+    "collected_date": "2026-11-11",
+    "prepared_date": "2026-11-13",
+    "source_crs": "EPSG:4326",
+    "vertical_datum": null,
+    "license": "ODbL-1.0",
+    "field_verified": false,
+    "accessibility_verified": false,
+    "new_slope_values_promoted": 0,
+    "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+    "scope": "Seoul-covering rectangular OSM subset, not an administrative completeness claim",
+    "notice": "OSM registration reference routing; curb/width/surface grade/entrances/current access unverified. Bridges/tunnels/indoor/blocked nodes withheld; no fabricated links.",
+    "registered_numeric_incline_segments": 903,
+    "registered_incline_role": "OSM tag constraints only, not measured surface grades"
+  },
+  "validation_required": false,
+  "validation": {
+    "source": "docs/city-walk-source-results.json",
+    "buildings": "docs/city-walk-building-results.json",
+    "role": "OSM reference routing only; not field/accessibility verification"
+  }
+}

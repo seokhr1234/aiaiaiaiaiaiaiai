@@ -1,7 +1,7 @@
 {
   "version": 1,
   "review_date_kst": "2026-11-13",
-  "scope": "Original walking snapshot/optional PostGIS reads and region display; independent OSM registered review points and transit reference candidates",
+  "scope": "Original local detailed walking and independent Seoul OSM reference routing; registered display layers and transit reference candidates",
   "validation": [
     "docs/expansion-core-results.json",
     "docs/expansion-ui-results.json",
@@ -16,17 +16,23 @@
     "docs/review-points-api-results.json",
     "docs/review-points-ui-results.json",
     "docs/review-points-boot-results.json",
-    "docs/review-points-bundle-results.json"
+    "docs/review-points-bundle-results.json",
+    "docs/city-walk-source-results.json",
+    "docs/city-walk-building-results.json",
+    "docs/city-walk-api-results.json",
+    "docs/city-map-ui-results.json",
+    "docs/city-walk-bundle-results.json",
+    "docs/city-release-integrity.json"
   ],
   "files": {
-    "api/index.mjs": "230e5780b93e3fa34d09184565fc63f76c7c601096ef2a3c151a407759046f22",
+    "api/index.mjs": "db05e1634e14248ea719221be866356c8a711a4c7a5cbbbf34f87771d823c8b8",
     "donghaeng-nav/dist/expansion.css": "efb954689f01636662f38d0958c8bc14d6ccc04b875271da5b36a38fc8579462",
-    "donghaeng-nav/dist/expansion.html": "de3c5ceaf16cac49b944888c8c8caa598e1dfcb6ecb307cebd11a996173499bf",
-    "donghaeng-nav/dist/expansion.js": "9f36b8a8bcd9d0b6183db571293e24aa08ea2f0087fe66f7f956aa7fdb13f37c",
+    "donghaeng-nav/dist/expansion.html": "bc54ccf2f81706b56310676795648f1e15981d575be8b7e205f79b7ecb014ff4",
+    "donghaeng-nav/dist/expansion.js": "217d7b5da6c623fc5753d65d2f66563d959275d1482ffb91a6e5d95ba404934d",
     "donghaeng-nav/dist/region-client.js": "ed0b5c4c72d14ccec8bd07545d35d8f6b51cbdbf7df5297dac17cb7474966d77",
     "donghaeng-nav/scripts/export-expansion-postgis.py": "f0c114c9a65408853d909fe69c27d4774b670835ae592dcd52d890f330db1ec2",
     "donghaeng-nav/scripts/prepare-expansion-catalog.py": "94b6c00e0de32d5e54d2dab89d01c2d2669e644f57b6a15c6a24d7723a40e0ee",
-    "donghaeng-nav/server.mjs": "5bfc28dba3e870ec684ff43ad60bfca106ea529e15cd71088965af877e5c770b",
+    "donghaeng-nav/server.mjs": "c048a3df14e000bfd96555e833ba8e673d017f979ac7078ab9c6078a3113a6b4",
     "donghaeng-nav/services/expansion/contracts.mjs": "a4b71e32c449b8a1bca322aba7227e01eaa46be8ad46731023bb9e2d54acfb8c",
     "donghaeng-nav/services/expansion/features.mjs": "5e607223b4b54f3a962418421d3f9690e3f2ffa12ca20b08e747fb671194e18d",
     "donghaeng-nav/services/expansion/handler.mjs": "20889106d153b3ed64d454111897c1ba6b1d6e1f0893ed973e3bf77164b28057",
@@ -43,9 +49,14 @@
     "donghaeng-nav/services/transit/edge.mjs": "cd0cd844e8e40dfa1566990ae277a18627e89a573c202f0be54634cb483f4b2d",
     "donghaeng-nav/services/transit/journey.mjs": "13b149c68a1a4a4380147ecd72ce16f4dda940c1c10893884251866d23e5a138",
     "donghaeng-nav/services/transit/odsay.mjs": "72f8bfa1b537ca8b890d0882cbf704074bdbfcd8cb4b7dc95bd40ccd9670cbce",
-    "vercel.json": "f70aaa083efe8d6e04d79eb5adb8b160eb34629435480deca0fb37987c8deb27",
+    "vercel.json": "2e35b8d7f386cc812dfeaa6312f875ec403b46f96323ec1a5d6f9194096e291b",
     "donghaeng-nav/scripts/prepare-review-points.py": "7a59891e2fc75d6d60a7492b559f2d442929ea96008c7b962981e9ba03926abc",
-    "donghaeng-nav/services/expansion/review-points.mjs": "789f87e5b612f856005eedff171dc3057081a16444305180f27521b4bf0396a9"
+    "donghaeng-nav/services/expansion/review-points.mjs": "789f87e5b612f856005eedff171dc3057081a16444305180f27521b4bf0396a9",
+    "donghaeng-nav/services/city-walk/router.mjs": "bd41cf4026aac3d215fe223d7105b94bbb46e83183784713fb7be1634923b03f",
+    "donghaeng-nav/dist/city-map.js": "d9a41a75d0d243a022ceb978ab2bd4a940cf95727c708a434fb0c5c8904e25a8",
+    "donghaeng-nav/scripts/prepare-city-walk.py": "6cc40a18ff61558a36723dd22548c85524f0520dfd69db6d6d6eab82eb6f258a",
+    "donghaeng-nav/scripts/verify-city-walk.py": "a4d76c41e0a1318b85914c2988057b2279d9451ff3d121879d3886b2366fdb9d",
+    "donghaeng-nav/scripts/verify-city-buildings.py": "2c85d1816f41e702f4d019d53c3b12af2d086cf9226174a7975b671d48914d48"
   },
   "field_verified": false,
   "citywide_routing": false,
@@ -53,5 +64,10 @@
   "review_assets": {
     "donghaeng-nav/services/expansion/review-points-manifest.json": "3ebe25afeebf81b5d59f0dade076d3ba835f6a373676ac666c620ee62b4954c1",
     "donghaeng-nav/dist/data/review/connection-points.geojson.gz": "4b9ecf3614973d80003666bde264933c91dc146ea4142540735b08e8148f64e6"
+  },
+  "city_assets": {
+    "donghaeng-nav/services/city-walk/manifest.json": "57982a4ca3aea9e6a0818e557109ef0720724ade869edc808a8d4e53265452f8",
+    "donghaeng-nav/services/city-walk/assets/graph.bin.gz": "a982e144ee7249193aecd7c98f5fc2c7263e2e522fd75509fc6182c5164ac7f0",
+    "donghaeng-nav/services/city-walk/assets/ways.json.gz": "0eecce506d7b80a1bbfd3c7a81b98914bb9e0dbf8eee620ce7f5d69ae41cfc18"
   }
 }

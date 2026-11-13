@@ -12,7 +12,7 @@ const data=JSON.parse(gunzipSync(await readFile(new URL('../dist/data/review/con
 let browser;const errors=[],requests=[],checks=[];
 try{
  browser=await pw.chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const context=await browser.newContext({viewport:{width:1440,height:1000}});await context.route('https://**',r=>r.abort());const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
- await page.goto(base+'/expansion.html');await page.waitForFunction(()=>document.querySelector('#layer').value==='osm-review'&&document.querySelector('#feature-status').textContent.includes('건 표시'));
+ await page.goto(base+'/expansion.html');await page.evaluate(()=>map.setView([37.60192,127.0414554],17,{animate:false}));await page.waitForFunction(()=>document.querySelector('#layer').value==='osm-review'&&document.querySelector('#feature-status').textContent.includes('건 표시'));
  assert(await page.locator('#review-note').isVisible());await page.locator('details summary').click();assert.match(await page.locator('#coverage-status').innerText(),/확장 자료 서버 연결 필요/);await page.locator('details summary').click();assert(!requests.some(url=>/connection-points|map-data|terrain-data|precision-map|seoul-facilities/.test(url)));
  checks.push('No-backend Vercel-style screen selects the explicitly labeled registered-point layer and fetches only viewport API pages, while walking coverage stays unavailable');
  assert(await page.evaluate(()=>new Set(features.getLayers().flatMap(g=>g.getLayers()).map(marker=>marker.options.color)).size>1),'Review point categories must retain distinct rendered colors');

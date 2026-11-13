@@ -9,5 +9,5 @@
   ],
   "browserErrors": [],
   "physicalGps": false,
-  "mode": "standalone-over-localhost"
+  "mode": "server-source"
 }

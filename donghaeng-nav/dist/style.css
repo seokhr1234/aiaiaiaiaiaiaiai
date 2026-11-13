@@ -230,3 +230,8 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
 
 @media(max-width:700px){.leaflet-container:has(.facility-popup) .map-source-control{visibility:hidden}}
 @media(max-width:700px){.leaflet-control-attribution{max-height:42px;overflow-y:auto;max-width:100%}}
+
+/* Keep reference overlays and facility groups legible at city scale. */
+.facility-mixed,.facility-overview{background:#2d6d58;color:#fff;border:2px solid #fff;box-shadow:0 1px 5px #0003;font-size:12px;display:flex;align-items:center;justify-content:center}.facility-overview{border-radius:50%;font-weight:700;font-size:13px}.precision-zoom-note{font-size:12px;color:#46584f;line-height:1.5}.city-route-note{padding:12px;border-radius:12px;background:#fff5df;line-height:1.6}.city-route-action{display:block;margin:10px 0}.quick-destinations[hidden]{display:none}.city-scope{font-size:12px;color:#52685d;line-height:1.5}
+
+.city-route-summary{font-size:24px;font-weight:700;line-height:1.4;margin:12px 0}

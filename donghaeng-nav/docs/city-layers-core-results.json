@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "registeredFeaturesUnchanged": 17485,
+  "allSourcePropertiesAndUnknownsUnchanged": true,
+  "localBenchAndRestCandidatesUnchanged": true,
+  "sourceMetadataUnchanged": true,
+  "cityPlaceCount": 7163,
+  "cityExtremesTested": true,
+  "clusterMembersConserved": true,
+  "legacySourceFixtureTest": "test-facilities.cjs cannot run: pre-existing donghaeng-nav/data/accessibility/seoul source fixture absent; comparison uses the exact preserved dist snapshot and prior implementation",
+  "fieldVerified": false
+}
