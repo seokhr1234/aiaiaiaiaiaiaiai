@@ -1,0 +1,41 @@
+{
+  "checkedDateKst": "2026-11-13",
+  "origin": "https://donghaeng-gill.vercel.app",
+  "featureCommit": "11e531462da32b87d9642d69b9aac826255c73f3",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "26e707b085ed401130c92e2a99b127b16890d38c14bd8df78e4b097516409ede",
+      "matchesCurrentSource": false
+    },
+    {
+      "path": "/expansion.html",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "/api/city/coverage",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8"
+    }
+  ],
+  "providerCalls": 0,
+  "productionPromoted": false,
+  "githubStatuses": [
+    {
+      "context": "Vercel – aiaiaiaiaiaiaiai",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/aiaiaiaiaiaiaiai/3WTHaYHKPfdCG6quxk7Pef9AgEBC"
+    },
+    {
+      "context": "Vercel – donghaeng",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/donghaeng/21CX9sbvsUCXt5VgqvvpVjGFpLaT"
+    }
+  ],
+  "remoteFeatureShaMatched": true,
+  "skipVercel": false,
+  "note": "Feature builds succeeded, but the user-provided production host still serves the previously fingerprinted old main HTML and returns 404 for new city coverage. No provider request or production-domain/branch mutation was performed. ODsay key configuration cannot be inferred from missing endpoints."
+}
