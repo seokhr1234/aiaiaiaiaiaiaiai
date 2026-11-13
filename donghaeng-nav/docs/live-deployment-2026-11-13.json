@@ -1,0 +1,208 @@
+{
+  "checked_date_kst": "2026-11-13",
+  "origin": "https://donghaeng-gill.vercel.app",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 18900,
+      "truncated": false,
+      "sha256": "26e707b085ed401130c92e2a99b127b16890d38c14bd8df78e4b097516409ede",
+      "matches_local_source": false
+    },
+    {
+      "path": "/expansion.html",
+      "status": 404,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes_read": 79,
+      "truncated": false,
+      "sha256": "c5f9325fb492886ecb4ca3419e79255cb3b6135a726c4ff233e9a0f38d87c41f"
+    },
+    {
+      "path": "/api/coverage",
+      "status": 404,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes_read": 79,
+      "truncated": false,
+      "sha256": "dac6fd84c8858cf59f0c6c739ba7d20b7fe31c576baea90166918c7fe1f5fdd7"
+    },
+    {
+      "path": "/api/transit/status",
+      "status": 404,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes_read": 79,
+      "truncated": false,
+      "sha256": "66b681a90bb905838d5b904d01fb2eb5040638cebf5af03db44b57479c25dba2"
+    },
+    {
+      "path": "/api/features?layer=osm-review&bbox=127.035,37.595,127.046,37.607&limit=1",
+      "status": 404,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes_read": 79,
+      "truncated": false,
+      "sha256": "37f901d9ae259f9d1a5e00f7537932ba7b18c8bd08bd2a41ff56bd12691925c3"
+    },
+    {
+      "path": "/api/status",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes_read": 71,
+      "truncated": false,
+      "sha256": "0f0df91c737a689907a7124bb62b9a0a52f1c3e559665dc2edbe8563ed07f995",
+      "summary": {
+        "configured": true,
+        "model": "gemini-3.5-flash-lite"
+      }
+    }
+  ],
+  "provider_search_calls": 0,
+  "field_verified": false,
+  "fingerprint_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "26e707b085ed401130c92e2a99b127b16890d38c14bd8df78e4b097516409ede",
+      "bytes": 18900,
+      "title": [
+        "동행길"
+      ],
+      "scripts": [
+        "map-data.json",
+        "map-context.json",
+        "leaflet.js",
+        "data/accessibility/seoul/seoul-base.json",
+        "seoul-base.js",
+        "terrain-data.json",
+        "engine.js",
+        "data/accessibility/seoul/seoul-facilities.geojson",
+        "facilities.js",
+        "final-model.js",
+        "condition-ai.js",
+        "condition-request.js",
+        "portable-ai.js",
+        "navigation-policy.js",
+        "navigation-plan.js",
+        "navigation-core.js",
+        "navigation-session.js",
+        "endpoint-routing.js",
+        "data/precision/access-reports.json",
+        "access-review.js",
+        "navigation-routing.js",
+        "navigation-ui.js",
+        "precision-connections.js",
+        "data/precision/precision-map.geojson",
+        "data/precision/crossings-review.geojson",
+        "precision-map.js",
+        "gps-tracker.js",
+        "data-loader.js",
+        "app.js"
+      ]
+    },
+    {
+      "path": "/app/",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "57ec5910031ad58185728674b9b56ea660e8b37acb806f4d12b4e10ec9475688",
+      "bytes": 79
+    },
+    {
+      "path": "/expansion.js",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "b62678c45a02583d18a10d52f6da113c4dec5eb9e53d621b81e418b7e1a31f83",
+      "bytes": 79
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "b591c4b8c97702003b05d24b310d76e8277f9588c63c090d7c5ea1b808f9d34d",
+      "bytes": 70098
+    },
+    {
+      "path": "/api/index?route=transit/status",
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "3184c6ab8e9c24f4168719fa3faa315fc0ff434839c4c545ddce3af7a81b3603",
+      "bytes": 45
+    },
+    {
+      "path": "/api/index?route=coverage",
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "3184c6ab8e9c24f4168719fa3faa315fc0ff434839c4c545ddce3af7a81b3603",
+      "bytes": 45
+    }
+  ],
+  "browser": {
+    "checkedDateKst": "2026-11-13",
+    "origin": "https://donghaeng-gill.vercel.app",
+    "externalResourcesBlocked": true,
+    "paidProviderSearchCalls": 0,
+    "gpsPermissionGranted": false,
+    "physicalPhone": false,
+    "fieldVerified": false,
+    "pageErrors": [],
+    "ownOriginFailures": [
+      {
+        "path": "/expansion.html",
+        "status": 404
+      }
+    ],
+    "root": {
+      "status": 200,
+      "title": "동행길",
+      "mapContainerCount": 1,
+      "expansionLinkCount": 0,
+      "horizontalOverflow": false,
+      "routeSearchButtonCount": 1
+    },
+    "expansion": {
+      "status": 404,
+      "title": "404: NOT_FOUND",
+      "featureLayerSelectorCount": 0
+    }
+  },
+  "checked_feature_commit": "ca711f0e7efd67cd2fd2a965e5e8705a87ed8459",
+  "remote_main_commit_checked": "89d3463ce5e4441e5a0e0ac069aaadf1024f0ec0",
+  "source_comparisons": [
+    {
+      "source": "donghaeng-nav/dist/index.html",
+      "live_sha256": "26e707b085ed401130c92e2a99b127b16890d38c14bd8df78e4b097516409ede",
+      "remote_main_sha256": "26e707b085ed401130c92e2a99b127b16890d38c14bd8df78e4b097516409ede",
+      "feature_sha256": "5a26e32c23df67f49895caaa5483ddec3ca53ad209a8fc376e211b3c5808a5cc",
+      "matches_remote_main": true,
+      "matches_feature": false
+    },
+    {
+      "source": "donghaeng-nav/dist/app.js",
+      "live_sha256": "b591c4b8c97702003b05d24b310d76e8277f9588c63c090d7c5ea1b808f9d34d",
+      "remote_main_sha256": "b591c4b8c97702003b05d24b310d76e8277f9588c63c090d7c5ea1b808f9d34d",
+      "feature_sha256": "82f1fd61441f9a9cef630fb9008fad797cc942afc9df76f86b7ff136d9d83f8a",
+      "matches_remote_main": true,
+      "matches_feature": false
+    }
+  ],
+  "interpretation": {
+    "root_served": true,
+    "root_mobile_map_rendered": true,
+    "latest_expansion_served": false,
+    "odsay_configuration": "unknown: status endpoint returns 404",
+    "gemini_key_configured": true,
+    "gemini_provider_authentication_verified": false,
+    "production_branch_setting_verified": false,
+    "vercel_domain_assignment_verified": false,
+    "all_deployed_files_or_exact_deployment_commit_verified": false,
+    "note": "Two public files match the checked main tree. This does not identify the exact Vercel deployment or its dashboard settings. HTTP 404 cannot establish whether ODSAY_API_KEY is present."
+  },
+  "actions": {
+    "read_only_public_checks": true,
+    "production_promotion_executed": false,
+    "main_merge_executed": false,
+    "skip_vercel": false,
+    "secret_values_collected": false,
+    "field_validation_performed": false
+  }
+}

@@ -1,6 +1,6 @@
 # Vercel에서 Gemini API 연결하기
 
-작성: 2026-11-01, 갱신: 2026-11-04, Asia/Seoul. 현재 조건 해석과 후보 비교 API를 함께 제공한다. 이번 후보 비교 변경은 로컬 모의 검사까지 완료했으며 새 코드의 실제 배포·사용자 키 Gemini 호출은 별도 확인이 필요하다. 커밋·푸시 시 자동 배포는 사용자 기본 지침에 따라 허용한다.
+작성: 2026-11-01, 갱신: 2026-11-13, Asia/Seoul. 현재 조건 해석과 후보 비교 API를 함께 제공한다. 이번 후보 비교 변경은 로컬 모의 검사까지 완료했으며 새 코드의 실제 배포·사용자 키 Gemini 호출은 별도 확인이 필요하다. 커밋·푸시 시 자동 배포는 사용자 기본 지침에 따라 허용한다.
 
 ## 요청이 실행되는 방식
 
@@ -31,7 +31,7 @@ Vercel의 공식 [Node.js 함수](https://vercel.com/docs/functions/runtimes/nod
 
 ## 배포 후 확인하기
 
-먼저 [현재 운영 주소의 API 상태](https://aiaiaiaiaiaiaiai.vercel.app/api/status)를 연다. JSON의 `configured: true`는 **함수가 키를 읽었다는 뜻**이며, Google 인증이나 모델 호출 성공을 확인한 결과가 아니다. 이 상태 확인은 Gemini를 호출하지 않는다.
+먼저 [현재 운영 주소의 API 상태](https://donghaeng-gill.vercel.app/api/status)를 연다. JSON의 `configured: true`는 **함수가 키를 읽었다는 뜻**이며, Google 인증이나 모델 호출 성공을 확인한 결과가 아니다. 이 상태 확인은 Gemini를 호출하지 않는다.
 
 다음으로 앱 화면에서 상태 문장을 입력하고 기존 길 찾기 버튼을 누른다. 화면에 ‘Gemini 해석’이 표시되는지 확인한다. 실패하면 기존 기기 내 해석으로 대체되며 오류 설명을 표시한다. 실제 키·모델·할당량의 검증은 이 요청이 성공해야 완료된다.
 
@@ -66,3 +66,9 @@ fetch('/api/analyze-condition', {
 `POST /api/select-route`는 상태 문장, 이동 조건, 익명 후보 2~5개의 정형 수치를 검사하고 Gemini의 최종 선택 번호·요약·장점·감수한 점·미확인 사항·후보별 의견을 반환한다. 후보 하나/없음은 호출하지 않는다. 잘못된 번호·형식·조건 위반은 거부하고 클라이언트가 알고리즘 선택으로 구분한다. 버튼으로 선택 이유를 볼 때는 이미 받은 답변을 표시하며 다시 호출하지 않는다.
 
 본문의 수치 허용 목록·상한·좌표 필드 거부는 `route-choice.js`, 상태 해석과 공유하는 HTTP·출처·동시 요청·시간 초과 처리는 `condition-api.mjs`에서 확인할 수 있다. [구현·검증 범위](ai-route-choice.md)를 참고한다. 기존 ‘HTML/경로는 변경하지 않음’ 기록은 최초 API 추가 당시의 범위다.
+
+## 2026-11-13 운영 주소 대조
+
+사용자가 알려준 실제 운영 주소는 `https://donghaeng-gill.vercel.app`다. `/`와 `/api/status`는 200이며 `configured:true`다. 실제 Gemini 호출은 하지 않았다. 메인 HTML·`app.js`의 SHA-256이 원격 `main` 커밋 `89d3463ce5e4441e5a0e0ac069aaadf1024f0ec0`의 해당 파일과 일치하며 최신 feature 소스와는 다르다. 확장 화면·지원 범위·등록 접속점·ODsay 상태 경로는 404다. 따라서 ODsay 키 설정 여부나 새 기능의 운영 반영을 확인한 결과가 아니다.
+
+문서에 있던 `aiaiaiaiaiaiaiai.vercel.app`의 이전 404 관측은 당시 기록으로 보존한다. 두 Vercel CI 성공과 운영 별칭의 최신 버전 반영을 구분한다. [HTTP·모바일 검사와 운영 반영 절차](deployment-status-2026-11-13.md).

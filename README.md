@@ -4,6 +4,8 @@
 
 전체 변경은 [수정이력.md](수정이력.md), 작업 규칙은 [AGENTS.md](AGENTS.md), 이번 전환의 근거와 검사 범위는 [메인 전환 기록](donghaeng-nav/docs/main-navigation-promotion.md)을 참고하세요.
 
+운영 주소: **[donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)**. 2026-11-13 확인에서는 메인 지도는 열리지만 HTML·앱 소스가 기존 `main`과 일치하며, 최신 feature 브랜치의 확장 화면·API는 404입니다. [운영 반영 확인과 남은 절차](donghaeng-nav/docs/deployment-status-2026-11-13.md).
+
 최신 발표자료: [동행길 발표자료 최종본](동행길_발표자료_최종.pptx).
 
 2026-11-10: [자율 점검 9개 항목 수정·검증](donghaeng-nav/docs/audit-fixes.md). 필수 휴식 재탐색 검증, 도착 예상 시각의 쉼터 운영시간 확인, 기기 내 문장 해석, 저장 복구와 모바일·키보드 조작을 보완했습니다. 건물 도형과 겹치는 목적지는 지도에서 실제 진입 위치를 지정하거나 검토용 경로를 명시적으로 선택합니다. 출입구 좌표를 새로 검증한 것은 아닙니다.

@@ -2,6 +2,8 @@
 
 작성: 2026-11-11, 갱신: 2026-11-13 KST. [현재 구현 범위](seoul-expansion-progress.md)를 먼저 확인한다. 네이버 서비스는 사용하지 않는다.
 
+운영 주소는 [donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)다. **2026-11-13 현재 이 주소는 기존 main 파일을 제공하며 아래 새 확장 경로는 404다.** 아래 기능 설명은 최신 feature 코드의 구현 범위이며, 운영 반영 확인은 [별도 절차](deployment-status-2026-11-13.md)를 따른다. ODsay 상태 경로의 404로 키 누락을 판단하지 않는다.
+
 ## 기본 실행
 
 ```sh
