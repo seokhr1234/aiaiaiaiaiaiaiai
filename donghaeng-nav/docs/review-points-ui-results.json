@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "checks": [
+    "No-backend Vercel-style screen selects the explicitly labeled registered-point layer and fetches only viewport API pages, while walking coverage stays unavailable",
+    "Real source popup separates dataset/collection/review/object-edit times and CRS, preserves unknown width/kerb values, shows license, and cannot set navigation endpoints by a marker click",
+    "Keyboard Enter/Space opens source details and closing returns focus to the point",
+    "320px popup stays within the viewport with scrollable provenance and a reachable close button",
+    "Failed source queries clear stale markers and remain errors; empty registered areas do not become claims that no real facilities exist",
+    "Untrusted OSM text is rendered as text and unsafe source URLs are not links",
+    "A late no-backend coverage response does not override the user’s explicit layer choice"
+  ],
+  "sourcePointId": "osm-node-287523911",
+  "browserErrors": [],
+  "backendConfigured": false,
+  "actualOdsay": false,
+  "physicalPhone": false,
+  "fieldVerified": false,
+  "activeRoutingExpanded": false
+}

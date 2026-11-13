@@ -3,9 +3,11 @@ import {createExpansionProxy} from '../donghaeng-nav/services/expansion/proxy.mj
 import {expansionPaths} from '../donghaeng-nav/services/expansion/routes.mjs';
 import {createTransitEdgeHandler} from '../donghaeng-nav/services/transit/edge.mjs';
 import publicCoverage from '../donghaeng-nav/services/expansion/public-coverage.mjs';
+import {createReviewPointsHandler} from '../donghaeng-nav/services/expansion/review-points.mjs';
 
 const expansion=createExpansionProxy({getConfig:()=>({baseUrl:process.env.DONGHAENG_BACKEND_URL||'',token:process.env.DONGHAENG_BACKEND_TOKEN||''})});
 const transit=createTransitEdgeHandler({getConfig:()=>({apiKey:process.env.ODSAY_API_KEY||'',enabled:process.env.DONGHAENG_TRANSIT_ENABLED!=='false',dailyLimit:Number(process.env.ODSAY_DAILY_LIMIT||20)})});
+const review=createReviewPointsHandler();
 
 const handle = createConditionHandler({
   getConfig: () => ({
@@ -21,6 +23,7 @@ export default function handler(req, res) {
     ? url.pathname
     : url.pathname === '/api/index' ? `/api/${url.searchParams.get('route') || ''}` : '';
   if(['/api/routes/transit','/api/transit/status'].includes(route))return transit(req,res,route);
+  if(route==='/api/features'&&url.searchParams.get('layer')==='osm-review')return review(req,res);
   if(route==='/api/coverage'&&!process.env.DONGHAENG_BACKEND_URL){
     if(req.method!=='GET'){res.statusCode=405;res.end();return}
     res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('Cache-Control','no-store');

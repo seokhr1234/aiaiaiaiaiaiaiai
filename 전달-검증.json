@@ -33,7 +33,7 @@
     "vercel_api_deployed": false,
     "real_gemini_for_vercel_verified": false
   },
-  "updated": "2026-11-11",
+  "updated": "2026-11-13",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",
   "folder_bytes_at_update": 518293146,
   "user_reported_phone_observation": {
@@ -56,7 +56,7 @@
   "precision_runtime_included": true,
   "precision_runtime_loader_implemented": true,
   "main_promotion": {
-    "version": "2026-11-11-expansion-foundation",
+    "version": "2026-11-13-review-points",
     "review": "donghaeng-nav/docs/main-navigation-promotion.md",
     "original_gis_reprocessed": false,
     "field_verified": false

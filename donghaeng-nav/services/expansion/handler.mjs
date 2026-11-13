@@ -4,6 +4,7 @@ import {queryFeatures,queryPlaces} from './features.mjs';
 import {createRoutingService} from '../routing/pool.mjs';
 import {validateJourney} from '../transit/journey.mjs';
 import {createPostgisRepository} from './postgis.mjs';
+import {reviewPoints} from './review-points.mjs';
 import {expansionPaths} from './routes.mjs';
 export {expansionPaths} from './routes.mjs';
 export function createExpansionHandler({routing=createRoutingService(),transit=null,databaseUrl='',featureRepository}={}){
@@ -16,7 +17,7 @@ export function createExpansionHandler({routing=createRoutingService(),transit=n
    const post=['/api/routes/walk','/api/routes/transit','/api/journeys'].includes(url.pathname);
    if(req.method!==(post?'POST':'GET'))throw new ServiceError(405,'method_not_allowed',post?'POST 요청을 사용해 주세요.':'GET 요청을 사용해 주세요.');
    let result;
-   if(url.pathname==='/api/coverage'){result=coverage(await loadSnapshot());result.featureStorage=repository?'postgis_configured':'memory';if(transit)result.transit=transit.status()}
+   if(url.pathname==='/api/coverage'){result=coverage(await loadSnapshot());result.reviewPoints=await reviewPoints.coverage().catch(()=>({state:'unavailable',records:null,fieldVerified:false,routingEligible:false}));result.featureStorage=repository?'postgis_configured':'memory';if(transit)result.transit=transit.status()}
    else if(url.pathname==='/api/features')result=await queryFeatures(url.searchParams,{repository});
    else if(url.pathname==='/api/places')result=await queryPlaces(url.searchParams);
    else if(url.pathname==='/api/transit/status')result=transit?.status()||{state:'not_configured',reason:'대중교통 제공업체 설정이 필요해요.',fieldVerified:false};

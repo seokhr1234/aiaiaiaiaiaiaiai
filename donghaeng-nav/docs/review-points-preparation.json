@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "prepared_date_kst": "2026-11-13",
+  "records": 31934,
+  "contexts": {
+    "crossing": 26579,
+    "barrier": 3000,
+    "entrance": 2109,
+    "kerb": 1130,
+    "elevator": 278
+  },
+  "dataset_version": "osm-review-aa159e2d36095a57e699310164d85cff8e89cbb10a2264f2434d024b011faf59",
+  "asset": {
+    "path": "data/review/connection-points.geojson.gz",
+    "sha256": "4b9ecf3614973d80003666bde264933c91dc146ea4142540735b08e8148f64e6",
+    "uncompressed_sha256": "aa159e2d36095a57e699310164d85cff8e89cbb10a2264f2434d024b011faf59",
+    "bytes": 927161,
+    "uncompressed_bytes": 16678402
+  },
+  "metadata": {
+    "schema": "donghaeng-review-points-v1",
+    "provider": "OpenStreetMap contributors / Geofabrik",
+    "source_url": "https://download.geofabrik.de/asia/south-korea.html",
+    "as_of": "2026-11-09T21:22:17Z",
+    "collected_date": "2026-11-11",
+    "reviewed_date": "2026-11-13",
+    "source_crs": "EPSG:4326",
+    "vertical_datum": null,
+    "coordinate_accuracy_m": null,
+    "license": "ODbL-1.0",
+    "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+    "recovered_node_sha256": "55a3aa23719b749f9c8d7a18298bbc12ee6be079a434d1d51b3ff83f2eb6e1ad",
+    "audit_sha256": "b625f0990ac0a735389fd2287544398582f2d531d4d0bd9aa3f22017f1152ede",
+    "source_study_bbox": [
+      126.7,
+      37.38,
+      127.3,
+      37.78
+    ],
+    "data_bounds": [
+      126.6817017,
+      37.3705313,
+      127.3032815,
+      37.8153048
+    ],
+    "scope": "Registered barrier/crossing/elevator/entrance/kerb nodes referenced by study ways; not a complete Seoul facility survey",
+    "field_verified": false,
+    "routing_eligible": false,
+    "new_slope_values_promoted": 0
+  },
+  "all_reviewed_ids_covered_once": true,
+  "original_coordinates_preserved": true,
+  "original_research_modified": false,
+  "original_nine_runtime_datasets_modified": false,
+  "active_routing_changed": false,
+  "field_verified": false
+}

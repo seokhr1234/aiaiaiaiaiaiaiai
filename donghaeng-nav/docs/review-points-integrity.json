@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "verified_date_kst": "2026-11-13",
+  "baseline_commit": "88b78a22647b192d81418567a572f66c6faabdb7",
+  "original_nine_data_files_byte_identical": true,
+  "original_routing_integrity_record_byte_identical": true,
+  "protected_runtime_files": 19,
+  "service_code_files": 27,
+  "separately_verified_review_assets": 2,
+  "review_records": 31934,
+  "five_html_rebuilt_and_byte_identical_to_previous": true,
+  "package_hashes_match": true,
+  "prior_research_and_history_preserved": true,
+  "passing_reports": [
+    "review-points-preparation",
+    "review-points-source-results",
+    "review-points-api-results",
+    "review-points-ui-results",
+    "review-points-bundle-results",
+    "review-points-boot-results",
+    "expansion-core-results",
+    "expansion-ui-results",
+    "vercel-api-results",
+    "transit-vercel-results"
+  ],
+  "new_slope_values_promoted": 0,
+  "field_verified": false,
+  "active_graph_expanded": false,
+  "actual_odsay_called": false,
+  "physical_phone_verified": false
+}

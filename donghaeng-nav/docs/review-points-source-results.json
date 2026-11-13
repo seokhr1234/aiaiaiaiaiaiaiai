@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "verified_date_kst": "2026-11-13",
+  "records_checked": 31934,
+  "context_counts": {
+    "crossing": 26579,
+    "barrier": 3000,
+    "entrance": 2109,
+    "kerb": 1130,
+    "elevator": 278
+  },
+  "all_original_node_ids_coordinates_tags_and_edit_times_preserved": true,
+  "missing_tags_not_filled": true,
+  "source_date_and_collection_and_review_dates_separated": true,
+  "original_nine_datasets_byte_identical": true,
+  "prior_research_unchanged": true,
+  "display_only": true,
+  "field_verified": false,
+  "routing_eligible": false,
+  "new_slope_values_promoted": 0
+}

@@ -1,13 +1,24 @@
 {
-  "version": "2026-11-11-expansion-foundation",
+  "version": "2026-11-13-review-points",
   "main_source": "donghaeng-nav/dist/index.html",
   "expansion": {
     "online_page": "expansion.html",
-    "service_code_files": 25,
-    "service_integrity_sha256": "d06fbcda0b476f31cb50b446f0c8f927bede134908d3da89f94edf159dbd7c7f",
+    "service_code_files": 27,
+    "review_asset_files": 2,
+    "service_integrity_sha256": "7dda93de7eef056af1ec6f1d3ead33d8b6730d3c127f749d769b05e0c46dff8c",
     "citywide_routing": false,
     "authenticated_transit_verified": false,
-    "new_slope_values_promoted": 0
+    "new_slope_values_promoted": 0,
+    "review_points": {
+      "records": 31934,
+      "dataset_version": "osm-review-aa159e2d36095a57e699310164d85cff8e89cbb10a2264f2434d024b011faf59",
+      "source_as_of": "2026-11-09T21:22:17Z",
+      "collected_date": "2026-11-11",
+      "reviewed_date": "2026-11-13",
+      "display_only": true,
+      "field_verified": false,
+      "routing_eligible": false
+    }
   },
   "compressed_assets": [
     {

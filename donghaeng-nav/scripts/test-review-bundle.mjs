@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import {writeFile} from 'node:fs/promises';
+const require=createRequire(import.meta.url),{nodeFileTrace}=require('@vercel/nft'),version=require('@vercel/nft/package.json').version;
+const root=fileURLToPath(new URL('../../',import.meta.url)),trace=await nodeFileTrace(['api/index.mjs'],{base:root,processCwd:root});
+const required=['donghaeng-nav/services/expansion/review-points.mjs','donghaeng-nav/services/expansion/review-points-manifest.json','donghaeng-nav/services/service-integrity.json','donghaeng-nav/dist/data/review/connection-points.geojson.gz'];
+for(const name of required)assert(trace.fileList.has(name),'Missing Vercel trace asset: '+name);
+assert(![...trace.fileList].some(name=>/donghaeng-nav\/dist\/(?:map-data|terrain-data|map-context)\.json$/.test(name)),'Thin Vercel entry must not load old walking data');
+const report={pass:true,tracer:'@vercel/nft',version,requiredAssets:required,totalTracedFiles:trace.fileList.size,warningCount:trace.warnings.size,originalWalkingDatasetsBundled:false,actualVercelBuild:false};
+await writeFile(new URL('../docs/review-points-bundle-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

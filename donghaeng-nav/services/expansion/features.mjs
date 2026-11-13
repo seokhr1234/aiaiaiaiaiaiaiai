@@ -1,5 +1,6 @@
 import {loadSnapshot,Facilities} from './snapshot.mjs';
 import {fail,bbox,integer} from './contracts.mjs';
+import {reviewPoints} from './review-points.mjs';
 let pending;
 function geometryBounds(geometry) {
  const box={west:Infinity,south:Infinity,east:-Infinity,north:-Infinity};
@@ -24,6 +25,7 @@ async function store(){
  return pending;
 }
 export async function queryFeatures(params,{repository}={}){
+ if(params.get('layer')==='osm-review')return reviewPoints.query(params);
  const bounds=bbox(params.get('bbox')),layer=params.get('layer')||'facilities';
  if(!['facilities','precision','crossings'].includes(layer))fail(400,'invalid_layer','자료 종류를 확인해 주세요.');
  const limit=integer(params.get('limit'),300,1000),offset=integer(params.get('offset'),0,1000000);

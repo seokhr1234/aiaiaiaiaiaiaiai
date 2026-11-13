@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "checks": [
+    "Node and original/rewritten Vercel APIs preserve exact source points and metadata across Wolgok, Gangnam and Mapo pages without a backend/key",
+    "All five context filters, stable sorted pagination, exact-boundary point inclusion and honest empty areas verified",
+    "Invalid area/limits/kind, method and origin rejected; display-only points do not call PostGIS/backends or enlarge walking coverage",
+    "Corrupt/missing assets and source-promoted verification flags fail closed with sanitized errors; review assets are isolated from core graph integrity"
+  ],
+  "records": 31934,
+  "externalCalls": 0,
+  "liveOdsay": false,
+  "physicalGps": false,
+  "fieldVerified": false,
+  "activeRoutingExpanded": false,
+  "actualVercelRuntime": false
+}

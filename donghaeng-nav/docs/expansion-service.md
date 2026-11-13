@@ -1,6 +1,6 @@
 # 확장 서비스 실행과 Vercel ODsay 설정
 
-작성: 2026-11-11 KST. [현재 구현 범위](seoul-expansion-progress.md)를 먼저 확인한다. 네이버 서비스는 사용하지 않는다.
+작성: 2026-11-11, 갱신: 2026-11-13 KST. [현재 구현 범위](seoul-expansion-progress.md)를 먼저 확인한다. 네이버 서비스는 사용하지 않는다.
 
 ## 기본 실행
 
@@ -19,14 +19,14 @@ Vercel 프로젝트의 Settings → Environment Variables에서 필요한 Previe
 | `ODSAY_API_KEY` | 대중교통 참고 검색에 필요. **Vercel 서버 코드에서만 읽는다.** 값이 없으면 실제 업체 요청 없이 503을 반환 |
 | `ODSAY_DAILY_LIMIT` | 선택, 기본 20. 1~100000 정수. 서버 인스턴스별 KST 일일 시도 상한이며 업체 계정 전체 상한이 아님 |
 | `DONGHAENG_TRANSIT_ENABLED` | 선택, 키가 있으면 기본 활성. `false`로 두면 업체 요청을 중지 |
-| `DONGHAENG_BACKEND_URL` | 영역별 자료·서버 보행·전체 여정 검증을 Vercel에서 사용할 때 필요. 준비된 별도 Node 백엔드의 HTTP(S) 기본 주소. ODsay 후보만 조회할 때는 불필요 |
+| `DONGHAENG_BACKEND_URL` | 기존 시설/정밀/횡단 자료·서버 보행·전체 여정 검증에 필요. 준비된 별도 Node 백엔드의 HTTP(S) 주소. ODsay 후보와 `osm-review` 등록 접속점만 조회할 때는 불필요 |
 | `DONGHAENG_BACKEND_TOKEN` | 백엔드를 외부로 연결할 때 양쪽에 동일하게 설정. Vercel에서만 전달하며 화면/응답에 포함하지 않음 |
 
 키가 설정됐다는 것과 실제 API 연결 성공은 별개다. ODsay 키의 플랫폼이 이 서버 호출 방식에 맞는지, 서버/IP 또는 URI 제한이 실제 배포에 맞는지 확인해야 한다. 이번에는 실제 키가 실행 환경에 제공되지 않아 실제 인증 호출은 하지 않았다. 플랫폼 제한을 우회하기 위한 가짜 Referer를 만들지 않는다. [공식 플랫폼/키 안내](https://lab.odsay.com/guide/guide).
 
 새 배포에서 `GET /api/transit/status`는 키 값 없이 `not_configured`, `disabled`, `reference_candidates_only` 등 설정 상태를 보여 준다. `POST /api/routes/transit`의 실제 성공 응답을 받은 뒤에만 연결 성공으로 판단한다. 일반 버스·지하철 참고 후보는 역내 접근성·승강기·승차 시각이 확인된 여정과 다르다.
 
-Vercel은 무거운 도로망을 적재하지 않는다. 자료 서버가 없으면 `/api/coverage`는 기본 자료 범위와 `serviceAvailable:false`를 반환하며, 대중교통 후보 API는 독립적으로 동작한다. `/api/features`, `/api/places`, `/api/routes/walk`, `/api/journeys`는 자료 서버가 있어야 한다. `/expansion.html`에서 대중교통 참고 모드를 고르고 지도에 출발·도착을 지정할 수 있다.
+Vercel은 무거운 도로망을 적재하지 않는다. 자료 서버가 없으면 `/api/coverage`의 보행은 `serviceAvailable:false`이고 대중교통 후보와 등록 접속점 표시는 독립적으로 동작한다. `/api/features`의 기존 3개 레이어와 `/api/places`, `/api/routes/walk`, `/api/journeys`는 자료 서버가 필요하다. `layer=osm-review`는 별도 키/DB/자료 서버 없이 Vercel 함수에 포함한 표시 자료를 조회한다. `/expansion.html`에서 대중교통 참고 모드를 고르고 지도에 출발·도착을 지정할 수 있다.
 
 호출 횟수는 서버 인스턴스가 재시작되거나 여러 인스턴스로 분산되면 합쳐지지 않는다. 공개 운영 전에는 업체 계정 한도와 별도의 공유 예산/요청 제한 저장소가 필요하다. 실패도 한 번의 시도로 집계하고 자동 재시도·대량 분석은 하지 않는다. 요금·결과 저장/가공·지도 병용 조건은 실제 사용자 계약으로 확인한다. [ODsay 구매 안내](https://lab.odsay.com/contact/contact), [지도 선택 안내](https://lab.odsay.com/introduce/intro#intro_5).
 
@@ -35,7 +35,7 @@ Vercel은 무거운 도로망을 적재하지 않는다. 자료 서버가 없으
 | 주소 | 기능·한계 |
 | --- | --- |
 | `GET /api/coverage` | 데이터·그래프 버전, 월곡 보행 범위와 정밀·시설·현장 확인 수준 |
-| `GET /api/features?bbox=west,south,east,north&layer=facilities` | 표시용 영역 자료. `precision`, `crossings`도 지원. 범위 한 변 0.3도 이하, `limit` 최대 1000, `offset`과 `nextOffset`으로 페이지 처리 |
+| `GET /api/features?bbox=west,south,east,north&layer=facilities` | 표시 자료. `precision`, `crossings`, `osm-review`도 지원. 한 변 0.3도 이하, `limit` 최대 1000, `offset`/`nextOffset` 페이지 처리. 등록 접속점은 별도 표시 데이터 버전을 사용 |
 | `GET /api/places?q=도서관` | 보유 서울 등록 시설의 이름·주소 검색, 일반 주소 전체 검색은 미구현 |
 | `POST /api/routes/walk` | 버전 고정 기존 도로망에서 조건·건물 검사를 통과한 기술 시연 후보. 지원 범위 밖은 422 |
 | `POST /api/routes/transit` | ODsay 후보 정규화. 모든 결과는 참고용이며 시간표/접근성 검증 완료로 표시하지 않음 |
@@ -46,9 +46,23 @@ Vercel은 무거운 도로망을 적재하지 않는다. 자료 서버가 없으
 
 Node 보행 계산은 단일 작업 스레드와 제한 큐를 사용한다. 기본 동시 적재 상한 4, 요청/대기 시간 제한 12초다. 초과 요청은 429, 취소는 계산 종료, 시간 초과는 504이며 기존 조건을 완화하지 않는다. 아직 전역 동시 10개 요청의 운영 SLO가 아니다.
 
+## OSM 등록 접속점 검토 레이어
+
+`/expansion.html`에서 **OSM 등록 접속점 · 현장 미확인**을 선택한다. Vercel에 보행 자료 서버가 연결되지 않으면 이 레이어로 시작하며, 사용자가 이미 다른 레이어를 고른 경우 늦게 도착한 지원 범위 응답이 선택을 덮어쓰지 않는다. 지점 클릭은 출발·도착을 자동 지정하지 않는다. 키보드로 지점에 초점을 두고 Enter/Space로 원문을 열며 닫으면 지점으로 초점을 돌려준다. 팝업 자동 이동은 자료 재조회를 일으키지 않는다.
+
+round7에서 원본 태그를 복구한 도로 참조 노드 중 **31,934개**다. 유형은 중복될 수 있으며 차단물 3,000·출입구 2,109·턱 1,130·횡단부 26,579·승강기 278개다. 서울 주변 사각 조사 범위의 도로 지점이며 전역 시설 전수나 정밀 보도 중심선이 아니다. 수집 **2026-11-11**, PBF 자료 기준 **2026-11-09T21:22:17Z**, 연결 검토 **2026-11-13**, 개별 OSM 수정 시각을 구분한다. 원본 경위도 EPSG:4326이며 수직 기준/위치 정확도는 미확인이다. 폭/턱/경사 결측은 채우지 않고 등록값도 현장 실측으로 표시하지 않는다.
+
+`GET /api/features?layer=osm-review&bbox=127.035,37.595,127.046,37.607&kind=barrier`처럼 조회한다. `kind`는 `barrier`, `crossing`, `entrance`, `kerb`, `elevator`이며 복수 유형 지점은 해당 유형 각각의 필터에 포함된다. `storage:bundled_review`, 별도 `datasetVersion`, `fieldVerified:false`, `routingEligible:false`를 반환한다. 이 레이어는 PostGIS 조회가 설정돼도 자체 표시 자료를 사용한다. 기존 3개 DB 레이어의 실패를 이 자료로 대체하지 않는다. `/api/coverage.reviewPoints`의 `registered_display_data`는 등록 묶음이 있다는 뜻이며 현장/실제 외부 연결 성공은 아니다.
+
+자료는 압축 **927,161 bytes**이며 함수가 요청 때 읽고 해시·스키마·미검증 상태를 확인한다. 브라우저에는 영역별 페이지만 보내고 최대 3,000개 표시 뒤 확대를 안내한다. 자료가 손상/누락되면 503이며 빈 시설 목록으로 위장하지 않는다. `service-integrity.json`의 `review_assets`로 별도 해시를 고정해, 선택적 표시 자료 오류가 기존 보행 자료를 바꾸지 않게 구분했다. 빌더는 배포 전에 코드와 표시 자료 모두를 검사한다.
+
+[원본 대조](review-points-source-results.json), [Node/Vercel 진입점](review-points-api-results.json), [화면/320px/키보드](review-points-ui-results.json), [함수 묶음 추적](review-points-bundle-results.json)을 확인한다. `@vercel/nft@1.11.1` 추적에서 필요한 자료 4개가 포함되고 기존 보행 원본은 포함되지 않았으며 경고 0건이었다. 실제 Vercel 런타임 검사와는 구분한다. [20회 느린 연결 측정](review-points-boot-results.json)은 393×852·4Mbps/80ms·CPU4배·외부 타일 차단·새 브라우저 컨텍스트이며 p95 1,083ms, 첫 표시 자료 적재 1,633ms, 초기 하위 리소스 102,361 bytes, 긴 작업 최대 125ms, 전체 원본 요청 0건이다. HTML 본문·차단한 타일은 하위 리소스 집계에서 제외한다. 실제 휴대폰/생산/보행 계산 성능으로 일반화하지 않는다.
+
+원본 변환은 `scripts/prepare-review-points.py`, 원문과 좌표 보존 검사는 `scripts/verify-review-points.py`다. 이전 출력은 덮어쓰지 않으므로 새 버전 경로/사본에서 재현한다. 지역별 화면과 같은 별도 API가 필요한 기능이며 오프라인 HTML에 이 레이어를 내장하지 않았다. 활성 보행망·경사·기존 시설은 그대로다.
+
 ## 선택적 PostGIS 조회와 재현
 
-`DONGHAENG_DATABASE_URL`을 **별도 Node 자료 서버**에 설정하면 `/api/features`가 실제 PostGIS를 조회한다. 미설정이면 기존 메모리 인덱스를 사용한다. DB 설정 상태는 `/api/coverage`의 `featureStorage:postgis_configured`, 실제 성공은 `/api/features`의 `storage:postgis`로 구분한다. DB 오류 때 메모리로 몰래 전환하지 않는다. 이 변수나 DB 비밀번호를 Vercel 클라이언트 설정에 넣지 않는다.
+`DONGHAENG_DATABASE_URL`을 **별도 Node 자료 서버**에 설정하면 `/api/features`의 기존 시설/정밀/횡단 레이어가 실제 PostGIS를 조회한다. 미설정이면 기존 메모리 인덱스를 사용한다. DB 설정 상태는 `/api/coverage`의 `featureStorage:postgis_configured`, 실제 성공은 `/api/features`의 `storage:postgis`로 구분한다. DB 오류 때 메모리로 몰래 전환하지 않는다. 등록 접속점은 `bundled_review`로 구분한다. 이 변수나 DB 비밀번호를 Vercel 클라이언트 설정에 넣지 않는다.
 
 선택적 `pg` 의존성은 자료 서버에서 설치한다. Vercel 참고 후보 API와 기본 로컬 메모리 모드에는 설치가 필요하지 않다.
 
@@ -88,7 +102,19 @@ node donghaeng-nav/scripts/test-expansion-ui.mjs
 node donghaeng-nav/scripts/test-transit-edge.mjs
 node donghaeng-nav/scripts/test-transit-vercel.mjs
 node donghaeng-nav/scripts/test-expansion-boot.mjs
+python3 donghaeng-nav/scripts/verify-review-points.py
+node donghaeng-nav/scripts/test-review-points.mjs
+node donghaeng-nav/scripts/test-review-points-ui.mjs
+node donghaeng-nav/scripts/test-expansion-boot.mjs --review
 python3 donghaeng-nav/scripts/build-html.py
+python3 donghaeng-nav/scripts/verify-review-build.py
+```
+
+함수 파일 추적 검사에는 개발 도구만 임시 설치한다. 운영 의존성은 추가하지 않는다.
+
+```sh
+npm install --prefix /tmp/donghaeng-nft --ignore-scripts --no-fund --no-audit @vercel/nft@1.11.1
+NODE_PATH=/tmp/donghaeng-nft/node_modules node donghaeng-nav/scripts/test-review-bundle.mjs
 ```
 
 브라우저 검사에는 Playwright·Chromium이 필요하다. 외부 호출은 모의하며 실제 키를 테스트 코드에 넣지 않는다. 원본 자료와 보호 코드 해시 외에 `services/service-integrity.json`으로 확장 서비스 입력도 확인한다. 코드가 바뀌면 관련 검증 근거를 갱신하고 명시적으로 해시를 갱신한 뒤 빌드한다.

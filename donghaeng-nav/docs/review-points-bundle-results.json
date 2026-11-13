@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "tracer": "@vercel/nft",
+  "version": "1.11.1",
+  "requiredAssets": [
+    "donghaeng-nav/services/expansion/review-points.mjs",
+    "donghaeng-nav/services/expansion/review-points-manifest.json",
+    "donghaeng-nav/services/service-integrity.json",
+    "donghaeng-nav/dist/data/review/connection-points.geojson.gz"
+  ],
+  "totalTracedFiles": 14,
+  "warningCount": 0,
+  "originalWalkingDatasetsBundled": false,
+  "actualVercelBuild": false
+}

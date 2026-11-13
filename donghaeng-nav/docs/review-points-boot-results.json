@@ -1,0 +1,176 @@
+{
+  "pass": true,
+  "scope": "Local Vercel-style entry without a backend; OSM registered review layer; 20 cold browser contexts, first review-data load then cache; 393x852, 4Mbps/80ms/4x CPU; external tiles aborted; not physical phone/Vercel",
+  "samples": [
+    {
+      "clientCold": true,
+      "reviewDataCold": true,
+      "bootMs": 1633,
+      "bytes": 102361,
+      "maxLongTask": 79,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1083,
+      "bytes": 102361,
+      "maxLongTask": 85,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1064,
+      "bytes": 102361,
+      "maxLongTask": 90,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1068,
+      "bytes": 102361,
+      "maxLongTask": 96,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1008,
+      "bytes": 102361,
+      "maxLongTask": 108,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 970,
+      "bytes": 102361,
+      "maxLongTask": 76,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1006,
+      "bytes": 102361,
+      "maxLongTask": 125,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 899,
+      "bytes": 102361,
+      "maxLongTask": 75,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 990,
+      "bytes": 102361,
+      "maxLongTask": 73,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 925,
+      "bytes": 102361,
+      "maxLongTask": 63,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 973,
+      "bytes": 102361,
+      "maxLongTask": 78,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 963,
+      "bytes": 102361,
+      "maxLongTask": 63,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 947,
+      "bytes": 102361,
+      "maxLongTask": 69,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1015,
+      "bytes": 102361,
+      "maxLongTask": 93,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 985,
+      "bytes": 102361,
+      "maxLongTask": 104,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 956,
+      "bytes": 102361,
+      "maxLongTask": 76,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 997,
+      "bytes": 102361,
+      "maxLongTask": 78,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 919,
+      "bytes": 102361,
+      "maxLongTask": 71,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 1001,
+      "bytes": 102361,
+      "maxLongTask": 68,
+      "wholeDatasetRequests": 0
+    },
+    {
+      "clientCold": true,
+      "reviewDataCold": false,
+      "bootMs": 974,
+      "bytes": 102361,
+      "maxLongTask": 77,
+      "wholeDatasetRequests": 0
+    }
+  ],
+  "p95BootMs": 1083,
+  "maxInitialResourceBytes": 102361,
+  "maxLongTaskMs": 125,
+  "targets": {
+    "bootUnder10s": true,
+    "resourcesUnder2MB": true,
+    "mainThreadUnder500ms": true
+  },
+  "physicalPhone": false,
+  "citywideRouting": false
+}

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "review_date_kst": "2026-11-11",
-  "scope": "Server walking snapshot, bounded worker and area display with optional verified-source PostGIS reads; transit reference candidates only",
+  "review_date_kst": "2026-11-13",
+  "scope": "Original walking snapshot/optional PostGIS reads and region display; independent OSM registered review points and transit reference candidates",
   "validation": [
     "docs/expansion-core-results.json",
     "docs/expansion-ui-results.json",
@@ -10,23 +10,29 @@
     "docs/transit-vercel-results.json",
     "docs/postgis-api-results.json",
     "docs/postgis-ui-results.json",
-    "docs/candidate-cache-results.json"
+    "docs/candidate-cache-results.json",
+    "docs/review-points-preparation.json",
+    "docs/review-points-source-results.json",
+    "docs/review-points-api-results.json",
+    "docs/review-points-ui-results.json",
+    "docs/review-points-boot-results.json",
+    "docs/review-points-bundle-results.json"
   ],
   "files": {
-    "api/index.mjs": "2fc8a77d4866ff6c9c91539b45245dad0e309614ff305779221e7aa72f6198fc",
-    "donghaeng-nav/dist/expansion.css": "9ee57d4d9d70268ca0b357125031a39ea1618f736b25cfa1b0335a0ed7359bc1",
-    "donghaeng-nav/dist/expansion.html": "64bae3970c553a9bf358f642f9aedb49597926c0ffc439a43331fd6b8d4c879d",
-    "donghaeng-nav/dist/expansion.js": "53fad50efd2085d372bab5efdcadc27685047a179a0a7a606a8479bb8e5ad702",
+    "api/index.mjs": "230e5780b93e3fa34d09184565fc63f76c7c601096ef2a3c151a407759046f22",
+    "donghaeng-nav/dist/expansion.css": "efb954689f01636662f38d0958c8bc14d6ccc04b875271da5b36a38fc8579462",
+    "donghaeng-nav/dist/expansion.html": "de3c5ceaf16cac49b944888c8c8caa598e1dfcb6ecb307cebd11a996173499bf",
+    "donghaeng-nav/dist/expansion.js": "9f36b8a8bcd9d0b6183db571293e24aa08ea2f0087fe66f7f956aa7fdb13f37c",
     "donghaeng-nav/dist/region-client.js": "ed0b5c4c72d14ccec8bd07545d35d8f6b51cbdbf7df5297dac17cb7474966d77",
     "donghaeng-nav/scripts/export-expansion-postgis.py": "f0c114c9a65408853d909fe69c27d4774b670835ae592dcd52d890f330db1ec2",
     "donghaeng-nav/scripts/prepare-expansion-catalog.py": "94b6c00e0de32d5e54d2dab89d01c2d2669e644f57b6a15c6a24d7723a40e0ee",
     "donghaeng-nav/server.mjs": "5bfc28dba3e870ec684ff43ad60bfca106ea529e15cd71088965af877e5c770b",
     "donghaeng-nav/services/expansion/contracts.mjs": "a4b71e32c449b8a1bca322aba7227e01eaa46be8ad46731023bb9e2d54acfb8c",
-    "donghaeng-nav/services/expansion/features.mjs": "f88f771ea41ca3d808cb834687cdfab09c110a0f298a5b766578375cb2026231",
-    "donghaeng-nav/services/expansion/handler.mjs": "50c705e377a21d666529e9bb606ff370df0f19afff13eda333281d9e2979b60b",
+    "donghaeng-nav/services/expansion/features.mjs": "5e607223b4b54f3a962418421d3f9690e3f2ffa12ca20b08e747fb671194e18d",
+    "donghaeng-nav/services/expansion/handler.mjs": "20889106d153b3ed64d454111897c1ba6b1d6e1f0893ed973e3bf77164b28057",
     "donghaeng-nav/services/expansion/postgis.mjs": "bcf9ba5b28d9157f7846d901416500f00e38049eb773d55e158d3923a19b968f",
     "donghaeng-nav/services/expansion/proxy.mjs": "893e1f0ffe7df900417964998bcb1cb9f7540c36e905fd5bf3d9a58f6a454713",
-    "donghaeng-nav/services/expansion/public-coverage.mjs": "17807323000a2cf915b09b13d80fb1abc37a13c3c577eac5e35074970aec2281",
+    "donghaeng-nav/services/expansion/public-coverage.mjs": "68d2929df666c3fdd2c7164cf26c564dc1e69f9ec7996aa07a46a665bd998f47",
     "donghaeng-nav/services/expansion/routes.mjs": "7a9e75a05d0975cb95f6de9ea2b026c4faa280a0681faeb4eb7ff0101d939a94",
     "donghaeng-nav/services/expansion/schema.sql": "896ef617827a90135016721f3a1ab4332e43d62bbd9d5a0d916d0065523eba79",
     "donghaeng-nav/services/expansion/snapshot.mjs": "4a20471b41fd9008332db43d926abf8be66ee81eaaf799ec8ecd7c0b5b50a608",
@@ -37,9 +43,15 @@
     "donghaeng-nav/services/transit/edge.mjs": "cd0cd844e8e40dfa1566990ae277a18627e89a573c202f0be54634cb483f4b2d",
     "donghaeng-nav/services/transit/journey.mjs": "13b149c68a1a4a4380147ecd72ce16f4dda940c1c10893884251866d23e5a138",
     "donghaeng-nav/services/transit/odsay.mjs": "72f8bfa1b537ca8b890d0882cbf704074bdbfcd8cb4b7dc95bd40ccd9670cbce",
-    "vercel.json": "f70aaa083efe8d6e04d79eb5adb8b160eb34629435480deca0fb37987c8deb27"
+    "vercel.json": "f70aaa083efe8d6e04d79eb5adb8b160eb34629435480deca0fb37987c8deb27",
+    "donghaeng-nav/scripts/prepare-review-points.py": "7a59891e2fc75d6d60a7492b559f2d442929ea96008c7b962981e9ba03926abc",
+    "donghaeng-nav/services/expansion/review-points.mjs": "789f87e5b612f856005eedff171dc3057081a16444305180f27521b4bf0396a9"
   },
   "field_verified": false,
   "citywide_routing": false,
-  "new_slope_values_promoted": 0
+  "new_slope_values_promoted": 0,
+  "review_assets": {
+    "donghaeng-nav/services/expansion/review-points-manifest.json": "3ebe25afeebf81b5d59f0dade076d3ba835f6a373676ac666c620ee62b4954c1",
+    "donghaeng-nav/dist/data/review/connection-points.geojson.gz": "4b9ecf3614973d80003666bde264933c91dc146ea4142540735b08e8148f64e6"
+  }
 }
