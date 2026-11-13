@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "status": "provisional_superseded_by_v2",
+  "source_script_sha256": "0ba204c46da1238c2548731d82408e10216e7116ab2f324fa68f8140ba7052c1",
+  "source_script_local_archive": "derived/build_study_graph_v1.py",
+  "findings": [
+    "cycleway requires explicit foot tag; generic access=yes must not count as explicit foot permission",
+    "node-only layer/bridge/tunnel/indoor/location/conveying claims also need the surface policy",
+    "preserve endpoint wheelchair tags on each candidate segment for later profile-specific review"
+  ],
+  "active_runtime_replaced": false,
+  "routing_eligible": false,
+  "field_verified": false
+}

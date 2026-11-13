@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "baseline_commit": "22cd46c8506bf31979bb998d40f5c3357e89b076",
+  "reviewed_date_kst": "2026-11-11",
+  "all_prior_tracked_research_preserved": true,
+  "product_sources_and_runtime_data_and_five_html_unchanged": true,
+  "prior_history_bytes_preserved": true,
+  "v1_draft_artifacts_and_source_archive_preserved": true,
+  "v2_candidate_segments_validated": 1305938,
+  "independent_component_count": 4374,
+  "both_generation_artifact_hashes_verified": true,
+  "active_runtime_replaced": false,
+  "field_verified": false,
+  "new_slope_values_promoted": 0,
+  "citywide_routing": false
+}

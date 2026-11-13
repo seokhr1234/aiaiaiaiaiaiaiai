@@ -1,0 +1,88 @@
+{
+  "reviewed_date_kst": "2026-11-11",
+  "original_collected_date_kst": "2026-11-11",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "source_url": "https://download.geofabrik.de/asia/south-korea.html",
+  "license": "ODbL-1.0",
+  "source_crs": "EPSG:4326",
+  "vertical_datum": null,
+  "study_bbox": [
+    126.7,
+    37.38,
+    127.3,
+    37.78
+  ],
+  "source_pbf_sha256": "4e44c2315ea171b0c9041e9ea625865163fddaf9325d146884dd00ba9a17484d",
+  "input_study_sha256": "3a28510cd7e31b99a590fe1e9f41b5f8d49b058ba6750222377bd58d65083de9",
+  "input_recovered_nodes_sha256": "55a3aa23719b749f9c8d7a18298bbc12ee6be079a434d1d51b3ff83f2eb6e1ad",
+  "source_road_nodes": 1330229,
+  "counts": {
+    "source_ways": 260828,
+    "candidate_segments": 1307587,
+    "ways_with_candidate_segments": 225435,
+    "excluded_ways": 34200,
+    "excluded_node_incident_segments": 5383,
+    "ways_without_remaining_segments": 1193,
+    "degenerate_same_coordinate_segments": 3
+  },
+  "exclusion_reasons": {
+    "foot_rule_requires_resolution": 3384,
+    "structure_level_or_mechanism_requires_resolution": 17645,
+    "unsupported_road_type": 15143,
+    "cycleway_without_explicit_foot_tag": 2128,
+    "barrier_passage_unverified": 5034,
+    "node_foot_rule_requires_resolution": 279,
+    "vertical_connection_unverified": 263,
+    "area_not_linear": 1218,
+    "conditional_or_direction_requires_resolution": 4
+  },
+  "excluded_nodes": 3456,
+  "used_nodes": 1180881,
+  "components": 4375,
+  "largest_components_nodes": [
+    462088,
+    152642,
+    140404,
+    136135,
+    72500,
+    58007,
+    10804,
+    9317,
+    5053,
+    4946,
+    4636,
+    4333,
+    3520,
+    3305,
+    3266,
+    2754,
+    2583,
+    1812,
+    1704,
+    1493
+  ],
+  "outputs": {
+    "candidate-segments.ndjson.gz": {
+      "sha256": "1b71a72bf500a2b3b131ad7034ca6e059fe853183a8cd5b5c4740ac8242abb73",
+      "uncompressed_sha256": "a7078ecc6e4a34f5aecf375efc62a4d8169ca165916de3cc9108bd7c7a0af07f",
+      "bytes": 28874931
+    },
+    "exclusions.ndjson.gz": {
+      "sha256": "3999af54f4c0e8315132a903eb47391a912b2c412edd9f6ad2bc54bee04efaad",
+      "uncompressed_sha256": "fb9f76c35f0557fdbaaaa3c585b8fe9c514d6fe7bb407c88b939bf947c388ce6",
+      "bytes": 693798
+    }
+  },
+  "elapsed_seconds": 22.82,
+  "scope": "Weight-free surface topology candidates from original way node IDs only; ground-truth and legal/default access unresolved",
+  "weights_added": 0,
+  "coordinate_snaps_added": 0,
+  "inferred_crossings_added": 0,
+  "new_slope_values_promoted": 0,
+  "generic_vehicle_turn_restrictions_applied_to_foot": false,
+  "structurally_flagged_restrictions_resolved": false,
+  "active_runtime_replaced": false,
+  "field_verified": false,
+  "routing_eligible": false,
+  "citywide_routing": false
+}

@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "verified_date_kst": "2026-11-13",
+  "baseline_commit": "22cd46c8506bf31979bb998d40f5c3357e89b076",
+  "original_data_files": 9,
+  "protected_runtime_files": 19,
+  "service_files": 25,
+  "identical_html_files": 5,
+  "prior_research_unchanged": true,
+  "round8_artifact_hashes": {
+    "derived/candidate-segments.ndjson.gz": "1b71a72bf500a2b3b131ad7034ca6e059fe853183a8cd5b5c4740ac8242abb73",
+    "derived/exclusions.ndjson.gz": "3999af54f4c0e8315132a903eb47391a912b2c412edd9f6ad2bc54bee04efaad",
+    "derived-v2/candidate-segments.ndjson.gz": "17f5154c228af5657ac49db273f9f242d43d6bcb57b78a49b8711ccbc1a3292e",
+    "derived-v2/exclusions.ndjson.gz": "12403de2624d232c95c14605115d324c72b1c8216ba268eb335e0ca4d1657a12"
+  },
+  "previous_independent_graph_validation_preserved": true,
+  "graph_policy_fixture_pass": true,
+  "source_collected_date_kst": "2026-11-11",
+  "source_as_of": "2026-11-09T21:22:17Z",
+  "field_verified": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0,
+  "actual_odsay_called": false
+}

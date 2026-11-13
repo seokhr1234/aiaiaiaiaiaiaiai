@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "policy_version": 2,
+  "source_ways": 260828,
+  "source_nodes": 1330229,
+  "candidate_segments_checked": 1305938,
+  "excluded_ways_checked": 34200,
+  "excluded_node_segments_checked": 7032,
+  "used_nodes": 1179238,
+  "independently_counted_components": 4374,
+  "original_coordinates_and_node_order_preserved": true,
+  "no_invented_joins_or_weights": true,
+  "all_non_degenerate_source_segments_accounted_for": true,
+  "prior_research_unchanged": true,
+  "field_verified": false,
+  "routing_eligible": false,
+  "active_runtime_replaced": false,
+  "new_slope_values_promoted": 0
+}
