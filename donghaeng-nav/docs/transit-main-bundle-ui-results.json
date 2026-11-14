@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "entry": "standalone-over-localhost",
+  "checks": [
+    "Main mode switch discloses coordinate transfer and unknown conditions, reads free status only, and does not spend a provider search",
+    "Bus/subway route cards display real normalized stop/line/time/fare/transfer data and reference markers; wheelchair condition is preserved but never presented as verified, AI-selected or GPS-ready",
+    "Candidate selection needs no new provider request, retains keyboard focus, keeps missing fare unknown and opens reference-position details without guessed route lines",
+    "320px/393px/landscape, result-mode resize and saved/route tab return preserve the transit candidate state without horizontal overflow",
+    "Changing input clears prior route/markers; provider failure is distinct from no candidate and never exposes raw provider errors/keys",
+    "Cancel ignores a late provider response without retrying or restoring stale candidates",
+    "Untrusted provider names are rendered as plain text in cards and map details",
+    "Switching back to walking or an explicit local demo clears transit state and preserves original route/building protections"
+  ],
+  "browserErrors": [],
+  "actualOdsayCalls": 0,
+  "providerCallsMocked": 5,
+  "fullUiOptimizationDeferred": true,
+  "fieldVerified": false
+}

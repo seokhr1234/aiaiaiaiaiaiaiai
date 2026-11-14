@@ -45,7 +45,7 @@ try{
  const fixture={result:{path:[{info:{totalTime:20},subPath:[{trafficType:3,sectionTime:2,distance:100},{trafficType:2,sectionTime:10,startX:127.04,startY:37.6,endX:127.05,endY:37.61,startID:1,endID:2,lane:[{busNo:'테스트'}]},{trafficType:3,sectionTime:3,distance:150}]}]}};
  let calls=0,now=Date.parse(input.atTime);const provider=createOdsayProvider({apiKey:'test-only-secret',enabled:true,dailyLimit:1,now:()=>now,fetchImpl:async(req)=>{calls++;const u=new URL(req);assert.equal(u.hostname,'api.odsay.com');assert(!u.searchParams.has('atTime'));return new Response(JSON.stringify(fixture))}});
  const data=await provider.search(input);assert.equal(data.state,'review_only');assert(!JSON.stringify(data).includes('test-only-secret'));assert.equal(data.candidates[0].timeFeasibility,'unknown');await assert.rejects(provider.search(input),e=>e.status===429);assert.equal(calls,1);now+=86400000;assert.equal(provider.status().used,0);
- assert.equal(normalizeOdsay({result:{path:[{subPath:[{trafficType:2,sectionTime:'garbage'}]}]}},input).candidates.length,0);
+ assert.throws(()=>normalizeOdsay({result:{path:[{subPath:[{trafficType:2,sectionTime:'garbage'}]}]}},input),e=>e.code==='transit_unusable_response');
  checks.push('ODsay fixture normalization retains reference/unknown status, hides key, enforces budget and resets on KST day; no live paid calls');
  const candidate=data.candidates[0],departures=[];
  await assert.rejects(validateJourney({...candidate,legs:[]},input),e=>e.code==='invalid_journey');

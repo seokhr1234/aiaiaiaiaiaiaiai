@@ -1,0 +1,33 @@
+{
+  "checkedDateKst": "2026-11-14",
+  "attempts": [
+    {
+      "checkedDateKst": "2026-11-14",
+      "origin": "https://donghaeng-gill.vercel.app",
+      "phase": "T1",
+      "statusBefore": {
+        "state": "reference_candidates_only",
+        "used": 0,
+        "dailyLimit": 20,
+        "budgetScope": "server_instance"
+      },
+      "actualSearchRequests": 1,
+      "providerResponseStored": false,
+      "keyValuesRead": false,
+      "fieldVerified": false,
+      "httpStatus": 502,
+      "elapsedMs": 931,
+      "state": null,
+      "errorCode": "transit_provider_error",
+      "error": "대중교통 제공업체가 경로를 반환하지 못했어요.",
+      "candidateCount": 0,
+      "rejected": null,
+      "candidateSchemas": [],
+      "result": "not_verified"
+    }
+  ],
+  "actualSearchRequests": 1,
+  "authenticatedSearchVerified": false,
+  "providerRawResponsesStored": false,
+  "note": "First real request returned generic provider error; numeric-code and safe categorical diagnostics are implemented for the next bounded verification."
+}

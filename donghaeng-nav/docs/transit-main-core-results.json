@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "checks": [
+    "Mixed bus/subway normalization preserves line/stop IDs/names, provider time/fare/station count, walking legs, input constraints and reference-only state",
+    "Missing or invalid time/fare stays unknown, explicit free fare is preserved, boolean false is never interpreted as zero",
+    "Empty provider result is distinguished from all-unusable responses; partial bad candidates are counted without inventing endpoints",
+    "Only bounded numeric provider codes leave the server; raw provider messages, URLs or echoed keys never do",
+    "Frontend rejects changed constraints, promoted validation claims and missing reference coordinates",
+    "Server trims key whitespace without exposing it; one search makes one provider request; displayed query time uses Asia/Seoul"
+  ],
+  "providerCallsMocked": 1,
+  "actualProviderCalls": 0,
+  "fieldVerified": false
+}

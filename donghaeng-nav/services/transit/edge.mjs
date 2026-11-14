@@ -14,6 +14,6 @@ export function createTransitEdgeHandler({getConfig=()=>({}),fetchImpl=globalThi
    const input=walkingInput(await jsonBody(req)),controller=new AbortController(),abort=()=>controller.abort();
    req.once('aborted',abort);res.once('close',()=>{if(!res.writableEnded)abort()});
    try{send(200,await cached.search(input,{signal:controller.signal}))}finally{req.removeListener('aborted',abort)}
-  }catch(e){send(e.status||503,{code:e.code||'transit_unavailable',error:e.status?e.message:'대중교통 연결을 완료하지 못했어요.'})}
+  }catch(e){send(e.status||503,{code:e.code||'transit_unavailable',error:e.status?e.message:'대중교통 연결을 완료하지 못했어요.',...(e.providerCode?{providerCode:e.providerCode}:{}),...(e.providerReason?{providerReason:e.providerReason}:{})})}
  };
 }

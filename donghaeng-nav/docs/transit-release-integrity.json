@@ -1,0 +1,34 @@
+{
+  "pass": true,
+  "checkedDateKst": "2026-11-14",
+  "baseline": "d0f5fadd761c361301c50dad138d88425c8197c3",
+  "originalDataFilesByteIdentical": 9,
+  "changedProtectedOrNewFiles": [
+    "app.js",
+    "transit-ui.js"
+  ],
+  "protectedFiles": 22,
+  "serviceFiles": 34,
+  "reviewAndCityAssetsByteIdentical": true,
+  "researchAndPriorHistoryPreserved": true,
+  "fiveHtmlSameBuild": true,
+  "htmlSha256": "192363409bd62d368dc285c873ef260312b5fdd0f35f23a55024ff615d9e5b70",
+  "reports": [
+    "transit-main-core-results",
+    "transit-main-ui-results",
+    "transit-main-bundle-ui-results",
+    "transit-edge-results",
+    "transit-vercel-results",
+    "main-navigation-results",
+    "expansion-core-results",
+    "expansion-ui-results",
+    "city-map-ui-results",
+    "vercel-api-results",
+    "city-walk-bundle-results"
+  ],
+  "fullUiOptimizationDeferred": true,
+  "accessibleTransitVerified": false,
+  "timetableVerified": false,
+  "actualProviderTest": "docs/transit-live-2026-11-14.json",
+  "fieldVerified": false
+}

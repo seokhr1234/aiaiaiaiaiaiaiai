@@ -39,7 +39,7 @@ export function createExpansionHandler({routing=createRoutingService(),transit=n
     }
    }
    send(res,200,result);
-  }catch(error){send(res,error.status||503,{error:error.status?error.message:'자료 서비스를 준비하지 못했어요.',code:error.code||'service_unavailable'})}
+  }catch(error){send(res,error.status||503,{error:error.status?error.message:'자료 서비스를 준비하지 못했어요.',code:error.code||'service_unavailable',...(error.providerCode?{providerCode:error.providerCode}:{}),...(error.providerReason?{providerReason:error.providerReason}:{})})}
   finally{req.removeListener('aborted',aborted)}
   return true;
  };

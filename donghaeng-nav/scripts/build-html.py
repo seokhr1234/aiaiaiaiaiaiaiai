@@ -109,7 +109,7 @@ def build():
         path.write_text(html, encoding='utf-8', newline='\n')
     facilities = json.loads(local_file(datasets['bundled-facilities-seoul']['path']).read_bytes())['features']
     manifest = {
-        'version': '2026-11-13-city-walk',
+        'version': '2026-11-14-transit-main',
         'main_source': 'donghaeng-nav/dist/index.html',
         'expansion': {'online_page': 'expansion.html', 'service_code_files': len(services['files']), 'review_asset_files': len(services.get('review_assets', {})),
                       'service_integrity_sha256': sha(service_path.read_bytes()), 'citywide_routing': False,
@@ -120,6 +120,7 @@ def build():
                                         'reviewed_date': review_points['metadata']['reviewed_date'], 'display_only': True, 'field_verified': False, 'routing_eligible': False}},
         'compressed_assets': compressed_assets,
         'project_name': '동행길',
+        'transit_main': {'mode_selector': True, 'line_stop_details': True, 'reference_markers_only': True, 'accessible_journey_verified': False, 'provider_search_verified': False, 'full_ui_optimization_deferred': True},
         'route_choice': {'max_attempts': 24, 'time_budget_ms': 4000, 'max_candidates': 5, 'explanation': 'Decision-time final response; no new request on click', 'real_gemini_verified': False},
         'source_snapshot': lock['source'],
         'facility_records': len(facilities),
@@ -156,7 +157,7 @@ def build():
     (ROOT / 'donghaeng-nav/docs/final-build.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     handoff_path = ROOT / '전달-검증.json'
     handoff = json.loads(handoff_path.read_text())
-    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-13', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
+    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-14', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
     handoff['main_promotion'] = {'version': manifest['version'], 'review': 'donghaeng-nav/docs/main-navigation-promotion.md', 'original_gis_reprocessed': False, 'field_verified': False}
     handoff['supplementary_evidence'] = manifest['supplementary_evidence']
     handoff['gps_stabilization'] = manifest['gps']

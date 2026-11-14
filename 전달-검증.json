@@ -6,7 +6,7 @@
   "credentials_included": true,
   "source_project": "동행길-Codex-전달; bbb referenced for Leaflet OSM tiles",
   "files": 428,
-  "html_sha256": "48cf7843083b9cb4ecc3559e28ae3da4e9746ac616a76e5310128d12d2a78d48",
+  "html_sha256": "192363409bd62d368dc285c873ef260312b5fdd0f35f23a55024ff615d9e5b70",
   "verification": {
     "copied_project_build": true,
     "server_root_app_setup_http_200": true,
@@ -33,7 +33,7 @@
     "vercel_api_deployed": false,
     "real_gemini_for_vercel_verified": false
   },
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "credential_scope": "User-authorized local donghaeng-nav/.env only; ignored by version control, never bundled in HTML",
   "folder_bytes_at_update": 518293146,
   "user_reported_phone_observation": {
@@ -56,7 +56,7 @@
   "precision_runtime_included": true,
   "precision_runtime_loader_implemented": true,
   "main_promotion": {
-    "version": "2026-11-13-city-walk",
+    "version": "2026-11-14-transit-main",
     "review": "donghaeng-nav/docs/main-navigation-promotion.md",
     "original_gis_reprocessed": false,
     "field_verified": false

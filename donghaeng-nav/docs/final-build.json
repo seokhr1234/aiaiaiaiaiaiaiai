@@ -1,11 +1,11 @@
 {
-  "version": "2026-11-13-city-walk",
+  "version": "2026-11-14-transit-main",
   "main_source": "donghaeng-nav/dist/index.html",
   "expansion": {
     "online_page": "expansion.html",
-    "service_code_files": 32,
+    "service_code_files": 34,
     "review_asset_files": 2,
-    "service_integrity_sha256": "6a2ca0e5cdbd1574a73e28d474f68f453163ce62d6febb543c1c028752c36868",
+    "service_integrity_sha256": "a4574c496c3f836508944c1bbaefc432ac5f3e7d0c762c93f566bd6082f052ef",
     "citywide_routing": false,
     "authenticated_transit_verified": false,
     "new_slope_values_promoted": 0,
@@ -88,6 +88,14 @@
     }
   ],
   "project_name": "동행길",
+  "transit_main": {
+    "mode_selector": true,
+    "line_stop_details": true,
+    "reference_markers_only": true,
+    "accessible_journey_verified": false,
+    "provider_search_verified": false,
+    "full_ui_optimization_deferred": true
+  },
   "route_choice": {
     "max_attempts": 24,
     "time_budget_ms": 4000,
@@ -165,8 +173,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
-  "html_sha256": "48cf7843083b9cb4ecc3559e28ae3da4e9746ac616a76e5310128d12d2a78d48",
-  "html_bytes": 15747745,
+  "html_sha256": "192363409bd62d368dc285c873ef260312b5fdd0f35f23a55024ff615d9e5b70",
+  "html_bytes": 15765101,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",
