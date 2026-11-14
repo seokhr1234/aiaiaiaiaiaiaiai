@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "checks": [
+    "Offline two-service search uses the same-profile endpoint walks, misses the first departure, respects explicit service dates, and returns review-only candidates with zero external calls",
+    "Offline candidate connects to the actual walking-review contract and all-leg accessibility/time checks; indoor transfer remains unresolved without a fabricated zero or road shortcut",
+    "Frontend rejects changed journey profile/endpoints/modes, fabricated arrival/summary, and promotion to GPS or AI eligibility",
+    "Access evidence matches line/stops and the particular vehicle trip, covers the full ride, expires honestly and preserves conflicting negative observations",
+    "Repeated breaks include waiting/vehicle movement in fatigue intervals, shift following times by dwell, require exact route provenance and opening validity throughout the break, and never treat riding as rest",
+    "Manual/replay state machine advances whole steps without interpolating vehicle lines, cleans timers on pause/destroy, discards late ticks and cannot start live GPS",
+    "Missing/stale/unsupported local data and cancellation fail explicitly, with no provider fallback even when a fetch function is supplied"
+  ],
+  "actualProviderCalls": 0,
+  "actualTimetableData": false,
+  "actualAccessEvidence": false,
+  "fieldVerified": false
+}

@@ -7,7 +7,7 @@ import {createPostgisRepository} from './postgis.mjs';
 import {reviewPoints} from './review-points.mjs';
 import {expansionPaths} from './routes.mjs';
 export {expansionPaths} from './routes.mjs';
-export function createExpansionHandler({routing=createRoutingService(),transit=null,databaseUrl='',featureRepository}={}){
+export function createExpansionHandler({routing=createRoutingService(),transit=null,databaseUrl='',featureRepository,journeyAdapters={}}={}){
  const repository=featureRepository||(databaseUrl?createPostgisRepository({connectionString:databaseUrl}):null);
  const send=(res,status,value)=>{if(res.destroyed)return;res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(value))};
  const handler=async(req,res)=>{
@@ -29,12 +29,14 @@ export function createExpansionHandler({routing=createRoutingService(),transit=n
      result=await transit.search(input,{signal:controller.signal});
      if(url.pathname==='/api/journeys'){
       const candidates=[];
-      for(const candidate of result.candidates.slice(0,5))candidates.push(await validateJourney(candidate,input,{signal:controller.signal,walk:async request=>{
+      for(const candidate of result.candidates.slice(0,5))candidates.push(await validateJourney(candidate,input,{boarding:journeyAdapters.boarding,access:journeyAdapters.access,signal:controller.signal,walk:async request=>{
        const generated=await routing.route(request,{signal:controller.signal}),route=generated.routes[0];
-       return {profile:generated.profile,state:route?'satisfied':'violated',minutes:route?.selectionMetrics.minutes,route,restWaypointEligible:!!route?.restStop};
+       // The current worker returns technical previews, not verified stop or
+       // entrance connections. Adding a timetable must not promote them.
+       return {profile:generated.profile,state:'unknown',minutes:route?.selectionMetrics.minutes,route,restWaypointEligible:false};
       }}));
       result={...result,schema:'donghaeng-journeys-v1',candidates,eligibleCandidates:candidates.filter(c=>c.validationState==='satisfied').map(c=>c.id),
-       state:candidates.some(c=>c.validationState==='satisfied')?'validated_candidates':'needs_review',scheduleValidationConfigured:false};
+       state:candidates.some(c=>c.validationState==='satisfied')?'validated_candidates':'needs_review',scheduleValidationConfigured:typeof journeyAdapters.boarding==='function'};
      }
     }
    }

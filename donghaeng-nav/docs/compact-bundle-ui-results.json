@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "entry": "single-html",
+  "checks": [
+    "One accessible native SVG character; mobile input keeps origin/destination/condition/search, with location actions and privacy details available on demand",
+    "320/393px, landscape and desktop have no page overflow; reduced-motion disables character animation",
+    "Compact cards retain a visible review warning, coordinate disclosure, stop details, source evidence and walking-time impact inside working disclosures",
+    "Short previous/next/replay controls work, pause replaces replay, candidate cache restores correctly and the header character leaves result space free"
+  ],
+  "browserErrors": [],
+  "mockedProviderCalls": 1,
+  "actualProviderCalls": 0,
+  "characterCount": 1,
+  "importantWarningsRetained": true
+}

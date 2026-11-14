@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "entry": "main-source",
+  "checks": [
+    "Short-distance mobile request shows an actionable provider-limit message without spending quota, switching modes, starting GPS or losing endpoint choices",
+    "Walking is attempted only on explicit action and preserves wheelchair/no-stairs/slope limits; insufficient walking evidence remains a failure",
+    "Unexpected upstream -98 for distant points also shows the same recovery actions with one bounded call and no raw error disclosure",
+    "Frontend handles older deployed handlers returning providerCode -98 as well as the new typed error"
+  ],
+  "browserErrors": [],
+  "mockedProviderCalls": 1,
+  "actualProviderCalls": 0
+}

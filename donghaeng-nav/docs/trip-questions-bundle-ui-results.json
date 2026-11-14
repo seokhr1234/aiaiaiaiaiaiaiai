@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "entry": "single-html",
+  "checks": [
+    "Initial page centers one character and asks only origin; GPS denial keeps the step incomplete and provides the map fallback",
+    "Origin and destination map selection return to their questions; typed-but-unselected places cannot advance; back/next preserves answers and never searches prematurely",
+    "Final mode discloses coordinate sharing and submits exactly once through the existing handler; the original form and character return to the result page",
+    "Route re-entry starts the questions with preserved answers; saved view and the optional all-at-once form remain usable"
+  ],
+  "browserErrors": [],
+  "mockedProviderCalls": 1,
+  "actualProviderCalls": 0,
+  "characterCount": 1
+}

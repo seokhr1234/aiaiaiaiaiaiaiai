@@ -15,62 +15,62 @@
       "status": 200,
       "distanceMeters": 972.9537888965706,
       "visited": 306,
-      "elapsedMs": 32
+      "elapsedMs": 16
     },
     {
       "district": "Gangnam",
       "status": 200,
       "distanceMeters": 964.1506004992482,
       "visited": 188,
-      "elapsedMs": 6
+      "elapsedMs": 5
     },
     {
       "district": "Mapo",
       "status": 200,
       "distanceMeters": 1514.4605648871013,
       "visited": 417,
-      "elapsedMs": 41
+      "elapsedMs": 3
     },
     {
       "district": "Songpa",
       "status": 200,
       "distanceMeters": 1493.1265153528568,
       "visited": 767,
-      "elapsedMs": 41
+      "elapsedMs": 6
     },
     {
       "district": "Gangseo",
       "status": 200,
       "distanceMeters": 850.189680511463,
       "visited": 61,
-      "elapsedMs": 33
+      "elapsedMs": 3
     },
     {
       "district": "Geumcheon",
       "status": 422,
       "code": "city_no_connected_route",
-      "elapsedMs": 4
+      "elapsedMs": 3
     },
     {
       "district": "Dobong",
       "status": 200,
       "distanceMeters": 1707.9445838022207,
       "visited": 597,
-      "elapsedMs": 5
+      "elapsedMs": 3
     },
     {
       "district": "Eunpyeong",
       "status": 200,
       "distanceMeters": 1504.9460021758396,
       "visited": 592,
-      "elapsedMs": 4
+      "elapsedMs": 3
     },
     {
       "district": "Gwanak",
       "status": 200,
       "distanceMeters": 1268.1641089422528,
       "visited": 216,
-      "elapsedMs": 5
+      "elapsedMs": 7
     },
     {
       "district": "Gangdong",
@@ -84,19 +84,19 @@
       "status": 200,
       "distanceMeters": 16912.883949783238,
       "visited": 73865,
-      "elapsedMs": 65
+      "elapsedMs": 85
     },
     {
       "district": "south-cross-district",
       "status": 422,
       "code": "city_no_connected_route",
-      "elapsedMs": 33
+      "elapsedMs": 32
     },
     {
       "district": "across-Han-withheld",
       "status": 422,
       "code": "city_no_connected_route",
-      "elapsedMs": 113
+      "elapsedMs": 114
     }
   ],
   "datasetVersion": "city-walk-f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",

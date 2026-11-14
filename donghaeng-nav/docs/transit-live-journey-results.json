@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "checkedDateKst": "2026-11-14",
+  "entry": "local-main-ui",
+  "actualProviderRequests": 1,
+  "candidateCount": 25,
+  "reviewedStages": 3,
+  "checks": [
+    "Actual local Server-key authentication returns reference candidates through the main UI in exactly one provider search; no GPS/accessibility promotion",
+    "The actual provider candidate feeds preserved Seoul walking review and all-leg checks without a second provider call; unknown entrances/timetable/access remain explicit",
+    "Actual result supports mobile manual stage review without horizontal overflow, live GPS or inferred vehicle polylines"
+  ],
+  "browserErrors": [],
+  "geminiCalls": 0,
+  "providerRawSaved": false,
+  "keySaved": false,
+  "registeredIpAuthenticationSucceeded": true,
+  "deployed": false,
+  "fieldVerified": false
+}

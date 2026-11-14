@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": [
+    "Eight-minute detour misses 23:55 and selects 24:05 on the original KST service day; planned data never proves realtime feasibility or arrival",
+    "Explicit fixture realtime and access proofs propagate waiting, ride and egress to a 33-minute journey, independently of provider totals",
+    "No future service/holiday is invented from another date; missing line/stop mappings and stale snapshots stay unknown; validated indexes resist caller mutation",
+    "Malformed calendar/time/namespace, backward midnight times, duplicate trips and invalid source timestamps reject the whole snapshot",
+    "Unknown walking, disconnected legs, missing or changed profile/speed and access expiring during the ride cannot become eligible or publish an arrival",
+    "Adapter exceptions expose no raw secrets, cancellation after async work is honored, and duplicate leg IDs fail validation",
+    "Journey HTTP handler accepts server-owned adapters but never promotes the current technical-preview worker routes to verified stop connections",
+    "A shorter total does not hide a longer access leg; partial/unknown provider walking times never become zero or a fabricated total/arrival"
+  ],
+  "actualProviderCalls": 0,
+  "actualTimetableData": false,
+  "operationalTimetableConfigured": false,
+  "fieldVerified": false
+}

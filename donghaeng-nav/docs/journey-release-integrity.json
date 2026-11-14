@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "checkedDateKst": "2026-11-14",
+  "baseline": "10ad62a",
+  "originalDataFilesByteIdentical": 9,
+  "originalGzipFilesByteIdentical": 9,
+  "changedProtectedCode": [
+    "app.js",
+    "transit-ui.js",
+    "transit-walk-review.js",
+    "journey-review.js"
+  ],
+  "researchAndPriorHistoryPreserved": true,
+  "reviewAndCityAssetsByteIdentical": true,
+  "deletedTrackedFiles": 0,
+  "fiveHtmlSameBuild": true,
+  "embeddedPackedDataByteIdentical": true,
+  "compressedReuseAndCorruptRecovery": true,
+  "htmlSha256": "3edce5e00318c90410c8539fbd15f8f9a1cca31fe95c2d31619d97cac98c9652",
+  "reports": [
+    "journey-offline-core-results",
+    "transit-live-journey-results",
+    "transit-timing-core-results",
+    "expansion-core-results",
+    "transit-main-core-results",
+    "transit-edge-results",
+    "transit-vercel-results",
+    "transit-walk-review-core-results",
+    "transit-walk-review-ui-results",
+    "transit-walk-review-bundle-ui-results",
+    "vercel-api-results",
+    "city-walk-api-results"
+  ],
+  "actualProviderCalls": 2,
+  "actualProviderSuccesses": 2,
+  "actualTimetableData": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "fieldVerified": false,
+  "fullUiOptimizationDeferred": true
+}

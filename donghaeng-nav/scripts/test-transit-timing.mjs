@@ -1,0 +1,65 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import {createLocalTimetable} from '../services/transit/timetable.mjs';
+import {validateJourney} from '../services/transit/journey.mjs';
+import {walkingInput} from '../services/expansion/contracts.mjs';
+import {createExpansionHandler} from '../services/expansion/handler.mjs';
+import {EventEmitter} from 'node:events';
+const require=createRequire(import.meta.url), UI=require('../dist/transit-walk-review.js');
+const checks=[], at='2026-11-14T23:50:00+09:00', now=()=>Date.parse(at);
+const p=[[37.56,126.97],[37.57,126.98],[37.58,126.99],[37.59,127]];
+const input=walkingInput({origin:p[0],destination:p[3],profile:{avoidSteps:true,speed:60},atTime:at});
+const bus={id:'T1-L2',mode:'bus',from:p[1],to:p[2],fromId:'100',toId:'200',lines:[{id:'route-A'}],providerMinutes:10};
+const candidate={id:'T1',legs:[{id:'T1-L1',mode:'walk',from:p[0],to:p[1],providerMinutes:2},bus,{id:'T1-L3',mode:'walk',from:p[2],to:p[3],providerMinutes:3}]};
+const snapshot={schema:'donghaeng-local-timetable-v1',timezone:'Asia/Seoul',version:'synthetic-test-only',source:'synthetic fixture, not a real timetable',observedAt:'2026-11-14T10:00:00+09:00',expiresAt:'2026-11-16T04:00:00+09:00',trips:[
+ {id:'early',idNamespace:'ODsay',mode:'bus',lineId:'route-A',fromId:'100',toId:'200',serviceDate:'2026-11-14',departs:'23:55:00',arrives:'24:05:00'},
+ {id:'later',idNamespace:'ODsay',mode:'bus',lineId:'route-A',fromId:'100',toId:'200',serviceDate:'2026-11-14',departs:'24:05:00',arrives:'24:15:00'}]};
+const table=createLocalTimetable(snapshot,{now});
+const walk=async()=>({state:'satisfied',minutes:8,profile:{...input.profile}});
+const access=async()=>({state:'satisfied',observedAt:snapshot.observedAt,expiresAt:snapshot.expiresAt});
+const planned=await table(bus,{earliestBoardingAt:'2026-11-14T23:58:00+09:00'});
+assert.equal(planned.tripId,'later');assert.equal(planned.serviceDate,'2026-11-14');assert.equal(planned.departsAt,'2026-11-14T15:05:00.000Z');assert.equal(planned.realtimeVerified,false);
+const result=await validateJourney(candidate,input,{walk,access,boarding:table,now});
+assert.equal(result.legs[1].departsAt,planned.departsAt);assert.equal(result.estimatedArrival,null);assert.equal(result.estimatedMinutes,null);assert.equal(result.validationState,'unknown');assert.equal(result.timetableVerified,false);assert(result.checks.some(c=>c.reason==='delay_or_cancellation_unverified'));
+checks.push('Eight-minute detour misses 23:55 and selects 24:05 on the original KST service day; planned data never proves realtime feasibility or arrival');
+// Realtime proof is supplied by a test callback only, not invented by the static adapter.
+const live=async(...args)=>({...await table(...args),realtimeVerified:true});
+const verified=await validateJourney(candidate,input,{walk,access,boarding:live,now});
+assert.equal(verified.estimatedMinutes,33);assert.equal(verified.estimatedArrival,'2026-11-14T15:23:00.000Z');assert.equal(verified.validationState,'satisfied');assert.equal(verified.fieldVerified,false);
+checks.push('Explicit fixture realtime and access proofs propagate waiting, ride and egress to a 33-minute journey, independently of provider totals');
+for(const earliest of ['2026-11-15T00:06:00+09:00','2026-11-15T23:58:00+09:00'])assert.equal((await table(bus,{earliestBoardingAt:earliest})).state,'unknown');
+assert.equal((await table({...bus,fromId:'other'},{earliestBoardingAt:at})).reason,'no_service_in_snapshot');
+assert.equal((await table({...bus,lines:[{name:'route-A',subwayCode:1}]},{earliestBoardingAt:at})).reason,'stop_or_line_id_unmapped');
+assert.equal((await table(bus,{earliestBoardingAt:null})).state,'unknown');
+assert.equal((await createLocalTimetable(snapshot,{now:()=>Date.parse(snapshot.expiresAt)})(bus,{earliestBoardingAt:at})).reason,'timetable_missing_or_stale');
+const mutable=structuredClone(snapshot),copy=createLocalTimetable(mutable,{now});mutable.trips[1].departs='24:00:00';assert.equal((await copy(bus,{earliestBoardingAt:'2026-11-15T00:01:00+09:00'})).tripId,'later');
+checks.push('No future service/holiday is invented from another date; missing line/stop mappings and stale snapshots stay unknown; validated indexes resist caller mutation');
+for(const modify of [s=>s.trips[0].serviceDate='2026-02-30',s=>s.trips[0].departs='48:00:00',s=>s.trips[0].arrives='00:05:00',s=>s.trips[0].idNamespace='guessed',s=>s.trips.push({...s.trips[0]}),s=>s.observedAt='yesterday']){const bad=structuredClone(snapshot);modify(bad);assert.throws(()=>createLocalTimetable(bad),e=>e.code==='invalid_timetable_snapshot');}
+checks.push('Malformed calendar/time/namespace, backward midnight times, duplicate trips and invalid source timestamps reject the whole snapshot');
+let earliest;
+const unknown=await validateJourney(candidate,input,{now,walk:async()=>({state:'unknown',minutes:8,profile:input.profile}),access,boarding:async(_,r)=>{earliest=r.earliestBoardingAt;return {...planned,realtimeVerified:true}}});
+assert.equal(earliest,null);assert.equal(unknown.estimatedArrival,null);assert.equal(unknown.legs[1].departsAt,undefined);assert(unknown.checks.some(c=>c.reason==='upstream_timing_unknown'));
+const gap=structuredClone(candidate);gap.legs[1].from=p[0];assert.equal((await validateJourney(gap,input,{walk,access,boarding:live,now})).validationState,'unknown');
+const changed=await validateJourney(candidate,input,{walk:async()=>({state:'satisfied',minutes:1,profile:{...input.profile,speed:120}}),access,boarding:live,now});assert.equal(changed.estimatedArrival,null);
+const missing=await validateJourney(candidate,input,{walk:async()=>({state:'satisfied',minutes:1}),access,boarding:live,now});assert.equal(missing.validationState,'unknown');
+const expiresDuringRide=await validateJourney(candidate,input,{walk,boarding:live,now,access:async()=>({...await access(),expiresAt:'2026-11-15T00:10:00+09:00'})});assert(expiresDuringRide.checks.some(c=>c.key==='accessibility'&&c.state==='unknown'));
+checks.push('Unknown walking, disconnected legs, missing or changed profile/speed and access expiring during the ride cannot become eligible or publish an arrival');
+const errors=await validateJourney(candidate,input,{walk,now,boarding:async()=>{throw Error('SECRET-provider-url')},access:async()=>{throw Error('SECRET-provider-url')}});assert(!JSON.stringify(errors).includes('SECRET'));assert.equal(errors.estimatedArrival,null);
+const ac=new AbortController();await assert.rejects(validateJourney(candidate,input,{signal:ac.signal,walk:async()=>{ac.abort();return {state:'satisfied',minutes:8,profile:input.profile}}}),e=>e.name==='AbortError');
+const pre=new AbortController();pre.abort();await assert.rejects(table(bus,{earliestBoardingAt:at,signal:pre.signal}),e=>e.name==='AbortError');
+await assert.rejects(validateJourney({...candidate,legs:[candidate.legs[0],candidate.legs[0]]},input),e=>e.code==='invalid_journey');
+checks.push('Adapter exceptions expose no raw secrets, cancellation after async work is honored, and duplicate leg IDs fail validation');
+const handler=createExpansionHandler({routing:{route:async()=>({state:'technical_preview',profile:input.profile,routes:[{selectionMetrics:{minutes:8}}]}),close(){}},
+ transit:{search:async()=>({candidates:[candidate]})},journeyAdapters:{boarding:live,access}});
+const req=Object.assign(new EventEmitter(),{url:'/api/journeys',method:'POST',headers:{'content-type':'application/json'},body:input});
+let response,status;const res=Object.assign(new EventEmitter(),{writeHead(s){status=s},end(s){response=JSON.parse(s)}});
+await handler(req,res);handler.close();assert.equal(status,200);assert.equal(response.scheduleValidationConfigured,true);assert.deepEqual(response.eligibleCandidates,[]);assert.equal(response.candidates[0].estimatedArrival,null);
+checks.push('Journey HTTP handler accepts server-owned adapters but never promotes the current technical-preview worker routes to verified stop connections');
+const review={walkingLegs:[{id:'W1',state:'reference_route',providerMinutes:3,route:{minutes:10}},{id:'W2',state:'reference_route',providerMinutes:20,route:{minutes:5}}]};
+assert.deepEqual(UI.timing(review),{walkingMinutes:15,providerWalkingMinutes:23,deltaMinutes:-8,longerLegs:['W1'],arrivalAt:null,transferFeasibility:'unknown'});
+review.walkingLegs[1]={id:'W2',state:'unresolved',providerMinutes:20};assert.equal(UI.timing(review).deltaMinutes,null);assert.equal(UI.timing(review).walkingMinutes,null);
+review.walkingLegs[1]={id:'W2',state:'reference_route',providerMinutes:null,route:{minutes:5}};assert.equal(UI.timing(review).providerWalkingMinutes,null);
+checks.push('A shorter total does not hide a longer access leg; partial/unknown provider walking times never become zero or a fabricated total/arrival');
+const report={pass:true,checks,actualProviderCalls:0,actualTimetableData:false,operationalTimetableConfigured:false,fieldVerified:false};
+await writeFile(new URL('../docs/transit-timing-core-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

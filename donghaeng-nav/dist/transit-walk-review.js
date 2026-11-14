@@ -5,7 +5,7 @@ const profileKeys=['wheelchair','avoidSteps','avoidSlope','rest','short','restKi
 const finite=v=>Number.isFinite(v)&&v>=0;
 function request(candidate,profile,context){
  if(!point(context?.origin)||!point(context?.destination)||!Number.isFinite(Date.parse(context?.atTime)))throw Error('출발·도착과 조회 시각을 다시 확인해 주세요.');
- return {origin:[...context.origin],destination:[...context.destination],profile:{...profile},atTime:context.atTime,candidate:{id:candidate.id,legs:candidate.legs.map(l=>({id:l.id,mode:l.mode,from:[...l.from],to:[...l.to],providerMinutes:l.providerMinutes}))}};
+ return {origin:[...context.origin],destination:[...context.destination],profile:{...profile},atTime:context.atTime,candidate:{id:candidate.id,legs:candidate.legs.map(l=>({id:l.id,mode:l.mode,from:[...l.from],to:[...l.to],providerMinutes:l.providerMinutes,...(l.idNamespace?{idNamespace:l.idNamespace}:{}),...(l.fromId!=null?{fromId:l.fromId}:{}),...(l.toId!=null?{toId:l.toId}:{}),lineIds:(l.lines||[]).map(v=>v.id).filter(v=>typeof v==='string'&&v.length)}))}};
 }
 function validate(data,input){
  const invalid=()=>{throw Error('도보 검토 결과를 확인하지 못했어요. 다시 계산해 주세요.')};
@@ -17,11 +17,16 @@ function validate(data,input){
   ||!Array.isArray(data.walkingLegs)||data.walkingLegs.length<2||data.walkingLegs.length>7)invalid();
  const vehicles=input.candidate.legs.filter(l=>l.mode!=='walk');if(data.walkingLegs.length!==vehicles.length+1)invalid();
  let points=0,calculated=0,minutes=0;
+ const providerWalks=[];
+ for(let i=0;i<=vehicles.length;i++){
+  const start=i?input.candidate.legs.indexOf(vehicles[i-1])+1:0,end=i===vehicles.length?input.candidate.legs.length:input.candidate.legs.indexOf(vehicles[i]);
+  const between=input.candidate.legs.slice(start,end);providerWalks.push(between.length?between.reduce((n,l)=>n+l.providerMinutes,0):null);
+ }
  for(const [i,leg] of data.walkingLegs.entries()){
   const from=i?vehicles[i-1].to:input.origin,to=i===vehicles.length?input.destination:vehicles[i].from;
   if(leg.id!=='W'+(i+1)||leg.role!==(i===0?'access':i===vehicles.length?'egress':'transfer')||!same(leg.from,from)||!same(leg.to,to)
    ||leg.endpointMappingVerified!==false||!['reference_route','unresolved'].includes(leg.state)
-   ||leg.providerMinutes!=null&&!finite(leg.providerMinutes))invalid();
+   ||leg.providerMinutes!==providerWalks[i])invalid();
   if(leg.state==='unresolved'){if(leg.route)invalid();continue}
   // Never accept an outdoor route as a subway/indoor transfer connection.
   if(leg.role==='transfer'&&[vehicles[i-1].mode,vehicles[i].mode].includes('subway'))invalid();
@@ -38,19 +43,35 @@ function validate(data,input){
   points+=r.coordinates.length;calculated++;minutes+=r.minutes;
  }
  const s=data.summary;if(points>12000||s?.total!==data.walkingLegs.length||s.calculated!==calculated||s.unresolved!==s.total-calculated
-  ||s.estimatedWalkingMinutes!==(calculated===s.total?minutes:null))invalid();return data;
+  ||s.estimatedWalkingMinutes!==(calculated===s.total?minutes:null))invalid();if(data.journeyReview&&root.JourneyReview)root.JourneyReview.validate(data.journeyReview,input);return data;
+}
+function timing(data){
+ const legs=data.walkingLegs,complete=legs.every(l=>l.state==='reference_route'),providerKnown=legs.every(l=>finite(l.providerMinutes));
+ const walkingMinutes=complete?legs.reduce((n,l)=>n+l.route.minutes,0):null;
+ const providerWalkingMinutes=providerKnown?legs.reduce((n,l)=>n+l.providerMinutes,0):null;
+ return {walkingMinutes,providerWalkingMinutes,deltaMinutes:complete&&providerKnown?Math.round((walkingMinutes-providerWalkingMinutes)*100)/100:null,
+  longerLegs:legs.filter(l=>l.state==='reference_route'&&finite(l.providerMinutes)&&l.route.minutes>l.providerMinutes).map(l=>l.id),
+  arrivalAt:null,transferFeasibility:'unknown'};
 }
 function create({map,input,fitBounds,cached,onResult=()=>{},fetchImpl=root.fetch.bind(root)}){
  const doc=root.document,el=(tag,text,cls)=>{const e=doc.createElement(tag);if(text!=null)e.textContent=text;if(cls)e.className=cls;return e};
- const box=el('section',null,'transit-walk-review'),heading=el('h4','도보 구간 참고 계산'),note=el('p','같은 이동 조건으로 등록 도로를 계산합니다. 대중교통을 다시 조회하지 않아요. 실제 출입구·역내 이동과 환승 가능 여부는 미확인입니다.','gap-note');
- const run=el('button','도보 구간 참고 계산','secondary'),cancel=el('button','도보 계산 취소','secondary'),fit=el('button','계산한 도보 구간 보기','secondary');
+ const box=el('section',null,'transit-walk-review'),heading=el('h4','도보 연결'),note=el('p','출입구·역내 연결 미확인','gap-note');
+ const run=el('button','도보 확인','secondary'),cancel=el('button','취소','secondary'),fit=el('button','도보 지도','secondary');
  for(const b of [run,cancel,fit])b.type='button';cancel.hidden=true;fit.hidden=true;
- const status=el('p','계산 전 · 업체 도보 시간과 실제 등록 도로의 계산은 다를 수 있어요.','gap-note'),details=el('div');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
+ const status=el('p','','gap-note'),details=el('details',null,'walking-details'),detailTitle=el('summary','도보 계산 상세');details.append(detailTitle);details.hidden=true;status.setAttribute('role','status');status.setAttribute('aria-live','polite');
  box.append(heading,note,run,cancel,fit,status,details);
- const L=root.L,layer=L.layerGroup().addTo(map);let controller=null,destroyed=false,coordinates=[];
+ const L=root.L,layer=L.layerGroup().addTo(map);let controller=null,destroyed=false,coordinates=[],journeyView=null;
  function display(data){
-  validate(data,input);layer.clearLayers();details.replaceChildren();coordinates=[];
+  validate(data,input);if(data.journeyReview&&root.JourneyReview)root.JourneyReview.validate(data.journeyReview,input);journeyView?.destroy();journeyView=null;layer.clearLayers();details.replaceChildren(detailTitle);details.hidden=false;box.querySelector('.journey-review')?.remove();coordinates=[];
   status.textContent='등록 도로 계산 '+data.summary.calculated+'/'+data.summary.total+'구간 · 계산 보류 '+data.summary.unresolved+'구간 · 전체 여정 시간은 미확인';
+  const impact=timing(data),timeBox=el('div',null,'transit-walk-leg transit-time-review');
+  timeBox.append(el('b','도보 시간 변화·환승 재확인'));
+  timeBox.append(el('p',impact.walkingMinutes===null?'계산하지 못한 도보 구간이 있어 전체 도보 시간은 미확인입니다.':'계산한 등록 도로 합계 약 '+impact.walkingMinutes+'분 · 핀·출입구 접속 시간 제외'));
+  if(impact.deltaMinutes!==null)timeBox.append(el('p','업체 도보 합계 '+impact.providerWalkingMinutes+'분 대비 '+(impact.deltaMinutes>0?'+':'')+impact.deltaMinutes+'분'));
+  else timeBox.append(el('p','업체 시간 또는 도보 계산이 빠져 있어 전체 도보 시간 차이를 확정하지 않았어요.','gap-note'));
+  if(impact.longerLegs.length)timeBox.append(el('p',impact.longerLegs.join(', ')+' 구간의 도보 시간이 업체 값보다 길어요. 이후 승차·환승 시각을 다시 확인해야 해요.','gap-note'));
+  timeBox.append(el('p','시간표·다음 운행편·막차·지연 자료가 없어 환승 가능 여부와 도착 시각은 미확인입니다. 전체 여정의 소요시간은 별도로 확인해 주세요.','gap-note'));
+  details.append(timeBox);
   for(const leg of data.walkingLegs){const item=el('div',null,'transit-walk-leg'),label={access:'출발지 → 첫 승차 참고점',transfer:'환승 참고점 사이',egress:'마지막 하차 참고점 → 목적지'}[leg.role];item.append(el('b',leg.id+' · '+label));
    if(leg.route){const r=leg.route;item.append(el('p',Math.round(r.distanceMeters).toLocaleString()+'m · 등록 도로 약 '+r.minutes+'분'+(leg.providerMinutes==null?' · 업체 도보 시간 미확인':' · 업체 도보 '+leg.providerMinutes+'분')),
     el('p','핀과 등록 도로 사이 약 '+r.endpointGaps.map(Math.round).join('m / ')+'m · 이 접속은 미확인','gap-note'),
@@ -61,7 +82,8 @@ function create({map,input,fitBounds,cached,onResult=()=>{},fetchImpl=root.fetch
    details.append(item);
   }
   if(coordinates.length)details.append(el('p','파란 점선은 등록 도로의 도보 참고 계산입니다. 핀까지의 빈 구간과 버스·지하철 경로선은 추측해 연결하지 않았어요.','gap-note'));
-  fit.hidden=!coordinates.length;run.textContent='도보 구간 다시 계산';
+  if(data.journeyReview&&root.JourneyReview){journeyView=root.JourneyReview.create({review:data.journeyReview,walkingLegs:data.walkingLegs,map,fitBounds});box.append(journeyView.element)}
+  fit.hidden=!coordinates.length;run.textContent='다시 계산';
  }
  function stop(message){if(controller){controller.abort();controller=null}run.disabled=false;cancel.hidden=true;box.removeAttribute('aria-busy');if(message)status.textContent=message}
  run.onclick=async()=>{stop();const current=new AbortController();controller=current;run.disabled=true;cancel.hidden=false;box.setAttribute('aria-busy','true');status.textContent='등록 도로에서 도보 구간을 계산하고 있어요…';const timer=setTimeout(()=>current.abort(),18000);
@@ -71,7 +93,7 @@ function create({map,input,fitBounds,cached,onResult=()=>{},fetchImpl=root.fetch
  };
  cancel.onclick=()=>stop('도보 참고 계산을 취소했어요.');fit.onclick=()=>{if(coordinates.length)fitBounds(L.latLngBounds(coordinates))};
  if(cached)display(cached);
- return {element:box,destroy(){destroyed=true;stop();layer.remove()}};
+ return {element:box,destroy(){destroyed=true;stop();journeyView?.destroy();layer.remove()}};
 }
-const api={request,validate,create};if(typeof module!=='undefined')module.exports=api;else root.TransitWalkReview=api;
+const api={request,validate,timing,create};if(typeof module!=='undefined')module.exports=api;else root.TransitWalkReview=api;
 })(typeof globalThis==='undefined'?this:globalThis);

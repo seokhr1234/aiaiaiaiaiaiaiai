@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "entry": "main-source",
+  "checks": [
+    "One top-left control retains original facility controls and folds the companion without losing answers",
+    "Lazy steep-road data shows only noninteractive red lines at street zoom; hide, re-enable, and empty viewport work",
+    "Display changes leave original graph, conditions, origin query and facility state unchanged",
+    "Original map info, tab navigation, 320px/mobile/desktop/landscape layout, companion reopening and input preservation pass"
+  ],
+  "browserErrors": [],
+  "actualProviderCalls": 0
+}

@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "inspectedTerrainSegments": 377861,
+  "steepTerrainSegments": 79597,
+  "steepRegisteredSegments": 85,
+  "sourceGeometryPreserved": true,
+  "newSlopeValuesPromoted": 0,
+  "display_only": true,
+  "field_verified": false,
+  "routing_eligible": false,
+  "threshold_percent": 10,
+  "source_graph_sha256": "f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",
+  "dem_resolution_m_nominal": 30,
+  "dem_support_m": 90,
+  "sources": [
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N37_00_E126_00_DEM/Copernicus_DSM_COG_10_N37_00_E126_00_DEM.tif",
+      "sha256": "f530dd28308ecd6c5ceb0405dc1ffb7113bcafdec30d023de50f16dc433a274f"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N37_00_E127_00_DEM/Copernicus_DSM_COG_10_N37_00_E127_00_DEM.tif",
+      "sha256": "4f8fef79da8c18ed9a9a0fb97b3d2695c4681181e013e039d87044e5479f7df6"
+    }
+  ],
+  "attribution": "Produced using Copernicus WorldDEM\u2122-30 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+  "osm_license": "ODbL-1.0",
+  "license_url": "https://dataspace.copernicus.eu/sites/default/files/media/files/2025-06/copernicus_contributing_mission_data_access_v2_cop_dem_licenses.pdf",
+  "collected_date_kst": "2026-11-15"
+}

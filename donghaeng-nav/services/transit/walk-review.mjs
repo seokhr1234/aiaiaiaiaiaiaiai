@@ -1,4 +1,5 @@
 import {walkingInput, jsonBody, point, ServiceError} from '../expansion/contracts.mjs';
+import {createJourneyReviewer} from './journey-review.mjs';
 import {cityWalk} from '../city-walk/router.mjs';
 
 const fail = (status, code, message) => { throw new ServiceError(status, code, message); };
@@ -12,10 +13,13 @@ export function reviewInput(value) {
   if (!candidate || !/^T\d{1,3}$/.test(candidate.id) || Object.keys(candidate).some(k => !['id', 'legs'].includes(k))
       || !Array.isArray(candidate.legs) || !candidate.legs.length || candidate.legs.length > 20) invalid();
   const ids = new Set(), legs = candidate.legs.map(leg => {
-    if (!leg || typeof leg !== 'object' || Object.keys(leg).some(k => !['id', 'mode', 'from', 'to', 'providerMinutes'].includes(k))
+    if (!leg || typeof leg !== 'object' || Object.keys(leg).some(k => !['id', 'mode', 'from', 'to', 'providerMinutes', 'fromId', 'toId', 'lineIds', 'idNamespace'].includes(k))
         || !/^T\d{1,3}-L\d{1,2}$/.test(leg.id) || !leg.id.startsWith(candidate.id + '-L') || ids.has(leg.id) || !['walk', 'bus', 'subway'].includes(leg.mode)
         || !point(leg.from) || !point(leg.to) || !Number.isFinite(leg.providerMinutes)
-        || leg.providerMinutes < 0 || leg.providerMinutes > 1440) invalid();
+        || leg.providerMinutes < 0 || leg.providerMinutes > 1440
+        || ['fromId','toId'].some(k=>leg[k]!=null&&(typeof leg[k]!=='string'||!leg[k].length||leg[k].length>100))
+        || leg.idNamespace!==undefined&&(typeof leg.idNamespace!=='string'||!/^[a-zA-Z0-9:_-]{1,80}$/.test(leg.idNamespace))
+        || leg.lineIds!==undefined&&(!Array.isArray(leg.lineIds)||leg.lineIds.length>20||leg.lineIds.some(v=>typeof v!=='string'||!v.length||v.length>100))) invalid();
     ids.add(leg.id); return {...leg, from: [...leg.from], to: [...leg.to]};
   });
   const vehicles = legs.map((leg, index) => ({...leg, index})).filter(l => l.mode !== 'walk');
@@ -30,7 +34,7 @@ export function reviewInput(value) {
       providerLegIds: between.map(l => l.id), providerMinutes: between.length ? between.reduce((n, l) => n + l.providerMinutes, 0) : null,
       indoorTransferUnresolved: !!before && !!after && [before.mode, after.mode].includes('subway')});
   }
-  return {...input, candidateId: candidate.id, tasks};
+  return {...input, candidateId: candidate.id, tasks, vehicleLegs: vehicles.map(l=>({...l,lines:(l.lineIds||[]).map(id=>({id}))}))};
 }
 
 const messages = {
@@ -45,7 +49,7 @@ const safeCodes = new Set(['outside_city_coverage', 'city_slope_evidence_require
 const routeKeys = ['schema', 'state', 'datasetVersion', 'sourceMetadata', 'profile', 'origin', 'destination', 'coordinates',
   'sourceNodeIds', 'sourceSegments', 'distanceMeters', 'minutes', 'endpointGaps', 'unknownInclineMeters', 'registeredInclineMax',
   'stepsMeters', 'fieldVerified', 'accessibilityVerified', 'endpointConnectionsVerified', 'restVerified'];
-export function createWalkReviewService({walk = (input, options) => cityWalk.route(input, options), budgetMs = 12000} = {}) {
+export function createWalkReviewService({walk = (input, options) => cityWalk.route(input, options), budgetMs = 12000, journeyReviewer = createJourneyReviewer()} = {}) {
   return {async review(value, {signal} = {}) {
     const input = reviewInput(value), started = Date.now(), controller = new AbortController();
     const abort = () => controller.abort();
@@ -87,18 +91,20 @@ export function createWalkReviewService({walk = (input, options) => cityWalk.rou
         walkingLegs.push(item);
       }
       const calculated = walkingLegs.filter(l => l.state === 'reference_route');
-      return {schema: 'donghaeng-transit-walk-review-v1', candidateId: input.candidateId, state: 'review_only',
+      const result = {schema: 'donghaeng-transit-walk-review-v1', candidateId: input.candidateId, state: 'review_only',
         referenceSource: 'client_supplied_provider_reference_points', origin: input.origin, destination: input.destination,
         profile: input.profile, requestedAtTime: input.atTime, observedAt: new Date().toISOString(), walkingLegs,
         summary: {total: walkingLegs.length, calculated: calculated.length, unresolved: walkingLegs.length - calculated.length,
           estimatedWalkingMinutes: calculated.length === walkingLegs.length ? calculated.reduce((n, l) => n + l.route.minutes, 0) : null},
         stopMappingVerified: false, timetableVerified: false, accessibilityVerified: false, restVerified: false, fieldVerified: false,
         notice: '등록 도로의 도보 참고 계산입니다. 업체 승하차 위치와 실제 출입구·역내 연결, 운행편·환승 가능 여부는 미확인입니다.'};
+      result.journeyReview = await journeyReviewer(input,result,{signal});
+      return result;
     } finally {clearTimeout(timer); signal?.removeEventListener('abort', abort);}
   }};
 }
 
-export function createWalkReviewHandler({service = createWalkReviewService()} = {}) {
+export function createWalkReviewHandler({service = createWalkReviewService(),getService} = {}) {
   let active = 0;
   return async (req, res) => {
     const controller = new AbortController(), abort = () => controller.abort(); let acquired = false;
@@ -110,7 +116,8 @@ export function createWalkReviewHandler({service = createWalkReviewService()} = 
       const input = await jsonBody(req, 32768); reviewInput(input);
       if (active) fail(429, 'walk_review_busy', '다른 대중교통 도보 구간을 계산하고 있어요. 잠시 후 다시 시도해 주세요.');
       active++; acquired = true; req.once('aborted', abort); res.once('close', abort);
-      send(200, await service.review(input, {signal: controller.signal}));
+      const current=getService?await getService():service;
+      send(200, await current.review(input, {signal: controller.signal}));
     } catch (e) {send(e.status || 503, {code: e.status ? e.code : 'walking_reference_unavailable', error: e.status ? e.message : messages.walking_reference_unavailable});}
     finally {if (acquired) active--; req.removeListener('aborted', abort); res.removeListener('close', abort);}
   };

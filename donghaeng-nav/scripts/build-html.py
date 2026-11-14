@@ -25,6 +25,21 @@ def local_file(relative):
     return path
 
 
+def packed_data(relative):
+    source = local_file(relative).read_bytes()
+    existing = BASE / (relative + '.gz')
+    # Keep verified compressed bytes across Python/zlib/platform versions. A
+    # rebuild of UI code should not rewrite unchanged datasets or embedded maps.
+    if existing.is_file():
+        try:
+            packed = existing.read_bytes()
+            if gzip.decompress(packed) == source:
+                return packed
+        except (OSError, EOFError):
+            pass
+    return gzip.compress(source, compresslevel=6, mtime=0)
+
+
 def build():
     lock = json.loads((BASE / 'runtime-integrity.json').read_text())
     if lock.get('version') != 1:
@@ -40,7 +55,7 @@ def build():
             raise ValueError('경로 검증 입력이 바뀌었습니다: ' + name + ' · 재검증 후 무결성 기록을 갱신하세요.')
     service_path = ROOT / 'donghaeng-nav/services/service-integrity.json'
     services = json.loads(service_path.read_text())
-    for name, expected in {**services['files'], **services.get('review_assets', {}), **services.get('city_assets', {})}.items():
+    for name, expected in {**services['files'], **services.get('review_assets', {}), **services.get('city_assets', {}), **services.get('slope_assets', {})}.items():
         target = (ROOT / name).resolve()
         if not target.is_relative_to(ROOT.resolve()) or sha(target.read_bytes()) != expected:
             raise ValueError('확장 서비스 입력 변경 · 재검증 필요: ' + name)
@@ -75,7 +90,7 @@ def build():
     compressed_assets = []
     for item in datasets.values():
         source = local_file(item['path']).read_bytes()
-        packed = gzip.compress(source, compresslevel=6, mtime=0)
+        packed = packed_data(item['path'])
         assert gzip.decompress(packed) == source
         relative = item['path'] + '.gz'
         (BASE / relative).write_bytes(packed)
@@ -92,9 +107,19 @@ def build():
         if ident not in datasets or datasets[ident]['path'] != relative:
             raise ValueError('알 수 없는 데이터 블록: ' + ident)
         used.add(ident)
-        packed = gzip.compress(local_file(relative).read_bytes(), compresslevel=6, mtime=0)
+        packed = packed_data(relative)
         return '<script id="' + ident + '" type="application/octet-stream" data-encoding="gzip-base64"' + (' data-lazy="true"' if ident in ['bundled-seoul-base', 'bundled-terrain-evidence'] else '') + '>' + base64.b64encode(packed).decode() + '</script>'
     html = re.sub(r'<script id="([^"]+)"(?: data-lazy="true")? type="application/json" data-src="([^"]+)"[^>]*></script>', data_block, html)
+    optional = 'data/accessibility/seoul/steep-roads.json'
+    if 'donghaeng-nav/dist/' + optional not in services.get('slope_assets', {}):
+        raise ValueError('경사 표시 자료 무결성 등록이 필요합니다.')
+    html, optional_count = re.subn(
+        r'<script id="bundled-seoul-slopes" type="application/json" data-optional-src="[^"]+" data-compressed-src="[^"]+" data-lazy="true"></script>',
+        lambda m: '<script id="bundled-seoul-slopes" type="application/octet-stream" data-encoding="gzip-base64" data-lazy="true">' + base64.b64encode(packed_data(optional)).decode() + '</script>',
+        html,
+    )
+    if optional_count != 1:
+        raise ValueError('급경사 표시 블록이 빠졌습니다.')
     if used != set(datasets):
         raise ValueError('빌드에 빠진 런타임 자료가 있습니다.')
     html = re.sub(r'<script src="([^"]+)"></script>', lambda m: '<script>' + local_file(m[1]).read_text().replace('</script', '<\\/script') + '</script>', html)
@@ -109,7 +134,7 @@ def build():
         path.write_text(html, encoding='utf-8', newline='\n')
     facilities = json.loads(local_file(datasets['bundled-facilities-seoul']['path']).read_bytes())['features']
     manifest = {
-        'version': '2026-11-14-transit-walk-review',
+        'version': '2026-11-15-steep-roads',
         'main_source': 'donghaeng-nav/dist/index.html',
         'expansion': {'online_page': 'expansion.html', 'service_code_files': len(services['files']), 'review_asset_files': len(services.get('review_assets', {})),
                       'service_integrity_sha256': sha(service_path.read_bytes()), 'citywide_routing': False,
@@ -120,7 +145,7 @@ def build():
                                         'reviewed_date': review_points['metadata']['reviewed_date'], 'display_only': True, 'field_verified': False, 'routing_eligible': False}},
         'compressed_assets': compressed_assets,
         'project_name': '동행길',
-        'transit_main': {'mode_selector': True, 'line_stop_details': True, 'reference_markers_only': False, 'walking_reference_geometry': True, 'vehicle_geometry_verified': False, 'stop_mapping_verified': False, 'timetable_verified': False, 'accessible_journey_verified': False, 'provider_search_verified': False, 'full_ui_optimization_deferred': True},
+        'transit_main': {'mode_selector': True, 'line_stop_details': True, 'reference_markers_only': False, 'walking_reference_geometry': True, 'walking_time_comparison': True, 'whole_journey_review': True, 'mixed_steps_replay': True, 'offline_transit_provider': True, 'repeat_rest_validator': True, 'local_timetable_adapter': True, 'operational_timetable_configured': False, 'vehicle_geometry_verified': False, 'stop_mapping_verified': False, 'timetable_verified': False, 'accessible_journey_verified': False, 'provider_search_verified': False, 'full_ui_optimization_deferred': True},
         'route_choice': {'max_attempts': 24, 'time_budget_ms': 4000, 'max_candidates': 5, 'explanation': 'Decision-time final response; no new request on click', 'real_gemini_verified': False},
         'source_snapshot': lock['source'],
         'facility_records': len(facilities),
@@ -157,7 +182,7 @@ def build():
     (ROOT / 'donghaeng-nav/docs/final-build.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     handoff_path = ROOT / '전달-검증.json'
     handoff = json.loads(handoff_path.read_text())
-    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-14', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
+    handoff.update(html_sha256=manifest['html_sha256'], updated='2026-11-15', main_program='동행길', precision_runtime_included=True, precision_runtime_loader_implemented=True)
     handoff['main_promotion'] = {'version': manifest['version'], 'review': 'donghaeng-nav/docs/main-navigation-promotion.md', 'original_gis_reprocessed': False, 'field_verified': False}
     handoff['supplementary_evidence'] = manifest['supplementary_evidence']
     handoff['gps_stabilization'] = manifest['gps']

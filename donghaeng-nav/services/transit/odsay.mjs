@@ -3,11 +3,17 @@ const error=(status,code,message)=>new ServiceError(status,code,message);
 const number=v=>(typeof v==='number'||typeof v==='string'&&v.trim()!=='')&&Number.isFinite(Number(v))?Number(v):null;
 const nonnegative=v=>{const n=number(v);return n!==null&&n>=0?n:null};
 const position=(x,y)=>{const p=[number(y),number(x)];return point(p)?p:null};
+// ODsay documents -98 for origin/destination within 700m. This is a
+// provider search limit, not evidence that walking is feasible or accessible.
+export function transitDistance(a,b){const r=Math.PI/180,x=a[0]*r,y=b[0]*r;return 12742000*Math.asin(Math.min(1,Math.sqrt(Math.sin((y-x)/2)**2+Math.cos(x)*Math.cos(y)*Math.sin((b[1]-a[1])*r/2)**2)))}
+export function shortTransitError(){const e=error(422,'transit_distance_too_short','출발지와 도착지가 700m 이내라 ODsay 대중교통 검색을 지원하지 않아요. 같은 조건으로 도보를 찾거나 위치를 수정해 주세요.');e.providerCode='-98';e.providerReason='distance';return e}
+
 export function normalizeOdsay(data,input,{observedAt=new Date().toISOString()}={}){
  if(data?.error){
   // Never forward provider messages: some services echo request URLs/API keys.
   const detail=Array.isArray(data.error)?data.error[0]:data.error,raw=detail?.code;
   const code=(typeof raw==='string'||typeof raw==='number')&&/^-?\d{1,4}$/.test(String(raw))?String(raw):null;
+  if(code==='-98')throw shortTransitError();
   const message=typeof detail?.message==='string'?detail.message:typeof detail?.msg==='string'?detail.msg:'';
   const reason=['-8','-9'].includes(code)?'request':/\bauth(?:entication|orization)?\b|api\s*key|인증|refer+er|referrer|client[_ ]?ip/i.test(message)?'authorization':/quota|limit|한도|호출\s*횟수/i.test(message)?'quota':'unknown';
   const help=reason==='authorization'?' ODsay 키의 인증·플랫폼·허용 서버 설정을 확인해 주세요.':reason==='request'?' 요청 좌표와 필수 입력값 형식·범위를 확인해 주세요.':reason==='quota'?' ODsay 계정의 호출 한도를 확인해 주세요.':'';
@@ -54,6 +60,8 @@ export function createOdsayProvider({apiKey='',enabled=false,dailyLimit=20,maxCo
    if(!apiKey)throw error(503,'transit_not_configured','대중교통 연결이 아직 준비되지 않았어요.');
    if(!enabled)throw error(503,'transit_disabled','대중교통 참고 검색이 아직 활성화되지 않았어요.');
    if(signal?.aborted)throw error(499,'request_aborted','요청을 취소했어요.');
+   if(!point(input?.origin)||!point(input?.destination))throw error(400,'invalid_route','출발·목적지 좌표를 확인해 주세요.');
+   if(transitDistance(input.origin,input.destination)<=700)throw shortTransitError();
    refresh();if(used>=dailyLimit)throw error(429,'transit_daily_limit','오늘 대중교통 검색 한도에 도달했어요.');
    if(inflight>=maxConcurrent)throw error(429,'transit_busy','대중교통 검색이 많아요. 잠시 후 다시 시도해 주세요.');
    const controller=new AbortController(),abort=()=>controller.abort();signal?.addEventListener('abort',abort,{once:true});

@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "entry": "single-html",
+  "checks": [
+    "The origin question searches the existing real place catalog by name; keyboard selection sets the coordinate/pin and enables next only after selection",
+    "Editing a selected origin clears its old coordinate/pin and route state without changing the destination; no-match or unselected text cannot advance or submit",
+    "Address matching shares the destination lookup, limits results to ten, and the clear button removes the selection",
+    "Place names and addresses are rendered as text rather than HTML",
+    "Map/GPS origin updates synchronize the search field; local lookup never calls the transit provider",
+    "320px/393px/landscape/desktop and the original all-at-once form retain working origin search"
+  ],
+  "browserErrors": [],
+  "actualProviderCalls": 0,
+  "catalogScope": "Existing registered Seoul place names and addresses; no general geocoder added"
+}

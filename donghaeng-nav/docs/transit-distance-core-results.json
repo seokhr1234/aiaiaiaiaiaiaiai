@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "checks": [
+    "0/200/699m requests fail before provider calls or budget consumption, while 701m retains the normal search path",
+    "Provider -98, including unexpected distant-coordinate replies, is a typed distance limit rather than authentication/server failure; raw messages stay private"
+  ],
+  "actualProviderCalls": 0,
+  "reference": "https://lab.odsay.com/guide/releaseReference",
+  "walkingFeasibilityImplied": false
+}

@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "entry": "main-source",
+  "checks": [
+    "One top-left control retains original facility controls and folds the companion without losing answers",
+    "Sparse Seoul tag overlay loads with 3921 original segments; failure and retry work without zero-filling missing grades",
+    "Local terrain estimates can be toggled independently, and disabling both removes all slope lines",
+    "Display changes leave original graph, conditions, origin query and facility state unchanged",
+    "Original map info, tab navigation, 320px/mobile/desktop/landscape layout, companion reopening and input preservation pass"
+  ],
+  "browserErrors": [],
+  "actualProviderCalls": 0
+}

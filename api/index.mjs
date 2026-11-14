@@ -1,5 +1,5 @@
 import {createCityWalkHandler} from '../donghaeng-nav/services/city-walk/router.mjs';
-import {createWalkReviewHandler} from '../donghaeng-nav/services/transit/walk-review.mjs';
+import {createConfiguredWalkReviewHandler} from '../donghaeng-nav/services/transit/configured-review.mjs';
 import {createConditionHandler, DEFAULT_GEMINI_MODEL} from '../donghaeng-nav/scripts/condition-api.mjs';
 import {createExpansionProxy} from '../donghaeng-nav/services/expansion/proxy.mjs';
 import {expansionPaths} from '../donghaeng-nav/services/expansion/routes.mjs';
@@ -8,10 +8,10 @@ import publicCoverage from '../donghaeng-nav/services/expansion/public-coverage.
 import {createReviewPointsHandler} from '../donghaeng-nav/services/expansion/review-points.mjs';
 
 const expansion=createExpansionProxy({getConfig:()=>({baseUrl:process.env.DONGHAENG_BACKEND_URL||'',token:process.env.DONGHAENG_BACKEND_TOKEN||''})});
-const transit=createTransitEdgeHandler({getConfig:()=>({apiKey:process.env.ODSAY_API_KEY||'',enabled:process.env.DONGHAENG_TRANSIT_ENABLED!=='false',dailyLimit:Number(process.env.ODSAY_DAILY_LIMIT||20)})});
+const transit=createTransitEdgeHandler({getConfig:()=>({mode:process.env.DONGHAENG_TRANSIT_MODE||'',localPackFile:process.env.DONGHAENG_TRANSIT_PACK||'',apiKey:process.env.ODSAY_API_KEY||'',enabled:process.env.DONGHAENG_TRANSIT_ENABLED!=='false',dailyLimit:Number(process.env.ODSAY_DAILY_LIMIT||20)})});
 const review=createReviewPointsHandler();
 const city=createCityWalkHandler();
-const walkReview=createWalkReviewHandler();
+const walkReview=createConfiguredWalkReviewHandler({getConfig:()=>({localPackFile:process.env.DONGHAENG_TRANSIT_PACK||''})});
 
 const handle = createConditionHandler({
   getConfig: () => ({
