@@ -900,6 +900,8 @@ main{grid-template-columns:430px 1fr;align-items:start}.sidebar{padding-top:25px
 .travel-mode-control{display:flex;gap:8px;margin:8px 0 14px}.travel-mode-control button{flex:1;min-height:42px;border-radius:12px}.travel-mode-control button[aria-pressed="true"]{background:#176d52;color:#fff;border-color:#176d52}.transit-reference-note{padding:12px;border-radius:12px;background:#fff5df;color:#634b24;font-size:13px;line-height:1.6}.transit-candidate{display:flex;flex-direction:column;align-items:flex-start;gap:6px;width:100%;text-align:left;white-space:normal;overflow-wrap:anywhere}.transit-candidate span{font-size:13px;line-height:1.5}.transit-meta{font-size:13px;color:#52685d}.transit-legs{padding-left:22px;line-height:1.6}.transit-leg{margin:14px 0;overflow-wrap:anywhere}.transit-leg p{margin:5px 0}.transit-reference-button{font-size:12px}.transit-stop{border:2px solid #fff;border-radius:50%;background:#176d52;color:#fff;box-shadow:0 1px 5px #0004;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}.transit-subway{background:#4059a4}#transit-cancel{width:100%;margin:8px 0}.transit-card{min-width:0}.transit-reference-note[hidden]{display:none}
 
 .transit-card{border:1px solid #d7e1db;border-radius:16px;padding:14px;margin:10px 0;background:#fff}.transit-candidate,.transit-reference-button{border:1px solid #d7e1db;border-radius:12px;background:#f7faf8;color:#176d52;padding:10px;cursor:pointer}.transit-card.selected{border-color:#176d52}.transit-legs{margin-top:12px}
+
+.transit-walk-review{margin-top:18px;padding-top:12px;border-top:1px solid #d7e1db}.transit-walk-review h4{margin:0 0 8px}.transit-walk-review>button{margin:4px 6px 4px 0;min-height:40px;border-radius:12px;white-space:normal}.transit-walk-leg{margin:14px 0;padding:10px;border-radius:12px;background:#f7faf8;overflow-wrap:anywhere}.transit-walk-leg p{margin:6px 0}.transit-walk-leg summary{font-size:12px;cursor:pointer}
 </style></head><body>
 <header class="header"><button id="mobile-back" class="mobile-only icon-button" type="button" aria-label="이전 화면">‹</button><a class="brand" href="#"><span class="brand-icon">↗</span><span class="brand-name">동행길</span><span class="brand-sub">모두를 위한 이동</span></a><nav><button class="nav active" data-view="route">길 찾기</button><button class="nav" data-view="saved">저장한 경로</button><button class="nav" id="about">이용 안내</button><button class="nav presentation-toggle" id="present-mode" type="button">발표 모드 ↗</button></nav><button id="mobile-more" class="mobile-only icon-button" type="button" aria-label="이용 안내와 시연 메뉴" aria-haspopup="dialog">⋯</button><span class="demo"><i></i> 서울 전역 지도·도보</span></header>
 <main><aside class="sidebar" aria-label="이동 계획"><div class="sheet-header mobile-only"><button id="sheet-toggle" type="button" aria-expanded="true" aria-controls="sheet-content"><span class="sheet-grip" aria-hidden="true"></span><span id="sheet-title">어디로 갈까요?</span><span id="sheet-toggle-label">지도 넓게 보기 ⌄</span></button></div><div class="sheet-scroll" id="sheet-content"><div class="intro"><h1>어디로 갈까요?</h1><p>몸 상태에 맞춰 길을 찾아요.</p><button id="demo-open" type="button">비교 시연 ↗</button></div><div id="planner">
@@ -1780,6 +1782,83 @@ function places(features,local=[]){const out=new Map(local.map(p=>[String(p.id),
 const api={BOUNDS,inScope,places};if(typeof module!=='undefined')module.exports=api;else root.CityMap=api;
 })(typeof globalThis==='undefined'?this:globalThis);
 </script><script>(function(root){'use strict';
+const point=p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)&&Math.abs(p[0])<=90&&Math.abs(p[1])<=180;
+const same=(a,b)=>point(a)&&point(b)&&a.every((v,i)=>v===b[i]);
+const profileKeys=['wheelchair','avoidSteps','avoidSlope','rest','short','restKind','restMinutes','maxSlope','speed'];
+const finite=v=>Number.isFinite(v)&&v>=0;
+function request(candidate,profile,context){
+ if(!point(context?.origin)||!point(context?.destination)||!Number.isFinite(Date.parse(context?.atTime)))throw Error('출발·도착과 조회 시각을 다시 확인해 주세요.');
+ return {origin:[...context.origin],destination:[...context.destination],profile:{...profile},atTime:context.atTime,candidate:{id:candidate.id,legs:candidate.legs.map(l=>({id:l.id,mode:l.mode,from:[...l.from],to:[...l.to],providerMinutes:l.providerMinutes}))}};
+}
+function validate(data,input){
+ const invalid=()=>{throw Error('도보 검토 결과를 확인하지 못했어요. 다시 계산해 주세요.')};
+ if(data?.schema!=='donghaeng-transit-walk-review-v1'||data.state!=='review_only'||data.candidateId!==input.candidate.id
+  ||!same(data.origin,input.origin)||!same(data.destination,input.destination)||data.requestedAtTime!==input.atTime
+  ||data.referenceSource!=='client_supplied_provider_reference_points'
+  ||['stopMappingVerified','timetableVerified','accessibilityVerified','restVerified','fieldVerified'].some(k=>data[k]!==false)
+  ||profileKeys.some(k=>input.profile[k]!==undefined&&data.profile?.[k]!==input.profile[k])
+  ||!Array.isArray(data.walkingLegs)||data.walkingLegs.length<2||data.walkingLegs.length>7)invalid();
+ const vehicles=input.candidate.legs.filter(l=>l.mode!=='walk');if(data.walkingLegs.length!==vehicles.length+1)invalid();
+ let points=0,calculated=0,minutes=0;
+ for(const [i,leg] of data.walkingLegs.entries()){
+  const from=i?vehicles[i-1].to:input.origin,to=i===vehicles.length?input.destination:vehicles[i].from;
+  if(leg.id!=='W'+(i+1)||leg.role!==(i===0?'access':i===vehicles.length?'egress':'transfer')||!same(leg.from,from)||!same(leg.to,to)
+   ||leg.endpointMappingVerified!==false||!['reference_route','unresolved'].includes(leg.state)
+   ||leg.providerMinutes!=null&&!finite(leg.providerMinutes))invalid();
+  if(leg.state==='unresolved'){if(leg.route)invalid();continue}
+  // Never accept an outdoor route as a subway/indoor transfer connection.
+  if(leg.role==='transfer'&&[vehicles[i-1].mode,vehicles[i].mode].includes('subway'))invalid();
+  const r=leg.route;
+  if(r?.schema!=='donghaeng-city-walk-v1'||r.state!=='reference_route'||!same(r.origin,from)||!same(r.destination,to)
+   ||['fieldVerified','accessibilityVerified','endpointConnectionsVerified','restVerified'].some(k=>r[k]!==false)
+   ||profileKeys.some(k=>input.profile[k]!==undefined&&r.profile?.[k]!==input.profile[k])
+   ||!finite(r.minutes)||!finite(r.distanceMeters)||r.distanceMeters===0||!finite(r.unknownInclineMeters)||!finite(r.stepsMeters)
+   ||!Array.isArray(r.coordinates)||r.coordinates.length<2||r.coordinates.length>4000||!r.coordinates.every(point)
+   ||!Array.isArray(r.sourceNodeIds)||r.sourceNodeIds.length!==r.coordinates.length
+   ||!Array.isArray(r.sourceSegments)||r.sourceSegments.length!==r.coordinates.length-1
+   ||!Array.isArray(r.endpointGaps)||r.endpointGaps.length!==2||r.endpointGaps.some(v=>!finite(v)||v>80)
+   ||r.sourceMetadata?.source_crs!=='EPSG:4326'||typeof r.datasetVersion!=='string')invalid();
+  points+=r.coordinates.length;calculated++;minutes+=r.minutes;
+ }
+ const s=data.summary;if(points>12000||s?.total!==data.walkingLegs.length||s.calculated!==calculated||s.unresolved!==s.total-calculated
+  ||s.estimatedWalkingMinutes!==(calculated===s.total?minutes:null))invalid();return data;
+}
+function create({map,input,fitBounds,cached,onResult=()=>{},fetchImpl=root.fetch.bind(root)}){
+ const doc=root.document,el=(tag,text,cls)=>{const e=doc.createElement(tag);if(text!=null)e.textContent=text;if(cls)e.className=cls;return e};
+ const box=el('section',null,'transit-walk-review'),heading=el('h4','도보 구간 참고 계산'),note=el('p','같은 이동 조건으로 등록 도로를 계산합니다. 대중교통을 다시 조회하지 않아요. 실제 출입구·역내 이동과 환승 가능 여부는 미확인입니다.','gap-note');
+ const run=el('button','도보 구간 참고 계산','secondary'),cancel=el('button','도보 계산 취소','secondary'),fit=el('button','계산한 도보 구간 보기','secondary');
+ for(const b of [run,cancel,fit])b.type='button';cancel.hidden=true;fit.hidden=true;
+ const status=el('p','계산 전 · 업체 도보 시간과 실제 등록 도로의 계산은 다를 수 있어요.','gap-note'),details=el('div');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
+ box.append(heading,note,run,cancel,fit,status,details);
+ const L=root.L,layer=L.layerGroup().addTo(map);let controller=null,destroyed=false,coordinates=[];
+ function display(data){
+  validate(data,input);layer.clearLayers();details.replaceChildren();coordinates=[];
+  status.textContent='등록 도로 계산 '+data.summary.calculated+'/'+data.summary.total+'구간 · 계산 보류 '+data.summary.unresolved+'구간 · 전체 여정 시간은 미확인';
+  for(const leg of data.walkingLegs){const item=el('div',null,'transit-walk-leg'),label={access:'출발지 → 첫 승차 참고점',transfer:'환승 참고점 사이',egress:'마지막 하차 참고점 → 목적지'}[leg.role];item.append(el('b',leg.id+' · '+label));
+   if(leg.route){const r=leg.route;item.append(el('p',Math.round(r.distanceMeters).toLocaleString()+'m · 등록 도로 약 '+r.minutes+'분'+(leg.providerMinutes==null?' · 업체 도보 시간 미확인':' · 업체 도보 '+leg.providerMinutes+'분')),
+    el('p','핀과 등록 도로 사이 약 '+r.endpointGaps.map(Math.round).join('m / ')+'m · 이 접속은 미확인','gap-note'),
+    el('p','경사 미등록 '+Math.round(r.unknownInclineMeters).toLocaleString()+'m · 실제 보도·턱·폭·출입구·휴식은 미확인','gap-note'));
+    const source=el('details'),summary=el('summary','도보 자료 출처·기준일');source.append(summary,el('p','OpenStreetMap · '+(r.sourceMetadata.license||'ODbL-1.0')+' · 자료 기준 '+(r.sourceMetadata.source_as_of||'미확인')+' · 수집 '+(r.sourceMetadata.collected_date||'미확인')+' · EPSG:4326 · 현장 미검증','gap-note'));item.append(source);
+    L.polyline(r.coordinates,{color:'#486e8c',weight:5,opacity:.9,dashArray:'5 7',interactive:false}).addTo(layer);coordinates.push(...r.coordinates);
+   }else item.append(el('p',leg.notice||'이 구간의 보행 연결은 미확인입니다.','gap-note'));
+   details.append(item);
+  }
+  if(coordinates.length)details.append(el('p','파란 점선은 등록 도로의 도보 참고 계산입니다. 핀까지의 빈 구간과 버스·지하철 경로선은 추측해 연결하지 않았어요.','gap-note'));
+  fit.hidden=!coordinates.length;run.textContent='도보 구간 다시 계산';
+ }
+ function stop(message){if(controller){controller.abort();controller=null}run.disabled=false;cancel.hidden=true;box.removeAttribute('aria-busy');if(message)status.textContent=message}
+ run.onclick=async()=>{stop();const current=new AbortController();controller=current;run.disabled=true;cancel.hidden=false;box.setAttribute('aria-busy','true');status.textContent='등록 도로에서 도보 구간을 계산하고 있어요…';const timer=setTimeout(()=>current.abort(),18000);
+  try{const response=await fetchImpl('/api/transit/walk-review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(input),signal:current.signal}),data=await response.json();if(destroyed||controller!==current)return;if(!response.ok)throw Error(data.error||'도보 참고 계산에 실패했어요.');validate(data,input);onResult(data);display(data)}
+  catch(e){if(!destroyed&&controller===current)status.textContent=e.name==='AbortError'?'도보 계산을 취소했거나 시간이 초과됐어요.':e.message}
+  finally{clearTimeout(timer);if(controller===current)stop()}
+ };
+ cancel.onclick=()=>stop('도보 참고 계산을 취소했어요.');fit.onclick=()=>{if(coordinates.length)fitBounds(L.latLngBounds(coordinates))};
+ if(cached)display(cached);
+ return {element:box,destroy(){destroyed=true;stop();layer.remove()}};
+}
+const api={request,validate,create};if(typeof module!=='undefined')module.exports=api;else root.TransitWalkReview=api;
+})(typeof globalThis==='undefined'?this:globalThis);
+</script><script>(function(root){'use strict';
 const names={walk:'도보',bus:'버스',subway:'지하철'},point=p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)&&Math.abs(p[0])<=90&&Math.abs(p[1])<=180;
 const finite=v=>Number.isFinite(v)&&v>=0&&v<=10000000;
 function validate(data,expected={}){
@@ -1798,9 +1877,9 @@ function lineName(leg){const labels=leg.lines.map(l=>l.name).filter(Boolean);ret
 function summary(c){const vehicles=c.legs.filter(l=>l.mode!=='walk'),walk=c.legs.filter(l=>l.mode==='walk').reduce((n,l)=>n+l.providerMinutes,0);return {minutes:c.providerTotalMinutes,walkMinutes:walk,transfers:Math.max(0,vehicles.length-1),lines:vehicles.map(lineName),fare:c.fareWon??null}}
 function observedTime(value){const at=Date.parse(value);return Number.isFinite(at)?new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'short',timeStyle:'short'}).format(at):'미확인'}
 function create({map,container,fitBounds,onSelect=()=>{}}){
- const L=root.L,doc=container.ownerDocument,el=(tag,text,cls)=>{const n=doc.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n},layer=L.layerGroup().addTo(map);let active=false,result=null,selectedId=null,refs=[];
+ const L=root.L,doc=container.ownerDocument,el=(tag,text,cls)=>{const n=doc.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n},layer=L.layerGroup().addTo(map);let active=false,result=null,selectedId=null,refs=[],context=null,effectiveProfile=null,walkView=null;const walkCache=new Map();
  if(!map.getPane('transit-references'))map.createPane('transit-references').style.zIndex='680';
- function clear(){layer.clearLayers();refs=[];result=null;selectedId=null;if(active)container.replaceChildren();active=false}
+ function clear(){walkView?.destroy();walkView=null;walkCache.clear();layer.clearLayers();refs=[];result=null;selectedId=null;if(active)container.replaceChildren();active=false}
  function fit(){if(refs.length)fitBounds(L.latLngBounds(refs))}
  function sourcePoints(candidate){
   layer.clearLayers();refs=[];const groups=new Map();
@@ -1811,7 +1890,7 @@ function create({map,container,fitBounds,onSelect=()=>{}}){
   const c=result.candidates.find(c=>c.id===id);if(!c)return;selectedId=id;const markers=sourcePoints(c);renderCards(markers);if(fitMap)fit();if(focus)container.querySelector('[data-candidate-id="'+id+'"]')?.focus({preventScroll:true});onSelect(c);
  }
  function renderCards(markers){
-  container.replaceChildren();const note=el('p','대중교통 참고 후보입니다. 실제 안내 시작 불가 · 요청한 계단·경사·휠체어·휴식 조건과 출입구·역내 이동·환승 시각은 아직 검증되지 않았어요.','transit-reference-note');container.append(note);
+  walkView?.destroy();walkView=null;container.replaceChildren();const note=el('p','대중교통 참고 후보입니다. 실제 안내 시작 불가 · 요청한 계단·경사·휠체어·휴식 조건과 출입구·역내 이동·환승 시각은 아직 검증되지 않았어요.','transit-reference-note');container.append(note);
   container.append(el('p','지도에는 선택한 후보의 승하차 참고점만 표시합니다. 이동 경로선과 도보 연결은 아직 확인되지 않았어요.','gap-note'));
   if(result.rejected>0)container.append(el('p','위치·구간 정보를 확인할 수 없는 일부 후보는 표시에서 제외했습니다.','gap-note'));
   if(result.candidates.length>5)container.append(el('p','업체가 반환한 순서의 첫 5개 후보를 표시합니다.','gap-note'));
@@ -1819,11 +1898,11 @@ function create({map,container,fitBounds,onSelect=()=>{}}){
    const chosen=c.id===selectedId,s=summary(c),card=el('article',null,'route-card transit-card'+(chosen?' selected':'')),choose=el('button',null,'transit-candidate secondary');choose.type='button';choose.dataset.candidateId=c.id;choose.setAttribute('aria-pressed',String(chosen));choose.append(el('b','참고 후보 '+c.id),el('span',(s.minutes==null?'총 예상시간 미확인':s.minutes+'분 · 업체 예상')+' · 환승 '+s.transfers+'회'),el('span',s.lines.join(' → ')));choose.onclick=()=>select(c.id,{focus:true});card.append(choose,el('p','도보 약 '+s.walkMinutes+'분 · '+(s.fare==null?'요금 미확인':s.fare.toLocaleString('ko-KR')+'원 · 업체 참고 요금'),'transit-meta'));
    if(chosen){const list=el('ol',null,'transit-legs');c.legs.forEach((leg,index)=>{
     const item=el('li',null,'transit-leg transit-leg-'+leg.mode);if(leg.mode==='walk')item.append(el('b','도보 · 업체 예상 '+leg.providerMinutes+'분'),el('p','실제 보행 동선·턱·경사·휴식 접속은 미확인입니다.','gap-note'));
-    else {item.append(el('b',lineName(leg)+' · '+names[leg.mode]),el('p',(leg.fromName||'승차 지점명 미확인')+' → '+(leg.toName||'하차 지점명 미확인')),el('p','업체 예상 '+leg.providerMinutes+'분'+(leg.stationCount==null?' · 정차 정보 미확인':' · 정차 수 '+leg.stationCount+'(업체)')));const show=el('button','승하차 참고점 보기','secondary transit-reference-button');show.type='button';show.onclick=()=>{fitBounds(L.latLngBounds([leg.from,leg.to]));markers.get(leg.from.join(','))?.openPopup()};item.append(show)}list.append(item)});card.append(list,el('p','조회 시각(한국): '+observedTime(result.observedAt)+' · 실제 운행편·막차·현재 승강기 상태는 확인되지 않았어요.','gap-note'))}
+    else {item.append(el('b',lineName(leg)+' · '+names[leg.mode]),el('p',(leg.fromName||'승차 지점명 미확인')+' → '+(leg.toName||'하차 지점명 미확인')),el('p','업체 예상 '+leg.providerMinutes+'분'+(leg.stationCount==null?' · 정차 정보 미확인':' · 정차 수 '+leg.stationCount+'(업체)')));const show=el('button','승하차 참고점 보기','secondary transit-reference-button');show.type='button';show.onclick=()=>{fitBounds(L.latLngBounds([leg.from,leg.to]));markers.get(leg.from.join(','))?.openPopup()};item.append(show)}list.append(item)});card.append(list);if(context&&root.TransitWalkReview){const input=root.TransitWalkReview.request(c,toApiProfile(effectiveProfile),context);walkView=root.TransitWalkReview.create({map,input,fitBounds,cached:walkCache.get(c.id),onResult:data=>walkCache.set(c.id,data)});card.append(walkView.element)}card.append(el('p','조회 시각(한국): '+observedTime(result.observedAt)+' · 실제 운행편·막차·현재 승강기 상태는 확인되지 않았어요.','gap-note'))}
    container.append(card);
   }
  }
- return {show(data,profile){validate(data,profile);clear();result=data;active=true;if(!data.candidates.length){container.append(el('p','제공업체에서 참고 후보를 받지 못했어요. 다른 출발·도착 위치로 확인해 주세요.','empty-note'));return}select(data.candidates[0].id)},clear,fit,hasData:()=>active,selected:()=>selectedId,destroy(){clear();layer.remove()}};
+ return {show(data,profile,trip){validate(data,profile);clear();context=trip||null;effectiveProfile=profile;result=data;active=true;if(!data.candidates.length){container.append(el('p','제공업체에서 참고 후보를 받지 못했어요. 다른 출발·도착 위치로 확인해 주세요.','empty-note'));return}select(data.candidates[0].id)},clear,fit,hasData:()=>active,selected:()=>selectedId,destroy(){clear();layer.remove()}};
 }
 const api={validate,toApiProfile,summary,lineName,observedTime,create};if(typeof module!=='undefined')module.exports=api;else root.TransitUI=api;
 })(typeof globalThis==='undefined'?this:globalThis);
@@ -1890,7 +1969,7 @@ $('#locate').onclick=getPosition;
 $('#gps-stop').onclick=stopLocationTracking;
 $('#gps-tracking-stop').onclick=stopLocationTracking;
 $('#gps-tracking-follow').onclick=followCurrentLocation;
-window.addEventListener('pagehide',()=>{transitRequest?.abort();transitStatusRequest?.abort();stopLocationTracking();endNavigation()});
+window.addEventListener('pagehide',()=>{transitRequest?.abort();transitStatusRequest?.abort();transitView?.destroy();stopLocationTracking();endNavigation()});
 function resetTrip(){if(!graph)return;setTravelMode('walk');$('.quick-destinations').hidden=false;setOrigin(F.STATION.slice(),'월곡역 · 시연 기준점');$('#location-status').textContent='시연 위치 · GPS 아님. 출발 핀을 맞춰 주세요.';const library=localDestinations.find(p=>p.name==='월곡꿈그림도서관');if(library)setDestination(library,{pan:false});map.setView(F.STATION,17,{animate:false});if(isMobileUI())frameVisibleLocation(origin,17)}
 function showSeoul(){if(map)fitMobileAware(L.latLngBounds(CityMap.BOUNDS))}
 $('#school-reset').onclick=showSeoul;
@@ -2006,7 +2085,7 @@ async function findTransitRoute(){
  invalidate();const p=effectiveProfile(),controller=new AbortController();transitRequest=controller;const timer=setTimeout(()=>controller.abort(),18000);
  $('#find-route').disabled=true;$('#transit-cancel').hidden=false;$('#search').setAttribute('aria-busy','true');searchLabel('대중교통 후보를 검색하고 있어요…');$('#search-status').textContent='ODsay에 출발·도착 좌표를 보내 참고 후보를 찾고 있어요.';
  try{const response=await fetch('/api/routes/transit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({origin,destination:destination.ll,profile:TransitUI.toApiProfile(p),atTime:new Date().toISOString()}),signal:controller.signal}),data=await response.json();if(transitRequest!==controller||travelMode!=='transit'||trip!==JSON.stringify([origin,destination?.ll])||text!==$('#condition').value)return;
-  if(!response.ok)throw Error(data.error||'대중교통 연결을 완료하지 못했어요.');TransitUI.validate(data,p);transitResult=data;$('#result-title').textContent='대중교통 참고 후보';$('#mobile-route-status').textContent='이동 조건·환승 시각 미확인 · 참고 후보';if(isMobileUI())setMobileMode('results');transitView.show(data,p);$('#search-status').textContent=data.candidates.length?'노선과 승하차 순서를 확인하세요. 요청한 이동 조건·운행편·환승 가능 여부는 아직 미확인입니다.':'제공업체에서 참고 후보를 받지 못했어요. 다른 위치로 확인해 주세요.';
+  if(!response.ok)throw Error(data.error||'대중교통 연결을 완료하지 못했어요.');TransitUI.validate(data,p);transitResult=data;$('#result-title').textContent='대중교통 참고 후보';$('#mobile-route-status').textContent='이동 조건·환승 시각 미확인 · 참고 후보';if(isMobileUI())setMobileMode('results');transitView.show(data,p,{origin,destination:destination.ll,atTime:data.requestedAtTime});$('#search-status').textContent=data.candidates.length?'노선과 승하차 순서를 확인하세요. 요청한 이동 조건·운행편·환승 가능 여부는 아직 미확인입니다.':'제공업체에서 참고 후보를 받지 못했어요. 다른 위치로 확인해 주세요.';
  }catch(error){if(transitRequest===controller){transitResult=null;transitView?.clear();$('#search-status').textContent=error.name==='AbortError'?'대중교통 검색을 취소했거나 응답 시간이 초과됐어요.':error.message}}
  finally{clearTimeout(timer);if(transitRequest===controller){transitRequest=null;$('#transit-cancel').hidden=true;$('#find-route').disabled=!graph;$('#search').removeAttribute('aria-busy');searchLabel()}}
 }

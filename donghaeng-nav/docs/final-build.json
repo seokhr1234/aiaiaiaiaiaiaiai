@@ -1,11 +1,11 @@
 {
-  "version": "2026-11-14-transit-main",
+  "version": "2026-11-14-transit-walk-review",
   "main_source": "donghaeng-nav/dist/index.html",
   "expansion": {
     "online_page": "expansion.html",
-    "service_code_files": 34,
+    "service_code_files": 36,
     "review_asset_files": 2,
-    "service_integrity_sha256": "a4574c496c3f836508944c1bbaefc432ac5f3e7d0c762c93f566bd6082f052ef",
+    "service_integrity_sha256": "cc7f4ae68b78ea4a03a8fc65806b1b6783f0f5b4c7c7621602fed8a59e5de113",
     "citywide_routing": false,
     "authenticated_transit_verified": false,
     "new_slope_values_promoted": 0,
@@ -91,7 +91,11 @@
   "transit_main": {
     "mode_selector": true,
     "line_stop_details": true,
-    "reference_markers_only": true,
+    "reference_markers_only": false,
+    "walking_reference_geometry": true,
+    "vehicle_geometry_verified": false,
+    "stop_mapping_verified": false,
+    "timetable_verified": false,
     "accessible_journey_verified": false,
     "provider_search_verified": false,
     "full_ui_optimization_deferred": true
@@ -173,8 +177,8 @@
   "precision_records": 16169,
   "precision_field_verified": false,
   "runtime_validation": "Exact hashes and graph binding; supplied OA-22241 archive re-extracted as supplementary evidence only; existing route slopes and precision map unchanged",
-  "html_sha256": "192363409bd62d368dc285c873ef260312b5fdd0f35f23a55024ff615d9e5b70",
-  "html_bytes": 15765101,
+  "html_sha256": "3f3fe3bf0f17b332ff7a03f2c1c8159bfbbc0d7acec7f496996e86cf880236b3",
+  "html_bytes": 15774671,
   "external_requests_required": false,
   "online_basemap": "OpenStreetMap raster tiles via Leaflet; HTTP(S) only",
   "offline_basemap": "Embedded OSM snapshot via Leaflet GridLayer",

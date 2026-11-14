@@ -15,35 +15,35 @@
       "status": 200,
       "distanceMeters": 972.9537888965706,
       "visited": 306,
-      "elapsedMs": 38
+      "elapsedMs": 32
     },
     {
       "district": "Gangnam",
       "status": 200,
       "distanceMeters": 964.1506004992482,
       "visited": 188,
-      "elapsedMs": 11
+      "elapsedMs": 6
     },
     {
       "district": "Mapo",
       "status": 200,
       "distanceMeters": 1514.4605648871013,
       "visited": 417,
-      "elapsedMs": 10
+      "elapsedMs": 41
     },
     {
       "district": "Songpa",
       "status": 200,
       "distanceMeters": 1493.1265153528568,
       "visited": 767,
-      "elapsedMs": 57
+      "elapsedMs": 41
     },
     {
       "district": "Gangseo",
       "status": 200,
       "distanceMeters": 850.189680511463,
       "visited": 61,
-      "elapsedMs": 43
+      "elapsedMs": 33
     },
     {
       "district": "Geumcheon",
@@ -56,47 +56,47 @@
       "status": 200,
       "distanceMeters": 1707.9445838022207,
       "visited": 597,
-      "elapsedMs": 3
+      "elapsedMs": 5
     },
     {
       "district": "Eunpyeong",
       "status": 200,
       "distanceMeters": 1504.9460021758396,
       "visited": 592,
-      "elapsedMs": 33
+      "elapsedMs": 4
     },
     {
       "district": "Gwanak",
       "status": 200,
       "distanceMeters": 1268.1641089422528,
       "visited": 216,
-      "elapsedMs": 4
+      "elapsedMs": 5
     },
     {
       "district": "Gangdong",
       "status": 200,
       "distanceMeters": 1239.5474111894403,
       "visited": 360,
-      "elapsedMs": 8
+      "elapsedMs": 6
     },
     {
       "district": "north-cross-district",
       "status": 200,
       "distanceMeters": 16912.883949783238,
       "visited": 73865,
-      "elapsedMs": 92
+      "elapsedMs": 65
     },
     {
       "district": "south-cross-district",
       "status": 422,
       "code": "city_no_connected_route",
-      "elapsedMs": 34
+      "elapsedMs": 33
     },
     {
       "district": "across-Han-withheld",
       "status": 422,
       "code": "city_no_connected_route",
-      "elapsedMs": 126
+      "elapsedMs": 113
     }
   ],
   "datasetVersion": "city-walk-f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",

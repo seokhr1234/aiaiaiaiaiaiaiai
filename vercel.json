@@ -11,6 +11,7 @@
     }
   },
   "rewrites": [
+    {"source": "/api/transit/walk-review", "destination": "/api/index?route=transit/walk-review"},
     {"source": "/api/city/coverage", "destination": "/api/index?route=city/coverage"},
     {"source": "/api/routes/city-walk", "destination": "/api/index?route=routes/city-walk"},
     {"source": "/api/coverage", "destination": "/api/index?route=coverage"},

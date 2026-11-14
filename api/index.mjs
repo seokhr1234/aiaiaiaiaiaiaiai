@@ -1,4 +1,5 @@
 import {createCityWalkHandler} from '../donghaeng-nav/services/city-walk/router.mjs';
+import {createWalkReviewHandler} from '../donghaeng-nav/services/transit/walk-review.mjs';
 import {createConditionHandler, DEFAULT_GEMINI_MODEL} from '../donghaeng-nav/scripts/condition-api.mjs';
 import {createExpansionProxy} from '../donghaeng-nav/services/expansion/proxy.mjs';
 import {expansionPaths} from '../donghaeng-nav/services/expansion/routes.mjs';
@@ -10,6 +11,7 @@ const expansion=createExpansionProxy({getConfig:()=>({baseUrl:process.env.DONGHA
 const transit=createTransitEdgeHandler({getConfig:()=>({apiKey:process.env.ODSAY_API_KEY||'',enabled:process.env.DONGHAENG_TRANSIT_ENABLED!=='false',dailyLimit:Number(process.env.ODSAY_DAILY_LIMIT||20)})});
 const review=createReviewPointsHandler();
 const city=createCityWalkHandler();
+const walkReview=createWalkReviewHandler();
 
 const handle = createConditionHandler({
   getConfig: () => ({
@@ -21,10 +23,11 @@ const handle = createConditionHandler({
 export default function handler(req, res) {
   const url = new URL(req.url, 'http://localhost');
   // Rewrites carry the route when Vercel supplies the destination URL.
-  const route = ['/api/routes/city-walk','/api/city/coverage','/api/status', '/api/analyze-condition', '/api/select-route',...expansionPaths].includes(url.pathname)
+  const route = ['/api/transit/walk-review','/api/routes/city-walk','/api/city/coverage','/api/status', '/api/analyze-condition', '/api/select-route',...expansionPaths].includes(url.pathname)
     ? url.pathname
     : url.pathname === '/api/index' ? `/api/${url.searchParams.get('route') || ''}` : '';
   if(['/api/routes/city-walk','/api/city/coverage'].includes(route))return city(req,res,route);
+  if(route==='/api/transit/walk-review')return walkReview(req,res);
   if(['/api/routes/transit','/api/transit/status'].includes(route))return transit(req,res,route);
   if(route==='/api/features'&&url.searchParams.get('layer')==='osm-review')return review(req,res);
   if(route==='/api/coverage'&&!process.env.DONGHAENG_BACKEND_URL){

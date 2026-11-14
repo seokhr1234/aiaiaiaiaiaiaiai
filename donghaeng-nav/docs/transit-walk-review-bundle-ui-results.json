@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "entry": "standalone-over-localhost",
+  "checks": [
+    "Main candidate recalculates three real OSM walking legs only on demand, preserves no-stairs/source/unknown flags, draws exact road vertices without vehicle/gap lines, and makes no new ODsay/AI selection call",
+    "Candidate switching removes other walking geometry, restores cached reference results without a new calculation and exposes source data date separately from collection date",
+    "320px, 393px and landscape keep the reference calculation controls operable and results readable without horizontal overflow",
+    "Cancellation restores controls; condition changes abort and remove reference geometry; late responses cannot restore stale walking results",
+    "Wheelchair grade evidence failures stay unresolved with no alternative geometry, zero-minute claim or navigation button",
+    "Walking-service failure preserves the transit reference candidate and allows retry without another provider search"
+  ],
+  "browserErrors": [],
+  "providerCallsMocked": 2,
+  "walkingReviewRequests": 5,
+  "actualProviderCalls": 0,
+  "streetGraph": "real preserved Seoul reference graph",
+  "fullUiOptimizationDeferred": true,
+  "fieldVerified": false
+}

@@ -61,7 +61,7 @@ $('#locate').onclick=getPosition;
 $('#gps-stop').onclick=stopLocationTracking;
 $('#gps-tracking-stop').onclick=stopLocationTracking;
 $('#gps-tracking-follow').onclick=followCurrentLocation;
-window.addEventListener('pagehide',()=>{transitRequest?.abort();transitStatusRequest?.abort();stopLocationTracking();endNavigation()});
+window.addEventListener('pagehide',()=>{transitRequest?.abort();transitStatusRequest?.abort();transitView?.destroy();stopLocationTracking();endNavigation()});
 function resetTrip(){if(!graph)return;setTravelMode('walk');$('.quick-destinations').hidden=false;setOrigin(F.STATION.slice(),'월곡역 · 시연 기준점');$('#location-status').textContent='시연 위치 · GPS 아님. 출발 핀을 맞춰 주세요.';const library=localDestinations.find(p=>p.name==='월곡꿈그림도서관');if(library)setDestination(library,{pan:false});map.setView(F.STATION,17,{animate:false});if(isMobileUI())frameVisibleLocation(origin,17)}
 function showSeoul(){if(map)fitMobileAware(L.latLngBounds(CityMap.BOUNDS))}
 $('#school-reset').onclick=showSeoul;
@@ -177,7 +177,7 @@ async function findTransitRoute(){
  invalidate();const p=effectiveProfile(),controller=new AbortController();transitRequest=controller;const timer=setTimeout(()=>controller.abort(),18000);
  $('#find-route').disabled=true;$('#transit-cancel').hidden=false;$('#search').setAttribute('aria-busy','true');searchLabel('대중교통 후보를 검색하고 있어요…');$('#search-status').textContent='ODsay에 출발·도착 좌표를 보내 참고 후보를 찾고 있어요.';
  try{const response=await fetch('/api/routes/transit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({origin,destination:destination.ll,profile:TransitUI.toApiProfile(p),atTime:new Date().toISOString()}),signal:controller.signal}),data=await response.json();if(transitRequest!==controller||travelMode!=='transit'||trip!==JSON.stringify([origin,destination?.ll])||text!==$('#condition').value)return;
-  if(!response.ok)throw Error(data.error||'대중교통 연결을 완료하지 못했어요.');TransitUI.validate(data,p);transitResult=data;$('#result-title').textContent='대중교통 참고 후보';$('#mobile-route-status').textContent='이동 조건·환승 시각 미확인 · 참고 후보';if(isMobileUI())setMobileMode('results');transitView.show(data,p);$('#search-status').textContent=data.candidates.length?'노선과 승하차 순서를 확인하세요. 요청한 이동 조건·운행편·환승 가능 여부는 아직 미확인입니다.':'제공업체에서 참고 후보를 받지 못했어요. 다른 위치로 확인해 주세요.';
+  if(!response.ok)throw Error(data.error||'대중교통 연결을 완료하지 못했어요.');TransitUI.validate(data,p);transitResult=data;$('#result-title').textContent='대중교통 참고 후보';$('#mobile-route-status').textContent='이동 조건·환승 시각 미확인 · 참고 후보';if(isMobileUI())setMobileMode('results');transitView.show(data,p,{origin,destination:destination.ll,atTime:data.requestedAtTime});$('#search-status').textContent=data.candidates.length?'노선과 승하차 순서를 확인하세요. 요청한 이동 조건·운행편·환승 가능 여부는 아직 미확인입니다.':'제공업체에서 참고 후보를 받지 못했어요. 다른 위치로 확인해 주세요.';
  }catch(error){if(transitRequest===controller){transitResult=null;transitView?.clear();$('#search-status').textContent=error.name==='AbortError'?'대중교통 검색을 취소했거나 응답 시간이 초과됐어요.':error.message}}
  finally{clearTimeout(timer);if(transitRequest===controller){transitRequest=null;$('#transit-cancel').hidden=true;$('#find-route').disabled=!graph;$('#search').removeAttribute('aria-busy');searchLabel()}}
 }

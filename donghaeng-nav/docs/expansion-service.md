@@ -44,6 +44,7 @@ Vercel은 무거운 도로망을 적재하지 않는다. 자료 서버가 없으
 | `GET /api/features?bbox=west,south,east,north&layer=facilities` | 표시 자료. `precision`, `crossings`, `osm-review`도 지원. 한 변 0.3도 이하, `limit` 최대 1000, `offset`/`nextOffset` 페이지 처리. 등록 접속점은 별도 표시 데이터 버전을 사용 |
 | `GET /api/places?q=도서관` | 보유 서울 등록 시설의 이름·주소 검색, 일반 주소 전체 검색은 미구현 |
 | `POST /api/routes/walk` | 버전 고정 기존 도로망에서 조건·건물 검사를 통과한 기술 시연 후보. 지원 범위 밖은 422 |
+| `POST /api/transit/walk-review` | 후보의 출발/환승/하차 도보를 같은 조건의 서울 등록 도로로 참고 계산. 업체 재호출·키/별도 자료 서버 불필요. 역내·실제 출입구/전체 시각은 미확인 |
 | `POST /api/routes/transit` | ODsay 후보 정규화. 모든 결과는 참고용이며 시간표/접근성 검증 완료로 표시하지 않음 |
 | `POST /api/journeys` | 대중교통 후보의 도보 재계산과 여정 검사. 시간표·실시간/역내 검증 어댑터가 아직 없어 실제 후보의 검증 상태는 미확인 |
 | `GET /api/transit/status` | 키를 반환하지 않는 설정·한도 상태 |
@@ -126,3 +127,5 @@ NODE_PATH=/tmp/donghaeng-nft/node_modules node donghaeng-nav/scripts/test-review
 브라우저 검사에는 Playwright·Chromium이 필요하다. 외부 호출은 모의하며 실제 키를 테스트 코드에 넣지 않는다. 원본 자료와 보호 코드 해시 외에 `services/service-integrity.json`으로 확장 서비스 입력도 확인한다. 코드가 바뀌면 관련 검증 근거를 갱신하고 명시적으로 해시를 갱신한 뒤 빌드한다.
 
 시작한 서버의 자료/코드는 한 묶음으로 고정된다. 자료나 무결성 기록을 바꾸면 새 프로세스에서 검증하며 서로 다른 버전의 그래프·정밀·표고 근거를 섞지 않는다. 자동 재탐색과 실제 휴대폰 GPS 검증 상태는 기존 정책을 유지한다.
+
+2026-11-14: [대중교통 도보 참고 계산](transit-walk-review-2026-11-14.md)은 후보의 최소 구간 좌표와 원래 이동 조건을 사용한다. 이 API는 업체 응답 인증/실제 출입구 대응을 수행하지 않고, 요청당12초·인스턴스당1개로 제한한다. 위 기존 보행·대중교통·여정 본문 계약과 달리 `candidate`가 추가된 별도 계약이다.

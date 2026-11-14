@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "checks": [
+    "Three real Seoul graph access/transfer/egress legs retain the same no-stairs condition, source IDs/date and unknown grades/endpoint mapping; provider vehicle legs are never calculated as walking",
+    "Direct Node and original/rewrite Vercel URLs use the same city graph without a backend or provider key",
+    "Missing provider walking legs are explicit tasks with unknown provider time; subway transfers and coincident reference points remain unknown rather than outdoor shortcuts or zero minutes",
+    "Malformed or disconnected legs, duplicate IDs, condition/time/type/body size, unknown trust claims, method and cross-origin requests are rejected",
+    "Unsupported rest/grade/wheelchair evidence stays unresolved on every walking leg; no condition relaxation, zero estimates or promotion to a safe journey",
+    "Server and frontend reject condition changes, promoted verification flags, invalid geometry and misleading summary totals",
+    "Geometry size and candidate-specific leg IDs are bounded before any map drawing or trust claim",
+    "Whole-review deadline returns honest partial unknowns, pre-abort prevents calculation, arbitrary exception text stays private and a concurrent review is limited to one per instance"
+  ],
+  "actualProviderCalls": 0,
+  "streetGraphLegs": [
+    {
+      "id": "W1",
+      "role": "access",
+      "meters": 972.9537888965706,
+      "minutes": 15,
+      "sourceNodes": 45,
+      "sourceSegments": 44
+    },
+    {
+      "id": "W2",
+      "role": "transfer",
+      "meters": 964.1506004992482,
+      "minutes": 15,
+      "sourceNodes": 44,
+      "sourceSegments": 43
+    },
+    {
+      "id": "W3",
+      "role": "egress",
+      "meters": 1493.1265153528568,
+      "minutes": 23,
+      "sourceNodes": 55,
+      "sourceSegments": 54
+    }
+  ],
+  "fullUiOptimizationDeferred": true,
+  "stopMappingVerified": false,
+  "timetableVerified": false,
+  "fieldVerified": false
+}

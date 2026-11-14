@@ -1,4 +1,5 @@
 import {createCityWalkHandler} from './services/city-walk/router.mjs';
+import {createWalkReviewHandler} from './services/transit/walk-review.mjs';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
@@ -17,6 +18,7 @@ async function body(req){let size=0,parts=[];for await(const chunk of req){size+
 export function createApp({apiKey='',model=DEFAULT_GEMINI_MODEL,fetchImpl=globalThis.fetch,timeoutMs=15000,configPath=path.join(projectDir,'.env'),expansionHandler,backendToken='',transitConfig={},databaseUrl=''}={}){const staticGzipCache=new Map();const conditionHandler=createConditionHandler({getConfig:()=>({apiKey,model}),fetchImpl,timeoutMs});
 const expansion=expansionHandler||createExpansionHandler({transit:createOdsayProvider(transitConfig),databaseUrl});
 const city=createCityWalkHandler();
+const walkReview=createWalkReviewHandler();
 const server=createServer(async(req,res)=>{try{
 const url=new URL(req.url,'http://localhost'),origin=req.headers.origin;
 // Browser requests from unrelated pages cannot spend this local service's key.
@@ -36,13 +38,14 @@ apiKey=key;model=check.model;return json(res,200,{saved:true,...check})}
 
 if(['/api/status','/api/analyze-condition','/api/select-route'].includes(url.pathname))return conditionHandler(req,res);
 if(['/api/routes/city-walk','/api/city/coverage'].includes(url.pathname))return city(req,res);
+if(url.pathname==='/api/transit/walk-review')return walkReview(req,res);
 if(expansionPaths.includes(url.pathname)){
 if(backendToken&&req.headers.authorization!=='Bearer '+backendToken)return json(res,401,{error:'자료 서비스 인증을 확인해 주세요.',code:'backend_auth_required'});
 return expansion(req,res)}
 if(url.pathname.startsWith('/api/'))return json(res,404,{error:'존재하지 않는 API입니다.'});
 if(!['GET','HEAD'].includes(req.method))return json(res,405,{error:'GET 요청을 사용해 주세요.'});
 let target;if(['/동행길-최종.html','/동행길-시연.html','/동행길-전달용.html'].includes(decodeURIComponent(url.pathname)))target=path.join(projectDir,'../동행길-최종.html');
-else{let relative=decodeURIComponent(url.pathname).replace(/^\/app(?:\/|$)/,'/').replace(/^\//,'');if(relative===''||relative==='index.html')relative='index.html';const packed=relative.endsWith('.gz');if(packed)relative=relative.slice(0,-3);if(packed&&!/\.(?:json|geojson)$/.test(relative))return json(res,404,{error:'파일을 찾을 수 없어요.'});if(!/^(?:(?:index|expansion)\.html|(?:app|expansion|city-map|transit-ui|region-client|saved-data|engine|condition-ai|condition-request|route-choice|route-candidates|portable-ai|final-model|facilities|seoul-base|leaflet|endpoint-routing|access-review|precision-connections|precision-map|terrain-evidence|gps-quality|gps-tracker|data-loader|navigation-(?:policy|plan|core|session|routing|ui))\.js|(?:style|leaflet|expansion|transit)\.css|(?:map-(?:data|context)|terrain-data)\.json|data\/accessibility\/(?:[a-z0-9_-]+\/)*[a-z0-9_.-]+\.(?:json|geojson)|data\/terrain\/evidence\.json|data\/precision\/(?:access-reports\.json|(?:precision-map|crossings-review)\.geojson)|images\/[a-z0-9_.-]+\.png)$/.test(relative))return json(res,404,{error:'파일을 찾을 수 없어요.'});target=path.join(projectDir,'dist',relative+(packed?'.gz':''))}
+else{let relative=decodeURIComponent(url.pathname).replace(/^\/app(?:\/|$)/,'/').replace(/^\//,'');if(relative===''||relative==='index.html')relative='index.html';const packed=relative.endsWith('.gz');if(packed)relative=relative.slice(0,-3);if(packed&&!/\.(?:json|geojson)$/.test(relative))return json(res,404,{error:'파일을 찾을 수 없어요.'});if(!/^(?:(?:index|expansion)\.html|(?:app|expansion|city-map|transit-ui|transit-walk-review|region-client|saved-data|engine|condition-ai|condition-request|route-choice|route-candidates|portable-ai|final-model|facilities|seoul-base|leaflet|endpoint-routing|access-review|precision-connections|precision-map|terrain-evidence|gps-quality|gps-tracker|data-loader|navigation-(?:policy|plan|core|session|routing|ui))\.js|(?:style|leaflet|expansion|transit)\.css|(?:map-(?:data|context)|terrain-data)\.json|data\/accessibility\/(?:[a-z0-9_-]+\/)*[a-z0-9_.-]+\.(?:json|geojson)|data\/terrain\/evidence\.json|data\/precision\/(?:access-reports\.json|(?:precision-map|crossings-review)\.geojson)|images\/[a-z0-9_.-]+\.png)$/.test(relative))return json(res,404,{error:'파일을 찾을 수 없어요.'});target=path.join(projectDir,'dist',relative+(packed?'.gz':''))}
 try{const info=await stat(target);if(!info.isFile())return json(res,404,{error:'파일을 찾을 수 없어요.'});const ext=path.extname(target),mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.geojson':'application/geo+json','.png':'image/png'}[ext]||'application/octet-stream';const encoded=!['.png','.gz'].includes(ext)&&(req.headers['accept-encoding']||'').split(',').some(v=>{const [name,...params]=v.trim().split(';');const q=params.find(p=>p.trim().startsWith('q='));return name==='gzip'&&(!q||Number(q.trim().slice(2))>0)});
 const etag='"'+info.size.toString(16)+'-'+info.mtimeMs.toString(16)+(encoded?'-gzip':'')+'"';const headers={'ETag':etag,'Vary':'Accept-Encoding','X-Content-Type-Options':'nosniff','Cache-Control':'no-cache'};
 if((req.headers['if-none-match']||'').split(',').some(t=>t.trim().replace(/^W\//,'')===etag||t.trim()==='*')){res.writeHead(304,headers);return res.end()}

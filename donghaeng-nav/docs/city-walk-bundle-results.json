@@ -8,8 +8,8 @@
     "donghaeng-nav/services/city-walk/assets/ways.json.gz",
     "donghaeng-nav/services/service-integrity.json"
   ],
-  "totalFiles": 19,
-  "totalInputBytes": 32271477,
+  "totalFiles": 20,
+  "totalInputBytes": 32281990,
   "warningCount": 0,
   "oldWalkingDataBundled": false,
   "sourcePbfBundled": false,
