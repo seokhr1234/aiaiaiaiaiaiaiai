@@ -1,0 +1,134 @@
+{
+  "pass": true,
+  "checkedDateKst": "2026-11-14",
+  "origin": "https://donghaeng-gill.vercel.app",
+  "sourceCommit": "ec5862ab4dc8ce8e8d4641fe092e084089135f9e",
+  "files": [
+    {
+      "name": "index.html",
+      "status": 200,
+      "matchesSource": true,
+      "sha256": "34bccc86290a5eb28fce4a2299664c53809d74ce97424f6d909e477d7e789076"
+    },
+    {
+      "name": "app.js",
+      "status": 200,
+      "matchesSource": true,
+      "sha256": "96c21abdb14247e57ae1a1ade9d7f7c7ad137b974cb052b3c8695eef8f4dbb0e"
+    },
+    {
+      "name": "transit-ui.js",
+      "status": 200,
+      "matchesSource": true,
+      "sha256": "a5ba8dbbb06b324313f14d3a4531d3f8da01c8565a9c3afbd25e6c4bc11e7ca0"
+    },
+    {
+      "name": "transit-walk-review.js",
+      "status": 200,
+      "matchesSource": true,
+      "sha256": "bf4d41803245e15b6698edbcf7017d2824d6f2c5b66c6f18fd961afde5f0fbfc"
+    },
+    {
+      "name": "transit.css",
+      "status": 200,
+      "matchesSource": true,
+      "sha256": "2dfd53f9c7ff34ac259e2fbde55d1c093e8aef5a4f72ebaa40999cd323f9ea8f"
+    },
+    {
+      "name": "expansion.html",
+      "status": 200,
+      "matchesSource": true,
+      "sha256": "4b26760589fef81af266d29c5277571988a04546d69cb02a7ca709429910b7eb"
+    }
+  ],
+  "publicWalkingApi": {
+    "status": 200,
+    "requests": 1,
+    "candidateSource": "synthetic provider fixture intercepted in browser",
+    "walkingSource": "actual deployed preserved Seoul OSM graph",
+    "summary": {
+      "total": 3,
+      "calculated": 3,
+      "unresolved": 0,
+      "estimatedWalkingMinutes": 53
+    },
+    "legs": [
+      {
+        "id": "W1",
+        "state": "reference_route",
+        "meters": 972.9537888965706,
+        "minutes": 15,
+        "sourceNodes": 45,
+        "sourceSegments": 44,
+        "sourceAsOf": "2026-11-09T21:22:17Z",
+        "collectedDate": "2026-11-11",
+        "endpointMappingVerified": false
+      },
+      {
+        "id": "W2",
+        "state": "reference_route",
+        "meters": 964.1506004992482,
+        "minutes": 15,
+        "sourceNodes": 44,
+        "sourceSegments": 43,
+        "sourceAsOf": "2026-11-09T21:22:17Z",
+        "collectedDate": "2026-11-11",
+        "endpointMappingVerified": false
+      },
+      {
+        "id": "W3",
+        "state": "reference_route",
+        "meters": 1493.1265153528568,
+        "minutes": 23,
+        "sourceNodes": 55,
+        "sourceSegments": 54,
+        "sourceAsOf": "2026-11-09T21:22:17Z",
+        "collectedDate": "2026-11-11",
+        "endpointMappingVerified": false
+      }
+    ],
+    "stopMappingVerified": false,
+    "timetableVerified": false,
+    "fieldVerified": false
+  },
+  "browser": {
+    "viewport": "1440x1000 and 393x852",
+    "pageErrors": [],
+    "walkingRoadPolylines": 3,
+    "horizontalOverflow": false
+  },
+  "mockedTransitSearches": 1,
+  "mockedAiRequests": 1,
+  "actualOdsayCalls": 0,
+  "actualAiCalls": 0,
+  "externalTilesBlocked": true,
+  "actualTransitAuthenticationVerified": false,
+  "fullUiOptimizationDeferred": true,
+  "verificationAttempts": 2,
+  "totalWalkingReviewRequestsInitiated": 2,
+  "earlierAttempt": {
+    "result": "verification_tool_failed_before_response_recorded",
+    "reason": "asynchronous response reader raced browser close",
+    "productChangeRequired": false,
+    "actualOdsayCalls": 0,
+    "actualAiCalls": 0
+  },
+  "githubStatuses": [
+    {
+      "context": "Vercel – aiaiaiaiaiaiaiai",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/aiaiaiaiaiaiaiai/yDDvDRqQbW9f4XDQ7Xo8tDuPN1Et"
+    },
+    {
+      "context": "Vercel – donghaeng",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/donghaeng/CNekvtQr9itdrQ8BGbZLdXrVtHgV"
+    }
+  ],
+  "mainFastForward": {
+    "from": "7fa090a9af1c3ba561f24e73271a40036e1b055f",
+    "to": "ec5862ab4dc8ce8e8d4641fe092e084089135f9e",
+    "expectedHeadChecked": true,
+    "force": false
+  }
+}
