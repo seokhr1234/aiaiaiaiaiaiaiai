@@ -1,0 +1,74 @@
+{
+  "checkedDateKst": "2026-11-14",
+  "sourceCommit": "18bbc75a913d70ede12e33122fb96efca1e17916",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "7b33443d214796fefd84fe7b8810d345949f63aa053be8fdec1a9ce3d3b31e0e",
+      "matchesSource": true
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "sha256": "c4ff7b1d3bff1e99c27f7dff592a3338edacac43f7b2dd4fc4eb61cf7700f2a3",
+      "matchesSource": true
+    },
+    {
+      "path": "/transit-ui.js",
+      "status": 200,
+      "sha256": "be26b9d474737517bd96f8de79aa5c69c7bd375d18113962029e032d1eaec189",
+      "matchesSource": true
+    },
+    {
+      "path": "/transit.css",
+      "status": 200,
+      "sha256": "1abe2811dd88653a03845b28767cbd27d37db397aca1d04a28fd58ac95f8805a",
+      "matchesSource": true
+    },
+    {
+      "path": "/expansion.html",
+      "status": 200,
+      "sha256": "a9ee4e58021e1d9c38fc9f0b926d5aee61c687aa49db7bc97467e052ed4bbe43",
+      "matchesSource": true
+    }
+  ],
+  "githubStatuses": [
+    {
+      "context": "Vercel – aiaiaiaiaiaiaiai",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/aiaiaiaiaiaiaiai/7NtW3nhusRHYwBHtQdVK8unSqG8e"
+    },
+    {
+      "context": "Vercel – donghaeng",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/donghaeng/CCjBncCMGv3wX5FJveV5622vkXu4"
+    }
+  ],
+  "mainFastForward": {
+    "from": "d0f5fadd761c361301c50dad138d88425c8197c3",
+    "to": "18bbc75a913d70ede12e33122fb96efca1e17916",
+    "expectedHeadChecked": true,
+    "force": false
+  },
+  "browser": {
+    "pass": true,
+    "checkedDateKst": "2026-11-14",
+    "origin": "https://donghaeng-gill.vercel.app",
+    "sourceCommit": "18bbc75a913d70ede12e33122fb96efca1e17916",
+    "checks": [
+      "Public desktop loads the new transit mode and coordinate disclosure; free status is distinguished from successful search",
+      "Public 393px mobile retains transit mode, hides inapplicable save, and has no horizontal overflow",
+      "Public expansion screen loads the shared transit presenter and the main screen can return to walking"
+    ],
+    "pageErrors": [],
+    "ownResourceFailures": [],
+    "actualOdsayCalls": 0,
+    "actualAiCalls": 0,
+    "externalTilesBlocked": true,
+    "fieldVerified": false
+  },
+  "liveSearchReport": "transit-live-2026-11-14.json",
+  "providerSearchVerified": false,
+  "fieldVerified": false
+}

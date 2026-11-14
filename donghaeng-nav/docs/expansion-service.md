@@ -26,7 +26,7 @@ Vercel 프로젝트의 Settings → Environment Variables에서 필요한 Previe
 | `DONGHAENG_BACKEND_URL` | 기존 시설/정밀/횡단 자료·서버 보행·전체 여정 검증에 필요. 준비된 별도 Node 백엔드의 HTTP(S) 주소. ODsay 후보와 `osm-review` 등록 접속점만 조회할 때는 불필요 |
 | `DONGHAENG_BACKEND_TOKEN` | 백엔드를 외부로 연결할 때 양쪽에 동일하게 설정. Vercel에서만 전달하며 화면/응답에 포함하지 않음 |
 
-키가 설정됐다는 것과 실제 API 연결 성공은 별개다. ODsay 키의 플랫폼이 이 서버 호출 방식에 맞는지, 서버/IP 또는 URI 제한이 실제 배포에 맞는지 확인해야 한다. 이번에는 실제 키가 실행 환경에 제공되지 않아 실제 인증 호출은 하지 않았다. 플랫폼 제한을 우회하기 위한 가짜 Referer를 만들지 않는다. [공식 플랫폼/키 안내](https://lab.odsay.com/guide/guide).
+키가 설정됐다는 것과 실제 API 연결 성공은 별개다. ODsay 키의 플랫폼이 이 서버 호출 방식에 맞는지, 서버/IP 또는 URI 제한이 실제 배포에 맞는지 확인해야 한다. 초기 구현 때는 로컬에 실제 키가 없어 인증 호출을 하지 않았다. 2026-11-14에는 Vercel 서버 키 설정을 확인한 뒤 공개 좌표로 실제 검색2회를 실행했으나 모두 HTTP502였다. 최신 응답은 업체 코드500·고정 인증 범주이며 실제 연결 성공은 아직 미확인이다. [재검사와 복귀 후 계정 확인 항목](transit-main-publish-2026-11-14.md). 플랫폼 제한을 우회하기 위한 가짜 Referer를 만들지 않는다. [공식 플랫폼/키 안내](https://lab.odsay.com/guide/guide).
 
 새 배포에서 `GET /api/transit/status`는 키 값 없이 `not_configured`, `disabled`, `reference_candidates_only` 등 설정 상태를 보여 준다. `POST /api/routes/transit`의 실제 성공 응답을 받은 뒤에만 연결 성공으로 판단한다. 일반 버스·지하철 참고 후보는 역내 접근성·승강기·승차 시각이 확인된 여정과 다르다.
 

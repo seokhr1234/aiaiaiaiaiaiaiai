@@ -24,10 +24,35 @@
       "rejected": null,
       "candidateSchemas": [],
       "result": "not_verified"
+    },
+    {
+      "checkedDateKst": "2026-11-14",
+      "origin": "https://donghaeng-gill.vercel.app",
+      "phase": "T1-safe-diagnostics-after-deployment",
+      "statusBefore": {
+        "state": "reference_candidates_only",
+        "used": 0,
+        "dailyLimit": 20,
+        "budgetScope": "server_instance"
+      },
+      "actualSearchRequests": 1,
+      "providerResponseStored": false,
+      "keyValuesRead": false,
+      "fieldVerified": false,
+      "httpStatus": 502,
+      "elapsedMs": 970,
+      "state": null,
+      "errorCode": "transit_provider_error",
+      "providerCode": "500",
+      "providerReason": "authorization",
+      "candidateCount": 0,
+      "result": "not_verified"
     }
   ],
-  "actualSearchRequests": 1,
+  "actualSearchRequests": 2,
   "authenticatedSearchVerified": false,
   "providerRawResponsesStored": false,
-  "note": "First real request returned generic provider error; numeric-code and safe categorical diagnostics are implemented for the next bounded verification."
+  "note": "Two bounded real searches failed. The second returned numeric provider code 500 and the fixed authorization category. No provider raw response or key was retained; the exact account/platform restriction remains unconfirmed.",
+  "providerDataAsOf": null,
+  "fieldVerified": false
 }
