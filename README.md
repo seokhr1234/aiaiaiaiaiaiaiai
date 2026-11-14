@@ -4,7 +4,7 @@
 
 전체 변경은 [수정이력.md](수정이력.md), 작업 규칙은 [AGENTS.md](AGENTS.md), 이번 전환의 근거와 검사 범위는 [메인 전환 기록](donghaeng-nav/docs/main-navigation-promotion.md)을 참고하세요.
 
-운영 주소: **[donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)**. 2026-11-13 확인에서는 메인 지도는 열리지만 HTML·앱 소스가 기존 `main`과 일치하며, 최신 feature 브랜치의 확장 화면·API는 404입니다. [운영 반영 확인과 남은 절차](donghaeng-nav/docs/deployment-status-2026-11-13.md).
+운영 주소: **[donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)**. 2026-11-14 최신 feature 커밋을 `main`에 반영해 운영 배포를 완료했습니다. 서울 기본 화면·확장 화면·서울 도보 API·모바일·실제 OSM 배경 로딩을 공개 주소에서 확인했습니다. [배포·브랜치 구조 대조·검사 기록](donghaeng-nav/docs/production-deployment-2026-11-14.md). 이전 11월 13일의 운영 주소 404 기록은 당시 상태입니다.
 
 최신 발표자료: [동행길 발표자료 최종본](동행길_발표자료_최종.pptx).
 

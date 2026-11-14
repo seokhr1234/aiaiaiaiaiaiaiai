@@ -72,3 +72,7 @@ fetch('/api/analyze-condition', {
 사용자가 알려준 실제 운영 주소는 `https://donghaeng-gill.vercel.app`다. `/`와 `/api/status`는 200이며 `configured:true`다. 실제 Gemini 호출은 하지 않았다. 메인 HTML·`app.js`의 SHA-256이 원격 `main` 커밋 `89d3463ce5e4441e5a0e0ac069aaadf1024f0ec0`의 해당 파일과 일치하며 최신 feature 소스와는 다르다. 확장 화면·지원 범위·등록 접속점·ODsay 상태 경로는 404다. 따라서 ODsay 키 설정 여부나 새 기능의 운영 반영을 확인한 결과가 아니다.
 
 문서에 있던 `aiaiaiaiaiaiaiai.vercel.app`의 이전 404 관측은 당시 기록으로 보존한다. 두 Vercel CI 성공과 운영 별칭의 최신 버전 반영을 구분한다. [HTTP·모바일 검사와 운영 반영 절차](deployment-status-2026-11-13.md).
+
+## 2026-11-14 운영 반영 완료
+
+검증된 최신 커밋을 main에 반영한 후 운영 주소의 최신 메인/확장 화면, 서울 자료/도보/접속점 API를 실제 확인했다. `/api/status`의 Gemini 설정과 `/api/transit/status`의 ODsay 설정은 확인됐으나 실제 제공업체 검색/인증 요청은 하지 않았다. 기존 configured 값의 해석은 동일하다. [배포·구조·공개 검사 기록](production-deployment-2026-11-14.md).

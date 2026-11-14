@@ -2,7 +2,7 @@
 
 작성: 2026-11-11, 갱신: 2026-11-13 KST. [현재 구현 범위](seoul-expansion-progress.md)를 먼저 확인한다. 네이버 서비스는 사용하지 않는다.
 
-운영 주소는 [donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)다. **2026-11-13 현재 이 주소는 기존 main 파일을 제공하며 아래 새 확장 경로는 404다.** 아래 기능 설명은 최신 feature 코드의 구현 범위이며, 운영 반영 확인은 [별도 절차](deployment-status-2026-11-13.md)를 따른다. ODsay 상태 경로의 404로 키 누락을 판단하지 않는다.
+운영 주소는 [donghaeng-gill.vercel.app](https://donghaeng-gill.vercel.app)다. **2026-11-14 최신 main 배포에서 서울 화면·확장/자료/서울 도보 API를 실제 확인했다.** ODsay 상태는 `reference_candidates_only`로 키 설정을 확인했으나 실제 업체 검색/인증은 아직 검사하지 않았다. [운영 반영 결과·브랜치 구조 대조](production-deployment-2026-11-14.md). 이전 404 기록은 당시 상태로 보존한다.
 
 서울 기본 화면·도보 참고 계산 후속은 [11월 13일 구현 기록](city-walk-2026-11-13.md)을 우선한다. 새 `/api/routes/city-walk`와 `/api/city/coverage`는 Vercel에서 별도 키·자료 서버 없이 처리하며, 기존 `/api/routes/walk`는 월곡 상세 API로 유지한다.
 

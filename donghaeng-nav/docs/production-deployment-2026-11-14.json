@@ -1,0 +1,220 @@
+{
+  "checkedDateKst": "2026-11-14",
+  "origin": "https://donghaeng-gill.vercel.app",
+  "publishedSourceCommit": "7c884b209697e1dfded7bb7bb6c5fe4011d09ef2",
+  "mainFastForward": {
+    "from": "89d3463ce5e4441e5a0e0ac069aaadf1024f0ec0",
+    "to": "7c884b209697e1dfded7bb7bb6c5fe4011d09ef2",
+    "expectedHeadChecked": true,
+    "force": false,
+    "priorMainHistoryPreserved": true
+  },
+  "structure": {
+    "rootLauncher": "server.mjs (unchanged bytes)",
+    "runtimeSource": "donghaeng-nav/dist (same path)",
+    "vercelEntry": "api/index.mjs (same path, new dispatch/modules included)",
+    "outputDirectory": "donghaeng-nav/dist (unchanged)",
+    "newServiceDirectory": "donghaeng-nav/services",
+    "apiRewriteCountBefore": 2,
+    "apiRewriteCountAfter": 12
+  },
+  "githubStatuses": [
+    {
+      "context": "Vercel – aiaiaiaiaiaiaiai",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/aiaiaiaiaiaiaiai/8CNXoeT2eQ5FiosZZzR8VPTXZwgg"
+    },
+    {
+      "context": "Vercel – donghaeng",
+      "state": "success",
+      "target_url": "https://vercel.com/snu-clab/donghaeng/FH1tM1dUWzcfyA5epVwZwM9m6u7T"
+    }
+  ],
+  "before": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "26e707b085ed401130c92e2a99b127b16890d38c14bd8df78e4b097516409ede",
+      "matchesCurrentSource": false
+    },
+    {
+      "path": "/api/city/coverage",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "/api/transit/status",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8"
+    }
+  ],
+  "after": {
+    "origin": "https://donghaeng-gill.vercel.app",
+    "checkedDateKst": "2026-11-14",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytesRead": 20848,
+        "sha256": "c8679506ab63595e4ebe71acb7f934c070609ff8346ad375164ac22fd049e2e6",
+        "matchesCurrentSource": true
+      },
+      {
+        "path": "/expansion.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytesRead": 3556,
+        "sha256": "bc54ccf2f81706b56310676795648f1e15981d575be8b7e205f79b7ecb014ff4",
+        "matchesCurrentSource": true
+      },
+      {
+        "path": "/api/city/coverage",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "bytesRead": 1131,
+        "sha256": "ebb3d221e8c2e65839355ed1269304d4ecc2e598ffa8977af93995a1c2c458b2",
+        "summary": {
+          "state": "osm_reference_routing",
+          "datasetVersion": "city-walk-f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",
+          "segments": 963670,
+          "nodes": 860822,
+          "fieldVerified": false,
+          "accessibilityVerified": false
+        }
+      },
+      {
+        "path": "/api/transit/status",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "bytesRead": 278,
+        "sha256": "fda2cc62417a66d8377afc7134f2e1cdaa01c72aff2020c40a788dd8322da341",
+        "summary": {
+          "state": "reference_candidates_only",
+          "fieldVerified": false,
+          "used": 0,
+          "dailyLimit": 20
+        }
+      },
+      {
+        "path": "/api/status",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "bytesRead": 71,
+        "sha256": "0f0df91c737a689907a7124bb62b9a0a52f1c3e559665dc2edbe8563ed07f995",
+        "summary": {
+          "configured": true,
+          "model": "gemini-3.5-flash-lite"
+        }
+      },
+      {
+        "path": "/api/features?layer=osm-review&bbox=127.035,37.595,127.046,37.607&limit=1",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "bytesRead": 1989,
+        "sha256": "aa5af24357334709d4da39eae2d9667a1426f38fb55d82f7349827946f3c536e",
+        "summary": {
+          "datasetVersion": "osm-review-aa159e2d36095a57e699310164d85cff8e89cbb10a2264f2434d024b011faf59",
+          "fieldVerified": false,
+          "total": 67,
+          "storage": "bundled_review",
+          "routingEligible": false
+        }
+      }
+    ],
+    "providerSearchCalls": 0
+  },
+  "route": {
+    "pass": true,
+    "checkedDateKst": "2026-11-14",
+    "origin": "https://donghaeng-gill.vercel.app",
+    "status": 200,
+    "elapsedMs": 3551,
+    "publicFixture": "Jung-gu public test coordinates, identical to local API fixture",
+    "summary": {
+      "state": "reference_route",
+      "datasetVersion": "city-walk-f62e7c99c4b31293ced41ae8960a0114758df02b5239fa90df12a5934a7b53fb",
+      "distanceMeters": 972.9537888965706,
+      "minutes": 15,
+      "endpointGaps": [
+        17.755662286401677,
+        35.731916875057856
+      ],
+      "unknownInclineMeters": 972.9537888965706,
+      "registeredInclineMax": null,
+      "stepsMeters": 0,
+      "visited": 306,
+      "fieldVerified": false,
+      "accessibilityVerified": false,
+      "endpointConnectionsVerified": false,
+      "restVerified": false
+    },
+    "routePoints": 45,
+    "providerSearchCalls": 0,
+    "physicalGps": false
+  },
+  "browser": {
+    "checkedDateKst": "2026-11-14",
+    "origin": "https://donghaeng-gill.vercel.app",
+    "checks": [
+      {
+        "viewport": "desktop",
+        "title": "동행길",
+        "containsSeoul": true,
+        "origin": null,
+        "destination": null,
+        "precisionVisible": false,
+        "precisionRecords": 16169,
+        "cityPlaceCount": 7526,
+        "horizontalOverflow": false,
+        "facilityMarkers": 16
+      },
+      {
+        "viewport": "mobile",
+        "title": "동행길",
+        "containsSeoul": true,
+        "origin": null,
+        "destination": null,
+        "precisionVisible": false,
+        "precisionRecords": 16169,
+        "cityPlaceCount": 7526,
+        "horizontalOverflow": false,
+        "facilityMarkers": 1
+      }
+    ],
+    "pageErrors": [],
+    "ownOriginFailures": [],
+    "externalTilesBlocked": true,
+    "providerSearchCalls": 0,
+    "physicalPhone": false,
+    "physicalGps": false,
+    "pass": true
+  },
+  "onlineBasemap": {
+    "checkedDateKst": "2026-11-14",
+    "origin": "https://donghaeng-gill.vercel.app",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "externalTilesBlocked": false,
+    "tileStatuses": {
+      "200": 20
+    },
+    "providerSearchCalls": 0,
+    "physicalPhone": false,
+    "basemap": {
+      "mode": "online",
+      "text": "OpenStreetMap · 온라인 지도",
+      "loadedOnlineTiles": 12
+    },
+    "pass": true
+  },
+  "productionUpdated": true,
+  "vercelProjectSettingsEdited": false,
+  "providerSearchCalls": 0,
+  "physicalGps": false,
+  "fieldVerified": false,
+  "note": "ODsay and Gemini settings are visible without exposing keys; actual provider authentication/search was not invoked. Reference walking remains distinct from validated accessible routes."
+}
